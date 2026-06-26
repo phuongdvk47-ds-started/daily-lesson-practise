@@ -1,0 +1,29 @@
+| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |
+| --- | --- | --- | --- | --- |
+| endangered | /ɪnˈdeɪn.dʒəd/ | adj | Animals or plants that may soon not exist. - Có nguy cơ tuyệt chủng, gặp nguy hiểm. | The Iberian lynx is one of the most endangered cats in the world. |
+| extinct | /ɪkˈstɪŋkt/ | adj | No longer existing. - Tuyệt chủng, đã biến mất hoàn toàn. | Many species of dinosaurs became extinct millions of years ago. |
+| habitat | /ˈhæb.ɪ.tæt/ | n | The natural home of an animal or plant. - Môi trường sống tự nhiên. | Human development destroys the natural habitat of wild animals. |
+| protect | /prəˈtekt/ | v | To keep someone or something safe. - Bảo vệ. | We must protect forests to save wild animals from extinction. |
+| species | /ˈspiː.ʃiːz/ | n | A set of animals or plants in which the members have similar characteristics. - Loài, các loài. | There are many species of wild cats living in the forests. |
+| recovery | /rɪˈkʌv.ər.i/ | n | The process of returning to a normal or healthy state. - Sự phục hồi, khôi phục. | The recovery of the Iberian lynx population is a great success. |
+| wildlife | /ˈwaɪld.laɪf/ | n | Animals, birds, and plants that live in natural conditions. - Động vật hoang dã. | National parks are great places to watch native wildlife. |
+| breed | /briːd/ | v | To produce young animals. - Sinh sản, nhân giống. | Some animals do not breed easily when they are in captivity. |
+| population | /ˌpɒp.jəˈleɪ.ʃən/ | n | All the organisms of the same group or species in an area. - Quần thể, số lượng cá thể. | The wild rabbit population decreased quickly due to a new disease. |
+| prey | /preɪ/ | n | An animal that is hunted and killed by another for food. - Con mồi. | Rabbits are the main prey of the Iberian lynx. |
+| threat | /θret/ | n | Something that is likely to cause danger or harm. - Mối đe dọa. | Climate change is a major threat to global biodiversity. |
+| successful | /səkˈses.fəl/ | adj | Achieving the results that you wanted. - Thành công. | The captive breeding program was very successful. |
+| decrease | /dɪˈkriːs/ | v | To become less, or to make something less. - Giảm đi. | The number of wild tigers continues to decrease in Asia. |
+| increase | /ɪnˈkriːs/ | v | To become larger or greater in amount. - Tăng lên. | We hope the tiger population will increase in the future. |
+| prevent | /prɪˈvent/ | v | To stop something from happening. - Ngăn chặn, ngăn ngừa. | We must protect the forests to prevent soil erosion. |
+| preserve | /prɪˈzɜːv/ | v | To keep something safe or in its original state. - Bảo tồn, giữ gìn. | We should preserve natural forests for wild animals. |
+| decline | /dɪˈklaɪn/ | n, v | A continuous decrease in number or quality. - Sự suy giảm, giảm sút. | The decline in rabbit numbers made it hard for the lynx to find food. |
+| captive | /ˈkæp.tɪv/ | adj | Kept in a space and not free to leave. - Bị giam cầm, nuôi nhốt. | Captive lynx are raised in centers before being released. |
+| release | /rɪˈliːs/ | v | To allow an animal to run free in the wild. - Thả, phóng thích, giải phóng. | Conservationists release captive-bred lynx back into the forest. |
+| survive | /səˈvaɪv/ | v | To continue to live or exist after danger. - Sống sót, sinh tồn. | Without rabbits to eat, many young cats could not survive. |
+| wildlife-conservation | /ˈwaɪld.laɪf ˌkɒn.səˈveɪ.ʃən/ | n | The practice of protecting wild species and their habitats. - Bảo tồn động vật hoang dã. | She wants to study wildlife-conservation at university. |
+| well-known | /wel nəʊn/ | adj | Known widely or thoroughly; famous. - Nổi tiếng, được biết đến rộng rãi. | The Iberian lynx is a well-known symbol of Spain's wildlife. |
+| plant-eating | /plɑːnt ˈiː.tɪŋ/ | adj | Feeding on plants (herbivorous). - Ăn thực vật. | Rabbits are plant-eating animals that eat grass and leaves. |
+| captive-bred | /ˈkæp.tɪv bred/ | adj | Animals born and raised in controlled environments. - Được nuôi sinh sản trong chuồng trại/trung tâm bảo tồn. | Captive-bred animals are eventually returned to their wild homes. |
+| grassland | /ˈɡrɑːs.lænd/ | n | Large open area of country covered with grass. - Đồng cỏ, thảo nguyên. | Many wild animals live in grasslands because they can find lots of food. |
+| die out | /daɪ aʊt/ | phrasal verb | To become less common and finally stop existing completely. - Tuyệt chủng, chết dần hết, biến mất hoàn toàn. | Dinosaur species died out millions of years ago. |
+| run out of | /rʌn aʊt ɒv/ | phrase | To use all of something and have no more left. - Cạn kiệt, hết sạch cái gì đó. | If we run out of fresh water, we will face a major survival crisis. |
