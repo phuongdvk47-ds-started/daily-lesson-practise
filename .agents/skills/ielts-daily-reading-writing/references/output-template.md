@@ -1,0 +1,231 @@
+# Daily Pack Output Template
+
+Use this structure exactly unless the user requests a different format. The daily output has four separated deliverable parts. Parts 1-3 must be exported as clean PDFs. Part 4 must be exported as a Markdown file for Quizlet import.
+
+## Global Header Metadata
+Resolve these fields before writing any content:
+- Day: `Day YYYYMMDD`
+- Level: CEFR level
+- Topic: topic name
+- Topic cluster: cluster name
+- IELTS pathway focus: reading micro-skill + writing micro-skill; for B2 Task 1, state chart/process/map/mixed visual focus
+- Verified reading source: source title + publisher/organization + date if available + final verified URL + access date + URL status + reliability note
+- Band-bridge focus: what next-level skill is being introduced
+- Grammar focus: 1-3 grammar targets
+- Counts: reading questions, vocabulary words, grammar questions, writing practice tasks
+
+Use these values in each PDF header.
+
+## Required Output Files
+Create exactly these files, using sanitized file names with spaces replaced by hyphens and unsafe punctuation removed:
+1. `[Level]-[Topic]-[Day]-Practise.pdf`
+2. `[Level]-[Topic]-[Day]-Vocabulary-Grammar.pdf`
+3. `[Level]-[Topic]-[Day]-Answers.pdf`
+4. `[Level]-[Topic]-[Day]-Quizlet-Vocab.md`
+
+Keep the spelling `Practise.pdf` because the user requested this naming convention.
+
+## Part 1 - Practice PDF
+File name: `[Level]-[Topic]-[Day]-Practise.pdf`
+
+Purpose: printable student worksheet without answers.
+
+Required sections:
+
+### 1. Cover Header
+Include:
+- Day
+- Level
+- Topic
+- Topic cluster
+- IELTS pathway focus
+- Grammar focus
+- Student name/date fields if useful
+
+### 2. Reading Source Verification
+Include a compact source box before the passage. This is mandatory.
+
+Required fields:
+| Source title | Publisher/Organization | Date/Access date | Final verified URL | URL status | Source type | Reliability check | How the passage uses the source |
+
+Rules:
+- The reading must be based on a reputable verified source, not self-generated from memory.
+- The final URL must be checked and clickable before finalizing the PDF. Do not use URLs that return 404, 403, timeout, login wall, irrelevant redirect, or title/content mismatch.
+- Do not invent a source, URL, author, publication date, or factual claim.
+- Preserve the original wording for the selected excerpt when reproduction is allowed. Do not silently shorten, rewrite, summarize, or fabricate the passage.
+- If the full original article cannot be reproduced because of copyright/access limits, include only a compliant exact excerpt and state the limitation; ask for a user-provided/licensed text if the full original article is required.
+- Keep the source box short so it does not crowd the worksheet.
+
+### 3. Warm-up
+Give 3-5 short questions in Vietnamese or bilingual English/Vietnamese to activate prior knowledge. Do not answer them here.
+
+### 4. Reading Passage
+Provide the verified reading text with title.
+- Use exact source wording for the selected excerpt when allowed.
+- Do not present AI-written, shortened, or paraphrased text as the original article.
+- If an adapted learner version is explicitly requested, label it as adapted and keep a separate source note; otherwise preserve the source text/excerpt.
+
+### 5. Questions for Reading
+Generate exactly the requested number of IELTS-style reading questions. Group by question type. Number continuously. Include a controlled band-bridge challenge: 10-20% of the questions should approach the next level and be marked `(*)`.
+
+Question-type guidance:
+- A1-A2: form/table completion, matching information, short answer, basic multiple choice.
+- B1: multiple choice, matching headings, sentence completion, summary completion, True/False/Not Given.
+- B2: True/False/Not Given, Yes/No/Not Given, matching features, matching headings, summary completion, classification.
+- C1-C2: inference, writer's claims, complex matching, classification, summary completion with distractors.
+
+### 6. Questions for Grammar
+Generate exactly the requested number of grammar questions. Group by exercise type when useful:
+- gap-fill
+- sentence transformation
+- error correction
+- sentence combining
+- controlled production
+
+Do not include answers in Part 1. Include a small number of scaffolded `(*)` grammar questions that approach the next level without overwhelming the learner.
+
+### 7. Questions for Writing
+Generate exactly the requested number of writing practice tasks. Keep the Writing section direct and compact. Use this table only:
+| # | Task | Target length | Focus skill | Useful language | Success criteria |
+
+For B2 map/diagram-change tasks, include spatial vocabulary and change verbs in Useful language. Where appropriate, mark one writing task or sub-task as `(*)` to help the learner move toward the next level.
+Do not add long explanations under Writing questions; put explanation/model support in Part 3 only.
+
+## Part 2 - Vocabulary & Grammar PDF
+File name: `[Level]-[Topic]-[Day]-Vocabulary-Grammar.pdf`
+
+Purpose: vocabulary study sheet and grammar mini-lesson.
+
+Required sections:
+
+### 1. Cover Header
+Repeat Day, Level, Topic, topic cluster, IELTS pathway focus, and grammar focus.
+
+### 2. Vocabulary Table
+Generate exactly the requested number of vocabulary items unless the user asks for more.
+
+The table must have exactly 5 columns:
+| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |
+
+Vocabulary composition rules:
+- Include Academic Vocabulary from the Reading, Grammar, and Writing sections.
+- Include Compound Words found in or related to the lesson, such as `public transport`, `carbon footprint`, `job market`.
+- Include Idioms & Phrases or useful chunks, such as `play a role in`, `on the one hand`, `in the long run`, but keep idioms level-appropriate.
+- Prefer words/chunks that appeared in the Reading passage, grammar examples, or writing prompts.
+- If the generated lesson does not contain enough vocabulary items, add level-appropriate related vocabulary from the same topic cluster.
+- Mark multi-word phrases naturally in the first column; do not force every item to be a single word.
+- Provide IPA-style pronunciation when practical. For multi-word phrases, provide a readable phrase-level pronunciation or main stressed words.
+- Keep Vietnamese meanings concise but clear.
+- Example sentences must connect to the day's topic and level.
+
+### 3. Vocabulary Grouping Notes
+After the table, briefly group the vocabulary into:
+- Academic Vocab
+- Compound Words
+- Idioms & Phrases / Useful Chunks
+
+Do not duplicate the full table; just list item names under each category.
+
+### 4. Detailed Grammar Guide
+Explain the selected grammar targets in Vietnamese or bilingual style. Include:
+- What the grammar point is
+- Why it matters for IELTS Reading/Writing
+- Form/structure
+- 3-6 level-appropriate examples linked to the topic
+- Common mistakes made by Vietnamese learners
+- Quick correction rules
+
+### 5. Common Mistakes / IELTS Traps for This Topic
+This subsection is mandatory. Include 5-8 traps linked to the day's topic, reading source, grammar focus, and writing tasks. Each trap should include:
+
+| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |
+
+Include topic-specific traps where relevant, for example:
+- map/task 1 traps: wrong prepositions of place, confusing `to the north of` vs `in the north of`, missing overview, describing every small change
+- data traps: using `while/whereas` without true contrast, singular/plural errors with percentages, wrong articles before abstract nouns
+- reading traps: assuming Not Given from outside knowledge, missing paraphrases, confusing cause and effect
+- writing traps: unsupported claims, memorized phrases, overgeneralization, unclear comparison
+
+When level-appropriate, explicitly include the high-impact targets:
+- A2: basic data comparison modifiers such as `slightly`, `significantly`, `twice as`, `half as`.
+- B1: defining vs non-defining relative clauses and chart contrast linkers such as `while`, `whereas`, `by contrast`.
+- B2: complex subject-verb agreement and articles with geographical names or abstract concepts.
+- C1-C2: subjunctive mood for formal recommendations, e.g. `It is essential that governments implement...`.
+
+## Part 3 - Answers PDF
+File name: `[Level]-[Topic]-[Day]-Answers.pdf`
+
+Purpose: teacher/student answer key with explanations.
+
+Required sections:
+
+### 1. Cover Header
+Repeat Day, Level, Topic, topic cluster, IELTS pathway focus, and grammar focus.
+
+### 2. Reading Answer Key and Detailed Explanations
+For every reading question include:
+- Question number
+- Correct answer
+- Detailed explanation of why the answer is correct
+- Evidence/paraphrase from the passage when relevant
+- For T/F/NG or Y/N/NG: explain the evidence logic and why the other labels are wrong or unsupported
+- For multiple choice: explain why distractors are incorrect when useful
+- For `(*)` questions: explain which next-level skill is being practiced
+
+### 3. Grammar Answer Key and Detailed Explanations
+For every grammar question include:
+- Question number
+- Correct answer
+- Detailed explanation of the grammar rule
+- Why the chosen answer is correct
+- Why common wrong answers are incorrect when useful
+- For `(*)` questions: explain the higher-level grammar skill being introduced
+
+### 4. Writing Guidance / Suggested Answers
+For every writing task, adopt the persona of a detailed, supportive teacher. Provide:
+- **Cognitive Process & Structure Guidance**: Detail the step-by-step thinking process (how to analyze the prompt, organize ideas, and structure the response) so students can read, learn, and structure their thoughts to approach similar tasks independently.
+- **Self-Correction Tips**: Explain how students can identify, analyze, and correct their own mistakes (e.g. alignment with grammar focus, coherence, vocabulary usage).
+- **Level-appropriate model answers**:
+  - A1-A2: model sentence or short model paragraph
+  - B1: model paragraph, outline, or sentence bank
+  - B2: Task 1 overview/sample paragraph or Task 2 plan/model paragraph
+  - C1-C2: high-band outline, thesis options, counterargument, hedging/nuance notes, and one model paragraph
+- **Reusable feedback** aligned with the task's success criteria.
+
+### 5. Review Bridge
+Add 3-5 review prompts that recycle the previous or related topic. If no history is available, recycle the same day's vocabulary and grammar. Prefer the named spiral progression routes when history matches economy/consumption, society/work, built-environment Task 1, or art/craft history.
+
+## Part 4 - Quizlet Vocabulary Markdown
+File name: `[Level]-[Topic]-[Day]-Quizlet-Vocab.md`
+
+Purpose: importable vocabulary list for Quizlet or flashcard systems.
+
+Create a Markdown table that mirrors the Part 2 vocabulary table with exactly these columns:
+| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |
+
+Rules:
+- Use the exact same vocabulary items as Part 2, in the same order.
+- Keep cell content concise so it imports cleanly.
+- Escape pipe characters inside cells by replacing them with `/`.
+- Do not include grammar explanations in this file.
+- Do not include answer keys in this file.
+
+## PDF Layout Requirements
+When exporting Parts 1-3 to PDF:
+- Use compact margins and consistent headers/footers.
+- Avoid excessive blank lines.
+- Avoid orphan headings at the bottom of a page.
+- Avoid large page breaks inside vocabulary tables, grammar explanations, answer explanations, or writing-task tables.
+- Use repeated table headers for long tables.
+- Use a Unicode-capable font for Vietnamese and IPA.
+- Keep headings clear and tables readable.
+- Render and inspect at least the first page and any table-heavy pages when tools are available.
+
+If using the bundled `scripts/export_daily_pack.py`, create a JSON file with these keys:
+- `level`
+- `topic`
+- `day`
+- `practice_markdown`
+- `vocabulary_grammar_markdown`
+- `answers_markdown`
+- `quizlet_markdown`
