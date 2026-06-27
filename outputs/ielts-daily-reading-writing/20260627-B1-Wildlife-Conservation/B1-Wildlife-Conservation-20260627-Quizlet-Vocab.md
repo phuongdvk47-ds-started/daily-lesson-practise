@@ -1,22 +1,47 @@
-| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |
-| --- | --- | --- | --- | --- |
-| relocation | /ˌriːloʊˈkeɪʃn/ | n | Moving to a new place - Sự di dời, tái định cư | The relocation of 2,500 animals took several weeks. |
-| rescue | /ˈreskjuː/ | v/n | Saving from danger - Giải cứu, sự giải cứu | Rangers managed to rescue the baby elephant from the mud. |
-| severe | /sɪˈvɪr/ | adj | Very serious or harsh - Nghiêm trọng, khốc liệt | The country is suffering from a severe drought this year. |
-| drought | /draʊt/ | n | A long period of dry weather - Hạn hán | Due to the drought, many local rivers have dried up. |
-| replace | /rɪˈpleɪs/ | v | To take the place of - Thay thế | Climate change has replaced poaching as the main threat. |
-| illegal | /ɪˈliːɡl/ | adj | Against the law - Bất hợp pháp | Poaching is an illegal activity that is heavily punished. |
-| poaching | /ˈpoʊtʃɪŋ/ | n | Illegal hunting of wild animals - Săn bắn trộm | Park rangers work hard to stop poaching in the reserve. |
-| threat | /θret/ | n | A sign of danger - Mối đe dọa | Water scarcity is now the biggest threat to wildlife. |
-| capture | /ˈkæptʃər/ | v/n | Taking by force - Bắt giữ, sự bắt giữ | The safe capture of wild lions requires special equipment. |
-| ranger | /ˈrei̯ndʒər/ | n | A person protecting a park - Nhân viên kiểm lâm | Rangers patrol the reserve daily to check on the animals. |
-| journey | /ˈdʒɜːrni/ | n | Traveling from one place to another - Hành trình, chuyến đi | The trucks started a long journey of 700 kilometers. |
-| mass movement | /mæs ˈmuːvmənt/ | n phrase | Large-scale migration - Sự di chuyển hàng loạt | This is the first mass movement of animals in sixty years. |
-| rescue effort | /ˈreskjuː ˈefərt/ | n phrase | Attempt to save lives - Nỗ lực giải cứu | Many groups joined the rescue effort to help the animals. |
-| build a dam | /bɪld ə dæm/ | v phrase | Constructing a water barrier - Xây đập | They decided to build a dam to generate electricity. |
-| spokesperson | /ˈspoʊkspɜːrsn/ | n | A person speaking for a group - Người phát ngôn | The spokesperson explained the details of the project. |
-| habitat | /ˈhæbɪtæt/ | n | Natural home of an animal - Môi trường sống | The forest is the natural habitat of wild birds. |
-| overpopulated | /ˌoʊvərˈpɑːpjuleɪtɪd/ | adj | Too many individuals in an area - Quá tải số lượng | Some parks are overpopulated and lack food for animals. |
-| conflict | /ˈkɑːnflɪkt/ | n/v | Disagreement or fight - Xung đột, sự xung đột | There is a constant conflict between humans and elephants. |
-| conservation group | /ˌkɑːnsərˈveɪʃn ɡruːp/ | n phrase | Group protecting nature - Nhóm bảo tồn | Conservation groups protest against the killing of wildlife. |
-| play a role in | /pleɪ ə roʊl ɪn/ | idiom | To have an effect on - Đóng vai trò trong | Forests play a role in regulating the Earth's climate. |
+### Phần 1: Học từ vựng đơn giản (Simple Vocabulary)
+| Từ vựng tiếng Anh | Nghĩa tiếng Việt |
+| --- | --- |
+| relocation | Moving to a new place |
+| rescue | Saving from danger |
+| severe | Very serious or harsh |
+| drought | A long period of dry weather |
+| replace | To take the place of |
+| illegal | Against the law |
+| poaching | Illegal hunting of wild animals |
+| threat | A sign of danger |
+| capture | Taking by force |
+| ranger | A person protecting a park |
+| journey | Traveling from one place to another |
+| mass movement | Large-scale migration |
+| rescue effort | Attempt to save lives |
+| build a dam | Constructing a water barrier |
+| spokesperson | A person speaking for a group |
+| habitat | Natural home of an animal |
+| overpopulated | Too many individuals in an area |
+| conflict | Disagreement or fight |
+| conservation group | Group protecting nature |
+| play a role in | To have an effect on |
+
+### Phần 2: Học từ vựng đầy đủ (Detailed Vocabulary)
+| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |
+| --- | --- |
+| relocation /ˌriːloʊˈkeɪʃn, n/ | Moving to a new place |
+| rescue /ˈreskjuː, v/n/ | Saving from danger |
+| severe /sɪˈvɪr, adj/ | Very serious or harsh |
+| drought /draʊt, n/ | A long period of dry weather |
+| replace /rɪˈpleɪs, v/ | To take the place of |
+| illegal /ɪˈliːɡl, adj/ | Against the law |
+| poaching /ˈpoʊtʃɪŋ, n/ | Illegal hunting of wild animals |
+| threat /θret, n/ | A sign of danger |
+| capture /ˈkæptʃər, v/n/ | Taking by force |
+| ranger /ˈrei̯ndʒər, n/ | A person protecting a park |
+| journey /ˈdʒɜːrni, n/ | Traveling from one place to another |
+| mass movement /mæs ˈmuːvmənt, n phrase/ | Large-scale migration |
+| rescue effort /ˈreskjuː ˈefərt, n phrase/ | Attempt to save lives |
+| build a dam /bɪld ə dæm, v phrase/ | Constructing a water barrier |
+| spokesperson /ˈspoʊkspɜːrsn, n/ | A person speaking for a group |
+| habitat /ˈhæbɪtæt, n/ | Natural home of an animal |
+| overpopulated /ˌoʊvərˈpɑːpjuleɪtɪd, adj/ | Too many individuals in an area |
+| conflict /ˈkɑːnflɪkt, n/v/ | Disagreement or fight |
+| conservation group /ˌkɑːnsərˈveɪʃn ɡruːp, n phrase/ | Group protecting nature |
+| play a role in /pleɪ ə roʊl ɪn, idiom/ | To have an effect on |

@@ -64,6 +64,7 @@ Provide the verified reading text with title.
 - Use exact source wording for the selected excerpt when allowed.
 - Do not present AI-written, shortened, or paraphrased text as the original article.
 - If an adapted learner version is explicitly requested, label it as adapted and keep a separate source note; otherwise preserve the source text/excerpt.
+- **Vocabulary bolding**: Bold all occurrences of target vocabulary words from Part 2 inside the reading passage using `**word**` (or its inflected forms).
 
 ### 5. Questions for Reading
 Generate exactly the requested number of IELTS-style reading questions. Group by question type. Number continuously. Include a controlled band-bridge challenge: 10-20% of the questions should approach the next level and be marked `(*)`.
@@ -127,16 +128,20 @@ After the table, briefly group the vocabulary into:
 Do not duplicate the full table; just list item names under each category.
 
 ### 4. Detailed Grammar Guide
-Explain the selected grammar targets in Vietnamese or bilingual style. Include:
-- What the grammar point is
-- Why it matters for IELTS Reading/Writing
-- Form/structure
-- 3-6 level-appropriate examples linked to the topic
-- Common mistakes made by Vietnamese learners
-- Quick correction rules
+Explain the selected grammar targets in Vietnamese or bilingual style.
+- **IMPORTANT**: You must always split individual grammar topics and tips using `#### Chủ điểm X: ...` or `#### Tips & Tricks: ...` subheadings. Do not combine all grammar content into a single block, as it creates a giant visual box that causes massive empty print pages (due to page-break-inside avoid rule).
+- Include:
+  - What the grammar point is
+  - Why it matters for IELTS Reading/Writing
+  - Form/structure
+  - 3-6 level-appropriate examples linked to the topic
+  - Common mistakes made by Vietnamese learners
+  - Quick correction rules
 
 ### 5. Common Mistakes / IELTS Traps for This Topic
-This subsection is mandatory. Include 5-8 traps linked to the day's topic, reading source, grammar focus, and writing tasks. Each trap should include:
+This subsection is mandatory.
+- **CRITICAL WARNING**: Do NOT populate this table with vocabulary words, IPA, or word meanings. It is strictly for grammar mistakes, incorrect structures, and IELTS exam pitfalls.
+- Include 5-8 traps linked to the day's topic, reading source, grammar focus, and writing tasks. Use exactly this 4-column layout:
 
 | Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |
 
@@ -163,28 +168,27 @@ Required sections:
 Repeat Day, Level, Topic, topic cluster, IELTS pathway focus, and grammar focus.
 
 ### 2. Reading Answer Key and Detailed Explanations
-For every reading question include:
+For every reading question, adopt the persona of a highly supportive teacher. Include:
 - Question number
 - Correct answer
-- Detailed explanation of why the answer is correct
-- Evidence/paraphrase from the passage when relevant
-- For T/F/NG or Y/N/NG: explain the evidence logic and why the other labels are wrong or unsupported
-- For multiple choice: explain why distractors are incorrect when useful
-- For `(*)` questions: explain which next-level skill is being practiced
+- **Detailed cognitive thinking process (in Vietnamese / tiếng Việt)**: Explain step-by-step how to analyze the question, scan/skim the passage to locate the exact evidence, and match keywords/paraphrases. Prioritize concise, easy-to-understand explanations; only write longer explanations for highly complex items.
+- **Evidence/paraphrase analysis**: Cite specific quotes and keywords from the passage.
+- **Trap Detection & Self-Correction (in Vietnamese / tiếng Việt)**: Explain why common traps (e.g. distractor options, over-assumptions for Not Given vs False) are incorrect, and how students can detect these mistakes on their own in future tasks (concise and easy-to-understand).
+- For `(*)` questions: explain which next-level skill is being practiced.
 
 ### 3. Grammar Answer Key and Detailed Explanations
-For every grammar question include:
+For every grammar question, adopt the persona of a highly supportive teacher. Include:
 - Question number
 - Correct answer
-- Detailed explanation of the grammar rule
-- Why the chosen answer is correct
-- Why common wrong answers are incorrect when useful
-- For `(*)` questions: explain the higher-level grammar skill being introduced
+- **Detailed cognitive thinking process (in Vietnamese / tiếng Việt)**: Explain how to analyze the sentence context, identify target grammar cues, and formulate the correct answer. Prioritize concise, easy-to-understand explanations; only write longer explanations for highly complex items.
+- **Detailed explanation of the grammar rule (in Vietnamese / tiếng Việt)** and why the chosen answer is correct (concise and easy-to-understand).
+- **Trap Detection & Self-Correction (in Vietnamese / tiếng Việt)**: Explain why common incorrect answers are wrong, highlighting common IELTS grammar traps and how students can double-check their own work (concise and easy-to-understand).
+- For `(*)` questions: explain the higher-level grammar skill being introduced.
 
 ### 4. Writing Guidance / Suggested Answers
 For every writing task, adopt the persona of a detailed, supportive teacher. Provide:
-- **Cognitive Process & Structure Guidance**: Detail the step-by-step thinking process (how to analyze the prompt, organize ideas, and structure the response) so students can read, learn, and structure their thoughts to approach similar tasks independently.
-- **Self-Correction Tips**: Explain how students can identify, analyze, and correct their own mistakes (e.g. alignment with grammar focus, coherence, vocabulary usage).
+- **Cognitive Process & Structure Guidance (in Vietnamese / tiếng Việt)**: Detail the step-by-step thinking process (how to analyze the prompt, organize ideas, and structure the response) so students can read, learn, and structure their thoughts to approach similar tasks independently. Prioritize concise, easy-to-understand explanations; only write longer explanations for highly complex items.
+- **Self-Correction Tips (in Vietnamese / tiếng Việt)**: Explain how students can identify, analyze, and correct their own mistakes (e.g. alignment with grammar focus, coherence, vocabulary usage) in a concise and easy-to-understand manner.
 - **Level-appropriate model answers**:
   - A1-A2: model sentence or short model paragraph
   - B1: model paragraph, outline, or sentence bank
@@ -200,11 +204,23 @@ File name: `[Level]-[Topic]-[Day]-Quizlet-Vocab.md`
 
 Purpose: importable vocabulary list for Quizlet or flashcard systems.
 
-Create a Markdown table that mirrors the Part 2 vocabulary table with exactly these columns:
-| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |
+Split the file into two separate sections:
+
+### Section 1: Simple Vocabulary List (Học từ vựng đơn giản)
+Create a 2-column Markdown table:
+| Từ vựng tiếng Anh | Nghĩa tiếng Việt |
+| --- | --- |
+- The English column must contain the word/phrase/idiom only (no IPA or word type).
+- The Vietnamese column must contain the Vietnamese meaning only.
+
+### Section 2: Detailed Vocabulary List (Học từ vựng đầy đủ)
+Create a 2-column Markdown table:
+| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |
+| --- | --- |
+- The English column must contain the word, the IPA pronunciation, and the word type combined (e.g. `preserve /prɪˈzɜːv, v/`).
+- The Vietnamese column must contain the Vietnamese meaning only.
 
 Rules:
-- Use the exact same vocabulary items as Part 2, in the same order.
 - Keep cell content concise so it imports cleanly.
 - Escape pipe characters inside cells by replacing them with `/`.
 - Do not include grammar explanations in this file.
@@ -229,3 +245,22 @@ If using the bundled `scripts/export_daily_pack.py`, create a JSON file with the
 - `vocabulary_grammar_markdown`
 - `answers_markdown`
 - `quizlet_markdown`
+
+## Cumulative Review Pack Template
+
+When compiling review packs, save the payload as a JSON file with these keys and pass it to `scripts/export_review_pack.py`:
+- `level`: target level (e.g. `B2`)
+- `days`: list of target days (e.g. `["20260625", "20260626", "20260627"]`)
+- `topics`: list of target topics (e.g. `["Urbanization", "Public Facilities"]`)
+- `practice_markdown`: markdown structure containing:
+  - `# Reading Source Verification` (with verified URL table)
+  - `# Warm-up` (warm-up questions)
+  - `# Reading Passage` (reading text)
+  - `# Questions for Reading` (exercise details)
+  - `# Questions for Grammar` (grammar items, covering all target rules, 30% marked with `(*)`)
+  - `# Questions for Writing` (writing prompts)
+- `answers_markdown`: markdown containing:
+  - `# Reading Answer Key and Detailed Explanations` (with step-by-step cognitive guidance in Vietnamese)
+  - `# Grammar Answer Key and Detailed Explanations` (explanations in Vietnamese)
+  - `# Writing Guidance / Suggested Answers` (sample essays/answers in Vietnamese)
+- `vocab_items`: list of dicts, where each dict has keys `word`, `ipa`, `type`, `definition`, `vietnamese`, `example`.

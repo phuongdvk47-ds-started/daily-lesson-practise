@@ -26,6 +26,7 @@ def build_names(level: str, topic: str, day: str) -> dict[str, str]:
         "vocab_grammar_pdf": f"{base}-Vocabulary-Grammar.pdf",
         "answers_pdf": f"{base}-Answers.pdf",
         "vocab_checker_pdf": f"{base}-Vocab-Checker.pdf",
+        "vocab_checker_answer_pdf": f"{base}-Vocab-Checker-Answer.pdf",
         "quizlet_md": f"{base}-Quizlet-Vocab.md",
         "quizlet_txt": f"{base}-Quizlet.txt",
     }
@@ -42,6 +43,117 @@ def format_markdown_inline(text: str) -> str:
     text = re.sub(r'`(.*?)`', r'<code>\1</code>', text)
     return text
 
+def build_word_regex(word: str) -> str:
+    w = word.strip().lower()
+    # Replace dashes/spaces to allow both
+    w = re.sub(r'[- ]+', r'[- ]+', w)
+    
+    parts = w.split(r'[- ]+')
+    if len(parts) > 1:
+        first = parts[0]
+        if first in ("make", "run", "take", "go", "set", "keep", "bring", "come", "find", "get", "give", "hold", "show"):
+            v_forms = {
+                "make": "(?:make|makes|making|made)",
+                "run": "(?:run|runs|running|ran)",
+                "take": "(?:take|takes|taking|took|taken)",
+                "go": "(?:go|goes|going|went|gone)",
+                "set": "(?:set|sets|setting)",
+                "keep": "(?:keep|keeps|keeping|kept)",
+                "bring": "(?:bring|brings|bringing|brought)",
+                "come": "(?:come|comes|coming|came)",
+                "find": "(?:find|finds|finding|found)",
+                "get": "(?:get|gets|getting|got|gotten)",
+                "give": "(?:give|gives|giving|gave|given)",
+                "hold": "(?:hold|holds|holding|held)",
+                "show": "(?:show|shows|showing|showed|shown)"
+            }
+            parts[0] = v_forms[first]
+        else:
+            if first.endswith("e"):
+                parts[0] = f"{first[:-1]}(?:e|es|ed|ing)"
+            else:
+                parts[0] = f"{first}(?:s|ed|ing)?"
+        return r'\b' + r'[- ]+'.join(parts) + r'\b'
+    
+    # Single words
+    if w.endswith("y") and len(w) > 3:
+        return r'\b' + w[:-1] + r'(?:y|ies)\b'
+    elif w.endswith("e") and len(w) > 3:
+        return r'\b' + w[:-1] + r'(?:e|es|ed|ing)\b'
+    elif w.endswith("s") or w.endswith("x") or w.endswith("ch") or w.endswith("sh"):
+        return r'\b' + w + r'(?:es)?\b'
+    else:
+        return r'\b' + w + r'(?:s|es|ed|ing)?\b'
+
+def bold_vocab_in_html(html_text: str, vocab_words: list[str]) -> str:
+    if not vocab_words:
+        return html_text
+        
+    # Sort by length descending to prevent substring replacements breaking larger words
+    sorted_words = sorted(list(set(vocab_words)), key=len, reverse=True)
+    
+    patterns = []
+    for w in sorted_words:
+        w_clean = w.strip()
+        if len(w_clean) < 3:
+            continue
+        patterns.append((w_clean, re.compile(build_word_regex(w_clean), re.IGNORECASE)))
+        
+    placeholders = {}
+    temp_text = html_text
+    
+    for idx, (word, pattern) in enumerate(patterns):
+        # We split text by HTML tags to only replace text outside tags
+        parts = re.split(r'(<[^>]+>)', temp_text)
+        for i in range(len(parts)):
+            if i % 2 == 0:  # Text content
+                matches = pattern.findall(parts[i])
+                if matches:
+                    def repl(match):
+                        m_text = match.group(0)
+                        p_id = f"__VOCAB_PH_{len(placeholders)}__"
+                        placeholders[p_id] = f"<b>{m_text}</b>"
+                        return p_id
+                    parts[i] = pattern.sub(repl, parts[i])
+        temp_text = "".join(parts)
+        
+    # Restore placeholders
+    for p_id, bold_text in placeholders.items():
+        temp_text = temp_text.replace(p_id, bold_text)
+        
+    return temp_text
+
+MAJOR_SECTION_KEYWORDS = [
+    "vocabulary table",
+    "vocabulary grouping notes",
+    "detailed grammar guide",
+    "common mistakes",
+    "ielts traps",
+    "reading source verification",
+    "warm-up",
+    "reading passage",
+    "questions for reading",
+    "questions for grammar",
+    "questions for writing",
+    "reading answer key",
+    "grammar answer key",
+    "writing guidance",
+    "suggested answers"
+]
+
+def is_major_section_heading(line: str) -> bool:
+    line_str = line.strip()
+    if not (line_str.startswith("## ") or line_str.startswith("### ")):
+        return False
+    if line_str.startswith("## Level:") or line_str.startswith("## Topic:") or line_str.startswith("### Level:") or line_str.startswith("### Topic:"):
+        return False
+    
+    title_clean = re.sub(r'^[#\s\d\.]+', '', line_str).strip().lower()
+    for kw in MAJOR_SECTION_KEYWORDS:
+        if kw in title_clean:
+            return True
+    return False
+
 def split_sections_by_heading(md_text: str) -> dict[str, str]:
     sections = {}
     current_heading = "Intro"
@@ -49,7 +161,7 @@ def split_sections_by_heading(md_text: str) -> dict[str, str]:
     # Normalize newlines
     md_text = md_text.replace("\r\n", "\n")
     for line in md_text.splitlines():
-        if line.strip().startswith("### ") or line.strip().startswith("## ") and not line.strip().startswith("## Level:") and not line.strip().startswith("## Topic:"):
+        if is_major_section_heading(line):
             sections[current_heading] = "\n".join(current_lines).strip()
             # Clean heading
             current_heading = re.sub(r'^[#\s\d\.]+', '', line.strip()).strip()
@@ -148,7 +260,7 @@ def generate_warmup_html(sections: dict[str, str]) -> str:
         {questions_html}
     </div>"""
 
-def generate_reading_passage_html(sections: dict[str, str], source_box_html: str) -> str:
+def generate_reading_passage_html(sections: dict[str, str], source_box_html: str, vocab_words: list[str] = None) -> str:
     passage_md = sections.get("Reading Passage", "")
     if not passage_md:
         for k in sections.keys():
@@ -175,6 +287,8 @@ def generate_reading_passage_html(sections: dict[str, str], source_box_html: str
             passage_paras.append(f"        <p>{cleaned_line}</p>")
             
     paras_html = "\n".join(passage_paras)
+    if vocab_words:
+        paras_html = bold_vocab_in_html(paras_html, vocab_words)
     
     return f"""    <!-- READING PASSAGE -->
     <div class="section-title">I. Reading Passage</div>
@@ -413,7 +527,14 @@ def get_writing_task_title(num: str, skill: str) -> str:
     return f"Task {num}: {prefix} {skill_clean}".replace(": (*)", ": (*)").strip()
 
 def format_writing_task_content(task_text: str) -> str:
+    # Clean up redundant arrows (→), dots (...), and trailing dots/dots-with-spaces
     text = task_text.replace("<br>", "\n")
+    text = re.sub(r'[\s\.]*→\s*\.{5,}', '', text)
+    text = re.sub(r'[\s\.]*→\s*$', '', text)
+    text = re.sub(r'\s*\.{5,}\s*$', '', text)
+    text = re.sub(r'\s+\.\s*$', '', text)
+    text = text.strip()
+    
     lines = text.splitlines()
     formatted_lines = []
     
@@ -477,7 +598,7 @@ def generate_writing_questions_html(sections: dict[str, str]) -> str:
         
     return "\n\n".join(html_parts)
 
-def build_practice_html(practice_md: str, level: str, topic: str, day: str) -> str:
+def build_practice_html(practice_md: str, level: str, topic: str, day: str, vocab_words: list[str] = None) -> str:
     sections = split_sections_by_heading(practice_md)
     
     reading_level = level
@@ -495,7 +616,7 @@ def build_practice_html(practice_md: str, level: str, topic: str, day: str) -> s
     
     source_box_html = generate_source_box(sections)
     warmup_html = generate_warmup_html(sections)
-    reading_html = generate_reading_passage_html(sections, source_box_html)
+    reading_html = generate_reading_passage_html(sections, source_box_html, vocab_words)
     reading_qs_html = generate_reading_questions_html(sections)
     
     reading_offset = 13
@@ -637,11 +758,11 @@ def build_practice_html(practice_md: str, level: str, topic: str, day: str) -> s
             background-color: #fafbfc;
             border-radius: 4px;
             margin-bottom: 12px;
-            text-align: justify;
+            text-align: left;
+            page-break-inside: avoid;
         }}
         .writing-item {{
             margin-bottom: 10px;
-            page-break-inside: avoid;
         }}
         .warmup-box {{
             background-color: #fcfcfc;
@@ -840,6 +961,28 @@ def get_study_links(topic_title: str) -> list[tuple[str, str]]:
             return item["links"]
     return []
 
+def is_grammar_subheading(line: str) -> bool:
+    line_str = line.strip()
+    if line_str.startswith("## ") or line_str.startswith("### ") or line_str.startswith("#### ") or line_str.startswith("##### "):
+        title_clean = re.sub(r'^[#\s\d\.]+', '', line_str).strip().lower()
+        for kw in MAJOR_SECTION_KEYWORDS:
+            if kw in title_clean and len(title_clean) < 35:
+                return False
+        return True
+    bold_match = re.match(r'^\*\*(Chủ điểm|Grammar Point|Target|Topic)\s+\d+:?\s*(.*?)\*\*$', line_str, re.I)
+    if bold_match:
+        return True
+    return False
+
+def clean_grammar_subheading(line: str) -> str:
+    line_str = line.strip()
+    if line_str.startswith("#"):
+        return re.sub(r'^[#\s\d\.]+', '', line_str).strip()
+    bold_match = re.match(r'^\*\*(Chủ điểm|Grammar Point|Target|Topic)\s+\d+:?\s*(.*?)\*\*$', line_str, re.I)
+    if bold_match:
+        return bold_match.group(2).strip()
+    return line_str
+
 def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic: str) -> str:
     vocab_items = parse_vocab_from_markdown(quizlet_md)
     sections = split_sections_by_heading(vocab_grammar_md)
@@ -938,7 +1081,7 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
     
     for line in grammar_guide_md.splitlines():
         line_str = line.strip()
-        if line_str.startswith("#### "):
+        if is_grammar_subheading(line_str):
             if current_g_title:
                 g_body = "\n".join(current_g_lines).strip()
                 g_body_html = markdown_to_html_body(g_body)
@@ -961,7 +1104,7 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
     </div>""")
                 g_idx += 1
                 
-            current_g_title = re.sub(r'^[#\s\d\.]+', '', line_str).strip()
+            current_g_title = clean_grammar_subheading(line_str)
             current_g_lines = []
         else:
             current_g_lines.append(line)
@@ -982,6 +1125,14 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
         <div class="subsection-title" style="margin-top:0; color:{t_color};">Chủ điểm {g_idx + 1}: {current_g_title}</div>
         {g_body_html}
         {links_html}
+    </div>""")
+        
+    if not grammar_parts and grammar_guide_md.strip():
+        g_body_html = markdown_to_html_body(grammar_guide_md.strip())
+        b_color = border_colors[0]
+        grammar_parts.append(f"""    <div class="grammar-box" style="border-left-color: {b_color};">
+        <div class="subsection-title" style="margin-top:0; color:#1b5e20;">Grammar Study (Hướng dẫn ngữ pháp)</div>
+        {g_body_html}
     </div>""")
         
     grammar_boxes_html = "\n\n".join(grammar_parts)
@@ -1496,21 +1647,7 @@ def build_answers_html(answers_md: str, day: str, topic: str, practice_md: str) 
 """
     return html_content
 
-def build_vocab_checker_html(vocab_items: list[dict], level: str, topic: str, day: str) -> str:
-    # 1. Shuffle vocab_items for Checker 1 (Vietnamese to English)
-    items_c1 = list(vocab_items)
-    while True:
-        random.shuffle(items_c1)
-        if len(vocab_items) <= 1 or [x["word"] for x in items_c1] != [x["word"] for x in vocab_items]:
-            break
-            
-    # 2. Shuffle vocab_items for Checker 2 (English Definition to English)
-    items_c2 = list(vocab_items)
-    while True:
-        random.shuffle(items_c2)
-        if len(vocab_items) <= 1 or ([x["word"] for x in items_c2] != [x["word"] for x in vocab_items] and [x["word"] for x in items_c2] != [x["word"] for x in items_c1]):
-            break
-
+def build_vocab_checker_html(items_c1: list[dict], items_c2: list[dict], level: str, topic: str, day: str, is_answer: bool = False) -> str:
     day_only = re.sub(r'^Day\s+', '', day.strip(), flags=re.I)
     topic_upper = topic.upper()
     
@@ -1520,9 +1657,12 @@ def build_vocab_checker_html(vocab_items: list[dict], level: str, topic: str, da
         vi_mean = item["definition"].strip()
         if vi_mean:
             vi_mean = vi_mean[0].upper() + vi_mean[1:]
+            
+        ans_content = f'{item["word"]}' if is_answer else ""
+        
         row_html = f"""        <div class="checker-row">
             <div class="checker-prompt"><b>{idx+1}.</b> {vi_mean}</div>
-            <div class="checker-blank"></div>
+            <div class="checker-blank">{ans_content}</div>
         </div>"""
         checker_1_rows.append(row_html)
     checker_1_rows_html = "\n".join(checker_1_rows)
@@ -1533,18 +1673,26 @@ def build_vocab_checker_html(vocab_items: list[dict], level: str, topic: str, da
         en_def = item["vietnamese"].strip()
         if en_def:
             en_def = en_def[0].upper() + en_def[1:]
+            
+        ans_content = f'{item["word"]}' if is_answer else ""
+        
         row_html = f"""        <div class="checker-row">
             <div class="checker-prompt"><b>{idx+1}.</b> {en_def}</div>
-            <div class="checker-blank"></div>
+            <div class="checker-blank">{ans_content}</div>
         </div>"""
         checker_2_rows.append(row_html)
     checker_2_rows_html = "\n".join(checker_2_rows)
+
+    title_suffix = " (ANSWER KEY)" if is_answer else ""
+    header_color = "#c0392b" if is_answer else "#2980b9"
+    blank_color = "#c0392b" if is_answer else "#2c3e50"
+    blank_weight = "bold" if is_answer else "normal"
 
     html_content = f"""<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>VOCABULARY CHECKER - DAY {day_only}</title>
+    <title>VOCABULARY CHECKER{title_suffix} - DAY {day_only}</title>
     <style>
         @page {{ 
             size: A4; 
@@ -1559,7 +1707,7 @@ def build_vocab_checker_html(vocab_items: list[dict], level: str, topic: str, da
             padding: 0;
         }}
         .header {{ 
-            border-bottom: 2px solid #2980b9; 
+            border-bottom: 2px solid {header_color}; 
             padding-bottom: 8px; 
             margin-bottom: 15px; 
             text-align: center;
@@ -1567,7 +1715,7 @@ def build_vocab_checker_html(vocab_items: list[dict], level: str, topic: str, da
         .header h1 {{ 
             font-size: 15pt; 
             margin: 0; 
-            color: #2980b9;
+            color: {header_color};
             text-transform: uppercase;
             font-weight: bold;
         }}
@@ -1601,6 +1749,10 @@ def build_vocab_checker_html(vocab_items: list[dict], level: str, topic: str, da
             width: 42%;
             border-bottom: 1px solid #2c3e50;
             height: 22px;
+            color: {blank_color};
+            font-weight: {blank_weight};
+            text-align: center;
+            line-height: 22px;
         }}
         .page-break {{
             page-break-before: always;
@@ -1610,7 +1762,7 @@ def build_vocab_checker_html(vocab_items: list[dict], level: str, topic: str, da
 <body>
 
     <div class="header">
-        <h1>VOCABULARY CHECKER 1: VIETNAMESE TO ENGLISH RECALL</h1>
+        <h1>VOCABULARY CHECKER 1: VIETNAMESE TO ENGLISH RECALL{title_suffix}</h1>
         <div style="font-size: 10pt; font-weight: bold; margin-top: 5px;">
             Day: {day_only} | Level: {level} | Topic: {topic_upper}
         </div>
@@ -1626,7 +1778,7 @@ def build_vocab_checker_html(vocab_items: list[dict], level: str, topic: str, da
     <div class="page-break"></div>
 
     <div class="header">
-        <h1>VOCABULARY CHECKER 2: DEFINITION TO ENGLISH RECALL</h1>
+        <h1>VOCABULARY CHECKER 2: DEFINITION TO ENGLISH RECALL{title_suffix}</h1>
         <div style="font-size: 10pt; font-weight: bold; margin-top: 5px;">
             Day: {day_only} | Level: {level} | Topic: {topic_upper}
         </div>
@@ -1645,16 +1797,37 @@ def build_vocab_checker_html(vocab_items: list[dict], level: str, topic: str, da
     return html_content
 
 def generate_quizlet_markdown(vocab_items: list[dict]) -> str:
-    lines = [
-        "| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |",
-        "| --- | --- | --- | --- | --- |"
+    # Section 1: Simple Vocabulary List (2 columns: English Word vs Vietnamese Meaning)
+    lines_part1 = [
+        "### Phần 1: Học từ vựng đơn giản (Simple Vocabulary)",
+        "| Từ vựng tiếng Anh | Nghĩa tiếng Việt |",
+        "| --- | --- |"
     ]
     for item in vocab_items:
-        en_def = item["definition"].strip()
-        vi_mean = item["vietnamese"].strip()
-        def_viet = f"{en_def} - {vi_mean}"
-        lines.append(f"| {item['word']} | {item['ipa']} | {item['type']} | {def_viet} | {item['example']} |")
-    return "\n".join(lines) + "\n"
+        # In the original parser, item["definition"] holds the Vietnamese meaning
+        vi_mean = item["definition"].strip()
+        lines_part1.append(f"| {item['word']} | {vi_mean} |")
+        
+    # Section 2: Detailed Vocabulary List (2 columns: Word + IPA + Type vs Vietnamese Meaning)
+    lines_part2 = [
+        "### Phần 2: Học từ vựng đầy đủ (Detailed Vocabulary)",
+        "| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |",
+        "| --- | --- |"
+    ]
+    for item in vocab_items:
+        ipa = item["ipa"].strip()
+        vocab_type = item["type"].strip()
+        vi_mean = item["definition"].strip()
+        
+        # Format: word /ipa, type/
+        if ipa.startswith("/") and ipa.endswith("/"):
+            detailed_word = f"{item['word']} {ipa[:-1]}, {vocab_type}/"
+        else:
+            detailed_word = f"{item['word']} {ipa}, {vocab_type}"
+            
+        lines_part2.append(f"| {detailed_word} | {vi_mean} |")
+        
+    return "\n".join(lines_part1) + "\n\n" + "\n".join(lines_part2) + "\n"
 
 def generate_quizlet_text(vocab_items: list[dict]) -> str:
     lines = []
@@ -1721,35 +1894,62 @@ def main() -> None:
         out_dir = Path(args.out_dir)
         
     out_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Save the original input JSON payload as the source of truth
+    source_json_path = out_dir / "lesson_source.json"
+    if Path(args.json_file).resolve() != source_json_path.resolve():
+        source_json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
     part1_html_path = out_dir / "part1_practice_sheet.html"
     part2_html_path = out_dir / "part2_materials.html"
     part3_html_path = out_dir / "part3_answer_key.html"
     vocab_checker_html_path = out_dir / "vocab_checker.html"
+    vocab_checker_answer_html_path = out_dir / "vocab_checker_answer.html"
     
     practice_pdf_path = out_dir / names["practice_pdf"]
     vocab_grammar_pdf_path = out_dir / names["vocab_grammar_pdf"]
     answers_pdf_path = out_dir / names["answers_pdf"]
     vocab_checker_pdf_path = out_dir / names["vocab_checker_pdf"]
+    vocab_checker_answer_pdf_path = out_dir / names["vocab_checker_answer_pdf"]
     quizlet_md_path = out_dir / names["quizlet_md"]
     quizlet_txt_path = out_dir / names["quizlet_txt"]
 
-    practice_html_content = build_practice_html(data.get("practice_markdown", ""), level, topic, day)
+    vocab_items = parse_vocab_from_markdown(data.get("quizlet_markdown", ""))
+    vocab_words = [item["word"] for item in vocab_items] if vocab_items else []
+
+    practice_html_content = build_practice_html(data.get("practice_markdown", ""), level, topic, day, vocab_words)
     materials_html_content = build_materials_html(data.get("vocabulary_grammar_markdown", ""), data.get("quizlet_markdown", ""), day, topic)
     answers_html_content = build_answers_html(data.get("answers_markdown", ""), day, topic, data.get("practice_markdown", ""))
     
-    vocab_items = parse_vocab_from_markdown(data.get("quizlet_markdown", ""))
-    vocab_checker_html_content = build_vocab_checker_html(vocab_items, level, topic, day)
+    # Shuffle vocab items once for the checker sheets
+    # 1. Shuffle vocab_items for Checker 1 (Vietnamese to English)
+    items_c1 = list(vocab_items)
+    while True:
+        random.shuffle(items_c1)
+        if len(vocab_items) <= 1 or [x["word"] for x in items_c1] != [x["word"] for x in vocab_items]:
+            break
+            
+    # 2. Shuffle vocab_items for Checker 2 (English Definition to English)
+    items_c2 = list(vocab_items)
+    while True:
+        random.shuffle(items_c2)
+        if len(vocab_items) <= 1 or ([x["word"] for x in items_c2] != [x["word"] for x in vocab_items] and [x["word"] for x in items_c2] != [x["word"] for x in items_c1]):
+            break
+
+    vocab_checker_html_content = build_vocab_checker_html(items_c1, items_c2, level, topic, day, is_answer=False)
+    vocab_checker_answer_html_content = build_vocab_checker_html(items_c1, items_c2, level, topic, day, is_answer=True)
 
     part1_html_path.write_text(practice_html_content, encoding="utf-8")
     part2_html_path.write_text(materials_html_content, encoding="utf-8")
     part3_html_path.write_text(answers_html_content, encoding="utf-8")
     vocab_checker_html_path.write_text(vocab_checker_html_content, encoding="utf-8")
+    vocab_checker_answer_html_path.write_text(vocab_checker_answer_html_content, encoding="utf-8")
 
     compile_html_to_pdf(part1_html_path, practice_pdf_path, lesson_id, "Daily Practice Sheet")
     compile_html_to_pdf(part2_html_path, vocab_grammar_pdf_path, lesson_id, "Vocabulary & Grammar Guide")
     compile_html_to_pdf(part3_html_path, answers_pdf_path, lesson_id, "Answer Key & Explanations")
     compile_html_to_pdf(vocab_checker_html_path, vocab_checker_pdf_path, lesson_id, "Vocabulary Checker")
+    compile_html_to_pdf(vocab_checker_answer_html_path, vocab_checker_answer_pdf_path, lesson_id, "Vocabulary Checker Answer Key")
 
     quizlet_md_content = generate_quizlet_markdown(vocab_items)
     quizlet_txt_content = generate_quizlet_text(vocab_items)
@@ -1762,10 +1962,12 @@ def main() -> None:
         "part2_html": str(part2_html_path),
         "part3_html": str(part3_html_path),
         "vocab_checker_html": str(vocab_checker_html_path),
+        "vocab_checker_answer_html": str(vocab_checker_answer_html_path),
         "practice_pdf": str(practice_pdf_path),
         "vocab_grammar_pdf": str(vocab_grammar_pdf_path),
         "answers_pdf": str(answers_pdf_path),
         "vocab_checker_pdf": str(vocab_checker_pdf_path),
+        "vocab_checker_answer_pdf": str(vocab_checker_answer_pdf_path),
         "quizlet_md": str(quizlet_md_path),
         "quizlet_txt": str(quizlet_txt_path),
         "lesson_id": lesson_id
