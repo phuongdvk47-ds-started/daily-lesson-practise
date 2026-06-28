@@ -25,7 +25,7 @@
 ### Phần 2: Học từ vựng đầy đủ (Detailed Vocabulary)
 | Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |
 | --- | --- |
-| allowance /əˈlaʊəns, n/ | A regular amount of money given to someone |
+| allowance /ˈəˈlaʊəns, n/ | A regular amount of money given to someone |
 | budgeting /ˈbʌdʒɪtɪŋ, n/ | Planning how to spend and save money |
 | value /ˈvæljuː, n/ | The importance or worth of something |
 | receive /rɪˈsiːv, v/ | To get or accept something given |
@@ -35,9 +35,9 @@
 | grow /ɡrəʊ, v/ | To increase in size, amount, or value |
 | household /ˈhaʊshəʊld, n/adj/ | Relating to a house and the people living in it |
 | operate /ˈɒpəreɪt, v/ | To work or run a business or machine |
-| expensive /ikˈspensiv, adj/ | Costing a lot of money |
+| expensive /ɪkˈspensɪv, adj/ | Costing a lot of money |
 | sharing /ˈʃeərɪŋ, n/v/ | Giving a part of something to others |
-| immediately /iˈmiːdiətli, adv/ | Now or without waiting |
+| immediately /ɪˈmiːdiətli, adv/ | Now or without waiting |
 | pocket money /ˈpɒkɪt ˈmʌni, n/ | A small amount of money given to children |
 | manage /ˈmænɪdʒ, v/ | To control or organize something, like money |
 | spend /spend, v/ | To give money to pay for goods or services |

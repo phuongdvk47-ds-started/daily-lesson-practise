@@ -75,6 +75,34 @@
         .reading-text p {
             margin: 0 0 6px 0;
         }
+        .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }
+        .data-table th { 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }
+        .data-table td { 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }
+        .data-table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+        .svg-chart-container {
+            text-align: center;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
         .source-box { 
             font-style: italic; 
             font-size: 9pt; 
@@ -129,11 +157,11 @@
             background-color: #fafbfc;
             border-radius: 4px;
             margin-bottom: 12px;
-            text-align: justify;
+            text-align: left;
+            page-break-inside: avoid;
         }
         .writing-item {
             margin-bottom: 10px;
-            page-break-inside: avoid;
         }
         .warmup-box {
             background-color: #fcfcfc;
@@ -175,10 +203,10 @@
     <div class="passage-title">How an Allowance Helps Children Learn About Money</div>
     
     <div class="reading-text">
-        <p>Many children first learn the value of money by receiving an allowance. An allowance is a regular amount of money that parents give to their children. Experts say this is a good way to teach children about budgeting, saving, and making choices.</p>
-        <p>First, an allowance helps children understand the three main uses of money: spending, saving, and sharing. When children get their money, they can choose to buy small things they want immediately. However, if they spend all their money quickly, they must wait until the next week or month. This teaches them the importance of budgeting in a practical way.</p>
-        <p>Second, allowances encourage children to save. By saving a small part of their money every week, they can buy more expensive items later. Parents can also help children open a savings account at a bank. This is a great way to show them how money can grow over time.</p>
-        <p>Finally, there is a discussion about chores. Many experts think that parents should not pay children for doing regular household work, like cleaning their bedrooms. They believe that chores are a normal part of family life. Instead, parents can pay for extra work to show children how a business operates.</p>
+        <p>Many children first learn the <b>value</b> of money by <b>receiving</b> an <b>allowance</b>. An <b>allowance</b> is a regular amount of money that parents give to their children. <b>Experts</b> say this is a good way to teach children about <b>budgeting</b>, <b>saving</b>, and <b>making choices</b>.</p>
+        <p>First, an <b>allowance</b> helps children understand the three main uses of money: <b>spending</b>, <b>saving</b>, and <b>sharing</b>. When children get their money, they can choose to buy small things they want <b>immediately</b>. However, if they <b>spend</b> all their money quickly, they must wait until the next week or month. This teaches them the importance of <b>budgeting</b> in a practical way.</p>
+        <p>Second, <b>allowances</b> <b>encourage</b> children to <b>save</b>. By <b>saving</b> a small part of their money every week, they can buy more <b>expensive</b> items later. Parents can also help children open a <b>savings account</b> at a bank. This is a great way to show them how money can <b>grow</b> over time.</p>
+        <p>Finally, there is a discussion about chores. Many <b>experts</b> think that parents should not pay children for doing regular <b>household</b> work, like cleaning their bedrooms. They believe that chores are a normal part of family life. Instead, parents can pay for extra work to show children how a business <b>operates</b>.</p>
     </div>
 
     <div class="source-box">
@@ -407,7 +435,7 @@
     <div class="writing-box">
         <div class="question-instruction">Task 4:  Describing data</div>
         <div class="writing-item">
-            Look at this basic budget table and write 3 sentences describing it (e.g. "My allowance is $10. I spend $5 on food. I save $5."):<br>- Weekly allowance: $15<br>- Spend on snacks: $7<br>- Save in bank: $8<br><br>Answer: .................................................................................................................................................
+            Look at this basic budget table and write 3 sentences describing it (e.g. "My allowance is $10. I spend $5 on food. I save $5."):<br><br><table class="data-table"><thead><tr><th>Item</th><th>Amount</th></tr></thead><tbody><tr><td>Weekly allowance</td><td>$15</td></tr><tr><td>Spend on snacks</td><td>$7</td></tr><tr><td>Save in bank</td><td>$8</td></tr></tbody></table><br><br>Answer: .................................................................................................................................................
         </div>
     </div>
 

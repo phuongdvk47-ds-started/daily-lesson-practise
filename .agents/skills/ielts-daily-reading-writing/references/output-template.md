@@ -92,6 +92,46 @@ Generate exactly the requested number of writing practice tasks. Keep the Writin
 For B2 map/diagram-change tasks, include spatial vocabulary and change verbs in Useful language. Where appropriate, mark one writing task or sub-task as `(*)` to help the learner move toward the next level.
 Do not add long explanations under Writing questions; put explanation/model support in Part 3 only.
 
+**Data Visualization Formats for Writing Tasks**:
+For data description tasks, you must embed the data visually in the "Task" column using one of the following formats:
+- **Table Data Format**:
+  ```markdown
+  Look at this basic budget table and write 3 sentences describing it:
+  | Item | Amount |
+  | :--- | :--- |
+  | Weekly allowance | $15 |
+  | Spend on snacks | $7 |
+  | Save in bank | $8 |
+  ```
+- **SVG Chart Format**:
+  ```html
+  Describe the following bar chart:
+  <div class="svg-chart-container">
+    <svg width="400" height="200" viewBox="0 0 400 200" style="font-family:sans-serif;">
+      <!-- Grid lines -->
+      <line x1="50" y1="150" x2="350" y2="150" stroke="#ccc" />
+      <line x1="50" y1="100" x2="350" y2="100" stroke="#eee" stroke-dasharray="4" />
+      <line x1="50" y1="50" x2="350" y2="50" stroke="#eee" stroke-dasharray="4" />
+      <!-- Bars -->
+      <rect x="75" y="60" width="40" height="90" fill="#3498db" />
+      <rect x="175" y="80" width="40" height="70" fill="#2ecc71" />
+      <rect x="275" y="100" width="40" height="50" fill="#e74c3c" />
+      <!-- Labels -->
+      <text x="95" y="170" font-size="11" text-anchor="middle">Food</text>
+      <text x="195" y="170" font-size="11" text-anchor="middle">Toys</text>
+      <text x="295" y="170" font-size="11" text-anchor="middle">Savings</text>
+      <!-- Values -->
+      <text x="95" y="50" font-size="11" text-anchor="middle" font-weight="bold">$9</text>
+      <text x="195" y="70" font-size="11" text-anchor="middle" font-weight="bold">$7</text>
+      <text x="295" y="90" font-size="11" text-anchor="middle" font-weight="bold">$5</text>
+    </svg>
+  </div>
+  ```
+
+- **Writing Space & Line Allocation Guidelines**:
+  - Always write clear, specific instructions detailing length requirements (e.g., "write 3 sentences" or "write a short paragraph").
+  - Do not hardcode dots or underscores for student answers in the markdown. The compiler automatically detects sentence counts and renders custom, spacious `.writing-line` elements.
+
 ## Part 2 - Vocabulary & Grammar PDF
 File name: `[Level]-[Topic]-[Day]-Vocabulary-Grammar.pdf`
 
@@ -126,6 +166,12 @@ After the table, briefly group the vocabulary into:
 - Idioms & Phrases / Useful Chunks
 
 Do not duplicate the full table; just list item names under each category.
+
+### 3b. Recycled Vocabulary (Từ vựng ôn tập)
+This section is mandatory for Day $N$ (where $N > 1$). Provide a 5-column table listing the 3 recycled vocabulary items from the previous lessons:
+| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Bài học gốc (Day) |
+| :--- | :--- | :--- | :--- | :--- |
+| [Word] [R] | [IPA] | [Type] | [Definition & Vietnamese meaning] | Day YYYYMMDD |
 
 ### 4. Detailed Grammar Guide
 Explain the selected grammar targets in Vietnamese or bilingual style.

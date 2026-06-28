@@ -1,11 +1,12 @@
-A2 | 20260623 | Wildlife and Conservation
-A2 | 20260625 | Climate Change and Energy
-B1 | 20260625 | Climate Change and Energy
-A2 | 20260626 | Public Facilities
-B1 | 20260626 | History of Inventions
-B1 | 20260627 | Wildlife Conservation
-A2 | 20260627 | Pets, animals, basic animal care
-A2 | 20260628 | Money, saving, allowance, simple budgeting
-B1 | 20260628 | Advertising aimed at young consumers
-B1 | 20260630 | Fitness trends, public health campaigns, modern nutrition
-A2 | 20260630 | Neighborhoods, housing types, living environments
+A2 | 20260623 | Wildlife and Conservation | Wildlife and Conservation basics
+A2 | 20260625 | Climate Change and Energy | 2023 report on renewable energy
+B1 | 20260625 | Climate Change and Energy | Global warming & clean energy transition
+A2 | 20260626 | Public Facilities | Local library services & community centers
+B1 | 20260626 | History of Inventions | History and evolution of the printing press
+B1 | 20260627 | Wildlife Conservation | National parks & protecting endangered species
+A2 | 20260627 | Pets, animals, basic animal care | Wildlife hospital saves wild animals
+A2 | 20260628 | Money, saving, allowance, simple budgeting | Managing pocket money & basic saving strategies
+B1 | 20260628 | Advertising aimed at young consumers | Social media marketing to teenagers
+B1 | 20260630 | Fitness trends, public health campaigns, modern nutrition | Fitness trends & exercise for busy lifestyles
+A2 | 20260630 | Neighborhoods, housing types, living environments | Comparing urban neighborhoods & modern housing
+A2 | 20260629 | Shopping, prices, sizes, customer service | Choice overload & business strategies in shopping

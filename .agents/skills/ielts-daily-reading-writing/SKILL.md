@@ -54,8 +54,23 @@ Every page in the generated PDF files must display a custom footer containing:
 - **Document Type**: The name of the document type (e.g. `Daily Practice Sheet`, `Vocabulary & Grammar Guide`, `Answer Key & Explanations`, `Vocabulary Checker`, `Vocabulary Checker Answer Key`).
 - **Page Number**: The current page and total pages (e.g. `Page X of Y`).
 
-### History Tracking
-Maintain the lesson history tracking file at `/outputs/ielts-daily-reading-writing/lesson_history.txt`. Ensure topics are checked for duplication using this file prior to generation, and that the history is updated with `Level | Day | Topic` upon completion.
+### History Tracking & Spaced Repetition
+- **History Format**: Maintain the lesson history tracking file at `/outputs/ielts-daily-reading-writing/lesson_history.txt`. Enforce the 4-column format: `Level | Day | Theme | Specific Topic` (where Theme is from `references/topic-bank.md`, and Specific Topic is the sub-topic or specific focus of the reading passage). Upon successfully generating a pack, append these details to the history file.
+- **Theme & Topic Anti-Duplication Rule**:
+  - Do NOT generate a lesson on the same **Theme** for the same Level within **3 consecutive days/lessons**.
+  - Do NOT generate a lesson on the same **Specific Topic** or highly similar content for the same Level within **7 consecutive days/lessons**.
+- **Spaced Repetition (Vocabulary Recycling) Workflow**:
+  - To enhance long-term memory and recall, every daily lesson (Day $N$) must recycle exactly **3 target vocabulary words or phrases** from the previous 1-2 daily lessons (Day $N-1$ or $N-2$) of the same Level.
+  - **Step 1 (Scout prior words)**: Locate the `lesson_source.json` of the most recent 1-2 lessons of the same Level. Read their vocabulary tables and pick 3 words or phrases to recycle.
+  - **Step 2 (Integrate in Reading)**: Write today's reading passage incorporating these 3 recycled words naturally.
+  - **Step 3 (Special Recycled Notation)**: Bold these 3 recycled words in the reading passage and append the recycled symbol `[R]` (e.g., `**creature** [R]`).
+  - **Step 4 (Recycled Vocabulary Table)**: In Part 2 (Vocabulary & Grammar), append a separate, small table below the main vocabulary table:
+    ```markdown
+    ### Recycled Vocabulary (Từ vựng ôn tập)
+    | Từ vựng | Phiên âm | Loại từ | Nghĩa tiếng Việt | Bài học gốc (Day) |
+    | :--- | :--- | :--- | :--- | :--- |
+    ```
+  - **Step 5 (Practice in Review Bridge)**: Include at least 1 practice question (e.g., translation, sentence completion) using these recycled words in today's `IV. Review Bridge` section of both practice and answers PDFs.
 
 ## Reference Loading
 Load only the needed reference files:
@@ -82,7 +97,7 @@ Load only the needed reference files:
 ## Reading Generation Rules
 Create one passage unless the user requests multiple passages. The reading must be based on a verified reputable source, not invented from memory. The source URL must be real, clickable, and checked before the pack is finalized.
 
-- **Vocabulary Highlighting**: When generating the `Reading Passage` in the practice sheet, you should bold any vocabulary words that are included in the Vocabulary Table of Part 2 (using `**word**` or its grammatical forms like plurals or past tenses). This helps students connect key terms immediately to their reading context.
+- **Vocabulary Highlighting**: When generating the `Reading Passage` in the practice sheet, you should bold any vocabulary words that are included in the Vocabulary Table of Part 2 (using `**word**` or its grammatical forms like plurals or past tenses). Additionally, you must bold and label the 3 recycled vocabulary words from prior lessons using `**word** [R]`. This helps students connect key terms immediately to their reading context and recognize recycled terms.
 
 Source verification requirements:
 - Search for or use a user-provided reputable source before writing the passage.
@@ -170,6 +185,17 @@ For every writing task include only what the student needs to do:
 - focus skill
 - useful language
 - success criteria
+
+**Visual Data Description Requirements**:
+- When a writing task requires describing data (e.g., Task 4 in A2, or Task 1 IELTS in B1/B2/C1/C2), you **must** represent the data visually inside the prompt instead of using plain text descriptions.
+- **For Table Data**: Provide a clean Markdown table (e.g., `| Item | Amount |`) detailing the items and quantities.
+- **For Charts (Bar/Line/Pie/Flow)**: Embed a clean vector SVG graphic (wrapped in `<div class="svg-chart-container"><svg ...>...</svg></div>`) directly in the prompt. Draw grid lines, columns (`<rect>`), paths (`<path>`), and labels (`<text>`) with proper alignment.
+- **For Maps & Diagrams**: Draw simple Before/After layout diagrams using SVG vectors (`<svg>`) to illustrate spatial changes (e.g., relocated rooms, added paths).
+- Ensure all SVG drawings have appropriate viewBox properties, appropriate dimensions (typically 400x200 or 500x250), and use clear styling.
+- **Writing Space & Line Allocation Guidelines**:
+  - Always write clear, specific instructions detailing the length requirements (e.g., "write 3 sentences" or "write a short paragraph").
+  - The PDF compiler automatically generates dotted lines (`.writing-line`) for student responses. It detects keywords like "write X sentences" and allocates spacious lines (e.g., X+1 lines, minimum 3 lines) to accommodate large handwriting and spacing.
+  - Do not try to hardcode dotted lines in the prompt text. Keep the prompt text focused solely on the question.
 
 Keep writing practice concise and action-oriented. Do not add long explanations, background lectures, or teacher commentary in Part 1. Move any model support or guidance to Part 3.
 

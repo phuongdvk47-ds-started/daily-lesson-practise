@@ -8,5 +8,7 @@
 
 ## Topic Redundancy & History Tracking
 - **Consult History**: Before generating any new lesson, the agent must inspect the [lesson_history.txt](../outputs/ielts-daily-reading-writing/lesson_history.txt) file.
-- **3-Day Anti-Duplication Rule**: The agent must NOT generate a lesson on the same Topic for the same Level within 3 consecutive days/lessons. For example, if Topic A is generated for Level A2 on Day 1, it cannot be generated for Level A2 on Day 2 or Day 3. It can only be repeated on Day 4 or later.
-- **Update History**: Upon successfully generating a new lesson, the agent must append the new lesson details (Level | Day | Topic) to the end of [lesson_history.txt](../outputs/ielts-daily-reading-writing/lesson_history.txt) following the established format.
+- **Update History**: Upon successfully generating a new lesson, the agent must append the new lesson details to the end of [lesson_history.txt](../outputs/ielts-daily-reading-writing/lesson_history.txt) following the new 4-column format: `Level | Day | Theme | Specific Topic`.
+- **Theme & Topic Anti-Duplication Rule**:
+  - **3-Day Theme Anti-Duplication**: The agent must NOT generate a lesson on the same **Theme** (e.g. `Pets, animals, basic animal care`) for the same Level within 3 consecutive days/lessons.
+  - **7-Day Specific Topic Anti-Duplication**: The agent must NOT generate a lesson on the same **Specific Topic** (e.g. `Wildlife rescue & animal hospital care`) or highly similar content for the same Level within 7 consecutive days/lessons.

@@ -48,6 +48,43 @@ def format_markdown_inline(text: str) -> str:
     text = re.sub(r'`(.*?)`', r'<code>\1</code>', text)
     return text
 
+def parse_markdown_table_to_html(md_table_text: str) -> str:
+    lines = md_table_text.splitlines()
+    if len(lines) < 2:
+        return md_table_text
+        
+    html_rows = []
+    in_tbody = False
+    
+    for idx, line in enumerate(lines):
+        line_str = line.strip()
+        if not line_str.startswith("|") or not line_str.endswith("|"):
+            continue
+        
+        # Skip alignment row (e.g., | :--- | :--- |)
+        if re.match(r'^\|\s*[:\-]+\s*\|', line_str) or "| ---" in line_str:
+            continue
+            
+        cells = [c.strip() for c in line_str.split("|")[1:-1]]
+        
+        if idx == 0 or (idx == 1 and not html_rows):  # Header
+            cell_html = "".join(f"<th>{format_markdown_inline(c)}</th>" for c in cells)
+            html_rows.append(f"<thead><tr>{cell_html}</tr></thead>")
+        else:
+            if not in_tbody:
+                html_rows.append("<tbody>")
+                in_tbody = True
+            cell_html = "".join(f"<td>{format_markdown_inline(c)}</td>" for c in cells)
+            html_rows.append(f"<tr>{cell_html}</tr>")
+            
+    if in_tbody:
+        html_rows.append("</tbody>")
+        
+    if not html_rows:
+        return md_table_text
+        
+    return f'<table class="data-table">{"".join(html_rows)}</table>'
+
 def build_word_regex(word: str) -> str:
     w = word.strip().lower()
     # Replace dashes/spaces to allow both
@@ -497,6 +534,28 @@ def get_writing_task_title(num: str, skill: str) -> str:
     
     return f"Task {num}: {prefix} {skill_clean}".replace(": (*)", ": (*)").strip()
 
+def get_required_lines_count(text: str) -> int:
+    text_lower = text.lower()
+    
+    # Check for specific "write X sentences" pattern
+    match = re.search(r'write\s+(\d+)\s+sentence', text_lower)
+    if match:
+        num_sentences = int(match.group(1))
+        return max(num_sentences + 1, 3)
+        
+    # Check for range "X-Y sentences"
+    match_range = re.search(r'write\s+(\d+)-(\d+)\s+sentence', text_lower)
+    if match_range:
+        max_sentences = int(match_range.group(2))
+        return max(max_sentences + 1, 3)
+        
+    if "email" in text_lower or "message" in text_lower or "letter" in text_lower:
+        return 5
+    if "paragraph" in text_lower or "essay" in text_lower or "describe" in text_lower or "comparison" in text_lower:
+        return 4
+        
+    return 1
+
 def format_writing_task_content(task_text: str) -> str:
     # Clean up redundant arrows (→), dots (...), and trailing dots/dots-with-spaces
     text = task_text.replace("<br>", "\n")
@@ -509,28 +568,70 @@ def format_writing_task_content(task_text: str) -> str:
     lines = text.splitlines()
     formatted_lines = []
     
+    # Detect if there are sub-questions (e.g. a) or 1.) outside tables
     has_sub = False
     for line in lines:
-        if re.match(r'^\s*([a-z]\)|\d+\.)', line.strip()):
-            has_sub = True
-            break
-            
-    if has_sub:
-        for line in lines:
-            line_str = line.strip()
-            if not line_str:
-                continue
+        line_str = line.strip()
+        if not (line_str.startswith("|") and line_str.endswith("|")):
             if re.match(r'^\s*([a-z]\)|\d+\.)', line_str):
-                formatted_lines.append(format_markdown_inline(line_str))
-                formatted_lines.append('Answer: .................................................................................................................................................')
-            else:
-                formatted_lines.append(format_markdown_inline(line_str))
-    else:
-        formatted_lines.append(format_markdown_inline(text.replace("\n", "<br>")))
-        if "paragraph" in task_text.lower() or "email" in task_text.lower() or "message" in task_text.lower():
-            formatted_lines.append(".............................................................................................................................................................<br>" * 5)
+                has_sub = True
+                break
+                
+    table_lines = []
+    non_table_text_lines = []
+    
+    for line in lines:
+        line_str = line.strip()
+        if line_str.startswith("|") and line_str.endswith("|"):
+            if non_table_text_lines:
+                txt = "\n".join(non_table_text_lines)
+                if has_sub:
+                    sub_lines = txt.splitlines()
+                    for sl in sub_lines:
+                        sl_str = sl.strip()
+                        if re.match(r'^\s*([a-z]\)|\d+\.)', sl_str):
+                            formatted_lines.append(format_markdown_inline(sl_str))
+                            sub_lines_count = get_required_lines_count(sl_str)
+                            formatted_lines.append('<div class="writing-line"></div>' * sub_lines_count)
+                        else:
+                            formatted_lines.append(format_markdown_inline(sl_str))
+                else:
+                    formatted_lines.append(format_markdown_inline(txt.replace("\n", "<br>")))
+                non_table_text_lines = []
+            
+            table_lines.append(line_str)
         else:
-            formatted_lines.append("<br>Answer: .................................................................................................................................................")
+            if table_lines:
+                formatted_lines.append(parse_markdown_table_to_html("\n".join(table_lines)))
+                table_lines = []
+            non_table_text_lines.append(line)
+            
+    if non_table_text_lines:
+        txt = "\n".join(non_table_text_lines)
+        if has_sub:
+            sub_lines = txt.splitlines()
+            for sl in sub_lines:
+                sl_str = sl.strip()
+                if re.match(r'^\s*([a-z]\)|\d+\.)', sl_str):
+                    formatted_lines.append(format_markdown_inline(sl_str))
+                    sub_lines_count = get_required_lines_count(sl_str)
+                    formatted_lines.append('<div class="writing-line"></div>' * sub_lines_count)
+                else:
+                    formatted_lines.append(format_markdown_inline(sl_str))
+        else:
+            formatted_lines.append(format_markdown_inline(txt.replace("\n", "<br>")))
+    if table_lines:
+        formatted_lines.append(parse_markdown_table_to_html("\n".join(table_lines)))
+        
+    if not has_sub:
+        lines_count = get_required_lines_count(task_text)
+        if "email" in task_text.lower() or "message" in task_text.lower():
+            formatted_lines.append("<br>To: ...................................................... Subject: ......................................................<br>")
+        
+        if lines_count == 1:
+            formatted_lines.append("<br>Answer: <div class='writing-line' style='display:inline-block; width:90%; margin-top:0; vertical-align:middle;'></div>")
+        else:
+            formatted_lines.append("<br>" + '<div class="writing-line"></div>' * lines_count)
             
     return "<br>".join(formatted_lines)
 
@@ -659,6 +760,42 @@ def build_practice_html(practice_md: str, level: str, days: list[str], topics: l
         }}
         .reading-text p {{
             margin: 0 0 6px 0;
+        }}
+        .data-table {{ 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }}
+        .data-table th {{ 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }}
+        .data-table td {{ 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }}
+        .data-table tr:nth-child(even) {{ 
+            background-color: #fafbfc; 
+        }}
+        .svg-chart-container {{
+            text-align: center;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }}
+        .writing-line {{
+            border-bottom: 1px dotted #bdc3c7;
+            height: 26px;
+            margin-top: 6px;
+            margin-bottom: 2px;
+            width: 98%;
+            page-break-inside: avoid;
         }}
         .source-box {{ 
             font-style: italic; 
@@ -1005,6 +1142,42 @@ def build_answers_html(answers_md: str, days: list[str], topics: list[str], prac
             padding: 12px;
             margin-top: 10px;
             text-align: justify;
+            page-break-inside: avoid;
+        }}
+        .data-table {{ 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }}
+        .data-table th {{ 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }}
+        .data-table td {{ 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }}
+        .data-table tr:nth-child(even) {{ 
+            background-color: #fafbfc; 
+        }}
+        .svg-chart-container {{
+            text-align: center;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }}
+        .writing-line {{
+            border-bottom: 1px dotted #bdc3c7;
+            height: 26px;
+            margin-top: 6px;
+            margin-bottom: 2px;
+            width: 98%;
             page-break-inside: avoid;
         }}
         ul {{
