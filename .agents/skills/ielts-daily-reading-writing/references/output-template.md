@@ -168,36 +168,55 @@ Required sections:
 Repeat Day, Level, Topic, topic cluster, IELTS pathway focus, and grammar focus.
 
 ### 2. Reading Answer Key and Detailed Explanations
-For every reading question, adopt the persona of a highly supportive teacher. Include:
-- Question number
-- Correct answer
-- **Detailed cognitive thinking process (in Vietnamese / tiếng Việt)**: Explain step-by-step how to analyze the question, scan/skim the passage to locate the exact evidence, and match keywords/paraphrases. Prioritize concise, easy-to-understand explanations; only write longer explanations for highly complex items.
-- **Evidence/paraphrase analysis**: Cite specific quotes and keywords from the passage.
-- **Trap Detection & Self-Correction (in Vietnamese / tiếng Việt)**: Explain why common traps (e.g. distractor options, over-assumptions for Not Given vs False) are incorrect, and how students can detect these mistakes on their own in future tasks (concise and easy-to-understand).
-- For `(*)` questions: explain which next-level skill is being practiced.
+For every reading question, adopt the persona of a highly supportive teacher. Follow this exact Markdown structure:
+
+📖 **Tóm tắt bài đọc:** [Provide a 3-4 sentence Vietnamese summary of the passage]
+
+1. **[Answer Letter]** — [Answer text]
+- Bằng chứng: "[Verbatim quote from passage]" (§[Paragraph number])
+- Cách tìm đáp án: [Explain step-by-step how to scan and analyze keywords in Vietnamese, and why other options are wrong]
+> **💡 Mẹo:** [Practical exam tip for this question type]
+
+2. **[Answer Letter]** *[Stretch Point]* — [Answer text]
+- Bằng chứng: "[Verbatim quote from passage]" (§[Paragraph number])
+- Kỹ năng [Next Level] — [Skill name (e.g. Kỹ năng B1 — Suy luận (Inference))]: [Detailed reasoning in Vietnamese]
+> **💡 Mẹo:** [Practical exam tip]
 
 ### 3. Grammar Answer Key and Detailed Explanations
-For every grammar question, adopt the persona of a highly supportive teacher. Include:
-- Question number
-- Correct answer
-- **Detailed cognitive thinking process (in Vietnamese / tiếng Việt)**: Explain how to analyze the sentence context, identify target grammar cues, and formulate the correct answer. Prioritize concise, easy-to-understand explanations; only write longer explanations for highly complex items.
-- **Detailed explanation of the grammar rule (in Vietnamese / tiếng Việt)** and why the chosen answer is correct (concise and easy-to-understand).
-- **Trap Detection & Self-Correction (in Vietnamese / tiếng Việt)**: Explain why common incorrect answers are wrong, highlighting common IELTS grammar traps and how students can double-check their own work (concise and easy-to-understand).
-- For `(*)` questions: explain the higher-level grammar skill being introduced.
+For every grammar question, follow this exact Markdown structure:
+
+> **Bảng phân biệt nhanh / Công thức bỏ túi:**
+> - [Brief grammar summary or formulas in Vietnamese]
+
+14. **[Answer word/phrase]**
+- Dấu hiệu / Phân tích: [Identify target cues and explain why it is correct in Vietnamese]
+> **💡 Mẹo:** [Helpful tip or trap warning]
+
+23. **[Answer word/phrase]** *[Stretch Point]*
+- Kỹ năng [Next Level] — [Grammar structure]: [Explain the next-level grammar concept in Vietnamese]
+> **💡 Mẹo:** [Grammar tip]
 
 ### 4. Writing Guidance / Suggested Answers
-For every writing task, adopt the persona of a detailed, supportive teacher. Provide:
-- **Cognitive Process & Structure Guidance (in Vietnamese / tiếng Việt)**: Detail the step-by-step thinking process (how to analyze the prompt, organize ideas, and structure the response) so students can read, learn, and structure their thoughts to approach similar tasks independently. Prioritize concise, easy-to-understand explanations; only write longer explanations for highly complex items.
-- **Self-Correction Tips (in Vietnamese / tiếng Việt)**: Explain how students can identify, analyze, and correct their own mistakes (e.g. alignment with grammar focus, coherence, vocabulary usage) in a concise and easy-to-understand manner.
-- **Level-appropriate model answers**:
-  - A1-A2: model sentence or short model paragraph
-  - B1: model paragraph, outline, or sentence bank
-  - B2: Task 1 overview/sample paragraph or Task 2 plan/model paragraph
-  - C1-C2: high-band outline, thesis options, counterargument, hedging/nuance notes, and one model paragraph
-- **Reusable feedback** aligned with the task's success criteria.
+For every writing task, follow this exact Markdown structure:
+
+#### Task [X]: [Task name (e.g. Word Ordering / Short Description)]
+
+> **Suggested Model Answer:**
+> "[Level-appropriate model text]"
+
+- **Hướng dẫn viết từng câu / từng bước:**
+  - Câu 1 / Bước 1: [Detailed structural construction explanation in Vietnamese]
+- *Tự kiểm tra:*
+  - [Capitalization, subject-verb concord, tense checks, word limits, etc.]
 
 ### 5. Review Bridge
-Add 3-5 review prompts that recycle the previous or related topic. If no history is available, recycle the same day's vocabulary and grammar. Prefer the named spiral progression routes when history matches economy/consumption, society/work, built-environment Task 1, or art/craft history.
+Add 3-5 review prompts that recycle the previous or related topic. Follow this structure:
+
+#### IV. Review Bridge / Ôn tập liên chủ đề
+
+1. [Review Question / Translation Prompt]
+- **Đáp án:** [Correct answer]
+- **Giải thích:** [Vietnamese grammatical or vocabulary rationale]
 
 ## Part 4 - Quizlet Vocabulary Markdown
 File name: `[Level]-[Topic]-[Day]-Quizlet-Vocab.md`

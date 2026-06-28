@@ -1,20 +1,20 @@
-equipment (/ɪˈkwɪp.mənt/) [noun]	The set of necessary tools or clothing for a purpose. - Trang thiết bị, dụng cụ.. Ví dụ: Most cars have seat belts as part of their equipment.
-restraining (/rɪˈstreɪ.nɪŋ/) [adjective]	Preventing someone from moving or doing something. - Hạn chế, đai giữ, kiềm chế.. Ví dụ: Safety experts estimate that the restraining devices save lives.
-estimate (/ˈes.tɪ.meɪt/) [verb]	To guess or calculate the value, size, or amount of something. - Ước lượng, đánh giá.. Ví dụ: Safety experts estimate that seat belts save thousands of lives.
-patent (/ˈpeɪ.tənt/) [noun]	An official right given by the government to make or sell an invention. - Bằng sáng chế, bằng độc quyền.. Ví dụ: The government gave a patent to Claghorn for his safety belt.
-attachment (/əˈtætʃ.mənt/) [noun]	An extra part that is joined to something to perform a task. - Phụ kiện, bộ phận gắn thêm.. Ví dụ: The device was said to include hooks and other attachments.
-fixed (/fɪkst/) [adjective]	Fastened, secure, or not able to be moved. - Cố định, gắn chặt.. Ví dụ: The belt secured the person to a fixed object.
-version (/ˈvɜː.ʃən/) [noun]	A form of something that is slightly different from other forms. - Phiên bản.. Ví dụ: Other inventors followed with different versions of the seat belt.
-abdomen (/ˈæb.də.mən/) [noun]	The lower part of the body that contains the stomach. - Vùng bụng, phần bụng.. Ví dụ: At the time, most safety belts in cars crossed the abdomen.
-permanent (/ˈpɜː.mə.nənt/) [adjective]	Lasting for a long time or forever; not temporary. - Thường trực, lâu dài, vĩnh cửu.. Ví dụ: Volvo was the first to offer the belt as a permanent addition.
-addition (/əˈdɪʃ.ən/) [noun]	Something that is added to another thing to improve it. - Sự thêm vào, phần bổ sung.. Ví dụ: The seat belt was a valuable addition to modern cars.
-honor (/ˈɒn.ər/) [noun]	An award or official sign of high respect or praise. - Danh dự, giải thưởng, sự vinh danh.. Ví dụ: The Swedish engineer won many honors for his seat belt.
-academy (/əˈkæd.ə.mi/) [noun]	An organization to support art, science, or literature. - Học viện, viện hàn lâm.. Ví dụ: He received a gold medal from the Royal Swedish Academy.
-car-maker (/ˈkɑːˌmeɪ.kər/) [noun]	A company or manufacturer that builds automobiles. - Nhà sản xuất ô tô, hãng xe.. Ví dụ: Volvo shared its seat belt design with other car-makers.
-seat belt (/ˈsiːt ˌbelt/) [noun]	A safety belt used in a car or plane to hold a passenger securely. - Dây đai an toàn.. Ví dụ: You should always fasten your seat belt before driving.
-three-point (/θriː pɔɪnt/) [phrase]	A belt design anchored at three points for safety. - (Thiết kế) ba điểm, dây đai ba điểm.. Ví dụ: Bohlin invented the three-point seat belt for cars.
-safety expert (/ˈseɪf.ti ˌek.spɜːt/) [noun]	A professional who studies and makes recommendations on safety. - Chuyên gia an toàn.. Ví dụ: Safety experts say that three-point belts are highly effective.
-flying machine (/ˈflaɪ.ɪŋ məˌʃiːn/) [noun]	An early type of aircraft before modern aviation was developed. - Cỗ máy bay (thời sơ khai).. Ví dụ: George Cayley is remembered for his early flying machines.
-in case of (/ɪn keɪs əv/) [phrase]	In the event of a particular situation, usually an emergency. - Trong trường hợp, phòng khi.. Ví dụ: Seat belts protect passengers in case of accident.
-lap and shoulder (/læp ænd ˈʃəʊl.dər/) [phrase]	Crossing both the hips (lap) and chest (shoulder). - Đùi và vai (đai an toàn qua đùi và vai).. Ví dụ: A lap and shoulder belt is safer than a simple lap belt.
-win honors (/wɪn ˈɒn.əz/) [phrase]	To receive awards, medals, or recognition for achievements. - Đạt giải thưởng, được vinh danh.. Ví dụ: The Swedish engineer won honors all over the world.
+equipment (/ɪˈkwɪp.mənt/) [n]	The set of necessary tools or clothing for a purpose - Trang thiết bị, dụng cụ. Ví dụ: Most cars have seat belts as part of their equipment.
+restraining (/rɪˈstreɪ.nɪŋ/) [adj]	Preventing someone or something from moving freely - Hạn chế, đai giữ. Ví dụ: Safety experts estimate that the restraining devices save lives.
+estimate (/ˈes.tɪ.meɪt/) [v]	To roughly calculate or judge the value, number, or amount of something - Ước tính, ước lượng. Ví dụ: Scientists estimate that seat belts save thousands of lives each year.
+patent (/ˈpeɪ.tənt/) [n]	An official document giving the inventor the right to make or sell an invention - Bằng sáng chế. Ví dụ: The government gave a patent to Edward Claghorn to protect his invention.
+attachment (/əˈtætʃ.mənt/) [n]	A device or part that is joined to something else - Phụ kiện gắn liền, vật đính kèm. Ví dụ: The belt included hooks and other attachments for securing the person.
+fixed (/fɪkst/) [adj]	Fastened so that it cannot be moved or changed - Cố định, gắn chặt. Ví dụ: The Safety-Belt was attached to a fixed object inside the car.
+version (/ˈvɜː.ʒən/) [n]	A form of something that differs from other forms - Phiên bản, dạng biến thể. Ví dụ: Other inventors created different versions of the original seat belt.
+abdomen (/ˈæb.də.mən/) [n]	The part of the body between the chest and the hips - Bụng, vùng bụng. Ví dụ: Early seat belts crossed the body over the abdomen.
+permanent (/ˈpɜː.mə.nənt/) [adj]	Lasting for a very long time or forever; not temporary - Lâu dài, vĩnh viễn. Ví dụ: Volvo offered the seat belt as a permanent addition to its cars.
+addition (/əˈdɪʃ.ən/) [n]	Something added to improve or complete something else - Sự thêm vào, phần bổ sung. Ví dụ: The seat belt was a valuable addition to modern car safety.
+honor (/ˈɒn.ər/) [n]	An award or official sign of high respect or praise - Danh dự, giải thưởng. Ví dụ: The Swedish engineer won many honors for his seat belt invention.
+academy (/əˈkæd.ə.mi/) [n]	An organization to support art, science, or literature - Học viện, viện hàn lâm. Ví dụ: He received a medal from the Royal Swedish Academy of Engineering Sciences.
+car-maker (/ˈkɑːˌmeɪ.kər/) [n]	A company or manufacturer that builds automobiles - Nhà sản xuất ô tô. Ví dụ: Volvo shared its seat belt design with other car-makers.
+seat belt (/ˈsiːt ˌbelt/) [n]	A safety belt used in a car or plane to hold a passenger securely - Dây đai an toàn. Ví dụ: You should always fasten your seat belt before driving.
+three-point (/θriː pɔɪnt/) [adj phrase]	A belt design anchored at three points for safety - Đai ba điểm. Ví dụ: Bohlin invented the three-point seat belt which is still used in all cars today.
+safety expert (/ˈseɪf.ti ˌek.spɜːt/) [n]	A professional who studies and makes recommendations on safety - Chuyên gia an toàn. Ví dụ: Safety experts said the new design was far more effective.
+flying machine (/ˈflaɪ.ɪŋ məˌʃiːn/) [n]	An early type of aircraft before modern aviation was developed - Cỗ máy bay thời sơ khai. Ví dụ: George Cayley is remembered for his early flying machines.
+in case of (/ɪn keɪs əv/) [phrase]	In the event of a particular situation, usually an emergency - Trong trường hợp, phòng khi. Ví dụ: Seat belts protect passengers in case of accident.
+lap and shoulder (/læp ænd ˈʃəʊl.dər/) [phrase]	Crossing both the hips and chest for maximum protection - Dây đai qua đùi và vai. Ví dụ: A lap and shoulder belt is safer than a simple lap belt.
+win honors (/wɪn ˈɒn.əz/) [phrase]	To receive awards or recognition for achievements - Được vinh danh, đạt giải thưởng. Ví dụ: The Swedish engineer won honors all over the world.

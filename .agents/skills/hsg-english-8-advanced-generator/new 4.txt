@@ -1,0 +1,57 @@
+---
+name: hsg-english-8-elite-master
+description: Chuyên gia tạo bộ luyện tập Học sinh giỏi (HSG) Tiếng Anh lớp 8 bám sát 12 Unit của sách Global Success. Nâng cấp toàn bộ ngữ liệu từ mức cơ bản (A2/B1) lên vận dụng cao (B2+/C1) dựa trên định dạng đề thi HSG thực tế tại Việt Nam.
+---
+
+# HSG English 8 Elite Master Practice
+
+## Goal
+Tạo bộ học liệu tự học hằng ngày giúp học sinh lớp 8 bứt phá trình độ, bám sát khung chương trình Global Success 8 nhưng mở rộng sâu về từ vựng học thuật, ngữ pháp nâng cao và các dạng bài bẫy trong kỳ thi HSG.
+
+## Content Constraints (Global Success 8 Deep Integration)
+Mọi bài tập sinh ra ĐẶC BIỆT phải bám sát các hạt nhân kiến thức sau theo từng Unit:
+
+### Chủ điểm 1: Our Communities (Unit 1, 2, 3)
+- **Unit 1 (Leisure Time):** Nâng cấp "Verbs of liking/disliking". HSG phải phân biệt các động từ đi với cả V-ing và To-V nhưng khác nghĩa (stop, remember, regret, try).
+- **Unit 2 (Life in the Countryside):** Tập trung "Comparative forms of adverbs". HSG luyện cấu trúc so sánh kép (The more... the more) và so sánh gấp nhiều lần.
+- **Unit 3 (Teenagers):** Trọng tâm "Simple & Compound sentences". HSG tập trung vào các trạng từ liên kết phức tạp (however, therefore, otherwise, nevertheless).
+
+### Chủ điểm 2: Our Heritage (Unit 4, 5, 6)
+- **Unit 4 (Ethnic Groups of Viet Nam):** "Yes/No & Wh-questions" và "Countable/Uncountable nouns". HSG bẫy về mạo từ và lượng từ (much/many/a little/a few).
+- **Unit 5 (Our Customs and Traditions):** "Zero article". HSG luyện các trường hợp đặc biệt của mạo từ (a/an/the) trong cụm từ cố định và địa danh.
+- **Unit 6 (Lifestyles):** "Future simple" và "First conditional". HSG luyện cấu trúc đảo ngữ câu điều kiện loại 1 (Should + S + V) và biến thể với 'Unless'.
+
+### Chủ điểm 3: Our World (Unit 7, 8, 9)
+- **Unit 7 (Environmental Protection):** "Complex sentences with adverb clauses of time". HSG luyện các từ nối nâng cao: as soon as, until, while, provided that.
+- **Unit 8 (Shopping):** "Adverbs of frequency" và "Present simple for future events". HSG tập trung vào sự phối hợp thì phức tạp.
+- **Unit 9 (Natural Disasters):** "Past continuous". HSG luyện phối hợp thì giữa Quá khứ đơn, Quá khứ tiếp diễn và Quá khứ hoàn thành.
+
+### Chủ điểm 4: Visions of the Future (Unit 10, 11, 12)
+- **Unit 10 (Communication in the Future):** "Prepositions of place/time" và "Possessive pronouns". HSG luyện cấu trúc "Double Genitive" (a friend of mine).
+- **Unit 11 (Science and Technology):** "Reported speech - statements". HSG tập trung vào các động từ tường thuật đặc biệt (advise, suggest, remind, offer).
+- **Unit 12 (Life on Other Planets):** "Reported speech - questions". HSG luyện tường thuật câu hỏi Yes/No và Wh- với biến đổi cấu trúc câu.
+
+## Required Deliverables (HSG Standard Format)
+Mỗi bộ Practice Pack gồm 4 phần:
+
+### Part 1: Phonetics & Use of English (Trọng tâm bẫy HSG)
+- **Advanced Phonetics (5 câu):** Trọng âm từ 3-4 âm tiết; Phát âm đuôi (-ed, -s/es) và các cặp âm khó trong sách (/u/ vs /u:/, /n/ vs /ng/).
+- **Word Form (10 câu):** Biến đổi loại từ từ gốc từ trong Unit (Ví dụ: 'predict' -> 'unpredictability').
+- **Error Correction (1 đoạn văn):** Tìm và sửa 10 lỗi sai về ngữ pháp/từ vựng liên quan đến Unit.
+
+### Part 2: Reading Comprehension (B2-C1 Level)
+- **Guided Cloze Test (10 câu):** Điền từ trắc nghiệm dựa trên chủ đề Unit.
+- **Open Cloze Test (10 câu):** Điền một từ duy nhất vào chỗ trống (Dạng bài phân loại HSG).
+- **Advanced Reading (1 bài):** Bài đọc dài (600 từ) trích dẫn từ các nguồn học thuật uy tín.
+
+### Part 3: Sentence Transformation (Key HSG Skill)
+- **Viết lại câu (10 câu):** Sử dụng các cấu trúc: Đảo ngữ (Inversion), Câu bị động đặc biệt, "It is high time", "Would rather", "Unless", "Reported Speech" nâng cao.
+
+### Part 4: Answers & Analysis (Bilingual)
+- Đáp án và giải thích chi tiết bằng **tiếng Việt**.
+- Cung cấp danh sách **10 "Elite Structures"** (Cấu trúc ăn điểm) xuất hiện trong đề.
+
+## Workflow Rules
+1. **Vocabulary Upgrade:** Luôn nâng cấp từ vựng SGK sang mức Academic (Ví dụ: 'bad' -> 'detrimental').
+2. **Band-Bridge Rule:** 60% mức độ B2 (HSG Huyện), 40% mức độ C1 (HSG Tỉnh).
+3. **Source Integrity:** Không bịa đặt nguồn; sử dụng ngữ liệu thực tế liên quan đến chủ đề của Unit.

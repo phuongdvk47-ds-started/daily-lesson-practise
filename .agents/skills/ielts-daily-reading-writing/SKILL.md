@@ -173,7 +173,39 @@ For every writing task include only what the student needs to do:
 
 Keep writing practice concise and action-oriented. Do not add long explanations, background lectures, or teacher commentary in Part 1. Move any model support or guidance to Part 3.
 
-In Part 3 (Answers PDF), for all sections including Reading, Grammar, and Writing, always adopt the persona of a highly supportive teacher. Provide detailed, step-by-step guidance on the cognitive thinking process required to analyze the questions, locate evidence, apply grammar rules, and solve the tasks. Crucially, write all explanations in Vietnamese (tiếng Việt), prioritizing concise and easy-to-understand explanations, and only providing longer explanations for highly complex items. Explain how students can read, learn, structure their thoughts, write their own responses for future tasks, and detect common errors or traps in their own work.
+In Part 3 (Answers PDF), adopt the persona of a highly supportive teacher. Crucially, write all explanations in Vietnamese (tiếng Việt), prioritizing concise and easy-to-understand explanations. Follow these strict structural layout rules:
+
+### 1. Reading Answers Structure
+- **Reading Summary (Tóm tắt bài đọc)**: Always start the Reading Answers section with a Vietnamese summary of the passage. Example: `📖 **Tóm tắt bài đọc:** [Vietnamese summary]`.
+- **Each Reading Question Item**: Must include exactly:
+  1. Correct Answer: `Câu X. [Đáp án chữ] — [Nội dung câu trả lời bằng tiếng Anh]`.
+  2. Evidence Quote: `*Bằng chứng: "[Direct quote from passage]" (§[Paragraph number])*` (always quote verbatim and specify the paragraph number using `§`).
+  3. Cognitive Logic: `**Cách tìm đáp án:** [Detailed step-by-step keyword matching and reasoning in Vietnamese, explaining why other choices are wrong]`.
+  4. Test-taking Tip: A blockquote starting with `> **💡 Mẹo:** [Practical exam tip for this question type]`.
+- **Stretch Questions `(*)`**: Append `*[Stretch Point]*` to the answer header and explain the next-level skill being introduced (e.g. B1 Inference).
+
+### 2. Grammar Answers Structure
+- **Quick Info Box (Bảng phân biệt nhanh / Công thức bỏ túi)**: Insert a color-coded blockquote summary at the start of each exercise section. Example:
+  ```markdown
+  > **Bảng phân biệt nhanh / Công thức bỏ túi:**
+  > - [Brief grammar rules, triggers, or linker distinctions in Vietnamese]
+  ```
+- **Each Grammar Question Item**: Must include:
+  1. Correct Answer: `Câu X. [Đáp án đúng]`.
+  2. Grammar Cues: `**Dấu hiệu / Phân tích:** [Explain the tense trigger, clause structure, or linker usage, detailing why the target answer is correct in Vietnamese]`.
+  3. Test-taking Tip: A blockquote starting with `> **💡 Mẹo:** [Helpful grammar trick or pitfall to avoid]`.
+
+### 3. Writing Answers Structure
+- **Suggested Model Answer**: Provide a high-quality, level-appropriate model essay/response wrapped in a blockquote. Example:
+  ```markdown
+  > **Suggested Model Answer:**
+  > "[Model text]"
+  ```
+- **Step-by-Step Writing Guidance**: Break down the sentence structure, paragraph layout, or letter-writing steps in Vietnamese to help students structure similar responses.
+- **Self-Check List (Tự kiểm tra)**: Provide a bulleted checklist to help students self-correct common mistakes. Example: `*Tự kiểm tra:* check capitalization, subject-verb agreement, key grammar use.`.
+
+### 4. Review Bridge Section
+- Add `IV. Review Bridge / Ôn tập liên chủ đề` at the end of the answer sheet containing 3 short practice prompts, their correct answers, and detailed Vietnamese rationales.
 
 ## Topic Coverage Additions
 Ensure the topic bank covers these high-value IELTS gaps:

@@ -45,6 +45,12 @@ def format_markdown_inline(text: str) -> str:
 
 def build_word_regex(word: str) -> str:
     w = word.strip().lower()
+    # Strip parenthetical annotations e.g. 'fed (content)' -> 'fed'
+    w = re.sub(r'\s*\([^)]*\)\s*', ' ', w).strip()
+    # Escape special regex characters, then re-allow [- ]+ for word separators
+    # We only use the first token(s) without special chars
+    if not w:
+        return r'\bx\b'  # safe no-match placeholder
     # Replace dashes/spaces to allow both
     w = re.sub(r'[- ]+', r'[- ]+', w)
     
@@ -818,12 +824,33 @@ def split_definition(cell_text: str) -> tuple[str, str]:
         return parts[0].strip(), parts[1].strip()
     return cell_text.strip(), cell_text.strip()
 
+# Header keywords that indicate we've left the vocabulary table
+_NON_VOCAB_TABLE_HEADERS = (
+    "common mistake", "wrong example", "correct version", "why it matters",
+    "grammar point", "trap", "ielts trap",
+)
+
 def parse_vocab_from_markdown(md_table: str) -> list[dict]:
     items = []
+    in_vocab_table = False
     lines = md_table.strip().splitlines()
     for line in lines:
         line = line.strip()
-        if not line.startswith("|") or "Từ/Cụm từ" in line or "---" in line:
+        if not line.startswith("|"):
+            continue
+        # Detect the vocabulary table header row
+        if "Từ/Cụm từ" in line or "Phiên âm" in line:
+            in_vocab_table = True
+            continue
+        # Skip separator rows
+        if re.match(r'^\|[\s:|-]+\|', line):
+            continue
+        # Detect a different table's header row — stop vocab parsing
+        line_lower = line.lower()
+        if any(kw in line_lower for kw in _NON_VOCAB_TABLE_HEADERS):
+            in_vocab_table = False
+            continue
+        if not in_vocab_table:
             continue
         parts = split_table_row(line)
         if len(parts) >= 4:
@@ -984,7 +1011,10 @@ def clean_grammar_subheading(line: str) -> str:
     return line_str
 
 def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic: str) -> str:
-    vocab_items = parse_vocab_from_markdown(quizlet_md)
+    # Parse from the full 5-column table in vocab_grammar_md; quizlet_md is 2-column only
+    vocab_items = parse_vocab_from_markdown(vocab_grammar_md)
+    if not vocab_items:
+        vocab_items = parse_vocab_from_markdown(quizlet_md)
     sections = split_sections_by_heading(vocab_grammar_md)
     
     grouping_md = sections.get("Vocabulary Grouping Notes", "")
@@ -1914,7 +1944,11 @@ def main() -> None:
     quizlet_md_path = out_dir / names["quizlet_md"]
     quizlet_txt_path = out_dir / names["quizlet_txt"]
 
-    vocab_items = parse_vocab_from_markdown(data.get("quizlet_markdown", ""))
+    # Parse vocab from the full 5-column vocabulary_grammar_markdown table.
+    # quizlet_markdown is 2-column and will always fail the len(parts)>=4 check.
+    vocab_items = parse_vocab_from_markdown(data.get("vocabulary_grammar_markdown", ""))
+    if not vocab_items:
+        vocab_items = parse_vocab_from_markdown(data.get("quizlet_markdown", ""))
     vocab_words = [item["word"] for item in vocab_items] if vocab_items else []
 
     practice_html_content = build_practice_html(data.get("practice_markdown", ""), level, topic, day, vocab_words)
