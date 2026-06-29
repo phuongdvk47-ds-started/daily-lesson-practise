@@ -2126,12 +2126,16 @@ def main() -> None:
     if args.out_dir is None:
         day_part = re.sub(r"^Day\s+", "", day.strip(), flags=re.I)
         level_part = safe_filename_part(level)
-        topic_part = safe_filename_part(topic)
-        out_dir = Path("outputs") / "ielts-daily-reading-writing" / f"{day_part}-{level_part}-{topic_part}"
+        out_dir = Path("outputs") / "ielts-daily-reading-writing" / f"{day_part}-{level_part}"
     else:
         out_dir = Path(args.out_dir)
         
     out_dir.mkdir(parents=True, exist_ok=True)
+    
+    lsn_dir = out_dir / "lsn"
+    aws_dir = out_dir / "aws"
+    lsn_dir.mkdir(parents=True, exist_ok=True)
+    aws_dir.mkdir(parents=True, exist_ok=True)
     
     # Save the original input JSON payload as the source of truth
     source_json_path = out_dir / "lesson_source.json"
@@ -2144,11 +2148,11 @@ def main() -> None:
     vocab_checker_html_path = out_dir / "vocab_checker.html"
     vocab_checker_answer_html_path = out_dir / "vocab_checker_answer.html"
     
-    practice_pdf_path = out_dir / names["practice_pdf"]
-    vocab_grammar_pdf_path = out_dir / names["vocab_grammar_pdf"]
-    answers_pdf_path = out_dir / names["answers_pdf"]
-    vocab_checker_pdf_path = out_dir / names["vocab_checker_pdf"]
-    vocab_checker_answer_pdf_path = out_dir / names["vocab_checker_answer_pdf"]
+    practice_pdf_path = lsn_dir / names["practice_pdf"]
+    vocab_grammar_pdf_path = lsn_dir / names["vocab_grammar_pdf"]
+    answers_pdf_path = aws_dir / names["answers_pdf"]
+    vocab_checker_pdf_path = lsn_dir / names["vocab_checker_pdf"]
+    vocab_checker_answer_pdf_path = aws_dir / names["vocab_checker_answer_pdf"]
     quizlet_md_path = out_dir / names["quizlet_md"]
     quizlet_txt_path = out_dir / names["quizlet_txt"]
 

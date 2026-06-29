@@ -32,19 +32,24 @@ Create six separated outputs for every completed daily pack:
 6. Part 6 Vocab Checker Answer PDF: a Vocab Checker sheet with correct English answers filled in bold red, sharing the exact same randomized order as Part 5.
 
 Store all generated outputs inside a structured directory format:
-`/outputs/ielts-daily-reading-writing/[Day]-[Level]-[Topic]` (e.g. `/outputs/ielts-daily-reading-writing/20260626-B2-Public-Facilities/`).
+`/outputs/ielts-daily-reading-writing/[Day]-[Level]` (e.g. `/outputs/ielts-daily-reading-writing/20260626-B2/`).
+
+The compiled PDF files inside this folder must be organized into two subdirectories:
+- `lsn/`: Contains files printed for student use (practice sheet, vocabulary & grammar materials, vocabulary checker):
+  - `lsn/[Level]-[Topic]-[Day]-Practise.pdf`
+  - `lsn/[Level]-[Topic]-[Day]-Vocabulary-Grammar.pdf`
+  - `lsn/[Level]-[Topic]-[Day]-Vocab-Checker.pdf`
+- `aws/`: Contains files for teachers / grading (answers, vocabulary checker answers):
+  - `aws/[Level]-[Topic]-[Day]-Answers.pdf`
+  - `aws/[Level]-[Topic]-[Day]-Vocab-Checker-Answer.pdf`
+
+Other files are saved directly in the parent directory:
+- `[Level]-[Topic]-[Day]-Quizlet-Vocab.md`
+- `lesson_source.json`
 
 For every daily pack generated, the compiler automatically saves a copy of the input JSON payload inside the destination folder as `lesson_source.json`. This file represents the **Single Source of Truth** for the lesson content. When updating formatting rules, footers, or layout templates, **DO NOT** run the AI (LLM) to regenerate the text from scratch. Instead, invoke the Python compiler directly with `lesson_source.json` to overwrite the outputs with the new layout while preserving 100% of the core content.
 
-Use the exact output contract in `references/output-template.md`. When file generation is requested or tools are available, use `scripts/export_daily_pack.py` to export the five PDFs and one Quizlet Markdown file.
-
-Required file names:
-- `[Level]-[Topic]-[Day]-Practise.pdf`
-- `[Level]-[Topic]-[Day]-Vocabulary-Grammar.pdf`
-- `[Level]-[Topic]-[Day]-Answers.pdf`
-- `[Level]-[Topic]-[Day]-Vocab-Checker.pdf`
-- `[Level]-[Topic]-[Day]-Vocab-Checker-Answer.pdf`
-- `[Level]-[Topic]-[Day]-Quizlet-Vocab.md`
+Use the exact output contract in `references/output-template.md`. When file generation is requested or tools are available, use `scripts/export_daily_pack.py` to export the PDF and Quizlet files.
 
 Sanitize file names by replacing spaces with hyphens and removing unsafe punctuation. Preserve the requested spelling `Practise.pdf`.
 

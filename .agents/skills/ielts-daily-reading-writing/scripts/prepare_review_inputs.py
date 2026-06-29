@@ -109,19 +109,22 @@ def main() -> None:
     day_topic_map = {}
 
     for day in target_days:
-        # Search output folders starting with {day}-{level}-
-        day_folder = None
-        for p in outputs_dir.glob(f"{day}-{level}-*"):
-            if p.is_dir():
-                day_folder = p
-                break
-        
-        # Try legacy format in case of fallback: {level}_{day}_
-        if not day_folder:
-            for p in outputs_dir.glob(f"{level}_{day}_*"):
+        # 1. Try new format: {day}-{level}
+        day_folder = outputs_dir / f"{day}-{level}"
+        if not day_folder.is_dir():
+            day_folder = None
+            # 2. Try old format: {day}-{level}-*
+            for p in outputs_dir.glob(f"{day}-{level}-*"):
                 if p.is_dir():
                     day_folder = p
                     break
+            
+            # 3. Try legacy format in case of fallback: {level}_{day}_*
+            if not day_folder:
+                for p in outputs_dir.glob(f"{level}_{day}_*"):
+                    if p.is_dir():
+                        day_folder = p
+                        break
                     
         if not day_folder:
             continue
@@ -130,9 +133,20 @@ def main() -> None:
         if materials_html.exists():
             html_content = materials_html.read_text(encoding="utf-8")
             
-            # Parse topic name from folder name
-            folder_parts = day_folder.name.split("-", 2)
-            topic_name = folder_parts[2].replace("-", " ") if len(folder_parts) >= 3 else "Unknown Topic"
+            # Parse topic name from lesson_source.json if available, else from folder name
+            topic_name = "Unknown Topic"
+            lesson_json = day_folder / "lesson_source.json"
+            if lesson_json.exists():
+                try:
+                    lesson_data = json.loads(lesson_json.read_text(encoding="utf-8"))
+                    topic_name = lesson_data.get("topic", "Unknown Topic")
+                except Exception:
+                    pass
+            
+            if topic_name == "Unknown Topic":
+                folder_parts = day_folder.name.split("-", 2)
+                topic_name = folder_parts[2].replace("-", " ") if len(folder_parts) >= 3 else "Unknown Topic"
+                
             day_topic_map[day] = topic_name
             
             # Vocab
