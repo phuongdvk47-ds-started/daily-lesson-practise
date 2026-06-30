@@ -2110,6 +2110,233 @@ def compile_html_to_pdf(html_path: Path, pdf_path: Path, lesson_id: str = "", do
         )
         browser.close()
 
+def convert_json_to_markdown_fields(data: dict) -> dict:
+    if "practice_markdown" in data:
+        return data
+        
+    converted = data.copy()
+    meta = data.get("lesson_meta", {})
+    level = meta.get("level", data.get("level", "A2"))
+    topic = meta.get("topic", data.get("topic", ""))
+    day = meta.get("day", data.get("day", ""))
+    
+    pm = []
+    source = data.get("source", {})
+    if source:
+        pm.append("## Reading Source Verification")
+        pm.append("| Source title | Publisher/Organization | Date/Access date | Final verified URL | URL status | Source type | Reliability check | How the passage uses the source |")
+        pm.append("| --- | --- | --- | --- | --- | --- | --- | --- |")
+        pm.append(f"| {source.get('source_title', '')} | {source.get('publisher', '')} | {source.get('published_date', '')} / {source.get('access_date', '')} | {source.get('verified_url', '')} | {source.get('url_status', 'Active')} | {source.get('source_type', 'Educational News Article')} | {source.get('credibility_note', '')} | {source.get('topic_relevance_note', '')} |")
+        pm.append("")
+        
+    pm.append("## Warm-up")
+    pm.append("Answer the following questions in Vietnamese or English:")
+    pm.append("1. Bạn nghĩ gì về chủ đề này? (What do you think about this topic?)")
+    pm.append("2. Chia sẻ một trải nghiệm thực tế của bạn liên quan đến chủ đề này. (Share a real experience related to this topic.)")
+    pm.append("3. Tại sao chủ đề này lại quan trọng đối với cuộc sống hàng ngày? (Why is this topic important in daily life?)")
+    pm.append("")
+    
+    reading = data.get("reading", {})
+    passage = reading.get("passage", {})
+    if passage:
+        pm.append("## Reading Passage")
+        pm.append(f"### {passage.get('title', '')}")
+        pm.append("")
+        for p in passage.get("paragraphs", []):
+            pm.append(p.get("text", ""))
+            pm.append("")
+            
+    rqs = reading.get("questions", [])
+    if rqs:
+        pm.append("## Questions for Reading")
+        by_type = {}
+        for q in rqs:
+            q_type = q.get("type", "Questions")
+            by_type.setdefault(q_type, []).append(q)
+            
+        for q_type, q_list in by_type.items():
+            start_num = q_list[0]["id"]
+            end_num = q_list[-1]["id"]
+            range_str = f"Questions {start_num}–{end_num}: " if start_num != end_num else f"Question {start_num}: "
+            pm.append(f"### {range_str}{q_type}")
+            pm.append("")
+            for q in q_list:
+                stretch_mark = " (*)" if q.get("stretch") else ""
+                options_str = ""
+                if q.get("options"):
+                    options_str = "\n" + "\n".join([f"    - {opt}" for opt in q["options"]])
+                pm.append(f"{q['id']}. {q['question']}{stretch_mark}{options_str}")
+            pm.append("")
+            
+    grammar = data.get("grammar", {})
+    gqs = grammar.get("questions", [])
+    if gqs:
+        pm.append("## Questions for Grammar")
+        by_type = {}
+        for q in gqs:
+            q_type = q.get("type", "Grammar Exercise")
+            by_type.setdefault(q_type, []).append(q)
+            
+        for q_type, q_list in by_type.items():
+            pm.append(f"### {q_type}")
+            pm.append("")
+            for q in q_list:
+                stretch_mark = " (*)" if q.get("stretch") else ""
+                options_str = ""
+                if q.get("options"):
+                    options_str = "\n" + "\n".join([f"    - {opt}" for opt in q["options"]])
+                pm.append(f"{q['id']}. {q['question']}{stretch_mark}{options_str}")
+            pm.append("")
+            
+    writing = data.get("writing", {})
+    tasks = writing.get("tasks", [])
+    if tasks:
+        pm.append("## Questions for Writing")
+        pm.append("| # | Task | Target length | Focus skill | Useful language | Success criteria |")
+        pm.append("| --- | --- | --- | --- | --- | --- |")
+        for t in tasks:
+            visual_prefix = ""
+            vis = t.get("visual_data", {})
+            if vis.get("type") in ["markdown_table", "svg"] and vis.get("content"):
+                visual_prefix = "<br><br>" + vis["content"].replace("\n", "<br>")
+            
+            prompt_clean = t.get('prompt', '').replace('\n', '<br>')
+            task_cell = f"{t.get('task_type', '')}: {prompt_clean}{visual_prefix}"
+            task_cell = task_cell.replace("|", "\\|")
+            
+            lang_cell = "<br>".join(t.get("useful_language", []))
+            crit_cell = "<br>".join(t.get("success_criteria", []))
+            pm.append(f"| {t.get('id', 1)} | {task_cell} | {t.get('target_length', '')} | {t.get('focus_skill', '')} | {lang_cell} | {crit_cell} |")
+        pm.append("")
+        
+    converted["practice_markdown"] = "\n".join(pm)
+    
+    vgm = []
+    vocab = data.get("vocabulary", {})
+    v_items = vocab.get("items", [])
+    if v_items:
+        vgm.append("## Vocabulary Table")
+        vgm.append("| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |")
+        vgm.append("| --- | --- | --- | --- | --- |")
+        for item in v_items:
+            vgm.append(f"| {item.get('term', '')} | {item.get('ipa', '')} | {item.get('part_of_speech', '')} | {item.get('meaning_vi', '')} ({item.get('definition_en', '')}) | {item.get('example', '')} |")
+        vgm.append("")
+        
+    v_recycled = vocab.get("recycled_items", [])
+    if v_recycled:
+        vgm.append("## Recycled Vocabulary (Từ vựng ôn tập)")
+        vgm.append("| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Bài học gốc (Day) |")
+        vgm.append("| --- | --- | --- | --- | --- |")
+        for item in v_recycled:
+            vgm.append(f"| {item.get('term', '')} | {item.get('ipa', '')} | {item.get('part_of_speech', '')} | {item.get('meaning_vi', '')} | Day {item.get('source_day', '')} |")
+        vgm.append("")
+        
+    guide = grammar.get("guide", [])
+    if guide:
+        vgm.append("## Detailed Grammar Guide")
+        for g in guide:
+            vgm.append(g.get("heading", "#### Chủ điểm:"))
+            vgm.append(g.get("content", ""))
+            vgm.append("")
+            
+    mistakes = grammar.get("common_mistakes", [])
+    if mistakes:
+        vgm.append("## Common Mistakes / IELTS Traps for This Topic")
+        vgm.append("| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |")
+        vgm.append("| --- | --- | --- | --- |")
+        for m in mistakes:
+            vgm.append(f"| {m.get('trap', '')} | {m.get('wrong_example', '')} | {m.get('correct_version', '')} | {m.get('why_it_matters', '')} |")
+        vgm.append("")
+        
+    converted["vocabulary_grammar_markdown"] = "\n".join(vgm)
+    
+    am = []
+    answers = data.get("answers", {})
+    r_ans = answers.get("reading_answers", [])
+    if r_ans:
+        am.append("## Reading Answer Key and Detailed Explanations")
+        am.append("")
+        am.append("📖 **Tóm tắt bài đọc:** Bài đọc mô tả chi tiết thông tin từ nguồn đã xác thực.")
+        am.append("")
+        for idx, ra in enumerate(r_ans):
+            q_id = ra.get("question_id", idx + 1)
+            stretch_mark = " *[Stretch Point]*" if ra.get("stretch_note") else ""
+            am.append(f"{q_id}. **{ra.get('correct_answer', '')}**{stretch_mark}")
+            am.append(f"- Bằng chứng: \"{ra.get('evidence_quote', '')}\" (§{ra.get('evidence_paragraph', 1)})")
+            am.append(f"- Cách tìm đáp án: {ra.get('explanation_vi', '')} {ra.get('why_others_wrong_vi', '')}")
+            if ra.get("tip_vi"):
+                am.append(f"> **💡 Mẹo:** {ra['tip_vi']}")
+            am.append("")
+            
+    g_ans = answers.get("grammar_answers", [])
+    if g_ans:
+        am.append("## Grammar Answer Key and Detailed Explanations")
+        am.append("")
+        am.append("> **Bảng phân biệt nhanh / Công thức bỏ túi:**")
+        am.append("> - Ôn tập lý thuyết đã học trong bài.")
+        am.append("")
+        for idx, ga in enumerate(g_ans):
+            q_id = ga.get("question_id", idx + 1)
+            am.append(f"{q_id}. **{ga.get('correct_answer', '')}**")
+            am.append(f"- Dấu hiệu / Phân tích: {ga.get('analysis_vi', '')}")
+            if ga.get("tip_vi"):
+                am.append(f"> **💡 Mẹo:** {ga['tip_vi']}")
+            am.append("")
+            
+    w_guidance = answers.get("writing_guidance", [])
+    if w_guidance:
+        am.append("## Writing Guidance / Suggested Answers")
+        am.append("")
+        for idx, wg in enumerate(w_guidance):
+            t_id = wg.get("task_id", idx + 1)
+            am.append(f"#### Task {t_id}")
+            am.append("> **Suggested Model Answer:**")
+            am.append(f"> \"{wg.get('model_answer', '')}\"")
+            am.append("")
+            am.append(f"- **Hướng dẫn viết từng câu / từng bước:** {wg.get('guidance_vi', '')}")
+            checklist = wg.get("self_checklist", [])
+            if checklist:
+                checklist_str = " ".join([f"* {item}" for item in checklist])
+                am.append(f"- *Tự kiểm tra:* {checklist_str}")
+            am.append("")
+            
+    rev_bridge = answers.get("review_bridge", [])
+    if rev_bridge:
+        am.append("## Review Bridge")
+        am.append("#### IV. Review Bridge / Ôn tập liên chủ đề")
+        for idx, rb in enumerate(rev_bridge):
+            am.append(f"{idx+1}. {rb.get('prompt', '')}")
+            am.append(f"- **Đáp án:** {rb.get('correct_answer', '')}")
+            am.append(f"- **Giải thích:** {rb.get('rationale_vi', '')}")
+            am.append("")
+            
+    converted["answers_markdown"] = "\n".join(am)
+    
+    qm = []
+    quizlet = vocab.get("quizlet", {})
+    if quizlet:
+        qm.append("## Section 1: Simple Vocabulary List (Học từ vựng đơn giản)")
+        qm.append("| Từ vựng tiếng Anh | Nghĩa tiếng Việt |")
+        qm.append("| --- | --- |")
+        for s1 in quizlet.get("section_1_simple", []):
+            parts = s1.split(" : ")
+            if len(parts) == 2:
+                qm.append(f"| {parts[0].strip()} | {parts[1].strip()} |")
+        qm.append("")
+        
+        qm.append("## Section 2: Detailed Vocabulary List (Học từ vựng đầy đủ)")
+        qm.append("| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |")
+        qm.append("| --- | --- |")
+        for s2 in quizlet.get("section_2_detailed", []):
+            parts = s2.split(" : ")
+            if len(parts) == 2:
+                qm.append(f"| {parts[0].strip()} | {parts[1].strip()} |")
+        qm.append("")
+        
+    converted["quizlet_markdown"] = "\n".join(qm)
+    
+    return converted
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("json_file", help="Daily pack JSON file")
@@ -2117,6 +2344,17 @@ def main() -> None:
     args = parser.parse_args()
 
     data = json.loads(Path(args.json_file).read_text(encoding="utf-8"))
+    
+    # Adapter for structured JSON compilation
+    if "practice_markdown" not in data:
+        meta = data.get("lesson_meta", {})
+        if meta:
+            data["level"] = meta.get("level", "A2")
+            data["topic"] = meta.get("topic", "")
+            data["day"] = meta.get("day", "")
+            data["lesson_id"] = meta.get("lesson_id", "")
+        data = convert_json_to_markdown_fields(data)
+
     level = str(data.get("level", "A2"))
     topic = str(data.get("topic", "Daily Topic"))
     day = str(data.get("day", "Day 00000000"))

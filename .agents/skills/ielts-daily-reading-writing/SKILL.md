@@ -1,12 +1,12 @@
 ---
 name: ielts-daily-reading-writing
-description: create daily ielts-oriented reading and writing practice for english learners from a day, topic, cefr level, and requested counts. use when the user asks an ai agent to generate daily english practice, reading passages, ielts reading questions, vocabulary extraction, grammar exercises, or writing prompts for levels a1-c2, especially with parameters such as day, topic, level, number of reading questions, vocabulary words, grammar questions, or writing practice tasks. also use when defaults, level-appropriate topic selection, topic continuity from previous days, or structured daily study outputs are required.
+description: create modular daily IELTS practice packs with separate source verification, reading, vocabulary, grammar, writing, answer, quality-control, and PDF export stages. Use when the user asks to generate IELTS daily practice, reading questions, grammar drills, writing tasks, Quizlet vocabulary, answer keys, cumulative review packs, or printable PDF packs for CEFR levels A1-C2.
 ---
 
-# IELTS Daily Reading & Writing Generator
+# IELTS Daily Pack Orchestrator
 
-## Goal
-Generate one self-contained daily practice pack for Reading and Writing, with vocabulary and grammar reinforcement, aligned to the learner's CEFR level and long-term IELTS 7.5 pathway.
+## Core Principle
+Use a modular pipeline. Do not generate the full IELTS pack in one monolithic response. Resolve inputs once, pass structured JSON between stages, validate the assembled `lesson_source.json`, then export PDFs from that JSON only.
 
 ## Accepted Inputs
 Accept these parameters when provided:
@@ -18,286 +18,57 @@ Accept these parameters when provided:
 - `Number of Grammar Questions`: default `30`.
 - `Number of Writing Practice`: default `5`.
 - Optional prior history: previous daily topics, learner errors, weak skills, or past outputs.
+- Optional cumulative review request.
 
 Normalize common variants: `Writting` means `Writing`; `IELTS Reading Questions` means reading question count.
 
+## High-Level Workflow for Daily Pack
+1. Resolve inputs and defaults.
+2. Load `references/orchestrator.md`.
+3. Check lesson history and anti-duplication rules. Find prior same-level lesson for vocabulary recycling.
+4. Run **Source Research Agent** using `references/source-research-agent.md`. If source verification fails, stop.
+5. Run **Reading Agent** using `references/reading-agent.md`.
+6. Run **Vocabulary Agent** using `references/vocabulary-agent.md`.
+7. Run **Grammar Agent** using `references/grammar-agent.md`.
+8. Run **Writing Agent** using `references/writing-agent.md`.
+9. Run **Answer Agent** using `references/answer-agent.md`.
+10. Assemble the complete payload into `lesson_source.json` according to `references/output-schema.md`.
+11. Run **Quality Control Agent** using `references/quality-control-agent.md`.
+12. If QC fails, regenerate the failed section(s) only. Rerun QC.
+13. Rerun validation script: `python scripts/validate_lesson_json.py [lesson_source.json]`.
+14. If validation passes, invoke compilation script: `python scripts/export_daily_pack.py [lesson_source.json]`.
 
-## Required Deliverables
-Create six separated outputs for every completed daily pack:
-1. Part 1 Practice PDF: verified-source reading passage, source verification note, Questions for Reading, Questions for Grammar, and Questions for Writing only.
-2. Part 2 Vocabulary & Grammar PDF: a 5-column vocabulary table plus detailed grammar guide, including IELTS/common mistake traps for the topic.
-3. Part 3 Answers PDF: answer keys with detailed explanations for every reading and grammar question, plus writing guidance/model support.
-4. Part 4 Quizlet Markdown: vocabulary lists in Markdown format split into Section 1 (simple word vs Vietnamese meaning) and Section 2 (detailed word with IPA and type vs Vietnamese meaning) for separate flashcard imports.
-5. Part 5 Vocab Checker PDF: a randomized 2-column vocabulary recall sheet (Vietnamese meaning recall and English definition recall) to prevent rote learning.
-6. Part 6 Vocab Checker Answer PDF: a Vocab Checker sheet with correct English answers filled in bold red, sharing the exact same randomized order as Part 5.
+## High-Level Workflow for Cumulative Review Pack
+1. Identify target days and retrieve recent level lessons from `lesson_history.txt`.
+2. Run aggregation script: `python scripts/prepare_review_inputs.py --level [Level] [--days [Days]]`.
+3. Generate review reading passage and questions based on aggregated topics.
+4. Generate grammar drill questions based on aggregated grammar targets.
+5. Generate writing tasks testing those targets.
+6. Assemble review JSON payload and run QC.
+7. If QC passes, compile review PDFs: `python scripts/export_review_pack.py [review JSON]`.
 
-Store all generated outputs inside a structured directory format:
-`/outputs/ielts-daily-reading-writing/[Day]-[Level]` (e.g. `/outputs/ielts-daily-reading-writing/20260626-B2/`).
+## Hard Rules
+- Only **Source Research Agent** may search or verify web sources.
+- Do not invent URLs, titles, authors, publication dates, facts, or source details. If no verified source exists, stop and report a source gap.
+- Every Sub-Agent must return structured JSON compatible with `references/output-schema.md`.
+- Do not export PDF from free-form markdown. PDF files must be compiled only from `lesson_source.json`.
+- If one section fails QC, regenerate ONLY that section. Do not regenerate the whole pack unless the source, level, or topic changes.
+- Preserve the existing output folder contract: `/outputs/ielts-daily-reading-writing/[Day]-[Level]/{lsn/, aws/, quizlet}`.
+- Preserve spelling `Practise.pdf`.
+- Preserve history logging in `/outputs/ielts-daily-reading-writing/lesson_history.txt`.
+- Preserve spaced repetition vocabulary recycling.
 
-The compiled PDF files inside this folder must be organized into two subdirectories:
-- `lsn/`: Contains files printed for student use (practice sheet, vocabulary & grammar materials, vocabulary checker):
-  - `lsn/[Level]-[Topic]-[Day]-Practise.pdf`
-  - `lsn/[Level]-[Topic]-[Day]-Vocabulary-Grammar.pdf`
-  - `lsn/[Level]-[Topic]-[Day]-Vocab-Checker.pdf`
-- `aws/`: Contains files for teachers / grading (answers, vocabulary checker answers):
-  - `aws/[Level]-[Topic]-[Day]-Answers.pdf`
-  - `aws/[Level]-[Topic]-[Day]-Vocab-Checker-Answer.pdf`
-
-Other files are saved directly in the parent directory:
-- `[Level]-[Topic]-[Day]-Quizlet-Vocab.md`
-- `lesson_source.json`
-
-For every daily pack generated, the compiler automatically saves a copy of the input JSON payload inside the destination folder as `lesson_source.json`. This file represents the **Single Source of Truth** for the lesson content. When updating formatting rules, footers, or layout templates, **DO NOT** run the AI (LLM) to regenerate the text from scratch. Instead, invoke the Python compiler directly with `lesson_source.json` to overwrite the outputs with the new layout while preserving 100% of the core content.
-
-Use the exact output contract in `references/output-template.md`. When file generation is requested or tools are available, use `scripts/export_daily_pack.py` to export the PDF and Quizlet files.
-
-Sanitize file names by replacing spaces with hyphens and removing unsafe punctuation. Preserve the requested spelling `Practise.pdf`.
-
-### Lesson ID & Footer Rules
-Every page in the generated PDF files must display a custom footer containing:
-- **Lesson ID**: Supplied by the agent, or auto-generated by the script as `LSN-[Day]-[Level]-[XXXXXXXX]` (where XXXXXXXX is an 8-character random alphanumeric string).
-- **Document Type**: The name of the document type (e.g. `Daily Practice Sheet`, `Vocabulary & Grammar Guide`, `Answer Key & Explanations`, `Vocabulary Checker`, `Vocabulary Checker Answer Key`).
-- **Page Number**: The current page and total pages (e.g. `Page X of Y`).
-
-### History Tracking & Spaced Repetition
-- **History Format**: Maintain the lesson history tracking file at `/outputs/ielts-daily-reading-writing/lesson_history.txt`. Enforce the 4-column format: `Level | Day | Theme | Specific Topic` (where Theme is from `references/topic-bank.md`, and Specific Topic is the sub-topic or specific focus of the reading passage). Upon successfully generating a pack, append these details to the history file.
-- **Theme & Topic Anti-Duplication Rule**:
-  - Do NOT generate a lesson on the same **Theme** for the same Level within **3 consecutive days/lessons**.
-  - Do NOT generate a lesson on the same **Specific Topic** or highly similar content for the same Level within **7 consecutive days/lessons**.
-- **Spaced Repetition (Vocabulary Recycling) Workflow**:
-  - To enhance long-term memory and recall, every daily lesson (Day $N$) must recycle exactly **3 target vocabulary words or phrases** from the previous 1-2 daily lessons (Day $N-1$ or $N-2$) of the same Level.
-  - **Step 1 (Scout prior words)**: Locate the `lesson_source.json` of the most recent 1-2 lessons of the same Level. Read their vocabulary tables and pick 3 words or phrases to recycle.
-  - **Step 2 (Integrate in Reading)**: Write today's reading passage incorporating these 3 recycled words naturally.
-  - **Step 3 (Special Recycled Notation)**: Bold these 3 recycled words in the reading passage and append the recycled symbol `[R]` (e.g., `**creature** [R]`).
-  - **Step 4 (Recycled Vocabulary Table)**: In Part 2 (Vocabulary & Grammar), append a separate, small table below the main vocabulary table:
-    ```markdown
-    ### Recycled Vocabulary (Từ vựng ôn tập)
-    | Từ vựng | Phiên âm | Loại từ | Nghĩa tiếng Việt | Bài học gốc (Day) |
-    | :--- | :--- | :--- | :--- | :--- |
-    ```
-  - **Step 5 (Practice in Review Bridge)**: Include at least 1 practice question (e.g., translation, sentence completion) using these recycled words in today's `IV. Review Bridge` section of both practice and answers PDFs.
-
-## Reference Loading
-Load only the needed reference files:
-- Use `references/topic-bank.md` to choose or validate topics by level, topic cluster, and spiral progression route.
-- Use `references/grammar-by-level.md` to choose level-appropriate grammar targets.
-- Use `references/output-template.md` to format the daily pack.
-- Use `scripts/select_daily_inputs.py` only when deterministic default resolution or history-aware topic selection is useful.
-
-## Workflow
-1. Resolve defaults. If an input is missing, fill it using the default rules above.
-2. Validate the level. If invalid, choose `A2` and briefly note the correction.
-3. Validate the topic. If the user-provided topic is too hard/easy for the level, adapt the task difficulty while keeping the topic, or suggest the nearest level-appropriate variant.
-4. Select topic continuity:
-   - If prior history exists, choose a topic in the same or adjacent cluster or spiral progression route as a recent topic, but not the exact same topic unless requested.
-   - If no prior history exists, choose from the level's topic bank.
-   - Prefer spiral learning: new topic + recycled vocabulary/grammar from related prior topics.
-5. Find and verify a reputable reading source before creating the reading passage. Use official, educational, museum/university, scientific, public-interest, or reputable news/report sources. Verify that the final URL is reachable and does not return 404/403/timeout/redirect-to-error before using it. Do not invent source titles, facts, publication details, URLs, citations, or reading content. If source lookup or URL verification is unavailable, ask for a source or clearly state that a verified-source pack cannot be completed.
-6. Choose 1-3 grammar targets from the level's grammar bank. Keep them relevant to the reading passage and writing tasks. Prioritize the high-impact IELTS error targets listed in `references/grammar-by-level.md` when they fit the level and task.
-7. Create the daily pack using the four-part output template.
-8. Separate student practice, vocabulary/grammar instruction, answers, and Quizlet markdown exactly as specified.
-9. Include detailed answer explanations for every reading and grammar question.
-10. Keep all content level-appropriate but IELTS-facing. Include a controlled band-bridge challenge so the learner practices mostly at the current level with a small number of questions approaching the next level. Do not make A1/A2 materials look like full academic IELTS passages; instead use IELTS-style micro-skills.
-
-## Reading Generation Rules
-Create one passage unless the user requests multiple passages. The reading must be based on a verified reputable source, not invented from memory. The source URL must be real, clickable, and checked before the pack is finalized.
-
-- **Vocabulary Highlighting**: When generating the `Reading Passage` in the practice sheet, you should bold any vocabulary words that are included in the Vocabulary Table of Part 2 (using `**word**` or its grammatical forms like plurals or past tenses). Additionally, you must bold and label the 3 recycled vocabulary words from prior lessons using `**word** [R]`. This helps students connect key terms immediately to their reading context and recognize recycled terms.
-
-Source verification requirements:
-- Search for or use a user-provided reputable source before writing the passage.
-- Verify the exact final URL before using it. Prefer opening the page or checking HTTP status with `scripts/verify_reading_source.py`. Reject URLs that return 404 Not Found, soft-404 pages, access-denied pages, irrelevant redirects, login walls, or pages whose title/content does not match the cited source.
-- Prefer official organizations, universities, museums, public institutions, peer-reviewed/public science explainers, reputable newspapers, or established educational publishers.
-- Record source title, publisher/organization, author when available, publication/update date when available, final verified URL, access date, URL status, and a brief reason it is credible.
-- Preserve the original source wording for the selected reading excerpt whenever the text is public-domain, open-licensed, user-provided, or otherwise safe to reproduce. Do not silently shorten, rewrite, summarize, or invent replacement text.
-- If the original article is copyrighted and cannot be reproduced in full, use only a compliant excerpt and clearly label it as an exact excerpt from the verified source; ask the user for a licensed/user-provided text if they require the full original article. Never create a fabricated or loosely paraphrased article while presenting it as the source text.
-- If no verified and reachable source can be found, do not fabricate the reading; return a transparent source-gap note instead of a complete pack.
-
-Length targets:
-- A1: 120-180 words, simple personal/community text, IELTS-style foundations.
-- A2: 180-260 words, concrete descriptive text, daily life or simple public information.
-- B1: 300-450 words, general news/popular science style.
-- B2: 550-750 words, IELTS Academic-style feature/report.
-- C1: 750-950 words, dense academic argument with clear structure.
-- C2: 900-1100 words, advanced academic/literary or policy-oriented text.
-
-Distribute reading question types by level:
-- A1-A2: form/table completion, matching information, short answer, basic multiple choice.
-- B1: multiple choice, matching headings, sentence completion, summary completion, True/False/Not Given.
-- B2: True/False/Not Given, Yes/No/Not Given, matching features, matching headings, summary completion, classification.
-- C1-C2: inference, writer's claims, complex matching, classification, summary completion with distractors.
-
-Generate exactly the requested number of reading questions. Include an answer key and short rationale. Every reading question must have **exactly one unique correct answer** (ensure distractor options are clearly incorrect, and short-answer/gap-fill completions allow only one specific textual extraction).
-
-- **Anti-Skimming/Scanning Question Design**:
-  - Always design reading questions to prevent simple direct matching of scannable keywords from the passage.
-  - Apply deep paraphrasing: use synonyms, passive voice, or antonyms in the question prompt instead of the original words.
-  - Implement distractor traps: insert scannable keywords from the passage into the *incorrect* MCQ options to catch students who rely on scanning without reading the sentence logic.
-  - Focus on global meaning, logical relations (cause/effect, contrast), and inference questions rather than simple direct factual extraction.
-
-Band-bridge difficulty rule:
-- Make about 70-80% of questions level-appropriate, 10-20% review/easy confidence questions, and 10-20% stretch questions approaching the next CEFR level.
-- Mark stretch questions only with `(*)` in the practice PDF and explain the higher-level skill in the answers PDF. Do not use the label `Band-Bridge` in student-facing questions.
-- Example: A2 packs should include a few B1-facing paraphrase, inference, or simple summary-completion items; B1 packs should include a few B2-facing T/F/NG or matching-heading items.
-
-## Vocabulary Rules
-Extract exactly the requested number of vocabulary items from the reading passage, grammar examples, writing prompts, or closely related level-appropriate topic language.
-
-The student-facing vocabulary table must use exactly five columns:
-- `Từ/Cụm từ`
-- `Phiên âm`
-- `Loại từ`
-- `Định nghĩa và Tiếng Việt`
-- `Ví dụ minh họa`
-
-Include a balanced mix of Academic Vocabulary, Compound Words, and Idioms & Phrases / Useful Chunks. If the lesson text does not provide enough items, add level-appropriate vocabulary from the same topic cluster. At B2+, prioritize collocations, academic verbs, noun phrases, stance language, and IELTS Task 1/Task 2 chunks over isolated basic words.
-
-## Grammar Rules
-Generate exactly the requested number of grammar questions. Every grammar question must have **exactly one unique correct answer** (ensure gap-fill prompts are highly constrained, e.g., by providing a base verb in parentheses, to prevent multiple grammatically valid answers).
-Use the level's grammar targets from `references/grammar-by-level.md`.
-Always include the newly specified high-impact targets when level-appropriate:
-- A2: basic data comparison modifiers for simple chart/data sentences.
-- B1: defining vs non-defining relative clauses and contrast linkers for charts.
-- B2: advanced subject-verb agreement and articles in academic writing.
-- C1-C2: subjunctive mood for recommendations/formal arguments.
-Mix exercise types:
-- gap-fill
-- sentence transformation
-- error correction
-- sentence combining
-- controlled production
-
-- **CRITICAL Question Numbering Rule**: Always number grammar questions in `practice_markdown` starting from **1** continuously (e.g., `1.`, `2.`, `3.`). Do NOT pre-add the reading question offset (e.g., do not write `14.`, `15.`). The compiler automatically adds the reading question offset. Do NOT hardcode `Questions X–Y` ranges in the exercise subheadings; the compiler will generate the correct range prefix automatically (e.g., write `### Choose the correct letter...` instead of `### Questions 14–23: Choose...`).
-
-Include answer key and brief explanation. Avoid grammar above the learner's level unless it is clearly scaffolded.
-
-## Detailed Grammar Guide Rules
-- Under the main `# Detailed Grammar Guide` section, always split individual grammar points and tips using subheadings starting with `#### Chủ điểm X: [Topic]` or `#### Tips & Tricks: [Topic]`.
-- Do not write the entire grammar lesson in one long text block. Breaking it down with `####` headers allows the compiler to split the content into individual compact visual cards (`.grammar-box`), avoiding PDF rendering overflows, page-pushed orphans, and wasted print paper.
-
-Common mistakes and IELTS traps:
-- In Part 2, always add a `Common Mistakes / IELTS Traps for This Topic` subsection using exactly a 4-column table: `| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |`.
-- **CRITICAL WARNING**: Do NOT put vocabulary words, IPA, or word definitions in this table. This is a grammar and test strategy table, NOT a vocabulary list. The items in this table must be actual grammatical mistakes (e.g. double comparatives like "more cheaper", wrong prepositions on maps, incorrect subject-verb agreement, wrong tenses) or IELTS test-taking pitfalls.
-- For each trap, give the wrong form, corrected form, and one short reason why it matters for the exam.
-
-Band-bridge rule: include a small number of clearly scaffolded next-level grammar items. Mark them only as `(*)` and explain the stretch point in the answer key. Do not use the label `Band-Bridge` in student-facing questions.
-
-## Writing Rules
-Generate exactly the requested number of writing practice tasks.
-When writing tasks involve data, charts, public policy, education, society, economics, geography, maps, facility changes, or abstract concepts, deliberately connect them to the corresponding grammar targets from `references/grammar-by-level.md`.
-For B2 Task 1 rotation, include map/diagram-change prompts regularly, not only numerical charts. Teach spatial and change language such as north/south/east/west, adjacent to, opposite, converted into, replaced by, demolished, expanded, relocated, and pedestrianised.
-Match level and IELTS pathway:
-- A1-A2: sentence building, short guided paragraph, simple email, describe people/places/routines.
-- B1: short opinion paragraph, compare/contrast, simple data description introduction, guided essay plan.
-- B2: IELTS Task 1 chart/process/map practice, including geographical maps and structural alterations of facilities, plus Task 2 paragraph/full essay planning.
-- C1-C2: nuanced Task 2 prompts, advanced Task 1 mixed visuals described textually, argument refinement, counterargument, hedging.
-
-For every writing task include only what the student needs to do:
-- direct prompt
-- target length
-- focus skill
-- useful language
-- success criteria
-
-**Visual Data Description Requirements**:
-- When a writing task requires describing data (e.g., Task 4 in A2, or Task 1 IELTS in B1/B2/C1/C2), you **must** represent the data visually inside the prompt instead of using plain text descriptions.
-- **For Table Data**: Provide a clean Markdown table (e.g., `| Item | Amount |`) detailing the items and quantities.
-- **For Charts (Bar/Line/Pie/Flow)**: Embed a clean vector SVG graphic (wrapped in `<div class="svg-chart-container"><svg ...>...</svg></div>`) directly in the prompt. Draw grid lines, columns (`<rect>`), paths (`<path>`), and labels (`<text>`) with proper alignment.
-- **For Maps & Diagrams**: Draw simple Before/After layout diagrams using SVG vectors (`<svg>`) to illustrate spatial changes (e.g., relocated rooms, added paths).
-- Ensure all SVG drawings have appropriate viewBox properties, appropriate dimensions (typically 400x200 or 500x250), and use clear styling.
-- **Writing Space & Line Allocation Guidelines**:
-  - Always write clear, specific instructions detailing the length requirements (e.g., "write 3 sentences" or "write a short paragraph").
-  - The PDF compiler automatically generates dotted lines (`.writing-line`) for student responses. It detects keywords like "write X sentences" and allocates spacious lines (e.g., X+1 lines, minimum 3 lines) to accommodate large handwriting and spacing.
-  - Do not try to hardcode dotted lines in the prompt text. Keep the prompt text focused solely on the question.
-
-Keep writing practice concise and action-oriented. Do not add long explanations, background lectures, or teacher commentary in Part 1. Move any model support or guidance to Part 3.
-
-In Part 3 (Answers PDF), adopt the persona of a highly supportive teacher. Crucially, write all explanations in Vietnamese (tiếng Việt), prioritizing concise and easy-to-understand explanations. Follow these strict structural layout rules:
-
-### 1. Reading Answers Structure
-- **Reading Summary (Tóm tắt bài đọc)**: Always start the Reading Answers section with a Vietnamese summary of the passage. Example: `📖 **Tóm tắt bài đọc:** [Vietnamese summary]`.
-- **Each Reading Question Item**: Must include exactly:
-  1. Correct Answer: `Câu X. [Đáp án chữ] — [Nội dung câu trả lời bằng tiếng Anh]`.
-  2. Evidence Quote: `*Bằng chứng: "[Direct quote from passage]" (§[Paragraph number])*` (always quote verbatim and specify the paragraph number using `§`).
-  3. Cognitive Logic: `**Cách tìm đáp án:** [Detailed step-by-step keyword matching and reasoning in Vietnamese, explaining why other choices are wrong]`.
-  4. Test-taking Tip: A blockquote starting with `> **💡 Mẹo:** [Practical exam tip for this question type]`.
-- **Stretch Questions `(*)`**: Append `*[Stretch Point]*` to the answer header and explain the next-level skill being introduced (e.g. B1 Inference).
-
-### 2. Grammar Answers Structure
-- **Quick Info Box (Bảng phân biệt nhanh / Công thức bỏ túi)**: Insert a color-coded blockquote summary at the start of each exercise section. Example:
-  ```markdown
-  > **Bảng phân biệt nhanh / Công thức bỏ túi:**
-  > - [Brief grammar rules, triggers, or linker distinctions in Vietnamese]
-  ```
-- **Each Grammar Question Item**: Must include:
-  1. Correct Answer: `Câu X. [Đáp án đúng]`. Note: In the markdown, number the items starting from **1** (e.g., `1.`, `2.`, `3.`). The compiler will automatically add the reading offset to render the correct numbers (e.g., `14.`, `15.`, `16.`).
-  2. Grammar Cues: `**Dấu hiệu / Phân tích:** [Explain the tense trigger, clause structure, or linker usage, detailing why the target answer is correct in Vietnamese]`.
-  3. Test-taking Tip: A blockquote starting with `> **💡 Mẹo:** [Helpful grammar trick or pitfall to avoid]`.
-
-### 3. Writing Answers Structure
-- **Suggested Model Answer**: Provide a high-quality, level-appropriate model essay/response wrapped in a blockquote. Example:
-  ```markdown
-  > **Suggested Model Answer:**
-  > "[Model text]"
-  ```
-- **Step-by-Step Writing Guidance**: Break down the sentence structure, paragraph layout, or letter-writing steps in Vietnamese to help students structure similar responses.
-- **Self-Check List (Tự kiểm tra)**: Provide a bulleted checklist to help students self-correct common mistakes. Example: `*Tự kiểm tra:* check capitalization, subject-verb agreement, key grammar use.`.
-
-### 4. Review Bridge Section
-- Add `IV. Review Bridge / Ôn tập liên chủ đề` at the end of the answer sheet containing 3 short practice prompts, their correct answers, and detailed Vietnamese rationales.
-
-## Topic Coverage Additions
-Ensure the topic bank covers these high-value IELTS gaps:
-- Writing Task 1 maps: geographical maps, site plans, facilities, structural alterations, urban redevelopment, and before/after place changes.
-- Reading history/art: history of artistic mediums, textiles, dyes, animation, glass, mirrors, and craftsmanship; use these especially for B2 academic-feature readings.
-- Spiral routes: economy/consumption and society/work routes must be preserved when choosing continuity topics from learner history.
-
-## Output Quality Checklist
-Before finalizing, ensure:
-- Counts match the requested numbers exactly.
-- Topic, passage, vocabulary, grammar, and writing tasks are coherent with each other.
-- Level is realistic and not inflated.
-- The pack recycles prior topics when history is available.
-- Answer keys are complete.
-- Vietnamese support is present for instructions or meanings when useful.
-- Reading passage uses a reachable verified URL; no source-free, broken-link, fabricated, silently shortened, or fake-paraphrased reading is allowed; do not copy copyrighted text beyond brief compliant excerpts unless the user provided the text or the license permits reuse.
-- PDF/Markdown deliverables follow the four-part output contract and file naming rules.
-- PDFs are compact, readable, and avoid unnecessary blank pages or large page breaks inside tables/explanations.
-
-## Cumulative Review Pack Guidelines
-
-When requested to create a cumulative review pack of multiple days (e.g., 1 week or 2 weeks) for a learner, follow this specific workflow and structural contract:
-
-### 1. Identify Target Days & Aggregate Inputs
-- **Level**: CEFR Level (e.g., A2, B2).
-- **Target Days**: Specified list of days (e.g. `20260625, 20260626, 20260627`). If not specified, look up `outputs/ielts-daily-reading-writing/lesson_history.txt` and automatically retrieve the **5 most recent days** for that Level.
-- **Aggregation**: Call the helper script `prepare_review_inputs.py` to automatically collect vocabulary items and grammar targets from the past daily packs.
-
-### 2. Required Deliverables
-A cumulative review pack must generate exactly four separate outputs inside `/outputs/ielts-daily-reading-writing/[Level]-Review-[StartDay]-[EndDay]/`:
-1. **Part 1 - Practice PDF** (`[Level]-Review-[StartDay]-[EndDay]-Practise.pdf`):
-   - A unified Cover Header showing the Level, target days, and aggregated topic names.
-   - **I. Reading Passage**: A new unified reading passage related to the topics of the target days.
-   - **II. IELTS Reading Questions**: Questions assessing comprehension (number of questions proposed by AI).
-   - **III. Questions for Grammar**: Practice questions covering all aggregated grammar targets from the target days. Make sure **30% of the questions are difficult stretch questions** to increase Bands (marked with `(*)`).
-   - **IV. Questions for Writing**: Writing prompts designed to test the grammar targets.
-   - **Timing constraint**: The total workload (Reading + Grammar + Writing) must represent a **120-minute exam**.
-2. **Part 3 - Answers PDF** (`[Level]-Review-[StartDay]-[EndDay]-Answers.pdf`):
-   - Step-by-step cognitive and self-correction guide in Vietnamese.
-   - Exact answer keys and explanations for Reading, Grammar, and Writing.
-3. **Part 5 - Vocab Checker PDF** (`[Level]-Review-[StartDay]-[EndDay]-Vocab-Checker.pdf`):
-   - A randomized 2-column recall sheet covering **all accumulated vocabulary items** from the target days (e.g., if 3 days have 80 total words, this checker must cover all 80 words).
-   - Multi-page support: The Multi-column layout will automatically spill over across A4 pages.
-4. **Part 6 - Vocab Checker Answer PDF** (`[Level]-Review-[StartDay]-[EndDay]-Vocab-Checker-Answer.pdf`):
-   - Same matching word order as Part 5, with correct English answers filled in bold red.
-
-### 3. Execution Commands
-To generate a review pack:
-1. Aggregate inputs:
-   ```powershell
-   python .agents/skills/ielts-daily-reading-writing/scripts/prepare_review_inputs.py --level [Level] [--days [Days]]
-   ```
-2. Generate review pack HTML and PDF files:
-   ```powershell
-   python .agents/skills/ielts-daily-reading-writing/scripts/export_review_pack.py [Path to review JSON]
-   ```
+## Reference Loading Map
+Load only the relevant reference file for the current stage:
+- Orchestration & Review: `references/orchestrator.md`
+- Source verification: `references/source-research-agent.md`
+- Reading: `references/reading-agent.md`
+- Vocabulary: `references/vocabulary-agent.md`
+- Grammar: `references/grammar-agent.md`
+- Writing: `references/writing-agent.md`
+- Answers: `references/answer-agent.md`
+- QC: `references/quality-control-agent.md`
+- JSON Schema contract: `references/output-schema.md`
+- Formatting & Layout: `references/output-template.md`
+- Topic selection: `references/topic-bank.md`
+- Grammar targets: `references/grammar-by-level.md`

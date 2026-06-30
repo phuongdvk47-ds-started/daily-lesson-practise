@@ -12,4 +12,11 @@ B1 | 20260630 | Fitness trends, public health campaigns, modern nutrition | Fitn
 A2 | 20260630 | Neighborhoods, housing types, living environments | Comparing urban neighborhoods & modern housing
 A2 | 20260629 | Shopping, prices, sizes, customer service | Fewer Products to Choose from Can Lead to Better Sales
 A2 | 20260701 | Food, cooking, diets, local restaurants | What Is the Healthiest Way to Prepare Vegetables?
-B1 | 20260701 | Online safety, cyberbullying, digital manners | US Schools Start Legal Actions against Social Media Companies
+B1 | 20260701 | Online safety, cyberbullying, digital manners | US Schools Start Legal Actions against Social Media Companies
+B1 | 20260702 | Tourism, cultural exchange, overtourism | Japanese town blocks Mount Fuji view to reduce overtourism
+A2 | 20260702 | School life, subjects, basic educational systems | Arts Program in Poor Performing Schools Helping Students
+B1 | 20260703 | Workplace orientation, job advertisements, interview advice | Employers Hesitant to Hire Gen Z College Graduates
+A2 | 20260703 | Leisure activities, hobbies, sports clubs | 'Weekend Warriors' Exercise and Health Benefits
+B1 | 20260704 | City vs countryside: lifestyle and opportunities | Leaving the Mekong Delta for the Big City
+A2 | 20260704 | Booking hotels, guesthouses, simple travel arrangements | Learning English for a Hotel Job
+

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAILY PRACTICE: DAY 20260704 - BOOKING HOTELS, GUESTHOUSES, SIMPLE TRAVEL ARRANGEMENTS</title>
+    <style>
+        @page { 
+            size: A4; 
+            margin: 15mm 15mm 20mm 15mm; 
+        }
+        body { 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 11.5pt; 
+            line-height: 1.45; 
+            color: #1a1a1a; 
+            margin: 0; 
+            padding: 0;
+        }
+        .header { 
+            border-bottom: 2px double #2c3e50; 
+            padding-bottom: 8px; 
+            margin-bottom: 15px; 
+            text-align: center;
+        }
+        .header .center-name { 
+            font-size: 9.5pt; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            color: #7f8c8d; 
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .header h1 { 
+            font-size: 15pt; 
+            margin: 3px 0; 
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .header h2 { 
+            font-size: 11pt; 
+            margin: 3px 0; 
+            font-style: italic; 
+            color: #34495e;
+        }
+        .student-info { 
+            margin-top: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .section-title { 
+            font-size: 12pt; 
+            color: #2c3e50; 
+            border-left: 3px solid #27ae60; 
+            padding-left: 8px; 
+            margin-top: 18px; 
+            margin-bottom: 8px; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .passage-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .reading-text { 
+            text-align: justify; 
+            margin-bottom: 12px; 
+            text-indent: 25px;
+        }
+        .reading-text p {
+            margin: 0 0 6px 0;
+        }
+        .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }
+        .data-table th { 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }
+        .data-table td { 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }
+        .data-table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+        .svg-chart-container {
+            text-align: center;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+        .writing-line {
+            border-bottom: 1px dotted #bdc3c7;
+            height: 26px;
+            margin-top: 6px;
+            margin-bottom: 2px;
+            width: 98%;
+            page-break-inside: avoid;
+        }
+        .source-box { 
+            font-style: italic; 
+            font-size: 9pt; 
+            color: #7f8c8d; 
+            margin-bottom: 15px; 
+            padding: 6px 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #bdc3c7;
+        }
+        .source-box a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .question-instruction {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+        .question-group {
+            margin-bottom: 12px;
+        }
+        .question-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            text-indent: -20px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .question-options {
+            margin: 4px 0 4px 20px;
+            text-indent: 0;
+        }
+        .question-options div {
+            margin-bottom: 2px;
+        }
+        .fill-blank {
+            display: inline-block;
+            width: 100px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        .grammar-item {
+            margin-bottom: 8px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .writing-box {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            background-color: #fafbfc;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            text-align: left;
+            page-break-inside: avoid;
+        }
+        .writing-item {
+            margin-bottom: 10px;
+        }
+        .warmup-box {
+            background-color: #fcfcfc;
+            border: 1px dashed #bdc3c7;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            font-size: 10pt;
+        }
+        .warmup-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="center-name">IELTS PREMIUM PREPARATION ACADEMY</div>
+        <h1>DAILY PRACTICE: DAY 20260704 - BOOKING HOTELS, GUESTHOUSES, SIMPLE TRAVEL ARRANGEMENTS</h1>
+        <h2>(Level: Reading A2 - Writing A1)</h2>
+        <div class="student-info">
+            <span>Student Name: ..............................................................</span>
+            <span>Time Allowed: 50 mins</span>
+        </div>
+    </div>
+
+    <!-- WARM-UP SECTION -->
+    <div class="section-title">Warm-up / Khởi động</div>
+    <div class="warmup-box">
+        <div class="warmup-title">Answer the following questions in Vietnamese or English:</div>
+        1. Bạn nghĩ gì về chủ đề này? (What do you think about this topic?)<br>
+        2. Chia sẻ một trải nghiệm thực tế của bạn liên quan đến chủ đề này. (Share a real experience related to this topic.)<br>
+        3. Tại sao chủ đề này lại quan trọng đối với cuộc sống hàng ngày? (Why is this topic important in daily life?)
+    </div>
+
+    <!-- READING PASSAGE -->
+    <div class="section-title">I. Reading Passage</div>
+    <div class="passage-title">Learning English for a Hotel Job</div>
+    
+    <div class="reading-text">
+        <p>Many <b>adults</b> [R] choose to work in the hotel industry. They do this because it is an exciting career with many opportunities to meet international visitors. To get a job at a hotel, you need to learn 'hotel English.' This is <b>polite</b>, spoken English that uses specific terms. <b><b>Front-desk</b></b> staff use this language to welcome guests, <b><b>confirm</b></b> a <b><b>reservation</b></b>, and handle a <b><b>request</b></b> for help. If you practice <b>regularly</b> [R], you will become more confident.</p>
+        <p>Some people think that they must speak perfect English to work in <b><b>hospitality</b></b>. However, hotel <b><b>professional</b></b> Mona Faal says this is not true. Perfect grammar is generally not <b><b>mandatory</b></b> for most jobs. Employers want <b><b>candidates</b></b> who are <b><b>effective</b></b> communicators and can provide <b><b>outstanding</b></b> service. Most hotels also provide on-the-job training for their staff. Therefore, having a good <b><b>interaction</b></b> with guests is more important than having no mistakes.</p>
+        <p>There are many ways to prepare for a hotel career. You can study hotel websites to learn about different rooms and <b><b>amenities</b></b>. You can also watch <b><b>multimedia</b></b> videos, such as online <b><b>dialogues</b></b>, to hear <b><b>polite</b></b> <b><b>assistance</b></b> phrases. Because guests come from all over the world, they will speak with different <b><b>accents</b></b>. Listening to travel programs can help you get used to different sounds. Through active language <b><b>immersion</b></b>, you can build a useful <b><b>routine</b></b> and gain valuable <b><b>experience</b></b> in speaking. We can <b>conclude</b> [R] that with the right preparation, anyone can succeed in this career.</p>
+    </div>
+
+    <div class="source-box">
+        Source: Adapted from <i>VOA Learning English</i> - "You Can Learn English for a Hotel Job" (June 29, 2019)<br>
+        URL: <a href="https://learningenglish.voanews.com/a/you-can-learn-english-for-a-hotel-job/4978184.html" target="_blank">https://learningenglish.voanews.com/a/you-can-learn-english-for-a-hotel-job/4978184.html</a>
+    </div>
+
+    <!-- READING QUESTIONS -->
+    <div class="section-title">II. IELTS Reading Questions (13 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 1–5: </div>
+        <div style="margin-left: 20px; font-weight: bold; margin-bottom: 8px; font-size: 10pt;">
+            TRUE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement agrees with the information<br>
+            FALSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement contradicts the information<br>
+            NOT GIVEN &nbsp;&nbsp;&nbsp;&nbsp; if there is no information on this
+        </div>
+        <div class="question-item">
+            <span class="question-number">1.</span> Hotel English is defined as polite spoken English that uses specific terms.
+        </div>
+        <div class="question-item">
+            <span class="question-number">2.</span> You must have perfect English to get a job at a hotel front desk.
+        </div>
+        <div class="question-item">
+            <span class="question-number">3.</span> Mona Faal has worked as a front-desk professional in many major hotels.
+        </div>
+        <div class="question-item">
+            <span class="question-number">4.</span> Mona Faal recommends that students should live in a hotel to practice English. (*)
+        </div>
+        <div class="question-item">
+            <span class="question-number">5.</span> Watching travel videos can help you practice listening to different English accents.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 6–9: </div>
+        <div class="question-item">
+            <span class="question-number">6.</span> What industry does the article focus on when talking about hotel jobs?
+        </div>
+        <div class="question-item">
+            <span class="question-number">7.</span> Who shared her front-desk experience and advice in the VOA article?
+        </div>
+        <div class="question-item">
+            <span class="question-number">8.</span> What do hotels usually provide to new staff once they are hired?
+        </div>
+        <div class="question-item">
+            <span class="question-number">9.</span> What hotel services and features should students study on hotel websites? (*)
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 10–13: </div>
+        <div class="question-item">
+            <span class="question-number">10.</span> According to the article, what is the main priority for hotel employers?
+        </div>
+        <div class="question-item">
+            <span class="question-number">11.</span> Why is it important to listen to various accents?
+        </div>
+        <div class="question-item">
+            <span class="question-number">12.</span> What does the word 'mandatory' in the second paragraph mean? (*)
+        </div>
+        <div class="question-item">
+            <span class="question-number">13.</span> What is the best way to practice listening to English according to the text? (*)
+        </div>
+    </div>
+
+    <!-- GRAMMAR QUESTIONS -->
+    <div class="section-title">III. Questions for Grammar (30 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 14–23: </div>
+        <div class="question-item">
+            <span class="question-number">14.</span> The guest <span class="fill-blank"></span> checked in this morning lost his room key.
+        </div>
+        <div class="question-item">
+            <span class="question-number">15.</span> I <span class="fill-blank"></span> at this hotel since last Monday.
+        </div>
+        <div class="question-item">
+            <span class="question-number">16.</span> This is the room <span class="fill-blank"></span> they hold staff training sessions.
+        </div>
+        <div class="question-item">
+            <span class="question-number">17.</span> She <span class="fill-blank"></span> a reservation yesterday, but she wants to change it now.
+        </div>
+        <div class="question-item">
+            <span class="question-number">18.</span> The hotel, <span class="fill-blank"></span> has 200 rooms, is very popular with tourists.
+        </div>
+        <div class="question-item">
+            <span class="question-number">19.</span> They <span class="fill-blank"></span> any guests from Japan yet.
+        </div>
+        <div class="question-item">
+            <span class="question-number">20.</span> The receptionist <span class="fill-blank"></span> spoke to you is from Canada.
+        </div>
+        <div class="question-item">
+            <span class="question-number">21.</span> We <span class="fill-blank"></span> the city tour last night, and it was great. (*)
+        </div>
+        <div class="question-item">
+            <span class="question-number">22.</span> The manager, <span class="fill-blank"></span> is very friendly, has worked in hospitality for ten years. (*)
+        </div>
+        <div class="question-item">
+            <span class="question-number">23.</span> Up to now, she <span class="fill-blank"></span> to three different countries. (*)
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 24–33: </div>
+        <div class="question-item">
+            <span class="question-number">24.</span> The front-desk agent <span class="fill-blank"></span> (who / which) helped us was very polite.
+        </div>
+        <div class="question-item">
+            <span class="question-number">25.</span> We <span class="fill-blank"></span> (already / confirm) our booking.
+        </div>
+        <div class="question-item">
+            <span class="question-number">26.</span> That is the computer <span class="fill-blank"></span> (which / where) we use to book rooms.
+        </div>
+        <div class="question-item">
+            <span class="question-number">27.</span> He <span class="fill-blank"></span> (not / visit) London last year.
+        </div>
+        <div class="question-item">
+            <span class="question-number">28.</span> The lobby, <span class="fill-blank"></span> (which / that) was decorated with flowers, looked beautiful.
+        </div>
+        <div class="question-item">
+            <span class="question-number">29.</span> <span class="fill-blank"></span> you <span class="fill-blank"></span> (ever / work) in a hotel before?
+        </div>
+        <div class="question-item">
+            <span class="question-number">30.</span> The woman <span class="fill-blank"></span> (who / which) is standing near the elevator is a guest.
+        </div>
+        <div class="question-item">
+            <span class="question-number">31.</span> Yesterday, she <span class="fill-blank"></span> (receive) a request for an extra bed. (*)
+        </div>
+        <div class="question-item">
+            <span class="question-number">32.</span> This is the beautiful beach <span class="fill-blank"></span> (which / where) we stayed during our trip. (*)
+        </div>
+        <div class="question-item">
+            <span class="question-number">33.</span> They <span class="fill-blank"></span> (just / finish) cleaning the rooms. (*)
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 34–43: </div>
+        <div class="question-item">
+            <span class="question-number">34.</span> Correct the error: The hotel who we booked last week was very expensive.
+        </div>
+        <div class="question-item">
+            <span class="question-number">35.</span> Correct the error: I have visited that museum two years ago.
+        </div>
+        <div class="question-item">
+            <span class="question-number">36.</span> Correct the error: The guest which wants to check out is in the lobby.
+        </div>
+        <div class="question-item">
+            <span class="question-number">37.</span> Correct the error: He worked in this resort since 2020.
+        </div>
+        <div class="question-item">
+            <span class="question-number">38.</span> Correct the error: The manager who she is very professional gave us a tour.
+        </div>
+        <div class="question-item">
+            <span class="question-number">39.</span> Correct the error: Did you ever see a famous person in your hotel?
+        </div>
+        <div class="question-item">
+            <span class="question-number">40.</span> Correct the error: This is the resort where is famous for its outstanding service.
+        </div>
+        <div class="question-item">
+            <span class="question-number">41.</span> Correct the error: She has not received the reservation email yesterday. (*)
+        </div>
+        <div class="question-item">
+            <span class="question-number">42.</span> Correct the error: The receptionist, that was very polite, checked us in. (*)
+        </div>
+        <div class="question-item">
+            <span class="question-number">43.</span> Combine the two sentences using a relative pronoun: The hotel has a beautiful garden. It was built in 1920. (*)
+        </div>
+    </div>
+
+    <!-- WRITING QUESTIONS -->
+    <div class="section-title">IV. Questions for Writing (5 tasks)</div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 1:  Word Ordering (Sắp xếp từ thành câu hoàn chỉnh)</div>
+        <div class="writing-item">
+            Word Ordering: Sắp xếp các từ thành câu hoàn chỉnh:<br>a) she / at / works / the / front-desk / .<br><div class="writing-line"></div><br>b) staff / hotel / the / polite / is / very /<br><div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 2:  Clause coordination with because and when</div>
+        <div class="writing-item">
+            Sentence Completion: Điền thông tin hoàn thành câu:<br>a) I want to work in a hotel because <span class="fill-blank"></span> .<br><div class="writing-line"></div><br>b) When I arrived at the hotel, <span class="fill-blank"></span><br><div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 3:  Simple description structures and verbs</div>
+        <div class="writing-item">
+            Translation: Dịch các câu sau sang tiếng Anh:<br>a) Tôi muốn đặt một phòng khách sạn.<br><div class="writing-line"></div><br>b) Anh ấy là một lễ tân rất lịch sự.<br><div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 4:  Simple data comparison using A2 modifiers</div>
+        <div class="writing-item">
+            Visual Data Description: Viết 3 câu đơn giản mô tả biểu đồ so sánh số lượng khách của một khách sạn trong tháng Bảy và tháng Tám.<br><br><svg viewBox="0 0 400 200" width="100%" height="200" style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px;"><line x1="50" y1="150" x2="350" y2="150" stroke="#ccc" stroke-width="1" /><line x1="50" y1="100" x2="350" y2="100" stroke="#eee" stroke-width="1" /><line x1="50" y1="50" x2="350" y2="50" stroke="#eee" stroke-width="1" /><text x="35" y="155" font-family="Arial" font-size="10" fill="#666">0</text><text x="30" y="105" font-family="Arial" font-size="10" fill="#666">40</text><text x="30" y="55" font-family="Arial" font-size="10" fill="#666">80</text><rect x="100" y="50" width="50" height="100" fill="#3498db" rx="2" /><text x="125" y="40" font-family="Arial" font-size="11" font-weight="bold" fill="#333" text-anchor="middle">80</text><rect x="230" y="100" width="50" height="50" fill="#f1c40f" rx="2" /><text x="255" y="90" font-family="Arial" font-size="11" font-weight="bold" fill="#333" text-anchor="middle">40</text><text x="125" y="170" font-family="Arial" font-size="12" font-weight="bold" fill="#555" text-anchor="middle">July</text><text x="255" y="170" font-family="Arial" font-size="12" font-weight="bold" fill="#555" text-anchor="middle">August</text></svg><br><br>Answer: <div class='writing-line' style='display:inline-block; width:90%; margin-top:0; vertical-align:middle;'></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 5:  Basic polite request structure</div>
+        <div class="writing-item">
+            Guided Email Request: Viết email ngắn gửi cho khách sạn yêu cầu kê thêm giường phụ (extra bed) cho phòng của bạn.<br><br>To: ...................................................... Subject: ......................................................<br><br><br><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div>
+        </div>
+    </div>
+
+</body>
+</html>
