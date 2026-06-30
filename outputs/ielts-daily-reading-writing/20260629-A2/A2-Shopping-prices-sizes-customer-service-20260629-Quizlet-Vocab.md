@@ -23,7 +23,7 @@
 | decision | A choice that you make after thinking |
 | afford | Có đủ khả năng chi trả |
 | budgeting | Việc lập ngân sách |
-| stress | Sự căng thẳng, áp lực |
+| expensive | Đắt đỏ, tốn kém |
 
 ### Phần 2: Học từ vựng đầy đủ (Detailed Vocabulary)
 | Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |
@@ -50,4 +50,4 @@
 | decision /dɪˈsɪʒ.ən, noun/ | A choice that you make after thinking |
 | afford /əˈfɔːd, verb/ | Có đủ khả năng chi trả |
 | budgeting /ˈbʌdʒɪtɪŋ, noun/ | Việc lập ngân sách |
-| stress /stres, noun/ | Sự căng thẳng, áp lực |
+| expensive /ɪkˈspensɪv, adjective/ | Đắt đỏ, tốn kém |

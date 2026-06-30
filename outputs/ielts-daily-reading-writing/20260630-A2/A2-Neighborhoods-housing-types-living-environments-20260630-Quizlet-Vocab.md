@@ -30,7 +30,7 @@
 | micro-apartment /ˌmaɪ.krəʊ əˈpɑːt.mənt, noun/ | A very small, one-room apartment |
 | studio /ˈstjuː.di.əʊ, noun/ | A small one-room apartment |
 | homelessness /ˈhəʊm.ləs.nəs, noun/ | The state of having no home |
-| shelter /ˈʃel.tər, noun/ | A temporary place to live |
+| shelter /ˈshel.tər, noun/ | A temporary place to live |
 | rent /rent, verb/noun/ | To pay to live in a building; the money paid |
 | housing /ˈhaʊ.zɪŋ, noun/ | Buildings for people to live in |
 | suburb /ˈsʌb.ɜːb, noun/ | An area on the edge of a city |

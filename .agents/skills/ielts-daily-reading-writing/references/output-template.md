@@ -67,7 +67,7 @@ Provide the verified reading text with title.
 - **Vocabulary bolding**: Bold all occurrences of target vocabulary words from Part 2 inside the reading passage using `**word**` (or its inflected forms).
 
 ### 5. Questions for Reading
-Generate exactly the requested number of IELTS-style reading questions. Group by question type. Number continuously. Include a controlled band-bridge challenge: 10-20% of the questions should approach the next level and be marked `(*)`.
+Generate exactly the requested number of IELTS-style reading questions. Group by question type. Number continuously. Every question must have exactly one unique correct answer (ensure distractor options are clearly incorrect). Apply anti-skimming/scanning design: use synonyms/paraphrases in the prompts and place scannable keywords in incorrect distractors to test comprehension rather than word-matching. Include a controlled band-bridge challenge: 10-20% of the questions should approach the next level and be marked `(*)`.
 
 Question-type guidance:
 - A1-A2: form/table completion, matching information, short answer, basic multiple choice.
@@ -76,7 +76,7 @@ Question-type guidance:
 - C1-C2: inference, writer's claims, complex matching, classification, summary completion with distractors.
 
 ### 6. Questions for Grammar
-Generate exactly the requested number of grammar questions. Group by exercise type when useful:
+Generate exactly the requested number of grammar questions. Every question must have exactly one unique correct answer (ensure gap-fill prompts provide a base verb or constraint in parentheses to prevent alternative answers). Group by exercise type when useful:
 - gap-fill
 - sentence transformation
 - error correction

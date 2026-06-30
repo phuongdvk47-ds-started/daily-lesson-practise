@@ -127,7 +127,13 @@ Distribute reading question types by level:
 - B2: True/False/Not Given, Yes/No/Not Given, matching features, matching headings, summary completion, classification.
 - C1-C2: inference, writer's claims, complex matching, classification, summary completion with distractors.
 
-Generate exactly the requested number of reading questions. Include an answer key and short rationale.
+Generate exactly the requested number of reading questions. Include an answer key and short rationale. Every reading question must have **exactly one unique correct answer** (ensure distractor options are clearly incorrect, and short-answer/gap-fill completions allow only one specific textual extraction).
+
+- **Anti-Skimming/Scanning Question Design**:
+  - Always design reading questions to prevent simple direct matching of scannable keywords from the passage.
+  - Apply deep paraphrasing: use synonyms, passive voice, or antonyms in the question prompt instead of the original words.
+  - Implement distractor traps: insert scannable keywords from the passage into the *incorrect* MCQ options to catch students who rely on scanning without reading the sentence logic.
+  - Focus on global meaning, logical relations (cause/effect, contrast), and inference questions rather than simple direct factual extraction.
 
 Band-bridge difficulty rule:
 - Make about 70-80% of questions level-appropriate, 10-20% review/easy confidence questions, and 10-20% stretch questions approaching the next CEFR level.
@@ -147,7 +153,7 @@ The student-facing vocabulary table must use exactly five columns:
 Include a balanced mix of Academic Vocabulary, Compound Words, and Idioms & Phrases / Useful Chunks. If the lesson text does not provide enough items, add level-appropriate vocabulary from the same topic cluster. At B2+, prioritize collocations, academic verbs, noun phrases, stance language, and IELTS Task 1/Task 2 chunks over isolated basic words.
 
 ## Grammar Rules
-Generate exactly the requested number of grammar questions.
+Generate exactly the requested number of grammar questions. Every grammar question must have **exactly one unique correct answer** (ensure gap-fill prompts are highly constrained, e.g., by providing a base verb in parentheses, to prevent multiple grammatically valid answers).
 Use the level's grammar targets from `references/grammar-by-level.md`.
 Always include the newly specified high-impact targets when level-appropriate:
 - A2: basic data comparison modifiers for simple chart/data sentences.
@@ -160,6 +166,8 @@ Mix exercise types:
 - error correction
 - sentence combining
 - controlled production
+
+- **CRITICAL Question Numbering Rule**: Always number grammar questions in `practice_markdown` starting from **1** continuously (e.g., `1.`, `2.`, `3.`). Do NOT pre-add the reading question offset (e.g., do not write `14.`, `15.`). The compiler automatically adds the reading question offset. Do NOT hardcode `Questions X–Y` ranges in the exercise subheadings; the compiler will generate the correct range prefix automatically (e.g., write `### Choose the correct letter...` instead of `### Questions 14–23: Choose...`).
 
 Include answer key and brief explanation. Avoid grammar above the learner's level unless it is clearly scaffolded.
 
@@ -222,7 +230,7 @@ In Part 3 (Answers PDF), adopt the persona of a highly supportive teacher. Cruci
   > - [Brief grammar rules, triggers, or linker distinctions in Vietnamese]
   ```
 - **Each Grammar Question Item**: Must include:
-  1. Correct Answer: `Câu X. [Đáp án đúng]`.
+  1. Correct Answer: `Câu X. [Đáp án đúng]`. Note: In the markdown, number the items starting from **1** (e.g., `1.`, `2.`, `3.`). The compiler will automatically add the reading offset to render the correct numbers (e.g., `14.`, `15.`, `16.`).
   2. Grammar Cues: `**Dấu hiệu / Phân tích:** [Explain the tense trigger, clause structure, or linker usage, detailing why the target answer is correct in Vietnamese]`.
   3. Test-taking Tip: A blockquote starting with `> **💡 Mẹo:** [Helpful grammar trick or pitfall to avoid]`.
 

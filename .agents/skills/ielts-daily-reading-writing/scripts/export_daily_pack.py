@@ -195,7 +195,7 @@ def is_major_section_heading(line: str) -> bool:
     
     title_clean = re.sub(r'^[#\s\d\.]+', '', line_str).strip().lower()
     for kw in MAJOR_SECTION_KEYWORDS:
-        if kw in title_clean:
+        if kw in title_clean and len(title_clean) < 50:
             return True
     return False
 
@@ -966,25 +966,32 @@ _NON_VOCAB_TABLE_HEADERS = (
     "grammar point", "trap", "ielts trap", "recycled vocabulary", "từ vựng ôn tập",
 )
 
-def parse_vocab_from_markdown(md_table: str) -> list[dict]:
+def parse_vocab_from_markdown(md_table: str, is_recycled: bool = False) -> list[dict]:
     items = []
     in_vocab_table = False
     lines = md_table.strip().splitlines()
     for line in lines:
         line = line.strip()
+        if not line:
+            continue
+        # Detect non-vocab keywords on ALL lines to stop vocab parsing
+        if not is_recycled:
+            line_lower = line.lower()
+            if any(kw in line_lower for kw in _NON_VOCAB_TABLE_HEADERS):
+                in_vocab_table = False
+                continue
         if not line.startswith("|"):
             continue
         # Detect the vocabulary table header row
         if "Từ/Cụm từ" in line or "Phiên âm" in line:
-            in_vocab_table = True
+            has_recycled_marker = "Bài học gốc" in line or "Day" in line
+            if is_recycled == has_recycled_marker:
+                in_vocab_table = True
+            else:
+                in_vocab_table = False
             continue
         # Skip separator rows
         if re.match(r'^\|[\s:|-]+\|', line):
-            continue
-        # Detect a different table's header row — stop vocab parsing
-        line_lower = line.lower()
-        if any(kw in line_lower for kw in _NON_VOCAB_TABLE_HEADERS):
-            in_vocab_table = False
             continue
         if not in_vocab_table:
             continue
@@ -1225,7 +1232,7 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
             
     recycled_html = ""
     if recycled_sec:
-        recycled_items = parse_vocab_from_markdown(recycled_sec)
+        recycled_items = parse_vocab_from_markdown(recycled_sec, is_recycled=True)
         if recycled_items:
             recycled_rows = []
             for item in recycled_items:
