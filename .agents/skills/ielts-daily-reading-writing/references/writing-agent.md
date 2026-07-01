@@ -12,16 +12,25 @@ Generate IELTS-aligned writing tasks incorporating grammar targets and lesson vo
 
 ## Rules
 1. **No Web Search**: Work only from the target topic and CEFR level.
-2. **Prompts Layout**:
+2. **Topic Relevance Rule**:
+   - **Every Writing task must be clearly connected to the daily lesson topic.**
+   - Even if the Writing Level is lower than the Reading Level (e.g., A1/A2 Writing vs. B1 Reading), the tasks must remain themed.
+   - Do not generate generic, unrelated tasks (e.g. do not ask to "go to a movie" in a lesson about road safety/traffic).
+   - *Example modification*: Instead of "Ask a friend to go to a movie", write: "Ask a friend to take the bus to the city centre because traffic is heavy and parking is difficult."
+3. **Vocabulary & Grammar Reuse**:
+   - Writing tasks should encourage reuse of the lesson's main topic vocabulary (at least 2-4 terms/collocations from the vocab list).
+   - Incorporate active grammar target structures into the task instructions or useful language bank.
+4. **Prompts Layout**:
    - Generate exactly `writing_task_count` writing tasks.
    - For every task, provide *only* the student-facing prompt elements: direct prompt, target length, focus skill, useful language, success criteria.
    - Do not include model answers or explanations here (move them to Answer Agent).
    - Match level-specific tasks (A1-A2: sentence building, short description, simple email; B1: opinion paragraph, compare/contrast, simple chart description; B2: IELTS Task 1 process/map/charts & Task 2 planning; C1-C2: Task 1 mixed visuals, Task 2 argument/counterargument).
-3. **Visual Data Description**:
+5. **Visual Data Description**:
    - If a task requires data description (e.g. Task 4 in A2, Task 1 in B1/B2/C1/C2):
      - **For Table Data**: Provide a clean Markdown table.
      - **For Charts/Maps/Diagrams**: Embed a valid, responsive SVG graphic wrapped in `<div class="svg-chart-container"><svg viewBox="0 0 400 200" width="100%" height="200" style="...">...</svg></div>`. Draw grid lines, columns (`<rect>`), lines/paths (`<path>`), and clear text labels (`<text>`).
-4. **Writing Space Constraints**:
+     - **Do not present numerical comparison data as prose only.**
+6. **Writing Space Constraints**:
    - Ensure instructions state the exact length requirements (e.g., "write 3 sentences" or "write a short paragraph").
    - Do NOT try to hardcode dotted lines (`...`) for writing spaces in the prompt text. The HTML compiler automatically parses instructions to render spacious `.writing-line` elements.
 
@@ -44,8 +53,51 @@ Return JSON only:
       "visual_data": {
         "type": "svg",
         "content": "<div class=\"svg-chart-container\"><svg viewBox=\"0 0 400 200\" width=\"100%\" height=\"200\"><line x1=\"50\" y1=\"150\" x2=\"350\" y2=\"150\" stroke=\"#ccc\" /><rect x=\"100\" y=\"100\" width=\"50\" height=\"50\" fill=\"#3498db\" /><rect x=\"230\" y=\"50\" width=\"50\" height=\"100\" fill=\"#e74c3c\" /><text x=\"125\" y=\"170\">Shop A</text><text x=\"255\" y=\"170\">Shop B</text></svg></div>"
-      }
+      },
+      "topic_alignment": true
     }
   ]
 }
 ```
+
+# Writing Prompt Rendering Rules
+
+## No Duplicate Task Type Rule
+The `task_type` field is used by the template as the task heading.
+The `prompt` field must not repeat the task type label.
+- Invalid prompt: `Word Ordering: Sắp xếp từ thành câu.`
+- Valid prompt: `Sắp xếp các từ sau thành câu hoàn chỉnh.`
+
+## No Raw Visual in Prompt Rule
+If `visual_data.type` is not `none`, the visual must be stored only in `visual_data.content`.
+The `prompt` field must not contain raw SVG, HTML chart, or duplicated visual content.
+- Invalid:
+  ```json
+  {
+    "prompt": "Describe the chart below <svg>...</svg>",
+    "visual_data": {
+      "type": "svg",
+      "content": "<svg>...</svg>"
+    }
+  }
+  ```
+- Valid:
+  ```json
+  {
+    "prompt": "Describe the chart below comparing school days in two countries.",
+    "visual_data": {
+      "type": "svg",
+      "content": "<svg>...</svg>"
+    }
+  }
+  ```
+
+## Visual Metadata Rule
+Every chart must include:
+* chart_title
+* x_axis_label
+* y_axis_label
+* unit
+* category labels
+* data labels
+

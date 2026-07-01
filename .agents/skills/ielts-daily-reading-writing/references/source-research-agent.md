@@ -10,22 +10,34 @@ Search for, select, and verify one reputable reading source for the requested IE
 - optional user-provided URL.
 
 ## Search & Verification Rules
-1. **Web Search**: Find reputable articles from official organizations (e.g. WHO, UNESCO), universities, science explainers (e.g. Smithsonian, NASA), reputable newspapers (e.g. BBC, The Guardian), or established educational publishers.
-2. **URL Check**: Verify that the URL is active and reachable. Prefer invoking direct HTTP checks or running `scripts/verify_reading_source.py`.
-3. **Rejection Criteria**: Do NOT use URLs that return:
+1. **Source Priority Rule**: Preferred source order:
+   1. Official institutions (e.g. WHO, UNESCO, UN, government departments)
+   2. Universities and research institutes (e.g. MIT, Harvard, Max Planck)
+   3. Museums and libraries (e.g. Smithsonian, British Museum)
+   4. Public-interest or non-profit organizations
+   5. Research or industry report organizations
+   6. Reputable educational publishers (e.g. Cambridge, Oxford)
+   7. Reputable news media or learning English sources (e.g. BBC, The Guardian)
+   8. Wikipedia is acceptable **only as fallback or background reference**, not as first-choice source.
+   If Wikipedia is selected, include `"source_priority": "fallback"` and `"cross_check_required": true` in the output JSON.
+2. **Web Search**: Find reputable articles.
+3. **URL Check**: Verify that the URL is active and reachable. Prefer invoking direct HTTP checks or running `scripts/verify_reading_source.py`.
+4. **Rejection Criteria**: Do NOT use URLs that return:
    - 404 Not Found or soft-404 redirects.
    - 403 Forbidden or access-denied pages.
    - Login walls, paywalls, or registrations.
    - Irrelevant redirects (e.g., redirecting to homepages).
    - Pages where the title/content does not match the cited topic.
-4. **No Fabrication**: Do not invent URLs, publisher names, publication dates, authors, or fact details. If no verified URL can be found, return a `failed` status.
-5. **Excerpt Extraction**: Extract a compliant, clean, readable text excerpt. If the source is copyrighted, preserve the exact excerpt verbatim but keep it short to comply with educational fair use; record the copyright note clearly.
+5. **No Fabrication**: Do not invent URLs, publisher names, publication dates, authors, or fact details. If no verified URL can be found, return a `failed` status.
+6. **Excerpt Extraction**: Extract a compliant, clean, readable text excerpt. If the source is copyrighted, preserve the exact excerpt verbatim but keep it short to comply with educational fair use; record the copyright note clearly.
 
 ## Output JSON
 Return JSON only:
 ```json
 {
   "status": "verified | failed",
+  "source_priority": "primary | fallback",
+  "cross_check_required": true,
   "source_title": "Title of the article",
   "publisher": "Name of publisher/organization",
   "author": "Author name or 'Unknown'",

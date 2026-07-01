@@ -1,20 +1,26 @@
-attendance (/əˈten.dəns/) [noun]	The number of people present at an event or school - Sự tham gia, chuyên cần. Ví dụ: School **attendance** improved after the program started.
-performance (/pəˈfɔː.məns/) [noun]	How well a person does a task or study - Kết quả học tập, sự biểu diễn. Ví dụ: Her academic **performance** was excellent.
-turnaround (/ˈtɜːn.ə.raʊnd/) [noun]	A complete change from bad to good - Sự thay đổi hoàn toàn, cải thiện. Ví dụ: The school saw a quick **turnaround** in test scores.
-integrate (/ˈɪn.tɪ.ɡreɪt/) [verb]	To combine two or more things to make them work together - Tích hợp, hòa nhập. Ví dụ: We want to **integrate** art into our daily lessons.
-curriculum (/kəˈrɪk.jə.ləm/) [noun]	The subjects studied in a school or college - Chương trình học. Ví dụ: Math is an important part of the school **curriculum**.
-engagement (/ɪnˈɡeɪdʒ.mənt/) [noun]	Interest and involvement in an activity - Sự tham gia, gắn kết. Ví dụ: Art classes increase student **engagement** in learning.
-improve (/ɪmˈpruːv/) [verb]	To make or become better - Cải thiện. Ví dụ: You can **improve** your English by practicing daily.
-program (/ˈprəʊ.ɡræm/) [noun]	A plan of activities or school projects - Chương trình. Ví dụ: The new reading **program** is very popular.
-challenge (/ˈtʃæl.ɪndʒ/) [noun]	Something that needs great mental or physical effort - Thử thách. Ví dụ: Learning a new language is a big **challenge**.
-struggle (/ˈstrʌɡ.əl/) [verb/noun]	To experience difficulty and try hard to overcome it - Chật vật, đấu tranh. Ví dụ: Many students **struggle** with fractions in math.
-participate (/pɑːˈtɪs.ɪ.peɪt/) [verb]	To take part in an activity - Tham gia. Ví dụ: She loves to **participate** in school plays.
-creativity (/ˌkriː.eɪˈtɪv.ə.ti/) [noun]	The ability to produce original and unusual ideas - Sự sáng tạo. Ví dụ: Drawing helps children develop their **creativity**.
-express (/ɪkˈspres/) [verb]	To show a feeling or opinion by words or actions - Bày tỏ, thể hiện. Ví dụ: He wrote a poem to **express** his feelings.
-instrument (/ˈɪn.strə.mənt/) [noun]	An object such as a piano or guitar used to play music - Nhạc cụ. Ví dụ: She plays two musical **instruments**.
-impact (/ˈɪm.pækt/) [noun/verb]	A powerful effect that something has on a situation or person - Tác động, ảnh hưởng. Ví dụ: Music has a positive **impact** on brain development.
-community (/kəˈmjuː.nə.ti/) [noun]	A group of people living in the same place or sharing interests - Cộng đồng. Ví dụ: The school works closely with the local **community**.
-emotional (/ɪˈməʊ.ʃən.əl/) [adjective]	Relating to feelings and emotions - Thuộc về cảm xúc. Ví dụ: Art class helps kids process their **emotional** struggles.
-encourage (/ɪnˈkʌr.ɪdʒ/) [verb]	To talk or behave in a way that gives someone confidence - Khuyến khích. Ví dụ: Teachers **encourage** students to ask questions.
-increase (/ɪnˈkriːs/) [verb/noun]	To make or become larger in amount or size - Sự gia tăng, gia tăng. Ví dụ: The number of students began to **increase** in spring.
-successful (/səkˈses.fəl/) [adjective]	Achieving the results you wanted - Thành công. Ví dụ: Turnaround Arts was a very **successful** project.
+traditional (/trəˈdɪʃ.ən.əl/) [adjective]	Following or belonging to customs or ways of behaving that have continued in a group of people for a long time - truyền thống. Ví dụ: He wears a **traditional** uniform at school.
+calendar (/ˈkæl.ən.dər/) [noun]	A system for measuring time in hours, days, weeks, and months - lịch, hệ thống lịch. Ví dụ: We look at the school **calendar** to check vacation dates.
+society (/səˈsaɪ.ə.ti/) [noun]	A large group of people who live together in an organized way - xã hội. Ví dụ: Schools play an important role in modern **society**.
+industrial (/ɪnˈdʌs.tri.əl/) [adjective]	Connected with industry or having many developed industries - thuộc công nghiệp, phát triển công nghiệp. Ví dụ: Many **industrial** nations have long school years.
+critic (/ˈkrɪt.ɪk/) [noun]	A person who expresses disapproval of something and points out mistakes - nhà phê bình, người chỉ trích. Ví dụ: The **critic** argues that the current system does not work.
+vacation (/veɪˈkeɪ.ʃən/) [noun]	A period of time when you do not go to work or school and can travel or relax - kỳ nghỉ. Ví dụ: We plan to visit our grandparents during the summer **vacation**.
+forget (/fəˈɡet/) [verb]	To be unable to remember a fact, something that happened, or how to do something - quên. Ví dụ: If you do not review, you will **forget** the words quickly.
+pressure (/ˈpreʃ.ər/) [noun]	A difficult situation that makes you feel worried or unhappy because you have too much to do - áp lực. Ví dụ: Students are under heavy **pressure** before their exams.
+improve (/ɪmˈpruːv/) [verb]	To make something better, or to become better - cải thiện, nâng cao. Ví dụ: I study English every day to **improve** my pronunciation.
+performance (/pəˈfɔː.məns/) [noun]	How well a person does a piece of work or an activity - hiệu suất, kết quả học tập. Ví dụ: Her **performance** in school has improved significantly.
+lengthen (/ˈleŋ.θən/) [verb]	To make something longer, or to become longer - kéo dài. Ví dụ: They want to **lengthen** the winter break by three days.
+costly (/ˈkɒst.li/) [adjective]	Expensive, costing a lot of money - tốn kém, đắt đỏ. Ví dụ: Buying new textbooks for every subject is very **costly**.
+employee (/ɪmˈplɔɪ.iː/) [noun]	Someone who is paid to work for a person or organization - nhân viên, người lao động. Ví dụ: All school **employees** should arrive before the students.
+object (/əbˈdʒekt/) [verb]	To feel or express opposition to or dislike of something - phản đối. Ví dụ: Local companies may **object** to changing the calendar.
+extend (/ɪkˈstend/) [verb]	To add to something in order to make it longer or bigger - kéo dài, mở rộng. Ví dụ: The school decided to **extend** the classes until June.
+attend (/əˈtend/) [verb]	To go to an event, place, or public institution regularly - tham gia, đi học. Ví dụ: Children in the UK must **attend** school from age five.
+subject (/ˈsʌb.dʒekt/) [noun]	An area of knowledge that is studied in school, college, or university - môn học. Ví dụ: Math is my favorite **subject** at school.
+prepare (/prɪˈpeər/) [verb]	To make something or someone ready for something that will happen in the future - chuẩn bị, chế biến. Ví dụ: They study hard to **prepare** for their tests.
+recommend (/ˌrek.əˈmend/) [verb]	To suggest that someone or something is good, or to advise a course of action - khuyên, đề xuất. Ví dụ: Teachers **recommend** reading books in English.
+nutritious (/njuːˈtrɪʃ.əs/) [adjective]	Containing many of the substances that help the body to grow and stay healthy - giàu dinh dưỡng. Ví dụ: Eating a **nutritious** breakfast helps you concentrate in class.
+take notes (/teɪk nəʊts/) [verb phrase]	To write down important information during a lesson - ghi chú. Ví dụ: Students take notes during class.
+pass an exam (/pɑːs ən ɪɡˈzæm/) [verb phrase]	To be successful in a test - đậu kỳ thi. Ví dụ: She worked hard to pass her exam.
+school calendar (/skuːl ˈkæl.ɪn.dər/) [noun phrase]	The yearly schedule of school days and holidays - lịch học năm học. Ví dụ: The new school calendar has shorter vacations.
+make progress (/meɪk ˈprɒɡ.res/) [verb phrase]	To improve or move forward in something - đạt tiến bộ. Ví dụ: Students make progress with more study time.
+schedule (/ˈʃed.juːl/) [noun]	A plan showing times for activities - lịch trình. Ví dụ: The school schedule changed this year.
+benefit (/ˈben.ɪ.fɪt/) [noun]	An advantage or good result - lợi ích. Ví dụ: There are many benefits of year-round school.

@@ -17,12 +17,22 @@ Generate the final reading passage and IELTS-style reading questions based *only
    - Divide the passage into structured paragraphs with IDs starting from 1.
    - **Vocabulary Bolding**: Bold vocabulary terms from the vocabulary table (`**word**` or inflected forms).
    - **Recycled Bolding**: Bold the 3 recycled vocabulary words and append `[R]` (e.g. `**word** [R]`).
-3. **Question Design (IELTS-style)**:
-   - Generate exactly `reading_question_count` questions.
-   - Match level-specific question types (A1-A2: matching info, short answer, basic MCQs; B1: MCQs, headings, sentence completion; B2: T/F/NG, headings, summary completion; C1-C2: inference, writer's claims).
-   - **Single Unique Answer**: Every question must have exactly one correct answer.
-   - **Anti-Skimming/Scanning**: Do not repeat scannable keywords from the passage in the questions. Use synonyms/paraphrases instead. Place scannable keywords in incorrect distractors as traps to catch word-matchers.
-   - **Band-Bridge**: Mark 10-20% of questions as stretch questions targeting the next level with a `(*)` label, and set `"stretch": true` in JSON.
+3. **Printed Passage Boundary Rule (Anti-Hallucination)**:
+   - **Reading questions must be answerable only from the final printed reading passage.**
+   - Do not ask about facts that exist only in the original source but are omitted from the adapted printed passage.
+   - Do not use facts remembered from web search or outside general knowledge.
+   - If a fact is not printed in the passage, do not use it in any question.
+4. **Verbatim Evidence Requirement**:
+   - Every Reading question must include an `evidence_quote` taken *verbatim* from the final printed passage.
+   - `evidence_paragraph` must point to the exact paragraph index in the printed passage containing the quote.
+   - If no verbatim quote can support the answer, reject the question and regenerate it.
+5. **Anti-Scanning Question Design**:
+   - Reading questions must avoid shallow keyword scanning.
+   - **At least 50%** of questions must require paraphrase, logical relation, comparison, inference, classification, or writer-purpose reasoning.
+   - **At least 30%** of distractors (incorrect options) must contain wording related to the passage but be logically wrong.
+   - Avoid copying key phrases from the passage directly into the question stem.
+   - B1 questions must bridge to B2 skills by integrating paraphrase/inference.
+6. **Band-Bridge**: Mark 10-20% of questions as stretch questions targeting the next level with a `(*)` label, and set `"stretch": true` in JSON.
 
 ## Output JSON
 Return JSON only:
@@ -47,6 +57,8 @@ Return JSON only:
       "evidence_paragraph": 1,
       "evidence_quote": "Exact sentence quoted verbatim from paragraph 1",
       "rationale_vi": "Detailed step-by-step keyword matching reasoning in Vietnamese.",
+      "reasoning_skill": "literal | paraphrase | inference | comparison | cause_effect | contrast | classification | writer_purpose",
+      "source_scope": "printed_passage_only",
       "stretch": false
     }
   ]

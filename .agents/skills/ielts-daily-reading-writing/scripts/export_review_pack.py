@@ -440,6 +440,27 @@ def generate_reading_questions_html(sections: dict[str, str]) -> str:
         
     return "\n\n".join(html_parts)
 
+def adjust_instruction_numbers(instruction: str, offset: int) -> str:
+    if not offset:
+        return instruction
+        
+    def replace_match(match):
+        val = match.group(1).strip()
+        range_match = re.match(r'^(\d+)[\s]*([-–—to]+)[\s]*(\d+)$', val, re.I)
+        if range_match:
+            num1 = int(range_match.group(1)) + offset
+            sep = range_match.group(2).strip()
+            num2 = int(range_match.group(3)) + offset
+            return f"questions {num1}{sep}{num2}"
+            
+        if val.isdigit():
+            return f"question {int(val) + offset}"
+            
+        return match.group(0)
+        
+    adjusted = re.sub(r'\bquestions?\s+(\d+[\s]*[-–—to]*[\s]*\d*)\b', replace_match, instruction, flags=re.I)
+    return adjusted
+
 def generate_grammar_questions_html(sections: dict[str, str], offset: int = 13) -> str:
     grammar_qs_md = sections.get("Questions for Grammar", "")
     if not grammar_qs_md:
@@ -469,7 +490,8 @@ def generate_grammar_questions_html(sections: dict[str, str], offset: int = 13) 
             if not instruction.strip().startswith("Questions"):
                 instruction = prefix + instruction
                 
-        group_html.append(f'        <div class="question-instruction">{instruction}</div>')
+        adjusted_instruction = adjust_instruction_numbers(instruction, offset)
+        group_html.append(f'        <div class="question-instruction">{adjusted_instruction}</div>')
         
         for q in qs:
             num = int(q["num"]) + offset
@@ -483,6 +505,13 @@ def generate_grammar_questions_html(sections: dict[str, str], offset: int = 13) 
                 for opt in q["options"]:
                     q_item_html += f'\n                <div>{opt}</div>'
                 q_item_html += '\n            </div>'
+            else:
+                raw_text = q.get("text", "")
+                has_blank = "_" in raw_text or "fill-blank" in q_text
+                is_rewrite_or_correct = any(kw in q_text.lower() for kw in ["correct the error", "rewrite", "combine", "translate"])
+                if is_rewrite_or_correct or not has_blank:
+                    q_item_html += '\n            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>'
+                
             q_item_html += '\n        </div>'
             group_html.append(q_item_html)
             
@@ -1530,6 +1559,12 @@ def main() -> None:
 
     data = json.loads(Path(args.json_file).read_text(encoding="utf-8"))
     
+    # Run JSON schema and pedagogical validations
+    from validate_lesson_json import validate_lesson_json
+    if not validate_lesson_json(Path(args.json_file)):
+        print("FAIL: JSON validation failed. Exiting.", file=sys.stderr)
+        sys.exit(1)
+        
     # Adapter for structured JSON compilation
     if "practice_markdown" not in data:
         data = convert_review_json_to_flat(data)

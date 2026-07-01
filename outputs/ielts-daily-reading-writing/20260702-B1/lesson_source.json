@@ -1,10 +1,1893 @@
 {
+  "execution": {
+    "mode": "auto",
+    "pipeline_status": "qc_passed",
+    "current_stage": "validation",
+    "revision_attempts": {
+      "source": 0,
+      "reading": 0,
+      "vocabulary": 0,
+      "grammar": 0,
+      "writing": 0,
+      "answers": 0,
+      "pdf_layout": 0
+    }
+  },
+  "human_review": {
+    "mode": "auto",
+    "checkpoints": []
+  },
+  "agent_review": {
+    "reviews": [
+      {
+        "reviewer_agent": "vocabulary",
+        "reviewed_section": "reading",
+        "review_status": "pass",
+        "strengths": [
+          "Reading passage contains all recycled vocabulary items naturally"
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "grammar",
+        "reviewed_section": "reading",
+        "review_status": "pass",
+        "strengths": [
+          "Sentences are well-structured for relative clause targets"
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "answers",
+        "reviewed_section": "reading",
+        "review_status": "pass",
+        "strengths": [
+          "Every reading question has a verbatim evidence quote"
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "writing",
+        "reviewed_section": "vocabulary",
+        "review_status": "pass",
+        "strengths": [
+          "Vocabulary contains useful nouns and collocations for writing tasks"
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "writing",
+        "reviewed_section": "grammar",
+        "review_status": "pass",
+        "strengths": [
+          "Grammar relative clauses transfer well to sentence structures"
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "answers",
+        "reviewed_section": "writing",
+        "review_status": "pass",
+        "strengths": [
+          "Writing tasks are topic aligned and have clear guidelines"
+        ],
+        "challenges": []
+      }
+    ],
+    "challenges": []
+  },
+  "lesson_meta": {
+    "lesson_id": "LSN-20260702-B1-CAMPUS-LIFE-A1B2C3D4",
+    "day": "20260702",
+    "level": "B1",
+    "theme": "Education & Campus Life",
+    "topic": "Campus life, accommodation registration, library rules",
+    "specific_topic": "College Success: Enjoying Residence Life",
+    "created_at": "2026-07-01T23:30:00Z",
+    "reading_question_count": 13,
+    "vocabulary_count": 20,
+    "grammar_question_count": 30,
+    "writing_task_count": 5,
+    "printed_time_allowed_minutes": 120,
+    "estimated_completion_time_minutes": 120,
+    "time_workload_status": "ok"
+  },
+  "source": {
+    "status": "verified",
+    "source_title": "College Success: Enjoying Residence Life",
+    "publisher": "VOA Learning English",
+    "author": "Pete Musto",
+    "published_date": "2019-08-31",
+    "verified_url": "https://learningenglish.voanews.com/a/college-success-enjoying-residence-life/5062052.html",
+    "access_date": "2026-07-01",
+    "url_status": "200 OK",
+    "credibility_note": "VOA official educational resources, highly reliable.",
+    "topic_relevance_note": "Directly explains the benefits, structures, and staff in college residence life.",
+    "usable_excerpt": "A college or university campus is more than just an area for classes, research and studying. Many aim to be communities. That is why so many schools want students to feel like the campus is their home. One way colleges and universities in the United States build community is to require students to live on campus for at least some amount of time. The buildings where students live are called dormitories, or dorms.",
+    "copyright_note": "Educational fair use."
+  },
+  "reading": {
+    "passage": {
+      "title": "College Success: Enjoying Residence Life",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "A college or university campus is more than just an area for classes, research and studying. Many colleges aim to build strong student communities. That is why so many schools want students to feel like the campus is their home. One way colleges and universities in the United States build community is to require students to live on campus for at least some amount of time. The buildings where students live are called dormitories, or dorms. They include shared living spaces, usually designed to fit two or more people. They also often have bathrooms and eating areas that all residents share."
+        },
+        {
+          "id": 2,
+          "text": "Nick Lander gives several reasons why so many schools require new students to live in the dorms. Lander is the associate director of residence life at Kansas State University in Manhattan, Kansas. Research shows that students who live on campus do better in terms of academic success and in learning where everything is on campus, he told VOA. Research also shows that campus residents do better at making connections with their professors and other students."
+        },
+        {
+          "id": 3,
+          "text": "Connections with other students are important, says Lander. Many new students are between 18 and 23 years old, an age when some might benefit from having others around to help them grow as independent adults. Living with roommates in a dorm can amplify [R] the excitement of campus life, although sharing close spaces can also create disagreements. To reduce these problems, universities often use a computer algorithm [R] to match students based on their habits and interests."
+        },
+        {
+          "id": 4,
+          "text": "Dorm life helps teach students to become independent. 'They may be doing their own laundry for the first time,' Lander said. 'They may be sharing spaces with another person for the first time. They may be, in some cases, responsible for making their own meals.' Living in a dormitory also holds students accountable [R] for their daily actions and chores. Sharing these experiences in a collaborative environment, where there is support and people they can share those experiences with, makes a very positive impact for students."
+        },
+        {
+          "id": 5,
+          "text": "However, he admits that living with strangers is not always easy. First year students are not often able to choose exactly who their roommates will be. Also, some people really value their privacy. Colleges and universities in the U.S. try to admit as many different kinds of people as they can. This might cause difficulties for people who grew up in places where the majority of people were just like them. That is why schools with on campus housing try to offer strong residence life programs and services."
+        },
+        {
+          "id": 6,
+          "text": "One thing almost all college dormitories have are resident assistants, or RAs. These are students who have already been studying at the school for some time. In exchange for pay or free housing, they act as representatives of the school, ensuring students are safe and follow the rules. They also connect students with whatever campus resources they may need and plan fun or informational events. There are usually also several full-time employees on campuses acting as resident directors. They are trained to solve disputes between residents and give them the skills to create an enjoyable, healthy community."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": 1,
+        "type": "Multiple Choice",
+        "question": "What is the main purpose of colleges requiring students to live on campus?",
+        "options": [
+          "To make more money from housing fees.",
+          "To build a sense of community among students.",
+          "To monitor students' activities all day.",
+          "To prevent students from going off-campus."
+        ],
+        "correct_answer": "To build a sense of community among students.",
+        "evidence_paragraph": 1,
+        "evidence_quote": "One way colleges and universities in the United States build community is to require students to live on campus",
+        "rationale_vi": "Đoạn 1 nêu rõ các trường đại học yêu cầu sinh viên sống trong khuôn viên trường để xây dựng cộng đồng.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 2,
+        "type": "Multiple Choice",
+        "question": "According to Nick Lander, what is one benefit of living in dormitories?",
+        "options": [
+          "Students do not need to study for their exams.",
+          "Students can avoid taking any academic classes.",
+          "Students achieve better results in their studies.",
+          "Students are allowed to ignore campus rules."
+        ],
+        "correct_answer": "Students achieve better results in their studies.",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Research shows that students who live on campus do better in terms of academic success",
+        "rationale_vi": "Đoạn 2 chỉ ra nghiên cứu cho thấy sinh viên sống trong ký túc xá đạt kết quả tốt hơn về mặt học thuật.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 3,
+        "type": "Multiple Choice",
+        "question": "Why do universities use a computer algorithm for roommate assignments?",
+        "options": [
+          "To select which students are admitted to the school.",
+          "To increase the price of the housing.",
+          "To match students with similar habits and minimize conflicts.",
+          "To track students' internet usage."
+        ],
+        "correct_answer": "To match students with similar habits and minimize conflicts.",
+        "evidence_paragraph": 3,
+        "evidence_quote": "To reduce these problems, universities often use a computer algorithm [R] to match students based on their habits and interests.",
+        "rationale_vi": "Đoạn 3 viết rằng các trường sử dụng thuật toán máy tính để ghép đôi sinh viên dựa trên thói quen và sở thích nhằm giảm thiểu bất đồng.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 4,
+        "type": "Multiple Choice",
+        "question": "What does the word 'collaborative' in the fourth paragraph tell us about the dorm environment?",
+        "options": [
+          "Students must complete all their homework alone.",
+          "Students are expected to work and share experiences together.",
+          "Students have private rooms with no contact with others.",
+          "Students are not allowed to talk to each other during meals."
+        ],
+        "correct_answer": "Students are expected to work and share experiences together.",
+        "evidence_paragraph": 4,
+        "evidence_quote": "collaborative environment, where there is support and people they can share those experiences with",
+        "rationale_vi": "Đoạn 4 giải thích môi trường cộng tác nghĩa là có sự hỗ trợ và có những người để chia sẻ trải nghiệm cùng nhau.",
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 5,
+        "type": "Multiple Choice",
+        "question": "What is the main role of Resident Assistants (RAs) in dormitories?",
+        "options": [
+          "To cook meals for all first-year students.",
+          "To clean students' rooms and wash their laundry.",
+          "To keep students safe, enforce rules, and connect them with resources.",
+          "To teach academic classes in the dormitories."
+        ],
+        "correct_answer": "To keep students safe, enforce rules, and connect them with resources.",
+        "evidence_paragraph": 6,
+        "evidence_quote": "ensuring students are safe and follow the rules. They also connect students with whatever campus resources they may need",
+        "rationale_vi": "Đoạn 6 nêu rõ RAs đảm bảo an toàn, thực thi luật lệ và kết nối sinh viên với tài nguyên trường học.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 6,
+        "type": "Gap Fill",
+        "question": "Nick Lander holds the position of __________ at Kansas State University.",
+        "options": [],
+        "correct_answer": "associate director of residence life",
+        "evidence_paragraph": 2,
+        "evidence_quote": "associate director of residence life at Kansas State University",
+        "rationale_vi": "Đoạn 2 định vị vị trí của ông là trợ lý giám đốc đời sống nội trú.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 7,
+        "type": "Gap Fill",
+        "question": "Dorm life can increase the __________ of campus life, but it can also cause roommate disputes.",
+        "options": [],
+        "correct_answer": "excitement",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Living with roommates in a dorm can amplify [R] the excitement of campus life",
+        "rationale_vi": "Đoạn 3 chỉ ra việc sống chung phòng ký túc xá có thể gia tăng sự phấn khởi của cuộc sống học đường.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 8,
+        "type": "Gap Fill",
+        "question": "Sharing experiences in dorms can have a __________ on students as they grow.",
+        "options": [],
+        "correct_answer": "very positive impact",
+        "evidence_paragraph": 4,
+        "evidence_quote": "makes a very positive impact for students",
+        "rationale_vi": "Đoạn 4 nói rằng chia sẻ trải nghiệm trong môi trường này tạo ra tác động rất tích cực đối với sinh viên.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 9,
+        "type": "Gap Fill",
+        "question": "Resident Assistants are older students who represent the school in return for pay or __________.",
+        "options": [],
+        "correct_answer": "free housing",
+        "evidence_paragraph": 6,
+        "evidence_quote": "In exchange for pay or free housing",
+        "rationale_vi": "Đoạn 6 xác nhận RAs làm việc đổi lấy lương hoặc chỗ ở miễn phí.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 10,
+        "type": "True / False / Not Given",
+        "question": "Students who live on campus find it easier to connect with their professors.",
+        "options": [],
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 2,
+        "evidence_quote": "campus residents do better at making connections with their professors",
+        "rationale_vi": "Đoạn 2 xác nhận sinh viên nội trú kết nối tốt hơn với giáo sư.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 11,
+        "type": "True / False / Not Given",
+        "question": "First-year students are usually allowed to choose their own roommates.",
+        "options": [],
+        "correct_answer": "FALSE",
+        "evidence_paragraph": 5,
+        "evidence_quote": "First year students are not often able to choose exactly who their roommates will be.",
+        "rationale_vi": "Đoạn 5 ghi rõ sinh viên năm nhất thường không được tự chọn bạn cùng phòng.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 12,
+        "type": "True / False / Not Given",
+        "question": "Resident Assistants are required to be in their second year of university.",
+        "options": [],
+        "correct_answer": "NOT GIVEN",
+        "evidence_paragraph": 6,
+        "evidence_quote": "These are students who have already been studying at the school for some time.",
+        "rationale_vi": "Bài đọc chỉ nói RAs là sinh viên đã học tại trường một thời gian, không nêu quy định bắt buộc phải là sinh viên năm hai.",
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 13,
+        "type": "True / False / Not Given",
+        "question": "Resident Directors receive special training to help resolve disagreements between students.",
+        "options": [],
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 6,
+        "evidence_quote": "They are trained to solve disputes between residents",
+        "rationale_vi": "Đoạn 6 xác định các giám đốc nội trú được đào tạo để giải quyết tranh chấp giữa cư dân.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      }
+    ]
+  },
+  "vocabulary": {
+    "items": [
+      {
+        "id": 1,
+        "term": "academic success",
+        "ipa": "/ˌæk.əˈdem.ɪk səkˈses/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "achieving good results in study",
+        "meaning_vi": "thành công trong học tập",
+        "example": "academic success in college",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 2,
+        "term": "campus life",
+        "ipa": "/ˈkæm.pəs laɪf/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the daily experience on campus",
+        "meaning_vi": "đời sống học đường",
+        "example": "enjoy campus life",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 3,
+        "term": "solve disputes",
+        "ipa": "/sɒlv dɪˈspjuːts/",
+        "part_of_speech": "verb phrase",
+        "definition_en": "to find answers for conflicts",
+        "meaning_vi": "giải quyết tranh chấp",
+        "example": "solve disputes between roommates",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 4,
+        "term": "residence life",
+        "ipa": "/ˈrez.ɪ.dəns laɪf/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "living and learning program in dorms",
+        "meaning_vi": "đời sống nội trú",
+        "example": "residence life programs",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 5,
+        "term": "resident assistant",
+        "ipa": "/ˈrez.ɪ.dənt əˈsɪs.tənt/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "older student managing a dorm",
+        "meaning_vi": "trợ lý nội trú",
+        "example": "resident assistants help students",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 6,
+        "term": "grow as independent adults",
+        "ipa": "/ɡrəʊ æz ˌɪn.dɪˈpen.dənt ˈæd.ʌlts/",
+        "part_of_speech": "verb phrase",
+        "definition_en": "become mature and self-reliant",
+        "meaning_vi": "trưởng thành như người lớn độc lập",
+        "example": "help them grow as independent adults",
+        "vocab_type": "phrase",
+        "source": "reading"
+      },
+      {
+        "id": 7,
+        "term": "make a positive impact",
+        "ipa": "/meɪk ə ˈpɒz.ə.tɪv ˈɪm.pækt/",
+        "part_of_speech": "verb phrase",
+        "definition_en": "create a good effect on someone",
+        "meaning_vi": "tạo tác động tích cực",
+        "example": "makes a positive impact for students",
+        "vocab_type": "phrase",
+        "source": "reading"
+      },
+      {
+        "id": 8,
+        "term": "dormitory",
+        "ipa": "/ˈdɔː.mɪ.tər.i/",
+        "part_of_speech": "noun",
+        "definition_en": "a building for university students to live",
+        "meaning_vi": "ký túc xá",
+        "example": "live in a dormitory",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 9,
+        "term": "community",
+        "ipa": "/kəˈmjuː.nə.ti/",
+        "part_of_speech": "noun",
+        "definition_en": "a group of people living in the same place",
+        "meaning_vi": "cộng đồng",
+        "example": "build community",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 10,
+        "term": "connection",
+        "ipa": "/kəˈnek.ʃən/",
+        "part_of_speech": "noun",
+        "definition_en": "a relationship or link",
+        "meaning_vi": "sự kết nối",
+        "example": "make connections with professors",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 11,
+        "term": "independent",
+        "ipa": "/ˌɪn.dɪˈpen.dənt/",
+        "part_of_speech": "adjective",
+        "definition_en": "not controlled by others",
+        "meaning_vi": "độc lập",
+        "example": "independent adults",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 12,
+        "term": "collaborative",
+        "ipa": "/kəˈlæb.ər.ə.tɪv/",
+        "part_of_speech": "adjective",
+        "definition_en": "involving people working together",
+        "meaning_vi": "có tính hợp tác",
+        "example": "collaborative environment",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 13,
+        "term": "privacy",
+        "ipa": "/ˈprɪv.ə.si/",
+        "part_of_speech": "noun",
+        "definition_en": "being free from public attention",
+        "meaning_vi": "sự riêng tư",
+        "example": "value their privacy",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 14,
+        "term": "majority",
+        "ipa": "/məˈdʒɒr.ə.ti/",
+        "part_of_speech": "noun",
+        "definition_en": "more than half of a total",
+        "meaning_vi": "đa số",
+        "example": "majority of people",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 15,
+        "term": "resource",
+        "ipa": "/rɪˈzɔːs/",
+        "part_of_speech": "noun",
+        "definition_en": "a useful supply or support",
+        "meaning_vi": "tài nguyên",
+        "example": "campus resources",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 16,
+        "term": "dispute",
+        "ipa": "/dɪˈspjuːt/",
+        "part_of_speech": "noun",
+        "definition_en": "an argument or disagreement",
+        "meaning_vi": "cuộc tranh chấp",
+        "example": "solve disputes",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 17,
+        "term": "roommate",
+        "ipa": "/ˈruːm.meɪt/",
+        "part_of_speech": "noun",
+        "definition_en": "a person who shares a room",
+        "meaning_vi": "bạn cùng phòng",
+        "example": "choose their roommates",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 18,
+        "term": "accountable",
+        "ipa": "/əˈkaʊn.tə.bəl/",
+        "part_of_speech": "adjective",
+        "definition_en": "responsible for one's actions",
+        "meaning_vi": "chịu trách nhiệm",
+        "example": "holds students accountable",
+        "vocab_type": "single_word",
+        "source": "topic-extension"
+      },
+      {
+        "id": 19,
+        "term": "amplify",
+        "ipa": "/ˈæm.plɪ.faɪ/",
+        "part_of_speech": "verb",
+        "definition_en": "to increase the size or effect",
+        "meaning_vi": "khuếch đại, tăng cường",
+        "example": "amplify the excitement",
+        "vocab_type": "single_word",
+        "source": "topic-extension"
+      },
+      {
+        "id": 20,
+        "term": "algorithm",
+        "ipa": "/ˈæl.ɡə.rɪ.ðəm/",
+        "part_of_speech": "noun",
+        "definition_en": "a set of rules for a computer",
+        "meaning_vi": "thuật toán",
+        "example": "use a computer algorithm",
+        "vocab_type": "single_word",
+        "source": "topic-extension"
+      }
+    ],
+    "recycled_items": [
+      {
+        "term": "accountable",
+        "ipa": "/əˈkaʊn.tə.bəl/",
+        "part_of_speech": "adjective",
+        "meaning_vi": "chịu trách nhiệm",
+        "source_day": "20260701"
+      },
+      {
+        "term": "amplify",
+        "ipa": "/ˈæm.plɪ.faɪ/",
+        "part_of_speech": "verb",
+        "meaning_vi": "khuếch đại, tăng cường",
+        "source_day": "20260701"
+      },
+      {
+        "term": "algorithm",
+        "ipa": "/ˈæl.ɡə.rɪ.ðəm/",
+        "part_of_speech": "noun",
+        "meaning_vi": "thuật toán",
+        "source_day": "20260701"
+      }
+    ],
+    "quizlet": {
+      "section_1_simple": [
+        "academic success : thành công trong học tập",
+        "campus life : đời sống học đường",
+        "solve disputes : giải quyết tranh chấp",
+        "residence life : đời sống nội trú",
+        "resident assistant : trợ lý nội trú",
+        "grow as independent adults : trưởng thành như người lớn độc lập",
+        "make a positive impact : tạo tác động tích cực",
+        "dormitory : ký túc xá",
+        "community : cộng đồng",
+        "connection : sự kết nối",
+        "independent : độc lập",
+        "collaborative : có tính hợp tác",
+        "privacy : sự riêng tư",
+        "majority : đa số",
+        "resource : tài nguyên",
+        "dispute : cuộc tranh chấp",
+        "roommate : bạn cùng phòng",
+        "accountable : chịu trách nhiệm",
+        "amplify : khuếch đại, tăng cường",
+        "algorithm : thuật toán"
+      ],
+      "section_2_detailed": [
+        "academic success /ˌæk.əˈdem.ɪk səkˈses, noun phrase/ : thành công trong học tập",
+        "campus life /ˈkæm.pəs laɪf, noun phrase/ : đời sống học đường",
+        "solve disputes /sɒlv dɪˈspjuːts, verb phrase/ : giải quyết tranh chấp",
+        "residence life /ˈrez.ɪ.dəns laɪf, noun phrase/ : đời sống nội trú",
+        "resident assistant /ˈrez.ɪ.dent əˈsɪs.tənt, noun phrase/ : trợ lý nội trú",
+        "grow as independent adults /grow as independent adults, verb phrase/ : trưởng thành độc lập",
+        "make a positive impact /make a positive impact, verb phrase/ : tạo tác động tích cực",
+        "dormitory /ˈdɔː.mɪ.tər.i, noun/ : ký túc xá",
+        "community /kəˈmjuː.nə.ti, noun/ : cộng đồng",
+        "connection /kəˈnek.ʃən, noun/ : kết nối",
+        "independent /ˌin.dɪˈpen.dənt, adjective/ : độc lập",
+        "collaborative /kəˈlæb.ər.ə.tɪv, adjective/ : có tính hợp tác",
+        "privacy /ˈprɪv.ə.si, noun/ : riêng tư",
+        "majority /məˈdʒɒr.ə.ti, noun/ : đa số",
+        "resource /rɪˈzɔːs, noun/ : tài nguyên",
+        "dispute /dɪˈspjuːt, noun/ : tranh chấp",
+        "roommate /ˈruːm.meɪt, noun/ : bạn cùng phòng",
+        "accountable /əˈkaʊn.tə.bəl, adjective/ : chịu trách nhiệm",
+        "amplify /ˈæm.plɪ.faɪ, verb/ : khuếch đại, tăng cường",
+        "algorithm /ˈæl.ɡə.rɪ.ðəm, noun/ : thuật toán"
+      ]
+    },
+    "vocab_checker_items": [
+      {
+        "term": "academic success",
+        "ipa": "/ˌæk.əˈdem.ɪk səkˈses/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "achieving good results in study",
+        "meaning_vi": "thành công trong học tập"
+      },
+      {
+        "term": "campus life",
+        "ipa": "/ˈkæm.pəs laɪf/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the daily experience on campus",
+        "meaning_vi": "đời sống học đường"
+      },
+      {
+        "term": "solve disputes",
+        "ipa": "/sɒlv dɪˈspjuːts/",
+        "part_of_speech": "verb phrase",
+        "definition_en": "to find answers for conflicts",
+        "meaning_vi": "giải quyết tranh chấp"
+      },
+      {
+        "term": "residence life",
+        "ipa": "/ˈrez.ɪ.dəns laɪf/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "living and learning program in dorms",
+        "meaning_vi": "đời sống nội trú"
+      },
+      {
+        "term": "resident assistant",
+        "ipa": "/ˈrez.ɪ.dənt əˈsɪs.tənt/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "older student managing a dorm",
+        "meaning_vi": "trợ lý nội trú"
+      },
+      {
+        "term": "grow as independent adults",
+        "ipa": "/ɡrəʊ æz ˌɪn.dɪˈpen.dənt ˈæd.ʌlts/",
+        "part_of_speech": "verb phrase",
+        "definition_en": "become mature and self-reliant",
+        "meaning_vi": "trưởng thành như người lớn độc lập"
+      },
+      {
+        "term": "make a positive impact",
+        "ipa": "/meɪk ə ˈpɒz.ə.tɪv ˈɪm.pækt/",
+        "part_of_speech": "verb phrase",
+        "definition_en": "create a good effect on someone",
+        "meaning_vi": "tạo tác động tích cực"
+      },
+      {
+        "term": "dormitory",
+        "ipa": "/ˈdɔː.mɪ.tər.i/",
+        "part_of_speech": "noun",
+        "definition_en": "a building for university students to live",
+        "meaning_vi": "ký túc xá"
+      },
+      {
+        "term": "community",
+        "ipa": "/kəˈmjuː.nə.ti/",
+        "part_of_speech": "noun",
+        "definition_en": "a group of people living in the same place",
+        "meaning_vi": "cộng đồng"
+      },
+      {
+        "term": "connection",
+        "ipa": "/kəˈnek.ʃən/",
+        "part_of_speech": "noun",
+        "definition_en": "a relationship or link",
+        "meaning_vi": "sự kết nối"
+      }
+    ]
+  },
+  "grammar": {
+    "targets": [
+      {
+        "name": "Relative clauses: who/which/that/where/whose",
+        "level": "B1",
+        "reason": "Primary relative pronouns for identifying people, things, and places."
+      },
+      {
+        "name": "Defining vs non-defining relative clauses",
+        "level": "B1",
+        "reason": "Understanding comma usage differences and meaning shifts."
+      }
+    ],
+    "guide": [
+      {
+        "heading": "#### Chủ điểm 1: Relative Pronouns (Đại từ quan hệ)",
+        "content": "Đại từ quan hệ dùng để thay thế cho danh từ đứng trước nó và nối các mệnh đề lại với nhau:\n- **who**: làm chủ ngữ chỉ người. Ví dụ: *The director **who** manages the dorms is Nick Lander.*\n- **which**: làm chủ ngữ/tân ngữ chỉ vật. Ví dụ: *The rules **which** protect students are strict.*\n- **whose**: chỉ sở hữu của người hoặc vật. Ví dụ: *The student **whose** card was lost could not enter.*\n- **where**: chỉ nơi chốn (= in/at which). Ví dụ: *The city **where** the school is located is Manhattan.*"
+      },
+      {
+        "heading": "#### Chủ điểm 2: Defining vs Non-Defining Relative Clauses",
+        "content": "- **Defining relative clause** (Mệnh đề quan hệ xác định): Cung cấp thông tin bắt buộc phải có để hiểu rõ câu. Không dùng dấu phẩy. Ví dụ: *The student who lives next door is loud.*\n- **Non-defining relative clause** (Mệnh đề quan hệ không xác định): Cung cấp thêm thông tin phụ, không có vẫn hiểu được câu. Phải dùng dấu phẩy ngăn cách. Ví dụ: *Nick Lander, who is the associate director, gave us advice.*"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "trap": "Dùng 'that' trong mệnh đề quan hệ không xác định (có dấu phẩy)",
+        "wrong_example": "Nick Lander, that is the director, gave advice.",
+        "correct_version": "Nick Lander, who is the director, gave advice.",
+        "why_it_matters": "IELTS Writing cấm dùng 'that' sau dấu phẩy trong mệnh đề quan hệ."
+      },
+      {
+        "trap": "Thiếu giới từ khi dùng 'which' thay cho 'where'",
+        "wrong_example": "This is the library which I study.",
+        "correct_version": "This is the library where I study. (Hoặc: ...which I study in.)",
+        "why_it_matters": "Lỗi ngữ pháp cơ bản làm giảm điểm Grammatical Range."
+      }
+    ],
+    "sections": [
+      {
+        "section_title": "Relative Pronouns",
+        "internal_question_start": 1,
+        "internal_question_end": 10,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Defining vs Non-Defining Clauses",
+        "internal_question_start": 11,
+        "internal_question_end": 20,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Error Correction & Sentence Combining",
+        "internal_question_start": 21,
+        "internal_question_end": 30,
+        "compiler_computed_range": true
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "type": "Gap Fill",
+        "question": "The dormitory _______ (who/which) we live in has a shared kitchen.",
+        "options": [],
+        "correct_answer": "which",
+        "explanation_vi": "Dùng 'which' thay thế cho danh từ chỉ vật 'dormitory'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 2,
+        "type": "Gap Fill",
+        "question": "Nick Lander is the director _______ (who/which) manages the residence life program.",
+        "options": [],
+        "correct_answer": "who",
+        "explanation_vi": "Dùng 'who' thay thế cho danh từ chỉ người 'director'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 3,
+        "type": "Gap Fill",
+        "question": "This is the student _______ (whose/who) roommate moved out last week.",
+        "options": [],
+        "correct_answer": "whose",
+        "explanation_vi": "Dùng 'whose' chỉ mối quan hệ sở hữu đối với bạn cùng phòng.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 4,
+        "type": "Gap Fill",
+        "question": "Manhattan is the city _______ (where/which) Kansas State University is located.",
+        "options": [],
+        "correct_answer": "where",
+        "explanation_vi": "Dùng trạng từ quan hệ 'where' thay thế cho danh từ nơi chốn 'city'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 5,
+        "type": "Gap Fill",
+        "question": "The resident assistants _______ (whom/whose) you met yesterday are very helpful.",
+        "options": [],
+        "correct_answer": "whom",
+        "explanation_vi": "Dùng 'whom' đóng vai trò tân ngữ chỉ người.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 6,
+        "type": "Gap Fill",
+        "question": "I need to find a quiet place _______ (where/which) I can study for my exams.",
+        "options": [],
+        "correct_answer": "where",
+        "explanation_vi": "Dùng 'where' chỉ nơi chốn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 7,
+        "type": "Gap Fill",
+        "question": "The rules _______ (which/who) are enforced in the dorms ensure student safety.",
+        "options": [],
+        "correct_answer": "which",
+        "explanation_vi": "Dùng 'which' chỉ vật số nhiều 'rules'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 8,
+        "type": "Gap Fill",
+        "question": "The student _______ (who/whose) did not do his laundry had no clean clothes.",
+        "options": [],
+        "correct_answer": "who",
+        "explanation_vi": "Dùng 'who' làm chủ ngữ chỉ người.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 9,
+        "type": "Gap Fill",
+        "question": "The university library is a place _______ (where/which) students borrow research books.",
+        "options": [],
+        "correct_answer": "where",
+        "explanation_vi": "Dùng 'where' chỉ địa điểm.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 10,
+        "type": "Gap Fill",
+        "question": "(*) The student _______ (whose/who) card was lost could not enter the library.",
+        "options": [],
+        "correct_answer": "whose",
+        "explanation_vi": "Dùng 'whose' chỉ sự sở hữu tấm thẻ của học sinh.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 11,
+        "type": "Multiple Choice",
+        "question": "There are many students. Identify the sentence that uses relative clause commas correctly.",
+        "options": [
+          "The student, who lives next door, is very loud.",
+          "The student who lives next door is very loud.",
+          "The student who lives, next door, is very loud."
+        ],
+        "correct_answer": "The student who lives next door is very loud.",
+        "explanation_vi": "Mệnh đề xác định không dùng dấu phẩy.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "The student, who lives next door, is very loud.",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            },
+            {
+              "option": "The student who lives, next door, is very loud.",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 12,
+        "type": "Multiple Choice",
+        "question": "My roommate _______ is studying chemistry helps me with my homework.",
+        "options": [
+          ", who",
+          "who",
+          ", which"
+        ],
+        "correct_answer": "who",
+        "explanation_vi": "Mệnh đề xác định bổ nghĩa cho roommate, không dùng dấu phẩy.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": ", who",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            },
+            {
+              "option": ", which",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 13,
+        "type": "Multiple Choice",
+        "question": "Kansas State University _______ stands in the state of Kansas, has a great campus.",
+        "options": [
+          "which",
+          ", which",
+          ", who"
+        ],
+        "correct_answer": ", which",
+        "explanation_vi": "Tên riêng nên cần dùng mệnh đề không xác định và có dấu phẩy.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "which",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            },
+            {
+              "option": ", who",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 14,
+        "type": "Multiple Choice",
+        "question": "There are many Resident Assistants. Choose the correct punctuation: 'Resident Assistants _______ must follow university rules.'",
+        "options": [
+          ", who guide new students,",
+          "who guide new students",
+          ", which guide new students,"
+        ],
+        "correct_answer": ", who guide new students,",
+        "explanation_vi": "Mệnh đề không xác định dùng dấu phẩy hai bên.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "who guide new students",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            },
+            {
+              "option": ", which guide new students,",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 15,
+        "type": "Multiple Choice",
+        "question": "Choose the option that gives extra information: The book _______ I borrowed from the library was very interesting.",
+        "options": [
+          ", that",
+          "which",
+          ", which"
+        ],
+        "correct_answer": "which",
+        "explanation_vi": "Mệnh đề xác định chỉ vật, không dùng dấu phẩy.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": ", that",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            },
+            {
+              "option": ", which",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 16,
+        "type": "Multiple Choice",
+        "question": "Highlands Library _______ closes early on Saturdays.",
+        "options": [
+          ", where we study,",
+          "where we study",
+          ", which we study,"
+        ],
+        "correct_answer": ", where we study,",
+        "explanation_vi": "Địa điểm cụ thể dùng dấu phẩy.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "where we study",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            },
+            {
+              "option": ", which we study,",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 17,
+        "type": "Multiple Choice",
+        "question": "Choose the option that gives extra information: The student _______ roommate is noisy wants to move out.",
+        "options": [
+          "who",
+          "whose",
+          ", whose"
+        ],
+        "correct_answer": "whose",
+        "explanation_vi": "Mệnh đề xác định chỉ sở hữu, không dùng dấu phẩy.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "who",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            },
+            {
+              "option": ", whose",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 18,
+        "type": "Multiple Choice",
+        "question": "Nick Lander _______ gave a speech about residence life.",
+        "options": [
+          ", who is the director,",
+          "who is the director",
+          "is the director who"
+        ],
+        "correct_answer": ", who is the director,",
+        "explanation_vi": "Tên riêng yêu cầu mệnh đề không xác định.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "who is the director",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            },
+            {
+              "option": "is the director who",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 19,
+        "type": "Multiple Choice",
+        "question": "Choose the option that gives extra information: The roommate _______ you matched with seems very nice.",
+        "options": [
+          "whom",
+          ", whom",
+          "whose"
+        ],
+        "correct_answer": "whom",
+        "explanation_vi": "Mệnh đề xác định đóng vai trò tân ngữ.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": ", whom",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            },
+            {
+              "option": "whose",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 20,
+        "type": "Multiple Choice",
+        "question": "Choose the option that gives extra information: The main office _______ is located on the first floor, is always busy.",
+        "options": [
+          "which",
+          ", which",
+          ", who"
+        ],
+        "correct_answer": ", which",
+        "explanation_vi": "Văn phòng chính là địa điểm cụ thể nên dùng mệnh đề không xác định.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "which",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            },
+            {
+              "option": ", who",
+              "reason": "Incorrect relative clause pronoun/punctuation for this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 21,
+        "type": "Sentence Transformation",
+        "question": "Correct the error: The dormitory who we live in is very old.",
+        "options": [],
+        "correct_answer": "The dormitory which we live in is very old.",
+        "explanation_vi": "Thay 'who' thành 'which' cho vật.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The dormitory who we live in is very old.",
+          "corrected_sentence": "The dormitory which we live in is very old.",
+          "target_error_text": "who",
+          "target_error_type": "pronoun",
+          "correction_text": "which",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 22,
+        "type": "Sentence Transformation",
+        "question": "Correct the error: The student which lost his ID card could not enter.",
+        "options": [],
+        "correct_answer": "The student who lost his ID card could not enter.",
+        "explanation_vi": "Thay 'which' thành 'who' cho người.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The student which lost his ID card could not enter.",
+          "corrected_sentence": "The student who lost his ID card could not enter.",
+          "target_error_text": "which",
+          "target_error_type": "pronoun",
+          "correction_text": "who",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 23,
+        "type": "Sentence Transformation",
+        "question": "Correct the error: My roommate whose is from Boston is very friendly.",
+        "options": [],
+        "correct_answer": "My roommate who is from Boston is very friendly.",
+        "explanation_vi": "Thay 'whose' thành 'who' làm chủ ngữ.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "My roommate whose is from Boston is very friendly.",
+          "corrected_sentence": "My roommate who is from Boston is very friendly.",
+          "target_error_text": "whose",
+          "target_error_type": "pronoun",
+          "correction_text": "who",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 24,
+        "type": "Sentence Transformation",
+        "question": "Correct the error: The city which the university is located is Manhattan.",
+        "options": [],
+        "correct_answer": "The city where the university is located is Manhattan.",
+        "explanation_vi": "Thay 'which' thành 'where' chỉ nơi chốn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The city which the university is located is Manhattan.",
+          "corrected_sentence": "The city where the university is located is Manhattan.",
+          "target_error_text": "which",
+          "target_error_type": "pronoun",
+          "correction_text": "where",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 25,
+        "type": "Sentence Transformation",
+        "question": "Correct the error: The rules, that are written in the book, must be followed.",
+        "options": [],
+        "correct_answer": "The rules that are written in the book must be followed.",
+        "explanation_vi": "Không dùng dấu phẩy với 'that'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The rules, that are written in the book, must be followed.",
+          "corrected_sentence": "The rules that are written in the book must be followed.",
+          "target_error_text": "rules, that",
+          "target_error_type": "punctuation",
+          "correction_text": "rules that",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 26,
+        "type": "Sentence Transformation",
+        "question": "(*) Combine: This is the student. Her roommate moved out last week. (Use 'whose')",
+        "options": [],
+        "correct_answer": "This is the student whose roommate moved out last week.",
+        "explanation_vi": "Dùng 'whose' để thay thế cho từ sở hữu 'Her'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 27,
+        "type": "Sentence Transformation",
+        "question": "Combine: We live in a dormitory. It has a shared kitchen. (Use 'which')",
+        "options": [],
+        "correct_answer": "We live in a dormitory which has a shared kitchen.",
+        "explanation_vi": "Dùng 'which' thay cho 'It'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 28,
+        "type": "Sentence Transformation",
+        "question": "Combine: Nick Lander is the associate director. He gave us advice. (Use 'who')",
+        "options": [],
+        "correct_answer": "Nick Lander is the associate director who gave us advice.",
+        "explanation_vi": "Dùng 'who' thay cho 'He'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 29,
+        "type": "Sentence Transformation",
+        "question": "Combine: I went to Manhattan. The university is located there. (Use 'where')",
+        "options": [],
+        "correct_answer": "I went to Manhattan where the university is located.",
+        "explanation_vi": "Dùng 'where' thay thế cho trạng ngữ nơi chốn 'there'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 30,
+        "type": "Sentence Transformation",
+        "question": "(*) Combine: The roommate is very quiet. You matched with her. (Use 'whom')",
+        "options": [],
+        "correct_answer": "The roommate whom you matched with is very quiet.",
+        "explanation_vi": "Dùng 'whom' đóng vai trò tân ngữ chỉ người sau giới từ 'with'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      }
+    ]
+  },
+  "writing": {
+    "tasks": [
+      {
+        "id": 1,
+        "task_type": "Word Ordering",
+        "prompt": "Rearrange the words to form simple sentences:<br>a) live / campus / on / students / .<br>b) room / my / is / clean / .",
+        "target_length": "2 sentences",
+        "focus_skill": "Word order in simple sentences",
+        "useful_language": [
+          "live on campus",
+          "is clean"
+        ],
+        "success_criteria": [
+          "Correct capitalization and punctuation.",
+          "Write 2 complete sentences."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 2,
+        "task_type": "Sentence Completion",
+        "prompt": "Complete the sentences below using your own words:<br>a) I like my roommate because ______ .<br>b) Yesterday, I cleaned ______ .",
+        "target_length": "2 short clauses",
+        "focus_skill": "Clause coordination with because/and",
+        "useful_language": [
+          "because he is quiet",
+          "yesterday, I cleaned my room"
+        ],
+        "success_criteria": [
+          "Subject-verb agreement.",
+          "Use logical connections."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 3,
+        "task_type": "Translation",
+        "prompt": "Translate the sentences into English:<br>a) Tôi sống trong một ký túc xá lớn.<br>b) Trợ lý nội trú giúp đỡ chúng tôi.",
+        "target_length": "2 sentences",
+        "focus_skill": "Simple description structures",
+        "useful_language": [
+          "live in a large dormitory",
+          "resident assistant helps us"
+        ],
+        "success_criteria": [
+          "Correct spelling and verb forms.",
+          "Write 2 clear sentences."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 4,
+        "task_type": "Visual Data Description",
+        "prompt": "Describe the data shown in the chart below comparing the number of students living on-campus and off-campus.",
+        "target_length": "20-30 words",
+        "focus_skill": "Simple data comparison",
+        "useful_language": [
+          "on-campus students",
+          "twice as many as"
+        ],
+        "success_criteria": [
+          "Use twice as many as structure.",
+          "Write at least 2 sentences."
+        ],
+        "visual_data": {
+          "type": "svg",
+          "content": "<div class=\"svg-chart-container\"><svg viewBox=\"0 0 400 200\" width=\"100%\" height=\"200\" style=\"background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px;\"><line x1=\"50\" y1=\"150\" x2=\"350\" y2=\"150\" stroke=\"#ccc\" stroke-width=\"1\" /><line x1=\"50\" y1=\"100\" x2=\"350\" y2=\"100\" stroke=\"#eee\" stroke-width=\"1\" /><line x1=\"50\" y1=\"50\" x2=\"350\" y2=\"50\" stroke=\"#eee\" stroke-width=\"1\" /><text x=\"35\" y=\"155\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">0</text><text x=\"30\" y=\"105\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">400</text><text x=\"30\" y=\"55\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">800</text><rect x=\"100\" y=\"50\" width=\"50\" height=\"100\" fill=\"#3498db\" rx=\"2\" /><text x=\"125\" y=\"40\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\" text-anchor=\"middle\">800</text><rect x=\"230\" y=\"100\" width=\"50\" height=\"50\" fill=\"#e74c3c\" rx=\"2\" /><text x=\"255\" y=\"90\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\" text-anchor=\"middle\">400</text><text x=\"125\" y=\"170\" font-family=\"Arial\" font-size=\"12\" font-weight=\"bold\" fill=\"#555\" text-anchor=\"middle\">On-campus</text><text x=\"255\" y=\"170\" font-family=\"Arial\" font-size=\"12\" font-weight=\"bold\" fill=\"#555\" text-anchor=\"middle\">Off-campus</text></svg></div>"
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 5,
+        "task_type": "Guided Email Invite",
+        "prompt": "(*) Write a short email (25-35 words) to a classmate, inviting them to visit your new dorm room this Saturday afternoon. Mention what time to meet.",
+        "target_length": "25-35 words",
+        "focus_skill": "Basic informal invite structure",
+        "useful_language": [
+          "Would you like to come",
+          "Let's meet at"
+        ],
+        "success_criteria": [
+          "Include greeting, invite, time, and closing.",
+          "Correct spelling."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      }
+    ]
+  },
+  "answers": {
+    "reading_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "To build a sense of community among students.",
+        "evidence_quote": "One way colleges and universities in the United States build community is to require students to live on campus",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Giải thích: Các trường yêu cầu sống nội trú để xây dựng cộng đồng học sinh.",
+        "why_others_wrong_vi": "A, C, D không phản ánh mục đích thực tế nêu trong đoạn 1.",
+        "tip_vi": "Tìm từ khóa 'build community' để định vị câu trả lời."
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "Students achieve better results in their studies.",
+        "evidence_quote": "Research shows that students who live on campus do better in terms of academic success",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Giải thích: Đạt kết quả tốt hơn về mặt học thuật tương đương với thành công trong học tập.",
+        "why_others_wrong_vi": "A, B, D sai thông tin thực tế của bài đọc.",
+        "tip_vi": "Tìm từ đồng nghĩa: 'academic success' = 'results in studies'."
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "To match students with similar habits and minimize conflicts.",
+        "evidence_quote": "To reduce these problems, universities often use a computer algorithm to match students based on their habits and interests.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Giải thích: Thuật toán giúp ghép các học sinh có thói quen giống nhau nhằm giảm xung đột.",
+        "why_others_wrong_vi": "A, B, D là thông tin tự suy diễn không có trong bài.",
+        "tip_vi": "Tìm từ khóa 'algorithm' ở đoạn 3."
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "Students are expected to work and share experiences together.",
+        "evidence_quote": "collaborative environment, where there is support and people they can share those experiences with",
+        "evidence_paragraph": 4,
+        "explanation_vi": "Giải thích: Môi trường cộng tác nghĩa là làm việc và chia sẻ kinh nghiệm cùng nhau.",
+        "why_others_wrong_vi": "A, C, D là các phương án đi ngược lại nghĩa của 'collaborative'.",
+        "tip_vi": "Suy luận nghĩa dựa trên cụm giải thích ngay sau dấu phẩy trong bài đọc."
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "To keep students safe, enforce rules, and connect them with resources.",
+        "evidence_quote": "ensuring students are safe and follow the rules. They also connect students with whatever campus resources they may need",
+        "evidence_paragraph": 6,
+        "explanation_vi": "Giải thích: RAs đảm bảo an toàn, thực thi nội quy và kết nối tài nguyên.",
+        "why_others_wrong_vi": "A, B, D là các công việc phục vụ cá nhân hoặc giảng dạy không phải của RAs.",
+        "tip_vi": "Định vị từ khóa 'resident assistants' ở đoạn cuối."
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "associate director of residence life",
+        "evidence_quote": "associate director of residence life at Kansas State University",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Giải thích: Vị trí cụ thể của Lander.",
+        "why_others_wrong_vi": "Cần chép chính xác từ cụm danh từ.",
+        "tip_vi": "Chú ý giới hạn từ của đề bài."
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "excitement",
+        "evidence_quote": "Living with roommates in a dorm can amplify [R] the excitement of campus life",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Giải thích: Từ cần điền là danh từ 'excitement'.",
+        "why_others_wrong_vi": "Không dùng các từ ngoài bài đọc.",
+        "tip_vi": "Quét từ khóa 'amplify' để định vị vị trí điền từ."
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "very positive impact",
+        "evidence_quote": "makes a very positive impact for students",
+        "evidence_paragraph": 4,
+        "explanation_vi": "Giải thích: Cụm từ cần điền là 'very positive impact'.",
+        "why_others_wrong_vi": "Không điền thiếu từ bổ trợ.",
+        "tip_vi": "Đoạn 4 nêu tác động tích cực."
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "free housing",
+        "evidence_quote": "In exchange for pay or free housing",
+        "evidence_paragraph": 6,
+        "explanation_vi": "Giải thích: Đổi lấy lương hoặc chỗ ở miễn phí.",
+        "why_others_wrong_vi": "Không được điền quá 3 từ.",
+        "tip_vi": "Tìm từ khóa 'in exchange for'."
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "TRUE",
+        "evidence_quote": "campus residents do better at making connections with their professors",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Giải thích: Bài đọc xác nhận sinh viên nội trú kết nối tốt hơn với giáo sư.",
+        "why_others_wrong_vi": "Thông tin hoàn toàn trùng khớp.",
+        "tip_vi": "TRUE khi thông tin khớp hoàn toàn."
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "FALSE",
+        "evidence_quote": "First year students are not often able to choose exactly who their roommates will be.",
+        "evidence_paragraph": 5,
+        "explanation_vi": "Giải thích: Bài viết khẳng định sinh viên năm nhất thường không được tự chọn.",
+        "why_others_wrong_vi": "Nhận định đối lập với bài đọc.",
+        "tip_vi": "Chú ý từ phủ định 'not often'."
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "NOT GIVEN",
+        "evidence_quote": "These are students who have already been studying at the school for some time.",
+        "evidence_paragraph": 6,
+        "explanation_vi": "Giải thích: Không có thông tin về quy định bắt buộc học sinh phải ở năm thứ hai.",
+        "why_others_wrong_vi": "Không tự suy diễn từ 'some time'.",
+        "tip_vi": "NOT GIVEN khi không tìm thấy bằng chứng cụ thể."
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "TRUE",
+        "evidence_quote": "They are trained to solve disputes between residents",
+        "evidence_paragraph": 6,
+        "explanation_vi": "Giải thích: Giám đốc nội trú được đào tạo để giải quyết tranh chấp.",
+        "why_others_wrong_vi": "Thông tin trùng khớp.",
+        "tip_vi": "TRUE khi ý nghĩa câu hỏi tương đương bài đọc."
+      }
+    ],
+    "grammar_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "which",
+        "analysis_vi": "Giải thích: 'dormitory' là vật nên dùng 'which'.",
+        "tip_vi": "Có giới từ 'in' ở cuối mệnh đề có thể dùng 'which'."
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "who",
+        "analysis_vi": "Giải thích: 'director' là người làm chủ ngữ nên dùng 'who'.",
+        "tip_vi": "Tránh dùng 'which' cho người."
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "whose",
+        "analysis_vi": "Giải thích: 'roommate' thuộc sở hữu của học sinh nên dùng 'whose'.",
+        "tip_vi": "Whose + danh từ chỉ sở hữu."
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "where",
+        "analysis_vi": "Giải thích: 'city' chỉ nơi chốn nơi trường tọa lạc nên dùng 'where'.",
+        "tip_vi": "Không dùng 'where' nếu có giới từ chỉ vị trí đứng trước."
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "whom",
+        "analysis_vi": "Giải thích: 'whom' thay thế cho người đóng vai trò tân ngữ.",
+        "tip_vi": "whom + S + V."
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "where",
+        "analysis_vi": "Giải thích: 'place' là địa điểm học tập nên dùng 'where'.",
+        "tip_vi": "Where chỉ nơi chốn."
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "which",
+        "analysis_vi": "Giải thích: 'rules' chỉ vật số nhiều làm chủ ngữ cho động từ 'are'.",
+        "tip_vi": "which chỉ vật."
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "who",
+        "analysis_vi": "Giải thích: 'student' làm chủ ngữ chỉ người.",
+        "tip_vi": "who chỉ người."
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "where",
+        "analysis_vi": "Giải thích: 'place' chỉ nơi chốn mượn sách.",
+        "tip_vi": "where chỉ nơi chốn."
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "whose",
+        "analysis_vi": "Giải thích: 'card' sở hữu của học sinh.",
+        "tip_vi": "whose + danh từ."
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "The student who lives next door is very loud.",
+        "analysis_vi": "Giải thích: Mệnh đề xác định không dùng dấu phẩy.",
+        "tip_vi": "Mệnh đề xác định bổ nghĩa trực tiếp."
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "who",
+        "analysis_vi": "Giải thích: Mệnh đề xác định, roommate chỉ người.",
+        "tip_vi": "who chỉ người."
+      },
+      {
+        "question_id": 13,
+        "correct_answer": ", which",
+        "analysis_vi": "Giải thích: Tên riêng yêu cầu mệnh đề không xác định, có dấu phẩy.",
+        "tip_vi": "Có tên riêng dùng dấu phẩy."
+      },
+      {
+        "question_id": 14,
+        "correct_answer": ", who guide new students,",
+        "analysis_vi": "Giải thích: Danh từ số nhiều chỉ người cụ thể, cần dấu phẩy hai bên.",
+        "tip_vi": "Dấu phẩy kẹp hai đầu mệnh đề phụ."
+      },
+      {
+        "question_id": 15,
+        "correct_answer": "which",
+        "analysis_vi": "Giải thích: Mệnh đề xác định chỉ vật, không dùng dấu phẩy.",
+        "tip_vi": "Không dùng 'that' sau dấu phẩy."
+      },
+      {
+        "question_id": 16,
+        "correct_answer": ", where we study,",
+        "analysis_vi": "Giải thích: Địa danh cụ thể cần dấu phẩy.",
+        "tip_vi": "Tên riêng địa danh dùng dấu phẩy."
+      },
+      {
+        "question_id": 17,
+        "correct_answer": "whose",
+        "analysis_vi": "Giải thích: Mệnh đề xác định chỉ sở hữu.",
+        "tip_vi": "whose chỉ sở hữu."
+      },
+      {
+        "question_id": 18,
+        "correct_answer": ", who is the director,",
+        "analysis_vi": "Giải thích: Tên riêng người cần dấu phẩy.",
+        "tip_vi": "Tên riêng người dùng dấu phẩy."
+      },
+      {
+        "question_id": 19,
+        "correct_answer": "whom",
+        "analysis_vi": "Giải thích: Mệnh đề xác định làm tân ngữ.",
+        "tip_vi": "whom chỉ người đóng vai trò tân ngữ."
+      },
+      {
+        "question_id": 20,
+        "correct_answer": ", which",
+        "analysis_vi": "Giải thích: Danh từ cụ thể, mệnh đề phụ cần có dấu phẩy.",
+        "tip_vi": "Danh từ xác định dùng dấu phẩy."
+      },
+      {
+        "question_id": 21,
+        "correct_answer": "The dormitory which we live in is very old.",
+        "analysis_vi": "Giải thích: Thay 'who' thành 'which' cho vật.",
+        "tip_vi": "Dormitory là vật."
+      },
+      {
+        "question_id": 22,
+        "correct_answer": "The student who lost his ID card could not enter.",
+        "analysis_vi": "Giải thích: Thay 'which' thành 'who' cho người.",
+        "tip_vi": "Student là người."
+      },
+      {
+        "question_id": 23,
+        "correct_answer": "My roommate who is from Boston is very friendly.",
+        "analysis_vi": "Giải thích: Thay 'whose' thành 'who' làm chủ ngữ.",
+        "tip_vi": "Động từ 'is' cần chủ ngữ 'who'."
+      },
+      {
+        "question_id": 24,
+        "correct_answer": "The city where the university is located is Manhattan.",
+        "analysis_vi": "Giải thích: Thay 'which' thành 'where' chỉ nơi chốn.",
+        "tip_vi": "Sử dụng 'where' cho địa điểm."
+      },
+      {
+        "question_id": 25,
+        "correct_answer": "The rules that are written in the book must be followed.",
+        "analysis_vi": "Giải thích: Loại bỏ dấu phẩy vì dùng 'that'.",
+        "tip_vi": "Không dùng dấu phẩy trước 'that'."
+      },
+      {
+        "question_id": 26,
+        "correct_answer": "This is the student whose roommate moved out last week.",
+        "analysis_vi": "Giải thích: Dùng 'whose' thay cho từ sở hữu 'Her'.",
+        "tip_vi": "Whose thay cho tính từ sở hữu."
+      },
+      {
+        "question_id": 27,
+        "correct_answer": "We live in a dormitory which has a shared kitchen.",
+        "analysis_vi": "Giải thích: Dùng 'which' thay cho chủ ngữ 'It'.",
+        "tip_vi": "Nối hai câu chỉ vật."
+      },
+      {
+        "question_id": 28,
+        "correct_answer": "Nick Lander is the associate director who gave us advice.",
+        "analysis_vi": "Giải thích: Dùng 'who' thay cho 'He'.",
+        "tip_vi": "Nối hai câu chỉ người."
+      },
+      {
+        "question_id": 29,
+        "correct_answer": "I went to Manhattan where the university is located.",
+        "analysis_vi": "Giải thích: Dùng 'where' thay cho 'there'.",
+        "tip_vi": "Where thay cho trạng từ nơi chốn."
+      },
+      {
+        "question_id": 30,
+        "correct_answer": "The roommate whom you matched with is very quiet.",
+        "analysis_vi": "Giải thích: Dùng 'whom' thay cho tân ngữ chỉ người 'her'.",
+        "tip_vi": "Whom làm tân ngữ chỉ người."
+      }
+    ],
+    "writing_guidance": [
+      {
+        "task_id": 1,
+        "model_answer": "a) Students live on campus.\nb) My room is clean.",
+        "guidance_vi": "Hướng dẫn: Sắp xếp theo cấu trúc S + V + O. Viết hoa chữ đầu và có dấu chấm.",
+        "self_checklist": [
+          "Đúng chính tả",
+          "Đầy đủ dấu câu"
+        ]
+      },
+      {
+        "task_id": 2,
+        "model_answer": "a) I like my roommate because he is very quiet and clean.\nb) Yesterday, I cleaned my room and did my laundry.",
+        "guidance_vi": "Hướng dẫn: Hoàn thành câu bằng mệnh đề có ý nghĩa và hòa hợp chủ vị.",
+        "self_checklist": [
+          "Mệnh đề đầy đủ chủ vị",
+          "Ý nghĩa logic"
+        ]
+      },
+      {
+        "task_id": 3,
+        "model_answer": "a) I live in a large dormitory.\nb) The resident assistant helps us.",
+        "guidance_vi": "Hướng dẫn: Dịch đúng danh từ ký túc xá (dormitory) và trợ lý nội trú (resident assistant).",
+        "self_checklist": [
+          "Đúng từ vựng chuyên ngành",
+          "Đúng thì hiện tại đơn"
+        ]
+      },
+      {
+        "task_id": 4,
+        "model_answer": "The chart compares the number of students living on-campus and off-campus. There are 800 students living on-campus, while 400 students live off-campus. Therefore, the number of on-campus students is twice as many as off-campus students.",
+        "guidance_vi": "Hướng dẫn: So sánh số liệu gấp đôi bằng cấu trúc 'twice as many ... as'.",
+        "self_checklist": [
+          "Nêu số liệu chính xác",
+          "Sử dụng đúng cấu trúc so sánh bội số"
+        ]
+      },
+      {
+        "task_id": 5,
+        "model_answer": "Hi Nam,\nWould you like to come to my new dorm room this Saturday afternoon? Let's meet at my hall at 2:00 PM. We can play games together.\nBest,\nHuy",
+        "guidance_vi": "Hướng dẫn: Email ngắn mời bạn bè thân mật, đầy đủ thời gian và lời chào/kết.",
+        "self_checklist": [
+          "Đủ lời chào/kết",
+          "Đủ mốc thời gian hẹn gặp"
+        ]
+      }
+    ],
+    "review_bridge": [
+      {
+        "id": 1,
+        "prompt": "Fill in the correct passive form: The lawsuit _________ (file) by the school district last week.",
+        "correct_answer": "was filed",
+        "rationale_vi": "Giải thích: Trạng từ 'last week' ở quá khứ đơn, chủ ngữ số ít nên dùng 'was filed'."
+      },
+      {
+        "id": 2,
+        "prompt": "Explain the connection between 'accountable' [R] and online safety.",
+        "correct_answer": "Social media platforms should be held accountable [R] for children's online safety to prevent mental health issues.",
+        "rationale_vi": "Giải thích: Liên kết từ vựng trách nhiệm giải trình với chủ đề an toàn mạng xã hội."
+      },
+      {
+        "id": 3,
+        "prompt": "Explain the connection between 'amplify' [R] and online safety.",
+        "correct_answer": "Algorithms can amplify [R] harmful content online, which has a negative impact on teenagers.",
+        "rationale_vi": "Giải thích: Liên kết từ vựng khuếch đại với tác động của thuật toán lên tâm lý trẻ em."
+      }
+    ]
+  },
+  "warm_up": [
+    "Bạn thích sống trong ký túc xá trường hay thuê nhà riêng ở ngoài hơn? Tại sao? (Do you prefer living in a school dormitory or renting a private house off-campus? Why?)",
+    "Bạn nghĩ khó khăn lớn nhất khi phải sống chung phòng với một người lạ là gì? (What do you think is the biggest difficulty of sharing a room with a stranger?)",
+    "Theo bạn, vai trò của trợ lý nội trú (RA) có cần thiết để duy trì trật tự phòng ký túc xá không? (Do you think the role of a resident assistant is necessary to maintain order in dorms?)"
+  ],
   "level": "B1",
-  "topic": "Tourism, cultural exchange, overtourism",
-  "day": "Day 20260702",
-  "lesson_id": "LSN-20260702-B1-OVERTOURISM",
-  "practice_markdown": "# IELTS Daily Practice - Day 20260702\n## Level: B1 (Reading: B1 | Grammar: B1 | Writing: A1)\n## Topic: Tourism, cultural exchange, overtourism\n## Topic Cluster: Tourism, cultural exchange, local environment\n## IELTS Pathway Focus: Reading: Detail Matching and True/False/Not Given | Writing: Word Order and Conjunctions\n## Grammar Focus: Used to vs Be/Get used to | Adverbs of Manner and Degree\n## Counts: Reading Questions: 13 | Vocabulary Words: 20 | Grammar Questions: 30 | Writing Practice Tasks: 5\n\n---\n\n### Reading Source Verification\n| Source title | Publisher/Organization | Date/Access date | Final verified URL | URL status | Source type | Reliability check | How the passage uses the source |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| Japanese Town Aims to Block View of Mount Fuji to Reduce Tourists | VOA Learning English | May 02, 2024 / June 30, 2026 | https://learningenglish.voanews.com/a/japanese-town-aims-to-block-view-of-mount-fuji-to-reduce-tourists/7600093.html | Active (Status 200) | Public Service Broadcaster | Highly Reliable (VOA official educational materials) | Adapted for reading comprehension, vocabulary extraction, and grammar examples |\n\n---\n\n### 1. Warm-up\n*Trả lời ngắn gọn các câu hỏi sau bằng tiếng Việt hoặc tiếng Anh để bắt đầu bài học:*\n1. Bạn đã từng đến một địa điểm du lịch nào quá đông đúc chưa? Bạn cảm thấy thế nào về điều đó? (Have you ever visited a tourist destination that was too crowded? How did you feel about it?)\n2. Theo bạn, khách du lịch cần cư xử như thế nào để thể hiện sự tôn trọng với người dân địa phương? (In your opinion, how should tourists behave to show respect to local residents?)\n3. Bạn nghĩ việc xây dựng rào chắn để chặn tầm nhìn ngắm cảnh là một giải pháp tốt hay tồi? Tại sao? (Do you think building a barrier to block a scenic view is a good or bad solution? Why?)\n\n---\n\n### 2. Reading Passage\n\n#### Japanese Town Blocks Mount Fuji View to Control Overtourism\n\nThe Japanese town of Fujikawaguchiko, which sits southwest of Tokyo, has recently taken extreme measures to control crowds of visitors. Local officials have started building a large black screen to block views of Mount Fuji, the country's tallest mountain. While the town is famous for having beautiful photo spots, residents have complained about the **unprecedented** [R] number of tourists who behave badly.\n\nMany business owners and locals feel that the behavior of some tourists has become a public **nuisance** [R]. According to residents, visitors often cross the road in busy traffic, leave waste on streets, ignore stop lights, and trespass onto private property. Michie Motomochi, who owns a traditional sweets restaurant, commented that while tourism drives eighty percent of her business, she is worried about the lack of respect shown by some travelers.\n\nThe neighborhood suddenly became a viral sensation about two years ago. An online travel blogger decided to **recommend** [R] a specific photo spot on social media. The photo showed Mount Fuji in the background, appearing to sit directly on top of a local Lawson convenience store. Since then, foreign tourists have crowded the area daily, starting as early as four in the morning and talking loudly.\n\nBefore building the barrier, the town tried other methods to limit bad behavior. They put up signs in several languages, provided information about crosswalks, and even hired security guards. However, these attempts failed to stop the crowds. The black screen, which stands 2.5 meters high and 20 meters long, will almost completely block the famous mountain view.\n\nWhile some foreign tourists believe the screen is an overreaction by city officials, many locals feel it is necessary. Yoshihiko Ogawa, who runs a rice shop, explained that the crowds had worsened, blocking his car and causing noise. He admitted that he was unsure about the best solution, adding, \"I suppose we all just need to get used to it.\"\n\n---\n\n### 3. Questions for Reading\n\n#### Part A: Multiple Choice\n*Choose the correct letter, A, B, C, or D, for questions 1-5.*\n\n1. What is the main purpose of the black screen in Fujikawaguchiko?\n   A. To protect the town from extreme weather.\n   B. To block views of Mount Fuji and reduce crowds.\n   C. To advertise local convenience stores.\n   D. To guide drivers through busy traffic.\n\n2. Which of the following is NOT mentioned as a bad behavior of tourists in the town?\n   A. Ignoring traffic signals.\n   B. Trespassing on private property.\n   C. Stealing from local sweets shops.\n   D. Leaving trash on the streets.\n\n3. Why did the neighborhood suddenly become famous two years ago?\n   A. The town opened a large new restaurant.\n   B. A photo of Mount Fuji above a convenience store went viral online.\n   C. Mount Fuji had its earliest snowfall in history.\n   D. Local officials began offering free tours.\n\n4. What did the town do before building the black screen?\n   A. They closed the Lawson store.\n   B. They banned all international flights.\n   C. They put up signs, shared crosswalk info, and hired security guards.\n   D. They moved the local rice shop to another area.\n\n5. (*) What can be inferred about the local business owners' attitude towards tourism?\n   A. They want all foreign tourists to stop visiting Japan.\n   B. They are conflicted because tourists drive their business but cause safety and manner issues.\n   C. They believe the black screen will help them sell more traditional sweets.\n   D. They want to move their shops to Tokyo.\n\n#### Part B: Sentence Completion\n*Complete the sentences below. Choose NO MORE THAN THREE WORDS from the passage for each answer.*\n\n6. Fujikawaguchiko is located southwest of the city of ____________.\n7. The black screen will stand ____________ high and 20 meters long.\n8. A local shop owner named Yoshihiko Ogawa runs a ____________.\n9. (*) Some tourists think the construction of the barrier is an ____________ by the city.\n\n#### Part C: True / False / Not Given\n*Do the following statements agree with the information given in the reading passage? Write:*\n- **TRUE** if the statement agrees with the information\n- **FALSE** if the statement contradicts the information\n- **NOT GIVEN** if there is no information on this\n\n10. The town of Fujikawaguchiko is located on Japan's main island of Honshu.\n11. The convenience store near the photo spot is owned by Michie Motomochi.\n12. The black screen was built using recycled materials from local construction sites.\n13. (*) Overtourism in Japan has increased since the lifting of COVID-19 travel restrictions.\n\n---\n\n### 4. Questions for Grammar\n\n#### Exercise 1: Used to vs Be/Get used to\n*Complete the sentences with the correct form of 'used to' or 'be/get used to' (along with the verb in brackets).*\n\n1. Local residents ____________ (have) a quiet town, but now it is very crowded.\n2. It took the shop owner a long time to ____________ (drive) in the crowded streets.\n3. We are not ____________ (wake) up at 4 AM by loud tourists.\n4. The town ____________ (not/receive) many foreign visitors in the past.\n5. The shop owner said, \"I suppose we all just need to ____________ (live) with the crowds.\"\n6. Did you ____________ (travel) by train when you lived in Japan?\n7. Tourists ____________ (take) photos without blocking traffic, but now they ignore safety.\n8. I am a city dweller, so I ____________ (hear) loud noises in the morning.\n9. As time goes on, the locals will ____________ (see) the black screen.\n10. (*) She ____________ (not/enjoy) crowded places, but she had to adapt for her business.\n\n#### Exercise 2: Adverbs of Manner and Degree\n*Complete the sentences using the correct adverb form of the adjectives in brackets.*\n\n11. The tourists talked ____________ (loud) outside the rice shop early in the morning.\n12. The neighborhood ____________ (sudden) became famous after the photo went viral.\n13. The black screen will ____________ (complete) block the view of Mount Fuji.\n14. Japanese officials are ____________ (extreme) worried about tourists' bad manners.\n15. The photo of the convenience store was ____________ (wide) shared on social media.\n16. The traffic in the town was ____________ (bad) congested last Sunday.\n17. Many business owners depend ____________ (heavy) on foreign tourists.\n18. The security guards ran ____________ (quick) to stop the tourists from crossing the road.\n19. The number of tourists has been rising ____________ (rapid) in recent years.\n20. (*) Helen Pull spoke ____________ (polite) when she expressed her understanding of local concerns.\n\n#### Exercise 3: Error Correction & Sentence Combining\n*For questions 21-25, find the single grammatical error and write the corrected sentence. For questions 26-30, combine or rewrite the sentences using the instructions.*\n\n21. I am used to wake up early when I travel.\n    → ____________________________________________________________________\n22. The town use to be very quiet before the photo went viral.\n    → ____________________________________________________________________\n23. The tourists ran sudden into the busy street.\n    → ____________________________________________________________________\n24. He didn't used to like crowded places.\n    → ____________________________________________________________________\n25. The screen was built to block the view complete.\n    → ____________________________________________________________________\n26. (*) She is get used to the loud noise of the traffic.\n    → ____________________________________________________________________\n27. [Combine] Fujikawaguchiko was quiet. It is now crowded. (Use 'used to' to contrast past and present)\n    → ____________________________________________________________________\n28. [Combine] The tourist is from Britain. She speaks very quiet. (Combine and use an adverb of manner)\n    → ____________________________________________________________________\n29. [Combine] The town built a black screen. It blocks the view. (Combine using 'completely' + passive structure)\n    → ____________________________________________________________________\n30. (*) [Combine] We live near a popular landmark. We are accustomed to seeing crowds daily. (Combine using 'be used to + V-ing')\n    → ____________________________________________________________________\n\n---\n\n### 5. Questions for Writing\n\n*Complete the following writing practice tasks based on the lesson's vocabulary and theme.*\n\n| # | Task | Target length | Focus skill | Useful language | Success criteria |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| 1 | Rearrange the words to form simple sentences:<br>a) Japan / beautiful / is / country / a / .<br>b) tourists / photos / take / many / .<br>c) town / barrier / built / a / the / . | 3 sentences | Basic word order | Subject + Verb + Object | Correct grammar and capitalization. |\n| 2 | Combine these sentences using \"and\", \"but\", or \"because\":<br>a) I want to visit Japan. I don't have enough money.<br>b) The town is crowded. Many tourists visit it.<br>c) They took a photo. They posted it online. | 3 sentences | Simple conjunctions | and, but, because | Correct logical connection and punctuation. |\n| 3 | Write a short paragraph describing a famous place in your country that you like. | 30-40 words | Describing places | I like..., it is famous for..., many tourists visit | Write at least 3 sentences with correct spelling. |\n| 4 | Write a short paragraph explaining why tourists should have good manners when traveling. | 30-40 words | Expressing opinions | Tourists should..., because..., respect local people | Write at least 3 clear sentences. |\n| 5 | (*) Write a short message/email (40-50 words) to a friend, inviting them to go on a trip to a quiet countryside village next weekend. Suggest traveling by bus. | 40-50 words | Informal inviting | Would you like to..., Let's go by bus..., quiet village | Include greeting, invite, transport mode, and closing. |\n",
-  "vocabulary_grammar_markdown": "# IELTS Vocabulary & Grammar - Day 20260702\n## Level: B1 (Reading: B1 | Grammar: B1 | Writing: A1)\n## Topic: Tourism, cultural exchange, overtourism\n\n---\n\n### 1. Vocabulary Table\n\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |\n| :--- | :--- | :--- | :--- | :--- |\n| barrier | /ˈbær.i.ər/ | noun | Rào cản, hàng rào (a fence or obstacle that prevents movement or view) | The town built a black barrier to block Mount Fuji from tourists' view. |\n| overtourism | /ˌəʊ.vəˈtʊə.rɪ.zəm/ | noun | Quá tải du lịch (too many tourists visiting a place, causing problems) | Overtourism has made life difficult for residents in many historic cities. |\n| misbehave | /ˌmɪs.bɪˈheɪv/ | verb | Cư xử tồi tệ, thiếu lễ độ (to behave badly or disrespectfully) | If visitors misbehave, local authorities will set up stricter rules. |\n| trespass | /ˈtres.pəs/ | verb | Xâm nhập trái phép (to enter someone's land or property without permission) | Tourists should not trespass onto private yards just to take pictures. |\n| viral | /ˈvaɪ.rəl/ | adjective | Lan truyền nhanh, gây bão mạng (spreading rapidly on the internet) | The photo of Mount Fuji sitting on top of the convenience store went viral. |\n| sensation | /senˈseɪ.ʃən/ | noun | Hiện tượng, sự giật gân (something very exciting or interesting to the public) | The Lawson shop became a viral sensation on social media within days. |\n| overreaction | /ˌəʊ.və.riˈæk.ʃən/ | noun | Sự phản ứng thái quá (reacting too strongly or with too much force) | Some visitors think the black barrier is an overreaction by town officials. |\n| manners | /ˈmæn.əz/ | noun | Cách cư xử, phép tắc (ways of behaving towards others; polite behavior) | Travelers should remember their manners and respect local customs. |\n| restrictions | /rɪˈstrɪk.ʃənz/ | noun | Các giới hạn, lệnh cấm (official rules that limit what people can do) | Tourist numbers increased rapidly after pandemic travel restrictions were lifted. |\n| background | /ˈbæk.ɡraʊnd/ | noun | Hậu cảnh, nền phía sau (the part of a picture or view behind the main subject) | Mount Fuji was a beautiful background in the viral photograph. |\n| crowd | /kraʊd/ | noun/verb | Đám đông, tụ tập đông đúc (a large group of people; to gather in large numbers) | The city built a screen to keep out the crowds of tourists. |\n| security | /sɪˈkjʊə.rə.ti/ | noun | Sự bảo an, an ninh (protection against danger, noise, or bad behavior) | The town hired security guards to help control the visitors. |\n| ramp up | /ræmp ʌp/ | verb | Tăng tốc, tăng trưởng mạnh (to increase or grow significantly) | Tourism has really ramped up in Japan over the past two years. |\n| convenience store | /kənˈviː.ni.əns stɔːr/ | noun | Cửa hàng tiện lợi (a small shop that is open for long hours, selling food) | The convenience store was crowded with tourists taking photos. |\n| resident | /ˈrez.ɪ.dənt/ | noun | Cư dân địa phương (a person who lives in a particular place) | Local residents complained about loud noises early in the morning. |\n| landmark | /ˈlænd.mɑːk/ | noun | Địa danh nổi tiếng, cột mốc (a building or place that is easily recognized) | Mount Fuji is one of the most famous landmarks in Japan. |\n| worsen | /ˈwɜː.sən/ | verb | Trở nên tồi tệ hơn (to become worse than before) | Noise and traffic problems have worsened in recent months. |\n| destination | /ˌdes.tɪˈneɪ.ʃən/ | noun | Điểm đến du lịch (the place where someone is going) | Japan has become a highly popular travel destination for families. |\n\n---\n\n### Recycled Vocabulary (Từ vựng ôn tập)\n| Từ vựng | Phiên âm | Loại từ | Nghĩa tiếng Việt | Bài học gốc (Day) |\n| :--- | :--- | :--- | :--- | :--- |\n| unprecedented | /ʌnˈpres.ɪ.den.tɪd/ | adjective | Chưa từng có tiền lệ (never having happened before) | Day 20260701 |\n| nuisance | /ˈnjuː.səns/ | noun | Sự phiền toái, gây hại công cộng (something that causes annoyance) | Day 20260701 |\n| recommend | /ˌrek.əˈmend/ | verb | Đề xuất, khuyên dùng (to suggest something as a good option) | Day 20260701 |\n\n---\n\n### 2. Vocabulary Grouping Notes\n- **Academic Vocab**: unprecedented, nuisance, recommend, overtourism, restrictions, security, resident, destination, worsen, barrier, trespass, overreaction\n- **Compound Words**: convenience store, photo spot, travel blogger, social media, Mount Fuji, stop light\n- **Idioms & Phrases / Useful Chunks**: viral sensation, in the background, serve sweets, go viral, block the view, get used to something\n\n---\n\n### 3. Detailed Grammar Guide\n\n#### Chủ điểm 1: Used to vs Be/Get used to\nĐây là hai cấu trúc rất dễ gây nhầm lẫn ở trình độ B1:\n- **Cấu trúc 1: Used to + Infinitive (V_inf)**:\n  - **Công thức**: `Subject + used to + V_inf` (Phủ định: `did not use to + V_inf` | Nghi vấn: `Did + subject + use to + V_inf?`)\n  - **Dùng để**: Diễn tả một thói quen hoặc trạng thái thường xuyên xảy ra trong quá khứ nhưng **bây giờ không còn nữa**.\n  - *Ví dụ*: *Fujikawaguchiko **used to be** a quiet town.* (Trước đây thị trấn này từng yên tĩnh - bây giờ thì không).\n  - *Ví dụ*: *They **didn't use to have** many foreign visitors.*\n- **Cấu trúc 2: Be / Get used to + Gerund (V-ing) / Noun**:\n  - **Công thức**: `Subject + be/get + used to + V-ing / Noun`\n  - **Dùng để**: Diễn tả việc bạn **đã quen với** hoặc **đang quen dần với** một việc gì đó (không còn cảm thấy lạ lẫm hay khó khăn nữa).\n  - *Ví dụ*: *I **am used to waking up** early.* (Tôi đã quen với việc thức dậy sớm).\n  - *Ví dụ*: *Locals need to **get used to the noise**.* (Người dân cần quen dần với tiếng ồn).\n\n#### Chủ điểm 2: Adverbs of Manner and Degree (Trạng từ chỉ cách thức và mức độ)\n- **Adverbs of Manner (Trạng từ chỉ cách thức)**:\n  - **Cách dùng**: Mô tả **cách thức** một hành động được thực hiện. Trả lời cho câu hỏi *How?* (Như thế nào?).\n  - **Vị trí**: Thường đứng sau động từ chính hoặc sau tân ngữ.\n  - **Công thức phổ biến**: `Adjective + -ly`. Ví dụ: *loud → loudly*, *sudden → suddenly*, *complete → completely*.\n  - *Ví dụ*: *The tourists talked **loudly**.* (Họ nói chuyện một cách ồn ào).\n- **Adverbs of Degree (Trạng từ chỉ mức độ)**:\n  - **Cách dùng**: Mô tả **mức độ** mạnh/yếu của một tính từ, động từ hoặc trạng từ khác. Trả lời cho câu hỏi *How much?* (Mức độ nào?).\n  - **Vị trí**: Đứng trước tính từ hoặc trạng từ mà nó bổ nghĩa.\n  - **Các từ phổ biến**: *extremely, highly, very, deeply, completely*.\n  - *Ví dụ*: *The town is **extremely** crowded.* (Thị trấn cực kỳ đông đúc).\n\n---\n\n### 4. Common Mistakes / IELTS Traps for This Topic\n\n| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |\n| :--- | :--- | :--- | :--- |\n| Dùng động từ nguyên mẫu sau 'be used to' | I am used to **wake up** early. | I am used to **waking up** early. | Lỗi sai verb pattern cơ bản, thể hiện sự yếu kém về Grammatical Range. |\n| Viết sai phủ định của 'used to' | He **didn't used to** go there. | He **didn't use to** go there. | Quên bỏ đuôi '-d' sau trợ động từ phủ định 'did not'. |\n| Dùng tính từ thay vì trạng từ bổ nghĩa cho động từ | The tourists ran **sudden** into traffic. | The tourists ran **suddenly** into traffic. | Tính từ không bổ nghĩa cho động từ hành động. Bắt buộc dùng trạng từ có đuôi '-ly'. |\n| Đặt sai vị trí của trạng từ chỉ mức độ | The barrier was built to **completely block** the view. | The barrier was built to **completely block**... (hoặc: ...block the view **completely**) | Trạng từ mức độ đứng trước động từ/tính từ mà nó bổ nghĩa. Tránh chen giữa động từ và tân ngữ trực tiếp (*block completely the view*). |\n| (*) Nhầm lẫn giữa 'get used to' và 'used to' | I **get used to travel** by train. | I **used to travel** by train (quá khứ) / I **am used to traveling**... (quen với). | Thay đổi hoàn toàn ý nghĩa thời gian của câu, gây hiểu lầm nghiêm trọng trong IELTS Speaking/Writing. |\n",
-  "answers_markdown": "# IELTS Answers & Explanations - Day 20260702\n## Level: B1 (Reading: B1 | Grammar: B1 | Writing: A1)\n## Topic: Tourism, cultural exchange, overtourism\n\n---\n\n### 1. Reading Answer Key and Detailed Explanations\n\n1. **B**\n   - **Lộ trình tư duy**: Tìm mục đích chính của việc xây dựng tấm màn đen thông qua từ khóa \"black screen\" hoặc \"barrier\".\n   - **Dữ kiện định vị**: Đoạn 1: *\"...taken extreme measures to control crowds of visitors. Local officials have started building a large black screen to block views of Mount Fuji...\"*\n   - **Giải thích & Bẫy cần tránh**: Mục đích rõ ràng là ngăn đám đông tụ tập chụp ảnh bằng cách chặn tầm nhìn. Trùng khớp với phương án B. Các phương án A, C, D đều chứa các bẫy tự suy diễn (như quảng cáo, thời tiết).\n\n2. **C**\n   - **Lộ trình tư duy**: Tìm danh sách hành vi xấu của du khách và tìm phương án không được liệt kê (NOT mentioned).\n   - **Dữ kiện định vị**: Đoạn 2: *\"...cross the road in busy traffic, leave waste on streets, ignore stop lights, and trespass onto private property.\"*\n   - **Giải thích & Bẫy cần tránh**: Bài viết có nhắc đến việc xả rác (leave waste - tương ứng D), không tuân thủ đèn tín hiệu (ignore stop lights - tương ứng A), xâm nhập đất tư (trespass - tương ứng B). Tuy nhiên, hành vi trộm cắp ở cửa hàng đồ ngọt (C) hoàn toàn không xuất hiện → Chọn C.\n\n3. **B**\n   - **Lộ trình tư duy**: Tìm mốc thời gian \"two years ago\" và tìm nguyên nhân nổi tiếng đột ngột.\n   - **Dữ kiện định vị**: Đoạn 3: *\"The neighborhood suddenly became a viral sensation about two years ago... The photo showed Mount Fuji in the background, appearing to sit directly on top of a local Lawson convenience store.\"*\n   - **Giải thích & Bẫy cần tránh**: Bức ảnh chụp núi Phú Sĩ phía sau cửa hàng Lawson gây bão mạng (viral) chính là lý do thu hút đám đông du khách. Chọn B. Tránh bẫy phương án C vì tuyết rơi muộn không liên quan mốc 2 năm trước.\n\n4. **C**\n   - **Lộ trình tư duy**: Tìm kiếm các biện pháp mà thị trấn đã làm trước khi áp dụng tấm màn đen (\"Before building the barrier...\").\n   - **Dữ kiện định vị**: Đoạn 4: *\"They put up signs in several languages, provided information about crosswalks, and even hired security guards.\"*\n   - **Giải thích & Bẫy cần tránh**: Các biện pháp bao gồm: đặt biển báo, hướng dẫn lối băng qua đường và thuê bảo vệ. Khớp hoàn toàn với C.\n\n5. **B** *[Stretch Point]*\n   - **Lộ trình tư duy**: Phân tích quan điểm của các chủ cửa hàng địa phương đối với du lịch.\n   - **Dữ kiện định vị**: Đoạn 2: *\"...traditional sweets restaurant, commented that while tourism drives eighty percent of her business, she is worried about the lack of respect shown by some travelers.\"*\n   - **Giải thích & Bẫy cần tránh**: [Stretch Point] Các chủ cửa hàng vừa chào đón và cần du khách vì họ đem lại doanh thu (80%), nhưng đồng thời cũng rất lo ngại về cách cư xử thiếu lịch sự và an toàn của họ. Đây là tâm trạng mâu thuẫn/giằng xé (conflicted). Do đó chọn B.\n\n6. **Tokyo**\n   - **Lộ trình tư duy**: Tìm hướng \"southwest of\" và tìm tên thành phố.\n   - **Dữ kiện định vị**: Đoạn 1: *\"The Japanese town of Fujikawaguchiko, which sits southwest of Tokyo...\"*\n   - **Giải thích & Bẫy cần tránh**: Tên thành phố nằm ở phía đông bắc của thị trấn là \"Tokyo\".\n\n7. **2.5 meters**\n   - **Lộ trình tư duy**: Tìm chiều cao (\"stands... high\").\n   - **Dữ kiện định vị**: Đoạn 4: *\"The black screen, which stands 2.5 meters high and 20 meters long...\"*\n   - **Giải thích & Bẫy cần tránh**: Chiều cao của tấm màn là \"2.5 meters\" (hoặc \"two point five meters\").\n\n8. **rice shop**\n   - **Lộ trình tư duy**: Định vị tên \"Yoshihiko Ogawa\" và tìm loại cửa hàng của ông ấy.\n   - **Dữ kiện định vị**: Đoạn 5: *\"Yoshihiko Ogawa, who runs a rice shop, explained...\"*\n   - **Giải thích & Bẫy cần tránh**: Loại cửa hàng ông ấy quản lý là \"rice shop\".\n\n9. **overreaction** *[Stretch Point]*\n   - **Lộ trình tư duy**: Tìm từ khóa thể hiện quan điểm của du khách về tấm màn.\n   - **Dữ kiện định vị**: Đoạn 5: *\"While some foreign tourists believe the screen is an overreaction by city officials...\"*\n   - **Giải thích & Bẫy cần tránh**: [Stretch Point] Từ cần điền là danh từ \"overreaction\".\n\n10. **TRUE**\n    - **Lộ trình tư duy**: Kiểm tra thông tin về vị trí địa lý của thị trấn.\n    - **Dữ kiện định vị**: Dựa trên văn bản gốc: *\"It sits on Japan’s main island of Honshu...\"*\n    - **Giải thích & Bẫy cần tránh**: Bài đọc khẳng định thị trấn nằm trên đảo chính Honshu của Nhật Bản → **TRUE**.\n\n11. **FALSE**\n    - **Lộ trình tư duy**: Xác định quyền sở hữu của cửa hàng tiện lợi.\n    - **Dữ kiện định vị**: Đoạn 2 & 3: *\"Michie Motomochi, who owns a traditional sweets restaurant... local store called Lawson.\"*\n    - **Giải thích & Bẫy cần tránh**: Bà Motomochi sở hữu nhà hàng đồ ngọt truyền thống chứ không sở hữu cửa hàng tiện lợi Lawson → **FALSE**.\n\n12. **NOT GIVEN**\n    - **Lộ trình tư duy**: Tìm thông tin về vật liệu xây dựng tấm màn đen.\n    - **Dữ kiện định vị**: Đoạn 4 mô tả kích thước (2.5m x 20m) chứ không đề cập nguồn gốc vật liệu.\n    - **Giải thích & Bẫy cần tránh**: Không có dữ kiện nào về việc dùng vật liệu tái chế → **NOT GIVEN**.\n\n13. **TRUE** *[Stretch Point]*\n    - **Lộ trình tư duy**: So sánh lượng khách du lịch trước và sau khi gỡ bỏ hạn chế dịch bệnh.\n    - **Dữ kiện định vị**: Dựa trên văn bản gốc: *\"Tourist numbers have been rising in Japan since restrictions were lifted after the COVID-19 pandemic.\"*\n    - **Giải thích & Bẫy cần tránh**: [Stretch Point] Số lượng du khách gia tăng sau khi các biện pháp hạn chế đi lại trong đại dịch được gỡ bỏ. Tuyên bố trùng khớp thông tin → **TRUE**.\n\n---\n\n### 2. Grammar Answer Key and Detailed Explanations\n\n1. **used to have**\n   - **Giải thích**: Diễn tả một trạng thái thói quen trong quá khứ đã kết thúc (trước đây thị trấn yên tĩnh, giờ thì đông đúc) → *used to have*.\n\n2. **get used to driving**\n   - **Giải thích**: Cấu trúc thích nghi dần với việc gì: `get used to + V-ing`. Động từ \"drive\" bỏ 'e' và thêm 'ing' thành *driving*.\n\n3. **used to waking**\n   - **Giải thích**: Cấu trúc đã quen với việc gì ở hiện tại: `be (are not) + used to + V-ing` → *used to waking*.\n\n4. **did not use to receive** (hoặc **didn't use to receive**)\n   - **Giải thích**: Phủ định của thói quen trong quá khứ: `did not + use to + V_inf`. Lưu ý không dùng \"used\" có 'd' khi đã có trợ động từ \"did not\".\n\n5. **get used to living**\n   - **Giải thích**: Sau động từ khuyết thiếu \"need to\" là động từ nguyên mẫu \"get\", theo sau là cấu trúc quen dần với việc gì `get used to + V-ing` → *get used to living*.\n\n6. **use to travel**\n   - **Giải thích**: Câu hỏi nghi vấn ở quá khứ đơn: `Did + subject + use to + V_inf?`. Trợ động từ \"Did\" đã gánh thì quá khứ nên ta dùng \"use to\" không có 'd'.\n\n7. **used to take**\n   - **Giải thích**: Thói quen trong quá khứ nay không còn nữa (trước đây chụp ảnh an toàn, giờ thì cản trở giao thông) → *used to take*.\n\n8. **am used to hearing**\n   - **Giải thích**: Diễn tả sự quen thuộc ở hiện tại: `be + used to + V-ing` → *am used to hearing*.\n\n9. **get used to seeing**\n   - **Giải thích**: Diễn tả một sự thích nghi trong tương lai sau động từ khuyết thiếu \"will\": `will + get used to + V-ing` → *get used to seeing*.\n\n10. **didn't use to enjoy** *[Stretch Point]*\n    - **Giải thích**: [Stretch Point] Cấu trúc phủ định thói quen quá khứ: `didn't + use to + V_inf`.\n\n11. **loudly**\n    - **Giải thích**: Trạng từ chỉ cách thức bổ nghĩa cho động từ nói chuyện \"talked\": `adjective + -ly` → *loudly*.\n\n12. **suddenly**\n    - **Giải thích**: Trạng từ chỉ thời gian/cách thức bổ nghĩa cho động từ \"became\" → *suddenly*.\n\n13. **completely**\n    - **Giải thích**: Trạng từ chỉ mức độ bổ nghĩa cho động từ \"block\" → *completely*.\n\n14. **extremely**\n    - **Giải thích**: Trạng từ chỉ mức độ bổ nghĩa cho tính từ lo lắng \"worried\" → *extremely*.\n\n15. **widely**\n    - **Giải thích**: Trạng từ chỉ cách thức bổ nghĩa cho phân từ hai bị động \"shared\" → *widely*.\n\n16. **badly**\n    - **Giải thích**: Trạng từ bổ nghĩa cho tính từ phân từ \"congested\" (bị ùn tắc tồi tệ) → *badly*.\n\n17. **heavily**\n    - **Giải thích**: Trạng từ chỉ mức độ bổ nghĩa cho động từ phụ thuộc \"depend\" → *heavily*.\n\n18. **quickly**\n    - **Giải thích**: Trạng từ chỉ cách thức bổ nghĩa cho động từ di chuyển \"ran\" → *quickly*.\n\n19. **rapidly**\n    - **Giải thích**: Trạng từ bổ nghĩa cho động từ tăng trưởng \"rising\" → *rapidly*.\n\n20. **politely** *[Stretch Point]*\n    - **Giải thích**: [Stretch Point] Trạng từ chỉ cách thức bổ nghĩa cho hành động nói \"spoke\" → *politely*.\n\n21. **I am used to waking up early when I travel.**\n    - **Giải thích**: Sau cấu trúc chỉ thói quen hiện tại `be used to` phải dùng danh động từ (V-ing). Sửa \"wake\" thành \"waking\".\n\n22. **The town used to be very quiet before the photo went viral.**\n    - **Giải thích**: Cấu trúc khẳng định thói quen quá khứ phải có chữ '-d'. Sửa \"use to\" thành \"used to\".\n\n23. **The tourists ran suddenly into the busy street.**\n    - **Giải thích**: Bổ nghĩa cho động từ hành động \"ran\" phải dùng trạng từ chỉ cách thức. Sửa tính từ \"sudden\" thành trạng từ \"suddenly\".\n\n24. **He didn't use to like crowded places.**\n    - **Giải thích**: Trong câu phủ định quá khứ đã có trợ động từ \"didn't\", động từ \"use\" phải ở dạng nguyên mẫu không có '-d'. Sửa \"used to\" thành \"use to\".\n\n25. **The screen was built to block the view completely.**\n    - **Giải thích**: Trạng từ bổ nghĩa cho động từ \"block\" đứng cuối câu. Sửa tính từ \"complete\" thành trạng từ \"completely\".\n\n26. **She is getting used to the loud noise of the traffic.** (hoặc: *is used to*) *[Stretch Point]*\n    - **Giải thích**: [Stretch Point] Cấu trúc chỉ quá trình thích nghi đang diễn ra: `be + getting + used to + Noun`. Sửa \"get\" thành \"getting\".\n\n27. **Fujikawaguchiko used to be quiet, but it is now crowded.**\n    - **Giải thích**: Sử dụng cấu trúc `used to + V_inf` để so sánh trạng thái quá khứ và hiện tại.\n\n28. **The tourist is from Britain, and she speaks very quietly.**\n    - **Giải thích**: Sử dụng trạng từ chỉ cách thức \"quietly\" bổ nghĩa cho động từ \"speaks\" trong câu ghép.\n\n29. **The view is completely blocked by a black screen built by the town.**\n    - **Giải thích**: Kết hợp dùng trạng từ chỉ mức độ \"completely\" đứng trước phân từ hai bị động \"blocked\".\n\n30. **Living near a popular landmark, we are used to seeing crowds daily.** *[Stretch Point]*\n    - **Giải thích**: [Stretch Point] Kết hợp dùng phân từ hiện tại chỉ nguyên nhân đứng đầu câu, và cấu trúc thói quen hiện tại `be used to + V-ing`.\n\n---\n\n### 3. Writing Guidance / Suggested Answers\n\n#### Task 1: Sắp xếp câu (Word Ordering)\n- **a) Japan is a beautiful country.**\n  - *Teacher's Guidance*: Cấu trúc câu danh từ cơ bản: Chủ ngữ \"Japan\" + Động từ \"is\" + Cụm danh từ \"a beautiful country\".\n- **b) Many tourists take photos.**\n  - *Teacher's Guidance*: Chủ ngữ chỉ số lượng \"Many tourists\" + Động từ \"take\" + Tân ngữ \"photos\".\n- **c) The town built a barrier.**\n  - *Teacher's Guidance*: Chủ ngữ \"The town\" + Động từ quá khứ \"built\" + Tân ngữ \"a barrier\".\n- *Self-Correction Tip*: Luôn viết hoa chữ đầu tiên và kết thúc câu bằng dấu chấm.\n\n#### Task 2: Liên từ nối (Conjunctions)\n- **a) I want to visit Japan, but I don't have enough money.**\n  - *Teacher's Guidance*: Sử dụng liên từ chỉ sự tương phản trái ngược \"but\". Cần có dấu phẩy đặt trước \"but\".\n- **b) The town is crowded because many tourists visit it.**\n  - *Teacher's Guidance*: Sử dụng \"because\" nối mệnh đề nguyên nhân đứng sau. Không thêm dấu phẩy trước \"because\".\n- **c) They took a photo and they posted it online.** (hoặc: *They took a photo and posted it online.*)\n  - *Teacher's Guidance*: Dùng liên từ nối mang tính chất bổ sung hành động liên tiếp \"and\".\n- *Self-Correction Tip*: Xem xét kỹ quan hệ nguyên nhân - kết quả hay tương phản trước khi điền liên từ.\n\n#### Task 3: Viết đoạn văn ngắn (Famous Place)\n- *Suggested Model Answer*:\n  > *\"I really like visiting Ha Long Bay in Vietnam. It is very famous for its beautiful limestone mountains and green water. Many international tourists visit it every year.\"* (30 words)\n- *Teacher's Guidance*: Viết 3 câu đơn giản: Câu 1 nêu tên danh lam thắng cảnh ở Việt Nam; Câu 2 mô tả nét đẹp nổi tiếng của nó; Câu 3 nêu tình hình khách du lịch ghé thăm.\n- *Self-Correction Tip*: Nhớ viết hoa các tên riêng như \"Ha Long Bay\", \"Vietnam\".\n\n#### Task 4: Viết đoạn văn ngắn (Tourist Manners)\n- *Suggested Model Answer*:\n  > *\"Tourists should have good manners when they travel. This is because they need to show respect to local people. Good behavior also keeps the tourist places clean and safe.\"* (31 words)\n- *Teacher's Guidance*: Viết 3 câu: Câu 1 đưa ra ý kiến về cách hành xử của du khách; Câu 2 nêu lý do tại sao cần tôn trọng người địa phương; Câu 3 nêu lợi ích của việc hành xử tốt đối với môi trường du lịch.\n- *Self-Correction Tip*: Đảm bảo chia động từ số nhiều phù hợp với \"tourists\".\n\n#### Task 5: (*) Guided Email Invite (Viết email ngắn)\n- *Suggested Model Answer*:\n  > *Hi Huy,*\n  > *Would you like to go on a trip to a quiet countryside village with me next weekend? Let's travel by bus because it is cheap and safe. We can enjoy the fresh air there. I hope you can come!*\n  > *Best,*\n  > *Minh* (45 words)\n- *Teacher's Guidance*: [Stretch Point] Email ngắn cần bao gồm: Lời chào mở đầu (\"Hi Huy,\"), Lời mời lịch sự (\"Would you like to...\"), Phương tiện di chuyển gợi ý (\"by bus\"), Lý do lựa chọn và hoạt động dự kiến, Lời chúc kết thúc thư.\n- *Self-Correction Tip*: Chú ý dùng giới từ \"by\" trước phương tiện giao thông \"bus\" (không dùng \"by a bus\").\n\n---\n\n### 4. Review Bridge\n*Ôn tập bài học trước về \"Online Safety & cyberbullying\":*\n1. **Grammar check**: Chuyển câu chủ động sau sang câu bị động: *\"Social media platforms target teenagers.\"* -> Đáp án: **Teenagers are targeted by social media platforms.**\n2. **Vocabulary link**: Giải thích sự liên quan giữa **\"misbehaving tourists\"** (du khách cư xử tồi) và **\"public nuisance\"** (gây phiền toái cho công chúng). Khi du khách cư xử tồi tệ như xả rác, vượt đèn đỏ và nói chuyện ồn ào lúc 4 giờ sáng, hành vi của họ trực tiếp tạo ra sự phiền toái và làm gián đoạn cuộc sống của cư dân địa phương (public nuisance).\n",
-  "quizlet_markdown": "### Phần 1: Học từ vựng đơn giản (Simple Vocabulary)\n| Từ vựng tiếng Anh | Nghĩa tiếng Việt |\n| --- | --- |\n| barrier | Rào cản, hàng rào |\n| overtourism | Quá tải du lịch |\n| misbehave | Cư xử tồi tệ, thiếu lễ độ |\n| trespass | Xâm nhập trái phép |\n| viral | Lan truyền nhanh, gây bão mạng |\n| sensation | Hiện tượng, sự giật gân |\n| overreaction | Sự phản ứng thái quá |\n| manners | Cách cư xử, phép tắc |\n| restrictions | Các giới hạn, lệnh cấm |\n| background | Hậu cảnh, nền phía sau |\n| crowd | Đám đông, tụ tập đông đúc |\n| security | Sự bảo an, an ninh |\n| ramp up | Tăng tốc, tăng trưởng mạnh |\n| convenience store | Cửa hàng tiện lợi |\n| resident | Cư dân địa phương |\n| landmark | Địa danh nổi tiếng, cột mốc |\n| worsen | Trở nên tồi tệ hơn |\n| destination | Điểm đến du lịch |\n| unprecedented | Chưa từng có tiền lệ |\n| nuisance | Sự phiền toái, gây hại công cộng |\n| recommend | Đề xuất, khuyên dùng |\n\n### Phần 2: Học từ vựng đầy đủ (Detailed Vocabulary)\n| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |\n| --- | --- |\n| barrier /ˈbær.i.ər, n/ | Rào cản, hàng rào |\n| overtourism /ˌəʊ.vəˈtʊə.rɪ.zəm, n/ | Quá tải du lịch |\n| misbehave /ˌmɪs.bɪˈheɪv, v/ | Cư xử tồi tệ, thiếu lễ độ |\n| trespass /ˈtres.pəs, v/ | Xâm nhập trái phép |\n| viral /ˈvaɪ.rəl, adj/ | Lan truyền nhanh, gây bão mạng |\n| sensation /senˈseɪ.ʃən, n/ | Hiện tượng, sự giật gân |\n| overreaction /ˌəʊ.və.riˈæk.ʃən, n/ | Sự phản ứng thái quá |\n| manners /ˈmæn.əz, n/ | Cách cư xử, phép tắc |\n| restrictions /rɪˈstrɪk.ʃənz, n/ | Các giới hạn, lệnh cấm |\n| background /ˈbæk.ɡraʊnd, n/ | Hậu cảnh, nền phía sau |\n| crowd /kraʊd, n/v/ | Đám đông, tụ tập đông đúc |\n| security /sɪˈkjʊə.rə.ti, n/ | Sự bảo an, an ninh |\n| ramp up /ræmp ʌp, v/ | Tăng tốc, tăng trưởng mạnh |\n| convenience store /kənˈviː.ni.əns stɔːr, n/ | Cửa hàng tiện lợi |\n| resident /ˈrez.ɪ.dənt, n/ | Cư dân địa phương |\n| landmark /ˈlænd.mɑːk, n/ | Địa danh nổi tiếng, cột mốc |\n| worsen /ˈwɜː.sən, v/ | Trở nên tồi tệ hơn |\n| destination /ˌdes.tɪˈneɪ.ʃən, n/ | Điểm đến du lịch |\n| unprecedented /ʌnˈpres.ɪ.den.tɪd, adj/ | Chưa từng có tiền lệ |\n| nuisance /ˈnjuː.səns, n/ | Sự phiền toái, gây hại công cộng |\n| recommend /ˌrek.əˈmend, v/ | Đề xuất, khuyên dùng |\n"
+  "topic": "Campus life, accommodation registration, library rules",
+  "day": "20260702",
+  "lesson_id": "LSN-20260702-B1-CAMPUS-LIFE-A1B2C3D4",
+  "practice_markdown": "## Reading Source Verification\n| Source title | Publisher/Organization | Date/Access date | Final verified URL | URL status | Source type | Reliability check | How the passage uses the source |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| College Success: Enjoying Residence Life | VOA Learning English | 2019-08-31 / 2026-07-01 | https://learningenglish.voanews.com/a/college-success-enjoying-residence-life/5062052.html | 200 OK | Educational News Article | VOA official educational resources, highly reliable. | Directly explains the benefits, structures, and staff in college residence life. |\n\n## Warm-up\nAnswer the following questions in Vietnamese or English:\n1. Bạn thích sống trong ký túc xá trường hay thuê nhà riêng ở ngoài hơn? Tại sao? (Do you prefer living in a school dormitory or renting a private house off-campus? Why?)\n2. Bạn nghĩ khó khăn lớn nhất khi phải sống chung phòng với một người lạ là gì? (What do you think is the biggest difficulty of sharing a room with a stranger?)\n3. Theo bạn, vai trò của trợ lý nội trú (RA) có cần thiết để duy trì trật tự phòng ký túc xá không? (Do you think the role of a resident assistant is necessary to maintain order in dorms?)\n\n## Reading Passage\n### College Success: Enjoying Residence Life\n\nA college or university campus is more than just an area for classes, research and studying. Many colleges aim to build strong student communities. That is why so many schools want students to feel like the campus is their home. One way colleges and universities in the United States build community is to require students to live on campus for at least some amount of time. The buildings where students live are called dormitories, or dorms. They include shared living spaces, usually designed to fit two or more people. They also often have bathrooms and eating areas that all residents share.\n\nNick Lander gives several reasons why so many schools require new students to live in the dorms. Lander is the associate director of residence life at Kansas State University in Manhattan, Kansas. Research shows that students who live on campus do better in terms of academic success and in learning where everything is on campus, he told VOA. Research also shows that campus residents do better at making connections with their professors and other students.\n\nConnections with other students are important, says Lander. Many new students are between 18 and 23 years old, an age when some might benefit from having others around to help them grow as independent adults. Living with roommates in a dorm can amplify [R] the excitement of campus life, although sharing close spaces can also create disagreements. To reduce these problems, universities often use a computer algorithm [R] to match students based on their habits and interests.\n\nDorm life helps teach students to become independent. 'They may be doing their own laundry for the first time,' Lander said. 'They may be sharing spaces with another person for the first time. They may be, in some cases, responsible for making their own meals.' Living in a dormitory also holds students accountable [R] for their daily actions and chores. Sharing these experiences in a collaborative environment, where there is support and people they can share those experiences with, makes a very positive impact for students.\n\nHowever, he admits that living with strangers is not always easy. First year students are not often able to choose exactly who their roommates will be. Also, some people really value their privacy. Colleges and universities in the U.S. try to admit as many different kinds of people as they can. This might cause difficulties for people who grew up in places where the majority of people were just like them. That is why schools with on campus housing try to offer strong residence life programs and services.\n\nOne thing almost all college dormitories have are resident assistants, or RAs. These are students who have already been studying at the school for some time. In exchange for pay or free housing, they act as representatives of the school, ensuring students are safe and follow the rules. They also connect students with whatever campus resources they may need and plan fun or informational events. There are usually also several full-time employees on campuses acting as resident directors. They are trained to solve disputes between residents and give them the skills to create an enjoyable, healthy community.\n\n## Questions for Reading\n### Questions 1–5: Multiple Choice\n\n1. What is the main purpose of colleges requiring students to live on campus?\n    A. To make more money from housing fees.\n    B. To build a sense of community among students.\n    C. To monitor students' activities all day.\n    D. To prevent students from going off-campus.\n2. According to Nick Lander, what is one benefit of living in dormitories?\n    A. Students do not need to study for their exams.\n    B. Students can avoid taking any academic classes.\n    C. Students achieve better results in their studies.\n    D. Students are allowed to ignore campus rules.\n3. Why do universities use a computer algorithm for roommate assignments?\n    A. To select which students are admitted to the school.\n    B. To increase the price of the housing.\n    C. To match students with similar habits and minimize conflicts.\n    D. To track students' internet usage.\n4. What does the word 'collaborative' in the fourth paragraph tell us about the dorm environment?\n    A. Students must complete all their homework alone.\n    B. Students are expected to work and share experiences together.\n    C. Students have private rooms with no contact with others.\n    D. Students are not allowed to talk to each other during meals.\n5. What is the main role of Resident Assistants (RAs) in dormitories?\n    A. To cook meals for all first-year students.\n    B. To clean students' rooms and wash their laundry.\n    C. To keep students safe, enforce rules, and connect them with resources.\n    D. To teach academic classes in the dormitories.\n\n### Questions 6–9: Gap Fill\n\n6. Nick Lander holds the position of __________ at Kansas State University.\n7. Dorm life can increase the __________ of campus life, but it can also cause roommate disputes.\n8. Sharing experiences in dorms can have a __________ on students as they grow.\n9. Resident Assistants are older students who represent the school in return for pay or __________.\n\n### Questions 10–13: True / False / Not Given\n\n10. Students who live on campus find it easier to connect with their professors.\n11. First-year students are usually allowed to choose their own roommates.\n12. Resident Assistants are required to be in their second year of university.\n13. Resident Directors receive special training to help resolve disagreements between students.\n\n## Questions for Grammar\n### Gap Fill\n\n1. The dormitory _______ (who/which) we live in has a shared kitchen.\n2. Nick Lander is the director _______ (who/which) manages the residence life program.\n3. This is the student _______ (whose/who) roommate moved out last week.\n4. Manhattan is the city _______ (where/which) Kansas State University is located.\n5. The resident assistants _______ (whom/whose) you met yesterday are very helpful.\n6. I need to find a quiet place _______ (where/which) I can study for my exams.\n7. The rules _______ (which/who) are enforced in the dorms ensure student safety.\n8. The student _______ (who/whose) did not do his laundry had no clean clothes.\n9. The university library is a place _______ (where/which) students borrow research books.\n10. (*) The student _______ (whose/who) card was lost could not enter the library. (*)\n\n### Multiple Choice\n\n11. There are many students. Identify the sentence that uses relative clause commas correctly.\n    A. The student, who lives next door, is very loud.\n    B. The student who lives next door is very loud.\n    C. The student who lives, next door, is very loud.\n12. My roommate _______ is studying chemistry helps me with my homework.\n    A. , who\n    B. who\n    C. , which\n13. Kansas State University _______ stands in the state of Kansas, has a great campus.\n    A. which\n    B. , which\n    C. , who\n14. There are many Resident Assistants. Choose the correct punctuation: 'Resident Assistants _______ must follow university rules.'\n    A. , who guide new students,\n    B. who guide new students\n    C. , which guide new students,\n15. Choose the option that gives extra information: The book _______ I borrowed from the library was very interesting.\n    A. , that\n    B. which\n    C. , which\n16. Highlands Library _______ closes early on Saturdays.\n    A. , where we study,\n    B. where we study\n    C. , which we study,\n17. Choose the option that gives extra information: The student _______ roommate is noisy wants to move out.\n    A. who\n    B. whose\n    C. , whose\n18. Nick Lander _______ gave a speech about residence life.\n    A. , who is the director,\n    B. who is the director\n    C. is the director who\n19. Choose the option that gives extra information: The roommate _______ you matched with seems very nice.\n    A. whom\n    B. , whom\n    C. whose\n20. Choose the option that gives extra information: The main office _______ is located on the first floor, is always busy. (*)\n    A. which\n    B. , which\n    C. , who\n\n### Sentence Transformation\n\n21. Correct the error: The dormitory who we live in is very old.\n22. Correct the error: The student which lost his ID card could not enter.\n23. Correct the error: My roommate whose is from Boston is very friendly.\n24. Correct the error: The city which the university is located is Manhattan.\n25. Correct the error: The rules, that are written in the book, must be followed.\n26. (*) Combine: This is the student. Her roommate moved out last week. (Use 'whose') (*)\n27. Combine: We live in a dormitory. It has a shared kitchen. (Use 'which')\n28. Combine: Nick Lander is the associate director. He gave us advice. (Use 'who')\n29. Combine: I went to Manhattan. The university is located there. (Use 'where')\n30. (*) Combine: The roommate is very quiet. You matched with her. (Use 'whom') (*)\n\n## Questions for Writing\n| # | Task | Target length | Focus skill | Useful language | Success criteria |\n| --- | --- | --- | --- | --- | --- |\n| 1 | Word Ordering: Rearrange the words to form simple sentences:<br>a) live / campus / on / students / .<br>b) room / my / is / clean / . | 2 sentences | Word order in simple sentences | live on campus<br>is clean | Correct capitalization and punctuation.<br>Write 2 complete sentences. |\n| 2 | Sentence Completion: Complete the sentences below using your own words:<br>a) I like my roommate because ______ .<br>b) Yesterday, I cleaned ______ . | 2 short clauses | Clause coordination with because/and | because he is quiet<br>yesterday, I cleaned my room | Subject-verb agreement.<br>Use logical connections. |\n| 3 | Translation: Translate the sentences into English:<br>a) Tôi sống trong một ký túc xá lớn.<br>b) Trợ lý nội trú giúp đỡ chúng tôi. | 2 sentences | Simple description structures | live in a large dormitory<br>resident assistant helps us | Correct spelling and verb forms.<br>Write 2 clear sentences. |\n| 4 | Visual Data Description: Describe the data shown in the chart below comparing the number of students living on-campus and off-campus.<br><br><div class=\"svg-chart-container\"><svg viewBox=\"0 0 400 200\" width=\"100%\" height=\"200\" style=\"background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px;\"><line x1=\"50\" y1=\"150\" x2=\"350\" y2=\"150\" stroke=\"#ccc\" stroke-width=\"1\" /><line x1=\"50\" y1=\"100\" x2=\"350\" y2=\"100\" stroke=\"#eee\" stroke-width=\"1\" /><line x1=\"50\" y1=\"50\" x2=\"350\" y2=\"50\" stroke=\"#eee\" stroke-width=\"1\" /><text x=\"35\" y=\"155\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">0</text><text x=\"30\" y=\"105\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">400</text><text x=\"30\" y=\"55\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">800</text><rect x=\"100\" y=\"50\" width=\"50\" height=\"100\" fill=\"#3498db\" rx=\"2\" /><text x=\"125\" y=\"40\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\" text-anchor=\"middle\">800</text><rect x=\"230\" y=\"100\" width=\"50\" height=\"50\" fill=\"#e74c3c\" rx=\"2\" /><text x=\"255\" y=\"90\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\" text-anchor=\"middle\">400</text><text x=\"125\" y=\"170\" font-family=\"Arial\" font-size=\"12\" font-weight=\"bold\" fill=\"#555\" text-anchor=\"middle\">On-campus</text><text x=\"255\" y=\"170\" font-family=\"Arial\" font-size=\"12\" font-weight=\"bold\" fill=\"#555\" text-anchor=\"middle\">Off-campus</text></svg></div> | 20-30 words | Simple data comparison | on-campus students<br>twice as many as | Use twice as many as structure.<br>Write at least 2 sentences. |\n| 5 | Guided Email Invite: (*) Write a short email (25-35 words) to a classmate, inviting them to visit your new dorm room this Saturday afternoon. Mention what time to meet. | 25-35 words | Basic informal invite structure | Would you like to come<br>Let's meet at | Include greeting, invite, time, and closing.<br>Correct spelling. |\n",
+  "vocabulary_grammar_markdown": "## Vocabulary Table\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |\n| --- | --- | --- | --- | --- |\n| academic success | /ˌæk.əˈdem.ɪk səkˈses/ | noun phrase | thành công trong học tập (achieving good results in study) | academic success in college |\n| campus life | /ˈkæm.pəs laɪf/ | noun phrase | đời sống học đường (the daily experience on campus) | enjoy campus life |\n| solve disputes | /sɒlv dɪˈspjuːts/ | verb phrase | giải quyết tranh chấp (to find answers for conflicts) | solve disputes between roommates |\n| residence life | /ˈrez.ɪ.dəns laɪf/ | noun phrase | đời sống nội trú (living and learning program in dorms) | residence life programs |\n| resident assistant | /ˈrez.ɪ.dənt əˈsɪs.tənt/ | noun phrase | trợ lý nội trú (older student managing a dorm) | resident assistants help students |\n| grow as independent adults | /ɡrəʊ æz ˌɪn.dɪˈpen.dənt ˈæd.ʌlts/ | verb phrase | trưởng thành như người lớn độc lập (become mature and self-reliant) | help them grow as independent adults |\n| make a positive impact | /meɪk ə ˈpɒz.ə.tɪv ˈɪm.pækt/ | verb phrase | tạo tác động tích cực (create a good effect on someone) | makes a positive impact for students |\n| dormitory | /ˈdɔː.mɪ.tər.i/ | noun | ký túc xá (a building for university students to live) | live in a dormitory |\n| community | /kəˈmjuː.nə.ti/ | noun | cộng đồng (a group of people living in the same place) | build community |\n| connection | /kəˈnek.ʃən/ | noun | sự kết nối (a relationship or link) | make connections with professors |\n| independent | /ˌɪn.dɪˈpen.dənt/ | adjective | độc lập (not controlled by others) | independent adults |\n| collaborative | /kəˈlæb.ər.ə.tɪv/ | adjective | có tính hợp tác (involving people working together) | collaborative environment |\n| privacy | /ˈprɪv.ə.si/ | noun | sự riêng tư (being free from public attention) | value their privacy |\n| majority | /məˈdʒɒr.ə.ti/ | noun | đa số (more than half of a total) | majority of people |\n| resource | /rɪˈzɔːs/ | noun | tài nguyên (a useful supply or support) | campus resources |\n| dispute | /dɪˈspjuːt/ | noun | cuộc tranh chấp (an argument or disagreement) | solve disputes |\n| roommate | /ˈruːm.meɪt/ | noun | bạn cùng phòng (a person who shares a room) | choose their roommates |\n| accountable | /əˈkaʊn.tə.bəl/ | adjective | chịu trách nhiệm (responsible for one's actions) | holds students accountable |\n| amplify | /ˈæm.plɪ.faɪ/ | verb | khuếch đại, tăng cường (to increase the size or effect) | amplify the excitement |\n| algorithm | /ˈæl.ɡə.rɪ.ðəm/ | noun | thuật toán (a set of rules for a computer) | use a computer algorithm |\n\n## Recycled Vocabulary (Từ vựng ôn tập)\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Bài học gốc (Day) |\n| --- | --- | --- | --- | --- |\n| accountable | /əˈkaʊn.tə.bəl/ | adjective | chịu trách nhiệm | Day 20260701 |\n| amplify | /ˈæm.plɪ.faɪ/ | verb | khuếch đại, tăng cường | Day 20260701 |\n| algorithm | /ˈæl.ɡə.rɪ.ðəm/ | noun | thuật toán | Day 20260701 |\n\n## Detailed Grammar Guide\n#### Chủ điểm 1: Relative Pronouns (Đại từ quan hệ)\nĐại từ quan hệ dùng để thay thế cho danh từ đứng trước nó và nối các mệnh đề lại với nhau:\n- **who**: làm chủ ngữ chỉ người. Ví dụ: *The director **who** manages the dorms is Nick Lander.*\n- **which**: làm chủ ngữ/tân ngữ chỉ vật. Ví dụ: *The rules **which** protect students are strict.*\n- **whose**: chỉ sở hữu của người hoặc vật. Ví dụ: *The student **whose** card was lost could not enter.*\n- **where**: chỉ nơi chốn (= in/at which). Ví dụ: *The city **where** the school is located is Manhattan.*\n\n#### Chủ điểm 2: Defining vs Non-Defining Relative Clauses\n- **Defining relative clause** (Mệnh đề quan hệ xác định): Cung cấp thông tin bắt buộc phải có để hiểu rõ câu. Không dùng dấu phẩy. Ví dụ: *The student who lives next door is loud.*\n- **Non-defining relative clause** (Mệnh đề quan hệ không xác định): Cung cấp thêm thông tin phụ, không có vẫn hiểu được câu. Phải dùng dấu phẩy ngăn cách. Ví dụ: *Nick Lander, who is the associate director, gave us advice.*\n\n## Common Mistakes / IELTS Traps for This Topic\n| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |\n| --- | --- | --- | --- |\n| Dùng 'that' trong mệnh đề quan hệ không xác định (có dấu phẩy) | Nick Lander, that is the director, gave advice. | Nick Lander, who is the director, gave advice. | IELTS Writing cấm dùng 'that' sau dấu phẩy trong mệnh đề quan hệ. |\n| Thiếu giới từ khi dùng 'which' thay cho 'where' | This is the library which I study. | This is the library where I study. (Hoặc: ...which I study in.) | Lỗi ngữ pháp cơ bản làm giảm điểm Grammatical Range. |\n",
+  "answers_markdown": "## Reading Answer Key and Detailed Explanations\n\n📖 **Tóm tắt bài đọc:** Bài đọc mô tả chi tiết thông tin từ nguồn đã xác thực.\n\n1. **To build a sense of community among students.**\n- Bằng chứng: \"One way colleges and universities in the United States build community is to require students to live on campus\" (§1)\n- Cách tìm đáp án: Giải thích: Các trường yêu cầu sống nội trú để xây dựng cộng đồng học sinh. A, C, D không phản ánh mục đích thực tế nêu trong đoạn 1.\n> **💡 Mẹo:** Tìm từ khóa 'build community' để định vị câu trả lời.\n\n2. **Students achieve better results in their studies.**\n- Bằng chứng: \"Research shows that students who live on campus do better in terms of academic success\" (§2)\n- Cách tìm đáp án: Giải thích: Đạt kết quả tốt hơn về mặt học thuật tương đương với thành công trong học tập. A, B, D sai thông tin thực tế của bài đọc.\n> **💡 Mẹo:** Tìm từ đồng nghĩa: 'academic success' = 'results in studies'.\n\n3. **To match students with similar habits and minimize conflicts.**\n- Bằng chứng: \"To reduce these problems, universities often use a computer algorithm to match students based on their habits and interests.\" (§3)\n- Cách tìm đáp án: Giải thích: Thuật toán giúp ghép các học sinh có thói quen giống nhau nhằm giảm xung đột. A, B, D là thông tin tự suy diễn không có trong bài.\n> **💡 Mẹo:** Tìm từ khóa 'algorithm' ở đoạn 3.\n\n4. **Students are expected to work and share experiences together.**\n- Bằng chứng: \"collaborative environment, where there is support and people they can share those experiences with\" (§4)\n- Cách tìm đáp án: Giải thích: Môi trường cộng tác nghĩa là làm việc và chia sẻ kinh nghiệm cùng nhau. A, C, D là các phương án đi ngược lại nghĩa của 'collaborative'.\n> **💡 Mẹo:** Suy luận nghĩa dựa trên cụm giải thích ngay sau dấu phẩy trong bài đọc.\n\n5. **To keep students safe, enforce rules, and connect them with resources.**\n- Bằng chứng: \"ensuring students are safe and follow the rules. They also connect students with whatever campus resources they may need\" (§6)\n- Cách tìm đáp án: Giải thích: RAs đảm bảo an toàn, thực thi nội quy và kết nối tài nguyên. A, B, D là các công việc phục vụ cá nhân hoặc giảng dạy không phải của RAs.\n> **💡 Mẹo:** Định vị từ khóa 'resident assistants' ở đoạn cuối.\n\n6. **associate director of residence life**\n- Bằng chứng: \"associate director of residence life at Kansas State University\" (§2)\n- Cách tìm đáp án: Giải thích: Vị trí cụ thể của Lander. Cần chép chính xác từ cụm danh từ.\n> **💡 Mẹo:** Chú ý giới hạn từ của đề bài.\n\n7. **excitement**\n- Bằng chứng: \"Living with roommates in a dorm can amplify [R] the excitement of campus life\" (§3)\n- Cách tìm đáp án: Giải thích: Từ cần điền là danh từ 'excitement'. Không dùng các từ ngoài bài đọc.\n> **💡 Mẹo:** Quét từ khóa 'amplify' để định vị vị trí điền từ.\n\n8. **very positive impact**\n- Bằng chứng: \"makes a very positive impact for students\" (§4)\n- Cách tìm đáp án: Giải thích: Cụm từ cần điền là 'very positive impact'. Không điền thiếu từ bổ trợ.\n> **💡 Mẹo:** Đoạn 4 nêu tác động tích cực.\n\n9. **free housing**\n- Bằng chứng: \"In exchange for pay or free housing\" (§6)\n- Cách tìm đáp án: Giải thích: Đổi lấy lương hoặc chỗ ở miễn phí. Không được điền quá 3 từ.\n> **💡 Mẹo:** Tìm từ khóa 'in exchange for'.\n\n10. **TRUE**\n- Bằng chứng: \"campus residents do better at making connections with their professors\" (§2)\n- Cách tìm đáp án: Giải thích: Bài đọc xác nhận sinh viên nội trú kết nối tốt hơn với giáo sư. Thông tin hoàn toàn trùng khớp.\n> **💡 Mẹo:** TRUE khi thông tin khớp hoàn toàn.\n\n11. **FALSE**\n- Bằng chứng: \"First year students are not often able to choose exactly who their roommates will be.\" (§5)\n- Cách tìm đáp án: Giải thích: Bài viết khẳng định sinh viên năm nhất thường không được tự chọn. Nhận định đối lập với bài đọc.\n> **💡 Mẹo:** Chú ý từ phủ định 'not often'.\n\n12. **NOT GIVEN**\n- Bằng chứng: \"These are students who have already been studying at the school for some time.\" (§6)\n- Cách tìm đáp án: Giải thích: Không có thông tin về quy định bắt buộc học sinh phải ở năm thứ hai. Không tự suy diễn từ 'some time'.\n> **💡 Mẹo:** NOT GIVEN khi không tìm thấy bằng chứng cụ thể.\n\n13. **TRUE**\n- Bằng chứng: \"They are trained to solve disputes between residents\" (§6)\n- Cách tìm đáp án: Giải thích: Giám đốc nội trú được đào tạo để giải quyết tranh chấp. Thông tin trùng khớp.\n> **💡 Mẹo:** TRUE khi ý nghĩa câu hỏi tương đương bài đọc.\n\n## Grammar Answer Key and Detailed Explanations\n\n> **Bảng phân biệt nhanh / Công thức bỏ túi:**\n> - Ôn tập lý thuyết đã học trong bài.\n\n1. **which**\n- Dấu hiệu / Phân tích: Giải thích: 'dormitory' là vật nên dùng 'which'.\n> **💡 Mẹo:** Có giới từ 'in' ở cuối mệnh đề có thể dùng 'which'.\n\n2. **who**\n- Dấu hiệu / Phân tích: Giải thích: 'director' là người làm chủ ngữ nên dùng 'who'.\n> **💡 Mẹo:** Tránh dùng 'which' cho người.\n\n3. **whose**\n- Dấu hiệu / Phân tích: Giải thích: 'roommate' thuộc sở hữu của học sinh nên dùng 'whose'.\n> **💡 Mẹo:** Whose + danh từ chỉ sở hữu.\n\n4. **where**\n- Dấu hiệu / Phân tích: Giải thích: 'city' chỉ nơi chốn nơi trường tọa lạc nên dùng 'where'.\n> **💡 Mẹo:** Không dùng 'where' nếu có giới từ chỉ vị trí đứng trước.\n\n5. **whom**\n- Dấu hiệu / Phân tích: Giải thích: 'whom' thay thế cho người đóng vai trò tân ngữ.\n> **💡 Mẹo:** whom + S + V.\n\n6. **where**\n- Dấu hiệu / Phân tích: Giải thích: 'place' là địa điểm học tập nên dùng 'where'.\n> **💡 Mẹo:** Where chỉ nơi chốn.\n\n7. **which**\n- Dấu hiệu / Phân tích: Giải thích: 'rules' chỉ vật số nhiều làm chủ ngữ cho động từ 'are'.\n> **💡 Mẹo:** which chỉ vật.\n\n8. **who**\n- Dấu hiệu / Phân tích: Giải thích: 'student' làm chủ ngữ chỉ người.\n> **💡 Mẹo:** who chỉ người.\n\n9. **where**\n- Dấu hiệu / Phân tích: Giải thích: 'place' chỉ nơi chốn mượn sách.\n> **💡 Mẹo:** where chỉ nơi chốn.\n\n10. **whose**\n- Dấu hiệu / Phân tích: Giải thích: 'card' sở hữu của học sinh.\n> **💡 Mẹo:** whose + danh từ.\n\n11. **The student who lives next door is very loud.**\n- Dấu hiệu / Phân tích: Giải thích: Mệnh đề xác định không dùng dấu phẩy.\n> **💡 Mẹo:** Mệnh đề xác định bổ nghĩa trực tiếp.\n\n12. **who**\n- Dấu hiệu / Phân tích: Giải thích: Mệnh đề xác định, roommate chỉ người.\n> **💡 Mẹo:** who chỉ người.\n\n13. **, which**\n- Dấu hiệu / Phân tích: Giải thích: Tên riêng yêu cầu mệnh đề không xác định, có dấu phẩy.\n> **💡 Mẹo:** Có tên riêng dùng dấu phẩy.\n\n14. **, who guide new students,**\n- Dấu hiệu / Phân tích: Giải thích: Danh từ số nhiều chỉ người cụ thể, cần dấu phẩy hai bên.\n> **💡 Mẹo:** Dấu phẩy kẹp hai đầu mệnh đề phụ.\n\n15. **which**\n- Dấu hiệu / Phân tích: Giải thích: Mệnh đề xác định chỉ vật, không dùng dấu phẩy.\n> **💡 Mẹo:** Không dùng 'that' sau dấu phẩy.\n\n16. **, where we study,**\n- Dấu hiệu / Phân tích: Giải thích: Địa danh cụ thể cần dấu phẩy.\n> **💡 Mẹo:** Tên riêng địa danh dùng dấu phẩy.\n\n17. **whose**\n- Dấu hiệu / Phân tích: Giải thích: Mệnh đề xác định chỉ sở hữu.\n> **💡 Mẹo:** whose chỉ sở hữu.\n\n18. **, who is the director,**\n- Dấu hiệu / Phân tích: Giải thích: Tên riêng người cần dấu phẩy.\n> **💡 Mẹo:** Tên riêng người dùng dấu phẩy.\n\n19. **whom**\n- Dấu hiệu / Phân tích: Giải thích: Mệnh đề xác định làm tân ngữ.\n> **💡 Mẹo:** whom chỉ người đóng vai trò tân ngữ.\n\n20. **, which**\n- Dấu hiệu / Phân tích: Giải thích: Danh từ cụ thể, mệnh đề phụ cần có dấu phẩy.\n> **💡 Mẹo:** Danh từ xác định dùng dấu phẩy.\n\n21. **The dormitory which we live in is very old.**\n- Dấu hiệu / Phân tích: Giải thích: Thay 'who' thành 'which' cho vật.\n> **💡 Mẹo:** Dormitory là vật.\n\n22. **The student who lost his ID card could not enter.**\n- Dấu hiệu / Phân tích: Giải thích: Thay 'which' thành 'who' cho người.\n> **💡 Mẹo:** Student là người.\n\n23. **My roommate who is from Boston is very friendly.**\n- Dấu hiệu / Phân tích: Giải thích: Thay 'whose' thành 'who' làm chủ ngữ.\n> **💡 Mẹo:** Động từ 'is' cần chủ ngữ 'who'.\n\n24. **The city where the university is located is Manhattan.**\n- Dấu hiệu / Phân tích: Giải thích: Thay 'which' thành 'where' chỉ nơi chốn.\n> **💡 Mẹo:** Sử dụng 'where' cho địa điểm.\n\n25. **The rules that are written in the book must be followed.**\n- Dấu hiệu / Phân tích: Giải thích: Loại bỏ dấu phẩy vì dùng 'that'.\n> **💡 Mẹo:** Không dùng dấu phẩy trước 'that'.\n\n26. **This is the student whose roommate moved out last week.**\n- Dấu hiệu / Phân tích: Giải thích: Dùng 'whose' thay cho từ sở hữu 'Her'.\n> **💡 Mẹo:** Whose thay cho tính từ sở hữu.\n\n27. **We live in a dormitory which has a shared kitchen.**\n- Dấu hiệu / Phân tích: Giải thích: Dùng 'which' thay cho chủ ngữ 'It'.\n> **💡 Mẹo:** Nối hai câu chỉ vật.\n\n28. **Nick Lander is the associate director who gave us advice.**\n- Dấu hiệu / Phân tích: Giải thích: Dùng 'who' thay cho 'He'.\n> **💡 Mẹo:** Nối hai câu chỉ người.\n\n29. **I went to Manhattan where the university is located.**\n- Dấu hiệu / Phân tích: Giải thích: Dùng 'where' thay cho 'there'.\n> **💡 Mẹo:** Where thay cho trạng từ nơi chốn.\n\n30. **The roommate whom you matched with is very quiet.**\n- Dấu hiệu / Phân tích: Giải thích: Dùng 'whom' thay cho tân ngữ chỉ người 'her'.\n> **💡 Mẹo:** Whom làm tân ngữ chỉ người.\n\n## Writing Guidance / Suggested Answers\n\n#### Task 1\n> **Suggested Model Answer:**\n> \"a) Students live on campus.\nb) My room is clean.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Hướng dẫn: Sắp xếp theo cấu trúc S + V + O. Viết hoa chữ đầu và có dấu chấm.\n- *Tự kiểm tra:* * Đúng chính tả * Đầy đủ dấu câu\n\n#### Task 2\n> **Suggested Model Answer:**\n> \"a) I like my roommate because he is very quiet and clean.\nb) Yesterday, I cleaned my room and did my laundry.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Hướng dẫn: Hoàn thành câu bằng mệnh đề có ý nghĩa và hòa hợp chủ vị.\n- *Tự kiểm tra:* * Mệnh đề đầy đủ chủ vị * Ý nghĩa logic\n\n#### Task 3\n> **Suggested Model Answer:**\n> \"a) I live in a large dormitory.\nb) The resident assistant helps us.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Hướng dẫn: Dịch đúng danh từ ký túc xá (dormitory) và trợ lý nội trú (resident assistant).\n- *Tự kiểm tra:* * Đúng từ vựng chuyên ngành * Đúng thì hiện tại đơn\n\n#### Task 4\n> **Suggested Model Answer:**\n> \"The chart compares the number of students living on-campus and off-campus. There are 800 students living on-campus, while 400 students live off-campus. Therefore, the number of on-campus students is twice as many as off-campus students.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Hướng dẫn: So sánh số liệu gấp đôi bằng cấu trúc 'twice as many ... as'.\n- *Tự kiểm tra:* * Nêu số liệu chính xác * Sử dụng đúng cấu trúc so sánh bội số\n\n#### Task 5\n> **Suggested Model Answer:**\n> \"Hi Nam,\nWould you like to come to my new dorm room this Saturday afternoon? Let's meet at my hall at 2:00 PM. We can play games together.\nBest,\nHuy\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Hướng dẫn: Email ngắn mời bạn bè thân mật, đầy đủ thời gian và lời chào/kết.\n- *Tự kiểm tra:* * Đủ lời chào/kết * Đủ mốc thời gian hẹn gặp\n\n## Review Bridge\n#### IV. Review Bridge / Ôn tập liên chủ đề\n1. Fill in the correct passive form: The lawsuit _________ (file) by the school district last week.\n- **Đáp án:** was filed\n- **Giải thích:** Giải thích: Trạng từ 'last week' ở quá khứ đơn, chủ ngữ số ít nên dùng 'was filed'.\n\n2. Explain the connection between 'accountable' [R] and online safety.\n- **Đáp án:** Social media platforms should be held accountable [R] for children's online safety to prevent mental health issues.\n- **Giải thích:** Giải thích: Liên kết từ vựng trách nhiệm giải trình với chủ đề an toàn mạng xã hội.\n\n3. Explain the connection between 'amplify' [R] and online safety.\n- **Đáp án:** Algorithms can amplify [R] harmful content online, which has a negative impact on teenagers.\n- **Giải thích:** Giải thích: Liên kết từ vựng khuếch đại với tác động của thuật toán lên tâm lý trẻ em.\n",
+  "quizlet_markdown": "## Section 1: Simple Vocabulary List (Học từ vựng đơn giản)\n| Từ vựng tiếng Anh | Nghĩa tiếng Việt |\n| --- | --- |\n| academic success | thành công trong học tập |\n| campus life | đời sống học đường |\n| solve disputes | giải quyết tranh chấp |\n| residence life | đời sống nội trú |\n| resident assistant | trợ lý nội trú |\n| grow as independent adults | trưởng thành như người lớn độc lập |\n| make a positive impact | tạo tác động tích cực |\n| dormitory | ký túc xá |\n| community | cộng đồng |\n| connection | sự kết nối |\n| independent | độc lập |\n| collaborative | có tính hợp tác |\n| privacy | sự riêng tư |\n| majority | đa số |\n| resource | tài nguyên |\n| dispute | cuộc tranh chấp |\n| roommate | bạn cùng phòng |\n| accountable | chịu trách nhiệm |\n| amplify | khuếch đại, tăng cường |\n| algorithm | thuật toán |\n\n## Section 2: Detailed Vocabulary List (Học từ vựng đầy đủ)\n| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |\n| --- | --- |\n| academic success /ˌæk.əˈdem.ɪk səkˈses, noun phrase/ | thành công trong học tập |\n| campus life /ˈkæm.pəs laɪf, noun phrase/ | đời sống học đường |\n| solve disputes /sɒlv dɪˈspjuːts, verb phrase/ | giải quyết tranh chấp |\n| residence life /ˈrez.ɪ.dəns laɪf, noun phrase/ | đời sống nội trú |\n| resident assistant /ˈrez.ɪ.dent əˈsɪs.tənt, noun phrase/ | trợ lý nội trú |\n| grow as independent adults /grow as independent adults, verb phrase/ | trưởng thành độc lập |\n| make a positive impact /make a positive impact, verb phrase/ | tạo tác động tích cực |\n| dormitory /ˈdɔː.mɪ.tər.i, noun/ | ký túc xá |\n| community /kəˈmjuː.nə.ti, noun/ | cộng đồng |\n| connection /kəˈnek.ʃən, noun/ | kết nối |\n| independent /ˌin.dɪˈpen.dənt, adjective/ | độc lập |\n| collaborative /kəˈlæb.ər.ə.tɪv, adjective/ | có tính hợp tác |\n| privacy /ˈprɪv.ə.si, noun/ | riêng tư |\n| majority /məˈdʒɒr.ə.ti, noun/ | đa số |\n| resource /rɪˈzɔːs, noun/ | tài nguyên |\n| dispute /dɪˈspjuːt, noun/ | tranh chấp |\n| roommate /ˈruːm.meɪt, noun/ | bạn cùng phòng |\n| accountable /əˈkaʊn.tə.bəl, adjective/ | chịu trách nhiệm |\n| amplify /ˈæm.plɪ.faɪ, verb/ | khuếch đại, tăng cường |\n| algorithm /ˈæl.ɡə.rɪ.ðəm, noun/ | thuật toán |\n"
 }

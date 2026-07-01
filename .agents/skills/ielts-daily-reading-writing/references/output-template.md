@@ -41,6 +41,7 @@ Include:
 - IELTS pathway focus
 - Grammar focus
 - Student name/date fields if useful
+- Time Allowed: must be set from `lesson_meta.printed_time_allowed_minutes` (do not hardcode generic values like "50 mins").
 
 ### 2. Reading Source Verification
 Include a compact source box before the passage. This is mandatory.
@@ -57,7 +58,8 @@ Rules:
 - Keep the source box short so it does not crowd the worksheet.
 
 ### 3. Warm-up
-Give 3-5 short questions in Vietnamese or bilingual English/Vietnamese to activate prior knowledge. Do not answer them here.
+Give exactly 3 short questions in Vietnamese or bilingual English/Vietnamese to activate prior knowledge. Do not answer them here.
+- **Warm-up Specificity Rule**: Rejects generic placeholders. All questions must be topic-specific (e.g. personal connection, topic prediction, concept activation).
 
 ### 4. Reading Passage
 Provide the verified reading text with title.
@@ -68,6 +70,7 @@ Provide the verified reading text with title.
 
 ### 5. Questions for Reading
 Generate exactly the requested number of IELTS-style reading questions. Group by question type. Number continuously. Every question must have exactly one unique correct answer (ensure distractor options are clearly incorrect). Apply anti-skimming/scanning design: use synonyms/paraphrases in the prompts and place scannable keywords in incorrect distractors to test comprehension rather than word-matching. Include a controlled band-bridge challenge: 10-20% of the questions should approach the next level and be marked `(*)`.
+- **MCQ Option Rendering**: All Multiple Choice questions must render option choices A/B/C/D in the final output.
 
 Question-type guidance:
 - A1-A2: form/table completion, matching information, short answer, basic multiple choice.
@@ -83,7 +86,11 @@ Generate exactly the requested number of grammar questions. Every question must 
 - sentence combining
 - controlled production
 
-Do not include answers in Part 1. Include a small number of scaffolded `(*)` grammar questions that approach the next level without overwhelming the learner.
+Rules:
+- **MCQ Option Rendering**: All Grammar Multiple Choice questions must render option choices A/B/C/D.
+- **Preserve Blanks**: Preserve blank underscores `_______` in grammar MCQs and gap-fills.
+- **Computed Ranges**: Section headings/ranges must be computed dynamically (e.g., `Questions 14-23: Multiple Choice Questions`) or use neutral headings. Do not use hardcoded ranges.
+- Do not include answers in Part 1. Include a small number of scaffolded `(*)` grammar questions that approach the next level without overwhelming the learner.
 
 ### 7. Questions for Writing
 Generate exactly the requested number of writing practice tasks. Keep the Writing section direct and compact. Use this table only:
@@ -329,3 +336,10 @@ When compiling review packs, save the payload as a JSON file with these keys and
   - `# Grammar Answer Key and Detailed Explanations` (explanations in Vietnamese)
   - `# Writing Guidance / Suggested Answers` (sample essays/answers in Vietnamese)
 - `vocab_items`: list of dicts, where each dict has keys `word`, `ipa`, `type`, `definition`, `vietnamese`, `example`.
+
+## Exporter and Template Rendering Constraints
+1. **No Duplicate task_type Rendering**: `task_type` is rendered as the task heading (e.g. `Word Ordering (Sắp xếp từ thành câu)`). The `prompt` must contain only the student instruction, not the `task_type` label.
+2. **No Duplicate SVG/Visual Charts**: Do not render the SVG from both prompt and `visual_data.content`. Render `visual_data.content` exactly once. If `visual_data.type` is not `none`, the visual must be stored only in `visual_data.content`.
+3. **No Non-Standard Time Allowed**: Time Allowed must be rounded to a standard classroom value: `45, 60, 75, 90, 105, 120`. Do not print odd values like `111 mins`.
+4. **Vocabulary Section Title Division**: Instead of labeling everything as Academic Vocabulary, use section titles based on `vocab_type`: Core Words, Topic Vocabulary, Phrases, Chunks & Collocations, Recycled Vocabulary.
+

@@ -28,32 +28,45 @@ Skill được thiết kế theo mô hình pipeline chia nhỏ trách nhiệm (S
 
 Mọi dữ liệu sinh ra được gom về tệp **`lesson_source.json`** - đại diện cho **Single Source of Truth** trước khi biên dịch PDF.
 
-#### B. Bộ tài liệu đầu ra (Deliverables)
+#### B. Cơ chế Phản biện & Duyệt kết quả (Review Loop & HIL Checkpoints)
+Skill hỗ trợ vòng phản biện tự động giữa các Sub-Agents (Agent Review Loop) và can thiệp phê duyệt của người dùng (Human-in-the-loop):
+* **Chế độ tự động (Auto Mode - Mặc định)**: Các Sub-Agents tự kiểm duyệt chéo, QC Agent tự sinh challenge để sửa đổi cục bộ, và chỉ xuất PDF khi QC đạt trạng thái Pass. Không ngắt quãng người dùng.
+* **Chế độ kiểm duyệt (Review Mode)**: Hệ thống tạm dừng tại 7 checkpoints cốt lõi để chờ người dùng duyệt hoặc chỉ đạo sửa đổi:
+  1. *Source Approval*: Duyệt nguồn bài đọc.
+  2. *Blueprint Approval*: Duyệt khung giáo án (chủ đề, mục tiêu từ vựng/ngữ pháp).
+  3. *Reading Question Approval*: Duyệt bộ câu hỏi đọc hiểu.
+  4. *Vocabulary Approval*: Duyệt bảng từ vựng và Quizlet.
+  5. *Grammar Approval*: Duyệt lý thuyết và bài tập ngữ pháp.
+  6. *Writing Task Approval*: Duyệt đề viết và biểu đồ SVG.
+  7. *Pre-PDF Approval*: Duyệt chốt trước khi Playwright in ra PDF.
+
+#### C. Bộ tài liệu đầu ra (Deliverables)
 Mỗi ngày học được lưu trữ trong thư mục `/outputs/ielts-daily-reading-writing/[Day]-[Level]/`:
 * **Thư mục `/lsn/` (Tài liệu học sinh)**:
   1. `*-Practise.pdf`: Phiếu bài tập (Reading, Grammar, Writing).
   2. `*-Vocabulary-Grammar.pdf`: Phiếu học lý thuyết (Vocab table, Grammar guide, IELTS Traps).
-  3. `*-Vocab-Checker.pdf`: Phiếu kiểm tra từ vựng ngẫu nhiên (điền từ tiếng Anh).
+  3. `*-Vocab-Checker.pdf`: Phiếu kiểm tra từ vựng ngẫu nhiên (chừa trống từ tiếng Anh).
 * **Thư mục `/aws/` (Đáp án và Chấm bài)**:
   4. `*-Answers.pdf`: Đáp án chi tiết giải thích tư duy từng bước bằng tiếng Việt.
   5. `*-Vocab-Checker-Answer.pdf`: Đáp án phiếu kiểm tra từ vựng (in chữ màu đỏ đậm).
 * **Thư mục gốc ngày học**:
   6. `*-Quizlet-Vocab.md`: Tệp Markdown dùng để import vào Quizlet.
-  7. `lesson_source.json`: Dữ liệu thô gốc của bài học.
+  7. `lesson_source.json`: Dữ liệu thô gốc của bài học (chứa cả log phản biện chéo và quyết định của người dùng).
 
-#### C. Hướng dẫn sử dụng & Biên dịch (CLI Commands)
+#### D. Hướng dẫn sử dụng & Biên dịch (CLI Commands)
 
 ##### 1. Chạy xác thực dữ liệu JSON (Validate Payload):
-Trước khi biên dịch ra PDF, chạy script validator để kiểm tra tính hợp lệ của schema, số lượng câu hỏi, và tính chính xác của trích dẫn chứng cứ đọc hiểu:
+Trước khi biên dịch ra PDF, chạy script validator để kiểm tra tính hợp lệ của schema, các open challenges, checkpoints, và giới hạn revision:
 ```powershell
 python .agents/skills/ielts-daily-reading-writing/scripts/validate_lesson_json.py <path_to_json>
 ```
-*Script trả về exit code 0 nếu hợp lệ, exit code 1 nếu phát hiện lỗi kèm danh sách lỗi chi tiết.*
+*Script trả về exit code 0 nếu hợp lệ, exit code 1 nếu phát hiện lỗi (ví dụ còn open challenge nghiêm trọng).*
 
 ##### 2. Biên dịch bài học hàng ngày ra PDF:
 ```powershell
 uv run --with playwright python .agents/skills/ielts-daily-reading-writing/scripts/export_daily_pack.py <path_to_json> [--out-dir <output_path>]
 ```
+*Chốt chặn an toàn (Safety Guardrails) tích hợp trong exporter sẽ từ chối xuất PDF nếu tệp JSON chưa được QC Pass hoặc còn open challenge mức High/Critical.*
 
 ##### 3. Tạo đề ôn tập lũy kế (Cumulative Review Pack):
 * **Bước 1: Trích xuất và gom dữ liệu từ các bài cũ**:
@@ -71,24 +84,22 @@ Khi muốn cập nhật lại thiết kế PDF (thay đổi CSS, footer, line-sp
 uv run --with playwright python .agents/skills/ielts-daily-reading-writing/scripts/export_daily_pack.py outputs/ielts-daily-reading-writing/20260626-B2/lesson_source.json
 ```
 
-#### D. Hướng dẫn viết Prompt kích hoạt AI (Prompting Guide)
-Khi bạn muốn tạo một bài học luyện IELTS Daily mới, hãy sử dụng mẫu prompt dưới đây để ra lệnh cho AI. Hệ thống hỗ trợ nạp giá trị mặc định (defaults) tự động nếu bạn bỏ trống một số tham số.
+#### E. Hướng dẫn viết Prompt kích hoạt AI (Prompting Guide)
+Khi bạn muốn tạo một bài học luyện IELTS Daily mới, hãy sử dụng các mẫu prompt ngắn gọn dưới đây để ra lệnh cho AI. Hệ thống sẽ tự động đối chiếu lịch sử, tự chọn chủ đề cấp độ tương ứng và nạp các giá trị mặc định khác.
 
-##### Mẫu Prompt chuẩn kích hoạt AI (Prompt Template):
-> Hãy tạo một bài luyện tập IELTS Daily Reading & Writing mới cho học sinh với các thông số sau:
-> - **Level**: [Điền level, ví dụ: A2 | B1 | B2 | C1] (Mặc định: A2)
-> - **Day**: [Điền ngày dạng YYYYMMDD, ví dụ: 20260701] (Mặc định: Ngày hôm nay)
-> - **Topic**: [Điền tên chủ đề hoặc bỏ trống để AI tự chọn chủ đề chuẩn từ topic-bank.md]
-> - **Reading Questions**: [Số lượng câu hỏi đọc hiểu, ví dụ: 13] (Mặc định: 13)
-> - **Vocabulary Words**: [Số lượng từ vựng cần trích xuất, ví dụ: 20] (Mặc định: 20)
-> - **Grammar Questions**: [Số lượng câu hỏi ngữ pháp, ví dụ: 30] (Mặc định: 30)
-> - **Writing Practice**: [Số lượng task viết, ví dụ: 5] (Mặc định: 5)
-> - **Source URL**: [Optional - Link bài đọc nguồn từ BBC/VOA nếu muốn chỉ định]
+##### Mẫu 1: Chạy Tự động (Auto Mode - Khuyên dùng)
+> Hãy tạo đề luyện IELTS mới cho ngày **20260702**:
+> - **Reading & Grammar**: Level **B1**
+> - **Writing**: Level **A1**
 > 
-> *Yêu cầu thêm*: Hãy đối chiếu file history để chống trùng lặp Theme/Topic, tìm bài học cùng level gần nhất trong history để recycle 3 từ vựng (spaced repetition), áp dụng quy tắc thiết kế câu hỏi đáp án duy nhất và chống Skimming/Scanning cho Reading. Xuất dữ liệu ra JSON phân rã theo output-schema.md.
+> *Yêu cầu*: Chạy Auto Mode. Các Sub-Agents tự động review chéo, QC Agent tự sinh challenge để sửa đổi cục bộ, và chỉ xuất PDF khi QC đạt trạng thái Pass.
 
-##### Ví dụ Prompt thực tế ngắn gọn:
-> Tạo bài luyện IELTS ngày 20260701, Level B2, chủ đề "Urban Environments", lấy nguồn từ một bài viết VOA Learning English hoặc BBC News. Trích xuất 20 từ vựng mới, recycle 3 từ từ bài B2 gần nhất, 30 câu hỏi ngữ pháp và 5 task viết (có biểu đồ SVG so sánh dữ liệu). Hãy thiết kế câu hỏi đọc hiểu paraphrase sâu chống skimming và có đáp án duy nhất.
+##### Mẫu 2: Duyệt từng chặng (Review Mode)
+> Hãy tạo đề luyện IELTS mới cho ngày **20260702** theo **Review Mode**:
+> - **Reading & Grammar**: Level **B1**
+> - **Writing**: Level **A1**
+> 
+> *Yêu cầu*: Hãy dừng lại để tôi duyệt tại các checkpoints: Nguồn bài đọc, Blueprint giáo án, và Chốt duyệt in PDF (Pre-PDF Approval).
 
 ---
 

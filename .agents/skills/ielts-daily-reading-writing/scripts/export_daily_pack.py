@@ -9,6 +9,7 @@ import json
 import re
 import random
 import string
+import sys
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -33,7 +34,7 @@ def build_names(level: str, topic: str, day: str) -> dict[str, str]:
 
 def format_markdown_inline(text: str) -> str:
     # First, protect underscores by converting them to blanks
-    text = re.sub(r'_{3,}', '<span class="fill-blank"></span>', text)
+    text = re.sub(r'_{3,}', '<span class="fill-blank">&nbsp;</span>', text)
     # Bold: **text** -> <b>text</b>
     text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
     # Italic: *text* or _text_ -> <i>text</i>
@@ -448,7 +449,7 @@ def generate_reading_questions_html(sections: dict[str, str]) -> str:
         for q in qs:
             num = q["num"]
             q_text = format_markdown_inline(q["text"])
-            q_text = re.sub(r'_{3,}', '<span class="fill-blank"></span>', q_text)
+            q_text = re.sub(r'_{3,}', '<span class="fill-blank">&nbsp;</span>', q_text)
             
             stretch_marker = " (*)" if q.get("is_stretch") else ""
             
@@ -467,6 +468,27 @@ def generate_reading_questions_html(sections: dict[str, str]) -> str:
         html_parts.append("\n".join(group_html))
         
     return "\n\n".join(html_parts)
+
+def adjust_instruction_numbers(instruction: str, offset: int) -> str:
+    if not offset:
+        return instruction
+        
+    def replace_match(match):
+        val = match.group(1).strip()
+        range_match = re.match(r'^(\d+)[\s]*([-–—to]+)[\s]*(\d+)$', val, re.I)
+        if range_match:
+            num1 = int(range_match.group(1)) + offset
+            sep = range_match.group(2).strip()
+            num2 = int(range_match.group(3)) + offset
+            return f"questions {num1}{sep}{num2}"
+            
+        if val.isdigit():
+            return f"question {int(val) + offset}"
+            
+        return match.group(0)
+        
+    adjusted = re.sub(r'\bquestions?\s+(\d+[\s]*[-–—to]*[\s]*\d*)\b', replace_match, instruction, flags=re.I)
+    return adjusted
 
 def generate_grammar_questions_html(sections: dict[str, str], offset: int = 13) -> str:
     grammar_qs_md = sections.get("Questions for Grammar", "")
@@ -491,29 +513,51 @@ def generate_grammar_questions_html(sections: dict[str, str], offset: int = 13) 
         group_html = []
         group_html.append('    <div class="question-group">')
         
+        adjusted_instruction = adjust_instruction_numbers(instruction, offset)
         if qs:
             start_num = int(qs[0]["num"]) + offset
             end_num = int(qs[-1]["num"]) + offset
             prefix = f"Questions {start_num}–{end_num}: "
-            if not instruction.strip().startswith("Questions"):
-                instruction = prefix + instruction
+            
+            display_title = title.strip() if title else ""
+            if display_title:
+                if "multiple choice" in display_title.lower() and "questions" not in display_title.lower():
+                    display_title = "Multiple Choice Questions"
+                elif "error correction" in display_title.lower():
+                    display_title = "Error Correction"
+                elif "sentence transformation" in display_title.lower():
+                    display_title = "Sentence Transformation and Combining"
                 
-        group_html.append(f'        <div class="question-instruction">{instruction}</div>')
+                if adjusted_instruction.strip():
+                    adjusted_instruction = f"{prefix}{display_title} - {adjusted_instruction.strip()}"
+                else:
+                    adjusted_instruction = f"{prefix}{display_title}"
+            else:
+                if not adjusted_instruction.strip().startswith("Questions"):
+                    adjusted_instruction = prefix + adjusted_instruction
+                    
+        group_html.append(f'        <div class="question-instruction">{adjusted_instruction}</div>')
         
         for q in qs:
             num = int(q["num"]) + offset
             q_text = format_markdown_inline(q["text"])
-            q_text = re.sub(r'_{3,}', '<span class="fill-blank"></span>', q_text)
+            q_text = re.sub(r'_{3,}', '<span class="fill-blank">&nbsp;</span>', q_text)
             
             stretch_marker = " (*)" if q.get("is_stretch") else ""
             
             q_item_html = f'        <div class="question-item">\n            <span class="question-number">{num}.</span> {q_text}{stretch_marker}'
             
-            if q["options"]:
+            if q.get("options"):
                 q_item_html += '\n            <div class="question-options">'
                 for opt in q["options"]:
                     q_item_html += f'\n                <div>{opt}</div>'
                 q_item_html += '\n            </div>'
+            else:
+                raw_text = q.get("text", "")
+                has_blank = "_" in raw_text or "fill-blank" in q_text
+                is_rewrite_or_correct = any(kw in q_text.lower() for kw in ["correct the error", "rewrite", "combine", "translate"])
+                if is_rewrite_or_correct or not has_blank:
+                    q_item_html += '\n            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>'
                 
             q_item_html += '\n        </div>'
             group_html.append(q_item_html)
@@ -689,6 +733,14 @@ def generate_writing_questions_html(sections: dict[str, str]) -> str:
     for t in tasks:
         num = t["num"]
         task_text = t["task"]
+        # Clean any redundant task type labels/headers (case-insensitive) to prevent double headings
+        task_types_pattern = r'^(Word\s+Ordering|Sentence\s+Completion|Translation|Short\s+Description|Visual\s+Data\s+Description|Data\s+Description|Guided\s+Email\s+Invite|Email|Word\s+order|Sentence\s+completion|Visual\s+data\s+description|Guided\s+email\s+invite|[\w\s\-]+)\s*:\s*'
+        while True:
+            new_task = re.sub(task_types_pattern, '', task_text, flags=re.IGNORECASE).strip()
+            if new_task == task_text:
+                break
+            task_text = new_task
+            
         skill = t["skill"]
         
         title = get_writing_task_title(num, skill)
@@ -704,7 +756,7 @@ def generate_writing_questions_html(sections: dict[str, str]) -> str:
         
     return "\n\n".join(html_parts)
 
-def build_practice_html(practice_md: str, level: str, topic: str, day: str, vocab_words: list[str] = None) -> str:
+def build_practice_html(practice_md: str, level: str, topic: str, day: str, vocab_words: list[str] = None, time_allowed: int = None) -> str:
     sections = split_sections_by_heading(practice_md)
     
     reading_level = level
@@ -928,7 +980,7 @@ def build_practice_html(practice_md: str, level: str, topic: str, day: str, voca
         <h2>(Level: Reading {reading_level} - Writing {writing_level})</h2>
         <div class="student-info">
             <span>Student Name: ..............................................................</span>
-            <span>Time Allowed: 50 mins</span>
+            <span>Time Allowed: {time_allowed or 50} mins</span>
         </div>
     </div>
 
@@ -1147,7 +1199,9 @@ def is_grammar_subheading(line: str) -> bool:
 def clean_grammar_subheading(line: str) -> str:
     line_str = line.strip()
     if line_str.startswith("#"):
-        return re.sub(r'^[#\s\d\.]+', '', line_str).strip()
+        cleaned = re.sub(r'^[#\s\d\.]+', '', line_str).strip()
+        cleaned = re.sub(r'^(Chủ điểm|Grammar Point|Target|Topic)\s+\d+[:\-\s]*', '', cleaned, flags=re.IGNORECASE).strip()
+        return cleaned
     bold_match = re.match(r'^\*\*(Chủ điểm|Grammar Point|Target|Topic)\s+\d+:?\s*(.*?)\*\*$', line_str, re.I)
     if bold_match:
         return bold_match.group(2).strip()
@@ -1169,18 +1223,23 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
                 
     groups = parse_grouping_notes(grouping_md)
     
-    academic_list = []
-    compound_list = []
-    idiom_list = []
+    core_list = []
+    topic_list = []
+    phrase_list = []
     
     for item in vocab_items:
-        cat = categorize_word(item["word"], groups)
-        if cat == "academic":
-            academic_list.append(item)
-        elif cat == "compound":
-            compound_list.append(item)
+        t_lower = item.get("type", "").lower()
+        if "single" in t_lower or "core" in t_lower or t_lower in ["n", "v", "adj", "adv", "noun", "verb", "adjective", "adverb"]:
+            core_list.append(item)
+        elif "topic" in t_lower or "academic" in t_lower:
+            topic_list.append(item)
+        elif any(x in t_lower for x in ["phrase", "collocation", "idiom", "expression", "chunk"]):
+            phrase_list.append(item)
         else:
-            idiom_list.append(item)
+            if " " in item["word"]:
+                phrase_list.append(item)
+            else:
+                core_list.append(item)
             
     tables_html = []
     
@@ -1220,9 +1279,9 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
         </tbody>
     </table>"""
 
-    t1 = build_table(academic_list, "Academic Vocabulary (Từ vựng học thuật)", 1)
-    t2 = build_table(compound_list, "Compound Words Table (Từ ghép)", 2)
-    t3 = build_table(idiom_list, "Idioms & Phrases Table (Thành ngữ / Cụm từ cố định)", 3)
+    t1 = build_table(core_list, "Core Words (Từ vựng cốt lõi)", 1)
+    t2 = build_table(topic_list, "Topic Vocabulary (Từ vựng theo chủ đề)", 2)
+    t3 = build_table(phrase_list, "Phrases, Chunks & Collocations (Cụm từ & Kết hợp từ)", 3)
     
     recycled_sec = ""
     for k in sections.keys():
@@ -1262,15 +1321,22 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
             
     vocab_tables_html = "\n\n".join(filter(None, [t1, t2, t3, recycled_html]))
     
-    academic_words = ", ".join(item["word"] for item in academic_list)
-    compound_words = ", ".join(item["word"] for item in compound_list)
-    idiom_words = ", ".join(item["word"] for item in idiom_list)
+    core_words = ", ".join(item["word"] for item in core_list)
+    topic_words = ", ".join(item["word"] for item in topic_list)
+    phrase_words = ", ".join(item["word"] for item in phrase_list)
     
+    group_items = []
+    if core_list:
+        group_items.append(f"        <li><b>Core Words:</b> {core_words}.</li>")
+    if topic_list:
+        group_items.append(f"        <li><b>Topic Vocabulary:</b> {topic_words}.</li>")
+    if phrase_list:
+        group_items.append(f"        <li><b>Phrases, Chunks & Collocations:</b> {phrase_words}.</li>")
+        
+    group_items_html = "\n".join(group_items)
     grouping_summary_html = f"""    <div class="subsection-title">Vocabulary Grouping Notes (Phân loại từ vựng)</div>
     <ul>
-        <li><b>Academic Vocab:</b> {academic_words}.</li>
-        <li><b>Compound Words:</b> {compound_words}.</li>
-        <li><b>Idioms & Phrases / Useful Chunks:</b> {idiom_words}.</li>
+{group_items_html}
     </ul>"""
     
     grammar_guide_md = sections.get("Detailed Grammar Guide", "")
@@ -2131,9 +2197,14 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
         
     pm.append("## Warm-up")
     pm.append("Answer the following questions in Vietnamese or English:")
-    pm.append("1. Bạn nghĩ gì về chủ đề này? (What do you think about this topic?)")
-    pm.append("2. Chia sẻ một trải nghiệm thực tế của bạn liên quan đến chủ đề này. (Share a real experience related to this topic.)")
-    pm.append("3. Tại sao chủ đề này lại quan trọng đối với cuộc sống hàng ngày? (Why is this topic important in daily life?)")
+    warmups = data.get("warm_up")
+    if warmups and isinstance(warmups, list) and len(warmups) == 3:
+        for idx, wq in enumerate(warmups):
+            pm.append(f"{idx+1}. {wq}")
+    else:
+        pm.append("1. Bạn nghĩ gì về chủ đề này? (What do you think about this topic?)")
+        pm.append("2. Chia sẻ một trải nghiệm thực tế của bạn liên quan đến chủ đề này. (Share a real experience related to this topic.)")
+        pm.append("3. Tại sao chủ đề này lại quan trọng đối với cuộc sống hàng ngày? (Why is this topic important in daily life?)")
     pm.append("")
     
     reading = data.get("reading", {})
@@ -2164,7 +2235,8 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
                 stretch_mark = " (*)" if q.get("stretch") else ""
                 options_str = ""
                 if q.get("options"):
-                    options_str = "\n" + "\n".join([f"    - {opt}" for opt in q["options"]])
+                    letters = ["A", "B", "C", "D", "E", "F"]
+                    options_str = "\n" + "\n".join([f"    {letters[opt_idx]}. {opt}" for opt_idx, opt in enumerate(q["options"])])
                 pm.append(f"{q['id']}. {q['question']}{stretch_mark}{options_str}")
             pm.append("")
             
@@ -2184,7 +2256,8 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
                 stretch_mark = " (*)" if q.get("stretch") else ""
                 options_str = ""
                 if q.get("options"):
-                    options_str = "\n" + "\n".join([f"    - {opt}" for opt in q["options"]])
+                    letters = ["A", "B", "C", "D", "E", "F"]
+                    options_str = "\n" + "\n".join([f"    {letters[opt_idx]}. {opt}" for opt_idx, opt in enumerate(q["options"])])
                 pm.append(f"{q['id']}. {q['question']}{stretch_mark}{options_str}")
             pm.append("")
             
@@ -2201,7 +2274,17 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
                 visual_prefix = "<br><br>" + vis["content"].replace("\n", "<br>")
             
             prompt_clean = t.get('prompt', '').replace('\n', '<br>')
-            task_cell = f"{t.get('task_type', '')}: {prompt_clean}{visual_prefix}"
+            if vis.get("content"):
+                prompt_clean = re.sub(r'<svg[^>]*>.*?</svg>', '', prompt_clean, flags=re.DOTALL|re.I)
+                prompt_clean = re.sub(r'<table[^>]*>.*?</table>', '', prompt_clean, flags=re.DOTALL|re.I)
+                
+            task_type = t.get('task_type', '')
+            if task_type:
+                prompt_clean = re.sub(r'^' + re.escape(task_type) + r'\s*:\s*', '', prompt_clean, flags=re.IGNORECASE).strip()
+                task_types_pattern = r'^(Word\s+Ordering|Sentence\s+Completion|Translation|Short\s+Description|Visual\s+Data\s+Description|Data\s+Description|Guided\s+Email\s+Invite|Email|Word\s+order|Sentence\s+completion|Visual\s+data\s+description|Guided\s+email\s+invite)\s*:\s*'
+                prompt_clean = re.sub(task_types_pattern, '', prompt_clean, flags=re.IGNORECASE).strip()
+                
+            task_cell = f"{task_type}: {prompt_clean}{visual_prefix}"
             task_cell = task_cell.replace("|", "\\|")
             
             lang_cell = "<br>".join(t.get("useful_language", []))
@@ -2345,6 +2428,74 @@ def main() -> None:
 
     data = json.loads(Path(args.json_file).read_text(encoding="utf-8"))
     
+    # Fill in printed_time_allowed_minutes if missing before validation
+    meta = data.setdefault("lesson_meta", {})
+    if not meta.get("printed_time_allowed_minutes"):
+        rqs = data.get("reading", {}).get("questions", [])
+        gqs = data.get("grammar", {}).get("questions", [])
+        wts = data.get("writing", {}).get("tasks", [])
+        
+        est_time = 8.0 + len(rqs) * 1.5
+        for g in gqs:
+            g_type = g.get("type", "").lower()
+            if any(k in g_type for k in ["transform", "correct", "rewrite", "combine"]):
+                est_time += 1.5
+            else:
+                est_time += 0.8
+        est_time += 4.5
+        for w in wts:
+            target = w.get("target_length", "").lower()
+            task_type = w.get("task_type", "").lower()
+            if "1 sentence" in target or "sentence building" in task_type:
+                est_time += 3.0
+            elif any(x in target for x in ["sentence", "50-60 words", "40-50 words", "35-40 words", "paragraph"]):
+                est_time += 6.0
+            else:
+                est_time += 15.0
+        
+        printed_time = int(round(est_time))
+        meta["printed_time_allowed_minutes"] = printed_time
+        meta["estimated_completion_time_minutes"] = printed_time
+        meta["time_workload_status"] = "ok"
+        Path(args.json_file).write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    
+    # Run JSON schema and pedagogical validations
+    from validate_lesson_json import validate_lesson_json
+    if not validate_lesson_json(Path(args.json_file)):
+        print("FAIL: JSON validation failed. Exiting.", file=sys.stderr)
+        sys.exit(1)
+        
+    # Safety checks for compilation loops
+    if "execution" in data:
+        exec_meta = data.get("execution", {})
+        pipeline_status = exec_meta.get("pipeline_status")
+        
+        # 1. Refuse export if pipeline status is not qc_passed or exported
+        if pipeline_status not in ["qc_passed", "exported"]:
+            print(f"FAIL: cannot export PDF because pipeline_status is {pipeline_status}.", file=sys.stderr)
+            sys.exit(1)
+            
+        # 2. Refuse export if unresolved high/critical challenges exist
+        agent_rev = data.get("agent_review", {})
+        challenges = agent_rev.get("challenges", [])
+        for chg in challenges:
+            if chg.get("status") == "open" and chg.get("severity") in ["high", "critical"]:
+                print(f"FAIL: open high-severity challenge {chg.get('id')} must be resolved before export.", file=sys.stderr)
+                sys.exit(1)
+                
+        # 3. Refuse export in Review Mode if required checkpoint approval is missing
+        mode = exec_meta.get("mode")
+        if mode == "review":
+            human_rev = data.get("human_review", {})
+            checkpoints = human_rev.get("checkpoints", [])
+            pre_pdf_approved = False
+            for cp in checkpoints:
+                if cp.get("checkpoint") == "pre_pdf_approval" and cp.get("status") == "approved":
+                    pre_pdf_approved = True
+            if not pre_pdf_approved:
+                print("FAIL: review mode requires pre_pdf_approval but checkpoint is missing.", file=sys.stderr)
+                sys.exit(1)
+    
     # Adapter for structured JSON compilation
     if "practice_markdown" not in data:
         meta = data.get("lesson_meta", {})
@@ -2408,7 +2559,8 @@ def main() -> None:
         vocab_items = parse_vocab_from_markdown(data.get("quizlet_markdown", ""))
     vocab_words = [item["word"] for item in vocab_items] if vocab_items else []
 
-    practice_html_content = build_practice_html(data.get("practice_markdown", ""), level, topic, day, vocab_words)
+    printed_time = data.get("lesson_meta", {}).get("printed_time_allowed_minutes")
+    practice_html_content = build_practice_html(data.get("practice_markdown", ""), level, topic, day, vocab_words, time_allowed=printed_time)
     materials_html_content = build_materials_html(data.get("vocabulary_grammar_markdown", ""), data.get("quizlet_markdown", ""), day, topic)
     answers_html_content = build_answers_html(data.get("answers_markdown", ""), day, topic, data.get("practice_markdown", ""))
     
@@ -2441,6 +2593,32 @@ def main() -> None:
     compile_html_to_pdf(part3_html_path, answers_pdf_path, lesson_id, "Answer Key & Explanations")
     compile_html_to_pdf(vocab_checker_html_path, vocab_checker_pdf_path, lesson_id, "Vocabulary Checker")
     compile_html_to_pdf(vocab_checker_answer_html_path, vocab_checker_answer_pdf_path, lesson_id, "Vocabulary Checker Answer Key")
+    
+    # Run post-render validation
+    print("Running Post-Render PDF Quality Control...")
+    try:
+        sys.path.append(str(Path(__file__).parent))
+        from validate_rendered_pdf import validate_rendered_pdf
+        pdf_errors = validate_rendered_pdf(source_json_path, practice_pdf_path)
+        if pdf_errors:
+            print("\nFAIL: Rendered PDF QC failed with the following errors:", file=sys.stderr)
+            for err in pdf_errors:
+                print(f" - {err}", file=sys.stderr)
+            sys.exit(1)
+        else:
+            print("Post-Render PDF Quality Control PASSED successfully!")
+    except Exception as e:
+        # Fallback to subprocess if import fails or other error
+        import subprocess
+        script_path = Path(__file__).parent / "validate_rendered_pdf.py"
+        res = subprocess.run([sys.executable, str(script_path), "--lesson-json", str(source_json_path), "--pdf", str(practice_pdf_path)], capture_output=True, text=True, encoding="utf-8")
+        if res.returncode != 0:
+            print("\nFAIL: Rendered PDF QC failed:", file=sys.stderr)
+            print(res.stdout, file=sys.stderr)
+            print(res.stderr, file=sys.stderr)
+            sys.exit(1)
+        else:
+            print("Post-Render PDF Quality Control PASSED successfully!")
 
     quizlet_md_content = generate_quizlet_markdown(vocab_items)
     quizlet_txt_content = generate_quizlet_text(vocab_items)
