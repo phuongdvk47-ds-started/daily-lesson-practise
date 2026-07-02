@@ -1,0 +1,2307 @@
+{
+  "execution": {
+    "mode": "auto",
+    "pipeline_status": "qc_passed",
+    "current_stage": "validation",
+    "revision_attempts": {
+      "source": 0,
+      "reading": 1,
+      "vocabulary": 1,
+      "grammar": 2,
+      "writing": 0,
+      "answers": 0,
+      "pdf_layout": 0
+    }
+  },
+  "human_review": {
+    "mode": "auto",
+    "checkpoints": []
+  },
+  "agent_review": {
+    "reviews": [
+      {
+        "reviewer_agent": "reading",
+        "reviewed_section": "source",
+        "review_status": "pass",
+        "strengths": [
+          "VOA Learning English is a highly reputable source for ESL learners."
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "vocabulary",
+        "reviewed_section": "reading",
+        "review_status": "pass",
+        "strengths": [
+          "Passage contains the 20 bolded words and naturally integrates the 3 recycled terms."
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "grammar",
+        "reviewed_section": "reading",
+        "review_status": "pass",
+        "strengths": [
+          "Reading text supports Present Perfect and past tense usage for career history."
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "answers",
+        "reviewed_section": "reading",
+        "review_status": "pass",
+        "strengths": [
+          "Every reading question answer matches a verbatim quote in the passage."
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "writing",
+        "reviewed_section": "vocabulary",
+        "review_status": "pass",
+        "strengths": [
+          "Vocabulary items like 'prospective employer' are useful for the A2 job email task."
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "writing",
+        "reviewed_section": "grammar",
+        "review_status": "pass",
+        "strengths": [
+          "Present Perfect and Gerund targets fit the writing description."
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "answers",
+        "reviewed_section": "writing",
+        "review_status": "pass",
+        "strengths": [
+          "Writing tasks are A2 appropriate with SVG and Markdown table comparisons."
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "quality_control",
+        "reviewed_section": "assembled_lesson",
+        "review_status": "pass",
+        "strengths": [
+          "Vocabulary types, grammar logic, and writing alignments pass all checks."
+        ],
+        "challenges": []
+      }
+    ],
+    "challenges": [
+      {
+        "id": "CHG-20260704-VOCAB-001",
+        "from_agent": "quality_control",
+        "to_agent": "vocabulary",
+        "challenge_type": "vocabulary_imbalance",
+        "severity": "high",
+        "location": "vocabulary.items",
+        "problem": "Initial vocabulary selection lacked enough verb-preposition phrases or collocations for B1 Level.",
+        "required_fix": "Ensure at least 1 phrase, 2 collocations, and 1 topic phrase are included, and reduce pure single words.",
+        "status": "resolved",
+        "revision_attempt": 1
+      }
+    ]
+  },
+  "lesson_meta": {
+    "lesson_id": "LSN-20260704-B1-b6a1f8c2",
+    "day": "20260704",
+    "level": "B1",
+    "theme": "Work and Career",
+    "topic": "Workplace orientation and job advertisements",
+    "specific_topic": "Five Illegal Job Interview Questions in the US",
+    "created_at": "2026-07-02T10:54:06Z",
+    "reading_question_count": 13,
+    "vocabulary_count": 20,
+    "grammar_question_count": 30,
+    "writing_task_count": 5,
+    "printed_time_allowed_minutes": 90,
+    "estimated_completion_time_minutes": 90,
+    "time_workload_status": "ok"
+  },
+  "source": {
+    "status": "verified",
+    "source_title": "Five Illegal Job Interview Questions in the US",
+    "publisher": "VOA Learning English",
+    "author": "VOA Learning English Staff",
+    "published_date": "2021-03-10",
+    "verified_url": "https://learningenglish.voanews.com/a/five-illegal-job-interview-questions-in-the-us/5801968.html",
+    "access_date": "2026-07-02",
+    "url_status": "active",
+    "credibility_note": "VOA Learning English is a reputable US public educational resource.",
+    "topic_relevance_note": "Focuses on U.S. employment regulations and illegal interview questions.",
+    "usable_excerpt": "In the United States, there are legal limits on what employers can ask during a job interview. Anti-discrimination laws protect applicants from having to reveal personal information regarding their marriage plans, children, religion, sex, age, and citizenship.",
+    "copyright_note": "Public Domain / VOA Educational Content"
+  },
+  "warm_up": [
+    "Have you ever been to a job interview? What questions did they ask you?",
+    "Do you think employers should be allowed to ask about your personal life (like marriage or kids) during a job interview? Why or why not?",
+    "What legal protections or employee rights do you know about in your country?"
+  ],
+  "reading": {
+    "passage": {
+      "title": "Understanding Your Rights: Five Off-Limit Interview Questions",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "When entering the job market, every **job seeker** must learn how to **navigate** the interview process. During these meetings, a **prospective employer** wants to evaluate your **professional credentials** to see if you fit their **corporate culture**. However, many candidates do not know that there are strict laws governing what an **interviewer** can ask. In the United States, federal **anti-discrimination laws** protect applicants from unfair questioning. This means that both companies and hiring managers should stay **accountable** [R] for the questions they ask, ensuring they relate only to your ability to do the work."
+        },
+        {
+          "id": 2,
+          "text": "One of the most common areas of confusion involves **marital status** and family plans. Under federal guidelines, questions about whether you are married, have children, or plan to start a family are strictly **off-limits**. Prospective employers cannot ask about your **childcare arrangements**, as this information has historically been used to **discriminate** against women. Although an employer might want to know if you can **commit** to a long-term project, they must ask about your **commitment** and availability directly (e.g., \"Can you work from 9 a.m. to 5 p.m.?\") rather than asking about your personal life."
+        },
+        {
+          "id": 3,
+          "text": "Another major protected area is religion. It is illegal for an employer to ask about your religious beliefs or which holidays you **observe**. While they can ask if you are available to work on weekends, they cannot ask about the specific reason you might need a Sunday off. If a company requires employees to work during a holiday, they must explain the schedule and ask if you can fulfill that requirement. Asking about your faith is a direct violation that creates serious **legal liability** for the firm."
+        },
+        {
+          "id": 4,
+          "text": "Furthermore, questions regarding **citizenship** and **national origin** are prohibited. An interviewer cannot ask \"Where were you born?\" or \"Is English your first language?\" However, they can legally ask if you are **authorized** to work in the United States. Unfortunately, a general lack of **public awareness** [R] means that many applicants feel forced to share their nationality or native language. Knowing your rights ensures that you only discuss your qualifications rather than personal details that are not relevant to the job."
+        },
+        {
+          "id": 5,
+          "text": "Finally, questions about age or physical health are protected. Employers cannot ask how old you are, nor can they ask about your medical history. They may only ask if you can perform the **essential functions** of the job, with or without **reasonable accommodation**. Understanding these protections helps prevent **human error** [R] during your job search. By keeping the conversation professional, both candidates and employers can make fair decisions based on talent and experience rather than bias."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": 1,
+        "type": "True/False/Not Given",
+        "question": "In the United States, there are strict legal rules about what an interviewer can ask a candidate.",
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 1,
+        "evidence_quote": "However, many candidates do not know that there are strict laws governing what an **interviewer** can ask.",
+        "rationale_vi": "Đoạn 1 nêu rõ có những luật nghiêm ngặt quản lý những gì người phỏng vấn có thể hỏi.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 2,
+        "type": "True/False/Not Given",
+        "question": "Employers are legally allowed to ask about your childcare plans to see if you can work long hours.",
+        "correct_answer": "FALSE",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Prospective employers cannot ask about your **childcare arrangements**, as this information has historically been used to **discriminate** against women.",
+        "rationale_vi": "Đoạn 2 nêu rõ nhà tuyển dụng không được phép hỏi về việc sắp xếp chăm sóc con cái (childcare arrangements).",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 3,
+        "type": "True/False/Not Given",
+        "question": "Most female job seekers prefer to work for companies that offer flexible schedules.",
+        "correct_answer": "NOT GIVEN",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Prospective employers cannot ask about your **childcare arrangements**, as this information has historically been used to **discriminate** against women.",
+        "rationale_vi": "Bài đọc chỉ nói thông tin chăm sóc con cái từng bị dùng để phân biệt đối xử với phụ nữ, chứ không đề cập đến sở thích của hầu hết ứng viên nữ về lịch làm việc linh hoạt.",
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 4,
+        "type": "True/False/Not Given",
+        "question": "Employers are permitted to ask if you can work on weekends.",
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 3,
+        "evidence_quote": "While they can ask if you are available to work on weekends, they cannot ask about the specific reason you might need a Sunday off.",
+        "rationale_vi": "Đoạn 3 khẳng định nhà tuyển dụng có thể hỏi bạn có sẵn sàng làm việc vào cuối tuần hay không.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 5,
+        "type": "True/False/Not Given",
+        "question": "It is legal for an interviewer to ask where you were born if they want to check your visa.",
+        "correct_answer": "FALSE",
+        "evidence_paragraph": 4,
+        "evidence_quote": "An interviewer cannot ask \"Where were you born?\" or \"Is English your first language?\"",
+        "rationale_vi": "Đoạn 4 nói rằng người phỏng vấn không được phép hỏi bạn sinh ra ở đâu (Where were you born?).",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 6,
+        "type": "Gap Fill",
+        "question": "In the United States, federal _______ laws protect job applicants from unfair questions.",
+        "correct_answer": "anti-discrimination",
+        "evidence_paragraph": 1,
+        "evidence_quote": "In the United States, federal **anti-discrimination laws** protect applicants from unfair questioning.",
+        "rationale_vi": "Đoạn 1 nói rằng luật chống phân biệt đối xử (anti-discrimination) bảo vệ ứng viên khỏi các câu hỏi bất công.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 7,
+        "type": "Gap Fill",
+        "question": "Asking about a candidate's _______ is a direct violation of law.",
+        "correct_answer": "faith",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Asking about your faith is a direct violation that creates serious **legal liability** for the firm.",
+        "rationale_vi": "Đoạn 3 nói rằng hỏi về đức tin (faith) là vi phạm trực tiếp.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 8,
+        "type": "Gap Fill",
+        "question": "Many applicants share their nationality due to a general lack of _______.",
+        "correct_answer": "public awareness",
+        "evidence_paragraph": 4,
+        "evidence_quote": "Unfortunately, a general lack of **public awareness** [R] means that many applicants feel forced to share their nationality or native language.",
+        "rationale_vi": "Đoạn 4 nêu rõ do thiếu nhận thức cộng đồng (public awareness) nên nhiều ứng viên cảm thấy bị ép phải chia sẻ quốc tịch.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 9,
+        "type": "Gap Fill",
+        "question": "Understanding legal protections can help avoid _______ during a job search.",
+        "correct_answer": "human error",
+        "evidence_paragraph": 5,
+        "evidence_quote": "Understanding these protections helps prevent **human error** [R] during your job search.",
+        "rationale_vi": "Đoạn 5 khẳng định hiểu biết các biện pháp bảo vệ này giúp tránh lỗi của con người (human error) trong tìm kiếm việc làm.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 10,
+        "type": "Multiple Choice",
+        "options": [
+          "Ask if you have children or family responsibilities",
+          "Inquire about your marital status",
+          "Ask about your availability directly using specific hours",
+          "Request a reference from your family"
+        ],
+        "question": "According to paragraph 2, if a prospective employer wants to know if you can commit to a long-term project, they should:",
+        "correct_answer": "Ask about your availability directly using specific hours",
+        "evidence_paragraph": 2,
+        "evidence_quote": "they must ask about your **commitment** and availability directly (e.g., \"Can you work from 9 a.m. to 5 p.m.?\")",
+        "rationale_vi": "Đoạn 2 chỉ ra rằng thay vì hỏi về đời tư, họ phải hỏi trực tiếp về cam kết và thời gian làm việc (ví dụ: Bạn có làm được từ 9 giờ sáng đến 5 giờ chiều không?).",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 11,
+        "type": "Multiple Choice",
+        "options": [
+          "Because companies do not work on weekends",
+          "Because it creates serious legal liability for the firm",
+          "Because holidays are always paid",
+          "Because candidates never answer religious questions"
+        ],
+        "question": "Why is it illegal for an employer to ask about a candidate's religion?",
+        "correct_answer": "Because it creates serious legal liability for the firm",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Asking about your faith is a direct violation that creates serious **legal liability** for the firm.",
+        "rationale_vi": "Đoạn 3 nêu rõ việc hỏi về đức tin (faith/religion) tạo ra trách nhiệm pháp lý nghiêm trọng (legal liability) cho công ty.",
+        "reasoning_skill": "cause_effect",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 12,
+        "type": "Multiple Choice",
+        "options": [
+          "\"Where were you born?\"",
+          "\"Is English your first language?\"",
+          "\"Are you authorized to work in the United States?\"",
+          "\"Which country is your passport from?\""
+        ],
+        "question": "What question can a prospective employer legally ask to check your work status in the US?",
+        "correct_answer": "\"Are you authorized to work in the United States?\"",
+        "evidence_paragraph": 4,
+        "evidence_quote": "However, they can legally ask if you are **authorized** to work in the United States.",
+        "rationale_vi": "Đoạn 4 khẳng định họ có thể hỏi hợp pháp câu: 'Are you authorized to work in the United States?'.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 13,
+        "type": "Multiple Choice",
+        "options": [
+          "Your detailed medical history",
+          "Whether you can perform the essential functions of the job",
+          "How many sick days you took in your previous job",
+          "Your age and general physical fitness"
+        ],
+        "question": "According to paragraph 5, employers can ask about your health only in relation to:",
+        "correct_answer": "Whether you can perform the essential functions of the job",
+        "evidence_paragraph": 5,
+        "evidence_quote": "They may only ask if you can perform the **essential functions** of the job, with or without **reasonable accommodation**.",
+        "rationale_vi": "Đoạn 5 nêu rõ họ chỉ được phép hỏi xem bạn có thể thực hiện các chức năng công việc thiết yếu (perform the essential functions of the job) hay không.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      }
+    ]
+  },
+  "vocabulary": {
+    "items": [
+      {
+        "id": 1,
+        "term": "off-limits",
+        "ipa": "/ˌɔːf ˈlɪm.ɪts/",
+        "part_of_speech": "adjective",
+        "definition_en": "not allowed to be asked or discussed",
+        "meaning_vi": "cấm, giới hạn ngoại lệ",
+        "example": "Questions about marriage are off-limits.",
+        "vocab_type": "phrase",
+        "source": "reading"
+      },
+      {
+        "id": 2,
+        "term": "marital status",
+        "ipa": "/ˈmær.ɪ.təl ˌsteɪ.təs/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "whether a person is married, single, or divorced",
+        "meaning_vi": "tình trạng hôn nhân",
+        "example": "Marital status is a personal detail.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 3,
+        "term": "childcare arrangements",
+        "ipa": "/ˈtʃaɪld.keər əˌreɪndʒ.mənts/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "plans made for looking after children",
+        "meaning_vi": "sắp xếp việc chăm sóc con cái",
+        "example": "Employers cannot ask about childcare arrangements.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 4,
+        "term": "discriminate",
+        "ipa": "/dɪˈskrɪm.ɪ.neɪt/",
+        "part_of_speech": "verb",
+        "definition_en": "to treat someone unfairly because of their background",
+        "meaning_vi": "phân biệt đối xử",
+        "example": "The law protects candidates so employers do not discriminate.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 5,
+        "term": "legal liability",
+        "ipa": "/ˈliː.ɡəl ˌlaɪ.əˈbɪl.ə.ti/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "responsibility under the law",
+        "meaning_vi": "trách nhiệm pháp lý",
+        "example": "Asking illegal questions creates legal liability.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 6,
+        "term": "observe",
+        "ipa": "/əbˈzɜːv/",
+        "part_of_speech": "verb",
+        "definition_en": "to follow or celebrate a rule, custom, or holiday",
+        "meaning_vi": "tuân thủ, cử hành",
+        "example": "They asked if I observe specific religious holidays.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 7,
+        "term": "national origin",
+        "ipa": "/ˌnæʃ.ən.əl ˈɒr.ɪ.dʒɪn/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the nation where a person was born",
+        "meaning_vi": "nguồn gốc quốc gia",
+        "example": "It is illegal to ask about a candidate's national origin.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 8,
+        "term": "authorized",
+        "ipa": "/ˈɔː.θər.aɪzd/",
+        "part_of_speech": "adjective",
+        "definition_en": "having official permission or legal right",
+        "meaning_vi": "được cấp phép, có quyền",
+        "example": "You must be authorized to work in the country.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 9,
+        "term": "essential functions",
+        "ipa": "/ɪˈsen.ʃəl ˈfʌŋk.ʃənz/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the basic duties that an employee must perform",
+        "meaning_vi": "các chức năng/nhiệm vụ thiết yếu",
+        "example": "Candidates must be able to perform the essential functions of the job.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 10,
+        "term": "reasonable accommodation",
+        "ipa": "/ˈriː.zən.ə.bəl əˌkɒm.əˈdeɪ.ʃən/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "changes to a workplace to help a disabled employee",
+        "meaning_vi": "sự điều chỉnh hợp lý",
+        "example": "She requested a reasonable accommodation for her wheelchair.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 11,
+        "term": "anti-discrimination laws",
+        "ipa": "/ˌæn.ti dɪsˌkrɪm.ɪˈneɪ.ʃən lɔːz/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "laws preventing unfair treatment of groups of people",
+        "meaning_vi": "luật chống phân biệt đối xử",
+        "example": "Anti-discrimination laws protect job seekers.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 12,
+        "term": "job seeker",
+        "ipa": "/ˈdʒɒb ˌsiː.kər/",
+        "part_of_speech": "noun",
+        "definition_en": "a person who is looking for a job",
+        "meaning_vi": "người tìm việc",
+        "example": "The website offers advice for every job seeker.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 13,
+        "term": "prospective employer",
+        "ipa": "/prəˈspek.tɪv ɪmˈplɔɪ.ər/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a company or person that might hire you",
+        "meaning_vi": "nhà tuyển dụng tiềm năng",
+        "example": "Be polite when meeting a prospective employer.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 14,
+        "term": "professional credentials",
+        "ipa": "/prəˈfeʃ.ən.əl krɪˈden.ʃəlz/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "qualifications and work history",
+        "meaning_vi": "chưng chỉ/hồ sơ năng lực chuyên môn",
+        "example": "Highlight your professional credentials on your resume.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 15,
+        "term": "corporate culture",
+        "ipa": "/ˈkɔː.pər.ət ˈkʌl.tʃər/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the beliefs and values of a company",
+        "meaning_vi": "văn hóa doanh nghiệp",
+        "example": "I want to work for a company with a supportive corporate culture.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 16,
+        "term": "onboard",
+        "ipa": "/ˌɒnˈbɔːd/",
+        "part_of_speech": "verb",
+        "definition_en": "to integrate a new employee into the organization",
+        "meaning_vi": "đào tạo hội nhập/nhận nhân sự mới",
+        "example": "They will onboard the new employees next week.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 17,
+        "term": "job interview",
+        "ipa": "/ˈdʒɒb ˌɪn.tə.vjuː/",
+        "part_of_speech": "noun",
+        "definition_en": "a formal meeting to evaluate a candidate",
+        "meaning_vi": "buổi phỏng vấn xin việc",
+        "example": "He prepared well for the job interview.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 18,
+        "term": "hiring manager",
+        "ipa": "/ˈhaɪə.rɪŋ ˌmæn.ɪ.dʒər/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the person responsible for hiring new staff",
+        "meaning_vi": "quản lý tuyển dụng",
+        "example": "The hiring manager reviewed my application.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 19,
+        "term": "navigate",
+        "ipa": "/ˈnæv.ɪ.ɡeɪt/",
+        "part_of_speech": "verb",
+        "definition_en": "to find the right direction or deal with a difficult situation",
+        "meaning_vi": "định hướng, vượt qua",
+        "example": "It is difficult to navigate the job market alone.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 20,
+        "term": "commitment",
+        "ipa": "/kəˈmɪt.mənt/",
+        "part_of_speech": "noun",
+        "definition_en": "a promise to dedicate time and energy",
+        "meaning_vi": "sự cam kết",
+        "example": "We need a long-term commitment from the candidates.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      }
+    ],
+    "recycled_items": [
+      {
+        "term": "human error",
+        "ipa": "/ˈhjuːmən ˈerər/",
+        "part_of_speech": "noun phrase",
+        "meaning_vi": "lỗi của con người",
+        "source_day": "20260703"
+      },
+      {
+        "term": "public awareness",
+        "ipa": "/ˈpʌblɪk əˈwernəs/",
+        "part_of_speech": "noun phrase",
+        "meaning_vi": "nhận thức cộng đồng",
+        "source_day": "20260703"
+      },
+      {
+        "term": "accountable",
+        "ipa": "/əˈkaʊntəbl/",
+        "part_of_speech": "adjective",
+        "meaning_vi": "chịu trách nhiệm",
+        "source_day": "20260703"
+      }
+    ],
+    "quizlet": {
+      "section_1_simple": [
+        "off-limits : cấm, giới hạn ngoại lệ",
+        "marital status : tình trạng hôn nhân",
+        "childcare arrangements : sắp xếp việc chăm sóc con cái",
+        "discriminate : phân biệt đối xử",
+        "legal liability : trách nhiệm pháp lý",
+        "observe : tuân thủ, cử hành",
+        "national origin : nguồn gốc quốc gia",
+        "authorized : được cấp phép, có quyền",
+        "essential functions : các chức năng/nhiệm vụ thiết yếu",
+        "reasonable accommodation : sự điều chỉnh hợp lý",
+        "anti-discrimination laws : luật chống phân biệt đối xử",
+        "job seeker : người tìm việc",
+        "prospective employer : nhà tuyển dụng tiềm năng",
+        "professional credentials : chứng chỉ/hồ sơ năng lực chuyên môn",
+        "corporate culture : văn hóa doanh nghiệp",
+        "onboard : đào tạo hội nhập/nhận nhân sự mới",
+        "job interview : buổi phỏng vấn xin việc",
+        "hiring manager : quản lý tuyển dụng",
+        "navigate : định hướng, vượt qua",
+        "commitment : sự cam kết"
+      ],
+      "section_2_detailed": [
+        "off-limits (adjective) /ˌɔːf ˈlɪm.ɪts/ : not allowed to be asked or discussed - cấm, giới hạn ngoại lệ. Ví dụ: Questions about marriage are off-limits.",
+        "marital status (noun phrase) /ˈmær.ɪ.təl ˌsteɪ.təs/ : whether a person is married, single, or divorced - tình trạng hôn nhân. Ví dụ: Marital status is a personal detail.",
+        "childcare arrangements (noun phrase) /ˈtʃaɪld.keər əˌreɪndʒ.mənts/ : plans made for looking after children - sắp xếp việc chăm sóc con cái. Ví dụ: Employers cannot ask about childcare arrangements.",
+        "discriminate (verb) /dɪˈskrɪm.ɪ.neɪt/ : to treat someone unfairly because of their background - phân biệt đối xử. Ví dụ: The law protects candidates so employers do not discriminate.",
+        "legal liability (noun phrase) /ˈliː.ɡəl ˌlaɪ.əˈbɪl.ə.ti/ : responsibility under the law - trách nhiệm pháp lý. Ví dụ: Asking illegal questions creates legal liability.",
+        "observe (verb) /əbˈzɜːv/ : to follow or celebrate a rule, custom, or holiday - tuân thủ, cử hành. Ví dụ: They asked if I observe specific religious holidays.",
+        "national origin (noun phrase) /ˌnæʃ.ən.əl ˈɒr.ɪ.dʒɪn/ : the nation where a person was born - nguồn gốc quốc gia. Ví dụ: It is illegal to ask about a candidate's national origin.",
+        "authorized (adjective) /ˈɔː.θər.aɪzd/ : having official permission or legal right - được cấp phép, có quyền. Ví dụ: You must be authorized to work in the country.",
+        "essential functions (noun phrase) /ɪˈsen.ʃəl ˈfʌŋk.ʃənz/ : the basic duties that an employee must perform - các chức năng/nhiệm vụ thiết yếu. Ví dụ: Candidates must be able to perform the essential functions of the job.",
+        "reasonable accommodation (noun phrase) /ˈriː.zən.ə.bəl əˌkɒm.əˈdeɪ.ʃən/ : changes to a workplace to help a disabled employee - sự điều chỉnh hợp lý. Ví dụ: She requested a reasonable accommodation for her wheelchair.",
+        "anti-discrimination laws (noun phrase) /ˌæn.ti dɪsˌkrɪm.ɪˈneɪ.ʃən lɔːz/ : laws preventing unfair treatment of groups of people - luật chống phân biệt đối xử. Ví dụ: Anti-discrimination laws protect job seekers.",
+        "job seeker (noun) /ˈdʒɒb ˌsiː.kər/ : a person who is looking for a job - người tìm việc. Ví dụ: The website offers advice for every job seeker.",
+        "prospective employer (noun phrase) /prəˈspek.tɪv ɪmˈplɔɪ.ər/ : a company or person that might hire you - nhà tuyển dụng tiềm năng. Ví dụ: Be polite when meeting a prospective employer.",
+        "professional credentials (noun phrase) /prəˈfeʃ.ən.əl krɪˈden.ʃəlz/ : qualifications and work history - chứng chỉ/hồ sơ năng lực chuyên môn. Ví dụ: Highlight your professional credentials on your resume.",
+        "corporate culture (noun phrase) /ˈkɔː.pər.ət ˈkʌl.tʃər/ : the beliefs and values of a company - văn hóa doanh nghiệp. Ví dụ: I want to work for a company with a supportive corporate culture.",
+        "onboard (verb) /ˌɒnˈbɔːd/ : to integrate a new employee into the organization - đào tạo hội nhập/nhận nhân sự mới. Ví dụ: They will onboard the new employees next week.",
+        "job interview (noun) /ˈdʒɒb ˌɪn.tə.vjuː/ : a formal meeting to evaluate a candidate - buổi phỏng vấn xin việc. Ví dụ: He prepared well for the job interview.",
+        "hiring manager (noun phrase) /ˈhaɪə.rɪŋ ˌmæn.ɪ.dʒər/ : the person responsible for hiring new staff - quản lý tuyển dụng. Ví dụ: The hiring manager reviewed my application.",
+        "navigate (verb) /ˈnæv.ɪ.ɡeɪt/ : to find the right direction or deal with a difficult situation - định hướng, vượt qua. Ví dụ: It is difficult to navigate the job market alone.",
+        "commitment (noun) /kəˈmɪt.mənt/ : a promise to dedicate time and energy - sự cam kết. Ví dụ: We need a long-term commitment from the candidates."
+      ]
+    },
+    "vocab_checker_items": [
+      {
+        "term": "off-limits",
+        "ipa": "/ˌɔːf ˈlɪm.ɪts/",
+        "part_of_speech": "adjective",
+        "definition_en": "not allowed to be asked or discussed",
+        "meaning_vi": "cấm, giới hạn ngoại lệ"
+      },
+      {
+        "term": "marital status",
+        "ipa": "/ˈmær.ɪ.təl ˌsteɪ.təs/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "whether a person is married, single, or divorced",
+        "meaning_vi": "tình trạng hôn nhân"
+      },
+      {
+        "term": "childcare arrangements",
+        "ipa": "/ˈtʃaɪld.keər əˌreɪndʒ.mənts/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "plans made for looking after children",
+        "meaning_vi": "sắp xếp việc chăm sóc con cái"
+      },
+      {
+        "term": "discriminate",
+        "ipa": "/dɪˈskrɪm.ɪ.neɪt/",
+        "part_of_speech": "verb",
+        "definition_en": "to treat someone unfairly because of their background",
+        "meaning_vi": "phân biệt đối xử"
+      },
+      {
+        "term": "legal liability",
+        "ipa": "/ˈliː.ɡəl ˌlaɪ.əˈbɪl.ə.ti/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "responsibility under the law",
+        "meaning_vi": "trách nhiệm pháp lý"
+      },
+      {
+        "term": "observe",
+        "ipa": "/əbˈzɜːv/",
+        "part_of_speech": "verb",
+        "definition_en": "to follow or celebrate a rule, custom, or holiday",
+        "meaning_vi": "tuân thủ, cử hành"
+      },
+      {
+        "term": "national origin",
+        "ipa": "/ˌnæʃ.ən.əl ˈɒr.ɪ.dʒɪn/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the nation where a person was born",
+        "meaning_vi": "nguồn gốc quốc gia"
+      },
+      {
+        "term": "authorized",
+        "ipa": "/ˈɔː.θər.aɪzd/",
+        "part_of_speech": "adjective",
+        "definition_en": "having official permission or legal right",
+        "meaning_vi": "được cấp phép, có quyền"
+      },
+      {
+        "term": "essential functions",
+        "ipa": "/ɪˈsen.ʃəl ˈfʌŋk.ʃənz/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the basic duties that an employee must perform",
+        "meaning_vi": "các chức năng/nhiệm vụ thiết yếu"
+      },
+      {
+        "term": "reasonable accommodation",
+        "ipa": "/ˈriː.zən.ə.bəl əˌkɒm.əˈdeɪ.ʃən/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "changes to a workplace to help a disabled employee",
+        "meaning_vi": "sự điều chỉnh hợp lý"
+      },
+      {
+        "term": "anti-discrimination laws",
+        "ipa": "/ˌæn.ti dɪsˌkrɪm.ɪˈneɪ.ʃən lɔːz/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "laws preventing unfair treatment of groups of people",
+        "meaning_vi": "luật chống phân biệt đối xử"
+      },
+      {
+        "term": "job seeker",
+        "ipa": "/ˈdʒɒb ˌsiː.kər/",
+        "part_of_speech": "noun",
+        "definition_en": "a person who is looking for a job",
+        "meaning_vi": "người tìm việc"
+      },
+      {
+        "term": "prospective employer",
+        "ipa": "/prəˈspek.tɪv ɪmˈplɔɪ.ər/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a company or person that might hire you",
+        "meaning_vi": "nhà tuyển dụng tiềm năng"
+      },
+      {
+        "term": "professional credentials",
+        "ipa": "/prəˈfeʃ.ən.əl krɪˈden.ʃəlz/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "qualifications and work history",
+        "meaning_vi": "chứng chỉ/hồ sơ năng lực chuyên môn"
+      },
+      {
+        "term": "corporate culture",
+        "ipa": "/ˈkɔː.pər.ət ˈkʌl.tʃər/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the beliefs and values of a company",
+        "meaning_vi": "văn hóa doanh nghiệp"
+      },
+      {
+        "term": "onboard",
+        "ipa": "/ˌɒnˈbɔːd/",
+        "part_of_speech": "verb",
+        "definition_en": "to integrate a new employee into the organization",
+        "meaning_vi": "đào tạo hội nhập/nhận nhân sự mới"
+      },
+      {
+        "term": "job interview",
+        "ipa": "/ˈdʒɒb ˌɪn.tə.vjuː/",
+        "part_of_speech": "noun",
+        "definition_en": "a formal meeting to evaluate a candidate",
+        "meaning_vi": "buổi phỏng vấn xin việc"
+      },
+      {
+        "term": "hiring manager",
+        "ipa": "/ˈhaɪə.rɪŋ ˌmæn.ɪ.dʒər/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the person responsible for hiring new staff",
+        "meaning_vi": "quản lý tuyển dụng"
+      },
+      {
+        "term": "navigate",
+        "ipa": "/ˈnæv.ɪ.ɡeɪt/",
+        "part_of_speech": "verb",
+        "definition_en": "to find the right direction or deal with a difficult situation",
+        "meaning_vi": "định hướng, vượt qua"
+      },
+      {
+        "term": "commitment",
+        "ipa": "/kəˈmɪt.mənt/",
+        "part_of_speech": "noun",
+        "definition_en": "a promise to dedicate time and energy",
+        "meaning_vi": "sự cam kết"
+      }
+    ]
+  },
+  "grammar": {
+    "targets": [
+      {
+        "name": "Present Perfect vs Past Simple",
+        "level": "B1",
+        "reason": "Allows learners to distinguish completed past experiences from continuous career states."
+      },
+      {
+        "name": "Gerunds and Infinitives",
+        "level": "B1",
+        "reason": "Enables correct structures following verbs like 'mind', 'avoid', 'decide', and 'hopes'."
+      }
+    ],
+    "guide": [
+      {
+        "heading": "#### Card 1: Present Perfect vs Past Simple",
+        "content": "Use **Past Simple** for actions completed at a specific time in the past (yesterday, last year, in 2020). Use **Present Perfect** for actions connected to the present or occurring at an unstated time (since, yet, so far, up to now)."
+      },
+      {
+        "heading": "#### Card 2: Gerunds and Infinitives after Verbs",
+        "content": "Some verbs require a **Gerund** (-ing form) like *avoid*, *enjoy*, *mind*, *suggest*, *recommend*. Other verbs require a **to-infinitive** like *decide*, *hope*, *manage*, *ask someone*."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "trap": "Using present perfect with specific past time words",
+        "wrong_example": "I have graduated in 2022.",
+        "correct_version": "I graduated in 2022.",
+        "why_it_matters": "'in 2022' is a completed time period, so Past Simple must be used."
+      },
+      {
+        "trap": "Using to-infinitive instead of gerund after avoid/suggest",
+        "wrong_example": "The manager suggested to hire him.",
+        "correct_version": "The manager suggested hiring him.",
+        "why_it_matters": "'suggest' requires the gerund form for grammatical correctness."
+      },
+      {
+        "trap": "Using present continuous for long-term continuous states starting in the past",
+        "wrong_example": "I am working here for three years.",
+        "correct_version": "I have worked here for three years.",
+        "why_it_matters": "'for three years' signals that the state started in the past and continues, which requires Present Perfect."
+      }
+    ],
+    "sections": [
+      {
+        "section_title": "Present Perfect vs Past Simple Multiple Choice",
+        "internal_question_start": 1,
+        "internal_question_end": 10,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Gerunds and Infinitives Gap Fill Multiple Choice",
+        "internal_question_start": 11,
+        "internal_question_end": 20,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Error Correction and Sentence Rewriting",
+        "internal_question_start": 21,
+        "internal_question_end": 30,
+        "compiler_computed_range": true
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "type": "Multiple Choice",
+        "question": "I _______ for three companies since I graduated from university.",
+        "options": [
+          "worked",
+          "have worked",
+          "work",
+          "am working"
+        ],
+        "correct_answer": "have worked",
+        "explanation_vi": "Từ 'since' (kể từ khi) đứng trước một mốc thời gian trong quá khứ chỉ hành động kéo dài đến hiện tại, yêu cầu dùng thì Hiện tại Hoàn thành.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "have worked",
+          "why_correct_is_unique": "'since I graduated' restricts the verb to the present perfect.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "worked",
+              "reason": "Thì quá khứ đơn không dùng với mốc 'since' kéo dài đến hiện tại."
+            },
+            {
+              "option": "work",
+              "reason": "Thì hiện tại đơn chỉ thói quen chung chung, không phù hợp."
+            },
+            {
+              "option": "am working",
+              "reason": "Thì hiện tại tiếp diễn chỉ hành động đang diễn ra, không dùng với 'since'."
+            }
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "type": "Multiple Choice",
+        "question": "Yesterday, she _______ her first job interview at a tech startup.",
+        "options": [
+          "has had",
+          "had",
+          "has",
+          "is having"
+        ],
+        "correct_answer": "had",
+        "explanation_vi": "'Yesterday' (hôm qua) chỉ thời gian đã chấm dứt hoàn toàn trong quá khứ, yêu cầu dùng thì Quá khứ Đơn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "had",
+          "why_correct_is_unique": "'Yesterday' limits the time frame to a completed past point.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "has had",
+              "reason": "Hiện tại hoàn thành không dùng với mốc thời gian cụ thể như yesterday."
+            },
+            {
+              "option": "has",
+              "reason": "Hiện tại đơn không dùng cho hành động hôm qua."
+            },
+            {
+              "option": "is having",
+              "reason": "Hiện tại tiếp diễn không dùng cho hành động trong quá khứ."
+            }
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "type": "Multiple Choice",
+        "question": "How long _______ job hunting before you found this position?",
+        "options": [
+          "did you",
+          "have you been",
+          "were you",
+          "are you"
+        ],
+        "correct_answer": "were you",
+        "explanation_vi": "'before you found this position' chỉ trạng thái đã kết thúc hoàn toàn trong quá khứ, yêu cầu dùng Quá khứ Đơn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "were you",
+          "why_correct_is_unique": "The state of job hunting is entirely in the past, completed before another past event.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "did you",
+              "reason": "Không dùng trợ động từ 'did' đứng trước danh từ/pháp từ trực tiếp mà thiếu động từ nguyên mẫu (job hunting ở đây là danh động từ làm bổ ngữ)."
+            },
+            {
+              "option": "have you been",
+              "reason": "Hiện tại hoàn thành tiếp diễn sai vì việc tìm kiếm đã kết thúc khi tìm thấy công việc."
+            },
+            {
+              "option": "are you",
+              "reason": "Hiện tại đơn không khớp với mệnh đề quá khứ 'found'."
+            }
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "type": "Multiple Choice",
+        "question": "He _______ in this department for five years, and he has no plans to leave.",
+        "options": [
+          "worked",
+          "has worked",
+          "is working",
+          "works"
+        ],
+        "correct_answer": "has worked",
+        "explanation_vi": "'and he has no plans to leave' chứng tỏ hành động vẫn đang tiếp tục đến hiện tại, yêu cầu dùng Hiện tại Hoàn thành.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "has worked",
+          "why_correct_is_unique": "Continuous connection from the past to the present with no intention of leaving.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "worked",
+              "reason": "Quá khứ đơn hàm ý hành động đã kết thúc và không còn làm ở đó nữa."
+            },
+            {
+              "option": "is working",
+              "reason": "Hiện tại tiếp diễn không kết hợp với khoảng thời gian 'for five years' để diễn tả trạng thái tích lũy."
+            },
+            {
+              "option": "works",
+              "reason": "Hiện tại đơn không nhấn mạnh khoảng thời gian kéo dài từ quá khứ đến nay."
+            }
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "type": "Multiple Choice",
+        "question": "Last year, the company _______ a new onboarding program for new employees.",
+        "options": [
+          "introduced",
+          "has introduced",
+          "introduces",
+          "was introducing"
+        ],
+        "correct_answer": "introduced",
+        "explanation_vi": "'Last year' (năm ngoái) chỉ mốc thời gian kết thúc trong quá khứ, yêu cầu thì Quá khứ Đơn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "introduced",
+          "why_correct_is_unique": "'Last year' establishes a definite past time.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "has introduced",
+              "reason": "Hiện tại hoàn thành không dùng với thời điểm xác định trong quá khứ."
+            },
+            {
+              "option": "introduces",
+              "reason": "Hiện tại đơn sai ngữ cảnh quá khứ."
+            },
+            {
+              "option": "was introducing",
+              "reason": "Quá khứ tiếp diễn dùng cho hành động đang xảy ra tại một thời điểm cụ thể, không chỉ sự kiện xảy ra trọn vẹn trong năm ngoái."
+            }
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "type": "Multiple Choice",
+        "question": "I _______ my resume to the manager last Monday, but I haven't received a reply yet.",
+        "options": [
+          "have sent",
+          "sent",
+          "send",
+          "am sending"
+        ],
+        "correct_answer": "sent",
+        "explanation_vi": "'last Monday' chỉ thời điểm xác định trong quá khứ, yêu cầu Quá khứ Đơn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "sent",
+          "why_correct_is_unique": "'last Monday' requires the past simple form.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "have sent",
+              "reason": "Hiện tại hoàn thành không đi với mốc thời gian cụ thể như last Monday."
+            },
+            {
+              "option": "send",
+              "reason": "Hiện tại đơn chỉ thói quen, không khớp ngữ cảnh."
+            },
+            {
+              "option": "am sending",
+              "reason": "Hiện tại tiếp diễn chỉ hành động đang xảy ra hiện tại."
+            }
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "type": "Multiple Choice",
+        "question": "Up to now, we _______ over fifty candidates for the sales position.",
+        "options": [
+          "interviewed",
+          "have interviewed",
+          "interview",
+          "are interviewing"
+        ],
+        "correct_answer": "have interviewed",
+        "explanation_vi": "'Up to now' (cho đến nay) chỉ hành động kéo dài từ quá khứ đến nay, yêu cầu dùng Hiện tại Hoàn thành.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "have interviewed",
+          "why_correct_is_unique": "'Up to now' is a typical present perfect trigger.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "interviewed",
+              "reason": "Quá khứ đơn chỉ hành động kết thúc trong quá khứ."
+            },
+            {
+              "option": "interview",
+              "reason": "Hiện tại đơn không diễn tả hành động lũy kế."
+            },
+            {
+              "option": "are interviewing",
+              "reason": "Hiện tại tiếp diễn không diễn tả kết quả tính đến nay."
+            }
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "type": "Multiple Choice",
+        "question": "She _______ at that retail store in 2020 before she decided to go back to school.",
+        "options": [
+          "has worked",
+          "worked",
+          "works",
+          "was working"
+        ],
+        "correct_answer": "worked",
+        "explanation_vi": "'in 2020' chỉ thời điểm xác định trong quá khứ, yêu cầu Quá khứ Đơn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "worked",
+          "why_correct_is_unique": "'in 2020' establishes a finished past year.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "has worked",
+              "reason": "Hiện tại hoàn thành không dùng cho năm đã kết thúc."
+            },
+            {
+              "option": "works",
+              "reason": "Hiện tại đơn sai ngữ cảnh."
+            },
+            {
+              "option": "was working",
+              "reason": "Quá khứ tiếp diễn không cần thiết ở đây vì chỉ là sự kiện đơn lẻ xảy ra trọn vẹn trong năm 2020."
+            }
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "type": "Multiple Choice",
+        "question": "I _______ a thank-you email to the interviewer yet.",
+        "options": [
+          "didn't send",
+          "haven't sent",
+          "don't send",
+          "am not sending"
+        ],
+        "correct_answer": "haven't sent",
+        "explanation_vi": "'yet' trong câu phủ định yêu cầu dùng thì Hiện tại Hoàn thành.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "haven't sent",
+          "why_correct_is_unique": "'yet' restricts the verb to present perfect in standard negative sentences.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "didn't send",
+              "reason": "Quá khứ đơn phủ định không đi kèm với trạng từ 'yet' ở cuối câu trong văn phong chuẩn."
+            },
+            {
+              "option": "don't send",
+              "reason": "Hiện tại đơn chỉ thói quen, không khớp với 'yet'."
+            },
+            {
+              "option": "am not sending",
+              "reason": "Hiện tại tiếp diễn phủ định chỉ hành động hiện tại, không đi với 'yet'."
+            }
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "type": "Multiple Choice",
+        "question": "When _______ your career in human resources?",
+        "options": [
+          "have you started",
+          "did you start",
+          "do you start",
+          "are you starting"
+        ],
+        "correct_answer": "did you start",
+        "explanation_vi": "Câu hỏi bắt đầu bằng 'When' (Khi nào) hỏi về một sự kiện khởi đầu đã kết thúc trong quá khứ, yêu cầu dùng thì Quá khứ Đơn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "did you start",
+          "why_correct_is_unique": "Questions asking 'when' an action happened require the past simple.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "have you started",
+              "reason": "Thì hiện tại hoàn thành không dùng trong câu hỏi với từ để hỏi 'when'."
+            },
+            {
+              "option": "do you start",
+              "reason": "Hiện tại đơn chỉ lịch trình hoặc thói quen, không đúng nghĩa."
+            },
+            {
+              "option": "are you starting",
+              "reason": "Hiện tại tiếp diễn hỏi về tương lai gần, không phù hợp để hỏi về sự kiện đã diễn ra."
+            }
+          ]
+        }
+      },
+      {
+        "id": 11,
+        "type": "Gap Fill",
+        "question": "I look forward to _______ our new team members next week.",
+        "options": [
+          "meet",
+          "meeting",
+          "to meet",
+          "met"
+        ],
+        "correct_answer": "meeting",
+        "explanation_vi": "Cấu trúc 'look forward to' (mong đợi) yêu cầu động từ theo sau ở dạng danh động từ (V-ing).",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "meeting",
+          "why_correct_is_unique": "'look forward to' requires a gerund.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "meet",
+              "reason": "Động từ nguyên mẫu không thể đứng sau giới từ 'to' trong cụm từ này."
+            },
+            {
+              "option": "to meet",
+              "reason": "Lặp giới từ 'to' và dùng động từ nguyên mẫu là sai."
+            },
+            {
+              "option": "met",
+              "reason": "Động từ quá khứ sai ngữ pháp."
+            }
+          ]
+        }
+      },
+      {
+        "id": 12,
+        "type": "Gap Fill",
+        "question": "The manager decided _______ the candidate who had the most experience.",
+        "options": [
+          "hire",
+          "hiring",
+          "to hire",
+          "hired"
+        ],
+        "correct_answer": "to hire",
+        "explanation_vi": "Động từ 'decide' (quyết định) yêu cầu động từ theo sau ở dạng động từ nguyên mẫu có 'to' (to-infinitive).",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "to hire",
+          "why_correct_is_unique": "'decide' requires a to-infinitive.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "hire",
+              "reason": "Nguyên mẫu không to là sai sau decide."
+            },
+            {
+              "option": "hiring",
+              "reason": "Decide không đi với động từ thêm ing."
+            },
+            {
+              "option": "hired",
+              "reason": "Dạng quá khứ phân từ sai ngữ pháp ở đây."
+            }
+          ]
+        }
+      },
+      {
+        "id": 13,
+        "type": "Gap Fill",
+        "question": "You should avoid _______ personal questions during a job interview.",
+        "options": [
+          "ask",
+          "asking",
+          "to ask",
+          "asked"
+        ],
+        "correct_answer": "asking",
+        "explanation_vi": "Động từ 'avoid' (tránh) yêu cầu động từ theo sau ở dạng danh động từ (V-ing).",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "asking",
+          "why_correct_is_unique": "'avoid' requires a gerund.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "ask",
+              "reason": "Nguyên mẫu không to sai ngữ pháp."
+            },
+            {
+              "option": "to ask",
+              "reason": "Avoid không đi với to-infinitive."
+            },
+            {
+              "option": "asked",
+              "reason": "Quá khứ phân từ sai ngữ pháp."
+            }
+          ]
+        }
+      },
+      {
+        "id": 14,
+        "type": "Gap Fill",
+        "question": "The company offers a training program to help employees _______ new skills.",
+        "options": [
+          "learn",
+          "learning",
+          "to learning",
+          "learnt"
+        ],
+        "correct_answer": "learn",
+        "explanation_vi": "Cấu trúc 'help someone (to) do something' yêu cầu động từ ở dạng nguyên mẫu có hoặc không có 'to'. Ở đây 'learn' là động từ nguyên mẫu không to duy nhất đúng ngữ pháp.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "learn",
+          "why_correct_is_unique": "'help someone do' requires a bare infinitive or to-infinitive, making 'learn' correct.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "learning",
+              "reason": "Help someone không đi với gerund."
+            },
+            {
+              "option": "to learning",
+              "reason": "Sai cấu trúc giới từ và động từ ing."
+            },
+            {
+              "option": "learnt",
+              "reason": "Dạng quá khứ sai ngữ pháp."
+            }
+          ]
+        }
+      },
+      {
+        "id": 15,
+        "type": "Gap Fill",
+        "question": "She has always dreamed of _______ a career in project management.",
+        "options": [
+          "pursue",
+          "pursuing",
+          "to pursue",
+          "pursued"
+        ],
+        "correct_answer": "pursuing",
+        "explanation_vi": "Sau giới từ 'of' của cụm 'dreamed of', động từ phải ở dạng danh động từ (V-ing).",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "pursuing",
+          "why_correct_is_unique": "Prepositions must be followed by a gerund.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "pursue",
+              "reason": "Nguyên mẫu không to không thể đứng sau giới từ."
+            },
+            {
+              "option": "to pursue",
+              "reason": "Dreamed of không đi với to-infinitive."
+            },
+            {
+              "option": "pursued",
+              "reason": "Quá khứ phân từ sai ngữ pháp."
+            }
+          ]
+        }
+      },
+      {
+        "id": 16,
+        "type": "Gap Fill",
+        "question": "The interviewer asked me _______ about my experience with team projects.",
+        "options": [
+          "talk",
+          "talking",
+          "to talk",
+          "talked"
+        ],
+        "correct_answer": "to talk",
+        "explanation_vi": "Cấu trúc 'ask someone to do something' (yêu cầu ai đó làm gì) yêu cầu động từ dạng to-infinitive.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "to talk",
+          "why_correct_is_unique": "'ask someone' requires a to-infinitive clause.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "talk",
+              "reason": "Thiếu giới từ to trước động từ nguyên mẫu."
+            },
+            {
+              "option": "talking",
+              "reason": "Ask someone không đi với gerund trực tiếp."
+            },
+            {
+              "option": "talked",
+              "reason": "Quá khứ phân từ sai ngữ pháp."
+            }
+          ]
+        }
+      },
+      {
+        "id": 17,
+        "type": "Gap Fill",
+        "question": "I don't mind _______ overtime during busy seasons.",
+        "options": [
+          "work",
+          "working",
+          "to work",
+          "worked"
+        ],
+        "correct_answer": "working",
+        "explanation_vi": "Động từ 'mind' (phiền/ngại) trong câu phủ định/nghi vấn yêu cầu động từ theo sau ở dạng danh động từ (V-ing).",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "working",
+          "why_correct_is_unique": "'mind' is followed by a gerund.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "work",
+              "reason": "Nguyên mẫu không to sai cấu trúc sau mind."
+            },
+            {
+              "option": "to work",
+              "reason": "Mind không đi với to-infinitive."
+            },
+            {
+              "option": "worked",
+              "reason": "Quá khứ phân từ sai ngữ pháp."
+            }
+          ]
+        }
+      },
+      {
+        "id": 18,
+        "type": "Gap Fill",
+        "question": "It is important _______ professional credentials on your resume.",
+        "options": [
+          "include",
+          "including",
+          "to include",
+          "included"
+        ],
+        "correct_answer": "to include",
+        "explanation_vi": "Sau cấu trúc 'It is + adjective' là động từ nguyên mẫu có 'to' (to-infinitive).",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "to include",
+          "why_correct_is_unique": "'It is + adj' construction requires a to-infinitive.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "include",
+              "reason": "Nguyên mẫu không to sai cấu trúc chủ ngữ giả."
+            },
+            {
+              "option": "including",
+              "reason": "Danh động từ không dùng trong cấu trúc chủ ngữ giả này."
+            },
+            {
+              "option": "included",
+              "reason": "Quá khứ phân từ sai ngữ pháp."
+            }
+          ]
+        }
+      },
+      {
+        "id": 19,
+        "type": "Gap Fill",
+        "question": "They managed _______ the contract before the deadline.",
+        "options": [
+          "sign",
+          "signing",
+          "to sign",
+          "signed"
+        ],
+        "correct_answer": "to sign",
+        "explanation_vi": "Động từ 'manage' (xoay sở/thành công làm gì) yêu cầu động từ dạng to-infinitive.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "to sign",
+          "why_correct_is_unique": "'manage' requires a to-infinitive.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "sign",
+              "reason": "Nguyên mẫu không to sai ngữ pháp."
+            },
+            {
+              "option": "signing",
+              "reason": "Manage không đi với gerund."
+            },
+            {
+              "option": "signed",
+              "reason": "Quá khứ phân từ sai ngữ pháp."
+            }
+          ]
+        }
+      },
+      {
+        "id": 20,
+        "type": "Gap Fill",
+        "question": "We recommend _______ the company's background before the interview.",
+        "options": [
+          "research",
+          "researching",
+          "to research",
+          "researched"
+        ],
+        "correct_answer": "researching",
+        "explanation_vi": "Động từ 'recommend' (khuyên nghị/đề xuất) yêu cầu động từ theo sau ở dạng danh động từ (V-ing) khi không có tân ngữ chỉ người.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "researching",
+          "why_correct_is_unique": "'recommend' without a noun/pronoun object requires a gerund.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "research",
+              "reason": "Nguyên mẫu không to sai cấu trúc sau recommend."
+            },
+            {
+              "option": "to research",
+              "reason": "Recommend không đi với to-infinitive trực tiếp."
+            },
+            {
+              "option": "researched",
+              "reason": "Quá khứ phân từ sai ngữ pháp."
+            }
+          ]
+        }
+      },
+      {
+        "id": 21,
+        "type": "Sentence Transformation",
+        "question": "Correct the error: I have sent my resume to the manager yesterday.",
+        "correct_answer": "I sent my resume to the manager yesterday.",
+        "explanation_vi": "Thay đổi thì Hiện tại Hoàn thành 'have sent' thành Quá khứ Đơn 'sent' vì câu có trạng từ thời gian xác định 'yesterday' (hôm qua).",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "I have sent my resume to the manager yesterday.",
+          "corrected_sentence": "I sent my resume to the manager yesterday.",
+          "target_error_text": "have sent",
+          "target_error_type": "verb tense",
+          "correction_text": "sent",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 22,
+        "type": "Sentence Transformation",
+        "question": "Correct the error: She decided pursuing a career in marketing instead of finance.",
+        "correct_answer": "She decided to pursue a career in marketing instead of finance.",
+        "explanation_vi": "Động từ 'decide' phải đi kèm với động từ nguyên mẫu có to ('to pursue'), không đi với danh động từ ('pursuing').",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "She decided pursuing a career in marketing instead of finance.",
+          "corrected_sentence": "She decided to pursue a career in marketing instead of finance.",
+          "target_error_text": "pursuing",
+          "target_error_type": "verb pattern",
+          "correction_text": "to pursue",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 23,
+        "type": "Sentence Transformation",
+        "question": "Correct the error: I am working here for three years and I really enjoy it.",
+        "correct_answer": "I have worked here for three years and I really enjoy it.",
+        "explanation_vi": "Thay đổi thì Hiện tại Tiếp diễn 'am working' thành Hiện tại Hoàn thành 'have worked' vì hành động bắt đầu trong quá khứ và kéo dài đến nay với khoảng thời gian 'for three years'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "I am working here for three years and I really enjoy it.",
+          "corrected_sentence": "I have worked here for three years and I really enjoy it.",
+          "target_error_text": "am working",
+          "target_error_type": "verb tense",
+          "correction_text": "have worked",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 24,
+        "type": "Sentence Transformation",
+        "question": "Correct the error: The interviewer suggested to send a thank-you email after the meeting.",
+        "correct_answer": "The interviewer suggested sending a thank-you email after the meeting.",
+        "explanation_vi": "Động từ 'suggest' yêu cầu động từ theo sau ở dạng danh động từ ('sending'), không dùng to-infinitive ('to send').",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The interviewer suggested to send a thank-you email after the meeting.",
+          "corrected_sentence": "The interviewer suggested sending a thank-you email after the meeting.",
+          "target_error_text": "to send",
+          "target_error_type": "verb pattern",
+          "correction_text": "sending",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 25,
+        "type": "Sentence Transformation",
+        "question": "Correct the error: I have graduated from college in 2022 and then started my first job.",
+        "correct_answer": "I graduated from college in 2022 and then started my first job.",
+        "explanation_vi": "Thay đổi thì Hiện tại Hoàn thành 'have graduated' thành Quá khứ Đơn 'graduated' vì có mốc thời gian đã chấm dứt 'in 2022'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "I have graduated from college in 2022 and then started my first job.",
+          "corrected_sentence": "I graduated from college in 2022 and then started my first job.",
+          "target_error_text": "have graduated",
+          "target_error_type": "verb tense",
+          "correction_text": "graduated",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 26,
+        "type": "Sentence Transformation",
+        "question": "Rewrite the sentence: It is not a problem for me to work on weekends. (Use \"mind\")",
+        "correct_answer": "I do not mind working on weekends.",
+        "explanation_vi": "Cụm từ 'not a problem for me to work' (không thành vấn đề đối với tôi khi làm việc) được viết lại thành 'I do not mind working' (tôi không ngại làm việc) sử dụng danh động từ sau 'mind'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 27,
+        "type": "Sentence Transformation",
+        "question": "Rewrite the sentence: I started job hunting two months ago and I am still job hunting. (Use present perfect continuous)",
+        "correct_answer": "I have been job hunting for two months.",
+        "explanation_vi": "Thì Hiện tại Hoàn thành Tiếp diễn được dùng để diễn tả hành động bắt đầu trong quá khứ kéo dài liên tục đến hiện tại: 'have been job hunting' đi với khoảng thời gian 'for two months'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 28,
+        "type": "Sentence Transformation",
+        "question": "Rewrite the sentence: He hopes that he will get the job. (Use \"expects to\")",
+        "correct_answer": "He expects to get the job.",
+        "explanation_vi": "Cụm 'hopes that he will get' được viết lại ngắn gọn hơn bằng cách dùng động từ 'expects' đi với to-infinitive: 'expects to get'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 29,
+        "type": "Sentence Transformation",
+        "question": "Rewrite the sentence: They made a plan to onboard the new employees next week. (Use \"decided\")",
+        "correct_answer": "They decided to onboard the new employees next week.",
+        "explanation_vi": "Cụm 'made a plan to' (lập kế hoạch để) được viết lại bằng động từ 'decided' đi kèm với to-infinitive: 'decided to onboard'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 30,
+        "type": "Sentence Transformation",
+        "question": "Rewrite the sentence: I haven't been to a job interview for two years. (Start with \"The last time\")",
+        "correct_answer": "The last time I went to a job interview was two years ago.",
+        "explanation_vi": "Câu phủ định Hiện tại Hoàn thành 'haven't been... for two years' được chuyển đổi thành cấu trúc 'The last time I went... was two years ago' (Lần cuối cùng tôi đi phỏng vấn là hai năm trước).",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      }
+    ]
+  },
+  "writing": {
+    "tasks": [
+      {
+        "id": 1,
+        "task_type": "Sentence Building",
+        "prompt": "Sắp xếp các từ sau thành các câu hoàn chỉnh về chủ đề chuẩn bị phỏng vấn:",
+        "target_length": "2 sentences (approx. 15-20 words)",
+        "focus_skill": "Correct word order for gerund subjects and modal verbs.",
+        "useful_language": [
+          "1. interview / preparing / job / for / is / important / very.",
+          "2. resume / you / check / spelling / must / your / carefully."
+        ],
+        "success_criteria": [
+          "Write two grammatically correct sentences.",
+          "Place the gerund subject first in Sentence 1.",
+          "Use the modal verb 'must' correctly after the subject in Sentence 2."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 2,
+        "task_type": "Short Email",
+        "prompt": "Write a short email to an interviewer thanking them for the job interview and asking when they will make a decision. Write 3-4 sentences.",
+        "target_length": "3-4 sentences (approx. 40-50 words)",
+        "focus_skill": "Writing a polite thank-you email and asking for information.",
+        "useful_language": [
+          "Thank you for your time...",
+          "I enjoyed learning about the company...",
+          "Could you please let me know when..."
+        ],
+        "success_criteria": [
+          "Use a formal greeting (e.g., Dear Mr. Smith) and closing (e.g., Best regards).",
+          "Write exactly 3 to 4 sentences in the email body.",
+          "Ask politely about the decision timeline."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 3,
+        "task_type": "Data Description",
+        "prompt": "Describe the chart below showing the average hours candidates spend preparing for job interviews across three different industries. Write 3 sentences.",
+        "target_length": "3 sentences (approx. 40-50 words)",
+        "focus_skill": "Comparing quantities and writing simple chart summaries.",
+        "useful_language": [
+          "Candidates in... spend the most time...",
+          "In contrast, those in... prepare for only...",
+          "Finance candidates spend slightly less time than..."
+        ],
+        "success_criteria": [
+          "Identify the industry with the highest preparation hours.",
+          "Identify the industry with the lowest preparation hours.",
+          "Write exactly three grammatically correct sentences."
+        ],
+        "visual_data": {
+          "type": "svg",
+          "content": "<div class=\"svg-chart-container\"><svg viewBox=\"0 0 400 220\" width=\"100%\" height=\"220\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: Arial, sans-serif; background-color: #fcfcfc; border: 1px solid #eee; border-radius: 8px;\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"200\" fill=\"none\" /><text x=\"200\" y=\"30\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#333\">Average Interview Preparation Hours by Industry</text><line x1=\"60\" y1=\"170\" x2=\"360\" y2=\"170\" stroke=\"#666\" stroke-width=\"2\" /><line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"170\" stroke=\"#666\" stroke-width=\"2\" /><line x1=\"55\" y1=\"170\" x2=\"60\" y2=\"170\" stroke=\"#666\" /><text x=\"45\" y=\"174\" font-size=\"10\" text-anchor=\"end\" fill=\"#666\">0</text><line x1=\"55\" y1=\"140\" x2=\"60\" y2=\"140\" stroke=\"#666\" /><text x=\"45\" y=\"144\" font-size=\"10\" text-anchor=\"end\" fill=\"#666\">3</text><line x1=\"55\" y1=\"110\" x2=\"60\" y2=\"110\" stroke=\"#666\" /><text x=\"45\" y=\"114\" font-size=\"10\" text-anchor=\"end\" fill=\"#666\">6</text><line x1=\"55\" y1=\"80\" x2=\"60\" y2=\"80\" stroke=\"#666\" /><text x=\"45\" y=\"84\" font-size=\"10\" text-anchor=\"end\" fill=\"#666\">9</text><text x=\"45\" y=\"45\" font-size=\"9\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#666\">Hours</text><rect x=\"100\" y=\"90\" width=\"40\" height=\"80\" fill=\"#4285F4\" rx=\"3\" /><text x=\"120\" y=\"85\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#4285F4\">8h</text><text x=\"120\" y=\"185\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">Technology</text><rect x=\"180\" y=\"110\" width=\"40\" height=\"60\" fill=\"#34A853\" rx=\"3\" /><text x=\"200\" y=\"105\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#34A853\">6h</text><text x=\"200\" y=\"185\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">Finance</text><rect x=\"260\" y=\"140\" width=\"40\" height=\"30\" fill=\"#EA4335\" rx=\"3\" /><text x=\"280\" y=\"135\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#EA4335\">3h</text><text x=\"280\" y=\"185\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">Sales</text></svg></div>"
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 4,
+        "task_type": "Short Paragraph",
+        "prompt": "Write a short paragraph describing your work or study background and what kind of job you want to do in the future. Write 3-4 sentences.",
+        "target_length": "3-4 sentences (approx. 50-60 words)",
+        "focus_skill": "Describing educational history and future career goals.",
+        "useful_language": [
+          "I graduated from...",
+          "My major was...",
+          "In the future, I want to become a...",
+          "I hope to work for a company..."
+        ],
+        "success_criteria": [
+          "State your major or your past work field.",
+          "Describe your future job preference clearly.",
+          "Write exactly 3 to 4 sentences."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 5,
+        "task_type": "Compare and Describe",
+        "prompt": "Compare the two job advertisements in the table below. Write a short paragraph describing their differences in salary and work hours. Write 3 sentences.",
+        "target_length": "3 sentences (approx. 40-50 words)",
+        "focus_skill": "Using comparative adjectives to describe job features.",
+        "useful_language": [
+          "Job A offers a higher salary than...",
+          "In contrast, Job B requires longer work hours...",
+          "Job A is remote, whereas Job B is..."
+        ],
+        "success_criteria": [
+          "Compare the salaries of Job A and Job B.",
+          "Compare the weekly work hours of Job A and Job B.",
+          "Write exactly three grammatically correct sentences."
+        ],
+        "visual_data": {
+          "type": "markdown_table",
+          "content": "| Feature | Job A: Web Developer | Job B: IT Assistant |\n|---|---|---|\n| **Salary** | $3,500 / month | $2,200 / month |\n| **Work Hours** | 35 hours / week | 45 hours / week |\n| **Location** | Remote (Work from home) | Office-based |"
+        },
+        "topic_alignment": true
+      }
+    ]
+  },
+  "answers": {
+    "reading_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "TRUE",
+        "evidence_quote": "However, many candidates do not know that there are strict laws governing what an **interviewer** can ask.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Câu hỏi khẳng định ở Mỹ có những luật nghiêm ngặt về những gì người phỏng vấn có thể hỏi. Điều này khớp hoàn toàn với câu ở đoạn 1: 'However, many candidates do not know that there are strict laws governing what an interviewer can ask.'",
+        "why_others_wrong_vi": "Đáp án là TRUE nên FALSE và NOT GIVEN là sai.",
+        "tip_vi": "Hãy tìm các từ đồng nghĩa như 'strict laws' và 'strict legal rules'."
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "FALSE",
+        "evidence_quote": "Prospective employers cannot ask about your **childcare arrangements**, as this information has historically been used to **discriminate** against women.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Câu hỏi nói rằng nhà tuyển dụng được phép hỏi về kế hoạch chăm sóc con cái. Tuy nhiên, đoạn 2 khẳng định họ 'không thể hỏi' (cannot ask) về việc này.",
+        "why_others_wrong_vi": "Thông tin trong bài đọc trái ngược trực tiếp với câu hỏi, do đó FALSE là đáp án duy nhất đúng.",
+        "tip_vi": "Chú ý từ 'cannot ask' trong bài trái ngược với 'legally allowed' trong câu hỏi."
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "NOT GIVEN",
+        "evidence_quote": "Prospective employers cannot ask about your **childcare arrangements**, as this information has historically been used to **discriminate** against women.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Câu hỏi nói hầu hết ứng viên nữ thích làm cho công ty có lịch linh hoạt. Đoạn 2 đề cập đến việc chăm sóc con cái từng bị dùng để phân biệt đối xử với phụ nữ, nhưng không có thông tin nào về sở thích của họ.",
+        "why_others_wrong_vi": "Thông tin này không xuất hiện trong bài đọc nên TRUE/FALSE là sai.",
+        "tip_vi": "Nếu một ý kiến hoặc sở thích không được đề cập trực tiếp hoặc gián tiếp, chọn NOT GIVEN."
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "TRUE",
+        "evidence_quote": "While they can ask if you are available to work on weekends, they cannot ask about the specific reason you might need a Sunday off.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Câu hỏi khẳng định nhà tuyển dụng được phép hỏi bạn có làm cuối tuần được không. Đoạn 3 ghi: 'While they can ask if you are available to work on weekends...'",
+        "why_others_wrong_vi": "Đáp án là TRUE nên FALSE và NOT GIVEN là sai.",
+        "tip_vi": "Cấu trúc 'While they can ask...' xác nhận điều đó là được phép."
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "FALSE",
+        "evidence_quote": "An interviewer cannot ask \"Where were you born?\" or \"Is English your first language?\"",
+        "evidence_paragraph": 4,
+        "explanation_vi": "Câu hỏi nói rằng việc hỏi nơi sinh để kiểm tra thị thực là hợp pháp. Tuy nhiên, đoạn 4 khẳng định người phỏng vấn không thể hỏi câu 'Where were you born?'.",
+        "why_others_wrong_vi": "Nhận định này trái ngược với bài viết, nên FALSE là đáp án duy nhất đúng.",
+        "tip_vi": "Tìm câu trích dẫn trực tiếp chứa cụm 'cannot ask'."
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "anti-discrimination",
+        "evidence_quote": "In the United States, federal **anti-discrimination laws** protect applicants from unfair questioning.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Đoạn 1 nêu rõ rằng luật liên bang về chống phân biệt đối xử (anti-discrimination) bảo vệ các ứng viên khỏi các câu hỏi không công bằng.",
+        "why_others_wrong_vi": "Các từ khác không xuất hiện trong câu hoặc không phù hợp về mặt ngữ nghĩa và ngữ pháp.",
+        "tip_vi": "Hãy tìm động từ 'protect' và danh từ 'laws' đi liền trong câu."
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "faith",
+        "evidence_quote": "Asking about your faith is a direct violation that creates serious **legal liability** for the firm.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Từ khóa trong đoạn 3 chỉ ra rằng hỏi về 'faith' (đức tin/tôn giáo) là sự vi phạm trực tiếp.",
+        "why_others_wrong_vi": "Các từ khác không điền vừa về ngữ nghĩa hoặc không có trong câu gốc.",
+        "tip_vi": "Từ 'faith' tương đương với tôn giáo trong ngữ cảnh này."
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "public awareness",
+        "evidence_quote": "Unfortunately, a general lack of **public awareness** [R] means that many applicants feel forced to share their nationality or native language.",
+        "evidence_paragraph": 4,
+        "explanation_vi": "Đoạn 4 nêu lý do ứng viên chia sẻ thông tin quốc tịch là do thiếu 'public awareness' (nhận thức cộng đồng).",
+        "why_others_wrong_vi": "Các từ khác không đúng nghĩa trong ngữ cảnh này.",
+        "tip_vi": "Tìm cụm từ 'lack of' đi kèm trong bài đọc."
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "human error",
+        "evidence_quote": "Understanding these protections helps prevent **human error** [R] during your job search.",
+        "evidence_paragraph": 5,
+        "explanation_vi": "Đoạn 5 kết luận hiểu biết các điều luật giúp tránh 'human error' (sai sót của con người) trong quá trình tìm việc.",
+        "why_others_wrong_vi": "Các từ khác không phù hợp ngữ pháp hoặc ý nghĩa câu kết luận.",
+        "tip_vi": "Tìm động từ 'prevent' để định vị vị trí điền từ."
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "Ask about your availability directly using specific hours",
+        "evidence_quote": "they must ask about your **commitment** and availability directly (e.g., \"Can you work from 9 a.m. to 5 p.m.?\")",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Đoạn 2 nêu rõ nếu muốn biết cam kết thời gian làm việc, nhà tuyển dụng phải hỏi trực tiếp về sự sẵn sàng bằng các giờ cụ thể.",
+        "why_others_wrong_vi": "Phương án A, B là các câu hỏi phạm pháp về đời tư; phương án D không được đề cập.",
+        "tip_vi": "Ví dụ cụ thể về giờ giấc phỏng vấn (9 a.m. to 5 p.m.) chính là minh chứng cho việc hỏi trực tiếp."
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "Because it creates serious legal liability for the firm",
+        "evidence_quote": "Asking about your faith is a direct violation that creates serious **legal liability** for the firm.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Đoạn 3 giải thích việc hỏi về đức tin (tôn giáo) tạo ra trách nhiệm pháp lý nghiêm trọng cho doanh nghiệp.",
+        "why_others_wrong_vi": "A, C, D là các lý do sai lệch hoặc không được đề cập trong đoạn văn.",
+        "tip_vi": "Chú ý cụm từ 'creates serious legal liability'."
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "\"Are you authorized to work in the United States?\"",
+        "evidence_quote": "However, they can legally ask if you are **authorized** to work in the United States.",
+        "evidence_paragraph": 4,
+        "explanation_vi": "Đoạn 4 nói rằng nhà tuyển dụng có thể hỏi hợp pháp xem ứng viên có được phép làm việc tại Mỹ hay không.",
+        "why_others_wrong_vi": "Các phương án A, B, D là những câu hỏi phân biệt đối xử và phạm pháp về nơi sinh và quốc tịch.",
+        "tip_vi": "Nhận biết câu hỏi hợp pháp duy nhất liên quan đến quyền lao động."
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "Whether you can perform the essential functions of the job",
+        "evidence_quote": "They may only ask if you can perform the **essential functions** of the job, with or without **reasonable accommodation**.",
+        "evidence_paragraph": 5,
+        "explanation_vi": "Đoạn 5 khẳng định nhà tuyển dụng chỉ có thể hỏi bạn có thể thực hiện các chức năng công việc thiết yếu hay không.",
+        "why_others_wrong_vi": "A, C, D đều là các thông tin sức khỏe đời tư bị cấm hỏi.",
+        "tip_vi": "Tìm cụm từ 'essential functions' để khớp đáp án."
+      }
+    ],
+    "grammar_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "have worked",
+        "analysis_vi": "Dùng thì Hiện tại Hoàn thành vì có từ chỉ thời gian bắt đầu từ quá khứ 'since I graduated'.",
+        "tip_vi": "Cấu trúc: S + have/has + V3/ed + since + S + V2/ed."
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "had",
+        "analysis_vi": "Dùng thì Quá khứ Đơn vì hành động xảy ra tại thời điểm cụ thể đã qua 'Yesterday'.",
+        "tip_vi": "Nhận diện 'yesterday' làm dấu hiệu của Quá khứ Đơn."
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "were you",
+        "analysis_vi": "Trạng thái tìm việc đã kết thúc khi tìm thấy vị trí mới trong quá khứ ('before you found...'), nên dùng Quá khứ Đơn.",
+        "tip_vi": "Mệnh đề với 'before + V2' thường đi với hành động xảy ra trước đó, ở đây là trạng thái trong quá khứ."
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "has worked",
+        "analysis_vi": "Hành động làm việc đã diễn ra được 5 năm ('for five years') và vẫn tiếp tục vì anh ấy 'no plans to leave'.",
+        "tip_vi": "Hiện tại hoàn thành chỉ hành động bắt đầu trong quá khứ và còn tiếp diễn."
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "introduced",
+        "analysis_vi": "'Last year' chỉ thời điểm kết thúc trong quá khứ, yêu cầu dùng Quá khứ Đơn.",
+        "tip_vi": "Từ chỉ thời gian cụ thể như 'last year' luôn đi với Quá khứ Đơn."
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "sent",
+        "analysis_vi": "Hành động gửi CV diễn ra vào thứ Hai tuần trước ('last Monday'), là thời điểm xác định trong quá khứ, nên dùng Quá khứ Đơn.",
+        "tip_vi": "Chú ý từ 'last Monday' chỉ thời điểm đã qua."
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "have interviewed",
+        "analysis_vi": "'Up to now' là trạng từ chỉ kết quả tích lũy tính đến nay, yêu cầu dùng Hiện tại Hoàn thành.",
+        "tip_vi": "'Up to now', 'so far' là dấu hiệu đặc trưng của Hiện tại Hoàn thành."
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "worked",
+        "analysis_vi": "Năm 'in 2020' đã kết thúc nên dùng Quá khứ Đơn.",
+        "tip_vi": "Một năm cụ thể trong quá khứ đòi hỏi Quá khứ Đơn."
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "haven't sent",
+        "analysis_vi": "Trạng từ 'yet' ở cuối câu phủ định yêu cầu dùng Hiện tại Hoàn thành phủ định.",
+        "tip_vi": "S + haven't/hasn't + V3/ed + yet."
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "did you start",
+        "analysis_vi": "Câu hỏi về thời điểm bắt đầu sự nghiệp dùng 'When' yêu cầu dùng Quá khứ Đơn.",
+        "tip_vi": "Hỏi 'When' về hành động quá khứ thường dùng cấu trúc: When did + S + V(bare)?"
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "meeting",
+        "analysis_vi": "Sau cụm động từ 'look forward to' là danh động từ (V-ing).",
+        "tip_vi": "Ghi nhớ cụm: look forward to + V-ing."
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "to hire",
+        "analysis_vi": "Động từ 'decide' đi kèm động từ nguyên mẫu có 'to' (to-infinitive).",
+        "tip_vi": "Cấu trúc: decide + to-infinitive."
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "asking",
+        "analysis_vi": "Động từ 'avoid' đi kèm danh động từ (V-ing).",
+        "tip_vi": "Cấu trúc: avoid + V-ing."
+      },
+      {
+        "question_id": 14,
+        "correct_answer": "learn",
+        "analysis_vi": "Cấu trúc 'help someone do' yêu cầu động từ nguyên mẫu không to (bare infinitive).",
+        "tip_vi": "Cấu trúc: help + object + V(bare) / to-V."
+      },
+      {
+        "question_id": 15,
+        "correct_answer": "pursuing",
+        "analysis_vi": "Sau giới từ 'of' của cụm 'dreamed of', động từ phải ở dạng danh động từ (V-ing).",
+        "tip_vi": "Sau các giới từ (in, on, at, about,...) dùng V-ing."
+      },
+      {
+        "question_id": 16,
+        "correct_answer": "to talk",
+        "analysis_vi": "Cấu trúc 'ask someone to do something' yêu cầu động từ dạng to-infinitive.",
+        "tip_vi": "Cấu trúc: ask + object + to-infinitive."
+      },
+      {
+        "question_id": 17,
+        "correct_answer": "working",
+        "analysis_vi": "Động từ 'mind' đi kèm danh động từ (V-ing) trong câu phủ định.",
+        "tip_vi": "Cấu trúc: S + don't/doesn't mind + V-ing."
+      },
+      {
+        "question_id": 18,
+        "correct_answer": "to include",
+        "analysis_vi": "Sau cấu trúc 'It is + adjective' là động từ nguyên mẫu có 'to' (to-infinitive).",
+        "tip_vi": "Sau cấu trúc 'It is + adjective' là động từ nguyên mẫu có 'to' (to-infinitive)."
+      },
+      {
+        "question_id": 19,
+        "correct_answer": "to sign",
+        "analysis_vi": "Động từ 'manage' đi kèm động từ nguyên mẫu có 'to'.",
+        "tip_vi": "Cấu trúc: manage + to-infinitive."
+      },
+      {
+        "question_id": 20,
+        "correct_answer": "researching",
+        "analysis_vi": "Động từ 'recommend' yêu cầu danh động từ (V-ing) khi không có tân ngữ phía sau.",
+        "tip_vi": "Cấu trúc: recommend + V-ing."
+      },
+      {
+        "question_id": 21,
+        "correct_answer": "I sent my resume to the manager yesterday.",
+        "analysis_vi": "Trạng từ 'yesterday' buộc câu phải dùng thì Quá khứ Đơn. Sửa 'have sent' thành 'sent'.",
+        "tip_vi": "Không dùng Hiện tại Hoàn thành khi có thời gian quá khứ xác định."
+      },
+      {
+        "question_id": 22,
+        "correct_answer": "She decided to pursue a career in marketing instead of finance.",
+        "analysis_vi": "Động từ 'decide' đi kèm to-infinitive. Sửa danh động từ 'pursuing' thành 'to pursue'.",
+        "tip_vi": "Ghi nhớ cấu trúc của động từ 'decide'."
+      },
+      {
+        "question_id": 23,
+        "correct_answer": "I have worked here for three years and I really enjoy it.",
+        "analysis_vi": "Hành động bắt đầu trong quá khứ kéo dài đến hiện tại đi kèm 'for three years' cần dùng Hiện tại Hoàn thành. Sửa 'am working' thành 'have worked'.",
+        "tip_vi": "Dùng Hiện tại Hoàn thành để thay thế cho Hiện tại Tiếp diễn khi mô tả khoảng thời gian tích lũy."
+      },
+      {
+        "question_id": 24,
+        "correct_answer": "The interviewer suggested sending a thank-you email after the meeting.",
+        "analysis_vi": "Động từ 'suggest' yêu cầu gerund. Sửa 'to send' thành 'sending'.",
+        "tip_vi": "Ghi nhớ cấu trúc của động từ 'suggest'."
+      },
+      {
+        "question_id": 25,
+        "correct_answer": "I graduated from college in 2022 and then started my first job.",
+        "analysis_vi": "Mốc thời gian 'in 2022' đã kết thúc nên dùng Quá khứ Đơn. Sửa 'have graduated' thành 'graduated'.",
+        "tip_vi": "Thời gian kết thúc cụ thể luôn đi với Quá khứ Đơn."
+      },
+      {
+        "question_id": 26,
+        "correct_answer": "I do not mind working on weekends.",
+        "analysis_vi": "Viết lại câu bằng cách thay 'not a problem for me to work' bằng 'do not mind' + V-ing ('working').",
+        "tip_vi": "Cấu trúc: not mind + V-ing."
+      },
+      {
+        "question_id": 27,
+        "correct_answer": "I have been job hunting for two months.",
+        "analysis_vi": "Dùng Hiện tại Hoàn thành Tiếp diễn 'have been job hunting' đi kèm khoảng thời gian 'for two months' để thay thế cho 'started two months ago and still doing'.",
+        "tip_vi": "Diễn tả hành động liên tục từ quá khứ đến nay bằng Present Perfect Continuous."
+      },
+      {
+        "question_id": 28,
+        "correct_answer": "He expects to get the job.",
+        "analysis_vi": "Cấu trúc 'hopes that S will do' được viết ngắn lại bằng 'expects to do' + V(bare) ('expects to get').",
+        "tip_vi": "Cấu trúc: expect + to-infinitive."
+      },
+      {
+        "question_id": 29,
+        "correct_answer": "They decided to onboard the new employees next week.",
+        "analysis_vi": "Cấu trúc 'make a plan to do' tương đương với 'decide to do' + V(bare) ('decided to onboard').",
+        "tip_vi": "Cấu trúc: decide + to-infinitive."
+      },
+      {
+        "question_id": 30,
+        "correct_answer": "The last time I went to a job interview was two years ago.",
+        "analysis_vi": "Viết lại câu phủ định Hiện tại Hoàn thành 'haven't done for X years' thành 'The last time I did was X years ago'. Sửa 'have been' thành 'went' ở quá khứ đơn và đổi 'for' thành 'ago'.",
+        "tip_vi": "Cấu trúc: The last time + S + V2 + was + time + ago."
+      }
+    ],
+    "writing_guidance": [
+      {
+        "task_id": 1,
+        "model_answer": "1. Preparing for a job interview is very important.\n2. You must check your resume spelling carefully.",
+        "guidance_vi": "Bài tập sắp xếp từ giúp học sinh làm quen với vị trí của danh động từ làm chủ ngữ (Preparing...) và vị trí của động từ tình thái 'must' đứng trước động từ thường dạng nguyên mẫu không to (must check).",
+        "self_checklist": [
+          "Did you capitalize the first word of each sentence?",
+          "Are all words included in the correct order?",
+          "Did you put a period at the end of each sentence?"
+        ]
+      },
+      {
+        "task_id": 2,
+        "model_answer": "Dear Mr. Smith,\n\nThank you very much for your time during our job interview yesterday. I really enjoyed learning about the marketing assistant position and meeting the team. Could you please let me know when you will make a final decision? I look forward to hearing from you.\n\nBest regards,\nJane Doe",
+        "guidance_vi": "Thư điện tử viết ngắn (3-4 câu) cần mở đầu và kết thúc trang trọng. Thân thư viết đủ 3 câu, bày tỏ sự cảm ơn, ấn tượng tốt về cuộc gặp và hỏi lịch trình đưa ra quyết định một cách lịch sự bằng cấu trúc 'Could you please...'.",
+        "self_checklist": [
+          "Did you write exactly 3 to 4 sentences in the email body?",
+          "Is the greeting polite and formal?",
+          "Did you ask about the decision timeline?"
+        ]
+      },
+      {
+        "task_id": 3,
+        "model_answer": "The chart shows that candidates in the technology industry spend the most time preparing for job interviews, averaging eight hours. In contrast, sales candidates prepare the least, spending only three hours on average. Finance candidates fall in the middle, dedicating six hours to their interview preparation.",
+        "guidance_vi": "Đoạn văn miêu tả dữ liệu biểu đồ SVG so sánh 3 ngành nghề. Câu 1 viết về ngành chuẩn bị nhiều nhất (Technology - 8h). Câu 2 viết về ngành chuẩn bị ít nhất (Sales - 3h) bằng từ nối 'In contrast'. Câu 3 viết về ngành ở giữa (Finance - 6h). Đủ 3 câu.",
+        "self_checklist": [
+          "Did you mention the highest value (Technology with 8 hours)?",
+          "Did you mention the lowest value (Sales with 3 hours)?",
+          "Did you write exactly three sentences?"
+        ]
+      },
+      {
+        "task_id": 4,
+        "model_answer": "I graduated from Hanoi University last year, where my major was business administration. During my studies, I learned a lot about corporate culture and management. In the future, I hope to work as a hiring manager at an international company.",
+        "guidance_vi": "Học sinh thực hành viết đoạn ngắn mô tả bản thân. Cần nêu được chuyên ngành hoặc lĩnh vực học tập trước đây và mong muốn công việc trong tương lai.",
+        "self_checklist": [
+          "Did you state your major or past studies?",
+          "Did you state your future career goal?",
+          "Did you write exactly 3 to 4 sentences?"
+        ]
+      },
+      {
+        "task_id": 5,
+        "model_answer": "Job A offers a higher salary than Job B, providing $3,500 per month compared to $2,200. However, Job B has longer work hours, requiring forty-five hours per week whereas Job A requires thirty-five. Additionally, Job A allows employees to work remotely, while Job B is based in an office.",
+        "guidance_vi": "Học sinh so sánh 2 vị trí tuyển dụng dựa trên bảng dữ liệu. Cần sử dụng các cấu trúc so sánh hơn ('higher salary') và các từ nối tương phản ('whereas', 'while') để so sánh lương, giờ làm việc và địa điểm.",
+        "self_checklist": [
+          "Did you compare the salary of both jobs?",
+          "Did you compare the work hours of both jobs?",
+          "Did you write exactly three sentences?"
+        ]
+      }
+    ],
+    "review_bridge": [
+      {
+        "id": 1,
+        "prompt": "She hopes (get) _______ the job at the bank.",
+        "correct_answer": "to get",
+        "rationale_vi": "Động từ 'hope' đi với động từ nguyên mẫu có 'to' (to-infinitive)."
+      },
+      {
+        "id": 2,
+        "prompt": "I don't mind (work) _______ late tonight.",
+        "correct_answer": "working",
+        "rationale_vi": "Động từ 'mind' đi với danh động từ (V-ing)."
+      },
+      {
+        "id": 3,
+        "prompt": "We (already submit) _______ our applications.",
+        "correct_answer": "have already submitted",
+        "rationale_vi": "Có trạng từ 'already' diễn tả hành động vừa mới hoàn thành, yêu cầu dùng Hiện tại Hoàn thành."
+      }
+    ]
+  },
+  "level": "B1",
+  "topic": "Workplace orientation and job advertisements",
+  "day": "20260704",
+  "lesson_id": "LSN-20260704-B1-b6a1f8c2",
+  "practice_markdown": "Reading: B1\nWriting: A2\n\n## Reading Source Verification\n| Source title | Publisher/Organization | Date/Access date | Final verified URL | URL status | Source type | Reliability check | How the passage uses the source |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Five Illegal Job Interview Questions in the US | VOA Learning English | 2021-03-10 / 2026-07-02 | https://learningenglish.voanews.com/a/five-illegal-job-interview-questions-in-the-us/5801968.html | active | Educational News Article | VOA Learning English is a reputable US public educational resource. | Focuses on U.S. employment regulations and illegal interview questions. |\n\n## Warm-up\nAnswer the following questions in Vietnamese or English:\n1. Have you ever been to a job interview? What questions did they ask you?\n2. Do you think employers should be allowed to ask about your personal life (like marriage or kids) during a job interview? Why or why not?\n3. What legal protections or employee rights do you know about in your country?\n\n## Reading Passage\n### Understanding Your Rights: Five Off-Limit Interview Questions\n\nWhen entering the job market, every **job seeker** must learn how to **navigate** the interview process. During these meetings, a **prospective employer** wants to evaluate your **professional credentials** to see if you fit their **corporate culture**. However, many candidates do not know that there are strict laws governing what an **interviewer** can ask. In the United States, federal **anti-discrimination laws** protect applicants from unfair questioning. This means that both companies and hiring managers should stay **accountable** [R] for the questions they ask, ensuring they relate only to your ability to do the work.\n\nOne of the most common areas of confusion involves **marital status** and family plans. Under federal guidelines, questions about whether you are married, have children, or plan to start a family are strictly **off-limits**. Prospective employers cannot ask about your **childcare arrangements**, as this information has historically been used to **discriminate** against women. Although an employer might want to know if you can **commit** to a long-term project, they must ask about your **commitment** and availability directly (e.g., \"Can you work from 9 a.m. to 5 p.m.?\") rather than asking about your personal life.\n\nAnother major protected area is religion. It is illegal for an employer to ask about your religious beliefs or which holidays you **observe**. While they can ask if you are available to work on weekends, they cannot ask about the specific reason you might need a Sunday off. If a company requires employees to work during a holiday, they must explain the schedule and ask if you can fulfill that requirement. Asking about your faith is a direct violation that creates serious **legal liability** for the firm.\n\nFurthermore, questions regarding **citizenship** and **national origin** are prohibited. An interviewer cannot ask \"Where were you born?\" or \"Is English your first language?\" However, they can legally ask if you are **authorized** to work in the United States. Unfortunately, a general lack of **public awareness** [R] means that many applicants feel forced to share their nationality or native language. Knowing your rights ensures that you only discuss your qualifications rather than personal details that are not relevant to the job.\n\nFinally, questions about age or physical health are protected. Employers cannot ask how old you are, nor can they ask about your medical history. They may only ask if you can perform the **essential functions** of the job, with or without **reasonable accommodation**. Understanding these protections helps prevent **human error** [R] during your job search. By keeping the conversation professional, both candidates and employers can make fair decisions based on talent and experience rather than bias.\n\n## Questions for Reading\n### Questions 1–5: True/False/Not Given\n\n1. In the United States, there are strict legal rules about what an interviewer can ask a candidate.\n2. Employers are legally allowed to ask about your childcare plans to see if you can work long hours.\n3. Most female job seekers prefer to work for companies that offer flexible schedules.\n4. Employers are permitted to ask if you can work on weekends.\n5. It is legal for an interviewer to ask where you were born if they want to check your visa.\n\n### Questions 6–9: Gap Fill\n\n6. In the United States, federal _______ laws protect job applicants from unfair questions.\n7. Asking about a candidate's _______ is a direct violation of law.\n8. Many applicants share their nationality due to a general lack of _______.\n9. Understanding legal protections can help avoid _______ during a job search.\n\n### Questions 10–13: Multiple Choice\n\n10. According to paragraph 2, if a prospective employer wants to know if you can commit to a long-term project, they should:\n    A. Ask if you have children or family responsibilities\n    B. Inquire about your marital status\n    C. Ask about your availability directly using specific hours\n    D. Request a reference from your family\n11. Why is it illegal for an employer to ask about a candidate's religion?\n    A. Because companies do not work on weekends\n    B. Because it creates serious legal liability for the firm\n    C. Because holidays are always paid\n    D. Because candidates never answer religious questions\n12. What question can a prospective employer legally ask to check your work status in the US?\n    A. \"Where were you born?\"\n    B. \"Is English your first language?\"\n    C. \"Are you authorized to work in the United States?\"\n    D. \"Which country is your passport from?\"\n13. According to paragraph 5, employers can ask about your health only in relation to:\n    A. Your detailed medical history\n    B. Whether you can perform the essential functions of the job\n    C. How many sick days you took in your previous job\n    D. Your age and general physical fitness\n\n## Questions for Grammar\n### Multiple Choice\n\n1. I _______ for three companies since I graduated from university.\n    A. worked\n    B. have worked\n    C. work\n    D. am working\n2. Yesterday, she _______ her first job interview at a tech startup.\n    A. has had\n    B. had\n    C. has\n    D. is having\n3. How long _______ job hunting before you found this position?\n    A. did you\n    B. have you been\n    C. were you\n    D. are you\n4. He _______ in this department for five years, and he has no plans to leave.\n    A. worked\n    B. has worked\n    C. is working\n    D. works\n5. Last year, the company _______ a new onboarding program for new employees.\n    A. introduced\n    B. has introduced\n    C. introduces\n    D. was introducing\n6. I _______ my resume to the manager last Monday, but I haven't received a reply yet.\n    A. have sent\n    B. sent\n    C. send\n    D. am sending\n7. Up to now, we _______ over fifty candidates for the sales position.\n    A. interviewed\n    B. have interviewed\n    C. interview\n    D. are interviewing\n8. She _______ at that retail store in 2020 before she decided to go back to school.\n    A. has worked\n    B. worked\n    C. works\n    D. was working\n9. I _______ a thank-you email to the interviewer yet.\n    A. didn't send\n    B. haven't sent\n    C. don't send\n    D. am not sending\n10. When _______ your career in human resources?\n    A. have you started\n    B. did you start\n    C. do you start\n    D. are you starting\n\n### Gap Fill\n\n11. I look forward to _______ our new team members next week.\n    A. meet\n    B. meeting\n    C. to meet\n    D. met\n12. The manager decided _______ the candidate who had the most experience.\n    A. hire\n    B. hiring\n    C. to hire\n    D. hired\n13. You should avoid _______ personal questions during a job interview.\n    A. ask\n    B. asking\n    C. to ask\n    D. asked\n14. The company offers a training program to help employees _______ new skills.\n    A. learn\n    B. learning\n    C. to learning\n    D. learnt\n15. She has always dreamed of _______ a career in project management.\n    A. pursue\n    B. pursuing\n    C. to pursue\n    D. pursued\n16. The interviewer asked me _______ about my experience with team projects.\n    A. talk\n    B. talking\n    C. to talk\n    D. talked\n17. I don't mind _______ overtime during busy seasons.\n    A. work\n    B. working\n    C. to work\n    D. worked\n18. It is important _______ professional credentials on your resume.\n    A. include\n    B. including\n    C. to include\n    D. included\n19. They managed _______ the contract before the deadline.\n    A. sign\n    B. signing\n    C. to sign\n    D. signed\n20. We recommend _______ the company's background before the interview.\n    A. research\n    B. researching\n    C. to research\n    D. researched\n\n### Sentence Transformation\n\n21. Correct the error: I have sent my resume to the manager yesterday.\n22. Correct the error: She decided pursuing a career in marketing instead of finance.\n23. Correct the error: I am working here for three years and I really enjoy it.\n24. Correct the error: The interviewer suggested to send a thank-you email after the meeting.\n25. Correct the error: I have graduated from college in 2022 and then started my first job.\n26. Rewrite the sentence: It is not a problem for me to work on weekends. (Use \"mind\")\n27. Rewrite the sentence: I started job hunting two months ago and I am still job hunting. (Use present perfect continuous)\n28. Rewrite the sentence: He hopes that he will get the job. (Use \"expects to\")\n29. Rewrite the sentence: They made a plan to onboard the new employees next week. (Use \"decided\")\n30. Rewrite the sentence: I haven't been to a job interview for two years. (Start with \"The last time\")\n\n## Questions for Writing\n| # | Task | Target length | Focus skill | Useful language | Success criteria |\n| --- | --- | --- | --- | --- | --- |\n| 1 | Sentence Building: Sắp xếp các từ sau thành các câu hoàn chỉnh về chủ đề chuẩn bị phỏng vấn: | 2 sentences (approx. 15-20 words) | Correct word order for gerund subjects and modal verbs. | 1. interview / preparing / job / for / is / important / very.<br>2. resume / you / check / spelling / must / your / carefully. | Write two grammatically correct sentences.<br>Place the gerund subject first in Sentence 1.<br>Use the modal verb 'must' correctly after the subject in Sentence 2. |\n| 2 | Short Email: Write a short email to an interviewer thanking them for the job interview and asking when they will make a decision. Write 3-4 sentences. | 3-4 sentences (approx. 40-50 words) | Writing a polite thank-you email and asking for information. | Thank you for your time...<br>I enjoyed learning about the company...<br>Could you please let me know when... | Use a formal greeting (e.g., Dear Mr. Smith) and closing (e.g., Best regards).<br>Write exactly 3 to 4 sentences in the email body.<br>Ask politely about the decision timeline. |\n| 3 | Data Description: Describe the chart below showing the average hours candidates spend preparing for job interviews across three different industries. Write 3 sentences.<br><br><div class=\"svg-chart-container\"><svg viewBox=\"0 0 400 220\" width=\"100%\" height=\"220\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: Arial, sans-serif; background-color: #fcfcfc; border: 1px solid #eee; border-radius: 8px;\"><rect x=\"10\" y=\"10\" width=\"380\" height=\"200\" fill=\"none\" /><text x=\"200\" y=\"30\" font-size=\"14\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#333\">Average Interview Preparation Hours by Industry</text><line x1=\"60\" y1=\"170\" x2=\"360\" y2=\"170\" stroke=\"#666\" stroke-width=\"2\" /><line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"170\" stroke=\"#666\" stroke-width=\"2\" /><line x1=\"55\" y1=\"170\" x2=\"60\" y2=\"170\" stroke=\"#666\" /><text x=\"45\" y=\"174\" font-size=\"10\" text-anchor=\"end\" fill=\"#666\">0</text><line x1=\"55\" y1=\"140\" x2=\"60\" y2=\"140\" stroke=\"#666\" /><text x=\"45\" y=\"144\" font-size=\"10\" text-anchor=\"end\" fill=\"#666\">3</text><line x1=\"55\" y1=\"110\" x2=\"60\" y2=\"110\" stroke=\"#666\" /><text x=\"45\" y=\"114\" font-size=\"10\" text-anchor=\"end\" fill=\"#666\">6</text><line x1=\"55\" y1=\"80\" x2=\"60\" y2=\"80\" stroke=\"#666\" /><text x=\"45\" y=\"84\" font-size=\"10\" text-anchor=\"end\" fill=\"#666\">9</text><text x=\"45\" y=\"45\" font-size=\"9\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#666\">Hours</text><rect x=\"100\" y=\"90\" width=\"40\" height=\"80\" fill=\"#4285F4\" rx=\"3\" /><text x=\"120\" y=\"85\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#4285F4\">8h</text><text x=\"120\" y=\"185\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">Technology</text><rect x=\"180\" y=\"110\" width=\"40\" height=\"60\" fill=\"#34A853\" rx=\"3\" /><text x=\"200\" y=\"105\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#34A853\">6h</text><text x=\"200\" y=\"185\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">Finance</text><rect x=\"260\" y=\"140\" width=\"40\" height=\"30\" fill=\"#EA4335\" rx=\"3\" /><text x=\"280\" y=\"135\" font-size=\"10\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#EA4335\">3h</text><text x=\"280\" y=\"185\" font-size=\"10\" text-anchor=\"middle\" fill=\"#333\">Sales</text></svg></div> | 3 sentences (approx. 40-50 words) | Comparing quantities and writing simple chart summaries. | Candidates in... spend the most time...<br>In contrast, those in... prepare for only...<br>Finance candidates spend slightly less time than... | Identify the industry with the highest preparation hours.<br>Identify the industry with the lowest preparation hours.<br>Write exactly three grammatically correct sentences. |\n| 4 | Short Paragraph: Write a short paragraph describing your work or study background and what kind of job you want to do in the future. Write 3-4 sentences. | 3-4 sentences (approx. 50-60 words) | Describing educational history and future career goals. | I graduated from...<br>My major was...<br>In the future, I want to become a...<br>I hope to work for a company... | State your major or your past work field.<br>Describe your future job preference clearly.<br>Write exactly 3 to 4 sentences. |\n| 5 | Compare and Describe: Compare the two job advertisements in the table below. Write a short paragraph describing their differences in salary and work hours. Write 3 sentences.<br><br>\\| Feature \\| Job A: Web Developer \\| Job B: IT Assistant \\|<br>\\|---\\|---\\|---\\|<br>\\| **Salary** \\| $3,500 / month \\| $2,200 / month \\|<br>\\| **Work Hours** \\| 35 hours / week \\| 45 hours / week \\|<br>\\| **Location** \\| Remote (Work from home) \\| Office-based \\| | 3 sentences (approx. 40-50 words) | Using comparative adjectives to describe job features. | Job A offers a higher salary than...<br>In contrast, Job B requires longer work hours...<br>Job A is remote, whereas Job B is... | Compare the salaries of Job A and Job B.<br>Compare the weekly work hours of Job A and Job B.<br>Write exactly three grammatically correct sentences. |\n\n## Review Bridge\n#### V. Review Bridge / Ôn tập liên chủ đề\n1. She hopes (get) _______ the job at the bank.\n\n2. I don't mind (work) _______ late tonight.\n\n3. We (already submit) _______ our applications.\n",
+  "vocabulary_grammar_markdown": "## Vocabulary Table\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |\n| --- | --- | --- | --- | --- |\n| off-limits | /ˌɔːf ˈlɪm.ɪts/ | adjective | cấm, giới hạn ngoại lệ (not allowed to be asked or discussed) | Questions about marriage are off-limits. |\n| marital status | /ˈmær.ɪ.təl ˌsteɪ.təs/ | noun phrase | tình trạng hôn nhân (whether a person is married, single, or divorced) | Marital status is a personal detail. |\n| childcare arrangements | /ˈtʃaɪld.keər əˌreɪndʒ.mənts/ | noun phrase | sắp xếp việc chăm sóc con cái (plans made for looking after children) | Employers cannot ask about childcare arrangements. |\n| discriminate | /dɪˈskrɪm.ɪ.neɪt/ | verb | phân biệt đối xử (to treat someone unfairly because of their background) | The law protects candidates so employers do not discriminate. |\n| legal liability | /ˈliː.ɡəl ˌlaɪ.əˈbɪl.ə.ti/ | noun phrase | trách nhiệm pháp lý (responsibility under the law) | Asking illegal questions creates legal liability. |\n| observe | /əbˈzɜːv/ | verb | tuân thủ, cử hành (to follow or celebrate a rule, custom, or holiday) | They asked if I observe specific religious holidays. |\n| national origin | /ˌnæʃ.ən.əl ˈɒr.ɪ.dʒɪn/ | noun phrase | nguồn gốc quốc gia (the nation where a person was born) | It is illegal to ask about a candidate's national origin. |\n| authorized | /ˈɔː.θər.aɪzd/ | adjective | được cấp phép, có quyền (having official permission or legal right) | You must be authorized to work in the country. |\n| essential functions | /ɪˈsen.ʃəl ˈfʌŋk.ʃənz/ | noun phrase | các chức năng/nhiệm vụ thiết yếu (the basic duties that an employee must perform) | Candidates must be able to perform the essential functions of the job. |\n| reasonable accommodation | /ˈriː.zən.ə.bəl əˌkɒm.əˈdeɪ.ʃən/ | noun phrase | sự điều chỉnh hợp lý (changes to a workplace to help a disabled employee) | She requested a reasonable accommodation for her wheelchair. |\n| anti-discrimination laws | /ˌæn.ti dɪsˌkrɪm.ɪˈneɪ.ʃən lɔːz/ | noun phrase | luật chống phân biệt đối xử (laws preventing unfair treatment of groups of people) | Anti-discrimination laws protect job seekers. |\n| job seeker | /ˈdʒɒb ˌsiː.kər/ | noun | người tìm việc (a person who is looking for a job) | The website offers advice for every job seeker. |\n| prospective employer | /prəˈspek.tɪv ɪmˈplɔɪ.ər/ | noun phrase | nhà tuyển dụng tiềm năng (a company or person that might hire you) | Be polite when meeting a prospective employer. |\n| professional credentials | /prəˈfeʃ.ən.əl krɪˈden.ʃəlz/ | noun phrase | chưng chỉ/hồ sơ năng lực chuyên môn (qualifications and work history) | Highlight your professional credentials on your resume. |\n| corporate culture | /ˈkɔː.pər.ət ˈkʌl.tʃər/ | noun phrase | văn hóa doanh nghiệp (the beliefs and values of a company) | I want to work for a company with a supportive corporate culture. |\n| onboard | /ˌɒnˈbɔːd/ | verb | đào tạo hội nhập/nhận nhân sự mới (to integrate a new employee into the organization) | They will onboard the new employees next week. |\n| job interview | /ˈdʒɒb ˌɪn.tə.vjuː/ | noun | buổi phỏng vấn xin việc (a formal meeting to evaluate a candidate) | He prepared well for the job interview. |\n| hiring manager | /ˈhaɪə.rɪŋ ˌmæn.ɪ.dʒər/ | noun phrase | quản lý tuyển dụng (the person responsible for hiring new staff) | The hiring manager reviewed my application. |\n| navigate | /ˈnæv.ɪ.ɡeɪt/ | verb | định hướng, vượt qua (to find the right direction or deal with a difficult situation) | It is difficult to navigate the job market alone. |\n| commitment | /kəˈmɪt.mənt/ | noun | sự cam kết (a promise to dedicate time and energy) | We need a long-term commitment from the candidates. |\n\n## Recycled Vocabulary (Từ vựng ôn tập)\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Bài học gốc (Day) |\n| --- | --- | --- | --- | --- |\n| human error | /ˈhjuːmən ˈerər/ | noun phrase | lỗi của con người | Day 20260703 |\n| public awareness | /ˈpʌblɪk əˈwernəs/ | noun phrase | nhận thức cộng đồng | Day 20260703 |\n| accountable | /əˈkaʊntəbl/ | adjective | chịu trách nhiệm | Day 20260703 |\n\n## Detailed Grammar Guide\n#### Card 1: Present Perfect vs Past Simple\nUse **Past Simple** for actions completed at a specific time in the past (yesterday, last year, in 2020). Use **Present Perfect** for actions connected to the present or occurring at an unstated time (since, yet, so far, up to now).\n\n#### Card 2: Gerunds and Infinitives after Verbs\nSome verbs require a **Gerund** (-ing form) like *avoid*, *enjoy*, *mind*, *suggest*, *recommend*. Other verbs require a **to-infinitive** like *decide*, *hope*, *manage*, *ask someone*.\n\n## Common Mistakes / IELTS Traps for This Topic\n| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |\n| --- | --- | --- | --- |\n| Using present perfect with specific past time words | I have graduated in 2022. | I graduated in 2022. | 'in 2022' is a completed time period, so Past Simple must be used. |\n| Using to-infinitive instead of gerund after avoid/suggest | The manager suggested to hire him. | The manager suggested hiring him. | 'suggest' requires the gerund form for grammatical correctness. |\n| Using present continuous for long-term continuous states starting in the past | I am working here for three years. | I have worked here for three years. | 'for three years' signals that the state started in the past and continues, which requires Present Perfect. |\n",
+  "answers_markdown": "## Reading Answer Key and Detailed Explanations\n\n📖 **Tóm tắt bài đọc:** Bài đọc mô tả chi tiết thông tin từ nguồn đã xác thực.\n\n1. **TRUE**\n- Bằng chứng: \"However, many candidates do not know that there are strict laws governing what an **interviewer** can ask.\" (§1)\n- Cách tìm đáp án: Câu hỏi khẳng định ở Mỹ có những luật nghiêm ngặt về những gì người phỏng vấn có thể hỏi. Điều này khớp hoàn toàn với câu ở đoạn 1: 'However, many candidates do not know that there are strict laws governing what an interviewer can ask.' Đáp án là TRUE nên FALSE và NOT GIVEN là sai.\n> **💡 Mẹo:** Hãy tìm các từ đồng nghĩa như 'strict laws' và 'strict legal rules'.\n\n2. **FALSE**\n- Bằng chứng: \"Prospective employers cannot ask about your **childcare arrangements**, as this information has historically been used to **discriminate** against women.\" (§2)\n- Cách tìm đáp án: Câu hỏi nói rằng nhà tuyển dụng được phép hỏi về kế hoạch chăm sóc con cái. Tuy nhiên, đoạn 2 khẳng định họ 'không thể hỏi' (cannot ask) về việc này. Thông tin trong bài đọc trái ngược trực tiếp với câu hỏi, do đó FALSE là đáp án duy nhất đúng.\n> **💡 Mẹo:** Chú ý từ 'cannot ask' trong bài trái ngược với 'legally allowed' trong câu hỏi.\n\n3. **NOT GIVEN**\n- Bằng chứng: \"Prospective employers cannot ask about your **childcare arrangements**, as this information has historically been used to **discriminate** against women.\" (§2)\n- Cách tìm đáp án: Câu hỏi nói hầu hết ứng viên nữ thích làm cho công ty có lịch linh hoạt. Đoạn 2 đề cập đến việc chăm sóc con cái từng bị dùng để phân biệt đối xử với phụ nữ, nhưng không có thông tin nào về sở thích của họ. Thông tin này không xuất hiện trong bài đọc nên TRUE/FALSE là sai.\n> **💡 Mẹo:** Nếu một ý kiến hoặc sở thích không được đề cập trực tiếp hoặc gián tiếp, chọn NOT GIVEN.\n\n4. **TRUE**\n- Bằng chứng: \"While they can ask if you are available to work on weekends, they cannot ask about the specific reason you might need a Sunday off.\" (§3)\n- Cách tìm đáp án: Câu hỏi khẳng định nhà tuyển dụng được phép hỏi bạn có làm cuối tuần được không. Đoạn 3 ghi: 'While they can ask if you are available to work on weekends...' Đáp án là TRUE nên FALSE và NOT GIVEN là sai.\n> **💡 Mẹo:** Cấu trúc 'While they can ask...' xác nhận điều đó là được phép.\n\n5. **FALSE**\n- Bằng chứng: \"An interviewer cannot ask \"Where were you born?\" or \"Is English your first language?\"\" (§4)\n- Cách tìm đáp án: Câu hỏi nói rằng việc hỏi nơi sinh để kiểm tra thị thực là hợp pháp. Tuy nhiên, đoạn 4 khẳng định người phỏng vấn không thể hỏi câu 'Where were you born?'. Nhận định này trái ngược với bài viết, nên FALSE là đáp án duy nhất đúng.\n> **💡 Mẹo:** Tìm câu trích dẫn trực tiếp chứa cụm 'cannot ask'.\n\n6. **anti-discrimination**\n- Bằng chứng: \"In the United States, federal **anti-discrimination laws** protect applicants from unfair questioning.\" (§1)\n- Cách tìm đáp án: Đoạn 1 nêu rõ rằng luật liên bang về chống phân biệt đối xử (anti-discrimination) bảo vệ các ứng viên khỏi các câu hỏi không công bằng. Các từ khác không xuất hiện trong câu hoặc không phù hợp về mặt ngữ nghĩa và ngữ pháp.\n> **💡 Mẹo:** Hãy tìm động từ 'protect' và danh từ 'laws' đi liền trong câu.\n\n7. **faith**\n- Bằng chứng: \"Asking about your faith is a direct violation that creates serious **legal liability** for the firm.\" (§3)\n- Cách tìm đáp án: Từ khóa trong đoạn 3 chỉ ra rằng hỏi về 'faith' (đức tin/tôn giáo) là sự vi phạm trực tiếp. Các từ khác không điền vừa về ngữ nghĩa hoặc không có trong câu gốc.\n> **💡 Mẹo:** Từ 'faith' tương đương với tôn giáo trong ngữ cảnh này.\n\n8. **public awareness**\n- Bằng chứng: \"Unfortunately, a general lack of **public awareness** [R] means that many applicants feel forced to share their nationality or native language.\" (§4)\n- Cách tìm đáp án: Đoạn 4 nêu lý do ứng viên chia sẻ thông tin quốc tịch là do thiếu 'public awareness' (nhận thức cộng đồng). Các từ khác không đúng nghĩa trong ngữ cảnh này.\n> **💡 Mẹo:** Tìm cụm từ 'lack of' đi kèm trong bài đọc.\n\n9. **human error**\n- Bằng chứng: \"Understanding these protections helps prevent **human error** [R] during your job search.\" (§5)\n- Cách tìm đáp án: Đoạn 5 kết luận hiểu biết các điều luật giúp tránh 'human error' (sai sót của con người) trong quá trình tìm việc. Các từ khác không phù hợp ngữ pháp hoặc ý nghĩa câu kết luận.\n> **💡 Mẹo:** Tìm động từ 'prevent' để định vị vị trí điền từ.\n\n10. **Ask about your availability directly using specific hours**\n- Bằng chứng: \"they must ask about your **commitment** and availability directly (e.g., \"Can you work from 9 a.m. to 5 p.m.?\")\" (§2)\n- Cách tìm đáp án: Đoạn 2 nêu rõ nếu muốn biết cam kết thời gian làm việc, nhà tuyển dụng phải hỏi trực tiếp về sự sẵn sàng bằng các giờ cụ thể. Phương án A, B là các câu hỏi phạm pháp về đời tư; phương án D không được đề cập.\n> **💡 Mẹo:** Ví dụ cụ thể về giờ giấc phỏng vấn (9 a.m. to 5 p.m.) chính là minh chứng cho việc hỏi trực tiếp.\n\n11. **Because it creates serious legal liability for the firm**\n- Bằng chứng: \"Asking about your faith is a direct violation that creates serious **legal liability** for the firm.\" (§3)\n- Cách tìm đáp án: Đoạn 3 giải thích việc hỏi về đức tin (tôn giáo) tạo ra trách nhiệm pháp lý nghiêm trọng cho doanh nghiệp. A, C, D là các lý do sai lệch hoặc không được đề cập trong đoạn văn.\n> **💡 Mẹo:** Chú ý cụm từ 'creates serious legal liability'.\n\n12. **\"Are you authorized to work in the United States?\"**\n- Bằng chứng: \"However, they can legally ask if you are **authorized** to work in the United States.\" (§4)\n- Cách tìm đáp án: Đoạn 4 nói rằng nhà tuyển dụng có thể hỏi hợp pháp xem ứng viên có được phép làm việc tại Mỹ hay không. Các phương án A, B, D là những câu hỏi phân biệt đối xử và phạm pháp về nơi sinh và quốc tịch.\n> **💡 Mẹo:** Nhận biết câu hỏi hợp pháp duy nhất liên quan đến quyền lao động.\n\n13. **Whether you can perform the essential functions of the job**\n- Bằng chứng: \"They may only ask if you can perform the **essential functions** of the job, with or without **reasonable accommodation**.\" (§5)\n- Cách tìm đáp án: Đoạn 5 khẳng định nhà tuyển dụng chỉ có thể hỏi bạn có thể thực hiện các chức năng công việc thiết yếu hay không. A, C, D đều là các thông tin sức khỏe đời tư bị cấm hỏi.\n> **💡 Mẹo:** Tìm cụm từ 'essential functions' để khớp đáp án.\n\n## Grammar Answer Key and Detailed Explanations\n\n> **Bảng phân biệt nhanh / Công thức bỏ túi:**\n> - Ôn tập lý thuyết đã học trong bài.\n\n1. **have worked**\n- Dấu hiệu / Phân tích: Dùng thì Hiện tại Hoàn thành vì có từ chỉ thời gian bắt đầu từ quá khứ 'since I graduated'.\n> **💡 Mẹo:** Cấu trúc: S + have/has + V3/ed + since + S + V2/ed.\n\n2. **had**\n- Dấu hiệu / Phân tích: Dùng thì Quá khứ Đơn vì hành động xảy ra tại thời điểm cụ thể đã qua 'Yesterday'.\n> **💡 Mẹo:** Nhận diện 'yesterday' làm dấu hiệu của Quá khứ Đơn.\n\n3. **were you**\n- Dấu hiệu / Phân tích: Trạng thái tìm việc đã kết thúc khi tìm thấy vị trí mới trong quá khứ ('before you found...'), nên dùng Quá khứ Đơn.\n> **💡 Mẹo:** Mệnh đề với 'before + V2' thường đi với hành động xảy ra trước đó, ở đây là trạng thái trong quá khứ.\n\n4. **has worked**\n- Dấu hiệu / Phân tích: Hành động làm việc đã diễn ra được 5 năm ('for five years') và vẫn tiếp tục vì anh ấy 'no plans to leave'.\n> **💡 Mẹo:** Hiện tại hoàn thành chỉ hành động bắt đầu trong quá khứ và còn tiếp diễn.\n\n5. **introduced**\n- Dấu hiệu / Phân tích: 'Last year' chỉ thời điểm kết thúc trong quá khứ, yêu cầu dùng Quá khứ Đơn.\n> **💡 Mẹo:** Từ chỉ thời gian cụ thể như 'last year' luôn đi với Quá khứ Đơn.\n\n6. **sent**\n- Dấu hiệu / Phân tích: Hành động gửi CV diễn ra vào thứ Hai tuần trước ('last Monday'), là thời điểm xác định trong quá khứ, nên dùng Quá khứ Đơn.\n> **💡 Mẹo:** Chú ý từ 'last Monday' chỉ thời điểm đã qua.\n\n7. **have interviewed**\n- Dấu hiệu / Phân tích: 'Up to now' là trạng từ chỉ kết quả tích lũy tính đến nay, yêu cầu dùng Hiện tại Hoàn thành.\n> **💡 Mẹo:** 'Up to now', 'so far' là dấu hiệu đặc trưng của Hiện tại Hoàn thành.\n\n8. **worked**\n- Dấu hiệu / Phân tích: Năm 'in 2020' đã kết thúc nên dùng Quá khứ Đơn.\n> **💡 Mẹo:** Một năm cụ thể trong quá khứ đòi hỏi Quá khứ Đơn.\n\n9. **haven't sent**\n- Dấu hiệu / Phân tích: Trạng từ 'yet' ở cuối câu phủ định yêu cầu dùng Hiện tại Hoàn thành phủ định.\n> **💡 Mẹo:** S + haven't/hasn't + V3/ed + yet.\n\n10. **did you start**\n- Dấu hiệu / Phân tích: Câu hỏi về thời điểm bắt đầu sự nghiệp dùng 'When' yêu cầu dùng Quá khứ Đơn.\n> **💡 Mẹo:** Hỏi 'When' về hành động quá khứ thường dùng cấu trúc: When did + S + V(bare)?\n\n11. **meeting**\n- Dấu hiệu / Phân tích: Sau cụm động từ 'look forward to' là danh động từ (V-ing).\n> **💡 Mẹo:** Ghi nhớ cụm: look forward to + V-ing.\n\n12. **to hire**\n- Dấu hiệu / Phân tích: Động từ 'decide' đi kèm động từ nguyên mẫu có 'to' (to-infinitive).\n> **💡 Mẹo:** Cấu trúc: decide + to-infinitive.\n\n13. **asking**\n- Dấu hiệu / Phân tích: Động từ 'avoid' đi kèm danh động từ (V-ing).\n> **💡 Mẹo:** Cấu trúc: avoid + V-ing.\n\n14. **learn**\n- Dấu hiệu / Phân tích: Cấu trúc 'help someone do' yêu cầu động từ nguyên mẫu không to (bare infinitive).\n> **💡 Mẹo:** Cấu trúc: help + object + V(bare) / to-V.\n\n15. **pursuing**\n- Dấu hiệu / Phân tích: Sau giới từ 'of' của cụm 'dreamed of', động từ phải ở dạng danh động từ (V-ing).\n> **💡 Mẹo:** Sau các giới từ (in, on, at, about,...) dùng V-ing.\n\n16. **to talk**\n- Dấu hiệu / Phân tích: Cấu trúc 'ask someone to do something' yêu cầu động từ dạng to-infinitive.\n> **💡 Mẹo:** Cấu trúc: ask + object + to-infinitive.\n\n17. **working**\n- Dấu hiệu / Phân tích: Động từ 'mind' đi kèm danh động từ (V-ing) trong câu phủ định.\n> **💡 Mẹo:** Cấu trúc: S + don't/doesn't mind + V-ing.\n\n18. **to include**\n- Dấu hiệu / Phân tích: Sau cấu trúc 'It is + adjective' là động từ nguyên mẫu có 'to' (to-infinitive).\n> **💡 Mẹo:** Sau cấu trúc 'It is + adjective' là động từ nguyên mẫu có 'to' (to-infinitive).\n\n19. **to sign**\n- Dấu hiệu / Phân tích: Động từ 'manage' đi kèm động từ nguyên mẫu có 'to'.\n> **💡 Mẹo:** Cấu trúc: manage + to-infinitive.\n\n20. **researching**\n- Dấu hiệu / Phân tích: Động từ 'recommend' yêu cầu danh động từ (V-ing) khi không có tân ngữ phía sau.\n> **💡 Mẹo:** Cấu trúc: recommend + V-ing.\n\n21. **I sent my resume to the manager yesterday.**\n- Dấu hiệu / Phân tích: Trạng từ 'yesterday' buộc câu phải dùng thì Quá khứ Đơn. Sửa 'have sent' thành 'sent'.\n> **💡 Mẹo:** Không dùng Hiện tại Hoàn thành khi có thời gian quá khứ xác định.\n\n22. **She decided to pursue a career in marketing instead of finance.**\n- Dấu hiệu / Phân tích: Động từ 'decide' đi kèm to-infinitive. Sửa danh động từ 'pursuing' thành 'to pursue'.\n> **💡 Mẹo:** Ghi nhớ cấu trúc của động từ 'decide'.\n\n23. **I have worked here for three years and I really enjoy it.**\n- Dấu hiệu / Phân tích: Hành động bắt đầu trong quá khứ kéo dài đến hiện tại đi kèm 'for three years' cần dùng Hiện tại Hoàn thành. Sửa 'am working' thành 'have worked'.\n> **💡 Mẹo:** Dùng Hiện tại Hoàn thành để thay thế cho Hiện tại Tiếp diễn khi mô tả khoảng thời gian tích lũy.\n\n24. **The interviewer suggested sending a thank-you email after the meeting.**\n- Dấu hiệu / Phân tích: Động từ 'suggest' yêu cầu gerund. Sửa 'to send' thành 'sending'.\n> **💡 Mẹo:** Ghi nhớ cấu trúc của động từ 'suggest'.\n\n25. **I graduated from college in 2022 and then started my first job.**\n- Dấu hiệu / Phân tích: Mốc thời gian 'in 2022' đã kết thúc nên dùng Quá khứ Đơn. Sửa 'have graduated' thành 'graduated'.\n> **💡 Mẹo:** Thời gian kết thúc cụ thể luôn đi với Quá khứ Đơn.\n\n26. **I do not mind working on weekends.**\n- Dấu hiệu / Phân tích: Viết lại câu bằng cách thay 'not a problem for me to work' bằng 'do not mind' + V-ing ('working').\n> **💡 Mẹo:** Cấu trúc: not mind + V-ing.\n\n27. **I have been job hunting for two months.**\n- Dấu hiệu / Phân tích: Dùng Hiện tại Hoàn thành Tiếp diễn 'have been job hunting' đi kèm khoảng thời gian 'for two months' để thay thế cho 'started two months ago and still doing'.\n> **💡 Mẹo:** Diễn tả hành động liên tục từ quá khứ đến nay bằng Present Perfect Continuous.\n\n28. **He expects to get the job.**\n- Dấu hiệu / Phân tích: Cấu trúc 'hopes that S will do' được viết ngắn lại bằng 'expects to do' + V(bare) ('expects to get').\n> **💡 Mẹo:** Cấu trúc: expect + to-infinitive.\n\n29. **They decided to onboard the new employees next week.**\n- Dấu hiệu / Phân tích: Cấu trúc 'make a plan to do' tương đương với 'decide to do' + V(bare) ('decided to onboard').\n> **💡 Mẹo:** Cấu trúc: decide + to-infinitive.\n\n30. **The last time I went to a job interview was two years ago.**\n- Dấu hiệu / Phân tích: Viết lại câu phủ định Hiện tại Hoàn thành 'haven't done for X years' thành 'The last time I did was X years ago'. Sửa 'have been' thành 'went' ở quá khứ đơn và đổi 'for' thành 'ago'.\n> **💡 Mẹo:** Cấu trúc: The last time + S + V2 + was + time + ago.\n\n## Writing Guidance / Suggested Answers\n\n#### Task 1\n> **Suggested Model Answer:**\n> \"1. Preparing for a job interview is very important.\n2. You must check your resume spelling carefully.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Bài tập sắp xếp từ giúp học sinh làm quen với vị trí của danh động từ làm chủ ngữ (Preparing...) và vị trí của động từ tình thái 'must' đứng trước động từ thường dạng nguyên mẫu không to (must check).\n- *Tự kiểm tra:* * Did you capitalize the first word of each sentence? * Are all words included in the correct order? * Did you put a period at the end of each sentence?\n\n#### Task 2\n> **Suggested Model Answer:**\n> \"Dear Mr. Smith,\n\nThank you very much for your time during our job interview yesterday. I really enjoyed learning about the marketing assistant position and meeting the team. Could you please let me know when you will make a final decision? I look forward to hearing from you.\n\nBest regards,\nJane Doe\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Thư điện tử viết ngắn (3-4 câu) cần mở đầu và kết thúc trang trọng. Thân thư viết đủ 3 câu, bày tỏ sự cảm ơn, ấn tượng tốt về cuộc gặp và hỏi lịch trình đưa ra quyết định một cách lịch sự bằng cấu trúc 'Could you please...'.\n- *Tự kiểm tra:* * Did you write exactly 3 to 4 sentences in the email body? * Is the greeting polite and formal? * Did you ask about the decision timeline?\n\n#### Task 3\n> **Suggested Model Answer:**\n> \"The chart shows that candidates in the technology industry spend the most time preparing for job interviews, averaging eight hours. In contrast, sales candidates prepare the least, spending only three hours on average. Finance candidates fall in the middle, dedicating six hours to their interview preparation.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Đoạn văn miêu tả dữ liệu biểu đồ SVG so sánh 3 ngành nghề. Câu 1 viết về ngành chuẩn bị nhiều nhất (Technology - 8h). Câu 2 viết về ngành chuẩn bị ít nhất (Sales - 3h) bằng từ nối 'In contrast'. Câu 3 viết về ngành ở giữa (Finance - 6h). Đủ 3 câu.\n- *Tự kiểm tra:* * Did you mention the highest value (Technology with 8 hours)? * Did you mention the lowest value (Sales with 3 hours)? * Did you write exactly three sentences?\n\n#### Task 4\n> **Suggested Model Answer:**\n> \"I graduated from Hanoi University last year, where my major was business administration. During my studies, I learned a lot about corporate culture and management. In the future, I hope to work as a hiring manager at an international company.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Học sinh thực hành viết đoạn ngắn mô tả bản thân. Cần nêu được chuyên ngành hoặc lĩnh vực học tập trước đây và mong muốn công việc trong tương lai.\n- *Tự kiểm tra:* * Did you state your major or past studies? * Did you state your future career goal? * Did you write exactly 3 to 4 sentences?\n\n#### Task 5\n> **Suggested Model Answer:**\n> \"Job A offers a higher salary than Job B, providing $3,500 per month compared to $2,200. However, Job B has longer work hours, requiring forty-five hours per week whereas Job A requires thirty-five. Additionally, Job A allows employees to work remotely, while Job B is based in an office.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Học sinh so sánh 2 vị trí tuyển dụng dựa trên bảng dữ liệu. Cần sử dụng các cấu trúc so sánh hơn ('higher salary') và các từ nối tương phản ('whereas', 'while') để so sánh lương, giờ làm việc và địa điểm.\n- *Tự kiểm tra:* * Did you compare the salary of both jobs? * Did you compare the work hours of both jobs? * Did you write exactly three sentences?\n\n## Review Bridge\n#### IV. Review Bridge / Ôn tập liên chủ đề\n1. She hopes (get) _______ the job at the bank.\n- **Đáp án:** to get\n- **Giải thích:** Động từ 'hope' đi với động từ nguyên mẫu có 'to' (to-infinitive).\n\n2. I don't mind (work) _______ late tonight.\n- **Đáp án:** working\n- **Giải thích:** Động từ 'mind' đi với danh động từ (V-ing).\n\n3. We (already submit) _______ our applications.\n- **Đáp án:** have already submitted\n- **Giải thích:** Có trạng từ 'already' diễn tả hành động vừa mới hoàn thành, yêu cầu dùng Hiện tại Hoàn thành.\n",
+  "quizlet_markdown": "## Section 1: Simple Vocabulary List (Học từ vựng đơn giản)\n| Từ vựng tiếng Anh | Nghĩa tiếng Việt |\n| --- | --- |\n| off-limits | cấm, giới hạn ngoại lệ |\n| marital status | tình trạng hôn nhân |\n| childcare arrangements | sắp xếp việc chăm sóc con cái |\n| discriminate | phân biệt đối xử |\n| legal liability | trách nhiệm pháp lý |\n| observe | tuân thủ, cử hành |\n| national origin | nguồn gốc quốc gia |\n| authorized | được cấp phép, có quyền |\n| essential functions | các chức năng/nhiệm vụ thiết yếu |\n| reasonable accommodation | sự điều chỉnh hợp lý |\n| anti-discrimination laws | luật chống phân biệt đối xử |\n| job seeker | người tìm việc |\n| prospective employer | nhà tuyển dụng tiềm năng |\n| professional credentials | chứng chỉ/hồ sơ năng lực chuyên môn |\n| corporate culture | văn hóa doanh nghiệp |\n| onboard | đào tạo hội nhập/nhận nhân sự mới |\n| job interview | buổi phỏng vấn xin việc |\n| hiring manager | quản lý tuyển dụng |\n| navigate | định hướng, vượt qua |\n| commitment | sự cam kết |\n\n## Section 2: Detailed Vocabulary List (Học từ vựng đầy đủ)\n| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |\n| --- | --- |\n| off-limits (adjective) /ˌɔːf ˈlɪm.ɪts/ | not allowed to be asked or discussed - cấm, giới hạn ngoại lệ. Ví dụ: Questions about marriage are off-limits. |\n| marital status (noun phrase) /ˈmær.ɪ.təl ˌsteɪ.təs/ | whether a person is married, single, or divorced - tình trạng hôn nhân. Ví dụ: Marital status is a personal detail. |\n| childcare arrangements (noun phrase) /ˈtʃaɪld.keər əˌreɪndʒ.mənts/ | plans made for looking after children - sắp xếp việc chăm sóc con cái. Ví dụ: Employers cannot ask about childcare arrangements. |\n| discriminate (verb) /dɪˈskrɪm.ɪ.neɪt/ | to treat someone unfairly because of their background - phân biệt đối xử. Ví dụ: The law protects candidates so employers do not discriminate. |\n| legal liability (noun phrase) /ˈliː.ɡəl ˌlaɪ.əˈbɪl.ə.ti/ | responsibility under the law - trách nhiệm pháp lý. Ví dụ: Asking illegal questions creates legal liability. |\n| observe (verb) /əbˈzɜːv/ | to follow or celebrate a rule, custom, or holiday - tuân thủ, cử hành. Ví dụ: They asked if I observe specific religious holidays. |\n| national origin (noun phrase) /ˌnæʃ.ən.əl ˈɒr.ɪ.dʒɪn/ | the nation where a person was born - nguồn gốc quốc gia. Ví dụ: It is illegal to ask about a candidate's national origin. |\n| authorized (adjective) /ˈɔː.θər.aɪzd/ | having official permission or legal right - được cấp phép, có quyền. Ví dụ: You must be authorized to work in the country. |\n| essential functions (noun phrase) /ɪˈsen.ʃəl ˈfʌŋk.ʃənz/ | the basic duties that an employee must perform - các chức năng/nhiệm vụ thiết yếu. Ví dụ: Candidates must be able to perform the essential functions of the job. |\n| reasonable accommodation (noun phrase) /ˈriː.zən.ə.bəl əˌkɒm.əˈdeɪ.ʃən/ | changes to a workplace to help a disabled employee - sự điều chỉnh hợp lý. Ví dụ: She requested a reasonable accommodation for her wheelchair. |\n| anti-discrimination laws (noun phrase) /ˌæn.ti dɪsˌkrɪm.ɪˈneɪ.ʃən lɔːz/ | laws preventing unfair treatment of groups of people - luật chống phân biệt đối xử. Ví dụ: Anti-discrimination laws protect job seekers. |\n| job seeker (noun) /ˈdʒɒb ˌsiː.kər/ | a person who is looking for a job - người tìm việc. Ví dụ: The website offers advice for every job seeker. |\n| prospective employer (noun phrase) /prəˈspek.tɪv ɪmˈplɔɪ.ər/ | a company or person that might hire you - nhà tuyển dụng tiềm năng. Ví dụ: Be polite when meeting a prospective employer. |\n| professional credentials (noun phrase) /prəˈfeʃ.ən.əl krɪˈden.ʃəlz/ | qualifications and work history - chứng chỉ/hồ sơ năng lực chuyên môn. Ví dụ: Highlight your professional credentials on your resume. |\n| corporate culture (noun phrase) /ˈkɔː.pər.ət ˈkʌl.tʃər/ | the beliefs and values of a company - văn hóa doanh nghiệp. Ví dụ: I want to work for a company with a supportive corporate culture. |\n| onboard (verb) /ˌɒnˈbɔːd/ | to integrate a new employee into the organization - đào tạo hội nhập/nhận nhân sự mới. Ví dụ: They will onboard the new employees next week. |\n| job interview (noun) /ˈdʒɒb ˌɪn.tə.vjuː/ | a formal meeting to evaluate a candidate - buổi phỏng vấn xin việc. Ví dụ: He prepared well for the job interview. |\n| hiring manager (noun phrase) /ˈhaɪə.rɪŋ ˌmæn.ɪ.dʒər/ | the person responsible for hiring new staff - quản lý tuyển dụng. Ví dụ: The hiring manager reviewed my application. |\n| navigate (verb) /ˈnæv.ɪ.ɡeɪt/ | to find the right direction or deal with a difficult situation - định hướng, vượt qua. Ví dụ: It is difficult to navigate the job market alone. |\n| commitment (noun) /kəˈmɪt.mənt/ | a promise to dedicate time and energy - sự cam kết. Ví dụ: We need a long-term commitment from the candidates. |\n"
+}

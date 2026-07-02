@@ -1,0 +1,1979 @@
+{
+  "execution": {
+    "mode": "auto",
+    "pipeline_status": "qc_passed",
+    "current_stage": "exporting",
+    "revision_attempts": {
+      "source": 1,
+      "reading": 2,
+      "vocabulary": 1,
+      "grammar": 1,
+      "writing": 1,
+      "answers": 1,
+      "pdf_layout": 1
+    }
+  },
+  "human_review": {
+    "mode": "auto",
+    "checkpoints": []
+  },
+  "agent_review": {
+    "reviews": [
+      {
+        "reviewer_agent": "vocabulary",
+        "reviewed_section": "reading",
+        "review_status": "challenge",
+        "strengths": [
+          "Passage content is highly authentic and level-appropriate"
+        ],
+        "challenges": [
+          "Recycled words from Day 20260704 are not yet integrated into the text"
+        ]
+      },
+      {
+        "reviewer_agent": "quality_control",
+        "reviewed_section": "reading",
+        "review_status": "pass",
+        "strengths": [
+          "Recycled words successfully integrated and highlighted with [R]"
+        ],
+        "challenges": []
+      }
+    ],
+    "challenges": [
+      {
+        "id": "CHG-001",
+        "from_agent": "vocabulary",
+        "to_agent": "reading",
+        "challenge_type": "vocabulary_imbalance",
+        "severity": "medium",
+        "location": "reading.passage",
+        "problem": "Recycled words 'routine', 'effective', 'experience' were not in the draft passage.",
+        "required_fix": "Incorporate these three words naturally into the passage.",
+        "status": "resolved",
+        "revision_attempt": 1
+      }
+    ]
+  },
+  "lesson_meta": {
+    "lesson_id": "LSN-20260706-A2-ALARM",
+    "day": "20260706",
+    "level": "B1",
+    "theme": "Daily routines, habits, time management",
+    "topic": "Daily routines, habits, time management",
+    "specific_topic": "It's Alarming: What Wakes You Up Each Morning?",
+    "created_at": "2026-07-01T22:15:59+07:00",
+    "reading_question_count": 13,
+    "vocabulary_count": 20,
+    "grammar_question_count": 30,
+    "writing_task_count": 5,
+    "printed_time_allowed_minutes": 120,
+    "estimated_completion_time_minutes": 127,
+    "time_workload_status": "ok"
+  },
+  "source": {
+    "status": "verified",
+    "source_title": "It's Alarming: What Wakes You Up Each Morning?",
+    "publisher": "VOA Learning English",
+    "author": "VOA Learning English",
+    "published_date": "February 13, 2020",
+    "verified_url": "https://learningenglish.voanews.com/a/it-s-alarming-what-wakes-you-up-each-morning-/5285741.html",
+    "access_date": "July 1, 2026",
+    "url_status": "Active",
+    "credibility_note": "High - official VOA educational report",
+    "topic_relevance_note": "Highly relevant for sleep routines, habits, and auditory alarms science.",
+    "usable_excerpt": "It explores how different alarm sounds affect morning grogginess and sleep inertia...",
+    "copyright_note": "Voice of America"
+  },
+  "reading": {
+    "passage": {
+      "title": "It's Alarming: What Wakes You Up Each Morning?",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Every morning, millions of people wake up to the sound of an **alarm**. For many, this is a difficult part of their daily **routine** [R]. Traditional alarm clocks use a loud, **unpleasant** **beep** or other **harsh** sounds to wake people up. However, researchers suggest that these sounds might not be the most **effective** [R] way to start your day. Instead, they can make you feel tired and unfocused."
+        },
+        {
+          "id": 2,
+          "text": "When we wake up, we often feel heavy and sleepy. Scientists call this **inertia** or **grogginess**. They found that people who wake up to harsh beeps feel **groggy** for a longer time. For most people, this feeling lasts for about 30 minutes, but for some, it can **persist** for hours. This makes it hard to **focus** on work or school. A study in Australia of 50 people showed that waking up to a **melodic** sound, like a popular song or a pleasant **tune**, can help. A **melody** increases our **attention** and helps us transition from sleep to waking up. As a result, people feel **refreshed** and more **alert**."
+        },
+        {
+          "id": 3,
+          "text": "During sleep, the brain repairs its **synapses**, which are connections between brain cells. There are also other ways to get a better sleep. Doctors **recommend** good sleep **hygiene**. This includes keeping the bedroom dark and quiet. You should also **limit** your screen time before bed. If you **experience** [R] sleep problems, a **melodic** alarm is a great **alternative** to standard beeping. Getting at least seven hours of sleep is still the best way to wake up feeling happy."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": 1,
+        "type": "True/False/Not Given",
+        "question": "Most participants in the Australian study preferred classical music over rock music.",
+        "options": [],
+        "correct_answer": "NOT GIVEN",
+        "evidence_paragraph": 0,
+        "evidence_quote": "",
+        "rationale_vi": "Bài viết không đề cập đến việc người tham gia thích nhạc cổ điển hay nhạc rock hơn.",
+        "stretch": true,
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "literal"
+      },
+      {
+        "id": 2,
+        "type": "True/False/Not Given",
+        "question": "Traditional alarm clocks use melodic music to wake people up.",
+        "options": [],
+        "correct_answer": "FALSE",
+        "evidence_paragraph": 1,
+        "evidence_quote": "Traditional alarm clocks use a loud, **unpleasant** **beep** or other **harsh** sounds to wake people up.",
+        "rationale_vi": "Đoạn 1 nêu rõ các đồng hồ báo thức truyền thống sử dụng tiếng bíp lớn, khó chịu hoặc các âm thanh chói tai khác, chứ không dùng nhạc du dương.",
+        "stretch": false,
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "literal"
+      },
+      {
+        "id": 3,
+        "type": "True/False/Not Given",
+        "question": "Sleep inertia is the groggy feeling you have right after waking up.",
+        "options": [],
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Scientists call this **inertia** or **grogginess**.",
+        "rationale_vi": "Đoạn 2 định nghĩa cảm giác uể oải, nặng nề khi thức dậy được các nhà khoa học gọi là sự trì trệ giấc ngủ (inertia) hoặc sự mệt mỏi (grogginess).",
+        "stretch": false,
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "literal"
+      },
+      {
+        "id": 4,
+        "type": "True/False/Not Given",
+        "question": "The study in Australia involved exactly 50 participants.",
+        "options": [],
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 2,
+        "evidence_quote": "A study in Australia of 50 people showed",
+        "rationale_vi": "Đoạn 2 nêu rõ một nghiên cứu tại Úc thực hiện trên 50 người ('of 50 people').",
+        "stretch": false,
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "literal"
+      },
+      {
+        "id": 5,
+        "type": "True/False/Not Given",
+        "question": "Melodic alarms help increase a person's attention in the morning.",
+        "options": [],
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 2,
+        "evidence_quote": "A **melody** increases our **attention** and helps us transition from sleep to waking up.",
+        "rationale_vi": "Đoạn 2 khẳng định giai điệu làm tăng sự chú ý của chúng ta ('increases our attention') và giúp chuyển tiếp dễ dàng hơn.",
+        "stretch": false,
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "literal"
+      },
+      {
+        "id": 6,
+        "type": "Multiple Choice",
+        "question": "What does the study conclude about melodic alarm sounds?",
+        "options": [
+          "A. They make people feel groggy for hours.",
+          "B. They can help people feel refreshed and alert.",
+          "C. They are dangerous for brain synapses."
+        ],
+        "correct_answer": "B",
+        "evidence_paragraph": 2,
+        "evidence_quote": "people feel **refreshed** and more **alert**.",
+        "rationale_vi": "Đoạn 2 viết: 'As a result, people feel refreshed and more alert.'",
+        "why_others_wrong_vi": "A sai vì tiếng nhạc giúp giảm mệt mỏi; C sai vì giấc ngủ phục hồi khớp thần kinh chứ nhạc không gây nguy hiểm.",
+        "tip_vi": "Tìm kiếm định nghĩa trực tiếp ngay sau các từ giới thiệu như 'is' hoặc 'means'.",
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "paraphrase"
+      },
+      {
+        "id": 7,
+        "type": "Multiple Choice",
+        "question": "Why do melodic sounds help you wake up better?",
+        "options": [
+          "A. Because they increase your attention.",
+          "B. Because they turn off your synapses.",
+          "C. Because they are much louder than traditional beeps."
+        ],
+        "correct_answer": "A",
+        "evidence_paragraph": 2,
+        "evidence_quote": "A **melody** increases our **attention** and helps us transition from sleep to waking up.",
+        "rationale_vi": "Đoạn 2 giải thích giai điệu giúp tăng sự tập trung chú ý ('increases our attention').",
+        "why_others_wrong_vi": "B và C sai vì thông tin ngược hoặc không có trong bài đọc.",
+        "tip_vi": "Từ khóa chỉ nguyên nhân 'Because' trong đoạn 3 giúp trả lời câu hỏi 'Why'.",
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "paraphrase"
+      },
+      {
+        "id": 8,
+        "type": "Multiple Choice",
+        "question": "What does the word 'persist' in the second paragraph mean?",
+        "options": [
+          "A. To stop quickly",
+          "B. To continue to exist",
+          "C. To become louder"
+        ],
+        "correct_answer": "B",
+        "evidence_paragraph": 2,
+        "evidence_quote": "but for some, it can **persist** for hours.",
+        "rationale_vi": "Từ 'persist' nghĩa là tiếp tục kéo dài hoặc tồn tại ('continue to exist').",
+        "why_others_wrong_vi": "A và C mang ý nghĩa hoàn toàn khác.",
+        "tip_vi": "Sử dụng ngữ cảnh tương phản của câu tiếp theo để đoán nghĩa.",
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "paraphrase"
+      },
+      {
+        "id": 9,
+        "type": "Multiple Choice",
+        "question": "What is the main recommendation for better sleep in Paragraph 3?",
+        "options": [
+          "A. Waking up every 30 minutes.",
+          "B. Practicing good sleep hygiene.",
+          "C. Exercising right before bedtime."
+        ],
+        "correct_answer": "B",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Doctors **recommend** good sleep **hygiene**.",
+        "rationale_vi": "Đoạn 3 viết các bác sĩ khuyên thực hiện vệ sinh giấc ngủ tốt ('recommend good sleep hygiene').",
+        "why_others_wrong_vi": "A và C sai vì ngược với thông tin trong bài đọc.",
+        "tip_vi": "Tìm các cụm từ liên quan trực tiếp để lọc đáp án nhiễu.",
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "paraphrase"
+      },
+      {
+        "id": 10,
+        "type": "Short Answer",
+        "question": "What do traditional alarm clocks use to wake people up, besides beeps?",
+        "options": [],
+        "correct_answer": "harsh sounds",
+        "evidence_paragraph": 1,
+        "evidence_quote": "Traditional alarm clocks use a loud, **unpleasant** **beep** or other **harsh** sounds to wake people up.",
+        "rationale_vi": "Đoạn 1 viết đồng hồ truyền thống dùng tiếng bíp lớn, khó chịu hoặc các âm thanh chói tai khác ('harsh sounds').",
+        "stretch": false,
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "literal"
+      },
+      {
+        "id": 11,
+        "type": "Short Answer",
+        "question": "What feeling is synonymous with sleep inertia?",
+        "options": [],
+        "correct_answer": "grogginess",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Scientists call this **inertia** or **grogginess**.",
+        "rationale_vi": "Khoa học gọi tình trạng trì trệ này là 'inertia' hoặc 'grogginess'.",
+        "stretch": false,
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "paraphrase"
+      },
+      {
+        "id": 12,
+        "type": "Short Answer",
+        "question": "For how many minutes does grogginess usually last for most people?",
+        "options": [],
+        "correct_answer": "30 minutes",
+        "evidence_paragraph": 2,
+        "evidence_quote": "For most people, this feeling lasts for about 30 minutes",
+        "rationale_vi": "Đoạn 2 chỉ ra cảm giác này kéo dài khoảng 30 phút ở hầu hết mọi người.",
+        "stretch": false,
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "paraphrase"
+      },
+      {
+        "id": 13,
+        "type": "Short Answer",
+        "question": "What brain connections does the brain repair during sleep?",
+        "options": [],
+        "correct_answer": "synapses",
+        "evidence_paragraph": 3,
+        "evidence_quote": "the brain repairs its **synapses**, which are connections between brain cells.",
+        "rationale_vi": "Đoạn 3 chỉ ra bộ não sửa chữa các khớp thần kinh ('synapses') trong khi ngủ.",
+        "stretch": true,
+        "source_scope": "printed_passage_only",
+        "reasoning_skill": "paraphrase"
+      }
+    ]
+  },
+  "vocabulary": {
+    "items": [
+      {
+        "id": 1,
+        "term": "alarm",
+        "ipa": "/əˈlɑːm/",
+        "part_of_speech": "noun",
+        "definition_en": "a device that makes a loud noise to wake you up or warn you",
+        "meaning_vi": "chuông báo thức",
+        "example": "I set my alarm for 6:00 AM.",
+        "source": "reading",
+        "vocab_type": "collocation"
+      },
+      {
+        "id": 2,
+        "term": "unpleasant",
+        "ipa": "/ʌnˈplez.ənt/",
+        "part_of_speech": "adjective",
+        "definition_en": "not enjoyable or nice; causing discomfort",
+        "meaning_vi": "khó chịu",
+        "example": "The loud beep was very unpleasant.",
+        "source": "reading",
+        "vocab_type": "collocation"
+      },
+      {
+        "id": 3,
+        "term": "beep",
+        "ipa": "/biːp/",
+        "part_of_speech": "noun",
+        "definition_en": "a short high sound made by an electronic device",
+        "meaning_vi": "tiếng bíp bíp",
+        "example": "My watch made a small beep sound.",
+        "source": "reading",
+        "vocab_type": "phrase"
+      },
+      {
+        "id": 4,
+        "term": "harsh",
+        "ipa": "/hɑːʃ/",
+        "part_of_speech": "adjective",
+        "definition_en": "rough, unpleasant, and chói tai",
+        "meaning_vi": "chói tai, gay gắt",
+        "example": "Traditional alarms use harsh noises.",
+        "source": "reading",
+        "vocab_type": "topic_vocabulary"
+      },
+      {
+        "id": 5,
+        "term": "inertia",
+        "ipa": "/ɪˈnɜː.ʃə/",
+        "part_of_speech": "noun",
+        "definition_en": "lack of activity or slow transition to action",
+        "meaning_vi": "sự trì trệ, quán tính",
+        "example": "Sleep inertia makes you feel groggy.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 6,
+        "term": "grogginess",
+        "ipa": "/ˈɡrɒɡ.i.nəs/",
+        "part_of_speech": "noun",
+        "definition_en": "the state of feeling tired and unable to think clearly",
+        "meaning_vi": "sự mê mệt, mệt mỏi",
+        "example": "He tried to shake off his morning grogginess.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 7,
+        "term": "groggy",
+        "ipa": "/ˈɡrɒɡ.i/",
+        "part_of_speech": "adjective",
+        "definition_en": "weak and unable to think clearly because you are tired",
+        "meaning_vi": "chuếnh choáng, mê mệt",
+        "example": "I always feel groggy right after waking up.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 8,
+        "term": "persist",
+        "ipa": "/pəˈsɪst/",
+        "part_of_speech": "verb",
+        "definition_en": "to continue to exist or happen",
+        "meaning_vi": "kéo dài, dai dẳng",
+        "example": "His groggy feeling can persist for hours.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 9,
+        "term": "focus",
+        "ipa": "/ˈfəʊ.kəs/",
+        "part_of_speech": "verb/noun",
+        "definition_en": "to give all your attention to something",
+        "meaning_vi": "tập trung",
+        "example": "It is hard to focus when you are tired.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 10,
+        "term": "melodic",
+        "ipa": "/məˈlɒd.ɪk/",
+        "part_of_speech": "adjective",
+        "definition_en": "having a pleasant tune or melody",
+        "meaning_vi": "du dương, có giai điệu",
+        "example": "A melodic alarm helps you wake up fresh.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 11,
+        "term": "tune",
+        "ipa": "/tʃuːn/",
+        "part_of_speech": "noun",
+        "definition_en": "a series of musical notes that are pleasant to listen to",
+        "meaning_vi": "giai điệu, điệu nhạc",
+        "example": "She hummed a happy tune.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 12,
+        "term": "melody",
+        "ipa": "/ˈmel.ə.di/",
+        "part_of_speech": "noun",
+        "definition_en": "a sequence of notes that make up a tune",
+        "meaning_vi": "giai điệu",
+        "example": "This song has a beautiful melody.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 13,
+        "term": "attention",
+        "ipa": "/əˈten.ʃən/",
+        "part_of_speech": "noun",
+        "definition_en": "notice, thought, or consideration",
+        "meaning_vi": "sự chú ý",
+        "example": "The speaker got the audience's attention.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 14,
+        "term": "refreshed",
+        "ipa": "/rɪˈfreʃt/",
+        "part_of_speech": "adjective",
+        "definition_en": "feeling full of energy again; fresh",
+        "meaning_vi": "sảng khoái, tươi tỉnh",
+        "example": "I felt refreshed after a cool shower.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 15,
+        "term": "alert",
+        "ipa": "/əˈlɜːt/",
+        "part_of_speech": "adjective",
+        "definition_en": "quick to notice things; awake and active",
+        "meaning_vi": "tỉnh táo",
+        "example": "Coffee helps me feel alert in the morning.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 16,
+        "term": "synapse",
+        "ipa": "/ˈsaɪ.næps/",
+        "part_of_speech": "noun",
+        "definition_en": "a connection between brain cells",
+        "meaning_vi": "khớp thần kinh",
+        "example": "Sleep helps the brain repair its synapses.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 17,
+        "term": "recommend",
+        "ipa": "/ˌrek.əˈmend/",
+        "part_of_speech": "verb",
+        "definition_en": "to advise someone to do something",
+        "meaning_vi": "khuyên, đề xuất",
+        "example": "Doctors recommend seven hours of sleep.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 18,
+        "term": "hygiene",
+        "ipa": "/ˈhaɪ.dʒiːn/",
+        "part_of_speech": "noun",
+        "definition_en": "practices that maintain health, such as cleanliness",
+        "meaning_vi": "thói quen giữ sức khỏe, vệ sinh",
+        "example": "Good sleep hygiene includes avoiding screens.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 19,
+        "term": "limit",
+        "ipa": "/ˈlɪm.ɪt/",
+        "part_of_speech": "verb/noun",
+        "definition_en": "to control or restrict something",
+        "meaning_vi": "hạn chế",
+        "example": "We must limit caffeine intake before bed.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      },
+      {
+        "id": 20,
+        "term": "alternative",
+        "ipa": "/ɒlˈtɜː.nə.tɪv/",
+        "part_of_speech": "noun/adjective",
+        "definition_en": "something that you can choose instead of another thing",
+        "meaning_vi": "sự thay thế",
+        "example": "Melodic sounds are a good alternative to loud beeps.",
+        "source": "reading",
+        "vocab_type": "single_word"
+      }
+    ],
+    "recycled_items": [
+      {
+        "term": "routine",
+        "ipa": "/ruːˈtiːn/",
+        "part_of_speech": "noun",
+        "meaning_vi": "thói quen, công việc thường ngày",
+        "source_day": "20260704"
+      },
+      {
+        "term": "effective",
+        "ipa": "/ɪˈfek.tɪv/",
+        "part_of_speech": "adjective",
+        "meaning_vi": "hiệu quả",
+        "source_day": "20260704"
+      },
+      {
+        "term": "experience",
+        "ipa": "/ɪkˈspɪə.ri.əns/",
+        "part_of_speech": "noun",
+        "meaning_vi": "kinh nghiệm, trải nghiệm",
+        "source_day": "20260704"
+      }
+    ],
+    "quizlet": {
+      "section_1_simple": [
+        "alarm : chuông báo thức",
+        "unpleasant : khó chịu",
+        "beep : tiếng bíp bíp",
+        "harsh : chói tai, gay gắt",
+        "inertia : sự trì trệ, quán tính",
+        "grogginess : sự mê mệt, mệt mỏi",
+        "groggy : chuếnh choáng, mê mệt",
+        "persist : kéo dài, dai dẳng",
+        "focus : tập trung",
+        "melodic : du dương, có giai điệu",
+        "tune : giai điệu, điệu nhạc",
+        "melody : giai điệu",
+        "attention : sự chú ý",
+        "refreshed : sảng khoái, tươi tỉnh",
+        "alert : tỉnh táo",
+        "synapse : khớp thần kinh",
+        "recommend : khuyên, đề xuất",
+        "hygiene : thói quen giữ sức khỏe, vệ sinh",
+        "limit : hạn chế",
+        "alternative : sự thay thế"
+      ],
+      "section_2_detailed": [
+        "alarm /əˈlɑːm, noun/ : chuông báo thức",
+        "unpleasant /ʌnˈplez.ənt, adjective/ : khó chịu",
+        "beep /biːp, noun/ : tiếng bíp bíp",
+        "harsh /hɑːʃ, adjective/ : chói tai, gay gắt",
+        "inertia /ɪˈnɜː.ʃə, noun/ : sự trì trệ, quán tính",
+        "grogginess /ˈgrɒɡ.i.nəs, noun/ : sự mê mệt, mệt mỏi",
+        "groggy /ˈgrɒɡ.i, adjective/ : chuếnh choáng, mê mệt",
+        "persist /pəˈsɪst, verb/ : kéo dài, dai dẳng",
+        "focus /ˈfəʊ.kəs, verb/noun/ : tập trung",
+        "melodic /məˈlɒd.ɪk, adjective/ : du dương, có giai điệu",
+        "tune /tʃuːn, noun/ : giai điệu, điệu nhạc",
+        "melody /ˈmel.ə.di, noun/ : giai điệu",
+        "attention /əˈten.ʃən, noun/ : sự chú ý",
+        "refreshed /rɪˈfreʃt, adjective/ : sảng khoái, tươi tỉnh",
+        "alert /əˈlɜːt, adjective/ : tỉnh táo",
+        "synapse /ˈsaɪ.næps, noun/ : khớp thần kinh",
+        "recommend /ˌrek.əˈmend, verb/ : khuyên, đề xuất",
+        "hygiene /ˈhaɪ.dʒiːn, noun/ : thói quen giữ sức khỏe, vệ sinh",
+        "limit /ˈlɪm.ɪt, verb/noun/ : hạn chế",
+        "alternative /ɒlˈtɜː.nə.tɪv, noun/adjective/ : sự thay thế"
+      ]
+    },
+    "vocab_checker_items": [
+      {
+        "term": "alarm",
+        "ipa": "/əˈlɑːm/",
+        "part_of_speech": "noun",
+        "definition_en": "a device that makes a loud noise to wake you up or warn you",
+        "meaning_vi": "chuông báo thức"
+      },
+      {
+        "term": "unpleasant",
+        "ipa": "/ʌnˈplez.ənt/",
+        "part_of_speech": "adjective",
+        "definition_en": "not enjoyable or nice; causing discomfort",
+        "meaning_vi": "khó chịu"
+      },
+      {
+        "term": "beep",
+        "ipa": "/biːp/",
+        "part_of_speech": "noun",
+        "definition_en": "a short high sound made by an electronic device",
+        "meaning_vi": "tiếng bíp bíp"
+      },
+      {
+        "term": "harsh",
+        "ipa": "/hɑːʃ/",
+        "part_of_speech": "adjective",
+        "definition_en": "rough, unpleasant, and chói tai",
+        "meaning_vi": "chói tai, gay gắt"
+      },
+      {
+        "term": "inertia",
+        "ipa": "/ɪˈnɜː.ʃə/",
+        "part_of_speech": "noun",
+        "definition_en": "lack of activity or slow transition to action",
+        "meaning_vi": "sự trì trệ, quán tính"
+      },
+      {
+        "term": "grogginess",
+        "ipa": "/ˈɡrɒɡ.i.nəs/",
+        "part_of_speech": "noun",
+        "definition_en": "the state of feeling tired and unable to think clearly",
+        "meaning_vi": "sự mê mệt, mệt mỏi"
+      },
+      {
+        "term": "groggy",
+        "ipa": "/ˈɡrɒɡ.i/",
+        "part_of_speech": "adjective",
+        "definition_en": "weak and unable to think clearly because you are tired",
+        "meaning_vi": "chuếnh choáng, mê mệt"
+      },
+      {
+        "term": "persist",
+        "ipa": "/pəˈsɪst/",
+        "part_of_speech": "verb",
+        "definition_en": "to continue to exist or happen",
+        "meaning_vi": "kéo dài, dai dẳng"
+      },
+      {
+        "term": "focus",
+        "ipa": "/ˈfəʊ.kəs/",
+        "part_of_speech": "verb/noun",
+        "definition_en": "to give all your attention to something",
+        "meaning_vi": "tập trung"
+      },
+      {
+        "term": "melodic",
+        "ipa": "/məˈlɒd.ɪk/",
+        "part_of_speech": "adjective",
+        "definition_en": "having a pleasant tune or melody",
+        "meaning_vi": "du dương, có giai điệu"
+      },
+      {
+        "term": "tune",
+        "ipa": "/tʃuːn/",
+        "part_of_speech": "noun",
+        "definition_en": "a series of musical notes that are pleasant to listen to",
+        "meaning_vi": "giai điệu, điệu nhạc"
+      },
+      {
+        "term": "melody",
+        "ipa": "/ˈmel.ə.di/",
+        "part_of_speech": "noun",
+        "definition_en": "a sequence of notes that make up a tune",
+        "meaning_vi": "giai điệu"
+      },
+      {
+        "term": "attention",
+        "ipa": "/əˈten.ʃən/",
+        "part_of_speech": "noun",
+        "definition_en": "notice, thought, or consideration",
+        "meaning_vi": "sự chú ý"
+      },
+      {
+        "term": "refreshed",
+        "ipa": "/rɪˈfreʃt/",
+        "part_of_speech": "adjective",
+        "definition_en": "feeling full of energy again; fresh",
+        "meaning_vi": "sảng khoái, tươi tỉnh"
+      },
+      {
+        "term": "alert",
+        "ipa": "/əˈlɜːt/",
+        "part_of_speech": "adjective",
+        "definition_en": "quick to notice things; awake and active",
+        "meaning_vi": "tỉnh táo"
+      },
+      {
+        "term": "synapse",
+        "ipa": "/ˈsaɪ.næps/",
+        "part_of_speech": "noun",
+        "definition_en": "a connection between brain cells",
+        "meaning_vi": "khớp thần kinh"
+      },
+      {
+        "term": "recommend",
+        "ipa": "/ˌrek.əˈmend/",
+        "part_of_speech": "verb",
+        "definition_en": "to advise someone to do something",
+        "meaning_vi": "khuyên, đề xuất"
+      },
+      {
+        "term": "hygiene",
+        "ipa": "/ˈhaɪ.dʒiːn/",
+        "part_of_speech": "noun",
+        "definition_en": "practices that maintain health, such as cleanliness",
+        "meaning_vi": "thói quen giữ sức khỏe, vệ sinh"
+      },
+      {
+        "term": "limit",
+        "ipa": "/ˈlɪm.ɪt/",
+        "part_of_speech": "verb/noun",
+        "definition_en": "to control or restrict something",
+        "meaning_vi": "hạn chế"
+      },
+      {
+        "term": "alternative",
+        "ipa": "/ɒlˈtɜː.nə.tɪv/",
+        "part_of_speech": "noun/adjective",
+        "definition_en": "something that you can choose instead of another thing",
+        "meaning_vi": "sự thay thế"
+      }
+    ]
+  },
+  "grammar": {
+    "targets": [
+      {
+        "name": "Comparatives and Superlatives",
+        "level": "A2",
+        "reason": "Necessary for comparing traditional vs melodic alarm qualities and sleep routines."
+      },
+      {
+        "name": "Present Simple vs Present Continuous",
+        "level": "A2",
+        "reason": "Useful for distinguishing standard sleep routines (simple) from current sleep habits (continuous)."
+      }
+    ],
+    "guide": [
+      {
+        "heading": "#### Chủ điểm 1: Comparatives and Superlatives (So sánh hơn và So sánh nhất)",
+        "content": "1. **Comparative (So sánh hơn)**: Dùng để so sánh giữa hai đối tượng.\\n- Tính từ ngắn: `S + V + adj-ed/er + than + O`. Ví dụ: 'Traditional alarms are **harsher** than music.'\\n- Tính từ dài: `S + V + more + adj + than + O`. Ví dụ: 'Melodic sounds are **more pleasant** than beeps.'\\n2. **Superlative (So sánh nhất)**: Dùng để so sánh một đối tượng với cả nhóm (từ 3 đối tượng trở lên).\\n- Tính từ ngắn: `S + V + the + adj-est`. Ví dụ: 'Waking up early is the **hardest** routine.'\\n- Tính từ dài: `S + V + the + most + adj`. Ví dụ: 'What is the **most effective** sound?'\\n*Lưu ý từ bất quy tắc:* good -> better -> best; bad -> worse -> worst."
+      },
+      {
+        "heading": "#### Chủ điểm 2: Present Simple vs Present Continuous",
+        "content": "1. **Present Simple (Hiện tại đơn)**: Diễn tả thói quen, thời gian biểu, hoặc sự thật hiển nhiên.\\n- Trạng từ đi kèm: *usually, always, sometimes, every day*.\\n- Ví dụ: 'I usually **wake** up at 6:00 AM.'\\n2. **Present Continuous (Hiện tại tiếp diễn)**: Diễn tả hành động đang xảy ra tại thời điểm nói hoặc thói quen tạm thời chỉ xảy ra dạo gần đây.\\n- Trạng từ đi kèm: *now, right now, at the moment, today*.\\n- Ví dụ: 'Look! The alarm **is ringing**.' hoặc 'Today, she **is waking** up later.'"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "trap": "Dùng 'more' kèm với đuôi '-er' trong so sánh hơn",
+        "wrong_example": "Melodic alarms are more better than beeps.",
+        "correct_version": "Melodic alarms are better than beeps.",
+        "why_it_matters": "Lỗi trùng lặp kép trong so sánh hơn làm giảm điểm Grammatical Range & Accuracy."
+      },
+      {
+        "trap": "Sử dụng Hiện tại đơn thay cho Hiện tại tiếp diễn dạo gần đây / tạm thời",
+        "wrong_example": "Today, she wakes up later than usual.",
+        "correct_version": "Today, she is waking up later than usual.",
+        "why_it_matters": "Lỗi sử dụng sai thì trong các ngữ cảnh thay đổi tạm thời."
+      },
+      {
+        "trap": "Dùng tính từ so sánh hơn thay vì so sánh nhất khi so sánh nhóm",
+        "wrong_example": "This is the more effective alarm of all.",
+        "correct_version": "This is the most effective alarm of all.",
+        "why_it_matters": "Lỗi sai mức độ so sánh khi đối chiếu trên 2 sự vật."
+      },
+      {
+        "trap": "Quên thêm động từ to be trong thì Hiện tại tiếp diễn",
+        "wrong_example": "Listen! The alarm ringing.",
+        "correct_version": "Listen! The alarm is ringing.",
+        "why_it_matters": "Thiếu thành phần bắt buộc của động từ chia tiếp diễn."
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "type": "Choose the correct letter",
+        "question": "Melodic alarms are ______ than beeping alarms.",
+        "options": [
+          "A. better",
+          "B. best",
+          "C. good"
+        ],
+        "correct_answer": "A",
+        "explanation_vi": "So sánh hơn của từ bất quy tắc 'good' đi kèm 'than' → dùng A. better.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "A. better",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "B. best",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "C. good",
+              "reason": "This form is grammatically incorrect in this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "type": "Choose the correct letter",
+        "question": "Today, she ______ a new alarm sound to wake up.",
+        "options": [
+          "A. tries",
+          "B. is trying",
+          "C. tried"
+        ],
+        "correct_answer": "B",
+        "explanation_vi": "Dấu hiệu hành động tạm thời xảy ra hôm nay 'Today' → chia Hiện tại tiếp diễn B. is trying.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "A. tries",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "B. is trying",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "C. tried",
+              "reason": "This form is grammatically incorrect in this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "type": "Choose the correct letter",
+        "question": "Waking up to music is the ______ way to start the day.",
+        "options": [
+          "A. more refreshed",
+          "B. most refreshed",
+          "C. refreshed"
+        ],
+        "correct_answer": "B",
+        "explanation_vi": "Có mạo từ 'the' chỉ so sánh nhất đi với tính từ dài 'refreshed' → dùng B. most refreshed.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "A. more refreshed",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "B. most refreshed",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "C. refreshed",
+              "reason": "This form is grammatically incorrect in this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 4,
+        "type": "Choose the correct letter",
+        "question": "I usually ______ my phone before I go to bed.",
+        "options": [
+          "A. limit",
+          "B. am limiting",
+          "C. limited"
+        ],
+        "correct_answer": "A",
+        "explanation_vi": "Có trạng từ tần suất 'usually' chỉ thói quen thường xuyên → chia Hiện tại đơn A. limit.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "A. limit",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "B. am limiting",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "C. limited",
+              "reason": "This form is grammatically incorrect in this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 5,
+        "type": "Choose the correct letter",
+        "question": "Melodic sounds are ______ than harsh alarm beeps.",
+        "options": [
+          "A. pleasant",
+          "B. more pleasant",
+          "C. most pleasant"
+        ],
+        "correct_answer": "B",
+        "explanation_vi": "So sánh hơn đi kèm 'than' với tính từ dài 'pleasant' → dùng B. more pleasant.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "A. pleasant",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "B. more pleasant",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "C. most pleasant",
+              "reason": "This form is grammatically incorrect in this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "type": "Choose the correct letter",
+        "question": "Listen! The alarm ______ right now.",
+        "options": [
+          "A. rings",
+          "B. is ringing",
+          "C. rang"
+        ],
+        "correct_answer": "B",
+        "explanation_vi": "Có từ mệnh lệnh gây chú ý 'Listen!' và trạng từ chỉ thời điểm nói 'right now' → chia Hiện tại tiếp diễn B. is ringing.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "A. rings",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "B. is ringing",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "C. rang",
+              "reason": "This form is grammatically incorrect in this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 7,
+        "type": "Choose the correct letter",
+        "question": "Having a dark room is ______ than having a bright room for sleep.",
+        "options": [
+          "A. important",
+          "B. more important",
+          "C. most important"
+        ],
+        "correct_answer": "B",
+        "explanation_vi": "So sánh hơn đi kèm 'than' với tính từ dài 'important' → dùng B. more important.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "A. important",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "B. more important",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "C. most important",
+              "reason": "This form is grammatically incorrect in this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "type": "Choose the correct letter",
+        "question": "Waking up early is the ______ challenge of my morning. (*)",
+        "options": [
+          "A. harder",
+          "B. hardest",
+          "C. hard"
+        ],
+        "correct_answer": "B",
+        "explanation_vi": "So sánh nhất đi sau 'the' với tính từ ngắn 'hard' → dùng B. hardest.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "A. harder",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "B. hardest",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "C. hard",
+              "reason": "This form is grammatically incorrect in this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "type": "Choose the correct letter",
+        "question": "At the moment, researchers ______ the effects of alarm music. (*)",
+        "options": [
+          "A. study",
+          "B. are studying",
+          "C. studied"
+        ],
+        "correct_answer": "B",
+        "explanation_vi": "Có cụm từ chỉ thời gian hiện tại 'At the moment' → chia Hiện tại tiếp diễn B. are studying.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "A. study",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "B. are studying",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "C. studied",
+              "reason": "This form is grammatically incorrect in this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "type": "Choose the correct letter",
+        "question": "He feels ______ today than he did yesterday morning. (*)",
+        "options": [
+          "A. refreshed",
+          "B. more refreshed",
+          "C. most refreshed"
+        ],
+        "correct_answer": "B",
+        "explanation_vi": "So sánh hơn đi kèm 'than' với cụm tính từ 'refreshed' → dùng B. more refreshed.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "A. refreshed",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "B. more refreshed",
+              "reason": "This form is grammatically incorrect in this context."
+            },
+            {
+              "option": "C. most refreshed",
+              "reason": "This form is grammatically incorrect in this context."
+            }
+          ]
+        }
+      },
+      {
+        "id": 11,
+        "type": "Fill in the blank",
+        "question": "Waking up early is ______ (difficult) than sleeping late.",
+        "options": [],
+        "correct_answer": "more difficult",
+        "explanation_vi": "So sánh hơn đi kèm 'than' với tính từ dài 'difficult' → điền 'more difficult'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        }
+      },
+      {
+        "id": 12,
+        "type": "Fill in the blank",
+        "question": "Look! The baby ______ (sleep) peacefully.",
+        "options": [],
+        "correct_answer": "is sleeping",
+        "explanation_vi": "Có từ cảm thán 'Look!' thu hút sự chú ý tại thời điểm nói → chia Hiện tại tiếp diễn 'is sleeping'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        }
+      },
+      {
+        "id": 13,
+        "type": "Fill in the blank",
+        "question": "Melodic alarms are the ______ (good) sound to reduce grogginess.",
+        "options": [],
+        "correct_answer": "best",
+        "explanation_vi": "Có từ 'the' đứng trước chỉ so sánh nhất của 'good' → điền 'best'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        }
+      },
+      {
+        "id": 14,
+        "type": "Fill in the blank",
+        "question": "He ______ (usually / drink) a cup of tea in the morning.",
+        "options": [],
+        "correct_answer": "usually drinks",
+        "explanation_vi": "Thói quen thường lệ ở Hiện tại đơn với chủ ngữ số ít 'He' → điền 'usually drinks'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        }
+      },
+      {
+        "id": 15,
+        "type": "Fill in the blank",
+        "question": "This alarm is ______ (loud) than my old one.",
+        "options": [],
+        "correct_answer": "louder",
+        "explanation_vi": "So sánh hơn của tính từ ngắn 'loud' đi kèm 'than' → điền 'louder'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        }
+      },
+      {
+        "id": 16,
+        "type": "Fill in the blank",
+        "question": "At present, I ______ (try) to improve my sleep hygiene.",
+        "options": [],
+        "correct_answer": "am trying",
+        "explanation_vi": "Dấu hiệu chỉ thời gian hiện tại 'At present' → chia Hiện tại tiếp diễn chủ ngữ 'I' → 'am trying'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        }
+      },
+      {
+        "id": 17,
+        "type": "Fill in the blank",
+        "question": "What is the ______ (effective) routine to wake up fresh?",
+        "options": [],
+        "correct_answer": "most effective",
+        "explanation_vi": "Có từ 'the' chỉ so sánh nhất đi với tính từ dài 'effective' → điền 'most effective'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        }
+      },
+      {
+        "id": 18,
+        "type": "Fill in the blank",
+        "question": "She ______ (always / wake) up at 6:00 AM on weekdays. (*)",
+        "options": [],
+        "correct_answer": "always wakes",
+        "explanation_vi": "Thói quen định kỳ ở Hiện tại đơn với chủ ngữ số ít 'She' → điền 'always wakes'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        }
+      },
+      {
+        "id": 19,
+        "type": "Fill in the blank",
+        "question": "Running in the morning is ______ (healthy) than sleeping late. (*)",
+        "options": [],
+        "correct_answer": "healthier",
+        "explanation_vi": "So sánh hơn của tính từ ngắn kết thúc bằng y 'healthy' đổi thành i-er → điền 'healthier'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        }
+      },
+      {
+        "id": 20,
+        "type": "Fill in the blank",
+        "question": "Why ______ you ______ (wear) your pajamas now? (*)",
+        "options": [],
+        "correct_answer": "are you wearing",
+        "explanation_vi": "Câu hỏi nghi vấn ở thì Hiện tại tiếp diễn có trạng từ 'now' → điền 'are you wearing'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        }
+      },
+      {
+        "id": 21,
+        "type": "Rewrite or Correct",
+        "question": "Correct the error: Waking up to beeps is baddest than music.",
+        "options": [],
+        "correct_answer": "Waking up to beeps is worse than music.",
+        "explanation_vi": "Từ 'bad' trong so sánh hơn đi kèm 'than' đổi bất quy tắc thành 'worse', không dùng 'baddest'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        },
+        "error_correction_validation": {
+          "original_sentence": "Waking up to beeps is baddest than music.",
+          "corrected_sentence": "Waking up to beeps is worse than music.",
+          "target_error_text": "baddest",
+          "correction_text": "worse",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 22,
+        "type": "Rewrite or Correct",
+        "question": "Correct the error: I am usually sleeping for eight hours every night.",
+        "options": [],
+        "correct_answer": "I usually sleep for eight hours every night.",
+        "explanation_vi": "Thói quen lặp đi lặp lại hàng đêm 'every night' chia Hiện tại đơn, không chia tiếp diễn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        },
+        "error_correction_validation": {
+          "original_sentence": "I am usually sleeping for eight hours every night.",
+          "corrected_sentence": "I usually sleep for eight hours every night.",
+          "target_error_text": "am",
+          "correction_text": "usually",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 23,
+        "type": "Rewrite or Correct",
+        "question": "Correct the error: My sister is the taller person in my family.",
+        "options": [],
+        "correct_answer": "My sister is the tallest person in my family.",
+        "explanation_vi": "So sánh một người với cả gia đình (nhóm đông người) sau 'the' dùng so sánh nhất 'tallest'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        },
+        "error_correction_validation": {
+          "original_sentence": "My sister is the taller person in my family.",
+          "corrected_sentence": "My sister is the tallest person in my family.",
+          "target_error_text": "taller",
+          "correction_text": "tallest",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 24,
+        "type": "Rewrite or Correct",
+        "question": "Correct the error: They are study sleep inertia at the moment.",
+        "options": [],
+        "correct_answer": "They are studying sleep inertia at the moment.",
+        "explanation_vi": "Thì Hiện tại tiếp diễn có cấu trúc 'be + V-ing' → sửa 'study' thành 'studying'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        },
+        "error_correction_validation": {
+          "original_sentence": "They are study sleep inertia at the moment.",
+          "corrected_sentence": "They are studying sleep inertia at the moment.",
+          "target_error_text": "study",
+          "correction_text": "studying",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 25,
+        "type": "Rewrite or Correct",
+        "question": "Correct the error: Melodic alarms are more better than beeps.",
+        "options": [],
+        "correct_answer": "Melodic alarms are better than beeps.",
+        "explanation_vi": "Lỗi so sánh kép. 'Better' đã là dạng so sánh hơn nên không dùng thêm từ 'more'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        },
+        "error_correction_validation": {
+          "original_sentence": "Melodic alarms are more better than beeps.",
+          "corrected_sentence": "Melodic alarms are better than beeps.",
+          "target_error_text": "more",
+          "correction_text": "better",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 26,
+        "type": "Rewrite or Correct",
+        "question": "Correct the error: Listen! The alarm is ring.",
+        "options": [],
+        "correct_answer": "Listen! The alarm is ringing.",
+        "explanation_vi": "Sau động từ to be 'is' chỉ hành động đang xảy ra phải dùng động từ đuôi -ing → sửa 'ring' thành 'ringing'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        },
+        "error_correction_validation": {
+          "original_sentence": "Listen! The alarm is ring.",
+          "corrected_sentence": "Listen! The alarm is ringing.",
+          "target_error_text": "ring",
+          "correction_text": "ringing",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 27,
+        "type": "Rewrite or Correct",
+        "question": "Correct the error: Traditional alarms are harsh than melodic music.",
+        "options": [],
+        "correct_answer": "Traditional alarms are harsher than melodic music.",
+        "explanation_vi": "Thiếu đuôi so sánh hơn cho tính từ ngắn 'harsh' khi đi kèm từ so sánh 'than' → sửa thành 'harsher'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        },
+        "error_correction_validation": {
+          "original_sentence": "Traditional alarms are harsh than melodic music.",
+          "corrected_sentence": "Traditional alarms are harsher than melodic music.",
+          "target_error_text": "harsh",
+          "correction_text": "harsher",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 28,
+        "type": "Rewrite or Correct",
+        "question": "Correct the error: She feels more fresher when she wakes up to music. (*)",
+        "options": [],
+        "correct_answer": "She feels fresher when she wakes up to music.",
+        "explanation_vi": "Tính từ ngắn 'fresh' đổi thành 'fresher' trong so sánh hơn, không đi kèm 'more'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        },
+        "error_correction_validation": {
+          "original_sentence": "She feels more fresher when she wakes up to music. (*)",
+          "corrected_sentence": "She feels fresher when she wakes up to music.",
+          "target_error_text": "more",
+          "correction_text": "fresher",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 29,
+        "type": "Rewrite or Correct",
+        "question": "Correct the error: He always is arriving late for his morning meetings. (*)",
+        "options": [],
+        "correct_answer": "He always arrives late for his morning meetings.",
+        "explanation_vi": "Trạng từ tần suất 'always' chỉ thói quen lặp lại thường xuyên ở Hiện tại đơn → sửa 'is arriving' thành 'arrives'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        },
+        "error_correction_validation": {
+          "original_sentence": "He always is arriving late for his morning meetings. (*)",
+          "corrected_sentence": "He always arrives late for his morning meetings.",
+          "target_error_text": "is",
+          "correction_text": "arrives",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 30,
+        "type": "Rewrite or Correct",
+        "question": "Combine the two sentences using a comparative adjective: My old alarm was 70 decibels. My new alarm is 60 decibels. (loud) (*)",
+        "options": [],
+        "correct_answer": "My old alarm was louder than my new alarm.",
+        "explanation_vi": "Kết hợp hai câu dùng cấu trúc so sánh hơn của tính từ ngắn 'loud' → 'louder than'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "punctuation_complete": true,
+          "why_other_options_are_wrong": []
+        }
+      }
+    ]
+  },
+  "writing": {
+    "tasks": [
+      {
+        "id": 1,
+        "task_type": "Word Ordering",
+        "prompt": "Sắp xếp các từ thành câu hoàn chỉnh:\na) up / early / wake / I / .\nb) fresh / music / me / helps / feel / .",
+        "target_length": "Complete sentences",
+        "focus_skill": "Word order in simple sentences",
+        "useful_language": [
+          "S + V + O",
+          "Subject-verb alignment"
+        ],
+        "success_criteria": [
+          "Correct capitalization",
+          "Correct punctuation at the end of sentences"
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 2,
+        "task_type": "Sentence Completion",
+        "prompt": "Điền thông tin hoàn thành câu:\na) In the morning, I usually ______ .\nb) Although I love sleeping late, ______ .",
+        "target_length": "2 short clauses",
+        "focus_skill": "Clause coordination with although",
+        "useful_language": [
+          "although + S + V",
+          "usually + V"
+        ],
+        "success_criteria": [
+          "Subject-verb agreement",
+          "Cohesive logic between clauses"
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 3,
+        "task_type": "Translation",
+        "prompt": "Dịch các câu sau sang tiếng Anh:\na) Tôi đi ngủ lúc 10 giờ tối.\nb) Âm nhạc giúp bạn tỉnh táo hơn.",
+        "target_length": "2 sentences",
+        "focus_skill": "Simple structures and verbs",
+        "useful_language": [
+          "go to bed at",
+          "helps you feel alert"
+        ],
+        "success_criteria": [
+          "Correct vocabulary usage",
+          "Proper grammar tenses"
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 4,
+        "task_type": "Visual Data Description",
+        "prompt": "Viết 3 câu đơn giản mô tả biểu đồ so sánh số giờ ngủ trung bình của người năng động (active adults) và người không năng động (inactive adults) mỗi đêm.",
+        "target_length": "20-30 words",
+        "focus_skill": "Simple data comparison using A2 modifiers",
+        "useful_language": [
+          "sleep hours",
+          "longer than",
+          "compared to"
+        ],
+        "success_criteria": [
+          "Clear comparison sentences",
+          "Accurate data citation from the chart"
+        ],
+        "visual_data": {
+          "type": "svg",
+          "content": "<svg viewBox=\"0 0 400 200\" width=\"100%\" height=\"200\" style=\"background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px;\"><line x1=\"50\" y1=\"150\" x2=\"350\" y2=\"150\" stroke=\"#ccc\" stroke-width=\"1\" /><line x1=\"50\" y1=\"100\" x2=\"350\" y2=\"100\" stroke=\"#eee\" stroke-width=\"1\" /><line x1=\"50\" y1=\"50\" x2=\"350\" y2=\"50\" stroke=\"#eee\" stroke-width=\"1\" /><text x=\"35\" y=\"155\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">0</text><text x=\"30\" y=\"105\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">4</text><text x=\"30\" y=\"55\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">8</text><rect x=\"100\" y=\"50\" width=\"50\" height=\"100\" fill=\"#3498db\" rx=\"2\" /><text x=\"125\" y=\"40\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\" text-anchor=\"middle\">8 hours</text><rect x=\"230\" y=\"75\" width=\"50\" height=\"75\" fill=\"#e67e22\" rx=\"2\" /><text x=\"255\" y=\"65\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\" text-anchor=\"middle\">6 hours</text><text x=\"125\" y=\"170\" font-family=\"Arial\" font-size=\"12\" font-weight=\"bold\" fill=\"#555\" text-anchor=\"middle\">Active Adults</text><text x=\"255\" y=\"170\" font-family=\"Arial\" font-size=\"12\" font-weight=\"bold\" fill=\"#555\" text-anchor=\"middle\">Inactive Adults</text></svg>"
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 5,
+        "task_type": "Guided Email Invite",
+        "prompt": "Viết email ngắn mời bạn cùng đi bộ vào buổi sáng tại công viên vào Chủ Nhật này. Nêu rõ thời gian.",
+        "target_length": "25-35 words",
+        "focus_skill": "Basic invitation structure",
+        "useful_language": [
+          "Would you like to...",
+          "let's meet at",
+          "in the park"
+        ],
+        "success_criteria": [
+          "Include greeting and closing",
+          "Clear invitation message"
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      }
+    ]
+  },
+  "answers": {
+    "reading_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "NOT GIVEN",
+        "evidence_quote": "",
+        "evidence_paragraph": 0,
+        "explanation_vi": "Bài viết không đề cập đến việc người tham gia thích nhạc cổ điển hay nhạc rock hơn.",
+        "why_others_wrong_vi": "Không áp dụng cho câu hỏi True/False.",
+        "tip_vi": "Không tự suy diễn thông tin nằm ngoài bài đọc."
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "FALSE",
+        "evidence_quote": "Traditional alarm clocks use a loud, **unpleasant** **beep** or other **harsh** sounds to wake people up.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Đoạn 1 nêu rõ các đồng hồ báo thức truyền thống sử dụng tiếng bíp lớn, khó chịu hoặc các âm thanh chói tai khác, chứ không dùng nhạc du dương.",
+        "why_others_wrong_vi": "Không áp dụng cho câu hỏi True/False.",
+        "tip_vi": "Tìm kiếm định nghĩa trực tiếp ngay sau các từ giới thiệu như 'is' hoặc 'means'."
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "TRUE",
+        "evidence_quote": "Scientists call this **inertia** or **grogginess**.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Đoạn 2 định nghĩa cảm giác uể oải, nặng nề khi thức dậy được các nhà khoa học gọi là sự trì trệ giấc ngủ (inertia) hoặc sự mệt mỏi (grogginess).",
+        "why_others_wrong_vi": "Không áp dụng cho câu hỏi True/False.",
+        "tip_vi": "Chú ý các từ mang tính tuyệt đối như 'must' (phải) hoặc 'perfect' (hoàn hảo) thường là dấu hiệu thông tin bị bóp méo."
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "TRUE",
+        "evidence_quote": "A study in Australia of 50 people showed",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Đoạn 2 nêu rõ một nghiên cứu tại Úc thực hiện trên 50 người ('of 50 people').",
+        "why_others_wrong_vi": "Không áp dụng cho câu hỏi True/False.",
+        "tip_vi": "Xác nhận các thông tin nhân vật bằng cách quét các tên riêng viết hoa trong văn bản."
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "TRUE",
+        "evidence_quote": "A **melody** increases our **attention** and helps us transition from sleep to waking up.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Đoạn 2 khẳng định giai điệu làm tăng sự chú ý của chúng ta ('increases our attention') và giúp chuyển tiếp dễ dàng hơn.",
+        "why_others_wrong_vi": "Không áp dụng cho câu hỏi True/False.",
+        "tip_vi": "Tìm các cụm từ tương đồng ý nghĩa: 'travel videos' tương đương với 'travel programs'."
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "B",
+        "evidence_quote": "people feel **refreshed** and more **alert**.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Đoạn 2 viết: 'As a result, people feel refreshed and more alert.'",
+        "why_others_wrong_vi": "A sai vì tiếng nhạc giúp giảm mệt mỏi; C sai vì giấc ngủ phục hồi khớp thần kinh chứ nhạc không gây nguy hiểm.",
+        "tip_vi": "Đối chiếu từ khóa để tìm mục tiêu mong muốn."
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "A",
+        "evidence_quote": "A **melody** increases our **attention** and helps us transition from sleep to waking up.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Đoạn 2 giải thích giai điệu giúp tăng sự tập trung chú ý ('increases our attention').",
+        "why_others_wrong_vi": "B và C sai vì thông tin ngược hoặc không có trong bài đọc.",
+        "tip_vi": "Từ khóa chỉ nguyên nhân giúp trả lời câu hỏi 'Why'."
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "B",
+        "evidence_quote": "but for some, it can **persist** for hours.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Từ 'persist' nghĩa là tiếp tục kéo dài hoặc tồn tại ('continue to exist').",
+        "why_others_wrong_vi": "A và C mang ý nghĩa hoàn toàn khác.",
+        "tip_vi": "Sử dụng ngữ cảnh tương phản để đoán nghĩa."
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "B",
+        "evidence_quote": "Doctors **recommend** good sleep **hygiene**.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Đoạn 3 viết các bác sĩ khuyên thực hiện vệ sinh giấc ngủ tốt ('recommend good sleep hygiene').",
+        "why_others_wrong_vi": "A và C sai vì ngược với thông tin trong bài đọc.",
+        "tip_vi": "Tìm các cụm từ liên quan trực tiếp để lọc đáp án nhiễu."
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "harsh sounds",
+        "evidence_quote": "Traditional alarm clocks use a loud, **unpleasant** **beep** or other **harsh** sounds to wake people up.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Đoạn 1 viết đồng hồ truyền thống dùng tiếng bíp lớn, khó chịu hoặc các âm thanh chói tai khác ('harsh sounds').",
+        "why_others_wrong_vi": "Không áp dụng cho câu hỏi điền từ.",
+        "tip_vi": "Tìm các từ đi cùng với động từ để tìm đúng thuật ngữ ngành nghề."
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "grogginess",
+        "evidence_quote": "Scientists call this **inertia** or **grogginess**.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Khoa học gọi tình trạng trì trệ này là 'inertia' hoặc 'grogginess'.",
+        "why_others_wrong_vi": "Không áp dụng cho câu hỏi điền từ.",
+        "tip_vi": "Quét nhanh các tên riêng đi liền với các danh hiệu."
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "30 minutes",
+        "evidence_quote": "For most people, this feeling lasts for about 30 minutes",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Đoạn 2 chỉ ra cảm giác này kéo dài khoảng 30 phút ở hầu hết mọi người.",
+        "why_others_wrong_vi": "Không áp dụng cho câu hỏi điền từ.",
+        "tip_vi": "Tìm danh từ đi sau động từ trong bài đọc."
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "synapses",
+        "evidence_quote": "the brain repairs its **synapses**, which are connections between brain cells.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Đoạn 3 chỉ ra bộ não sửa chữa các khớp thần kinh ('synapses') trong khi ngủ.",
+        "why_others_wrong_vi": "Không áp dụng cho câu hỏi điền từ.",
+        "tip_vi": "Chú ý cấu trúc liệt kê để tìm từ còn thiếu."
+      }
+    ],
+    "grammar_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "A",
+        "analysis_vi": "So sánh hơn đi kèm 'than' với tính từ ngắn bất quy tắc 'good' -> better.",
+        "tip_vi": "Ghi nhớ bảng tính từ bất quy tắc."
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "B",
+        "analysis_vi": "Hành động tạm thời xảy ra hôm nay 'Today' -> chia Hiện tại tiếp diễn 'is trying'.",
+        "tip_vi": "Từ 'Today' thường là dấu hiệu của Hiện tại tiếp diễn."
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "B",
+        "analysis_vi": "So sánh nhất đi sau 'the' với tính từ dài 'refreshed' -> most refreshed.",
+        "tip_vi": "Dùng 'the most' cho tính từ dài."
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "A",
+        "analysis_vi": "Trói quen hàng ngày với 'usually' -> chia Hiện tại đơn 'limit'.",
+        "tip_vi": "Thói quen dùng Hiện tại đơn."
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "B",
+        "analysis_vi": "So sánh hơn với tính từ dài 'pleasant' -> more pleasant.",
+        "tip_vi": "Từ 'pleasant' là tính từ dài."
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "B",
+        "analysis_vi": "Hành động đang xảy ra tại thời điểm nói 'Listen!' và 'right now' -> chia Hiện tại tiếp diễn 'is ringing'.",
+        "tip_vi": "Mệnh lệnh 'Listen!' báo hiệu Hiện tại tiếp diễn."
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "B",
+        "analysis_vi": "So sánh hơn đi kèm 'than' với tính từ dài 'important' -> more important.",
+        "tip_vi": "Quan sát từ 'than' ngay sau tính từ."
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "B",
+        "analysis_vi": "So sánh nhất đi sau 'the' với tính từ ngắn 'hard' -> hardest.",
+        "tip_vi": "Dùng 'the + adj-est' cho tính từ ngắn."
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "B",
+        "analysis_vi": "Trạng từ 'At the moment' chỉ hành động đang xảy ra -> chia Hiện tại tiếp diễn 'are studying'.",
+        "tip_vi": "Nhận diện dấu hiệu của Hiện tại tiếp diễn."
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "B",
+        "analysis_vi": "So sánh hơn đi kèm 'than' với tính từ dài 'refreshed' -> more refreshed.",
+        "tip_vi": "Đối chiếu hai đối tượng so sánh."
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "more difficult",
+        "analysis_vi": "So sánh hơn đi kèm 'than' với tính từ dài 'difficult' -> 'more difficult'.",
+        "tip_vi": "Tính từ dài dùng 'more + adj'."
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "is sleeping",
+        "analysis_vi": "Có từ mệnh lệnh 'Look!' gây chú ý hành động đang xảy ra -> chia Hiện tại tiếp diễn 'is sleeping'.",
+        "tip_vi": "Dấu chấm than cảm thán chỉ hành động diễn ra lúc nói."
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "best",
+        "analysis_vi": "So sánh nhất đi sau 'the' của tính từ bất quy tắc 'good' -> 'best'.",
+        "tip_vi": "Thuộc lòng dạng so sánh bất quy tắc."
+      },
+      {
+        "question_id": 14,
+        "correct_answer": "usually drinks",
+        "analysis_vi": "Thói quen Hiện tại đơn của chủ ngữ số ít 'He' -> 'usually drinks'.",
+        "tip_vi": "Thêm s/es vào sau động từ thường ở Hiện tại đơn số ít."
+      },
+      {
+        "question_id": 15,
+        "correct_answer": "louder",
+        "analysis_vi": "So sánh hơn của tính từ ngắn 'loud' -> 'louder'.",
+        "tip_vi": "Tính từ ngắn thêm đuôi -er."
+      },
+      {
+        "question_id": 16,
+        "correct_answer": "am trying",
+        "analysis_vi": "Có từ 'At present' chỉ trạng thái hiện tại tiếp diễn -> 'am trying'.",
+        "tip_vi": "To be chia theo ngôi chủ ngữ."
+      },
+      {
+        "question_id": 17,
+        "correct_answer": "most effective",
+        "analysis_vi": "So sánh nhất của tính từ dài 'effective' -> 'most effective'.",
+        "tip_vi": "Tính từ dài dùng 'the most + adj'."
+      },
+      {
+        "question_id": 18,
+        "correct_answer": "always wakes",
+        "analysis_vi": "Thói quen thường xuyên đi với Hiện tại đơn chủ ngữ số ít 'She' -> 'always wakes'.",
+        "tip_vi": "Vị trí của trạng từ tần suất đứng trước động từ thường."
+      },
+      {
+        "question_id": 19,
+        "correct_answer": "healthier",
+        "analysis_vi": "Tính từ kết thúc bằng y đổi thành i-er -> 'healthier'.",
+        "tip_vi": "Đổi y thành i rồi mới thêm er."
+      },
+      {
+        "question_id": 20,
+        "correct_answer": "are you wearing",
+        "analysis_vi": "Câu hỏi nghi vấn Hiện tại tiếp diễn với trạng từ 'now' -> 'are you wearing'.",
+        "tip_vi": "Đảo trợ động từ be lên trước chủ ngữ."
+      },
+      {
+        "question_id": 21,
+        "correct_answer": "Waking up to beeps is worse than music.",
+        "analysis_vi": "Dạng so sánh hơn bất quy tắc của 'bad' là 'worse', không dùng 'baddest'.",
+        "tip_vi": "Tránh lỗi dùng nhầm dạng so sánh hơn/nhất."
+      },
+      {
+        "question_id": 22,
+        "correct_answer": "I usually sleep for eight hours every night.",
+        "analysis_vi": "Thói quen lặp lại thường xuyên 'every night' chia Hiện tại đơn, không chia tiếp diễn.",
+        "tip_vi": "Tránh chia tiếp diễn cho thói quen lâu dài."
+      },
+      {
+        "question_id": 23,
+        "correct_answer": "My sister is the tallest person in my family.",
+        "analysis_vi": "So sánh một người trong cả gia đình (nhóm đông) sau 'the' phải dùng so sánh nhất 'tallest'.",
+        "tip_vi": "Phân biệt số lượng đối tượng so sánh."
+      },
+      {
+        "question_id": 24,
+        "correct_answer": "They are studying sleep inertia at the moment.",
+        "analysis_vi": "Thì Hiện tại tiếp diễn khuyết đuôi -ing của động từ chính -> sửa thành 'studying'.",
+        "tip_vi": "Công thức tiếp diễn là 'be + V-ing'."
+      },
+      {
+        "question_id": 25,
+        "correct_answer": "Melodic alarms are better than beeps.",
+        "analysis_vi": "Better đã là dạng so sánh hơn nên dùng thêm 'more' là sai ngữ pháp.",
+        "tip_vi": "Không bao giờ dùng so sánh kép."
+      },
+      {
+        "question_id": 26,
+        "correct_answer": "Listen! The alarm is ringing.",
+        "analysis_vi": "Sau động từ to be 'is' chỉ hành động đang xảy ra tại thời điểm nói phải dùng động từ đuôi -ing.",
+        "tip_vi": "Listen! là từ mệnh lệnh chỉ hành động tiếp diễn."
+      },
+      {
+        "question_id": 27,
+        "correct_answer": "Traditional alarms are harsher than melodic music.",
+        "analysis_vi": "Thiếu đuôi so sánh hơn cho tính từ ngắn 'harsh' khi đi kèm 'than'.",
+        "tip_vi": "Luôn dùng tính từ ngắn dạng -er với 'than'."
+      },
+      {
+        "question_id": 28,
+        "correct_answer": "She feels fresher when she wakes up to music.",
+        "analysis_vi": "Fresher đã là so sánh hơn nên dùng thêm 'more' là lỗi dùng từ thừa.",
+        "tip_vi": "Loại bỏ 'more' trước tính từ ngắn đã thêm er."
+      },
+      {
+        "question_id": 29,
+        "correct_answer": "He always arrives late for his morning meetings.",
+        "analysis_vi": "Trạng từ tần suất 'always' chỉ thói quen lặp lại thường xuyên ở Hiện tại đơn, không chia tiếp diễn.",
+        "tip_vi": "Không dùng be + V-ing cho các thói quen bất biến."
+      },
+      {
+        "question_id": 30,
+        "correct_answer": "My old alarm was louder than my new alarm.",
+        "analysis_vi": "Kết hợp hai câu dùng cấu trúc so sánh hơn của tính từ ngắn 'loud' -> 'louder than'.",
+        "tip_vi": "Dựa trên số đo decibel để xác định đối tượng lớn hơn."
+      }
+    ],
+    "writing_guidance": [
+      {
+        "task_id": 1,
+        "model_answer": "a) I wake up early.\nb) Music helps me feel fresh.",
+        "guidance_vi": "Sắp xếp đúng trật tự chủ ngữ, động từ, trạng từ ở câu a. Sắp xếp đúng cấu trúc 'S + help + O + V-bare' ở câu b.",
+        "self_checklist": [
+          "Viết hoa chữ cái đầu câu.",
+          "Có dấu chấm kết thúc câu.",
+          "Sắp xếp đúng trật tự từ."
+        ]
+      },
+      {
+        "task_id": 2,
+        "model_answer": "a) In the morning, I usually eat breakfast and drink tea.\nb) Although I love sleeping late, I still wake up early on weekdays.",
+        "guidance_vi": "Hoàn thành mệnh đề thói quen sau 'usually' ở câu a. Hoàn thành mệnh đề chính tương phản với mệnh đề nhượng bộ 'Although' ở câu b.",
+        "self_checklist": [
+          "Mệnh đề sau 'usually' đầy đủ S + V.",
+          "Mệnh đề ở câu b chia thì phù hợp.",
+          "Logic câu mạch lạc."
+        ]
+      },
+      {
+        "task_id": 3,
+        "model_answer": "a) I go to bed at 10 PM.\nb) Music helps you feel more alert.",
+        "guidance_vi": "Dịch đúng cụm từ 'go to bed at' (đi ngủ lúc) ở câu a. Sử dụng đúng động từ 'helps' đi kèm tân ngữ ở câu b.",
+        "self_checklist": [
+          "Dịch đúng nghĩa và đúng thì hiện tại đơn.",
+          "Sử dụng đúng giới từ đi với giờ giấc 'at'."
+        ]
+      },
+      {
+        "task_id": 4,
+        "model_answer": "The chart compares the average sleep hours of active and inactive adults per night. Active adults sleep for 8 hours, while inactive adults sleep for only 6 hours. Therefore, active adults sleep longer than inactive adults.",
+        "guidance_vi": "Viết 3 câu: giới thiệu biểu đồ, đưa số liệu chi tiết của 2 nhóm bằng từ nối tương phản 'while', và câu so sánh hơn sử dụng 'longer than'.",
+        "self_checklist": [
+          "Có câu so sánh hơn.",
+          "Trích dẫn đúng số liệu 8 và 6 từ biểu đồ.",
+          "Độ dài khoảng 25-30 từ."
+        ]
+      },
+      {
+        "task_id": 5,
+        "model_answer": "Hi Linh,\nWould you like to go for a morning walk in the park this Sunday? Let's meet at the main gate at 6:30 AM. It will help us feel fresh!\nBest,\nNam",
+        "guidance_vi": "Viết thư mời thân mật sử dụng cấu trúc hỏi 'Would you like to...'. Đảm bảo đầy đủ phần chào hỏi đầu thư và kết thúc ký tên thân mật.",
+        "self_checklist": [
+          "Chào hỏi thân mật ở đầu email.",
+          "Nêu rõ lời mời và thời gian đi bộ.",
+          "Ký tên ở cuối thư."
+        ]
+      }
+    ],
+    "review_bridge": [
+      {
+        "id": 1,
+        "prompt": "Dịch câu sau sang tiếng Anh, sử dụng từ vựng ôn tập của chủ đề trước: 'Kê thêm giường phụ là giải pháp hiệu quả cho nhóm khách của chúng tôi.'",
+        "correct_answer": "Adding an extra bed is an effective [R] solution for our group of guests.",
+        "rationale_vi": "Sử dụng từ ôn tập 'effective' [R] từ Day 20260704."
+      },
+      {
+        "id": 2,
+        "prompt": "Điền từ ôn tập thích hợp vào chỗ trống: 'Checking in new guests at the front desk is a regular part of her daily ______ [R].'",
+        "correct_answer": "routine",
+        "rationale_vi": "Điền từ ôn tập 'routine' [R] (thói quen, công việc thường ngày) từ Day 20260704."
+      },
+      {
+        "id": 3,
+        "prompt": "Chia động từ trong ngoặc dưới dạng quá khứ: 'During their last holiday in London, they ______ (experience) [R] very professional hotel service.'",
+        "correct_answer": "experienced",
+        "rationale_vi": "Chia động từ ôn tập quy tắc 'experience' [R] thêm đuôi -ed thành 'experienced' ở quá khứ đơn."
+      }
+    ]
+  },
+  "warm_up": [
+    "Bạn thường xem phim ở rạp hay xem trực tuyến? Tại sao?",
+    "Theo bạn, sự phát triển của các dịch vụ trực tuyến ảnh hưởng thế nào đến rạp chiếu phim?",
+    "Rạp chiếu phim truyền thống cần làm gì để cạnh tranh với các nền tảng trực tuyến?"
+  ],
+  "level": "B1",
+  "topic": "Daily routines, habits, time management",
+  "day": "20260706",
+  "lesson_id": "LSN-20260706-A2-ALARM",
+  "practice_markdown": "Reading: B1\nWriting: A2\n\n## Reading Source Verification\n| Source title | Publisher/Organization | Date/Access date | Final verified URL | URL status | Source type | Reliability check | How the passage uses the source |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| It's Alarming: What Wakes You Up Each Morning? | VOA Learning English | February 13, 2020 / July 1, 2026 | https://learningenglish.voanews.com/a/it-s-alarming-what-wakes-you-up-each-morning-/5285741.html | Active | Educational News Article | High - official VOA educational report | Highly relevant for sleep routines, habits, and auditory alarms science. |\n\n## Warm-up\nAnswer the following questions in Vietnamese or English:\n1. Bạn thường xem phim ở rạp hay xem trực tuyến? Tại sao?\n2. Theo bạn, sự phát triển của các dịch vụ trực tuyến ảnh hưởng thế nào đến rạp chiếu phim?\n3. Rạp chiếu phim truyền thống cần làm gì để cạnh tranh với các nền tảng trực tuyến?\n\n## Reading Passage\n### It's Alarming: What Wakes You Up Each Morning?\n\nEvery morning, millions of people wake up to the sound of an **alarm**. For many, this is a difficult part of their daily **routine** [R]. Traditional alarm clocks use a loud, **unpleasant** **beep** or other **harsh** sounds to wake people up. However, researchers suggest that these sounds might not be the most **effective** [R] way to start your day. Instead, they can make you feel tired and unfocused.\n\nWhen we wake up, we often feel heavy and sleepy. Scientists call this **inertia** or **grogginess**. They found that people who wake up to harsh beeps feel **groggy** for a longer time. For most people, this feeling lasts for about 30 minutes, but for some, it can **persist** for hours. This makes it hard to **focus** on work or school. A study in Australia of 50 people showed that waking up to a **melodic** sound, like a popular song or a pleasant **tune**, can help. A **melody** increases our **attention** and helps us transition from sleep to waking up. As a result, people feel **refreshed** and more **alert**.\n\nDuring sleep, the brain repairs its **synapses**, which are connections between brain cells. There are also other ways to get a better sleep. Doctors **recommend** good sleep **hygiene**. This includes keeping the bedroom dark and quiet. You should also **limit** your screen time before bed. If you **experience** [R] sleep problems, a **melodic** alarm is a great **alternative** to standard beeping. Getting at least seven hours of sleep is still the best way to wake up feeling happy.\n\n## Questions for Reading\n### Questions 1–5: True/False/Not Given\n\n1. Most participants in the Australian study preferred classical music over rock music. (*)\n2. Traditional alarm clocks use melodic music to wake people up.\n3. Sleep inertia is the groggy feeling you have right after waking up.\n4. The study in Australia involved exactly 50 participants.\n5. Melodic alarms help increase a person's attention in the morning.\n\n### Questions 6–9: Multiple Choice\n\n6. What does the study conclude about melodic alarm sounds?\n    A. A. They make people feel groggy for hours.\n    B. B. They can help people feel refreshed and alert.\n    C. C. They are dangerous for brain synapses.\n7. Why do melodic sounds help you wake up better?\n    A. A. Because they increase your attention.\n    B. B. Because they turn off your synapses.\n    C. C. Because they are much louder than traditional beeps.\n8. What does the word 'persist' in the second paragraph mean?\n    A. A. To stop quickly\n    B. B. To continue to exist\n    C. C. To become louder\n9. What is the main recommendation for better sleep in Paragraph 3?\n    A. A. Waking up every 30 minutes.\n    B. B. Practicing good sleep hygiene.\n    C. C. Exercising right before bedtime.\n\n### Questions 10–13: Short Answer\n\n10. What do traditional alarm clocks use to wake people up, besides beeps?\n11. What feeling is synonymous with sleep inertia?\n12. For how many minutes does grogginess usually last for most people?\n13. What brain connections does the brain repair during sleep? (*)\n\n## Questions for Grammar\n### Choose the correct letter\n\n1. Melodic alarms are ______ than beeping alarms.\n    A. A. better\n    B. B. best\n    C. C. good\n2. Today, she ______ a new alarm sound to wake up.\n    A. A. tries\n    B. B. is trying\n    C. C. tried\n3. Waking up to music is the ______ way to start the day.\n    A. A. more refreshed\n    B. B. most refreshed\n    C. C. refreshed\n4. I usually ______ my phone before I go to bed.\n    A. A. limit\n    B. B. am limiting\n    C. C. limited\n5. Melodic sounds are ______ than harsh alarm beeps.\n    A. A. pleasant\n    B. B. more pleasant\n    C. C. most pleasant\n6. Listen! The alarm ______ right now.\n    A. A. rings\n    B. B. is ringing\n    C. C. rang\n7. Having a dark room is ______ than having a bright room for sleep.\n    A. A. important\n    B. B. more important\n    C. C. most important\n8. Waking up early is the ______ challenge of my morning. (*) (*)\n    A. A. harder\n    B. B. hardest\n    C. C. hard\n9. At the moment, researchers ______ the effects of alarm music. (*) (*)\n    A. A. study\n    B. B. are studying\n    C. C. studied\n10. He feels ______ today than he did yesterday morning. (*) (*)\n    A. A. refreshed\n    B. B. more refreshed\n    C. C. most refreshed\n\n### Fill in the blank\n\n11. Waking up early is ______ (difficult) than sleeping late.\n12. Look! The baby ______ (sleep) peacefully.\n13. Melodic alarms are the ______ (good) sound to reduce grogginess.\n14. He ______ (usually / drink) a cup of tea in the morning.\n15. This alarm is ______ (loud) than my old one.\n16. At present, I ______ (try) to improve my sleep hygiene.\n17. What is the ______ (effective) routine to wake up fresh?\n18. She ______ (always / wake) up at 6:00 AM on weekdays. (*) (*)\n19. Running in the morning is ______ (healthy) than sleeping late. (*) (*)\n20. Why ______ you ______ (wear) your pajamas now? (*) (*)\n\n### Rewrite or Correct\n\n21. Correct the error: Waking up to beeps is baddest than music.\n22. Correct the error: I am usually sleeping for eight hours every night.\n23. Correct the error: My sister is the taller person in my family.\n24. Correct the error: They are study sleep inertia at the moment.\n25. Correct the error: Melodic alarms are more better than beeps.\n26. Correct the error: Listen! The alarm is ring.\n27. Correct the error: Traditional alarms are harsh than melodic music.\n28. Correct the error: She feels more fresher when she wakes up to music. (*) (*)\n29. Correct the error: He always is arriving late for his morning meetings. (*) (*)\n30. Combine the two sentences using a comparative adjective: My old alarm was 70 decibels. My new alarm is 60 decibels. (loud) (*) (*)\n\n## Questions for Writing\n| # | Task | Target length | Focus skill | Useful language | Success criteria |\n| --- | --- | --- | --- | --- | --- |\n| 1 | Word Ordering: Sắp xếp các từ thành câu hoàn chỉnh:<br>a) up / early / wake / I / .<br>b) fresh / music / me / helps / feel / . | Complete sentences | Word order in simple sentences | S + V + O<br>Subject-verb alignment | Correct capitalization<br>Correct punctuation at the end of sentences |\n| 2 | Sentence Completion: Điền thông tin hoàn thành câu:<br>a) In the morning, I usually ______ .<br>b) Although I love sleeping late, ______ . | 2 short clauses | Clause coordination with although | although + S + V<br>usually + V | Subject-verb agreement<br>Cohesive logic between clauses |\n| 3 | Translation: Dịch các câu sau sang tiếng Anh:<br>a) Tôi đi ngủ lúc 10 giờ tối.<br>b) Âm nhạc giúp bạn tỉnh táo hơn. | 2 sentences | Simple structures and verbs | go to bed at<br>helps you feel alert | Correct vocabulary usage<br>Proper grammar tenses |\n| 4 | Visual Data Description: Viết 3 câu đơn giản mô tả biểu đồ so sánh số giờ ngủ trung bình của người năng động (active adults) và người không năng động (inactive adults) mỗi đêm.<br><br><svg viewBox=\"0 0 400 200\" width=\"100%\" height=\"200\" style=\"background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px;\"><line x1=\"50\" y1=\"150\" x2=\"350\" y2=\"150\" stroke=\"#ccc\" stroke-width=\"1\" /><line x1=\"50\" y1=\"100\" x2=\"350\" y2=\"100\" stroke=\"#eee\" stroke-width=\"1\" /><line x1=\"50\" y1=\"50\" x2=\"350\" y2=\"50\" stroke=\"#eee\" stroke-width=\"1\" /><text x=\"35\" y=\"155\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">0</text><text x=\"30\" y=\"105\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">4</text><text x=\"30\" y=\"55\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">8</text><rect x=\"100\" y=\"50\" width=\"50\" height=\"100\" fill=\"#3498db\" rx=\"2\" /><text x=\"125\" y=\"40\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\" text-anchor=\"middle\">8 hours</text><rect x=\"230\" y=\"75\" width=\"50\" height=\"75\" fill=\"#e67e22\" rx=\"2\" /><text x=\"255\" y=\"65\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\" text-anchor=\"middle\">6 hours</text><text x=\"125\" y=\"170\" font-family=\"Arial\" font-size=\"12\" font-weight=\"bold\" fill=\"#555\" text-anchor=\"middle\">Active Adults</text><text x=\"255\" y=\"170\" font-family=\"Arial\" font-size=\"12\" font-weight=\"bold\" fill=\"#555\" text-anchor=\"middle\">Inactive Adults</text></svg> | 20-30 words | Simple data comparison using A2 modifiers | sleep hours<br>longer than<br>compared to | Clear comparison sentences<br>Accurate data citation from the chart |\n| 5 | Guided Email Invite: Viết email ngắn mời bạn cùng đi bộ vào buổi sáng tại công viên vào Chủ Nhật này. Nêu rõ thời gian. | 25-35 words | Basic invitation structure | Would you like to...<br>let's meet at<br>in the park | Include greeting and closing<br>Clear invitation message |\n\n## Review Bridge\n#### V. Review Bridge / Ôn tập liên chủ đề\n1. Dịch câu sau sang tiếng Anh, sử dụng từ vựng ôn tập của chủ đề trước: 'Kê thêm giường phụ là giải pháp hiệu quả cho nhóm khách của chúng tôi.'\n\n2. Điền từ ôn tập thích hợp vào chỗ trống: 'Checking in new guests at the front desk is a regular part of her daily ______ [R].'\n\n3. Chia động từ trong ngoặc dưới dạng quá khứ: 'During their last holiday in London, they ______ (experience) [R] very professional hotel service.'\n",
+  "vocabulary_grammar_markdown": "## Vocabulary Table\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |\n| --- | --- | --- | --- | --- |\n| alarm | /əˈlɑːm/ | noun | chuông báo thức (a device that makes a loud noise to wake you up or warn you) | I set my alarm for 6:00 AM. |\n| unpleasant | /ʌnˈplez.ənt/ | adjective | khó chịu (not enjoyable or nice; causing discomfort) | The loud beep was very unpleasant. |\n| beep | /biːp/ | noun | tiếng bíp bíp (a short high sound made by an electronic device) | My watch made a small beep sound. |\n| harsh | /hɑːʃ/ | adjective | chói tai, gay gắt (rough, unpleasant, and chói tai) | Traditional alarms use harsh noises. |\n| inertia | /ɪˈnɜː.ʃə/ | noun | sự trì trệ, quán tính (lack of activity or slow transition to action) | Sleep inertia makes you feel groggy. |\n| grogginess | /ˈɡrɒɡ.i.nəs/ | noun | sự mê mệt, mệt mỏi (the state of feeling tired and unable to think clearly) | He tried to shake off his morning grogginess. |\n| groggy | /ˈɡrɒɡ.i/ | adjective | chuếnh choáng, mê mệt (weak and unable to think clearly because you are tired) | I always feel groggy right after waking up. |\n| persist | /pəˈsɪst/ | verb | kéo dài, dai dẳng (to continue to exist or happen) | His groggy feeling can persist for hours. |\n| focus | /ˈfəʊ.kəs/ | verb/noun | tập trung (to give all your attention to something) | It is hard to focus when you are tired. |\n| melodic | /məˈlɒd.ɪk/ | adjective | du dương, có giai điệu (having a pleasant tune or melody) | A melodic alarm helps you wake up fresh. |\n| tune | /tʃuːn/ | noun | giai điệu, điệu nhạc (a series of musical notes that are pleasant to listen to) | She hummed a happy tune. |\n| melody | /ˈmel.ə.di/ | noun | giai điệu (a sequence of notes that make up a tune) | This song has a beautiful melody. |\n| attention | /əˈten.ʃən/ | noun | sự chú ý (notice, thought, or consideration) | The speaker got the audience's attention. |\n| refreshed | /rɪˈfreʃt/ | adjective | sảng khoái, tươi tỉnh (feeling full of energy again; fresh) | I felt refreshed after a cool shower. |\n| alert | /əˈlɜːt/ | adjective | tỉnh táo (quick to notice things; awake and active) | Coffee helps me feel alert in the morning. |\n| synapse | /ˈsaɪ.næps/ | noun | khớp thần kinh (a connection between brain cells) | Sleep helps the brain repair its synapses. |\n| recommend | /ˌrek.əˈmend/ | verb | khuyên, đề xuất (to advise someone to do something) | Doctors recommend seven hours of sleep. |\n| hygiene | /ˈhaɪ.dʒiːn/ | noun | thói quen giữ sức khỏe, vệ sinh (practices that maintain health, such as cleanliness) | Good sleep hygiene includes avoiding screens. |\n| limit | /ˈlɪm.ɪt/ | verb/noun | hạn chế (to control or restrict something) | We must limit caffeine intake before bed. |\n| alternative | /ɒlˈtɜː.nə.tɪv/ | noun/adjective | sự thay thế (something that you can choose instead of another thing) | Melodic sounds are a good alternative to loud beeps. |\n\n## Recycled Vocabulary (Từ vựng ôn tập)\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Bài học gốc (Day) |\n| --- | --- | --- | --- | --- |\n| routine | /ruːˈtiːn/ | noun | thói quen, công việc thường ngày | Day 20260704 |\n| effective | /ɪˈfek.tɪv/ | adjective | hiệu quả | Day 20260704 |\n| experience | /ɪkˈspɪə.ri.əns/ | noun | kinh nghiệm, trải nghiệm | Day 20260704 |\n\n## Detailed Grammar Guide\n#### Chủ điểm 1: Comparatives and Superlatives (So sánh hơn và So sánh nhất)\n1. **Comparative (So sánh hơn)**: Dùng để so sánh giữa hai đối tượng.\\n- Tính từ ngắn: `S + V + adj-ed/er + than + O`. Ví dụ: 'Traditional alarms are **harsher** than music.'\\n- Tính từ dài: `S + V + more + adj + than + O`. Ví dụ: 'Melodic sounds are **more pleasant** than beeps.'\\n2. **Superlative (So sánh nhất)**: Dùng để so sánh một đối tượng với cả nhóm (từ 3 đối tượng trở lên).\\n- Tính từ ngắn: `S + V + the + adj-est`. Ví dụ: 'Waking up early is the **hardest** routine.'\\n- Tính từ dài: `S + V + the + most + adj`. Ví dụ: 'What is the **most effective** sound?'\\n*Lưu ý từ bất quy tắc:* good -> better -> best; bad -> worse -> worst.\n\n#### Chủ điểm 2: Present Simple vs Present Continuous\n1. **Present Simple (Hiện tại đơn)**: Diễn tả thói quen, thời gian biểu, hoặc sự thật hiển nhiên.\\n- Trạng từ đi kèm: *usually, always, sometimes, every day*.\\n- Ví dụ: 'I usually **wake** up at 6:00 AM.'\\n2. **Present Continuous (Hiện tại tiếp diễn)**: Diễn tả hành động đang xảy ra tại thời điểm nói hoặc thói quen tạm thời chỉ xảy ra dạo gần đây.\\n- Trạng từ đi kèm: *now, right now, at the moment, today*.\\n- Ví dụ: 'Look! The alarm **is ringing**.' hoặc 'Today, she **is waking** up later.'\n\n## Common Mistakes / IELTS Traps for This Topic\n| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |\n| --- | --- | --- | --- |\n| Dùng 'more' kèm với đuôi '-er' trong so sánh hơn | Melodic alarms are more better than beeps. | Melodic alarms are better than beeps. | Lỗi trùng lặp kép trong so sánh hơn làm giảm điểm Grammatical Range & Accuracy. |\n| Sử dụng Hiện tại đơn thay cho Hiện tại tiếp diễn dạo gần đây / tạm thời | Today, she wakes up later than usual. | Today, she is waking up later than usual. | Lỗi sử dụng sai thì trong các ngữ cảnh thay đổi tạm thời. |\n| Dùng tính từ so sánh hơn thay vì so sánh nhất khi so sánh nhóm | This is the more effective alarm of all. | This is the most effective alarm of all. | Lỗi sai mức độ so sánh khi đối chiếu trên 2 sự vật. |\n| Quên thêm động từ to be trong thì Hiện tại tiếp diễn | Listen! The alarm ringing. | Listen! The alarm is ringing. | Thiếu thành phần bắt buộc của động từ chia tiếp diễn. |\n",
+  "answers_markdown": "## Reading Answer Key and Detailed Explanations\n\n📖 **Tóm tắt bài đọc:** Bài đọc mô tả chi tiết thông tin từ nguồn đã xác thực.\n\n1. **NOT GIVEN**\n- Bằng chứng: \"\" (§0)\n- Cách tìm đáp án: Bài viết không đề cập đến việc người tham gia thích nhạc cổ điển hay nhạc rock hơn. Không áp dụng cho câu hỏi True/False.\n> **💡 Mẹo:** Không tự suy diễn thông tin nằm ngoài bài đọc.\n\n2. **FALSE**\n- Bằng chứng: \"Traditional alarm clocks use a loud, **unpleasant** **beep** or other **harsh** sounds to wake people up.\" (§1)\n- Cách tìm đáp án: Đoạn 1 nêu rõ các đồng hồ báo thức truyền thống sử dụng tiếng bíp lớn, khó chịu hoặc các âm thanh chói tai khác, chứ không dùng nhạc du dương. Không áp dụng cho câu hỏi True/False.\n> **💡 Mẹo:** Tìm kiếm định nghĩa trực tiếp ngay sau các từ giới thiệu như 'is' hoặc 'means'.\n\n3. **TRUE**\n- Bằng chứng: \"Scientists call this **inertia** or **grogginess**.\" (§2)\n- Cách tìm đáp án: Đoạn 2 định nghĩa cảm giác uể oải, nặng nề khi thức dậy được các nhà khoa học gọi là sự trì trệ giấc ngủ (inertia) hoặc sự mệt mỏi (grogginess). Không áp dụng cho câu hỏi True/False.\n> **💡 Mẹo:** Chú ý các từ mang tính tuyệt đối như 'must' (phải) hoặc 'perfect' (hoàn hảo) thường là dấu hiệu thông tin bị bóp méo.\n\n4. **TRUE**\n- Bằng chứng: \"A study in Australia of 50 people showed\" (§2)\n- Cách tìm đáp án: Đoạn 2 nêu rõ một nghiên cứu tại Úc thực hiện trên 50 người ('of 50 people'). Không áp dụng cho câu hỏi True/False.\n> **💡 Mẹo:** Xác nhận các thông tin nhân vật bằng cách quét các tên riêng viết hoa trong văn bản.\n\n5. **TRUE**\n- Bằng chứng: \"A **melody** increases our **attention** and helps us transition from sleep to waking up.\" (§2)\n- Cách tìm đáp án: Đoạn 2 khẳng định giai điệu làm tăng sự chú ý của chúng ta ('increases our attention') và giúp chuyển tiếp dễ dàng hơn. Không áp dụng cho câu hỏi True/False.\n> **💡 Mẹo:** Tìm các cụm từ tương đồng ý nghĩa: 'travel videos' tương đương với 'travel programs'.\n\n6. **B**\n- Bằng chứng: \"people feel **refreshed** and more **alert**.\" (§2)\n- Cách tìm đáp án: Đoạn 2 viết: 'As a result, people feel refreshed and more alert.' A sai vì tiếng nhạc giúp giảm mệt mỏi; C sai vì giấc ngủ phục hồi khớp thần kinh chứ nhạc không gây nguy hiểm.\n> **💡 Mẹo:** Đối chiếu từ khóa để tìm mục tiêu mong muốn.\n\n7. **A**\n- Bằng chứng: \"A **melody** increases our **attention** and helps us transition from sleep to waking up.\" (§2)\n- Cách tìm đáp án: Đoạn 2 giải thích giai điệu giúp tăng sự tập trung chú ý ('increases our attention'). B và C sai vì thông tin ngược hoặc không có trong bài đọc.\n> **💡 Mẹo:** Từ khóa chỉ nguyên nhân giúp trả lời câu hỏi 'Why'.\n\n8. **B**\n- Bằng chứng: \"but for some, it can **persist** for hours.\" (§2)\n- Cách tìm đáp án: Từ 'persist' nghĩa là tiếp tục kéo dài hoặc tồn tại ('continue to exist'). A và C mang ý nghĩa hoàn toàn khác.\n> **💡 Mẹo:** Sử dụng ngữ cảnh tương phản để đoán nghĩa.\n\n9. **B**\n- Bằng chứng: \"Doctors **recommend** good sleep **hygiene**.\" (§3)\n- Cách tìm đáp án: Đoạn 3 viết các bác sĩ khuyên thực hiện vệ sinh giấc ngủ tốt ('recommend good sleep hygiene'). A và C sai vì ngược với thông tin trong bài đọc.\n> **💡 Mẹo:** Tìm các cụm từ liên quan trực tiếp để lọc đáp án nhiễu.\n\n10. **harsh sounds**\n- Bằng chứng: \"Traditional alarm clocks use a loud, **unpleasant** **beep** or other **harsh** sounds to wake people up.\" (§1)\n- Cách tìm đáp án: Đoạn 1 viết đồng hồ truyền thống dùng tiếng bíp lớn, khó chịu hoặc các âm thanh chói tai khác ('harsh sounds'). Không áp dụng cho câu hỏi điền từ.\n> **💡 Mẹo:** Tìm các từ đi cùng với động từ để tìm đúng thuật ngữ ngành nghề.\n\n11. **grogginess**\n- Bằng chứng: \"Scientists call this **inertia** or **grogginess**.\" (§2)\n- Cách tìm đáp án: Khoa học gọi tình trạng trì trệ này là 'inertia' hoặc 'grogginess'. Không áp dụng cho câu hỏi điền từ.\n> **💡 Mẹo:** Quét nhanh các tên riêng đi liền với các danh hiệu.\n\n12. **30 minutes**\n- Bằng chứng: \"For most people, this feeling lasts for about 30 minutes\" (§2)\n- Cách tìm đáp án: Đoạn 2 chỉ ra cảm giác này kéo dài khoảng 30 phút ở hầu hết mọi người. Không áp dụng cho câu hỏi điền từ.\n> **💡 Mẹo:** Tìm danh từ đi sau động từ trong bài đọc.\n\n13. **synapses**\n- Bằng chứng: \"the brain repairs its **synapses**, which are connections between brain cells.\" (§3)\n- Cách tìm đáp án: Đoạn 3 chỉ ra bộ não sửa chữa các khớp thần kinh ('synapses') trong khi ngủ. Không áp dụng cho câu hỏi điền từ.\n> **💡 Mẹo:** Chú ý cấu trúc liệt kê để tìm từ còn thiếu.\n\n## Grammar Answer Key and Detailed Explanations\n\n> **Bảng phân biệt nhanh / Công thức bỏ túi:**\n> - Ôn tập lý thuyết đã học trong bài.\n\n1. **A**\n- Dấu hiệu / Phân tích: So sánh hơn đi kèm 'than' với tính từ ngắn bất quy tắc 'good' -> better.\n> **💡 Mẹo:** Ghi nhớ bảng tính từ bất quy tắc.\n\n2. **B**\n- Dấu hiệu / Phân tích: Hành động tạm thời xảy ra hôm nay 'Today' -> chia Hiện tại tiếp diễn 'is trying'.\n> **💡 Mẹo:** Từ 'Today' thường là dấu hiệu của Hiện tại tiếp diễn.\n\n3. **B**\n- Dấu hiệu / Phân tích: So sánh nhất đi sau 'the' với tính từ dài 'refreshed' -> most refreshed.\n> **💡 Mẹo:** Dùng 'the most' cho tính từ dài.\n\n4. **A**\n- Dấu hiệu / Phân tích: Trói quen hàng ngày với 'usually' -> chia Hiện tại đơn 'limit'.\n> **💡 Mẹo:** Thói quen dùng Hiện tại đơn.\n\n5. **B**\n- Dấu hiệu / Phân tích: So sánh hơn với tính từ dài 'pleasant' -> more pleasant.\n> **💡 Mẹo:** Từ 'pleasant' là tính từ dài.\n\n6. **B**\n- Dấu hiệu / Phân tích: Hành động đang xảy ra tại thời điểm nói 'Listen!' và 'right now' -> chia Hiện tại tiếp diễn 'is ringing'.\n> **💡 Mẹo:** Mệnh lệnh 'Listen!' báo hiệu Hiện tại tiếp diễn.\n\n7. **B**\n- Dấu hiệu / Phân tích: So sánh hơn đi kèm 'than' với tính từ dài 'important' -> more important.\n> **💡 Mẹo:** Quan sát từ 'than' ngay sau tính từ.\n\n8. **B**\n- Dấu hiệu / Phân tích: So sánh nhất đi sau 'the' với tính từ ngắn 'hard' -> hardest.\n> **💡 Mẹo:** Dùng 'the + adj-est' cho tính từ ngắn.\n\n9. **B**\n- Dấu hiệu / Phân tích: Trạng từ 'At the moment' chỉ hành động đang xảy ra -> chia Hiện tại tiếp diễn 'are studying'.\n> **💡 Mẹo:** Nhận diện dấu hiệu của Hiện tại tiếp diễn.\n\n10. **B**\n- Dấu hiệu / Phân tích: So sánh hơn đi kèm 'than' với tính từ dài 'refreshed' -> more refreshed.\n> **💡 Mẹo:** Đối chiếu hai đối tượng so sánh.\n\n11. **more difficult**\n- Dấu hiệu / Phân tích: So sánh hơn đi kèm 'than' với tính từ dài 'difficult' -> 'more difficult'.\n> **💡 Mẹo:** Tính từ dài dùng 'more + adj'.\n\n12. **is sleeping**\n- Dấu hiệu / Phân tích: Có từ mệnh lệnh 'Look!' gây chú ý hành động đang xảy ra -> chia Hiện tại tiếp diễn 'is sleeping'.\n> **💡 Mẹo:** Dấu chấm than cảm thán chỉ hành động diễn ra lúc nói.\n\n13. **best**\n- Dấu hiệu / Phân tích: So sánh nhất đi sau 'the' của tính từ bất quy tắc 'good' -> 'best'.\n> **💡 Mẹo:** Thuộc lòng dạng so sánh bất quy tắc.\n\n14. **usually drinks**\n- Dấu hiệu / Phân tích: Thói quen Hiện tại đơn của chủ ngữ số ít 'He' -> 'usually drinks'.\n> **💡 Mẹo:** Thêm s/es vào sau động từ thường ở Hiện tại đơn số ít.\n\n15. **louder**\n- Dấu hiệu / Phân tích: So sánh hơn của tính từ ngắn 'loud' -> 'louder'.\n> **💡 Mẹo:** Tính từ ngắn thêm đuôi -er.\n\n16. **am trying**\n- Dấu hiệu / Phân tích: Có từ 'At present' chỉ trạng thái hiện tại tiếp diễn -> 'am trying'.\n> **💡 Mẹo:** To be chia theo ngôi chủ ngữ.\n\n17. **most effective**\n- Dấu hiệu / Phân tích: So sánh nhất của tính từ dài 'effective' -> 'most effective'.\n> **💡 Mẹo:** Tính từ dài dùng 'the most + adj'.\n\n18. **always wakes**\n- Dấu hiệu / Phân tích: Thói quen thường xuyên đi với Hiện tại đơn chủ ngữ số ít 'She' -> 'always wakes'.\n> **💡 Mẹo:** Vị trí của trạng từ tần suất đứng trước động từ thường.\n\n19. **healthier**\n- Dấu hiệu / Phân tích: Tính từ kết thúc bằng y đổi thành i-er -> 'healthier'.\n> **💡 Mẹo:** Đổi y thành i rồi mới thêm er.\n\n20. **are you wearing**\n- Dấu hiệu / Phân tích: Câu hỏi nghi vấn Hiện tại tiếp diễn với trạng từ 'now' -> 'are you wearing'.\n> **💡 Mẹo:** Đảo trợ động từ be lên trước chủ ngữ.\n\n21. **Waking up to beeps is worse than music.**\n- Dấu hiệu / Phân tích: Dạng so sánh hơn bất quy tắc của 'bad' là 'worse', không dùng 'baddest'.\n> **💡 Mẹo:** Tránh lỗi dùng nhầm dạng so sánh hơn/nhất.\n\n22. **I usually sleep for eight hours every night.**\n- Dấu hiệu / Phân tích: Thói quen lặp lại thường xuyên 'every night' chia Hiện tại đơn, không chia tiếp diễn.\n> **💡 Mẹo:** Tránh chia tiếp diễn cho thói quen lâu dài.\n\n23. **My sister is the tallest person in my family.**\n- Dấu hiệu / Phân tích: So sánh một người trong cả gia đình (nhóm đông) sau 'the' phải dùng so sánh nhất 'tallest'.\n> **💡 Mẹo:** Phân biệt số lượng đối tượng so sánh.\n\n24. **They are studying sleep inertia at the moment.**\n- Dấu hiệu / Phân tích: Thì Hiện tại tiếp diễn khuyết đuôi -ing của động từ chính -> sửa thành 'studying'.\n> **💡 Mẹo:** Công thức tiếp diễn là 'be + V-ing'.\n\n25. **Melodic alarms are better than beeps.**\n- Dấu hiệu / Phân tích: Better đã là dạng so sánh hơn nên dùng thêm 'more' là sai ngữ pháp.\n> **💡 Mẹo:** Không bao giờ dùng so sánh kép.\n\n26. **Listen! The alarm is ringing.**\n- Dấu hiệu / Phân tích: Sau động từ to be 'is' chỉ hành động đang xảy ra tại thời điểm nói phải dùng động từ đuôi -ing.\n> **💡 Mẹo:** Listen! là từ mệnh lệnh chỉ hành động tiếp diễn.\n\n27. **Traditional alarms are harsher than melodic music.**\n- Dấu hiệu / Phân tích: Thiếu đuôi so sánh hơn cho tính từ ngắn 'harsh' khi đi kèm 'than'.\n> **💡 Mẹo:** Luôn dùng tính từ ngắn dạng -er với 'than'.\n\n28. **She feels fresher when she wakes up to music.**\n- Dấu hiệu / Phân tích: Fresher đã là so sánh hơn nên dùng thêm 'more' là lỗi dùng từ thừa.\n> **💡 Mẹo:** Loại bỏ 'more' trước tính từ ngắn đã thêm er.\n\n29. **He always arrives late for his morning meetings.**\n- Dấu hiệu / Phân tích: Trạng từ tần suất 'always' chỉ thói quen lặp lại thường xuyên ở Hiện tại đơn, không chia tiếp diễn.\n> **💡 Mẹo:** Không dùng be + V-ing cho các thói quen bất biến.\n\n30. **My old alarm was louder than my new alarm.**\n- Dấu hiệu / Phân tích: Kết hợp hai câu dùng cấu trúc so sánh hơn của tính từ ngắn 'loud' -> 'louder than'.\n> **💡 Mẹo:** Dựa trên số đo decibel để xác định đối tượng lớn hơn.\n\n## Writing Guidance / Suggested Answers\n\n#### Task 1\n> **Suggested Model Answer:**\n> \"a) I wake up early.\nb) Music helps me feel fresh.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Sắp xếp đúng trật tự chủ ngữ, động từ, trạng từ ở câu a. Sắp xếp đúng cấu trúc 'S + help + O + V-bare' ở câu b.\n- *Tự kiểm tra:* * Viết hoa chữ cái đầu câu. * Có dấu chấm kết thúc câu. * Sắp xếp đúng trật tự từ.\n\n#### Task 2\n> **Suggested Model Answer:**\n> \"a) In the morning, I usually eat breakfast and drink tea.\nb) Although I love sleeping late, I still wake up early on weekdays.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Hoàn thành mệnh đề thói quen sau 'usually' ở câu a. Hoàn thành mệnh đề chính tương phản với mệnh đề nhượng bộ 'Although' ở câu b.\n- *Tự kiểm tra:* * Mệnh đề sau 'usually' đầy đủ S + V. * Mệnh đề ở câu b chia thì phù hợp. * Logic câu mạch lạc.\n\n#### Task 3\n> **Suggested Model Answer:**\n> \"a) I go to bed at 10 PM.\nb) Music helps you feel more alert.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Dịch đúng cụm từ 'go to bed at' (đi ngủ lúc) ở câu a. Sử dụng đúng động từ 'helps' đi kèm tân ngữ ở câu b.\n- *Tự kiểm tra:* * Dịch đúng nghĩa và đúng thì hiện tại đơn. * Sử dụng đúng giới từ đi với giờ giấc 'at'.\n\n#### Task 4\n> **Suggested Model Answer:**\n> \"The chart compares the average sleep hours of active and inactive adults per night. Active adults sleep for 8 hours, while inactive adults sleep for only 6 hours. Therefore, active adults sleep longer than inactive adults.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Viết 3 câu: giới thiệu biểu đồ, đưa số liệu chi tiết của 2 nhóm bằng từ nối tương phản 'while', và câu so sánh hơn sử dụng 'longer than'.\n- *Tự kiểm tra:* * Có câu so sánh hơn. * Trích dẫn đúng số liệu 8 và 6 từ biểu đồ. * Độ dài khoảng 25-30 từ.\n\n#### Task 5\n> **Suggested Model Answer:**\n> \"Hi Linh,\nWould you like to go for a morning walk in the park this Sunday? Let's meet at the main gate at 6:30 AM. It will help us feel fresh!\nBest,\nNam\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Viết thư mời thân mật sử dụng cấu trúc hỏi 'Would you like to...'. Đảm bảo đầy đủ phần chào hỏi đầu thư và kết thúc ký tên thân mật.\n- *Tự kiểm tra:* * Chào hỏi thân mật ở đầu email. * Nêu rõ lời mời và thời gian đi bộ. * Ký tên ở cuối thư.\n\n## Review Bridge\n#### IV. Review Bridge / Ôn tập liên chủ đề\n1. Dịch câu sau sang tiếng Anh, sử dụng từ vựng ôn tập của chủ đề trước: 'Kê thêm giường phụ là giải pháp hiệu quả cho nhóm khách của chúng tôi.'\n- **Đáp án:** Adding an extra bed is an effective [R] solution for our group of guests.\n- **Giải thích:** Sử dụng từ ôn tập 'effective' [R] từ Day 20260704.\n\n2. Điền từ ôn tập thích hợp vào chỗ trống: 'Checking in new guests at the front desk is a regular part of her daily ______ [R].'\n- **Đáp án:** routine\n- **Giải thích:** Điền từ ôn tập 'routine' [R] (thói quen, công việc thường ngày) từ Day 20260704.\n\n3. Chia động từ trong ngoặc dưới dạng quá khứ: 'During their last holiday in London, they ______ (experience) [R] very professional hotel service.'\n- **Đáp án:** experienced\n- **Giải thích:** Chia động từ ôn tập quy tắc 'experience' [R] thêm đuôi -ed thành 'experienced' ở quá khứ đơn.\n",
+  "quizlet_markdown": "## Section 1: Simple Vocabulary List (Học từ vựng đơn giản)\n| Từ vựng tiếng Anh | Nghĩa tiếng Việt |\n| --- | --- |\n| alarm | chuông báo thức |\n| unpleasant | khó chịu |\n| beep | tiếng bíp bíp |\n| harsh | chói tai, gay gắt |\n| inertia | sự trì trệ, quán tính |\n| grogginess | sự mê mệt, mệt mỏi |\n| groggy | chuếnh choáng, mê mệt |\n| persist | kéo dài, dai dẳng |\n| focus | tập trung |\n| melodic | du dương, có giai điệu |\n| tune | giai điệu, điệu nhạc |\n| melody | giai điệu |\n| attention | sự chú ý |\n| refreshed | sảng khoái, tươi tỉnh |\n| alert | tỉnh táo |\n| synapse | khớp thần kinh |\n| recommend | khuyên, đề xuất |\n| hygiene | thói quen giữ sức khỏe, vệ sinh |\n| limit | hạn chế |\n| alternative | sự thay thế |\n\n## Section 2: Detailed Vocabulary List (Học từ vựng đầy đủ)\n| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |\n| --- | --- |\n| alarm /əˈlɑːm, noun/ | chuông báo thức |\n| unpleasant /ʌnˈplez.ənt, adjective/ | khó chịu |\n| beep /biːp, noun/ | tiếng bíp bíp |\n| harsh /hɑːʃ, adjective/ | chói tai, gay gắt |\n| inertia /ɪˈnɜː.ʃə, noun/ | sự trì trệ, quán tính |\n| grogginess /ˈgrɒɡ.i.nəs, noun/ | sự mê mệt, mệt mỏi |\n| groggy /ˈgrɒɡ.i, adjective/ | chuếnh choáng, mê mệt |\n| persist /pəˈsɪst, verb/ | kéo dài, dai dẳng |\n| focus /ˈfəʊ.kəs, verb/noun/ | tập trung |\n| melodic /məˈlɒd.ɪk, adjective/ | du dương, có giai điệu |\n| tune /tʃuːn, noun/ | giai điệu, điệu nhạc |\n| melody /ˈmel.ə.di, noun/ | giai điệu |\n| attention /əˈten.ʃən, noun/ | sự chú ý |\n| refreshed /rɪˈfreʃt, adjective/ | sảng khoái, tươi tỉnh |\n| alert /əˈlɜːt, adjective/ | tỉnh táo |\n| synapse /ˈsaɪ.næps, noun/ | khớp thần kinh |\n| recommend /ˌrek.əˈmend, verb/ | khuyên, đề xuất |\n| hygiene /ˈhaɪ.dʒiːn, noun/ | thói quen giữ sức khỏe, vệ sinh |\n| limit /ˈlɪm.ɪt, verb/noun/ | hạn chế |\n| alternative /ɒlˈtɜː.nə.tɪv, noun/adjective/ | sự thay thế |\n"
+}

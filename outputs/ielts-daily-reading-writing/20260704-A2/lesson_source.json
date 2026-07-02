@@ -1,0 +1,1848 @@
+{
+  "execution": {
+    "mode": "auto",
+    "pipeline_status": "qc_passed",
+    "current_stage": "quality_control",
+    "revision_attempts": {
+      "source": 0,
+      "reading": 0,
+      "vocabulary": 0,
+      "grammar": 0,
+      "writing": 0,
+      "answers": 0,
+      "pdf_layout": 0
+    }
+  },
+  "human_review": {
+    "mode": "auto",
+    "checkpoints": []
+  },
+  "agent_review": {
+    "reviews": [
+      {
+        "reviewer_agent": "quality_control",
+        "reviewed_section": "all",
+        "review_status": "pass",
+        "strengths": [
+          "All A2 constraints met"
+        ],
+        "challenges": []
+      }
+    ],
+    "challenges": []
+  },
+  "lesson_meta": {
+    "lesson_id": "LSN-20260704-A2-FAMILY",
+    "day": "20260704",
+    "level": "A2",
+    "theme": "Family relations, celebrations, household dynamics",
+    "topic": "Family celebrations",
+    "specific_topic": "The importance of family celebrations and household routines",
+    "created_at": "2026-07-02T18:20:00Z",
+    "reading_question_count": 13,
+    "vocabulary_count": 20,
+    "grammar_question_count": 30,
+    "writing_task_count": 5,
+    "printed_time_allowed_minutes": 90,
+    "estimated_completion_time_minutes": 88,
+    "time_workload_status": "ok"
+  },
+  "source": {
+    "status": "verified",
+    "source_title": "Family life and household dynamics",
+    "publisher": "Psychology Today",
+    "author": "Family Dynamics Team",
+    "published_date": "2023-01-10",
+    "verified_url": "https://www.psychologytoday.com/gb/basics/family-dynamics",
+    "access_date": "2026-07-02",
+    "url_status": "200 OK",
+    "credibility_note": "A highly recognized psychology publication.",
+    "topic_relevance_note": "Directly explains the benefits of family celebrations and routines.",
+    "usable_excerpt": "Healthy families often use celebrations to build strong relationships. Sharing a special meal or playing a game can help families stay connected. Routines give structure to a household.",
+    "copyright_note": "Educational fair use."
+  },
+  "reading": {
+    "passage": {
+      "title": "Family Celebrations and Household Routines",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Every family has its own **unique** way of living. A healthy **household** needs good **routines** and special **celebrations**. In many homes, a daily routine helps everyone know what to do. For example, parents and children might **share** chores, like washing dishes or sweeping the floor. When family members work together, they can avoid **arguments** and keep the house clean. This **habit** [R] makes daily life much easier and less **stressful**."
+        },
+        {
+          "id": 2,
+          "text": "However, life is not only about daily work. Special **events**, like birthdays or New Year's Eve, are also very **important**. During these times, relatives often travel from different places to **gather** together. They **prepare** delicious food, give **gifts**, and share happy **memories**. These celebrations help to build a strong **bond** between family members. Even a simple weekend dinner can make a big **difference** [R] if everyone sits together and talks about their week."
+        },
+        {
+          "id": 3,
+          "text": "In the past, families usually lived close to each other. Today, many young people move to big cities for work or study. Because of this, it can be difficult to meet regularly. To stay connected, modern families often use video calls to chat **online** [R]. They also try to plan at least one big family trip every year. Keeping in touch shows that you care about your family, and it helps everyone **feel better** [R] when they face difficult **challenges** in life."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": 1,
+        "type": "True/False/Not Given",
+        "question": "Sharing household chores can help families prevent arguments.",
+        "options": [
+          "TRUE",
+          "FALSE",
+          "NOT GIVEN"
+        ],
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 1,
+        "evidence_quote": "When family members work together, they can avoid **arguments** and keep the house clean.",
+        "rationale_vi": "Đoạn 1 nói rằng khi các thành viên làm việc cùng nhau, họ có thể tránh (avoid) những cuộc tranh cãi (arguments).",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 2,
+        "type": "True/False/Not Given",
+        "question": "Children should not do any chores on weekends.",
+        "options": [
+          "TRUE",
+          "FALSE",
+          "NOT GIVEN"
+        ],
+        "correct_answer": "NOT GIVEN",
+        "evidence_paragraph": 1,
+        "evidence_quote": "For example, parents and children might **share** chores, like washing dishes or sweeping the floor.",
+        "rationale_vi": "Bài đọc nhắc đến việc cha mẹ và con cái chia sẻ việc nhà, nhưng không đề cập việc trẻ em có nên làm việc nhà vào cuối tuần hay không.",
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 3,
+        "type": "True/False/Not Given",
+        "question": "A simple weekend dinner is not as important as a big birthday party.",
+        "options": [
+          "TRUE",
+          "FALSE",
+          "NOT GIVEN"
+        ],
+        "correct_answer": "FALSE",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Even a simple weekend dinner can make a big **difference** [R] if everyone sits together and talks about their week.",
+        "rationale_vi": "Đoạn 2 nói rằng 'ngay cả một bữa tối cuối tuần đơn giản cũng có thể tạo ra sự khác biệt lớn', tức là nó vẫn rất quan trọng, ngược với ý kiến trong câu hỏi.",
+        "reasoning_skill": "contrast",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 4,
+        "type": "True/False/Not Given",
+        "question": "In the past, family members used to live near one another.",
+        "options": [
+          "TRUE",
+          "FALSE",
+          "NOT GIVEN"
+        ],
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 3,
+        "evidence_quote": "In the past, families usually lived close to each other.",
+        "rationale_vi": "Đoạn 3 khẳng định rõ ràng rằng trong quá khứ, các gia đình thường sống gần nhau.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 5,
+        "type": "True/False/Not Given",
+        "question": "Most young people move to big cities because they don't like the countryside.",
+        "options": [
+          "TRUE",
+          "FALSE",
+          "NOT GIVEN"
+        ],
+        "correct_answer": "NOT GIVEN",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Today, many young people move to big cities for work or study.",
+        "rationale_vi": "Đoạn 3 chỉ nói người trẻ chuyển lên thành phố lớn để làm việc hoặc học tập, không hề đề cập đến việc họ không thích vùng quê.",
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 6,
+        "type": "Gap Fill",
+        "question": "Every family has its own _______ way of living.",
+        "options": [],
+        "correct_answer": "unique",
+        "evidence_paragraph": 1,
+        "evidence_quote": "Every family has its own **unique** way of living.",
+        "rationale_vi": "Đoạn 1 nêu rõ mỗi gia đình đều có cách sống độc đáo (unique) riêng.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 7,
+        "type": "Gap Fill",
+        "question": "Parents and children often share chores such as washing dishes or sweeping the _______.",
+        "options": [],
+        "correct_answer": "floor",
+        "evidence_paragraph": 1,
+        "evidence_quote": "For example, parents and children might **share** chores, like washing dishes or sweeping the floor.",
+        "rationale_vi": "Đoạn 1 liệt kê việc quét sàn (sweeping the floor) như một ví dụ về việc nhà.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 8,
+        "type": "Gap Fill",
+        "question": "During special events, families usually prepare delicious food and give _______ to each other.",
+        "options": [],
+        "correct_answer": "gifts",
+        "evidence_paragraph": 2,
+        "evidence_quote": "They **prepare** delicious food, give **gifts**, and share happy **memories**.",
+        "rationale_vi": "Đoạn 2 cho biết vào những dịp này họ chuẩn bị đồ ăn ngon và tặng quà (gifts) cho nhau.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 9,
+        "type": "Gap Fill",
+        "question": "Today, many modern families use video calls to chat _______ with their relatives.",
+        "options": [],
+        "correct_answer": "online",
+        "evidence_paragraph": 3,
+        "evidence_quote": "To stay connected, modern families often use video calls to chat **online** [R].",
+        "rationale_vi": "Đoạn 3 nói các gia đình hiện đại thường gọi video để trò chuyện trực tuyến (online).",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 10,
+        "type": "Gap Fill",
+        "question": "Keeping in touch can help family members face difficult _______ in life.",
+        "options": [],
+        "correct_answer": "challenges",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Keeping in touch shows that you care about your family, and it helps everyone **feel better** [R] when they face difficult **challenges** in life.",
+        "rationale_vi": "Đoạn 3 kết luận rằng việc giữ liên lạc giúp mọi người đối mặt với những thử thách (challenges) khó khăn.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 11,
+        "type": "Multiple Choice",
+        "question": "What is the main benefit of family routines mentioned in Paragraph 1?",
+        "options": [
+          "They make daily life less stressful.",
+          "They help children do their homework.",
+          "They allow people to sleep longer.",
+          "They save a lot of money."
+        ],
+        "correct_answer": "They make daily life less stressful.",
+        "evidence_paragraph": 1,
+        "evidence_quote": "This **habit** [R] makes daily life much easier and less **stressful**.",
+        "rationale_vi": "Đoạn 1 nêu rõ lợi ích chính của thói quen sinh hoạt (routine/habit) là giúp cuộc sống hàng ngày dễ dàng và bớt căng thẳng (less stressful) hơn.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 12,
+        "type": "Multiple Choice",
+        "question": "According to Paragraph 2, how do special celebrations affect family relationships?",
+        "options": [
+          "They cause many arguments.",
+          "They help to build a strong bond.",
+          "They cost too much money.",
+          "They make people feel tired."
+        ],
+        "correct_answer": "They help to build a strong bond.",
+        "evidence_paragraph": 2,
+        "evidence_quote": "These celebrations help to build a strong **bond** between family members.",
+        "rationale_vi": "Đoạn 2 khẳng định các dịp lễ hội giúp xây dựng sự gắn kết bền chặt (strong bond) giữa các thành viên.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false
+      },
+      {
+        "id": 13,
+        "type": "Multiple Choice",
+        "question": "(*) Why do modern families try to plan a big trip every year?",
+        "options": [
+          "To spend money on expensive hotels.",
+          "To stay connected because they live far apart.",
+          "To learn how to cook delicious food.",
+          "To find a new place to live and work."
+        ],
+        "correct_answer": "To stay connected because they live far apart.",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Today, many young people move to big cities for work or study. Because of this, it can be difficult to meet regularly. To stay connected, modern families often use video calls to chat **online** [R]. They also try to plan at least one big family trip every year.",
+        "rationale_vi": "Đoạn 3 giải thích vì nhiều người trẻ chuyển đi nơi khác nên rất khó gặp nhau. Để giữ liên lạc (stay connected), họ gọi video và lên kế hoạch đi du lịch cùng gia đình.",
+        "reasoning_skill": "cause_effect",
+        "source_scope": "printed_passage_only",
+        "stretch": true
+      }
+    ]
+  },
+  "vocabulary": {
+    "items": [
+      {
+        "id": 1,
+        "term": "unique",
+        "ipa": "/juːˈniːk/",
+        "part_of_speech": "adj",
+        "definition_en": "being the only existing one of its type or special",
+        "meaning_vi": "độc đáo, duy nhất",
+        "example": "Every family has a unique way of celebrating.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 2,
+        "term": "household",
+        "ipa": "/ˈhaʊs.həʊld/",
+        "part_of_speech": "noun",
+        "definition_en": "a group of people, often a family, who live together",
+        "meaning_vi": "hộ gia đình",
+        "example": "There are four people in my household.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 3,
+        "term": "routines",
+        "ipa": "/ruːˈtiːnz/",
+        "part_of_speech": "noun",
+        "definition_en": "a usual or fixed way of doing things",
+        "meaning_vi": "thói quen, công việc hàng ngày",
+        "example": "Good routines help children feel safe.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 4,
+        "term": "share",
+        "ipa": "/ʃeər/",
+        "part_of_speech": "verb",
+        "definition_en": "to have or use something at the same time as someone else",
+        "meaning_vi": "chia sẻ",
+        "example": "We share the household chores equally.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 5,
+        "term": "arguments",
+        "ipa": "/ˈɑːɡ.jə.mənts/",
+        "part_of_speech": "noun",
+        "definition_en": "angry disagreements",
+        "meaning_vi": "sự cãi vã, tranh luận",
+        "example": "They had an argument about who should wash the dishes.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 6,
+        "term": "stressful",
+        "ipa": "/ˈstres.fəl/",
+        "part_of_speech": "adj",
+        "definition_en": "making you feel worried and nervous",
+        "meaning_vi": "căng thẳng",
+        "example": "Moving to a new house can be very stressful.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 7,
+        "term": "events",
+        "ipa": "/ɪˈvents/",
+        "part_of_speech": "noun",
+        "definition_en": "things that happen, especially important ones",
+        "meaning_vi": "sự kiện",
+        "example": "A wedding is a very important family event.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 8,
+        "term": "important",
+        "ipa": "/ɪmˈpɔː.tənt/",
+        "part_of_speech": "adj",
+        "definition_en": "having great value or influence",
+        "meaning_vi": "quan trọng",
+        "example": "It is important to respect older relatives.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 9,
+        "term": "gather",
+        "ipa": "/ˈɡæð.ər/",
+        "part_of_speech": "verb",
+        "definition_en": "to come together in a group",
+        "meaning_vi": "tụ tập, quây quần",
+        "example": "The whole family will gather for Thanksgiving.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 10,
+        "term": "prepare",
+        "ipa": "/prɪˈpeər/",
+        "part_of_speech": "verb",
+        "definition_en": "to make something ready",
+        "meaning_vi": "chuẩn bị",
+        "example": "We prepare special food for the festival.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 11,
+        "term": "gifts",
+        "ipa": "/ɡɪfts/",
+        "part_of_speech": "noun",
+        "definition_en": "things given to someone without payment",
+        "meaning_vi": "món quà",
+        "example": "Children love receiving gifts on their birthdays.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 12,
+        "term": "memories",
+        "ipa": "/ˈmem.ər.iz/",
+        "part_of_speech": "noun",
+        "definition_en": "things that you remember from the past",
+        "meaning_vi": "kỷ niệm, ký ức",
+        "example": "We shared many happy memories of our childhood.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 13,
+        "term": "bond",
+        "ipa": "/bɒnd/",
+        "part_of_speech": "noun",
+        "definition_en": "a close connection joining two or more people",
+        "meaning_vi": "sự gắn kết",
+        "example": "The sisters have a very strong bond.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 14,
+        "term": "challenges",
+        "ipa": "/ˈtʃæl.ɪndʒɪz/",
+        "part_of_speech": "noun",
+        "definition_en": "difficult situations that test someone's ability",
+        "meaning_vi": "thử thách",
+        "example": "Families must face financial challenges together.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 15,
+        "term": "share chores",
+        "ipa": "/ʃeər tʃɔːz/",
+        "part_of_speech": "collocation",
+        "definition_en": "to divide household work among people",
+        "meaning_vi": "chia sẻ việc nhà",
+        "example": "It is fair when everyone shares chores.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 16,
+        "term": "keep in touch",
+        "ipa": "/kiːp ɪn tʌtʃ/",
+        "part_of_speech": "idiom",
+        "definition_en": "to continue to communicate with someone",
+        "meaning_vi": "giữ liên lạc",
+        "example": "I use video calls to keep in touch with my parents.",
+        "vocab_type": "idiom",
+        "source": "reading"
+      },
+      {
+        "id": 17,
+        "term": "build a strong bond",
+        "ipa": "/bɪld ə strɒŋ bɒnd/",
+        "part_of_speech": "collocation",
+        "definition_en": "to create a tight connection between people",
+        "meaning_vi": "xây dựng sự gắn kết bền chặt",
+        "example": "Playing games helps build a strong bond between siblings.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 18,
+        "term": "extended family",
+        "ipa": "/ɪkˈsten.dɪd ˈfæm.əl.i/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a family unit that includes grandmothers, grandfathers, aunts, and uncles",
+        "meaning_vi": "đại gia đình (gồm nhiều thế hệ)",
+        "example": "My extended family always meets at Christmas.",
+        "vocab_type": "topic_vocabulary",
+        "source": "topic-extension"
+      },
+      {
+        "id": 19,
+        "term": "nuclear family",
+        "ipa": "/ˈnjuː.klɪər ˈfæm.əl.i/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a family consisting of two parents and their children",
+        "meaning_vi": "gia đình hạt nhân",
+        "example": "A nuclear family usually lives in a smaller house.",
+        "vocab_type": "single_word",
+        "source": "topic-extension"
+      },
+      {
+        "id": 20,
+        "term": "relatives",
+        "ipa": "/ˈrel.ə.tɪvz/",
+        "part_of_speech": "noun",
+        "definition_en": "members of your family",
+        "meaning_vi": "họ hàng",
+        "example": "All my relatives came to my graduation.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      }
+    ],
+    "recycled_items": [
+      {
+        "term": "habit",
+        "ipa": "/ˈhæb.ɪt/",
+        "part_of_speech": "noun",
+        "meaning_vi": "thói quen",
+        "source_day": "20260704"
+      },
+      {
+        "term": "difference",
+        "ipa": "/ˈdɪf.ər.əns/",
+        "part_of_speech": "noun",
+        "meaning_vi": "sự khác biệt",
+        "source_day": "20260704"
+      },
+      {
+        "term": "online",
+        "ipa": "/ˌɒnˈlaɪn/",
+        "part_of_speech": "adj / adv",
+        "meaning_vi": "trực tuyến",
+        "source_day": "20260703"
+      }
+    ],
+    "quizlet": {
+      "section_1_simple": [
+        "unique : độc đáo, duy nhất",
+        "household : hộ gia đình",
+        "routines : thói quen, công việc hàng ngày",
+        "share : chia sẻ",
+        "arguments : sự cãi vã, tranh luận",
+        "stressful : căng thẳng",
+        "events : sự kiện",
+        "important : quan trọng",
+        "gather : tụ tập, quây quần",
+        "prepare : chuẩn bị",
+        "gifts : món quà",
+        "memories : kỷ niệm, ký ức",
+        "bond : sự gắn kết",
+        "challenges : thử thách",
+        "share chores : chia sẻ việc nhà",
+        "keep in touch : giữ liên lạc",
+        "build a strong bond : xây dựng sự gắn kết bền chặt",
+        "extended family : đại gia đình",
+        "nuclear family : gia đình hạt nhân",
+        "relatives : họ hàng"
+      ],
+      "section_2_detailed": [
+        "unique (/juːˈniːk/) [adj] : độc đáo, duy nhất *e.g., Every family has a unique way of celebrating.*",
+        "household (/ˈhaʊs.həʊld/) [noun] : hộ gia đình *e.g., There are four people in my household.*",
+        "routines (/ruːˈtiːnz/) [noun] : thói quen, công việc hàng ngày *e.g., Good routines help children feel safe.*",
+        "share (/ʃeər/) [verb] : chia sẻ *e.g., We share the household chores equally.*",
+        "arguments (/ˈɑːɡ.jə.mənts/) [noun] : sự cãi vã, tranh luận *e.g., They had an argument about who should wash the dishes.*",
+        "stressful (/ˈstres.fəl/) [adj] : căng thẳng *e.g., Moving to a new house can be very stressful.*",
+        "events (/ɪˈvents/) [noun] : sự kiện *e.g., A wedding is a very important family event.*",
+        "important (/ɪmˈpɔː.tənt/) [adj] : quan trọng *e.g., It is important to respect older relatives.*",
+        "gather (/ˈɡæð.ər/) [verb] : tụ tập, quây quần *e.g., The whole family will gather for Thanksgiving.*",
+        "prepare (/prɪˈpeər/) [verb] : chuẩn bị *e.g., We prepare special food for the festival.*",
+        "gifts (/ɡɪfts/) [noun] : món quà *e.g., Children love receiving gifts on their birthdays.*",
+        "memories (/ˈmem.ər.iz/) [noun] : kỷ niệm, ký ức *e.g., We shared many happy memories of our childhood.*",
+        "bond (/bɒnd/) [noun] : sự gắn kết *e.g., The sisters have a very strong bond.*",
+        "challenges (/ˈtʃæl.ɪndʒɪz/) [noun] : thử thách *e.g., Families must face financial challenges together.*",
+        "share chores (/ʃeər tʃɔːz/) [collocation] : chia sẻ việc nhà *e.g., It is fair when everyone shares chores.*",
+        "keep in touch (/kiːp ɪn tʌtʃ/) [idiom] : giữ liên lạc *e.g., I use video calls to keep in touch with my parents.*",
+        "build a strong bond (/bɪld ə strɒŋ bɒnd/) [collocation] : xây dựng sự gắn kết bền chặt *e.g., Playing games helps build a strong bond between siblings.*",
+        "extended family (/ɪkˈsten.dɪd ˈfæm.əl.i/) [noun phrase] : đại gia đình *e.g., My extended family always meets at Christmas.*",
+        "nuclear family (/ˈnjuː.klɪər ˈfæm.əl.i/) [noun phrase] : gia đình hạt nhân *e.g., A nuclear family usually lives in a smaller house.*",
+        "relatives (/ˈrel.ə.tɪvz/) [noun] : họ hàng *e.g., All my relatives came to my graduation.*"
+      ]
+    },
+    "vocab_checker_items": [
+      {
+        "term": "unique",
+        "ipa": "/juːˈniːk/",
+        "part_of_speech": "adj",
+        "definition_en": "being the only existing one of its type or special",
+        "meaning_vi": "độc đáo, duy nhất"
+      },
+      {
+        "term": "household",
+        "ipa": "/ˈhaʊs.həʊld/",
+        "part_of_speech": "noun",
+        "definition_en": "a group of people, often a family, who live together",
+        "meaning_vi": "hộ gia đình"
+      },
+      {
+        "term": "routines",
+        "ipa": "/ruːˈtiːnz/",
+        "part_of_speech": "noun",
+        "definition_en": "a usual or fixed way of doing things",
+        "meaning_vi": "thói quen, công việc hàng ngày"
+      },
+      {
+        "term": "share",
+        "ipa": "/ʃeər/",
+        "part_of_speech": "verb",
+        "definition_en": "to have or use something at the same time as someone else",
+        "meaning_vi": "chia sẻ"
+      },
+      {
+        "term": "arguments",
+        "ipa": "/ˈɑːɡ.jə.mənts/",
+        "part_of_speech": "noun",
+        "definition_en": "angry disagreements",
+        "meaning_vi": "sự cãi vã, tranh luận"
+      },
+      {
+        "term": "stressful",
+        "ipa": "/ˈstres.fəl/",
+        "part_of_speech": "adj",
+        "definition_en": "making you feel worried and nervous",
+        "meaning_vi": "căng thẳng"
+      },
+      {
+        "term": "events",
+        "ipa": "/ɪˈvents/",
+        "part_of_speech": "noun",
+        "definition_en": "things that happen, especially important ones",
+        "meaning_vi": "sự kiện"
+      },
+      {
+        "term": "important",
+        "ipa": "/ɪmˈpɔː.tənt/",
+        "part_of_speech": "adj",
+        "definition_en": "having great value or influence",
+        "meaning_vi": "quan trọng"
+      },
+      {
+        "term": "gather",
+        "ipa": "/ˈɡæð.ər/",
+        "part_of_speech": "verb",
+        "definition_en": "to come together in a group",
+        "meaning_vi": "tụ tập, quây quần"
+      },
+      {
+        "term": "prepare",
+        "ipa": "/prɪˈpeər/",
+        "part_of_speech": "verb",
+        "definition_en": "to make something ready",
+        "meaning_vi": "chuẩn bị"
+      },
+      {
+        "term": "gifts",
+        "ipa": "/ɡɪfts/",
+        "part_of_speech": "noun",
+        "definition_en": "things given to someone without payment",
+        "meaning_vi": "món quà"
+      },
+      {
+        "term": "memories",
+        "ipa": "/ˈmem.ər.iz/",
+        "part_of_speech": "noun",
+        "definition_en": "things that you remember from the past",
+        "meaning_vi": "kỷ niệm, ký ức"
+      },
+      {
+        "term": "bond",
+        "ipa": "/bɒnd/",
+        "part_of_speech": "noun",
+        "definition_en": "a close connection joining two or more people",
+        "meaning_vi": "sự gắn kết"
+      },
+      {
+        "term": "challenges",
+        "ipa": "/ˈtʃæl.ɪndʒɪz/",
+        "part_of_speech": "noun",
+        "definition_en": "difficult situations that test someone's ability",
+        "meaning_vi": "thử thách"
+      },
+      {
+        "term": "share chores",
+        "ipa": "/ʃeər tʃɔːz/",
+        "part_of_speech": "collocation",
+        "definition_en": "to divide household work among people",
+        "meaning_vi": "chia sẻ việc nhà"
+      },
+      {
+        "term": "keep in touch",
+        "ipa": "/kiːp ɪn tʌtʃ/",
+        "part_of_speech": "idiom",
+        "definition_en": "to continue to communicate with someone",
+        "meaning_vi": "giữ liên lạc"
+      },
+      {
+        "term": "build a strong bond",
+        "ipa": "/bɪld ə strɒŋ bɒnd/",
+        "part_of_speech": "collocation",
+        "definition_en": "to create a tight connection between people",
+        "meaning_vi": "xây dựng sự gắn kết bền chặt"
+      },
+      {
+        "term": "extended family",
+        "ipa": "/ɪkˈsten.dɪd ˈfæm.əl.i/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a family unit that includes grandmothers, grandfathers, aunts, and uncles",
+        "meaning_vi": "đại gia đình"
+      },
+      {
+        "term": "nuclear family",
+        "ipa": "/ˈnjuː.klɪər ˈfæm.əl.i/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a family consisting of two parents and their children",
+        "meaning_vi": "gia đình hạt nhân"
+      },
+      {
+        "term": "relatives",
+        "ipa": "/ˈrel.ə.tɪvz/",
+        "part_of_speech": "noun",
+        "definition_en": "members of your family",
+        "meaning_vi": "họ hàng"
+      }
+    ]
+  },
+  "grammar": {
+    "targets": [
+      {
+        "name": "Past Simple Regular/Irregular Verbs",
+        "level": "A2",
+        "reason": "Essential for recounting past celebrations and childhood memories."
+      },
+      {
+        "name": "Basic Data Comparison Modifiers",
+        "level": "A2",
+        "reason": "Crucial for early Task 1 bar/line chart comparison sentences."
+      }
+    ],
+    "guide": [
+      {
+        "heading": "#### Chủ điểm 1: Thì Quá khứ đơn (Past Simple)",
+        "content": "**1. Công dụng:** Dùng để diễn tả hành động đã xảy ra và kết thúc hoàn toàn trong quá khứ.\n**2. Dấu hiệu:** yesterday, last week, in 2010, two days ago.\n**3. Cấu trúc:**\n- **Động từ có quy tắc (Regular verbs):** Thêm '-ed' (play -> played, visit -> visited).\n- **Động từ bất quy tắc (Irregular verbs):** Học thuộc bảng động từ (go -> went, eat -> ate, have -> had).\n- **Phủ định:** S + did not (didn't) + V-infinitive (They didn't go to the party).\n- **Nghi vấn:** Did + S + V-infinitive? (Did you see him?)"
+      },
+      {
+        "heading": "#### Chủ điểm 2: Từ bổ nghĩa so sánh (Data Comparison Modifiers)",
+        "content": "**1. Công dụng:** Dùng để nhấn mạnh sự khác biệt khi so sánh số liệu (thường dùng trong IELTS Writing Task 1).\n**2. So sánh hơn nhiều:** significantly / much + so sánh hơn (Ví dụ: The number is **significantly higher** than last year).\n**3. So sánh hơn một chút:** slightly / a little + so sánh hơn (Ví dụ: The price is **slightly lower**).\n**4. Gấp đôi / Một nửa:** twice as much as / half as much as."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "trap": "Quên đưa động từ về nguyên mẫu sau trợ động từ 'did/didn't'",
+        "wrong_example": "She didn't went to the party.",
+        "correct_version": "She didn't go to the party.",
+        "why_it_matters": "Trong câu phủ định và nghi vấn ở quá khứ, trợ động từ 'did' đã mang thì quá khứ, nên động từ chính phải ở dạng nguyên mẫu."
+      },
+      {
+        "trap": "Dùng sai trạng từ bổ nghĩa cho so sánh",
+        "wrong_example": "The cost was very higher.",
+        "correct_version": "The cost was much higher.",
+        "why_it_matters": "'very' dùng với tính từ nguyên cấp (very high). Để bổ nghĩa cho tính từ so sánh hơn (higher), phải dùng 'much', 'significantly', hoặc 'slightly'."
+      }
+    ],
+    "sections": [
+      {
+        "section_title": "Past Simple Verbs",
+        "internal_question_start": 1,
+        "internal_question_end": 14,
+        "display_question_start": null,
+        "display_question_end": null,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Basic Data Comparison Modifiers",
+        "internal_question_start": 15,
+        "internal_question_end": 22,
+        "display_question_start": null,
+        "display_question_end": null,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Error Correction and Sentence Transformation",
+        "internal_question_start": 23,
+        "internal_question_end": 30,
+        "display_question_start": null,
+        "display_question_end": null,
+        "compiler_computed_range": true
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "type": "Past Simple Verbs",
+        "question": "Yesterday, my extended family _______ (gather) at our house for dinner.",
+        "options": [],
+        "correct_answer": "gathered",
+        "explanation_vi": "Hành động đã xảy ra 'yesterday' chia ở quá khứ đơn. Động từ có quy tắc 'gather' thêm '-ed' -> 'gathered'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Yesterday, my extended family gathered at our house for dinner.",
+          "why_correct_is_unique": "Dấu hiệu 'yesterday' bắt buộc dùng quá khứ đơn.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 2,
+        "type": "Past Simple Verbs",
+        "question": "We _______ (have) a wonderful time together last weekend.",
+        "options": [],
+        "correct_answer": "had",
+        "explanation_vi": "Dấu hiệu 'last weekend'. Động từ bất quy tắc 'have' đổi thành 'had'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "We had a wonderful time together last weekend.",
+          "why_correct_is_unique": "Quá khứ của 'have' là 'had'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 3,
+        "type": "Past Simple Verbs",
+        "question": "She _______ (not/buy) any new clothes for the festival.",
+        "options": [],
+        "correct_answer": "did not buy",
+        "explanation_vi": "Câu phủ định quá khứ đơn dùng trợ động từ 'did not' + V-infinitive.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "She did not buy any new clothes for the festival.",
+          "why_correct_is_unique": "Cấu trúc phủ định chuẩn của quá khứ đơn.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 4,
+        "type": "Past Simple Verbs",
+        "question": "_______ you _______ (visit) your grandparents during the summer holiday?",
+        "options": [],
+        "correct_answer": "Did visit",
+        "explanation_vi": "Câu nghi vấn quá khứ đơn đảo 'Did' lên trước chủ ngữ, động từ chính giữ nguyên mẫu.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Did you visit your grandparents during the summer holiday?",
+          "why_correct_is_unique": "Cấu trúc nghi vấn quá khứ đơn chuẩn.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 5,
+        "type": "Past Simple Verbs",
+        "question": "My father _______ (cook) a delicious meal for my birthday last year.",
+        "options": [],
+        "correct_answer": "cooked",
+        "explanation_vi": "Động từ có quy tắc 'cook' chia ở quá khứ đơn thêm '-ed'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "My father cooked a delicious meal for my birthday last year.",
+          "why_correct_is_unique": "Dấu hiệu 'last year'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 6,
+        "type": "Past Simple Verbs",
+        "question": "They _______ (go) to the beach for their family vacation.",
+        "options": [],
+        "correct_answer": "went",
+        "explanation_vi": "Động từ bất quy tắc 'go' ở dạng quá khứ là 'went'. Ngữ cảnh miêu tả hành động đã hoàn thành.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "They went to the beach for their family vacation.",
+          "why_correct_is_unique": "Quá khứ bất quy tắc của 'go'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 7,
+        "type": "Past Simple Verbs",
+        "question": "I _______ (see) my cousins at the wedding party two days ago.",
+        "options": [],
+        "correct_answer": "saw",
+        "explanation_vi": "Dấu hiệu 'two days ago'. Động từ bất quy tắc 'see' đổi thành 'saw'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "I saw my cousins at the wedding party two days ago.",
+          "why_correct_is_unique": "Quá khứ bất quy tắc của 'see'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 8,
+        "type": "Past Simple Verbs",
+        "question": "The children _______ (play) games together all evening.",
+        "options": [],
+        "correct_answer": "played",
+        "explanation_vi": "Động từ có quy tắc 'play' thêm '-ed'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The children played games together all evening.",
+          "why_correct_is_unique": "Hành động kết thúc trong quá khứ.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 9,
+        "type": "Past Simple Verbs",
+        "question": "He _______ (give) me a beautiful gift for my graduation.",
+        "options": [],
+        "correct_answer": "gave",
+        "explanation_vi": "Động từ bất quy tắc 'give' thành 'gave' trong sự kiện lễ tốt nghiệp đã qua.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "He gave me a beautiful gift for my graduation.",
+          "why_correct_is_unique": "Quá khứ bất quy tắc của 'give'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 10,
+        "type": "Past Simple Verbs",
+        "question": "My mother _______ (make) a special cake yesterday.",
+        "options": [],
+        "correct_answer": "made",
+        "explanation_vi": "Dấu hiệu 'yesterday'. Động từ bất quy tắc 'make' thành 'made'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "My mother made a special cake yesterday.",
+          "why_correct_is_unique": "Quá khứ bất quy tắc của 'make'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 11,
+        "type": "Past Simple Verbs",
+        "question": "We _______ (not/stay) at a hotel; we stayed with our relatives.",
+        "options": [],
+        "correct_answer": "did not stay",
+        "explanation_vi": "Câu phủ định quá khứ dùng 'did not stay'. Vế sau đã chia 'stayed'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "We did not stay at a hotel; we stayed with our relatives.",
+          "why_correct_is_unique": "Cấu trúc phủ định đúng.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 12,
+        "type": "Past Simple Verbs",
+        "question": "The party _______ (start) at 7 PM and ended at 11 PM.",
+        "options": [],
+        "correct_answer": "started",
+        "explanation_vi": "Vế sau chia 'ended' ở quá khứ, vế đầu cũng chia quá khứ đồng cấp -> 'started'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The party started at 7 PM and ended at 11 PM.",
+          "why_correct_is_unique": "Hành động song song trong quá khứ.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 13,
+        "type": "Past Simple Verbs",
+        "question": "(*) When I _______ (be) a child, my family often took trips to the countryside.",
+        "options": [],
+        "correct_answer": "was",
+        "explanation_vi": "Diễn tả sự việc khi còn nhỏ, 'be' đi với 'I' ở quá khứ là 'was'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "When I was a child, my family often took trips to the countryside.",
+          "why_correct_is_unique": "Động từ 'be' quá khứ số ít.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 14,
+        "type": "Past Simple Verbs",
+        "question": "(*) My brother _______ (break) his toy yesterday, so he cried a lot.",
+        "options": [],
+        "correct_answer": "broke",
+        "explanation_vi": "Dấu hiệu 'yesterday'. Động từ bất quy tắc 'break' thành 'broke'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "My brother broke his toy yesterday, so he cried a lot.",
+          "why_correct_is_unique": "Quá khứ bất quy tắc.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 15,
+        "type": "Basic Data Comparison Modifiers",
+        "question": "The number of children attending the party was _______ (significant / significantly) higher than last year.",
+        "options": [],
+        "correct_answer": "significantly",
+        "explanation_vi": "Bổ nghĩa cho tính từ so sánh hơn 'higher' phải dùng trạng từ 'significantly'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The number of children attending the party was significantly higher than last year.",
+          "why_correct_is_unique": "Dùng trạng từ bổ nghĩa cho so sánh hơn.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 16,
+        "type": "Basic Data Comparison Modifiers",
+        "question": "The cost of the gift was _______ (much / very) more expensive than I thought.",
+        "options": [],
+        "correct_answer": "much",
+        "explanation_vi": "'much' dùng để bổ nghĩa nhấn mạnh cho so sánh hơn 'more expensive', không dùng 'very'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The cost of the gift was much more expensive than I thought.",
+          "why_correct_is_unique": "Chỉ 'much' bổ nghĩa được cho so sánh hơn.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 17,
+        "type": "Basic Data Comparison Modifiers",
+        "question": "In 2020, the amount of time spent online was _______ (slight / slightly) lower than in 2021.",
+        "options": [],
+        "correct_answer": "slightly",
+        "explanation_vi": "Cần trạng từ 'slightly' để bổ nghĩa cho tính từ so sánh hơn 'lower'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "In 2020, the amount of time spent online was slightly lower than in 2021.",
+          "why_correct_is_unique": "Trạng từ bổ nghĩa.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 18,
+        "type": "Basic Data Comparison Modifiers",
+        "question": "The boys ate _______ (twice as much / twice as many) cake as the girls.",
+        "options": [],
+        "correct_answer": "twice as much",
+        "explanation_vi": "Danh từ không đếm được 'cake' (ở dạng chung) dùng 'much', cấu trúc 'twice as much... as'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The boys ate twice as much cake as the girls.",
+          "why_correct_is_unique": "Cake là không đếm được.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 19,
+        "type": "Basic Data Comparison Modifiers",
+        "question": "Our house is _______ (a little / few) bigger than my uncle's house.",
+        "options": [],
+        "correct_answer": "a little",
+        "explanation_vi": "'a little' dùng để bổ nghĩa cho tính từ so sánh hơn 'bigger', 'few' chỉ dùng với danh từ đếm được.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Our house is a little bigger than my uncle's house.",
+          "why_correct_is_unique": "A little bổ nghĩa mức độ.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 20,
+        "type": "Basic Data Comparison Modifiers",
+        "question": "She has _______ (twice as many / twice as much) cousins as I do.",
+        "options": [],
+        "correct_answer": "twice as many",
+        "explanation_vi": "'cousins' là danh từ đếm được số nhiều nên phải dùng 'many'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "She has twice as many cousins as I do.",
+          "why_correct_is_unique": "Danh từ đếm được.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 21,
+        "type": "Basic Data Comparison Modifiers",
+        "question": "(*) The family gathering was _______ (significant) larger in 2022 than in 2021.",
+        "options": [],
+        "correct_answer": "significantly",
+        "explanation_vi": "Phải chuyển tính từ 'significant' thành trạng từ 'significantly' để bổ nghĩa cho 'larger'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The family gathering was significantly larger in 2022 than in 2021.",
+          "why_correct_is_unique": "Chuyển thành trạng từ.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 22,
+        "type": "Basic Data Comparison Modifiers",
+        "question": "(*) The temperature today is _______ (slight) warmer than yesterday.",
+        "options": [],
+        "correct_answer": "slightly",
+        "explanation_vi": "Chuyển tính từ thành trạng từ 'slightly' để bổ nghĩa cho 'warmer'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The temperature today is slightly warmer than yesterday.",
+          "why_correct_is_unique": "Chuyển thành trạng từ.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 23,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "Correct the error: They didn't went to the family reunion last week.",
+        "options": [],
+        "correct_answer": "They didn't go to the family reunion last week.",
+        "explanation_vi": "Sau trợ động từ 'didn't', động từ chính phải để nguyên mẫu là 'go', không chia quá khứ 'went'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "They didn't go to the family reunion last week.",
+          "why_correct_is_unique": "Lỗi chia động từ sau didn't.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "They didn't went to the family reunion last week.",
+          "corrected_sentence": "They didn't go to the family reunion last week.",
+          "target_error_text": "went",
+          "target_error_type": "verb_form",
+          "correction_text": "go",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 24,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "Correct the error: The price of the gift was very higher than expected.",
+        "options": [],
+        "correct_answer": "The price of the gift was much higher than expected.",
+        "explanation_vi": "Bổ nghĩa cho so sánh hơn phải dùng 'much' hoặc 'significantly', không dùng 'very'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The price of the gift was much higher than expected.",
+          "why_correct_is_unique": "Sửa lỗi trạng từ bổ nghĩa so sánh.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The price of the gift was very higher than expected.",
+          "corrected_sentence": "The price of the gift was much higher than expected.",
+          "target_error_text": "very",
+          "target_error_type": "modifier",
+          "correction_text": "much",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 25,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "Correct the error: Did you saw your grandparents on Sunday?",
+        "options": [],
+        "correct_answer": "Did you see your grandparents on Sunday?",
+        "explanation_vi": "Trong câu hỏi quá khứ có trợ động từ 'Did', động từ chính phải giữ nguyên mẫu 'see', không dùng 'saw'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Did you see your grandparents on Sunday?",
+          "why_correct_is_unique": "Lỗi động từ sau Did.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "Did you saw your grandparents on Sunday?",
+          "corrected_sentence": "Did you see your grandparents on Sunday?",
+          "target_error_text": "saw",
+          "target_error_type": "verb_form",
+          "correction_text": "see",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 26,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "I enjoyed the party. [Rewrite the sentence in the negative form using 'did not']",
+        "options": [],
+        "correct_answer": "I did not enjoy the party.",
+        "explanation_vi": "Biến đổi câu khẳng định quá khứ sang phủ định: S + did not + V-infinitive.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "I did not enjoy the party.",
+          "why_correct_is_unique": "Chuyển phủ định.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 27,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "The number of visitors was 50. Last year it was 25. [Combine these into one sentence using 'twice as many... as']",
+        "options": [],
+        "correct_answer": "The number of visitors was twice as many as last year.",
+        "explanation_vi": "Sử dụng cấu trúc so sánh gấp đôi cho danh từ đếm được.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The number of visitors was twice as many as last year.",
+          "why_correct_is_unique": "So sánh gấp đôi đếm được.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 28,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "Correct the error: The wedding cake was slightly more bigger than the birthday cake.",
+        "options": [],
+        "correct_answer": "The wedding cake was slightly bigger than the birthday cake.",
+        "explanation_vi": "Tính từ ngắn 'big' so sánh hơn là 'bigger', không dùng thêm 'more'. Thừa chữ 'more'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The wedding cake was slightly bigger than the birthday cake.",
+          "why_correct_is_unique": "Sửa lỗi double comparative.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The wedding cake was slightly more bigger than the birthday cake.",
+          "corrected_sentence": "The wedding cake was slightly bigger than the birthday cake.",
+          "target_error_text": "more bigger",
+          "target_error_type": "comparative",
+          "correction_text": "bigger",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 29,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "Correct the error: We prepare a lot of food yesterday.",
+        "options": [],
+        "correct_answer": "We prepared a lot of food yesterday.",
+        "explanation_vi": "Dấu hiệu 'yesterday' yêu cầu chia quá khứ đơn, 'prepare' phải đổi thành 'prepared'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "We prepared a lot of food yesterday.",
+          "why_correct_is_unique": "Chia động từ quá khứ.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "We prepare a lot of food yesterday.",
+          "corrected_sentence": "We prepared a lot of food yesterday.",
+          "target_error_text": "prepare",
+          "target_error_type": "tense",
+          "correction_text": "prepared",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 30,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "(*) My sister bought a gift. [Write a yes/no question in the past simple for this sentence]",
+        "options": [],
+        "correct_answer": "Did my sister buy a gift?",
+        "explanation_vi": "Chuyển thành câu nghi vấn quá khứ đơn: Did + S + V-infinitive.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Did my sister buy a gift?",
+          "why_correct_is_unique": "Cấu trúc nghi vấn.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      }
+    ]
+  },
+  "writing": {
+    "tasks": [
+      {
+        "id": 1,
+        "task_type": "Sentence Building",
+        "prompt": "Sắp xếp các từ sau thành câu hoàn chỉnh kể về một lễ kỷ niệm trong quá khứ: (family / my / gathered / yesterday / dinner / for)",
+        "target_length": "1 sentence",
+        "focus_skill": "Correct word order and past simple tense.",
+        "useful_language": [
+          "My family gathered..."
+        ],
+        "success_criteria": [
+          "Grammatically correct.",
+          "Uses past tense."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 2,
+        "task_type": "Email",
+        "prompt": "Viết một email ngắn (khoảng 40-50 từ) mời bạn bè đến dự tiệc sinh nhật của bạn vào tuần tới. Cho biết thời gian, địa điểm và những hoạt động dự kiến.",
+        "target_length": "40-50 words",
+        "focus_skill": "Writing an invitation email.",
+        "useful_language": [
+          "I am writing to invite you to...",
+          "The party will be at...",
+          "We will play games and..."
+        ],
+        "success_criteria": [
+          "Include an invitation.",
+          "Mention time and place.",
+          "Between 40-50 words."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 3,
+        "task_type": "Short Description",
+        "prompt": "Viết một đoạn văn ngắn (3-4 câu) kể lại kỷ niệm đáng nhớ trong kỳ nghỉ gia đình gần nhất của bạn. Sử dụng thì quá khứ đơn.",
+        "target_length": "3-4 sentences",
+        "focus_skill": "Using past simple to narrate events.",
+        "useful_language": [
+          "Last summer, my family went to...",
+          "We visited...",
+          "It was a wonderful trip because..."
+        ],
+        "success_criteria": [
+          "Write 3-4 sentences.",
+          "Use past simple verbs correctly."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 4,
+        "task_type": "Data Description",
+        "prompt": "Mô tả biểu đồ dưới đây so sánh số lượng quà tặng sinh nhật (Birthday Gifts) và thiệp chúc mừng (Greeting Cards) mà các gia đình đã gửi trong hai năm 2020 và 2021. Viết 3 câu so sánh.",
+        "target_length": "3 sentences",
+        "focus_skill": "Comparing quantities across time periods using modifiers.",
+        "useful_language": [
+          "In 2021, the number of gifts was significantly higher...",
+          "The number of greeting cards was slightly lower...",
+          "Compared to 2020..."
+        ],
+        "success_criteria": [
+          "Write 3 sentences.",
+          "Use at least one comparison modifier (e.g., significantly, slightly)."
+        ],
+        "visual_data": {
+          "type": "svg",
+          "content": "<div class=\"svg-chart-container\"><svg viewBox=\"0 0 400 220\" width=\"100%\" height=\"220\" style=\"background-color: #f9f9f9; border-radius: 8px;\"><text x=\"200\" y=\"25\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#333\">Gifts and Cards Sent (2020 vs 2021)</text><line x1=\"60\" y1=\"50\" x2=\"360\" y2=\"50\" stroke=\"#eee\" stroke-width=\"1\"/><line x1=\"60\" y1=\"90\" x2=\"360\" y2=\"90\" stroke=\"#eee\" stroke-width=\"1\"/><line x1=\"60\" y1=\"130\" x2=\"360\" y2=\"130\" stroke=\"#eee\" stroke-width=\"1\"/><line x1=\"60\" y1=\"170\" x2=\"360\" y2=\"170\" stroke=\"#eee\" stroke-width=\"1\"/><text x=\"50\" y=\"54\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">100</text><text x=\"50\" y=\"94\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">75</text><text x=\"50\" y=\"134\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">50</text><text x=\"50\" y=\"174\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">0</text><line x1=\"60\" y1=\"170\" x2=\"360\" y2=\"170\" stroke=\"#ccc\" stroke-width=\"1.5\"/><rect x=\"110\" y=\"110\" width=\"30\" height=\"60\" fill=\"#e74c3c\" rx=\"2\"/><text x=\"125\" y=\"103\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">50</text><rect x=\"150\" y=\"74\" width=\"30\" height=\"96\" fill=\"#3498db\" rx=\"2\"/><text x=\"165\" y=\"67\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">80</text><rect x=\"230\" y=\"50\" width=\"30\" height=\"120\" fill=\"#e74c3c\" rx=\"2\"/><text x=\"245\" y=\"43\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">100</text><rect x=\"270\" y=\"80\" width=\"30\" height=\"90\" fill=\"#3498db\" rx=\"2\"/><text x=\"285\" y=\"73\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">75</text><text x=\"140\" y=\"185\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\">2020</text><text x=\"260\" y=\"185\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\">2021</text><rect x=\"130\" y=\"200\" width=\"10\" height=\"10\" fill=\"#e74c3c\"/><text x=\"145\" y=\"209\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">Birthday Gifts</text><rect x=\"230\" y=\"200\" width=\"10\" height=\"10\" fill=\"#3498db\"/><text x=\"245\" y=\"209\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">Greeting Cards</text></svg></div>"
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 5,
+        "task_type": "Opinion Paragraph",
+        "prompt": "Viết đoạn văn ngắn (50-60 từ) trình bày ý kiến của bạn: Gia đình có nên luôn ăn tối cùng nhau không? Đưa ra lý do.",
+        "target_length": "50-60 words",
+        "focus_skill": "Expressing an opinion and giving reasons.",
+        "useful_language": [
+          "In my opinion, families should...",
+          "Firstly, it helps...",
+          "Secondly, we can share..."
+        ],
+        "success_criteria": [
+          "State opinion clearly.",
+          "Give two reasons.",
+          "Use 'should'."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      }
+    ]
+  },
+  "answers": {
+    "reading_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "TRUE",
+        "evidence_quote": "When family members work together, they can avoid **arguments** and keep the house clean.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Đoạn 1 nêu rõ khi làm việc cùng nhau, các thành viên có thể tránh tranh cãi.",
+        "why_others_wrong_vi": "False/NG sai vì có dẫn chứng trực tiếp ủng hộ.",
+        "tip_vi": "> **💡 Mẹo:** Chú ý từ đồng nghĩa 'prevent' = 'avoid'."
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "NOT GIVEN",
+        "evidence_quote": "For example, parents and children might **share** chores, like washing dishes or sweeping the floor.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Bài viết không đề cập cụ thể về việc trẻ em không nên làm việc nhà vào cuối tuần.",
+        "why_others_wrong_vi": "Không có thông tin xác định đúng/sai.",
+        "tip_vi": "> **💡 Mẹo:** Không suy luận từ kiến thức cá nhân."
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "FALSE",
+        "evidence_quote": "Even a simple weekend dinner can make a big **difference** [R] if everyone sits together and talks about their week.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Bữa tối cuối tuần đơn giản cũng tạo ra sự khác biệt lớn, ngược lại với ý câu hỏi là không quan trọng bằng.",
+        "why_others_wrong_vi": "True sai vì ngược ý.",
+        "tip_vi": "> **💡 Mẹo:** Chú ý cụm từ so sánh 'not as important as'."
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "TRUE",
+        "evidence_quote": "In the past, families usually lived close to each other.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Câu dẫn chứng khớp hoàn toàn với câu hỏi.",
+        "why_others_wrong_vi": "Thông tin rõ ràng, không sai lệch.",
+        "tip_vi": "> **💡 Mẹo:** Tìm mốc thời gian 'in the past'."
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "NOT GIVEN",
+        "evidence_quote": "Today, many young people move to big cities for work or study.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Bài đọc chỉ nói họ chuyển đi vì công việc/học tập, không nói về sở thích không thích vùng quê.",
+        "why_others_wrong_vi": "Chỉ có mục đích di chuyển, không có ý kiến cá nhân.",
+        "tip_vi": "> **💡 Mẹo:** Cẩn thận với các lý do gán ghép 'because'."
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "unique",
+        "evidence_quote": "Every family has its own **unique** way of living.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Điền từ 'unique' khớp với văn bản.",
+        "why_others_wrong_vi": "Các từ khác sai nghĩa.",
+        "tip_vi": "> **💡 Mẹo:** Xác định tính từ đứng trước danh từ 'way'."
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "floor",
+        "evidence_quote": "For example, parents and children might **share** chores, like washing dishes or sweeping the floor.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Điền từ 'floor' sau 'sweeping the'.",
+        "why_others_wrong_vi": "Các từ khác sai nghĩa.",
+        "tip_vi": "> **💡 Mẹo:** Từ vựng liên quan đến việc nhà."
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "gifts",
+        "evidence_quote": "They **prepare** delicious food, give **gifts**, and share happy **memories**.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Điền 'gifts' theo cụm 'give gifts'.",
+        "why_others_wrong_vi": "Sai với liệt kê.",
+        "tip_vi": "> **💡 Mẹo:** Động từ 'give' đi kèm với 'gifts'."
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "online",
+        "evidence_quote": "To stay connected, modern families often use video calls to chat **online** [R].",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Điền 'online' sau động từ 'chat'.",
+        "why_others_wrong_vi": "Sai từ loại/nghĩa.",
+        "tip_vi": "> **💡 Mẹo:** Từ vựng chỉ cách thức giao tiếp."
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "challenges",
+        "evidence_quote": "Keeping in touch shows that you care about your family, and it helps everyone **feel better** [R] when they face difficult **challenges** in life.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Điền 'challenges' sau tính từ 'difficult'.",
+        "why_others_wrong_vi": "Sai nghĩa ngữ cảnh.",
+        "tip_vi": "> **💡 Mẹo:** Tìm danh từ đi với động từ 'face'."
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "They make daily life less stressful.",
+        "evidence_quote": "This **habit** [R] makes daily life much easier and less **stressful**.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Giảm căng thẳng là lợi ích chính.",
+        "why_others_wrong_vi": "Các lợi ích khác không được nhắc đến.",
+        "tip_vi": "> **💡 Mẹo:** Tìm kết luận ở cuối đoạn 1."
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "They help to build a strong bond.",
+        "evidence_quote": "These celebrations help to build a strong **bond** between family members.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Xây dựng sự gắn kết (bond) là lợi ích của các dịp lễ.",
+        "why_others_wrong_vi": "Các đáp án kia mang nghĩa tiêu cực.",
+        "tip_vi": "> **💡 Mẹo:** Chú ý từ khóa 'bond'."
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "To stay connected because they live far apart.",
+        "evidence_quote": "Today, many young people move to big cities for work or study. Because of this, it can be difficult to meet regularly. To stay connected, modern families often use video calls to chat **online** [R]. They also try to plan at least one big family trip every year.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Gia đình đi du lịch để giữ liên lạc khi ở xa.",
+        "why_others_wrong_vi": "Các lý do kia là sai lệnh logic.",
+        "tip_vi": "> **💡 Mẹo:** Liên kết nguyên nhân - kết quả qua nhiều câu."
+      }
+    ],
+    "grammar_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "gathered",
+        "analysis_vi": "Dấu hiệu quá khứ 'yesterday'.",
+        "tip_vi": "> **💡 Mẹo:** Động từ có quy tắc thêm -ed."
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "had",
+        "analysis_vi": "Dấu hiệu 'last weekend'.",
+        "tip_vi": "> **💡 Mẹo:** Bất quy tắc của have là had."
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "did not buy",
+        "analysis_vi": "Phủ định quá khứ.",
+        "tip_vi": "> **💡 Mẹo:** did not + V nguyên mẫu."
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "Did visit",
+        "analysis_vi": "Nghi vấn đảo did lên đầu.",
+        "tip_vi": "> **💡 Mẹo:** Cấu trúc: Did + S + V?"
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "cooked",
+        "analysis_vi": "Dấu hiệu 'last year'.",
+        "tip_vi": "> **💡 Mẹo:** Thêm -ed."
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "went",
+        "analysis_vi": "Go chuyển thành went.",
+        "tip_vi": "> **💡 Mẹo:** Hành động quá khứ đơn."
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "saw",
+        "analysis_vi": "Dấu hiệu 'ago'.",
+        "tip_vi": "> **💡 Mẹo:** See chuyển thành saw."
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "played",
+        "analysis_vi": "Đã xảy ra hoàn tất.",
+        "tip_vi": "> **💡 Mẹo:** Thêm -ed."
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "gave",
+        "analysis_vi": "Lễ tốt nghiệp đã qua.",
+        "tip_vi": "> **💡 Mẹo:** Give chuyển thành gave."
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "made",
+        "analysis_vi": "Dấu hiệu 'yesterday'.",
+        "tip_vi": "> **💡 Mẹo:** Make chuyển thành made."
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "did not stay",
+        "analysis_vi": "Phủ định.",
+        "tip_vi": "> **💡 Mẹo:** Không chia động từ chính."
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "started",
+        "analysis_vi": "Hành động song song quá khứ.",
+        "tip_vi": "> **💡 Mẹo:** Cùng cấp với ended."
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "was",
+        "analysis_vi": "Quá khứ của be với I.",
+        "tip_vi": "> **💡 Mẹo:** I was."
+      },
+      {
+        "question_id": 14,
+        "correct_answer": "broke",
+        "analysis_vi": "Dấu hiệu 'yesterday'.",
+        "tip_vi": "> **💡 Mẹo:** Break chuyển thành broke."
+      },
+      {
+        "question_id": 15,
+        "correct_answer": "significantly",
+        "analysis_vi": "Trạng từ bổ nghĩa so sánh.",
+        "tip_vi": "> **💡 Mẹo:** significantly higher."
+      },
+      {
+        "question_id": 16,
+        "correct_answer": "much",
+        "analysis_vi": "Nhấn mạnh so sánh hơn.",
+        "tip_vi": "> **💡 Mẹo:** much more."
+      },
+      {
+        "question_id": 17,
+        "correct_answer": "slightly",
+        "analysis_vi": "Trạng từ mức độ ít.",
+        "tip_vi": "> **💡 Mẹo:** slightly lower."
+      },
+      {
+        "question_id": 18,
+        "correct_answer": "twice as much",
+        "analysis_vi": "Cake không đếm được.",
+        "tip_vi": "> **💡 Mẹo:** as much as."
+      },
+      {
+        "question_id": 19,
+        "correct_answer": "a little",
+        "analysis_vi": "Bổ nghĩa mức độ nhỏ.",
+        "tip_vi": "> **💡 Mẹo:** a little bigger."
+      },
+      {
+        "question_id": 20,
+        "correct_answer": "twice as many",
+        "analysis_vi": "Cousins đếm được.",
+        "tip_vi": "> **💡 Mẹo:** as many as."
+      },
+      {
+        "question_id": 21,
+        "correct_answer": "significantly",
+        "analysis_vi": "Đổi thành trạng từ.",
+        "tip_vi": "> **💡 Mẹo:** Thêm -ly."
+      },
+      {
+        "question_id": 22,
+        "correct_answer": "slightly",
+        "analysis_vi": "Đổi thành trạng từ.",
+        "tip_vi": "> **💡 Mẹo:** Thêm -ly."
+      },
+      {
+        "question_id": 23,
+        "correct_answer": "They didn't go to the family reunion last week.",
+        "analysis_vi": "Sửa didn't went -> didn't go.",
+        "tip_vi": "> **💡 Mẹo:** Chú ý V nguyên mẫu."
+      },
+      {
+        "question_id": 24,
+        "correct_answer": "The price of the gift was much higher than expected.",
+        "analysis_vi": "Sửa very -> much.",
+        "tip_vi": "> **💡 Mẹo:** very không đi với so sánh hơn."
+      },
+      {
+        "question_id": 25,
+        "correct_answer": "Did you see your grandparents on Sunday?",
+        "analysis_vi": "Sửa saw -> see.",
+        "tip_vi": "> **💡 Mẹo:** Sau Did dùng V nguyên mẫu."
+      },
+      {
+        "question_id": 26,
+        "correct_answer": "I did not enjoy the party.",
+        "analysis_vi": "Đổi thể phủ định.",
+        "tip_vi": "> **💡 Mẹo:** did not enjoy."
+      },
+      {
+        "question_id": 27,
+        "correct_answer": "The number of visitors was twice as many as last year.",
+        "analysis_vi": "Gấp đôi.",
+        "tip_vi": "> **💡 Mẹo:** twice as many."
+      },
+      {
+        "question_id": 28,
+        "correct_answer": "The wedding cake was slightly bigger than the birthday cake.",
+        "analysis_vi": "Sửa lỗi double comparative.",
+        "tip_vi": "> **💡 Mẹo:** Không dùng more bigger."
+      },
+      {
+        "question_id": 29,
+        "correct_answer": "We prepared a lot of food yesterday.",
+        "analysis_vi": "Chia thì quá khứ.",
+        "tip_vi": "> **💡 Mẹo:** prepared."
+      },
+      {
+        "question_id": 30,
+        "correct_answer": "Did my sister buy a gift?",
+        "analysis_vi": "Câu nghi vấn.",
+        "tip_vi": "> **💡 Mẹo:** Đảo Did lên đầu."
+      }
+    ],
+    "writing_guidance": [
+      {
+        "task_id": 1,
+        "model_answer": "My family gathered for dinner yesterday.",
+        "guidance_vi": "Mô tả câu đúng.",
+        "self_checklist": [
+          "Đúng thứ tự từ.",
+          "Chia thì quá khứ."
+        ]
+      },
+      {
+        "task_id": 2,
+        "model_answer": "Hi Anna,\nI am writing to invite you to my birthday party next week. The party will be at my house at 6 PM. We will play games and eat cake. Hope to see you there!\nBest,\nLinh",
+        "guidance_vi": "Mô tả email mời.",
+        "self_checklist": [
+          "Đủ độ dài.",
+          "Có địa điểm và thời gian."
+        ]
+      },
+      {
+        "task_id": 3,
+        "model_answer": "Last summer, my family went to the beach. We visited a beautiful island and ate fresh seafood. It was a wonderful trip because we had a lot of fun together.",
+        "guidance_vi": "Kể chuyện quá khứ.",
+        "self_checklist": [
+          "Dùng thì quá khứ.",
+          "Đủ 3 câu."
+        ]
+      },
+      {
+        "task_id": 4,
+        "model_answer": "In 2021, the number of birthday gifts sent was 100, which was significantly higher than in 2020. Conversely, the number of greeting cards was slightly lower in 2021 at 75 compared to 80 in 2020. Overall, people sent more gifts but fewer cards in the second year.",
+        "guidance_vi": "So sánh biểu đồ.",
+        "self_checklist": [
+          "Sử dụng so sánh hơn.",
+          "Đúng số liệu."
+        ]
+      },
+      {
+        "task_id": 5,
+        "model_answer": "In my opinion, families should always eat dinner together. Firstly, it helps everyone share their stories after a busy day. Secondly, we can build a strong bond by spending time talking. Therefore, it is an important daily routine.",
+        "guidance_vi": "Viết đoạn văn ý kiến.",
+        "self_checklist": [
+          "Sử dụng should.",
+          "Có 2 lý do."
+        ]
+      }
+    ],
+    "writing_revisions": [],
+    "review_bridge": [
+      {
+        "id": 1,
+        "prompt": "Dịch: Đó là thói quen của cô ấy.",
+        "correct_answer": "It is her habit.",
+        "rationale_vi": "Từ vựng: habit (20260704)."
+      },
+      {
+        "id": 2,
+        "prompt": "Điền từ: Can you tell the _______ (sự khác biệt)?",
+        "correct_answer": "difference",
+        "rationale_vi": "Từ vựng: difference (20260704)."
+      },
+      {
+        "id": 3,
+        "prompt": "Dịch: Chúng tôi nói chuyện trực tuyến.",
+        "correct_answer": "We chat online.",
+        "rationale_vi": "Từ vựng: online (20260703)."
+      }
+    ]
+  },
+  "warm_up": [
+    "What is your favorite family celebration?",
+    "Do you share chores in your household?",
+    "Why are family routines important?"
+  ],
+  "level": "A2",
+  "topic": "Family celebrations",
+  "day": "20260704",
+  "lesson_id": "LSN-20260704-A2-FAMILY",
+  "practice_markdown": "Reading: A2\nWriting: A2\n\n## Reading Source Verification\n| Source title | Publisher/Organization | Date/Access date | Final verified URL | URL status | Source type | Reliability check | How the passage uses the source |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Family life and household dynamics | Psychology Today | 2023-01-10 / 2026-07-02 | https://www.psychologytoday.com/gb/basics/family-dynamics | 200 OK | Educational News Article | A highly recognized psychology publication. | Directly explains the benefits of family celebrations and routines. |\n\n## Warm-up\nAnswer the following questions in Vietnamese or English:\n1. What is your favorite family celebration?\n2. Do you share chores in your household?\n3. Why are family routines important?\n\n## Reading Passage\n### Family Celebrations and Household Routines\n\nEvery family has its own **unique** way of living. A healthy **household** needs good **routines** and special **celebrations**. In many homes, a daily routine helps everyone know what to do. For example, parents and children might **share** chores, like washing dishes or sweeping the floor. When family members work together, they can avoid **arguments** and keep the house clean. This **habit** [R] makes daily life much easier and less **stressful**.\n\nHowever, life is not only about daily work. Special **events**, like birthdays or New Year's Eve, are also very **important**. During these times, relatives often travel from different places to **gather** together. They **prepare** delicious food, give **gifts**, and share happy **memories**. These celebrations help to build a strong **bond** between family members. Even a simple weekend dinner can make a big **difference** [R] if everyone sits together and talks about their week.\n\nIn the past, families usually lived close to each other. Today, many young people move to big cities for work or study. Because of this, it can be difficult to meet regularly. To stay connected, modern families often use video calls to chat **online** [R]. They also try to plan at least one big family trip every year. Keeping in touch shows that you care about your family, and it helps everyone **feel better** [R] when they face difficult **challenges** in life.\n\n## Questions for Reading\n### Questions 1–5: True/False/Not Given\n\n1. Sharing household chores can help families prevent arguments.\n    A. TRUE\n    B. FALSE\n    C. NOT GIVEN\n2. Children should not do any chores on weekends.\n    A. TRUE\n    B. FALSE\n    C. NOT GIVEN\n3. A simple weekend dinner is not as important as a big birthday party.\n    A. TRUE\n    B. FALSE\n    C. NOT GIVEN\n4. In the past, family members used to live near one another.\n    A. TRUE\n    B. FALSE\n    C. NOT GIVEN\n5. Most young people move to big cities because they don't like the countryside.\n    A. TRUE\n    B. FALSE\n    C. NOT GIVEN\n\n### Questions 6–10: Gap Fill\n\n6. Every family has its own _______ way of living.\n7. Parents and children often share chores such as washing dishes or sweeping the _______.\n8. During special events, families usually prepare delicious food and give _______ to each other.\n9. Today, many modern families use video calls to chat _______ with their relatives.\n10. Keeping in touch can help family members face difficult _______ in life.\n\n### Questions 11–13: Multiple Choice\n\n11. What is the main benefit of family routines mentioned in Paragraph 1?\n    A. They make daily life less stressful.\n    B. They help children do their homework.\n    C. They allow people to sleep longer.\n    D. They save a lot of money.\n12. According to Paragraph 2, how do special celebrations affect family relationships?\n    A. They cause many arguments.\n    B. They help to build a strong bond.\n    C. They cost too much money.\n    D. They make people feel tired.\n13. (*) Why do modern families try to plan a big trip every year? (*)\n    A. To spend money on expensive hotels.\n    B. To stay connected because they live far apart.\n    C. To learn how to cook delicious food.\n    D. To find a new place to live and work.\n\n## Questions for Grammar\n### Past Simple Verbs\n\n1. Yesterday, my extended family _______ (gather) at our house for dinner.\n2. We _______ (have) a wonderful time together last weekend.\n3. She _______ (not/buy) any new clothes for the festival.\n4. _______ you _______ (visit) your grandparents during the summer holiday?\n5. My father _______ (cook) a delicious meal for my birthday last year.\n6. They _______ (go) to the beach for their family vacation.\n7. I _______ (see) my cousins at the wedding party two days ago.\n8. The children _______ (play) games together all evening.\n9. He _______ (give) me a beautiful gift for my graduation.\n10. My mother _______ (make) a special cake yesterday.\n11. We _______ (not/stay) at a hotel; we stayed with our relatives.\n12. The party _______ (start) at 7 PM and ended at 11 PM.\n13. (*) When I _______ (be) a child, my family often took trips to the countryside. (*)\n14. (*) My brother _______ (break) his toy yesterday, so he cried a lot. (*)\n\n### Basic Data Comparison Modifiers\n\n15. The number of children attending the party was _______ (significant / significantly) higher than last year.\n16. The cost of the gift was _______ (much / very) more expensive than I thought.\n17. In 2020, the amount of time spent online was _______ (slight / slightly) lower than in 2021.\n18. The boys ate _______ (twice as much / twice as many) cake as the girls.\n19. Our house is _______ (a little / few) bigger than my uncle's house.\n20. She has _______ (twice as many / twice as much) cousins as I do.\n21. (*) The family gathering was _______ (significant) larger in 2022 than in 2021. (*)\n22. (*) The temperature today is _______ (slight) warmer than yesterday. (*)\n\n### Error Correction and Sentence Transformation\n\n23. Correct the error: They didn't went to the family reunion last week.\n24. Correct the error: The price of the gift was very higher than expected.\n25. Correct the error: Did you saw your grandparents on Sunday?\n26. I enjoyed the party. [Rewrite the sentence in the negative form using 'did not']\n27. The number of visitors was 50. Last year it was 25. [Combine these into one sentence using 'twice as many... as']\n28. Correct the error: The wedding cake was slightly more bigger than the birthday cake.\n29. Correct the error: We prepare a lot of food yesterday. (*)\n30. (*) My sister bought a gift. [Write a yes/no question in the past simple for this sentence] (*)\n\n## Questions for Writing\n| # | Task | Target length | Focus skill | Useful language | Success criteria |\n| --- | --- | --- | --- | --- | --- |\n| 1 | Sentence Building: Sắp xếp các từ sau thành câu hoàn chỉnh kể về một lễ kỷ niệm trong quá khứ: (family / my / gathered / yesterday / dinner / for) | 1 sentence | Correct word order and past simple tense. | My family gathered... | Grammatically correct.<br>Uses past tense. |\n| 2 | Email: Viết một email ngắn (khoảng 40-50 từ) mời bạn bè đến dự tiệc sinh nhật của bạn vào tuần tới. Cho biết thời gian, địa điểm và những hoạt động dự kiến. | 40-50 words | Writing an invitation email. | I am writing to invite you to...<br>The party will be at...<br>We will play games and... | Include an invitation.<br>Mention time and place.<br>Between 40-50 words. |\n| 3 | Short Description: Viết một đoạn văn ngắn (3-4 câu) kể lại kỷ niệm đáng nhớ trong kỳ nghỉ gia đình gần nhất của bạn. Sử dụng thì quá khứ đơn. | 3-4 sentences | Using past simple to narrate events. | Last summer, my family went to...<br>We visited...<br>It was a wonderful trip because... | Write 3-4 sentences.<br>Use past simple verbs correctly. |\n| 4 | Data Description: Mô tả biểu đồ dưới đây so sánh số lượng quà tặng sinh nhật (Birthday Gifts) và thiệp chúc mừng (Greeting Cards) mà các gia đình đã gửi trong hai năm 2020 và 2021. Viết 3 câu so sánh.<br><br><div class=\"svg-chart-container\"><svg viewBox=\"0 0 400 220\" width=\"100%\" height=\"220\" style=\"background-color: #f9f9f9; border-radius: 8px;\"><text x=\"200\" y=\"25\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#333\">Gifts and Cards Sent (2020 vs 2021)</text><line x1=\"60\" y1=\"50\" x2=\"360\" y2=\"50\" stroke=\"#eee\" stroke-width=\"1\"/><line x1=\"60\" y1=\"90\" x2=\"360\" y2=\"90\" stroke=\"#eee\" stroke-width=\"1\"/><line x1=\"60\" y1=\"130\" x2=\"360\" y2=\"130\" stroke=\"#eee\" stroke-width=\"1\"/><line x1=\"60\" y1=\"170\" x2=\"360\" y2=\"170\" stroke=\"#eee\" stroke-width=\"1\"/><text x=\"50\" y=\"54\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">100</text><text x=\"50\" y=\"94\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">75</text><text x=\"50\" y=\"134\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">50</text><text x=\"50\" y=\"174\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">0</text><line x1=\"60\" y1=\"170\" x2=\"360\" y2=\"170\" stroke=\"#ccc\" stroke-width=\"1.5\"/><rect x=\"110\" y=\"110\" width=\"30\" height=\"60\" fill=\"#e74c3c\" rx=\"2\"/><text x=\"125\" y=\"103\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">50</text><rect x=\"150\" y=\"74\" width=\"30\" height=\"96\" fill=\"#3498db\" rx=\"2\"/><text x=\"165\" y=\"67\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">80</text><rect x=\"230\" y=\"50\" width=\"30\" height=\"120\" fill=\"#e74c3c\" rx=\"2\"/><text x=\"245\" y=\"43\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">100</text><rect x=\"270\" y=\"80\" width=\"30\" height=\"90\" fill=\"#3498db\" rx=\"2\"/><text x=\"285\" y=\"73\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">75</text><text x=\"140\" y=\"185\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\">2020</text><text x=\"260\" y=\"185\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\">2021</text><rect x=\"130\" y=\"200\" width=\"10\" height=\"10\" fill=\"#e74c3c\"/><text x=\"145\" y=\"209\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">Birthday Gifts</text><rect x=\"230\" y=\"200\" width=\"10\" height=\"10\" fill=\"#3498db\"/><text x=\"245\" y=\"209\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">Greeting Cards</text></svg></div> | 3 sentences | Comparing quantities across time periods using modifiers. | In 2021, the number of gifts was significantly higher...<br>The number of greeting cards was slightly lower...<br>Compared to 2020... | Write 3 sentences.<br>Use at least one comparison modifier (e.g., significantly, slightly). |\n| 5 | Opinion Paragraph: Viết đoạn văn ngắn (50-60 từ) trình bày ý kiến của bạn: Gia đình có nên luôn ăn tối cùng nhau không? Đưa ra lý do. | 50-60 words | Expressing an opinion and giving reasons. | In my opinion, families should...<br>Firstly, it helps...<br>Secondly, we can share... | State opinion clearly.<br>Give two reasons.<br>Use 'should'. |\n\n## Review Bridge\n#### V. Review Bridge / Ôn tập liên chủ đề\n1. Dịch: Đó là thói quen của cô ấy.\n\n2. Điền từ: Can you tell the _______ (sự khác biệt)?\n\n3. Dịch: Chúng tôi nói chuyện trực tuyến.\n",
+  "vocabulary_grammar_markdown": "## Vocabulary Table\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |\n| --- | --- | --- | --- | --- |\n| unique | /juːˈniːk/ | adj | độc đáo, duy nhất (being the only existing one of its type or special) | Every family has a unique way of celebrating. |\n| household | /ˈhaʊs.həʊld/ | noun | hộ gia đình (a group of people, often a family, who live together) | There are four people in my household. |\n| routines | /ruːˈtiːnz/ | noun | thói quen, công việc hàng ngày (a usual or fixed way of doing things) | Good routines help children feel safe. |\n| share | /ʃeər/ | verb | chia sẻ (to have or use something at the same time as someone else) | We share the household chores equally. |\n| arguments | /ˈɑːɡ.jə.mənts/ | noun | sự cãi vã, tranh luận (angry disagreements) | They had an argument about who should wash the dishes. |\n| stressful | /ˈstres.fəl/ | adj | căng thẳng (making you feel worried and nervous) | Moving to a new house can be very stressful. |\n| events | /ɪˈvents/ | noun | sự kiện (things that happen, especially important ones) | A wedding is a very important family event. |\n| important | /ɪmˈpɔː.tənt/ | adj | quan trọng (having great value or influence) | It is important to respect older relatives. |\n| gather | /ˈɡæð.ər/ | verb | tụ tập, quây quần (to come together in a group) | The whole family will gather for Thanksgiving. |\n| prepare | /prɪˈpeər/ | verb | chuẩn bị (to make something ready) | We prepare special food for the festival. |\n| gifts | /ɡɪfts/ | noun | món quà (things given to someone without payment) | Children love receiving gifts on their birthdays. |\n| memories | /ˈmem.ər.iz/ | noun | kỷ niệm, ký ức (things that you remember from the past) | We shared many happy memories of our childhood. |\n| bond | /bɒnd/ | noun | sự gắn kết (a close connection joining two or more people) | The sisters have a very strong bond. |\n| challenges | /ˈtʃæl.ɪndʒɪz/ | noun | thử thách (difficult situations that test someone's ability) | Families must face financial challenges together. |\n| share chores | /ʃeər tʃɔːz/ | collocation | chia sẻ việc nhà (to divide household work among people) | It is fair when everyone shares chores. |\n| keep in touch | /kiːp ɪn tʌtʃ/ | idiom | giữ liên lạc (to continue to communicate with someone) | I use video calls to keep in touch with my parents. |\n| build a strong bond | /bɪld ə strɒŋ bɒnd/ | collocation | xây dựng sự gắn kết bền chặt (to create a tight connection between people) | Playing games helps build a strong bond between siblings. |\n| extended family | /ɪkˈsten.dɪd ˈfæm.əl.i/ | noun phrase | đại gia đình (gồm nhiều thế hệ) (a family unit that includes grandmothers, grandfathers, aunts, and uncles) | My extended family always meets at Christmas. |\n| nuclear family | /ˈnjuː.klɪər ˈfæm.əl.i/ | noun phrase | gia đình hạt nhân (a family consisting of two parents and their children) | A nuclear family usually lives in a smaller house. |\n| relatives | /ˈrel.ə.tɪvz/ | noun | họ hàng (members of your family) | All my relatives came to my graduation. |\n\n## Recycled Vocabulary (Từ vựng ôn tập)\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Bài học gốc (Day) |\n| --- | --- | --- | --- | --- |\n| habit | /ˈhæb.ɪt/ | noun | thói quen | Day 20260704 |\n| difference | /ˈdɪf.ər.əns/ | noun | sự khác biệt | Day 20260704 |\n| online | /ˌɒnˈlaɪn/ | adj / adv | trực tuyến | Day 20260703 |\n\n## Detailed Grammar Guide\n#### Chủ điểm 1: Thì Quá khứ đơn (Past Simple)\n**1. Công dụng:** Dùng để diễn tả hành động đã xảy ra và kết thúc hoàn toàn trong quá khứ.\n**2. Dấu hiệu:** yesterday, last week, in 2010, two days ago.\n**3. Cấu trúc:**\n- **Động từ có quy tắc (Regular verbs):** Thêm '-ed' (play -> played, visit -> visited).\n- **Động từ bất quy tắc (Irregular verbs):** Học thuộc bảng động từ (go -> went, eat -> ate, have -> had).\n- **Phủ định:** S + did not (didn't) + V-infinitive (They didn't go to the party).\n- **Nghi vấn:** Did + S + V-infinitive? (Did you see him?)\n\n#### Chủ điểm 2: Từ bổ nghĩa so sánh (Data Comparison Modifiers)\n**1. Công dụng:** Dùng để nhấn mạnh sự khác biệt khi so sánh số liệu (thường dùng trong IELTS Writing Task 1).\n**2. So sánh hơn nhiều:** significantly / much + so sánh hơn (Ví dụ: The number is **significantly higher** than last year).\n**3. So sánh hơn một chút:** slightly / a little + so sánh hơn (Ví dụ: The price is **slightly lower**).\n**4. Gấp đôi / Một nửa:** twice as much as / half as much as.\n\n## Common Mistakes / IELTS Traps for This Topic\n| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |\n| --- | --- | --- | --- |\n| Quên đưa động từ về nguyên mẫu sau trợ động từ 'did/didn't' | She didn't went to the party. | She didn't go to the party. | Trong câu phủ định và nghi vấn ở quá khứ, trợ động từ 'did' đã mang thì quá khứ, nên động từ chính phải ở dạng nguyên mẫu. |\n| Dùng sai trạng từ bổ nghĩa cho so sánh | The cost was very higher. | The cost was much higher. | 'very' dùng với tính từ nguyên cấp (very high). Để bổ nghĩa cho tính từ so sánh hơn (higher), phải dùng 'much', 'significantly', hoặc 'slightly'. |\n",
+  "answers_markdown": "## Reading Answer Key and Detailed Explanations\n\n📖 **Tóm tắt bài đọc:** Bài đọc mô tả chi tiết thông tin từ nguồn đã xác thực.\n\n1. **TRUE**\n- Bằng chứng: \"When family members work together, they can avoid **arguments** and keep the house clean.\" (§1)\n- Cách tìm đáp án: Đoạn 1 nêu rõ khi làm việc cùng nhau, các thành viên có thể tránh tranh cãi. False/NG sai vì có dẫn chứng trực tiếp ủng hộ.\n> **💡 Mẹo:** > **💡 Mẹo:** Chú ý từ đồng nghĩa 'prevent' = 'avoid'.\n\n2. **NOT GIVEN**\n- Bằng chứng: \"For example, parents and children might **share** chores, like washing dishes or sweeping the floor.\" (§1)\n- Cách tìm đáp án: Bài viết không đề cập cụ thể về việc trẻ em không nên làm việc nhà vào cuối tuần. Không có thông tin xác định đúng/sai.\n> **💡 Mẹo:** > **💡 Mẹo:** Không suy luận từ kiến thức cá nhân.\n\n3. **FALSE**\n- Bằng chứng: \"Even a simple weekend dinner can make a big **difference** [R] if everyone sits together and talks about their week.\" (§2)\n- Cách tìm đáp án: Bữa tối cuối tuần đơn giản cũng tạo ra sự khác biệt lớn, ngược lại với ý câu hỏi là không quan trọng bằng. True sai vì ngược ý.\n> **💡 Mẹo:** > **💡 Mẹo:** Chú ý cụm từ so sánh 'not as important as'.\n\n4. **TRUE**\n- Bằng chứng: \"In the past, families usually lived close to each other.\" (§3)\n- Cách tìm đáp án: Câu dẫn chứng khớp hoàn toàn với câu hỏi. Thông tin rõ ràng, không sai lệch.\n> **💡 Mẹo:** > **💡 Mẹo:** Tìm mốc thời gian 'in the past'.\n\n5. **NOT GIVEN**\n- Bằng chứng: \"Today, many young people move to big cities for work or study.\" (§3)\n- Cách tìm đáp án: Bài đọc chỉ nói họ chuyển đi vì công việc/học tập, không nói về sở thích không thích vùng quê. Chỉ có mục đích di chuyển, không có ý kiến cá nhân.\n> **💡 Mẹo:** > **💡 Mẹo:** Cẩn thận với các lý do gán ghép 'because'.\n\n6. **unique**\n- Bằng chứng: \"Every family has its own **unique** way of living.\" (§1)\n- Cách tìm đáp án: Điền từ 'unique' khớp với văn bản. Các từ khác sai nghĩa.\n> **💡 Mẹo:** > **💡 Mẹo:** Xác định tính từ đứng trước danh từ 'way'.\n\n7. **floor**\n- Bằng chứng: \"For example, parents and children might **share** chores, like washing dishes or sweeping the floor.\" (§1)\n- Cách tìm đáp án: Điền từ 'floor' sau 'sweeping the'. Các từ khác sai nghĩa.\n> **💡 Mẹo:** > **💡 Mẹo:** Từ vựng liên quan đến việc nhà.\n\n8. **gifts**\n- Bằng chứng: \"They **prepare** delicious food, give **gifts**, and share happy **memories**.\" (§2)\n- Cách tìm đáp án: Điền 'gifts' theo cụm 'give gifts'. Sai với liệt kê.\n> **💡 Mẹo:** > **💡 Mẹo:** Động từ 'give' đi kèm với 'gifts'.\n\n9. **online**\n- Bằng chứng: \"To stay connected, modern families often use video calls to chat **online** [R].\" (§3)\n- Cách tìm đáp án: Điền 'online' sau động từ 'chat'. Sai từ loại/nghĩa.\n> **💡 Mẹo:** > **💡 Mẹo:** Từ vựng chỉ cách thức giao tiếp.\n\n10. **challenges**\n- Bằng chứng: \"Keeping in touch shows that you care about your family, and it helps everyone **feel better** [R] when they face difficult **challenges** in life.\" (§3)\n- Cách tìm đáp án: Điền 'challenges' sau tính từ 'difficult'. Sai nghĩa ngữ cảnh.\n> **💡 Mẹo:** > **💡 Mẹo:** Tìm danh từ đi với động từ 'face'.\n\n11. **They make daily life less stressful.**\n- Bằng chứng: \"This **habit** [R] makes daily life much easier and less **stressful**.\" (§1)\n- Cách tìm đáp án: Giảm căng thẳng là lợi ích chính. Các lợi ích khác không được nhắc đến.\n> **💡 Mẹo:** > **💡 Mẹo:** Tìm kết luận ở cuối đoạn 1.\n\n12. **They help to build a strong bond.**\n- Bằng chứng: \"These celebrations help to build a strong **bond** between family members.\" (§2)\n- Cách tìm đáp án: Xây dựng sự gắn kết (bond) là lợi ích của các dịp lễ. Các đáp án kia mang nghĩa tiêu cực.\n> **💡 Mẹo:** > **💡 Mẹo:** Chú ý từ khóa 'bond'.\n\n13. **To stay connected because they live far apart.**\n- Bằng chứng: \"Today, many young people move to big cities for work or study. Because of this, it can be difficult to meet regularly. To stay connected, modern families often use video calls to chat **online** [R]. They also try to plan at least one big family trip every year.\" (§3)\n- Cách tìm đáp án: Gia đình đi du lịch để giữ liên lạc khi ở xa. Các lý do kia là sai lệnh logic.\n> **💡 Mẹo:** > **💡 Mẹo:** Liên kết nguyên nhân - kết quả qua nhiều câu.\n\n## Grammar Answer Key and Detailed Explanations\n\n> **Bảng phân biệt nhanh / Công thức bỏ túi:**\n> - Ôn tập lý thuyết đã học trong bài.\n\n1. **gathered**\n- Dấu hiệu / Phân tích: Dấu hiệu quá khứ 'yesterday'.\n> **💡 Mẹo:** > **💡 Mẹo:** Động từ có quy tắc thêm -ed.\n\n2. **had**\n- Dấu hiệu / Phân tích: Dấu hiệu 'last weekend'.\n> **💡 Mẹo:** > **💡 Mẹo:** Bất quy tắc của have là had.\n\n3. **did not buy**\n- Dấu hiệu / Phân tích: Phủ định quá khứ.\n> **💡 Mẹo:** > **💡 Mẹo:** did not + V nguyên mẫu.\n\n4. **Did visit**\n- Dấu hiệu / Phân tích: Nghi vấn đảo did lên đầu.\n> **💡 Mẹo:** > **💡 Mẹo:** Cấu trúc: Did + S + V?\n\n5. **cooked**\n- Dấu hiệu / Phân tích: Dấu hiệu 'last year'.\n> **💡 Mẹo:** > **💡 Mẹo:** Thêm -ed.\n\n6. **went**\n- Dấu hiệu / Phân tích: Go chuyển thành went.\n> **💡 Mẹo:** > **💡 Mẹo:** Hành động quá khứ đơn.\n\n7. **saw**\n- Dấu hiệu / Phân tích: Dấu hiệu 'ago'.\n> **💡 Mẹo:** > **💡 Mẹo:** See chuyển thành saw.\n\n8. **played**\n- Dấu hiệu / Phân tích: Đã xảy ra hoàn tất.\n> **💡 Mẹo:** > **💡 Mẹo:** Thêm -ed.\n\n9. **gave**\n- Dấu hiệu / Phân tích: Lễ tốt nghiệp đã qua.\n> **💡 Mẹo:** > **💡 Mẹo:** Give chuyển thành gave.\n\n10. **made**\n- Dấu hiệu / Phân tích: Dấu hiệu 'yesterday'.\n> **💡 Mẹo:** > **💡 Mẹo:** Make chuyển thành made.\n\n11. **did not stay**\n- Dấu hiệu / Phân tích: Phủ định.\n> **💡 Mẹo:** > **💡 Mẹo:** Không chia động từ chính.\n\n12. **started**\n- Dấu hiệu / Phân tích: Hành động song song quá khứ.\n> **💡 Mẹo:** > **💡 Mẹo:** Cùng cấp với ended.\n\n13. **was**\n- Dấu hiệu / Phân tích: Quá khứ của be với I.\n> **💡 Mẹo:** > **💡 Mẹo:** I was.\n\n14. **broke**\n- Dấu hiệu / Phân tích: Dấu hiệu 'yesterday'.\n> **💡 Mẹo:** > **💡 Mẹo:** Break chuyển thành broke.\n\n15. **significantly**\n- Dấu hiệu / Phân tích: Trạng từ bổ nghĩa so sánh.\n> **💡 Mẹo:** > **💡 Mẹo:** significantly higher.\n\n16. **much**\n- Dấu hiệu / Phân tích: Nhấn mạnh so sánh hơn.\n> **💡 Mẹo:** > **💡 Mẹo:** much more.\n\n17. **slightly**\n- Dấu hiệu / Phân tích: Trạng từ mức độ ít.\n> **💡 Mẹo:** > **💡 Mẹo:** slightly lower.\n\n18. **twice as much**\n- Dấu hiệu / Phân tích: Cake không đếm được.\n> **💡 Mẹo:** > **💡 Mẹo:** as much as.\n\n19. **a little**\n- Dấu hiệu / Phân tích: Bổ nghĩa mức độ nhỏ.\n> **💡 Mẹo:** > **💡 Mẹo:** a little bigger.\n\n20. **twice as many**\n- Dấu hiệu / Phân tích: Cousins đếm được.\n> **💡 Mẹo:** > **💡 Mẹo:** as many as.\n\n21. **significantly**\n- Dấu hiệu / Phân tích: Đổi thành trạng từ.\n> **💡 Mẹo:** > **💡 Mẹo:** Thêm -ly.\n\n22. **slightly**\n- Dấu hiệu / Phân tích: Đổi thành trạng từ.\n> **💡 Mẹo:** > **💡 Mẹo:** Thêm -ly.\n\n23. **They didn't go to the family reunion last week.**\n- Dấu hiệu / Phân tích: Sửa didn't went -> didn't go.\n> **💡 Mẹo:** > **💡 Mẹo:** Chú ý V nguyên mẫu.\n\n24. **The price of the gift was much higher than expected.**\n- Dấu hiệu / Phân tích: Sửa very -> much.\n> **💡 Mẹo:** > **💡 Mẹo:** very không đi với so sánh hơn.\n\n25. **Did you see your grandparents on Sunday?**\n- Dấu hiệu / Phân tích: Sửa saw -> see.\n> **💡 Mẹo:** > **💡 Mẹo:** Sau Did dùng V nguyên mẫu.\n\n26. **I did not enjoy the party.**\n- Dấu hiệu / Phân tích: Đổi thể phủ định.\n> **💡 Mẹo:** > **💡 Mẹo:** did not enjoy.\n\n27. **The number of visitors was twice as many as last year.**\n- Dấu hiệu / Phân tích: Gấp đôi.\n> **💡 Mẹo:** > **💡 Mẹo:** twice as many.\n\n28. **The wedding cake was slightly bigger than the birthday cake.**\n- Dấu hiệu / Phân tích: Sửa lỗi double comparative.\n> **💡 Mẹo:** > **💡 Mẹo:** Không dùng more bigger.\n\n29. **We prepared a lot of food yesterday.**\n- Dấu hiệu / Phân tích: Chia thì quá khứ.\n> **💡 Mẹo:** > **💡 Mẹo:** prepared.\n\n30. **Did my sister buy a gift?**\n- Dấu hiệu / Phân tích: Câu nghi vấn.\n> **💡 Mẹo:** > **💡 Mẹo:** Đảo Did lên đầu.\n\n## Writing Guidance / Suggested Answers\n\n#### Task 1\n> **Suggested Model Answer:**\n> \"My family gathered for dinner yesterday.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Mô tả câu đúng.\n- *Tự kiểm tra:* * Đúng thứ tự từ. * Chia thì quá khứ.\n\n#### Task 2\n> **Suggested Model Answer:**\n> \"Hi Anna,\nI am writing to invite you to my birthday party next week. The party will be at my house at 6 PM. We will play games and eat cake. Hope to see you there!\nBest,\nLinh\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Mô tả email mời.\n- *Tự kiểm tra:* * Đủ độ dài. * Có địa điểm và thời gian.\n\n#### Task 3\n> **Suggested Model Answer:**\n> \"Last summer, my family went to the beach. We visited a beautiful island and ate fresh seafood. It was a wonderful trip because we had a lot of fun together.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Kể chuyện quá khứ.\n- *Tự kiểm tra:* * Dùng thì quá khứ. * Đủ 3 câu.\n\n#### Task 4\n> **Suggested Model Answer:**\n> \"In 2021, the number of birthday gifts sent was 100, which was significantly higher than in 2020. Conversely, the number of greeting cards was slightly lower in 2021 at 75 compared to 80 in 2020. Overall, people sent more gifts but fewer cards in the second year.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** So sánh biểu đồ.\n- *Tự kiểm tra:* * Sử dụng so sánh hơn. * Đúng số liệu.\n\n#### Task 5\n> **Suggested Model Answer:**\n> \"In my opinion, families should always eat dinner together. Firstly, it helps everyone share their stories after a busy day. Secondly, we can build a strong bond by spending time talking. Therefore, it is an important daily routine.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Viết đoạn văn ý kiến.\n- *Tự kiểm tra:* * Sử dụng should. * Có 2 lý do.\n\n## Review Bridge\n#### IV. Review Bridge / Ôn tập liên chủ đề\n1. Dịch: Đó là thói quen của cô ấy.\n- **Đáp án:** It is her habit.\n- **Giải thích:** Từ vựng: habit (20260704).\n\n2. Điền từ: Can you tell the _______ (sự khác biệt)?\n- **Đáp án:** difference\n- **Giải thích:** Từ vựng: difference (20260704).\n\n3. Dịch: Chúng tôi nói chuyện trực tuyến.\n- **Đáp án:** We chat online.\n- **Giải thích:** Từ vựng: online (20260703).\n",
+  "quizlet_markdown": "## Section 1: Simple Vocabulary List (Học từ vựng đơn giản)\n| Từ vựng tiếng Anh | Nghĩa tiếng Việt |\n| --- | --- |\n| unique | độc đáo, duy nhất |\n| household | hộ gia đình |\n| routines | thói quen, công việc hàng ngày |\n| share | chia sẻ |\n| arguments | sự cãi vã, tranh luận |\n| stressful | căng thẳng |\n| events | sự kiện |\n| important | quan trọng |\n| gather | tụ tập, quây quần |\n| prepare | chuẩn bị |\n| gifts | món quà |\n| memories | kỷ niệm, ký ức |\n| bond | sự gắn kết |\n| challenges | thử thách |\n| share chores | chia sẻ việc nhà |\n| keep in touch | giữ liên lạc |\n| build a strong bond | xây dựng sự gắn kết bền chặt |\n| extended family | đại gia đình |\n| nuclear family | gia đình hạt nhân |\n| relatives | họ hàng |\n\n## Section 2: Detailed Vocabulary List (Học từ vựng đầy đủ)\n| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |\n| --- | --- |\n| unique (/juːˈniːk/) [adj] | độc đáo, duy nhất *e.g., Every family has a unique way of celebrating.* |\n| household (/ˈhaʊs.həʊld/) [noun] | hộ gia đình *e.g., There are four people in my household.* |\n| routines (/ruːˈtiːnz/) [noun] | thói quen, công việc hàng ngày *e.g., Good routines help children feel safe.* |\n| share (/ʃeər/) [verb] | chia sẻ *e.g., We share the household chores equally.* |\n| arguments (/ˈɑːɡ.jə.mənts/) [noun] | sự cãi vã, tranh luận *e.g., They had an argument about who should wash the dishes.* |\n| stressful (/ˈstres.fəl/) [adj] | căng thẳng *e.g., Moving to a new house can be very stressful.* |\n| events (/ɪˈvents/) [noun] | sự kiện *e.g., A wedding is a very important family event.* |\n| important (/ɪmˈpɔː.tənt/) [adj] | quan trọng *e.g., It is important to respect older relatives.* |\n| gather (/ˈɡæð.ər/) [verb] | tụ tập, quây quần *e.g., The whole family will gather for Thanksgiving.* |\n| prepare (/prɪˈpeər/) [verb] | chuẩn bị *e.g., We prepare special food for the festival.* |\n| gifts (/ɡɪfts/) [noun] | món quà *e.g., Children love receiving gifts on their birthdays.* |\n| memories (/ˈmem.ər.iz/) [noun] | kỷ niệm, ký ức *e.g., We shared many happy memories of our childhood.* |\n| bond (/bɒnd/) [noun] | sự gắn kết *e.g., The sisters have a very strong bond.* |\n| challenges (/ˈtʃæl.ɪndʒɪz/) [noun] | thử thách *e.g., Families must face financial challenges together.* |\n| share chores (/ʃeər tʃɔːz/) [collocation] | chia sẻ việc nhà *e.g., It is fair when everyone shares chores.* |\n| keep in touch (/kiːp ɪn tʌtʃ/) [idiom] | giữ liên lạc *e.g., I use video calls to keep in touch with my parents.* |\n| build a strong bond (/bɪld ə strɒŋ bɒnd/) [collocation] | xây dựng sự gắn kết bền chặt *e.g., Playing games helps build a strong bond between siblings.* |\n| extended family (/ɪkˈsten.dɪd ˈfæm.əl.i/) [noun phrase] | đại gia đình *e.g., My extended family always meets at Christmas.* |\n| nuclear family (/ˈnjuː.klɪər ˈfæm.əl.i/) [noun phrase] | gia đình hạt nhân *e.g., A nuclear family usually lives in a smaller house.* |\n| relatives (/ˈrel.ə.tɪvz/) [noun] | họ hàng *e.g., All my relatives came to my graduation.* |\n"
+}

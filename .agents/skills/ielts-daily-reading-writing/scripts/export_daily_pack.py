@@ -184,7 +184,8 @@ MAJOR_SECTION_KEYWORDS = [
     "writing guidance",
     "suggested answers",
     "recycled vocabulary",
-    "từ vựng ôn tập"
+    "từ vựng ôn tập",
+    "review bridge"
 ]
 
 def is_major_section_heading(line: str) -> bool:
@@ -792,6 +793,21 @@ def build_practice_html(practice_md: str, level: str, topic: str, day: str, voca
     grammar_html = generate_grammar_questions_html(sections, reading_offset)
     writing_html = generate_writing_questions_html(sections)
     
+    review_sec = sections.get("Review Bridge", "")
+    if not review_sec:
+        for k in sections.keys():
+            if "review" in k.lower() or "bridge" in k.lower():
+                review_sec = sections[k]
+                break
+    review_html = ""
+    if review_sec:
+        review_content = render_review_bridge(review_sec, is_answer=False)
+        review_html = f"""    <!-- REVIEW BRIDGE -->
+    <div class="section-title">V. Review Bridge / Ôn tập liên chủ đề</div>
+    <div class="warmup-box" style="background-color: #fafbfc; border: 1px solid #bdc3c7; border-radius: 4px; padding: 10px;">
+        {review_content}
+    </div>"""
+    
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1000,6 +1016,8 @@ def build_practice_html(practice_md: str, level: str, topic: str, day: str, voca
 {grammar_html}
 
 {writing_html}
+
+{review_html}
 
 </body>
 </html>
@@ -1767,15 +1785,29 @@ def render_writing_answer_task(task: dict) -> str:
         html_parts.append("</ul>")
     return f'<div class="sample-essay-box">\n    {"".join(html_parts)}\n</div>'
 
-def render_review_bridge(md_text: str) -> str:
+def render_review_bridge(md_text: str, is_answer: bool = False) -> str:
     html_parts = []
     lines = md_text.splitlines()
     for line in lines:
         line_str = line.strip()
         if not line_str:
             continue
+        
+        # Check if this line is an answer key or explanation detail
+        is_ans_line = line_str.startswith("- ") or line_str.startswith("* ") or "đáp án:" in line_str.lower() or "giải thích:" in line_str.lower()
+        if is_ans_line and not is_answer:
+            continue
+            
         if re.match(r'^\d+\.', line_str):
             html_parts.append(f"{format_markdown_inline(line_str)}<br>")
+            if not is_answer:
+                html_parts.append('<div class="writing-line"></div><br>')
+        elif line_str.startswith("##") or line_str.startswith("####"):
+            # Don't wrap headings in <p> tags
+            # Strip markdown hashes
+            clean_heading = re.sub(r'^#+\s*', '', line_str).strip()
+            # If it's V. in practice sheet but we want IV. in answer key, let's keep what's in the markdown
+            html_parts.append(f'<div class="question-instruction" style="margin-top: 15px; font-size: 11.5pt;">{clean_heading}</div>')
         else:
             html_parts.append(f"<p>{format_markdown_inline(line_str)}</p>")
     return "\n".join(html_parts)
@@ -1824,7 +1856,7 @@ def build_answers_html(answers_md: str, day: str, topic: str, practice_md: str) 
                 break
     review_html = ""
     if review_sec:
-        review_content = render_review_bridge(review_sec)
+        review_content = render_review_bridge(review_sec, is_answer=True)
         review_html = f"""    <!-- REVIEW BRIDGE -->
     <div class="section-title">IV. Review Bridge / Ôn tập</div>
     <div class="warmup-box">
@@ -2169,31 +2201,35 @@ def generate_quizlet_text(vocab_items: list[dict]) -> str:
     return "\n".join(lines) + "\n"
 
 def compile_html_to_pdf(html_path: Path, pdf_path: Path, lesson_id: str = "", doc_type: str = "") -> None:
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        page = browser.new_page()
-        page.goto(html_path.absolute().as_uri())
-        
-        margin = {"top": "15mm", "bottom": "20mm", "left": "15mm", "right": "15mm"}
-        
-        footer_template = f"""
-            <div style="font-size: 8pt; font-family: 'Times New Roman', Times, serif; color: #7f8c8d; width: 100%; display: flex; justify-content: space-between; border-top: 1px solid #e0e0e0; padding-top: 5px; margin: 0 15mm 5mm 15mm; box-sizing: border-box;">
-                <span>Lesson ID: {lesson_id}</span>
-                <span>{doc_type}</span>
-                <span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
-            </div>
-        """
-        
-        page.pdf(
-            path=str(pdf_path),
-            format="A4",
-            print_background=True,
-            margin=margin,
-            display_header_footer=True,
-            header_template="<span></span>",
-            footer_template=footer_template
-        )
-        browser.close()
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch()
+            page = browser.new_page()
+            page.goto(html_path.absolute().as_uri())
+            
+            margin = {"top": "15mm", "bottom": "20mm", "left": "15mm", "right": "15mm"}
+            
+            footer_template = f"""
+                <div style="font-size: 8pt; font-family: 'Times New Roman', Times, serif; color: #7f8c8d; width: 100%; display: flex; justify-content: space-between; border-top: 1px solid #e0e0e0; padding-top: 5px; margin: 0 15mm 5mm 15mm; box-sizing: border-box;">
+                    <span>Lesson ID: {lesson_id}</span>
+                    <span>{doc_type}</span>
+                    <span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
+                </div>
+            """
+            
+            page.pdf(
+                path=str(pdf_path),
+                format="A4",
+                print_background=True,
+                margin=margin,
+                display_header_footer=True,
+                header_template="<span></span>",
+                footer_template=footer_template
+            )
+            browser.close()
+    except Exception as e:
+        print(f"\nWARNING: Could not compile PDF {pdf_path.name} because of error: {e}", file=sys.stderr)
+        print("Please close any applications holding a lock on this file (e.g. PDF readers) and try again.\n", file=sys.stderr)
 
 def convert_json_to_markdown_fields(data: dict) -> dict:
     if "reading" in data and "practice_markdown" in data:
@@ -2259,7 +2295,7 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
     pm = []
     writing_level_map = {
         "A1": "A1",
-        "A2": "A1",
+        "A2": "A2",
         "B1": "A2",
         "B2": "B1",
         "C1": "B2",
@@ -2375,6 +2411,15 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
             pm.append(f"| {t.get('id', 1)} | {task_cell} | {t.get('target_length', '')} | {t.get('focus_skill', '')} | {lang_cell} | {crit_cell} |")
         pm.append("")
         
+    answers = data.get("answers", {})
+    review_bridge = answers.get("review_bridge", [])
+    if review_bridge:
+        pm.append("## Review Bridge")
+        pm.append("#### V. Review Bridge / Ôn tập liên chủ đề")
+        for idx, rb in enumerate(review_bridge):
+            pm.append(f"{idx+1}. {rb.get('prompt', '')}")
+            pm.append("")
+            
     converted["practice_markdown"] = "\n".join(pm)
     
     vgm = []

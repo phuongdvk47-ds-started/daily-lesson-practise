@@ -80,6 +80,8 @@ To prevent rendering omissions, alignment mismatches, and parsing failures durin
 - **ASCII-only Heading Cleansing**: When cleaning redundant task type headings from prompt texts, use ASCII-only patterns (e.g., `[a-zA-Z\s\-]+` instead of `[\w\s\-]+`) to prevent matching and stripping Unicode Vietnamese prompts.
 - **Writing Level Header Injection**: The structured JSON converter (`convert_json_to_markdown_fields`) must write the `Reading: {level}` and `Writing: {w_level}` lines at the very beginning of `practice_markdown` so that the compiler correctly parses and renders the Writing level in the Practice sheet header instead of defaulting to `A1`.
 - **Dynamic Vocabulary Table Numbering**: The compiler must dynamically index the vocabulary tables (Core, Topic, Phrases/Collocations, and Recycled) in the Materials sheet to prevent sequence gaps (such as skipping Table 2.2) when a table is empty.
+- **Review Bridge Rendering**: The compiler must include `"review bridge"` in the major section heading keywords to split it correctly. In student sheets, it must render the Review Bridge prompts with writing lines while completely hiding answers and explanations. In the teacher Answer Key, it must render the prompts along with their correct answers and explanations.
+
 
 
 ## Human-in-the-loop and Agent Review Loop
