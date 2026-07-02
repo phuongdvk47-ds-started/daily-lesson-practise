@@ -93,6 +93,7 @@ def validate_lesson_json(json_path: Path) -> bool:
 
     non_literal_count = 0
     valid_reasoning_skills = ["literal", "paraphrase", "inference", "comparison", "cause_effect", "contrast", "classification", "writer_purpose"]
+    type_last_paragraph = {}
 
     for idx, q in enumerate(rqs):
         q_id = q.get("id")
@@ -116,6 +117,20 @@ def validate_lesson_json(json_path: Path) -> bool:
             errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) has invalid reasoning_skill: '{r_skill}'")
         elif r_skill != "literal":
             non_literal_count += 1
+            
+        # Validate sequential order of evidence paragraph within each question type group
+        q_type = q.get("type", "Questions")
+        evidence_paragraph = q.get("evidence_paragraph")
+        if evidence_paragraph is not None:
+            try:
+                ep_val = int(evidence_paragraph)
+                last_p = type_last_paragraph.get(q_type, 0)
+                if ep_val < last_p:
+                    errors.append(f"FAIL: Reading question order violation in type '{q_type}'. Question {q_id} (id={q_id}) targets paragraph {ep_val}, which is before the previous question's paragraph {last_p} in this type group.")
+                else:
+                    type_last_paragraph[q_type] = ep_val
+            except (ValueError, TypeError):
+                pass
         
         # Match quote
         quote = q.get("evidence_quote", "").strip()

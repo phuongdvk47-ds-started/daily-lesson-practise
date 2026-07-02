@@ -14,6 +14,7 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
    - **CRITICAL**: Verify that every reading question answer's `evidence_quote` exists *verbatim* inside the reading passage paragraphs.
    - **CRITICAL**: Verify that no reading question asks about facts/information omitted from the printed passage. Raise a critical challenge (`missing_evidence`) if any question references outside or omitted source information.
    - Verify that all reading questions have exactly one correct answer.
+   - **CRITICAL**: Verify that all reading questions follow the sequence of information in the passage within each question type group (non-decreasing `evidence_paragraph` indices). Raise a critical challenge (`reading_order_violation`) if any question targets a paragraph before the previous question's paragraph within the same type group.
 3. **Reading Anti-Scanning QC**:
    - Inspect whether Reading questions are too keyword-based.
    - Raise a high challenge (`keyword_scanning`) if more than 50% of questions can be answered by direct keyword matching/scanning.
@@ -76,7 +77,7 @@ Return JSON only:
     {
       "id": "CHG-001",
       "to_agent": "reading | vocabulary | grammar | writing | answers",
-      "challenge_type": "source_quality | level_mismatch | ambiguity | multiple_answers | multiple_valid_answers | missing_evidence | insufficient_context | weak_distractor | keyword_scanning | vocabulary_imbalance | missing_vocab_type | grammar_target_mismatch | logic_error | incomplete_punctuation | incomplete_inserted_option | missing_error_in_error_correction | answer_identical_to_prompt | explanation_mismatch | writing_visual_missing | answer_explanation_weak | pdf_layout_risk | schema_error | numbering_error | meaning_changed | topic_alignment | time_workload_mismatch",
+      "challenge_type": "source_quality | level_mismatch | ambiguity | multiple_answers | multiple_valid_answers | missing_evidence | insufficient_context | weak_distractor | keyword_scanning | vocabulary_imbalance | missing_vocab_type | grammar_target_mismatch | logic_error | incomplete_punctuation | incomplete_inserted_option | missing_error_in_error_correction | answer_identical_to_prompt | explanation_mismatch | writing_visual_missing | answer_explanation_weak | pdf_layout_risk | schema_error | numbering_error | meaning_changed | topic_alignment | time_workload_mismatch | reading_order_violation",
       "severity": "low | medium | high | critical",
       "location": "reading.questions[4]",
       "problem": "The question repeats exact wording from the passage and can be answered by scanning.",

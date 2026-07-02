@@ -526,24 +526,24 @@ def split_table_row(line: str) -> list[str]:
         line = line[1:]
     if line.endswith("|"):
         line = line[:-1]
-    return [cell.strip() for cell in line.split("|")]
+    return [cell.strip() for cell in re.split(r'(?<!\\)\|', line)]
 
 def parse_writing_table(table_md: str) -> list[dict]:
     lines = table_md.splitlines()
     tasks = []
     for line in lines:
         line = line.strip()
-        if not line.startswith("|") or "Target length" in line or "---" in line:
+        if not line.startswith("|") or "Target length" in line or re.match(r'^\|[\s\-|\:]+$', line):
             continue
         parts = split_table_row(line)
         if len(parts) >= 6:
             tasks.append({
-                "num": parts[0],
-                "task": parts[1],
-                "length": parts[2],
-                "skill": parts[3],
-                "language": parts[4],
-                "criteria": parts[5]
+                "num": parts[0].replace("\\|", "|"),
+                "task": parts[1].replace("\\|", "|"),
+                "length": parts[2].replace("\\|", "|"),
+                "skill": parts[3].replace("\\|", "|"),
+                "language": parts[4].replace("\\|", "|"),
+                "criteria": parts[5].replace("\\|", "|")
             })
     return tasks
 
@@ -681,7 +681,13 @@ def generate_writing_questions_html(sections: dict[str, str]) -> str:
         num = t["num"]
         task_text = t["task"]
         skill = t["skill"]
+        skill_lower = skill.lower()
         
+        # Append words to order for Sentence Building / Word Ordering / Completion tasks
+        language_text = t.get("language", "").strip()
+        if language_text and any(keyword in skill_lower for keyword in ["order", "building", "completion", "complete"]):
+            task_text = task_text + "\n\n" + language_text
+            
         title = get_writing_task_title(num, skill)
         content_html = format_writing_task_content(task_text)
         

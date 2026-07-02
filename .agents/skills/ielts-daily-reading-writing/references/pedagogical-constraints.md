@@ -23,6 +23,9 @@ These pedagogical constraints must be strictly followed by all generation and re
   - Do not reuse exact scannable keywords from the passage inside the questions. Paraphrase using synonyms or altered sentence structures.
   - Intentionally insert scannable passage keywords inside incorrect choices (distractors) to catch skimming-only students.
   - **For B1+ levels, at least 50% of the questions must be non-literal** (requiring paraphrase, inference, logical relation, comparison, cause-effect, contrast, classification, or writer-purpose reasoning).
+- **Sequential Question Order**:
+  - Reading questions must follow the sequence of information in the passage within each question type group (e.g., all True/False/Not Given questions are sequential, all Gap Fill questions are sequential, etc.).
+  - Within each question type group, the `evidence_paragraph` index of each question must be non-decreasing (greater than or equal to that of the preceding question, i.e., `evidence_paragraph[i] <= evidence_paragraph[i+1]`).
 
 ## 2. Grammar Question Constraints (Single Unique Answer)
 - **Grammar Questions**:

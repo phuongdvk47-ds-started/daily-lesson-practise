@@ -71,6 +71,17 @@ Each named Sub-Agent is a pipeline stage, not a free-form chat persona. For each
 - Preserve history logging in `outputs/ielts-daily-reading-writing/lesson_history.txt`.
 - Preserve spaced repetition vocabulary recycling.
 
+## Compiler and Exporter Robustness Rules
+
+To prevent rendering omissions, alignment mismatches, and parsing failures during PDF export:
+- **Forced Markdown Cache Regeneration**: The compilation script must always pop and regenerate intermediate markdown fields (`practice_markdown`, `vocabulary_grammar_markdown`, `answers_markdown`, `quizlet_markdown`) when compiling structured JSON payloads, rather than reusing cached fields.
+- **Robust Table Pipe Splitting**: Markdown table rows must be split using negative lookbehind `re.split(r'(?<!\\)\|', line)` to support escaped pipes (`\|`) within cell contents (such as inside embedded sub-tables).
+- **Embedded Table Preservation**: Do not use simple substring checks like `"---" in line` to skip table headers, as this will incorrectly skip rows containing embedded markdown tables. Use a strict pattern match like `re.match(r'^\|[\s\-|\:]+$', line)` instead.
+- **ASCII-only Heading Cleansing**: When cleaning redundant task type headings from prompt texts, use ASCII-only patterns (e.g., `[a-zA-Z\s\-]+` instead of `[\w\s\-]+`) to prevent matching and stripping Unicode Vietnamese prompts.
+- **Writing Level Header Injection**: The structured JSON converter (`convert_json_to_markdown_fields`) must write the `Reading: {level}` and `Writing: {w_level}` lines at the very beginning of `practice_markdown` so that the compiler correctly parses and renders the Writing level in the Practice sheet header instead of defaulting to `A1`.
+- **Dynamic Vocabulary Table Numbering**: The compiler must dynamically index the vocabulary tables (Core, Topic, Phrases/Collocations, and Recycled) in the Materials sheet to prevent sequence gaps (such as skipping Table 2.2) when a table is empty.
+
+
 ## Human-in-the-loop and Agent Review Loop
 Before finalizing any daily practice pack, use the review workflow described in:
 - `references/human-in-loop.md`

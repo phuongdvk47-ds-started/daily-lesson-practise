@@ -573,24 +573,24 @@ def split_table_row(line: str) -> list[str]:
         line = line[1:]
     if line.endswith("|"):
         line = line[:-1]
-    return [cell.strip() for cell in line.split("|")]
+    return [cell.strip() for cell in re.split(r'(?<!\\)\|', line)]
 
 def parse_writing_table(table_md: str) -> list[dict]:
     lines = table_md.splitlines()
     tasks = []
     for line in lines:
         line = line.strip()
-        if not line.startswith("|") or "Target length" in line or "---" in line:
+        if not line.startswith("|") or "Target length" in line or re.match(r'^\|[\s\-|\:]+$', line):
             continue
         parts = split_table_row(line)
         if len(parts) >= 6:
             tasks.append({
-                "num": parts[0],
-                "task": parts[1],
-                "length": parts[2],
-                "skill": parts[3],
-                "language": parts[4],
-                "criteria": parts[5]
+                "num": parts[0].replace("\\|", "|"),
+                "task": parts[1].replace("\\|", "|"),
+                "length": parts[2].replace("\\|", "|"),
+                "skill": parts[3].replace("\\|", "|"),
+                "language": parts[4].replace("\\|", "|"),
+                "criteria": parts[5].replace("\\|", "|")
             })
     return tasks
 
@@ -734,7 +734,8 @@ def generate_writing_questions_html(sections: dict[str, str]) -> str:
         num = t["num"]
         task_text = t["task"]
         # Clean any redundant task type labels/headers (case-insensitive) to prevent double headings
-        task_types_pattern = r'^(Word\s+Ordering|Sentence\s+Completion|Translation|Short\s+Description|Visual\s+Data\s+Description|Data\s+Description|Guided\s+Email\s+Invite|Email|Word\s+order|Sentence\s+completion|Visual\s+data\s+description|Guided\s+email\s+invite|[\w\s\-]+)\s*:\s*'
+        # Use [a-zA-Z\s\-]+ instead of [\w\s\-]+ to avoid matching Vietnamese characters
+        task_types_pattern = r'^(Word\s+Ordering|Sentence\s+Completion|Translation|Short\s+Description|Visual\s+Data\s+Description|Data\s+Description|Guided\s+Email\s+Invite|Email|Word\s+order|Sentence\s+completion|Visual\s+data\s+description|Guided\s+email\s+invite|[a-zA-Z\s\-]+)\s*:\s*'
         while True:
             new_task = re.sub(task_types_pattern, '', task_text, flags=re.IGNORECASE).strip()
             if new_task == task_text:
@@ -742,7 +743,13 @@ def generate_writing_questions_html(sections: dict[str, str]) -> str:
             task_text = new_task
             
         skill = t["skill"]
+        skill_lower = skill.lower()
         
+        # Append words to order for Sentence Building / Word Ordering / Completion tasks
+        language_text = t.get("language", "").strip()
+        if language_text and any(keyword in skill_lower for keyword in ["order", "building", "completion", "complete"]):
+            task_text = task_text + "\n\n" + language_text
+            
         title = get_writing_task_title(num, skill)
         content_html = format_writing_task_content(task_text)
         
@@ -1279,9 +1286,21 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
         </tbody>
     </table>"""
 
-    t1 = build_table(core_list, "Core Words (Từ vựng cốt lõi)", 1)
-    t2 = build_table(topic_list, "Topic Vocabulary (Từ vựng theo chủ đề)", 2)
-    t3 = build_table(phrase_list, "Phrases, Chunks & Collocations (Cụm từ & Kết hợp từ)", 3)
+    idx = 1
+    t1 = ""
+    if core_list:
+        t1 = build_table(core_list, "Core Words (Từ vựng cốt lõi)", idx)
+        idx += 1
+        
+    t2 = ""
+    if topic_list:
+        t2 = build_table(topic_list, "Topic Vocabulary (Từ vựng theo chủ đề)", idx)
+        idx += 1
+        
+    t3 = ""
+    if phrase_list:
+        t3 = build_table(phrase_list, "Phrases, Chunks & Collocations (Cụm từ & Kết hợp từ)", idx)
+        idx += 1
     
     recycled_sec = ""
     for k in sections.keys():
@@ -1303,7 +1322,7 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
                 <td class="col-ex">{item['example']}</td>
             </tr>""")
             recycled_rows_html = "\n".join(recycled_rows)
-            recycled_html = f"""    <div class="subsection-title">Table 2.4: Recycled Vocabulary (Từ vựng ôn tập)</div>
+            recycled_html = f"""    <div class="subsection-title">Table 2.{idx}: Recycled Vocabulary (Từ vựng ôn tập)</div>
     <table>
         <thead>
             <tr>
@@ -2177,16 +2196,80 @@ def compile_html_to_pdf(html_path: Path, pdf_path: Path, lesson_id: str = "", do
         browser.close()
 
 def convert_json_to_markdown_fields(data: dict) -> dict:
+    if "reading" in data and "practice_markdown" in data:
+        data = data.copy()
+        data.pop("practice_markdown", None)
+
     if "practice_markdown" in data:
         return data
         
     converted = data.copy()
+    
+    # Sort and re-index reading questions by type to ensure consecutive numbering
+    reading = converted.get("reading", {})
+    rqs = reading.get("questions", [])
+    if rqs:
+        by_type = {}
+        for q in rqs:
+            q_type = q.get("type", "Questions")
+            by_type.setdefault(q_type, []).append(q)
+            
+        for q_type in by_type:
+            by_type[q_type].sort(key=lambda x: (x.get("evidence_paragraph", 0), x.get("id", 0)))
+            
+        type_order = ["Heading Matching", "True/False/Not Given", "Gap Fill", "Multiple Choice"]
+        all_types = list(by_type.keys())
+        sorted_types = sorted(all_types, key=lambda t: type_order.index(t) if t in type_order else len(type_order))
+        
+        sorted_qs = []
+        for q_type in sorted_types:
+            sorted_qs.extend(by_type[q_type])
+            
+        old_to_new = {}
+        for new_idx, q in enumerate(sorted_qs):
+            old_id = q["id"]
+            new_id = new_idx + 1
+            old_to_new[old_id] = new_id
+            q["id"] = new_id
+            
+        converted["reading"] = reading.copy()
+        converted["reading"]["questions"] = sorted_qs
+        
+        # Update answer keys
+        answers = converted.get("answers", {})
+        r_answers = answers.get("reading_answers", [])
+        if r_answers:
+            new_ans = []
+            for ans in r_answers:
+                old_qid = ans["question_id"]
+                if old_qid in old_to_new:
+                    ans_copy = ans.copy()
+                    ans_copy["question_id"] = old_to_new[old_qid]
+                    new_ans.append(ans_copy)
+            new_ans.sort(key=lambda a: a["question_id"])
+            converted["answers"] = answers.copy()
+            converted["answers"]["reading_answers"] = new_ans
+    
+    data = converted
     meta = data.get("lesson_meta", {})
     level = meta.get("level", data.get("level", "A2"))
     topic = meta.get("topic", data.get("topic", ""))
     day = meta.get("day", data.get("day", ""))
     
     pm = []
+    writing_level_map = {
+        "A1": "A1",
+        "A2": "A1",
+        "B1": "A2",
+        "B2": "B1",
+        "C1": "B2",
+        "C2": "C1"
+    }
+    w_level = writing_level_map.get(level, "A1")
+    pm.append(f"Reading: {level}")
+    pm.append(f"Writing: {w_level}")
+    pm.append("")
+
     source = data.get("source", {})
     if source:
         pm.append("## Reading Source Verification")
@@ -2497,7 +2580,12 @@ def main() -> None:
                 sys.exit(1)
     
     # Adapter for structured JSON compilation
-    if "practice_markdown" not in data:
+    if "practice_markdown" not in data or "reading" in data:
+        if "reading" in data:
+            data.pop("practice_markdown", None)
+            data.pop("vocabulary_grammar_markdown", None)
+            data.pop("answers_markdown", None)
+            data.pop("quizlet_markdown", None)
         meta = data.get("lesson_meta", {})
         if meta:
             data["level"] = meta.get("level", "A2")
@@ -2535,8 +2623,12 @@ def main() -> None:
     
     # Save the original input JSON payload as the source of truth
     source_json_path = out_dir / "lesson_source.json"
+    source_json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     if Path(args.json_file).resolve() != source_json_path.resolve():
-        source_json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        try:
+            Path(args.json_file).write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        except Exception:
+            pass
 
     part1_html_path = out_dir / "part1_practice_sheet.html"
     part2_html_path = out_dir / "part2_materials.html"

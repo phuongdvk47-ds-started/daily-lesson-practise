@@ -33,6 +33,9 @@ Generate the final reading passage and IELTS-style reading questions based *only
    - Avoid copying key phrases from the passage directly into the question stem.
    - B1 questions must bridge to B2 skills by integrating paraphrase/inference.
 6. **Band-Bridge**: Mark 10-20% of questions as stretch questions targeting the next level with a `(*)` label, and set `"stretch": true` in JSON.
+7. **Sequential Order Rule**:
+   - Reading questions must follow the sequence of information in the passage within each question type group (e.g., all True/False/Not Given questions are sequential, all Gap Fill questions are sequential, etc.).
+   - The `evidence_paragraph` of each generated question must be greater than or equal to that of the preceding question within the same type group (e.g., `evidence_paragraph` of question $N \le$ evidence_paragraph of question $N+1$ in the same group).
 
 ## Output JSON
 Return JSON only:

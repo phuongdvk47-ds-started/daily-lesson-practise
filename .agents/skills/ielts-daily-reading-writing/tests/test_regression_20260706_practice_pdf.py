@@ -236,6 +236,16 @@ class TestIELTSRegression20260706(unittest.TestCase):
         self.tmp_json_path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
         self.assertFalse(validate_lesson_json(self.tmp_json_path))
 
+    def test_reading_questions_must_be_sequential(self):
+        # Mutate reading questions to violate sequence order within the same type group
+        data = copy.deepcopy(self.valid_data)
+        data["reading"]["questions"][0]["type"] = "Multiple Choice"
+        data["reading"]["questions"][1]["type"] = "Multiple Choice"
+        data["reading"]["questions"][0]["evidence_paragraph"] = 2
+        data["reading"]["questions"][1]["evidence_paragraph"] = 1
+        self.tmp_json_path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+        self.assertFalse(validate_lesson_json(self.tmp_json_path))
+
     def test_grammar_section_ranges_are_computed_not_hardcoded(self):
         # Introduce a hardcoded range in heading
         data = copy.deepcopy(self.valid_data)
