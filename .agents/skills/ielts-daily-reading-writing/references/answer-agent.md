@@ -18,8 +18,11 @@ Generate detailed answer keys, explanations, model writing answers, and cumulati
    - **Reading Summary (Tóm tắt bài đọc)**: Start with `📖 **Tóm tắt bài đọc:** [Vietnamese summary]`.
    - **Each Item**:
      - Correct Answer: `Câu X. [Đáp án chữ] — [Nội dung câu trả lời]`
+     - Question Type: `*Loại câu hỏi: [Literal / Inference / Function / Vocab]*`
      - Evidence Quote: `*Bằng chứng: "[Direct quote from passage]" (§[Paragraph number])*`
-     - Cognitive Logic: `**Cách tìm đáp án:** [Step-by-step keyword matching and reasoning in Vietnamese, explaining why other options are wrong]`
+     - Cognitive Logic: `**Cách tìm đáp án:** [Step-by-step keyword matching and reasoning in Vietnamese, explaining why other options are wrong]. Answer explanations must teach the reasoning path, explicitly demonstrating the mapping from the passage wording to the paraphrased question/answer wording.`
+     - Why Others Wrong: `**Phân tích nhiễu:** [Explain exactly why each incorrect option is wrong, identifying if it's a keyword trap].`
+     - Depth Check: `**Đánh giá chiều sâu:** [Briefly explain how this question meets the Deep Reading standard for its level].`
      - Tip: `> **💡 Mẹo:** [Helpful test tip in Vietnamese]`
      - For stretch items `(*)`: Append `*[Stretch Point]*` to the answer header and explain the next-level skill being introduced.
 4. **Grammar Answers Structure**:
@@ -30,7 +33,11 @@ Generate detailed answer keys, explanations, model writing answers, and cumulati
      ```
    - **Each Item**:
      - Correct Answer: `Câu X. [Đáp án đúng]` (Note: Number from 1 in the raw markdown; the compiler will offset automatically).
-     - Analysis: `**Dấu hiệu / Phân tích:** [Explain verb forms, clause triggers, or linking words in Vietnamese]`
+     - Grammar Target: `*Chủ điểm: [Name of the grammar target]*`
+     - Form & Meaning: `**Cấu trúc & Ý nghĩa:** [Explain the form used and what it means in this specific context]`
+     - Use in Context: `**Sử dụng trong ngữ cảnh:** [Explain why this specific form fits the surrounding sentence/paragraph]`
+     - Trap Logic & Why Others Wrong: `**Bẫy & Phân tích lỗi:** [Explain why the distractors are wrong and what common trap they represent]`
+     - Depth Check: `**Đánh giá chiều sâu:** [Explain how this item meets the Deep Grammar standard rather than just being a mechanical drill]`
      - Tip: `> **💡 Mẹo:** [Grammar tip or common trap to avoid]`
 5. **Writing Answers Structure**:
    - **Suggested Model Answer**: Wrap a high-scoring model answer in a blockquote.
@@ -47,10 +54,12 @@ Return JSON only:
     {
       "question_id": 1,
       "correct_answer": "A",
+      "question_type": "inference",
       "evidence_quote": "Shopping online saves time and allows easy price comparison.",
       "evidence_paragraph": 2,
       "explanation_vi": "Đoạn 2 chỉ ra rằng việc mua sắm trực tuyến giúp tiết kiệm thời gian và so sánh giá.",
-      "why_others_wrong_vi": "Lựa chọn B sai vì bài đọc không đề cập đến việc giảm chi phí vận chuyển...",
+      "why_others_wrong_vi": "Lựa chọn B sai vì bài đọc không đề cập đến việc giảm chi phí vận chuyển. Lựa chọn C là bẫy từ vựng 'efficient'...",
+      "depth_check_vi": "Câu hỏi này yêu cầu kỹ năng suy luận (inference) để hiểu nguyên nhân thay vì chỉ tìm từ khóa.",
       "tip_vi": "Khi làm câu hỏi trắc nghiệm, hãy tìm các từ đồng nghĩa như 'saves time' thay vì tìm từ khóa 'efficient'.",
       "stretch_note": ""
     }
@@ -59,6 +68,11 @@ Return JSON only:
     {
       "question_id": 1,
       "correct_answer": "is",
+      "grammar_target": "Subject-verb agreement",
+      "form_meaning_vi": "Cấu trúc 'Each of + Noun (số nhiều)' mang ý nghĩa từng cá nhân trong một nhóm.",
+      "use_in_context_vi": "Ngữ cảnh đang nhấn mạnh việc từng người tham gia phải ký form độc lập.",
+      "trap_logic_vi": "Bẫy ở đây là từ 'participants' ở dạng số nhiều nằm ngay trước chỗ trống. Các đáp án 'are' hay 'were' sai vì động từ phải chia theo 'Each'.",
+      "depth_check_vi": "Câu này kiểm tra sự hiểu biết về ngữ cảnh và cấu trúc nâng cao thay vì chỉ chia động từ cơ bản.",
       "analysis_vi": "Đứng đầu câu là 'Each of' nên động từ luôn chia ở dạng số ít, do đó chọn 'is'.",
       "tip_vi": "Cảnh giác với các từ đi sau 'of' ở dạng số nhiều (participants) vì chúng dễ đánh lừa bạn chia động từ số nhiều.",
       "stretch_note": ""

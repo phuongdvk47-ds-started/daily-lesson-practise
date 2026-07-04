@@ -15,11 +15,15 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
    - **CRITICAL**: Verify that no reading question asks about facts/information omitted from the printed passage. Raise a critical challenge (`missing_evidence`) if any question references outside or omitted source information.
    - Verify that all reading questions have exactly one correct answer.
    - **CRITICAL**: Verify that all reading questions follow the sequence of information in the passage within each question type group (non-decreasing `evidence_paragraph` indices). Raise a critical challenge (`reading_order_violation`) if any question targets a paragraph before the previous question's paragraph within the same type group.
-3. **Reading Anti-Scanning QC**:
-   - Inspect whether Reading questions are too keyword-based.
-   - Raise a high challenge (`keyword_scanning`) if more than 50% of questions can be answered by direct keyword matching/scanning.
-   - Verify that at least 50% of Reading questions require paraphrase, inference, comparison, classification, or writer-purpose reasoning.
-   - Check that at least 30% of distractors contain wording related to the passage but are logically wrong.
+3. **Reading Deep Comprehension & Anti-Scanning QC**:
+   - **CRITICAL REQUIREMENT**: You MUST evaluate the Reading section against the detailed level-by-level rubric in `references/deep-reading-qc.md`.
+   - Inspect whether Reading questions are too keyword-based and classify them into the 8 cognitive depth types (Literal, Direct paraphrase, Local comprehension, Light inference, Integration, Main idea/writer purpose, Discourse relationship, Evaluation/implication).
+   - For `+` levels, enforce the transition rules described in `references/deep-reading-qc.md`.
+   - For A2 and above, raise a high challenge (`keyword_scanning`) if more than 50% of questions can be answered by direct keyword matching/scanning (i.e. literal questions exceed 50%).
+   - For B1 and above, raise a high challenge (`keyword_scanning`) if literal questions exceed 40% (meaning less than 60% are non-literal).
+   - Raise a critical challenge (`missing_paraphrase_mapping`) if a non-literal question is missing the `paraphrase_mapping` field.
+   - Check that at least 30% of distractors contain wording related to the passage but are logically wrong (keyword traps). Raise `weak_distractor` challenge if the proportion is below 30%.
+   - For B2 to C2 levels, penalize the pack (High/Medium challenge depending on severity) if there is a clear lack of inference, synthesis, writer purpose, or discourse relationship questions.
 4. **Vocabulary Check**:
    - Verify that the number of vocabulary items matches `vocabulary_count` exactly.
    - Verify that all vocabulary items have `vocab_type` defined.
@@ -33,6 +37,13 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
    - **CRITICAL**: Fail if any grammar headings in the JSON contain hardcoded display ranges (like `Questions 27-36`).
    - Check grammar transformation/combine questions: Raise a high challenge (`meaning_changed`) if the expected answer changes the meaning, if a passive voice transformation is forced onto an intransitive verb (like "stop" without a transitive subject/object), or if multiple valid answers exist without constraints.
    - Check that the bẫy lỗi (IELTS traps) table does not contain vocabulary definitions or IPA.
+5.1. **Deep Grammar & Anti-Repetition QC**:
+   - **CRITICAL REQUIREMENT**: You MUST evaluate the Grammar section against the detailed rubric in `references/deep-grammar-rules.md`.
+   - Verify the cognitive level distribution (20-30% Form, 30-40% Context, 20-30% Meaning, 10-20% Editing). Raise a medium challenge (`cognitive_level_imbalance`) if it violates these bounds (e.g. mostly form recognition).
+   - Verify Anti-Pattern Repetition. Raise a high challenge (`grammar_pattern_repetition`) if more than 3 consecutive questions test the exact same surface pattern (e.g., 4 consecutive tense items).
+   - Check for surface-clues. Raise a high challenge (`surface_clue_only`) if a question can be answered blindly using a single obvious keyword without understanding context.
+   - Verify that B1-C2 questions utilize advanced features like nominalisation, hedging, precision, and text cohesion where appropriate, instead of merely testing simple forms.
+   - Verify that all metadata block validations (e.g. `deep_grammar_validation`, `one_answer_check`) are filled out accurately.
 6. **Writing Topic Alignment QC**:
    - Verify that the number of writing tasks matches `writing_task_count` exactly.
    - Raise a medium challenge (`topic_alignment`) if any writing task is generic and not clearly connected to the daily lesson topic.
@@ -73,11 +84,12 @@ Return JSON only:
     "Reading section has correct paragraph alignments",
     "Vocabulary types are well-balanced"
   ],
+  "deep_reading_qc_report": "If asked to provide a detailed human review or 'Daily IELTS Checker' report, format it strictly according to the 'Output Format: PDF - Daily IELTS Checker' section in references/deep-reading-qc.md. Include Executive Summary, Score Breakdown, 3.1 Reading Logic (with Deep Reading distribution and Level expectations), Issues, and Final Recommendation.",
   "challenges": [
     {
       "id": "CHG-001",
       "to_agent": "reading | vocabulary | grammar | writing | answers",
-      "challenge_type": "source_quality | level_mismatch | ambiguity | multiple_answers | multiple_valid_answers | missing_evidence | insufficient_context | weak_distractor | keyword_scanning | vocabulary_imbalance | missing_vocab_type | grammar_target_mismatch | logic_error | incomplete_punctuation | incomplete_inserted_option | missing_error_in_error_correction | answer_identical_to_prompt | explanation_mismatch | writing_visual_missing | answer_explanation_weak | pdf_layout_risk | schema_error | numbering_error | meaning_changed | topic_alignment | time_workload_mismatch | reading_order_violation",
+      "challenge_type": "source_quality | level_mismatch | ambiguity | multiple_answers | multiple_valid_answers | missing_evidence | insufficient_context | weak_distractor | keyword_scanning | vocabulary_imbalance | missing_vocab_type | grammar_target_mismatch | grammar_pattern_repetition | surface_clue_only | cognitive_level_imbalance | missing_deep_grammar_validation | logic_error | incomplete_punctuation | incomplete_inserted_option | missing_error_in_error_correction | answer_identical_to_prompt | explanation_mismatch | writing_visual_missing | answer_explanation_weak | pdf_layout_risk | schema_error | numbering_error | meaning_changed | topic_alignment | time_workload_mismatch | reading_order_violation",
       "severity": "low | medium | high | critical",
       "location": "reading.questions[4]",
       "problem": "The question repeats exact wording from the passage and can be answered by scanning.",

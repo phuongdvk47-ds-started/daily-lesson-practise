@@ -15,8 +15,6 @@ Generate the final reading passage and IELTS-style reading questions based *only
 2. **Text Construction**:
    - Construct a passage matching the level's length target: A1 (120-180w), A2 (180-260w), B1 (300-450w), B2 (550-750w), C1 (750-950w), C2 (900-1100w).
    - Divide the passage into structured paragraphs with IDs starting from 1.
-   - **Vocabulary Bolding**: Bold vocabulary terms from the vocabulary table (`**word**` or inflected forms).
-   - **Recycled Bolding**: Bold the 3 recycled vocabulary words and append `[R]` (e.g. `**word** [R]`).
 3. **Printed Passage Boundary Rule (Anti-Hallucination)**:
    - **Reading questions must be answerable only from the final printed reading passage.**
    - Do not ask about facts that exist only in the original source but are omitted from the adapted printed passage.
@@ -26,12 +24,17 @@ Generate the final reading passage and IELTS-style reading questions based *only
    - Every Reading question must include an `evidence_quote` taken *verbatim* from the final printed passage.
    - `evidence_paragraph` must point to the exact paragraph index in the printed passage containing the quote.
    - If no verbatim quote can support the answer, reject the question and regenerate it.
-5. **Anti-Scanning Question Design**:
-   - Reading questions must avoid shallow keyword scanning.
-   - **At least 50%** of questions must require paraphrase, logical relation, comparison, inference, classification, or writer-purpose reasoning.
-   - **At least 30%** of distractors (incorrect options) must contain wording related to the passage but be logically wrong.
-   - Avoid copying key phrases from the passage directly into the question stem.
-   - B1 questions must bridge to B2 skills by integrating paraphrase/inference.
+5. **Deep Reading & Anti-Scanning Question Design**:
+   - **CRITICAL REQUIREMENT**: You MUST generate a `reading_blueprint` before the questions, strictly according to `references/level-blueprint-rules.md`. Your generated questions MUST perfectly match this blueprint.
+   - You MUST generate the Reading section strictly according to the detailed level-by-level rubric in `references/deep-reading-qc.md`.
+   - Classify your generated questions into the 8 cognitive depth types (Literal, Direct paraphrase, Local comprehension, Light inference, Integration, Main idea/writer purpose, Discourse relationship, Evaluation/implication) defined in the rubric.
+   - Enforce the exact percentage distributions for the requested `level` as specified in `references/deep-reading-qc.md` and `references/level-blueprint-rules.md`.
+   - For `+` levels (A1+, A2+, B1+, B2+, C1+, C2+), you must strictly follow the transition rules, ensuring the questions show a measurable step up from the base level.
+   - Each non-literal question must include `paraphrase_mapping`.
+   - Each question must include `keyword_overlap_check`.
+   - Each option must include `distractor_analysis`, including whether it is a keyword trap.
+   - **At least 30%** of distractors (incorrect options) must be plausible keyword traps (a keyword trap uses passage wording but is logically wrong).
+   - Avoid copying key phrases from the passage directly into the question stem unless targeting literal scanning questions suitable for lower levels.
 6. **Band-Bridge**: Mark 10-20% of questions as stretch questions targeting the next level with a `(*)` label, and set `"stretch": true` in JSON.
 7. **Sequential Order Rule**:
    - Reading questions must follow the sequence of information in the passage within each question type group (e.g., all True/False/Not Given questions are sequential, all Gap Fill questions are sequential, etc.).
@@ -41,6 +44,15 @@ Generate the final reading passage and IELTS-style reading questions based *only
 Return JSON only:
 ```json
 {
+  "reading_blueprint": [
+    {
+      "question_no": 1,
+      "type": "literal",
+      "depth": "low",
+      "target_skill": "identify explicitly stated information",
+      "distractor_strategy": "paraphrased but incorrect detail"
+    }
+  ],
   "passage": {
     "title": "Title of the reading passage",
     "paragraphs": [
@@ -62,7 +74,16 @@ Return JSON only:
       "rationale_vi": "Detailed step-by-step keyword matching reasoning in Vietnamese.",
       "reasoning_skill": "literal | paraphrase | inference | comparison | cause_effect | contrast | classification | writer_purpose",
       "source_scope": "printed_passage_only",
-      "stretch": false
+      "stretch": false,
+      "paraphrase_mapping": "passage phrase -> paraphrased question phrase",
+      "keyword_overlap_check": "explain if the question overlaps too much with exact keywords",
+      "distractor_analysis": [
+        {
+          "option": "Option B",
+          "is_keyword_trap": true,
+          "analysis": "Uses 'exact wording from passage' but is logically false because..."
+        }
+      ]
     }
   ]
 }

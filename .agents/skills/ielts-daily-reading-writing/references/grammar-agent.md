@@ -11,8 +11,8 @@ Generate grammar guides, IELTS common traps, and targeted grammar practice exerc
 - `grammar_targets`: level-appropriate targets from `grammar-by-level.md`.
 
 ## Rules
-1. **No Web Search**: Work only from the reading passage text and target topic.
-2. **Grammar Targets**: Select 1-3 targets. Ensure high-impact targets are included where level-appropriate (A2: modifiers; B1: relative clauses/contrast linkers; B2: subject-verb agreement/articles; C1-C2: subjunctive mood).
+1. **Deep Grammar Target Selection**: Select targets by strictly following the **CEFR Deep Grammar Level Map** and **Level Alias and Target Selection Rule** in `references/deep-grammar-rules.md`. Ensure high-impact targets and appropriate bridge targets for `+` levels are included.
+2. **Deep Grammar Execution**: You MUST generate a `grammar_blueprint` strictly according to `references/level-blueprint-rules.md` BEFORE generating questions. Your generated questions MUST perfectly match this blueprint. You MUST adhere to all Core Rules, Distribution Rules, and Checklists defined in `references/deep-grammar-rules.md`. Do not rely solely on form recognition.
 3. **Detailed Grammar Guide**:
    - Split grammar points using headers starting with `#### Chủ điểm X: [Topic]` or `#### Tips & Tricks: [Topic]`.
    - Never write all points in a single long block.
@@ -48,6 +48,15 @@ Generate grammar guides, IELTS common traps, and targeted grammar practice exerc
 Return JSON only:
 ```json
 {
+  "grammar_blueprint": [
+    {
+      "question_no": 1,
+      "grammar_target": "present perfect vs past simple",
+      "depth": "medium",
+      "tested_dimension": "meaning/use",
+      "trap": "past time phrase distractor"
+    }
+  ],
   "targets": [
     {
       "name": "Subject-Verb Agreement",
@@ -82,12 +91,33 @@ Return JSON only:
   "questions": [
     {
       "id": 1,
-      "type": "Gap Fill | Error Correction | Sentence Transformation",
+      "type": "Gap Fill",
       "question": "Each of the participants _______ (be) required to sign the form before entering. [Fill in the blank with the correct form of the verb]",
       "options": [],
       "correct_answer": "is",
       "explanation_vi": "Chủ ngữ bắt đầu bằng 'Each of' luôn đi với động từ số ít.",
-      "stretch": false
+      "difficulty": "medium",
+      "cognitive_level": "context_use",
+      "source_connection": "independent",
+      "target_structure": "subject-verb agreement",
+      "level": "B2",
+      "stretch": false,
+      "one_answer_check": {
+        "has_exactly_one_valid_answer": true,
+        "why_other_options_are_wrong": [],
+        "context_is_sufficient": true,
+        "final_sentence_after_insertion": "Each of the participants is required to sign the form before entering.",
+        "meaning_preserved": true
+      },
+      "deep_grammar_validation": {
+        "has_single_clear_answer": true,
+        "requires_context_or_meaning": true,
+        "meaning_preserved_if_transformation": true,
+        "is_not_surface_clue_only": true,
+        "matches_target_structure": true,
+        "difficulty_is_appropriate": true,
+        "level_is_appropriate": true
+      }
     }
   ]
 }

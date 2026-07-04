@@ -100,7 +100,7 @@ def validate_rendered_pdf(json_path: Path, pdf_path: Path) -> list[str]:
                 # Remove common punctuation only from search words to match pypdf extraction
                 left_pat = re.escape(re.sub(r'[^\w,]', '', left))
                 right_pat = re.escape(re.sub(r'[^\w,]', '', right))
-                pattern = left_pat + r"(\s+)" + right_pat
+                pattern = r"\b" + left_pat + r"(\s+)" + right_pat + r"\b"
                 
                 # Strip special characters from pdf_text for matching but keep spaces
                 clean_pdf_text = re.sub(r'[^\w\s,]', '', pdf_text)

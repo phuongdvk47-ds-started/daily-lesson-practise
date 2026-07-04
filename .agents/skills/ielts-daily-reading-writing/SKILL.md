@@ -188,10 +188,14 @@ Load only the relevant reference file for the current stage:
 - Reading: `references/reading-agent.md`
 - Vocabulary: `references/vocabulary-agent.md`
 - Grammar: `references/grammar-agent.md`
+- Deep Grammar Rules: `references/deep-grammar-rules.md`
 - Writing: `references/writing-agent.md`
 - Answers: `references/answer-agent.md`
 - QC: `references/quality-control-agent.md`
+- Deep Reading QC: `references/deep-reading-qc.md`
 - Post-render PDF QC: `references/post-render-pdf-qc.md`
+- Blueprint Rules: `references/level-blueprint-rules.md`
+- Daily IELTS Checker: `references/daily-ielts-checker.md`
 - JSON Schema contract: `references/output-schema.md`
 - Formatting & Layout: `references/output-template.md`
 - Topic selection: `references/topic-bank.md`

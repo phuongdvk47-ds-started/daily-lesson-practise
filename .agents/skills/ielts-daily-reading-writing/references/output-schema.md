@@ -172,6 +172,20 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
     "reading": {
       "type": "OBJECT",
       "properties": {
+        "reading_blueprint": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "question_no": { "type": "INTEGER" },
+              "type": { "type": "STRING" },
+              "depth": { "type": "STRING" },
+              "target_skill": { "type": "STRING" },
+              "distractor_strategy": { "type": "STRING" }
+            },
+            "required": ["question_no", "type", "depth", "target_skill", "distractor_strategy"]
+          }
+        },
         "passage": {
           "type": "OBJECT",
           "properties": {
@@ -208,13 +222,27 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
               "rationale_vi": { "type": "STRING" },
               "reasoning_skill": { "type": "STRING", "enum": ["literal", "paraphrase", "inference", "comparison", "cause_effect", "contrast", "classification", "writer_purpose"] },
               "source_scope": { "type": "STRING", "enum": ["printed_passage_only"] },
-              "stretch": { "type": "BOOLEAN" }
+              "stretch": { "type": "BOOLEAN" },
+              "paraphrase_mapping": { "type": "STRING" },
+              "keyword_overlap_check": { "type": "STRING" },
+              "distractor_analysis": {
+                "type": "ARRAY",
+                "items": {
+                  "type": "OBJECT",
+                  "properties": {
+                    "option": { "type": "STRING" },
+                    "is_keyword_trap": { "type": "BOOLEAN" },
+                    "analysis": { "type": "STRING" }
+                  },
+                  "required": ["option", "is_keyword_trap", "analysis"]
+                }
+              }
             },
-            "required": ["id", "type", "question", "correct_answer", "evidence_paragraph", "evidence_quote", "rationale_vi", "reasoning_skill", "source_scope", "stretch"]
+            "required": ["id", "type", "question", "correct_answer", "evidence_paragraph", "evidence_quote", "rationale_vi", "reasoning_skill", "source_scope", "stretch", "keyword_overlap_check", "distractor_analysis"]
           }
         }
       },
-      "required": ["passage", "questions"]
+      "required": ["reading_blueprint", "passage", "questions"]
     },
     "vocabulary": {
       "type": "OBJECT",
@@ -285,6 +313,20 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
     "grammar": {
       "type": "OBJECT",
       "properties": {
+        "grammar_blueprint": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "question_no": { "type": "INTEGER" },
+              "grammar_target": { "type": "STRING" },
+              "depth": { "type": "STRING" },
+              "tested_dimension": { "type": "STRING" },
+              "trap": { "type": "STRING" }
+            },
+            "required": ["question_no", "grammar_target", "depth", "tested_dimension", "trap"]
+          }
+        },
         "targets": {
           "type": "ARRAY",
           "items": {
@@ -350,8 +392,13 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
               },
               "correct_answer": { "type": "STRING" },
               "explanation_vi": { "type": "STRING" },
+              "difficulty": { "type": "STRING", "enum": ["easy", "medium", "hard"] },
+              "cognitive_level": { "type": "STRING", "enum": ["form_recognition", "context_use", "meaning_preservation", "editing_accuracy", "writing_transfer", "register_control", "precision_editing"] },
+              "source_connection": { "type": "STRING", "enum": ["reading_based", "writing_transfer", "independent"] },
+              "target_structure": { "type": "STRING" },
+              "level": { "type": "STRING", "enum": ["A1", "A1+", "A2", "A2+", "B1", "B1+", "B2", "B2+", "C1", "C1+", "C2"] },
               "stretch": { "type": "BOOLEAN" },
-              "logic_validation": {
+              "one_answer_check": {
                 "type": "OBJECT",
                 "properties": {
                   "has_exactly_one_valid_answer": { "type": "BOOLEAN" },
@@ -381,6 +428,44 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
                 },
                 "required": ["has_exactly_one_valid_answer", "context_is_sufficient", "punctuation_complete", "meaning_preserved"]
               },
+              "deep_grammar_validation": {
+                "type": "OBJECT",
+                "properties": {
+                  "has_single_clear_answer": { "type": "BOOLEAN" },
+                  "requires_context_or_meaning": { "type": "BOOLEAN" },
+                  "meaning_preserved_if_transformation": { "type": "BOOLEAN" },
+                  "is_not_surface_clue_only": { "type": "BOOLEAN" },
+                  "matches_target_structure": { "type": "BOOLEAN" },
+                  "difficulty_is_appropriate": { "type": "BOOLEAN" },
+                  "level_is_appropriate": { "type": "BOOLEAN" }
+                },
+                "required": ["has_single_clear_answer", "requires_context_or_meaning", "meaning_preserved_if_transformation", "is_not_surface_clue_only", "matches_target_structure", "difficulty_is_appropriate", "level_is_appropriate"]
+              },
+              "option_validations": {
+                "type": "ARRAY",
+                "items": {
+                  "type": "OBJECT",
+                  "properties": {
+                    "option": { "type": "STRING" },
+                    "is_correct": { "type": "BOOLEAN" },
+                    "why_wrong": { "type": "STRING" }
+                  },
+                  "required": ["option", "is_correct", "why_wrong"]
+                }
+              },
+              "meaning_preservation_validation": {
+                "type": "OBJECT",
+                "properties": {
+                  "original_meaning": { "type": "STRING" },
+                  "transformed_meaning": { "type": "STRING" },
+                  "meaning_is_preserved": { "type": "BOOLEAN" },
+                  "target_structure_used": { "type": "BOOLEAN" },
+                  "no_extra_information_added": { "type": "BOOLEAN" },
+                  "no_information_removed": { "type": "BOOLEAN" },
+                  "answer_family_is_narrow": { "type": "BOOLEAN" }
+                },
+                "required": ["original_meaning", "transformed_meaning", "meaning_is_preserved", "target_structure_used", "no_extra_information_added", "no_information_removed", "answer_family_is_narrow"]
+              },
               "error_correction_validation": {
                 "type": "OBJECT",
                 "properties": {
@@ -397,11 +482,11 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
                 "required": ["original_sentence", "corrected_sentence", "target_error_text", "correction_text", "original_contains_error", "corrected_differs_from_original", "explanation_matches_error"]
               }
             },
-            "required": ["id", "type", "question", "correct_answer", "explanation_vi", "stretch", "logic_validation"]
+            "required": ["id", "type", "question", "correct_answer", "explanation_vi", "difficulty", "cognitive_level", "source_connection", "target_structure", "level", "stretch", "one_answer_check", "deep_grammar_validation"]
           }
         }
       },
-      "required": ["targets", "guide", "common_mistakes", "sections", "questions"]
+      "required": ["grammar_blueprint", "targets", "guide", "common_mistakes", "sections", "questions"]
     },
     "writing": {
       "type": "OBJECT",
@@ -450,14 +535,16 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
             "properties": {
               "question_id": { "type": "INTEGER" },
               "correct_answer": { "type": "STRING" },
+              "question_type": { "type": "STRING" },
               "evidence_quote": { "type": "STRING" },
               "evidence_paragraph": { "type": "INTEGER" },
               "explanation_vi": { "type": "STRING" },
               "why_others_wrong_vi": { "type": "STRING" },
+              "depth_check_vi": { "type": "STRING" },
               "tip_vi": { "type": "STRING" },
               "stretch_note": { "type": "STRING" }
             },
-            "required": ["question_id", "correct_answer", "evidence_quote", "evidence_paragraph", "explanation_vi", "why_others_wrong_vi", "tip_vi"]
+            "required": ["question_id", "correct_answer", "question_type", "evidence_quote", "evidence_paragraph", "explanation_vi", "why_others_wrong_vi", "depth_check_vi", "tip_vi"]
           }
         },
         "grammar_answers": {
@@ -467,11 +554,16 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
             "properties": {
               "question_id": { "type": "INTEGER" },
               "correct_answer": { "type": "STRING" },
+              "grammar_target": { "type": "STRING" },
+              "form_meaning_vi": { "type": "STRING" },
+              "use_in_context_vi": { "type": "STRING" },
+              "trap_logic_vi": { "type": "STRING" },
+              "depth_check_vi": { "type": "STRING" },
               "analysis_vi": { "type": "STRING" },
               "tip_vi": { "type": "STRING" },
               "stretch_note": { "type": "STRING" }
             },
-            "required": ["question_id", "correct_answer", "analysis_vi", "tip_vi"]
+            "required": ["question_id", "correct_answer", "grammar_target", "form_meaning_vi", "use_in_context_vi", "trap_logic_vi", "depth_check_vi", "analysis_vi", "tip_vi"]
           }
         },
         "writing_guidance": {

@@ -102,7 +102,7 @@ def validate_lesson_json(json_path: Path) -> bool:
             continue
         
         # Check required question fields including reasoning and scope
-        req_q_fields = ["type", "question", "correct_answer", "evidence_paragraph", "evidence_quote", "rationale_vi", "reasoning_skill", "source_scope"]
+        req_q_fields = ["type", "question", "correct_answer", "evidence_paragraph", "evidence_quote", "rationale_vi", "reasoning_skill", "source_scope", "keyword_overlap_check"]
         for f in req_q_fields:
             if f not in q:
                 errors.append(f"FAIL: Reading question {q_id} missing field: {f}")
@@ -117,6 +117,19 @@ def validate_lesson_json(json_path: Path) -> bool:
             errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) has invalid reasoning_skill: '{r_skill}'")
         elif r_skill != "literal":
             non_literal_count += 1
+            if "paraphrase_mapping" not in q:
+                errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) is non-literal but missing 'paraphrase_mapping'")
+        
+        # Validate distractor_analysis
+        options = q.get("options", [])
+        if options:
+            d_analysis = q.get("distractor_analysis", [])
+            if not d_analysis:
+                errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) has options but missing 'distractor_analysis'")
+            else:
+                for da in d_analysis:
+                    if "option" not in da or "is_keyword_trap" not in da or "analysis" not in da:
+                        errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) distractor_analysis missing required fields")
             
         # Validate sequential order of evidence paragraph within each question type group
         q_type = q.get("type", "Questions")
@@ -145,11 +158,29 @@ def validate_lesson_json(json_path: Path) -> bool:
             if clean_quote not in clean_passage and clean_quote_no_punc not in clean_passage_no_punc:
                 errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) evidence_quote not found in passage. Quote: '{quote[:50]}...'")
 
-    # B1+ non-literal checking
-    if len(rqs) > 0 and level in ["B1", "B2", "C1", "C2"]:
+    # Keyword Trap and Non-Literal checking
+    total_distractors = 0
+    keyword_traps = 0
+    for q in rqs:
+        d_analysis = q.get("distractor_analysis", [])
+        for da in d_analysis:
+            total_distractors += 1
+            if da.get("is_keyword_trap") is True:
+                keyword_traps += 1
+
+    if total_distractors > 0:
+        trap_ratio = keyword_traps / total_distractors
+        if trap_ratio < 0.30:
+            errors.append(f"FAIL: Reading distractors must have >= 30% keyword traps. Got {trap_ratio*100:.1f}% ({keyword_traps}/{total_distractors})")
+
+    if len(rqs) > 0:
         ratio = non_literal_count / len(rqs)
-        if ratio < 0.50:
-            errors.append(f"FAIL: B1+ reading requires at least 50% non-literal reasoning questions. Got {ratio*100:.1f}% ({non_literal_count}/{len(rqs)})")
+        if level in ["A2"]:
+            if ratio < 0.50:
+                errors.append(f"FAIL: A2 reading requires at least 50% non-literal reasoning questions. Got {ratio*100:.1f}% ({non_literal_count}/{len(rqs)})")
+        elif level in ["B1", "B2", "C1", "C2"]:
+            if ratio < 0.60:
+                errors.append(f"FAIL: B1+ reading requires at least 60% non-literal reasoning questions. Got {ratio*100:.1f}% ({non_literal_count}/{len(rqs)})")
 
     # 5. Validate vocabulary
     vocab = data["vocabulary"]
