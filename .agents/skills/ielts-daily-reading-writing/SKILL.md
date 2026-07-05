@@ -1,6 +1,6 @@
 ---
 name: ielts-daily-reading-writing
-description: create modular daily IELTS practice packs with separate source verification, reading, vocabulary, grammar, writing, answer, quality-control, and PDF export stages. Use when the user asks to generate IELTS daily practice, reading questions, grammar drills, writing tasks, Quizlet vocabulary, answer keys, cumulative review packs, or printable PDF packs for CEFR levels A1-C2.
+description: create modular daily IELTS practice packs with deep reading, deep grammar, source verification, reading, vocabulary, grammar, writing, answer-key reasoning, quality-control, and PDF export stages. Use when the user asks to generate IELTS daily practice, reading questions, grammar drills, writing tasks, Quizlet vocabulary, answer keys, cumulative review packs, or printable PDF packs for CEFR levels A1-C2 including A1+, A2+, B1+, B2+, and C1+ bridge levels.
 ---
 
 # IELTS Daily Pack Orchestrator
@@ -12,7 +12,7 @@ Use a modular pipeline. Do not generate the full IELTS pack in one monolithic re
 Accept these parameters when provided:
 - `Day`: date label such as `Day 20260625`; default to `current_date` from the active environment/local timezone in `YYYYMMDD`.
 - `Topic`: topic name; default by running `scripts/select_daily_inputs.py` or selecting a level-appropriate topic from `references/topic-bank.md` while respecting history windows.
-- `Level`: one of `A1`, `A2`, `B1`, `B2`, `C1`, `C2`; default `A2`.
+- `Level`: one of `A1`, `A1+`, `A2`, `A2+`, `B1`, `B1+`, `B2`, `B2+`, `C1`, `C1+`, `C2`; default `A2`.
 - `Number of IELTS Reading Questions`: default `13`.
 - `Number of Vocabulary Words`: default `20`.
 - `Number of Grammar Questions`: default `30`.
@@ -34,13 +34,13 @@ Each named Sub-Agent is a pipeline stage, not a free-form chat persona. For each
 2. Load `references/orchestrator.md`.
 3. Check lesson history and anti-duplication rules. Find prior same-level lesson for vocabulary recycling.
 4. Run **Source Research Agent** using `references/source-research-agent.md`. If source verification fails, stop.
-5. Run **Reading Agent** using `references/reading-agent.md`. Ensure all questions have verbatim evidence quotes and non-literal ratios.
+5. Run **Reading Agent** using `references/reading-agent.md`, `references/deep-question-blueprint.md`, and `references/deep-reading-generation-rules.md`. Ensure the Reading blueprint is created before questions, all questions have verbatim evidence quotes, and the level-specific deep-reading ratios are met.
 6. Run **Vocabulary Agent** using `references/vocabulary-agent.md`.
-7. Run **Grammar Agent** using `references/grammar-agent.md`. Ensure no hardcoded headings and correct meaning preservation in transformations.
+7. Run **Grammar Agent** using `references/grammar-agent.md`, `references/deep-question-blueprint.md`, and `references/deep-grammar-generation-rules.md`. Ensure the Grammar blueprint is created before questions, no hardcoded headings appear, and transformations preserve meaning.
 8. Run **Writing Agent** using `references/writing-agent.md`. Ensure daily topic relevance.
-9. Run **Answer Agent** using `references/answer-agent.md`.
+9. Run **Answer Agent** using `references/answer-agent.md` and `references/deep-answer-key-rules.md`.
 10. Assemble the complete payload into `lesson_source.json` according to `references/output-schema.md`.
-11. Run **Quality Control Agent** using `references/quality-control-agent.md`.
+11. Run **Quality Control Agent** using `references/quality-control-agent.md` and `references/regeneration-quality-gates.md`.
 12. If QC fails, set `execution.pipeline_status` to `qc_failed`, increment the relevant `revision_attempts` counter, regenerate the failed section(s) only, and rerun QC.
 13. Stop and report unresolved challenges if a section reaches the maximum revision attempts listed under Loop Specific Hard Rules.
 14. When content QC passes and no high/critical challenge remains open, set `execution.pipeline_status` to `qc_passed`.
@@ -64,6 +64,7 @@ Each named Sub-Agent is a pipeline stage, not a free-form chat persona. For each
 - Only **Source Research Agent** may search or verify web sources.
 - Do not invent URLs, titles, authors, publication dates, facts, or source details. If no verified source exists, stop and report a source gap.
 - Every Sub-Agent must return structured JSON compatible with `references/output-schema.md`.
+- Reading and Grammar generation must create `reading_blueprint` and `grammar_blueprint` before writing the actual questions, then self-check every generated item against its blueprint.
 - **JSON Validator Integration**: Do not export PDF from free-form markdown or unvalidated JSON. The compiler script will automatically run `validate_lesson_json.py` and reject compilation if any errors exist.
 - If one section fails QC, regenerate ONLY that section. Do not regenerate the whole pack unless the source, level, or topic changes.
 - Preserve the existing output folder contract relative to the repository root: `outputs/ielts-daily-reading-writing/[Day]-[Level]/{lsn/, aws/, quizlet}`.
@@ -116,6 +117,7 @@ In Review Mode:
 - Any challenged Sub-Agent must revise only the challenged section.
 - Do not regenerate the whole pack unless source, level, topic, or user direction changes.
 - If QC detects ambiguity, multiple possible answers, missing evidence, missing visual data, insufficient answer space, or vocabulary imbalance, the relevant agent must revise its output.
+- If QC detects the fail conditions in `references/regeneration-quality-gates.md`, route the challenge to the responsible section and regenerate only that item or section.
 - PDF export must not run until content QC status is `pass`, `execution.pipeline_status` is `qc_passed`, and `validate_lesson_json.py` passes without errors.
 - Maximum revision attempts: source 2, reading 3, vocabulary 2, grammar 3, writing 2, answers 2, PDF layout 2.
 - If any section reaches its maximum revision attempts, stop Auto Mode, keep unresolved challenges open, and report the blocker instead of silently accepting it.
@@ -188,11 +190,16 @@ Load only the relevant reference file for the current stage:
 - Reading: `references/reading-agent.md`
 - Vocabulary: `references/vocabulary-agent.md`
 - Grammar: `references/grammar-agent.md`
+- Deep Question Blueprint: `references/deep-question-blueprint.md`
+- Deep Reading Generation: `references/deep-reading-generation-rules.md`
+- Deep Grammar Generation: `references/deep-grammar-generation-rules.md`
 - Deep Grammar Rules: `references/deep-grammar-rules.md`
 - Writing: `references/writing-agent.md`
 - Answers: `references/answer-agent.md`
+- Deep Answer Key Rules: `references/deep-answer-key-rules.md`
 - QC: `references/quality-control-agent.md`
 - Deep Reading QC: `references/deep-reading-qc.md`
+- Regeneration Quality Gates: `references/regeneration-quality-gates.md`
 - Post-render PDF QC: `references/post-render-pdf-qc.md`
 - Blueprint Rules: `references/level-blueprint-rules.md`
 - Daily IELTS Checker: `references/daily-ielts-checker.md`

@@ -110,311 +110,6 @@
     "estimated_completion_time_minutes": 90,
     "time_workload_status": "ok"
   },
-  "reading_blueprint": [
-    {
-      "question_no": 1,
-      "type": "inference",
-      "depth": "medium",
-      "target_skill": "infer feelings from context of leaving home",
-      "distractor_strategy": "opposite feeling stated"
-    },
-    {
-      "question_no": 2,
-      "type": "literal",
-      "depth": "low",
-      "target_skill": "identify explicitly stated adjective for community",
-      "distractor_strategy": "unrelated adjective from text"
-    },
-    {
-      "question_no": 3,
-      "type": "function",
-      "depth": "medium",
-      "target_skill": "understand purpose of academic groups",
-      "distractor_strategy": "unrelated purpose"
-    },
-    {
-      "question_no": 4,
-      "type": "inference",
-      "depth": "medium",
-      "target_skill": "infer hiring preferences from general benefits",
-      "distractor_strategy": "overgeneralized positive claim"
-    },
-    {
-      "question_no": 5,
-      "type": "function",
-      "depth": "medium",
-      "target_skill": "determine function of soft skills in employment",
-      "distractor_strategy": "keyword trap from unrelated paragraph"
-    },
-    {
-      "question_no": 6,
-      "type": "literal",
-      "depth": "low",
-      "target_skill": "identify explicitly stated action verb for press demands",
-      "distractor_strategy": "unrelated verb from context"
-    },
-    {
-      "question_no": 7,
-      "type": "vocab_in_context",
-      "depth": "medium",
-      "target_skill": "understand scope of recreational activities",
-      "distractor_strategy": "restrictive scope limitation"
-    },
-    {
-      "question_no": 8,
-      "type": "inference",
-      "depth": "medium",
-      "target_skill": "infer cause/effect of social clubs on burnout",
-      "distractor_strategy": "unsupported positive outcome"
-    },
-    {
-      "question_no": 9,
-      "type": "literal",
-      "depth": "low",
-      "target_skill": "identify explicitly stated noun phrase for advisor",
-      "distractor_strategy": "unrelated role name"
-    },
-    {
-      "question_no": 10,
-      "type": "literal",
-      "depth": "low",
-      "target_skill": "identify explicitly stated forms of university support",
-      "distractor_strategy": "negative actions"
-    },
-    {
-      "question_no": 11,
-      "type": "inference",
-      "depth": "medium",
-      "target_skill": "infer responsibility division between advisor and leaders",
-      "distractor_strategy": "confused roles"
-    },
-    {
-      "question_no": 12,
-      "type": "literal",
-      "depth": "low",
-      "target_skill": "identify explicitly stated action verb for new clubs",
-      "distractor_strategy": "unrelated synonym"
-    },
-    {
-      "question_no": 13,
-      "type": "vocab_in_context",
-      "depth": "medium",
-      "target_skill": "understand relationship of involvement to degree completion",
-      "distractor_strategy": "negative correlation trap"
-    }
-  ],
-  "grammar_blueprint": [
-    {
-      "question_no": 1,
-      "grammar_target": "present perfect vs past simple",
-      "depth": "low",
-      "tested_dimension": "mechanical/form",
-      "trap": "simple tense since marker"
-    },
-    {
-      "question_no": 2,
-      "grammar_target": "gerunds and infinitives after verbs",
-      "depth": "low",
-      "tested_dimension": "mechanical/form",
-      "trap": "advise + object pattern"
-    },
-    {
-      "question_no": 3,
-      "grammar_target": "relative clauses",
-      "depth": "medium",
-      "tested_dimension": "mechanical/form",
-      "trap": "non-defining pronoun constraints"
-    },
-    {
-      "question_no": 4,
-      "grammar_target": "present perfect vs past simple",
-      "depth": "low",
-      "tested_dimension": "mechanical/form",
-      "trap": "past time marker last semester"
-    },
-    {
-      "question_no": 5,
-      "grammar_target": "gerunds and infinitives after verbs",
-      "depth": "low",
-      "tested_dimension": "mechanical/form",
-      "trap": "prepositional verb look forward to"
-    },
-    {
-      "question_no": 6,
-      "grammar_target": "relative clauses",
-      "depth": "low",
-      "tested_dimension": "mechanical/form",
-      "trap": "who vs whom subjective slot"
-    },
-    {
-      "question_no": 7,
-      "grammar_target": "present perfect vs past simple",
-      "depth": "medium",
-      "tested_dimension": "meaning/use",
-      "trap": "accumulation of past trophies to present"
-    },
-    {
-      "question_no": 8,
-      "grammar_target": "gerunds and infinitives after verbs",
-      "depth": "medium",
-      "tested_dimension": "meaning/use",
-      "trap": "decide intention to act"
-    },
-    {
-      "question_no": 9,
-      "grammar_target": "relative clauses",
-      "depth": "medium",
-      "tested_dimension": "context/discourse",
-      "trap": "defining vs non-defining context constraint"
-    },
-    {
-      "question_no": 10,
-      "grammar_target": "present perfect vs past simple",
-      "depth": "medium",
-      "tested_dimension": "meaning/use",
-      "trap": "past continuous background interruption"
-    },
-    {
-      "question_no": 11,
-      "grammar_target": "gerunds and infinitives after verbs",
-      "depth": "medium",
-      "tested_dimension": "meaning/use",
-      "trap": "mind verb pattern choice"
-    },
-    {
-      "question_no": 12,
-      "grammar_target": "relative clauses",
-      "depth": "medium",
-      "tested_dimension": "meaning/use",
-      "trap": "which referring to preceding statement clause"
-    },
-    {
-      "question_no": 13,
-      "grammar_target": "present perfect vs past simple",
-      "depth": "medium",
-      "tested_dimension": "context/discourse",
-      "trap": "continuous state duration since last year"
-    },
-    {
-      "question_no": 14,
-      "grammar_target": "gerunds and infinitives after verbs",
-      "depth": "medium",
-      "tested_dimension": "meaning/use",
-      "trap": "manage past achievement"
-    },
-    {
-      "question_no": 15,
-      "grammar_target": "linkers (cause, contrast, result)",
-      "depth": "medium",
-      "tested_dimension": "context/discourse",
-      "trap": "combining with because cause/effect"
-    },
-    {
-      "question_no": 16,
-      "grammar_target": "linkers (cause, contrast, result)",
-      "depth": "medium",
-      "tested_dimension": "transformation/error correction",
-      "trap": "combining with although contrast linker"
-    },
-    {
-      "question_no": 17,
-      "grammar_target": "linkers (cause, contrast, result)",
-      "depth": "medium",
-      "tested_dimension": "transformation/error correction",
-      "trap": "combining with so that purpose linker"
-    },
-    {
-      "question_no": 18,
-      "grammar_target": "relative clauses",
-      "depth": "medium",
-      "tested_dimension": "transformation/error correction",
-      "trap": "combining with who defining clause"
-    },
-    {
-      "question_no": 19,
-      "grammar_target": "linkers (cause, contrast, result)",
-      "depth": "medium",
-      "tested_dimension": "context/discourse",
-      "trap": "combining with since reason linker"
-    },
-    {
-      "question_no": 20,
-      "grammar_target": "linkers (cause, contrast, result)",
-      "depth": "hard",
-      "tested_dimension": "transformation/error correction",
-      "trap": "rewriting with whereas contrast clause"
-    },
-    {
-      "question_no": 21,
-      "grammar_target": "present perfect vs past simple",
-      "depth": "low",
-      "tested_dimension": "mechanical/form",
-      "trap": "error correction tense marker conflict"
-    },
-    {
-      "question_no": 22,
-      "grammar_target": "gerunds and infinitives after verbs",
-      "depth": "low",
-      "tested_dimension": "mechanical/form",
-      "trap": "error correction suggest infinitive trap"
-    },
-    {
-      "question_no": 23,
-      "grammar_target": "present perfect vs past simple",
-      "depth": "hard",
-      "tested_dimension": "meaning/use",
-      "trap": "error correction continuous state tense"
-    },
-    {
-      "question_no": 24,
-      "grammar_target": "gerunds and infinitives after verbs",
-      "depth": "hard",
-      "tested_dimension": "meaning/use",
-      "trap": "error correction recommend infinitive trap"
-    },
-    {
-      "question_no": 25,
-      "grammar_target": "relative clauses",
-      "depth": "low",
-      "tested_dimension": "mechanical/form",
-      "trap": "error correction which for person trap"
-    },
-    {
-      "question_no": 26,
-      "grammar_target": "present perfect vs past simple",
-      "depth": "medium",
-      "tested_dimension": "meaning/use",
-      "trap": "error correction yesterday present perfect conflict"
-    },
-    {
-      "question_no": 27,
-      "grammar_target": "gerunds and infinitives after verbs",
-      "depth": "medium",
-      "tested_dimension": "transformation/error correction",
-      "trap": "rewriting expects to replacement"
-    },
-    {
-      "question_no": 28,
-      "grammar_target": "gerunds and infinitives after verbs",
-      "depth": "medium",
-      "tested_dimension": "transformation/error correction",
-      "trap": "rewriting joining gerund subject"
-    },
-    {
-      "question_no": 29,
-      "grammar_target": "subject-verb agreement",
-      "depth": "hard",
-      "tested_dimension": "context/discourse",
-      "trap": "stretch the number of singular agreement"
-    },
-    {
-      "question_no": 30,
-      "grammar_target": "relative clauses",
-      "depth": "hard",
-      "tested_dimension": "context/discourse",
-      "trap": "stretch reduced relative active participle"
-    }
-  ],
   "source": {
     "status": "verified",
     "source_title": "College Success: Joining Campus Groups to Feel Connected",
@@ -435,6 +130,112 @@
     "Do you agree that participating in extracurricular activities helps students study better?"
   ],
   "reading": {
+    "reading_blueprint": [
+      {
+        "question_no": 1,
+        "type": "inference",
+        "depth": "medium",
+        "target_skill": "infer feelings from context of leaving home",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "opposite feeling stated"
+      },
+      {
+        "question_no": 2,
+        "type": "vocabulary_in_context",
+        "depth": "low",
+        "target_skill": "identify explicitly stated adjective for community",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "unrelated adjective from text"
+      },
+      {
+        "question_no": 3,
+        "type": "inference",
+        "depth": "medium",
+        "target_skill": "understand purpose of academic groups",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "unrelated purpose"
+      },
+      {
+        "question_no": 4,
+        "type": "inference",
+        "depth": "medium",
+        "target_skill": "infer hiring preferences from general benefits",
+        "evidence_strategy": "multiple sentences",
+        "distractor_strategy": "overgeneralized positive claim"
+      },
+      {
+        "question_no": 5,
+        "type": "inference",
+        "depth": "medium",
+        "target_skill": "determine function of soft skills in employment",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "keyword trap from unrelated paragraph"
+      },
+      {
+        "question_no": 6,
+        "type": "vocabulary_in_context",
+        "depth": "low",
+        "target_skill": "identify explicitly stated action verb for press demands",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "unrelated verb from context"
+      },
+      {
+        "question_no": 7,
+        "type": "inference",
+        "depth": "medium",
+        "target_skill": "understand scope of recreational activities",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "restrictive scope limitation"
+      },
+      {
+        "question_no": 8,
+        "type": "cause_effect",
+        "depth": "medium",
+        "target_skill": "infer cause/effect of social clubs on burnout",
+        "evidence_strategy": "multiple sentences",
+        "distractor_strategy": "unsupported positive outcome"
+      },
+      {
+        "question_no": 9,
+        "type": "literal",
+        "depth": "low",
+        "target_skill": "identify explicitly stated noun phrase for advisor",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "unrelated role name"
+      },
+      {
+        "question_no": 10,
+        "type": "literal",
+        "depth": "low",
+        "target_skill": "identify explicitly stated forms of university support",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "negative actions"
+      },
+      {
+        "question_no": 11,
+        "type": "inference",
+        "depth": "medium",
+        "target_skill": "infer responsibility division between advisor and leaders",
+        "evidence_strategy": "multiple sentences",
+        "distractor_strategy": "confused roles"
+      },
+      {
+        "question_no": 12,
+        "type": "literal",
+        "depth": "low",
+        "target_skill": "identify explicitly stated action verb for new clubs",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "unrelated synonym"
+      },
+      {
+        "question_no": 13,
+        "type": "main_idea",
+        "depth": "medium",
+        "target_skill": "understand relationship of involvement to degree completion",
+        "evidence_strategy": "paragraph-level",
+        "distractor_strategy": "negative correlation trap"
+      }
+    ],
     "passage": {
       "title": "College Success: Joining Campus Groups to Feel Connected",
       "paragraphs": [
@@ -469,7 +270,7 @@
         "evidence_paragraph": 1,
         "evidence_quote": "Leaving familiar support systems behind often leads to feelings of **homesickness**.",
         "rationale_vi": "Đoạn 1 nêu rõ việc rời xa gia đình/hệ thống hỗ trợ quen thuộc thường dẫn đến cảm giác nhớ nhà (homesickness).",
-        "reasoning_skill": "paraphrase",
+        "reasoning_skill": "inference",
         "source_scope": "printed_passage_only",
         "stretch": false,
         "keyword_overlap_check": "Question: 'Leaving homes, college students, lonely, miss families'. Passage: 'Leaving familiar support systems behind, lonely, homesickness'. Overlap: 'leaving', 'lonely'. Ratio: 2/7 (28%)",
@@ -483,7 +284,7 @@
         "evidence_paragraph": 2,
         "evidence_quote": "Many organizations focus on academic fields or professional development, which are highly beneficial for students looking to prepare for their future careers.",
         "rationale_vi": "Đoạn 2 nêu rõ nhiều tổ chức tập trung vào lĩnh vực học thuật hoặc phát triển chuyên môn, điều này rất có lợi cho sinh viên muốn chuẩn bị cho sự nghiệp tương lai.",
-        "reasoning_skill": "paraphrase",
+        "reasoning_skill": "inference",
         "source_scope": "printed_passage_only",
         "stretch": false,
         "keyword_overlap_check": "Question: 'Joining academic professional group, prepare future careers'. Passage: 'focus on academic fields or professional development, prepare for their future careers'. Overlap: 'academic', 'professional', 'prepare', 'future', 'careers'. Ratio: 5/7 (71%)",
@@ -511,7 +312,7 @@
         "evidence_paragraph": 3,
         "evidence_quote": "Whether participating in a **creative writing** workshop or a recreational sports club, students find a positive outlet to manage stress",
         "rationale_vi": "Đoạn 3 lấy ví dụ cả câu lạc bộ viết sáng tạo và câu lạc bộ thể thao giải trí, cho thấy chúng hữu ích rộng rãi chứ không chỉ dành riêng cho sinh viên học viết sáng tạo.",
-        "reasoning_skill": "paraphrase",
+        "reasoning_skill": "inference",
         "source_scope": "printed_passage_only",
         "stretch": false,
         "keyword_overlap_check": "Question: 'Extracurricular activities, only useful, creative writing'. Passage: 'participating in a creative writing workshop or a recreational sports club'. Overlap: 'extracurricular', 'creative', 'writing'. Ratio: 3/6 (50%)",
@@ -525,7 +326,7 @@
         "evidence_paragraph": 4,
         "evidence_quote": "To ensure these student groups stay **aligned** with university policies, they are typically required to have a **faculty advisor** who guides their activities. This structured guidance helps student leaders learn project management",
         "rationale_vi": "Câu hỏi nói cố vấn học tập phải làm toàn bộ công việc dự án cho nhóm. Tuy nhiên, đoạn 4 chỉ ra cố vấn chỉ đóng vai trò hướng dẫn, còn thủ lĩnh sinh viên mới là người thực hành quản lý dự án.",
-        "reasoning_skill": "paraphrase",
+        "reasoning_skill": "inference",
         "source_scope": "printed_passage_only",
         "stretch": false,
         "keyword_overlap_check": "Question: 'faculty advisor, responsible, all project work'. Passage: 'faculty advisor who guides their activities... student leaders learn project management'. Overlap: 'faculty', 'advisor', 'project'. Ratio: 3/6 (50%)",
@@ -539,10 +340,11 @@
         "evidence_paragraph": 1,
         "evidence_quote": "notes that campuses offer a **vibrant** community outside of the lecture hall.",
         "rationale_vi": "Đoạn 1 viết rõ Dr. Couch nhận thấy các khuôn viên trường đại học cung cấp một cộng đồng sôi nổi (vibrant) bên ngoài giảng đường.",
-        "reasoning_skill": "literal",
+        "reasoning_skill": "vocabulary_in_context",
         "source_scope": "printed_passage_only",
         "stretch": false,
-        "keyword_overlap_check": "Question: 'Couch notes, universities, vibrant community'. Passage: 'campuses offer a vibrant community'. Overlap: 'notes', 'community', 'vibrant'. Ratio: 3/5 (60%)"
+        "keyword_overlap_check": "Question: 'Couch notes, universities, vibrant community'. Passage: 'campuses offer a vibrant community'. Overlap: 'notes', 'community', 'vibrant'. Ratio: 3/5 (60%)",
+        "paraphrase_mapping": "campuses offer a vibrant community -> universities have a vibrant community"
       },
       {
         "id": 7,
@@ -552,10 +354,11 @@
         "evidence_paragraph": 3,
         "evidence_quote": "find a positive outlet to manage stress and **navigate** [R] the demands of university life.",
         "rationale_vi": "Đoạn 3 nói rõ việc tham gia các câu lạc bộ giúp sinh viên kiểm soát căng thẳng và vượt qua/định hướng (navigate) các yêu cầu của đời sống đại học.",
-        "reasoning_skill": "literal",
+        "reasoning_skill": "vocabulary_in_context",
         "source_scope": "printed_passage_only",
         "stretch": false,
-        "keyword_overlap_check": "Question: 'recreational clubs, manage stress, navigate demands'. Passage: 'manage stress and navigate the demands of university life'. Overlap: 'manage', 'stress', 'navigate', 'demands'. Ratio: 4/5 (80%)"
+        "keyword_overlap_check": "Question: 'recreational clubs, manage stress, navigate demands'. Passage: 'manage stress and navigate the demands of university life'. Overlap: 'manage', 'stress', 'navigate', 'demands'. Ratio: 4/5 (80%)",
+        "paraphrase_mapping": "navigate the demands of university life -> navigate the demands of college"
       },
       {
         "id": 8,
@@ -597,7 +400,7 @@
         "evidence_paragraph": 2,
         "evidence_quote": "students develop crucial **soft skills**—such as leadership, communication, and **teamwork**—which can make them much more appealing to a **prospective employer** [R].",
         "rationale_vi": "Đoạn 2 chỉ ra rằng thông qua các hoạt động này, sinh viên phát triển các kỹ năng mềm quan trọng như làm việc nhóm để thu hút nhà tuyển dụng tiềm năng.",
-        "reasoning_skill": "paraphrase",
+        "reasoning_skill": "inference",
         "source_scope": "printed_passage_only",
         "stretch": false,
         "keyword_overlap_check": "Question: 'participating, academic student organizations, benefit students careers'. Passage: 'academic fields or professional development... prepare for their future careers'. Overlap: 'academic', 'organizations', 'careers'. Ratio: 3/7 (42%)",
@@ -722,7 +525,7 @@
         "evidence_paragraph": 5,
         "evidence_quote": "Research indicates that active students show a higher **likelihood** of completing their degrees and maintaining a strong **academic performance**.",
         "rationale_vi": "Đoạn 5 khẳng định nghiên cứu chỉ ra sinh viên năng nổ có khả năng tốt nghiệp cao hơn và kết quả học tập tốt hơn.",
-        "reasoning_skill": "paraphrase",
+        "reasoning_skill": "main_idea",
         "source_scope": "printed_passage_only",
         "stretch": false,
         "keyword_overlap_check": "Question: 'relationship, campus involvement, academic success'. Passage: 'getting involved in campus life is an investment in both personal and academic success'. Overlap: 'campus', 'academic', 'success'. Ratio: 3/5 (60%)",
@@ -1200,6 +1003,248 @@
         "reason": "Essential for reporting decisions, recommendations, and plans on campus."
       }
     ],
+    "grammar_blueprint": [
+      {
+        "question_no": 1,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "simple tense since marker"
+      },
+      {
+        "question_no": 2,
+        "grammar_target": "gerunds and infinitives after verbs",
+        "question_type": "controlled choice",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "advise + object pattern"
+      },
+      {
+        "question_no": 3,
+        "grammar_target": "relative clauses",
+        "question_type": "controlled choice",
+        "depth": "medium",
+        "tested_dimension": "form",
+        "trap": "non-defining pronoun constraints"
+      },
+      {
+        "question_no": 4,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "controlled choice",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "past time marker last semester"
+      },
+      {
+        "question_no": 5,
+        "grammar_target": "gerunds and infinitives after verbs",
+        "question_type": "controlled choice",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "prepositional verb look forward to"
+      },
+      {
+        "question_no": 6,
+        "grammar_target": "relative clauses",
+        "question_type": "controlled choice",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "who vs whom subjective slot"
+      },
+      {
+        "question_no": 7,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "accumulation of past trophies to present"
+      },
+      {
+        "question_no": 8,
+        "grammar_target": "gerunds and infinitives after verbs",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "decide intention to act"
+      },
+      {
+        "question_no": 9,
+        "grammar_target": "relative clauses",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "defining vs non-defining context constraint"
+      },
+      {
+        "question_no": 10,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "past continuous background interruption"
+      },
+      {
+        "question_no": 11,
+        "grammar_target": "gerunds and infinitives after verbs",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "mind verb pattern choice"
+      },
+      {
+        "question_no": 12,
+        "grammar_target": "relative clauses",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "which referring to preceding statement clause"
+      },
+      {
+        "question_no": 13,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "continuous state duration since last year"
+      },
+      {
+        "question_no": 14,
+        "grammar_target": "gerunds and infinitives after verbs",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "manage past achievement"
+      },
+      {
+        "question_no": 15,
+        "grammar_target": "linkers (cause, contrast, result)",
+        "question_type": "writing transfer",
+        "depth": "medium",
+        "tested_dimension": "writing transfer",
+        "trap": "combining with because cause/effect"
+      },
+      {
+        "question_no": 16,
+        "grammar_target": "linkers (cause, contrast, result)",
+        "question_type": "writing transfer",
+        "depth": "medium",
+        "tested_dimension": "writing transfer",
+        "trap": "combining with although contrast linker"
+      },
+      {
+        "question_no": 17,
+        "grammar_target": "linkers (cause, contrast, result)",
+        "question_type": "writing transfer",
+        "depth": "medium",
+        "tested_dimension": "writing transfer",
+        "trap": "combining with so that purpose linker"
+      },
+      {
+        "question_no": 18,
+        "grammar_target": "relative clauses",
+        "question_type": "transformation",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "combining with who defining clause"
+      },
+      {
+        "question_no": 19,
+        "grammar_target": "linkers (cause, contrast, result)",
+        "question_type": "sentence combining",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "combining with since reason linker"
+      },
+      {
+        "question_no": 20,
+        "grammar_target": "linkers (cause, contrast, result)",
+        "question_type": "transformation",
+        "depth": "hard",
+        "tested_dimension": "meaning",
+        "trap": "rewriting with whereas contrast clause"
+      },
+      {
+        "question_no": 21,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "error correction",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "error correction tense marker conflict"
+      },
+      {
+        "question_no": 22,
+        "grammar_target": "gerunds and infinitives after verbs",
+        "question_type": "error correction",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "error correction suggest infinitive trap"
+      },
+      {
+        "question_no": 23,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "error correction",
+        "depth": "hard",
+        "tested_dimension": "use",
+        "trap": "error correction continuous state tense"
+      },
+      {
+        "question_no": 24,
+        "grammar_target": "gerunds and infinitives after verbs",
+        "question_type": "error correction",
+        "depth": "hard",
+        "tested_dimension": "use",
+        "trap": "error correction recommend infinitive trap"
+      },
+      {
+        "question_no": 25,
+        "grammar_target": "relative clauses",
+        "question_type": "error correction",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "error correction which for person trap"
+      },
+      {
+        "question_no": 26,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "error correction",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "error correction yesterday present perfect conflict"
+      },
+      {
+        "question_no": 27,
+        "grammar_target": "gerunds and infinitives after verbs",
+        "question_type": "transformation",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "rewriting expects to replacement"
+      },
+      {
+        "question_no": 28,
+        "grammar_target": "gerunds and infinitives after verbs",
+        "question_type": "transformation",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "rewriting joining gerund subject"
+      },
+      {
+        "question_no": 29,
+        "grammar_target": "subject-verb agreement",
+        "question_type": "contextual choice",
+        "depth": "hard",
+        "tested_dimension": "discourse",
+        "trap": "stretch the number of singular agreement"
+      },
+      {
+        "question_no": 30,
+        "grammar_target": "relative clauses",
+        "question_type": "contextual choice",
+        "depth": "hard",
+        "tested_dimension": "discourse",
+        "trap": "stretch reduced relative active participle"
+      }
+    ],
     "guide": [
       {
         "heading": "#### Card 1: Present Perfect vs Past Simple",
@@ -1275,47 +1320,20 @@
         "target_structure": "present perfect vs past simple",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "has invited",
-          "why_correct_is_unique": "'since' restricts the verb to the present perfect.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "invited",
-              "reason": "Thì quá khứ đơn không dùng với mốc 'since' kéo dài đến hiện tại."
-            },
-            {
-              "option": "invites",
-              "reason": "Thì hiện tại đơn không phù hợp."
-            },
-            {
-              "option": "is inviting",
-              "reason": "Thì hiện tại tiếp diễn không dùng với 'since'."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "invited",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             },
             {
               "option": "invites",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             },
             {
               "option": "is inviting",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             }
           ],
           "context_is_sufficient": true,
@@ -1350,47 +1368,20 @@
         "target_structure": "gerunds and infinitives after verbs",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "to avoid",
-          "why_correct_is_unique": "advise + object + to-infinitive.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "avoid",
-              "reason": "Thiếu 'to' trước động từ nguyên mẫu."
-            },
-            {
-              "option": "avoiding",
-              "reason": "Sau tân ngữ của 'advise' không đi với V-ing."
-            },
-            {
-              "option": "avoided",
-              "reason": "Phân từ quá khứ không đi trực tiếp sau tân ngữ của 'advise'."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "avoid",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             },
             {
               "option": "avoiding",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             },
             {
               "option": "avoided",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             }
           ],
           "context_is_sufficient": true,
@@ -1425,47 +1416,20 @@
         "target_structure": "relative clauses",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "which",
-          "why_correct_is_unique": "Non-defining relative clause referring to a place object acting as subject.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "who",
-              "reason": "Dùng cho người, không dùng cho vật."
-            },
-            {
-              "option": "where",
-              "reason": "Trạng từ quan hệ chỉ nơi chốn, không làm chủ ngữ cho động từ 'stands'."
-            },
-            {
-              "option": "that",
-              "reason": "Không dùng trong mệnh đề quan hệ không xác định (có dấu phẩy)."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "who",
-              "is_correct": false,
-              "why_wrong": "wrong relative pronoun"
+              "reason": "wrong relative pronoun"
             },
             {
               "option": "where",
-              "is_correct": false,
-              "why_wrong": "wrong relative pronoun"
+              "reason": "wrong relative pronoun"
             },
             {
               "option": "that",
-              "is_correct": false,
-              "why_wrong": "missing comma rule/forbidden in non-defining"
+              "reason": "missing comma rule/forbidden in non-defining"
             }
           ],
           "context_is_sufficient": true,
@@ -1500,47 +1464,20 @@
         "target_structure": "present perfect vs past simple",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "joined",
-          "why_correct_is_unique": "'Last semester' points to a completed past period.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "has joined",
-              "reason": "Hiện tại hoàn thành không dùng với mốc thời gian cụ thể trong quá khứ."
-            },
-            {
-              "option": "joins",
-              "reason": "Hiện tại đơn không phù hợp ngữ cảnh quá khứ."
-            },
-            {
-              "option": "is joining",
-              "reason": "Hiện tại tiếp diễn không dùng cho hành động trong quá khứ."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "has joined",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             },
             {
               "option": "joins",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             },
             {
               "option": "is joining",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             }
           ],
           "context_is_sufficient": true,
@@ -1575,47 +1512,20 @@
         "target_structure": "gerunds and infinitives after verbs",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "participating",
-          "why_correct_is_unique": "'look forward to' requires a gerund.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "participate",
-              "reason": "Không dùng bare infinitive sau giới từ to này."
-            },
-            {
-              "option": "to participate",
-              "reason": "Trùng lặp giới từ 'to'."
-            },
-            {
-              "option": "participated",
-              "reason": "Phân từ quá khứ không phù hợp cấu trúc."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "participate",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             },
             {
               "option": "to participate",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             },
             {
               "option": "participated",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             }
           ],
           "context_is_sufficient": true,
@@ -1650,47 +1560,20 @@
         "target_structure": "relative clauses",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "who",
-          "why_correct_is_unique": "Relative pronoun representing a person as subject.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "which",
-              "reason": "Dùng cho vật, không dùng cho người."
-            },
-            {
-              "option": "whom",
-              "reason": "Dùng làm tân ngữ, ở đây cần chủ ngữ cho động từ 'guides'."
-            },
-            {
-              "option": "whose",
-              "reason": "Dùng chỉ sở hữu, phải đi kèm danh từ trực tiếp sau nó."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "which",
-              "is_correct": false,
-              "why_wrong": "wrong relative pronoun"
+              "reason": "wrong relative pronoun"
             },
             {
               "option": "whom",
-              "is_correct": false,
-              "why_wrong": "wrong relative pronoun case"
+              "reason": "wrong relative pronoun case"
             },
             {
               "option": "whose",
-              "is_correct": false,
-              "why_wrong": "wrong relative pronoun type"
+              "reason": "wrong relative pronoun type"
             }
           ],
           "context_is_sufficient": true,
@@ -1725,47 +1608,20 @@
         "target_structure": "present perfect vs past simple",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "has won",
-          "why_correct_is_unique": "Tense links past accomplishment to the present state.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "won",
-              "reason": "Quá khứ đơn chỉ dùng nếu có mốc thời gian cụ thể đã chấm dứt hoàn toàn."
-            },
-            {
-              "option": "wins",
-              "reason": "Hiện tại đơn chỉ thói quen, không nhấn mạnh kết quả tích lũy."
-            },
-            {
-              "option": "is winning",
-              "reason": "Hiện tại tiếp diễn diễn tả hành động đang xảy ra tại thời điểm nói."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "won",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             },
             {
               "option": "wins",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             },
             {
               "option": "is winning",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             }
           ],
           "context_is_sufficient": true,
@@ -1800,47 +1656,20 @@
         "target_structure": "gerunds and infinitives after verbs",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "to establish",
-          "why_correct_is_unique": "'decide' requires to-infinitive.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "establish",
-              "reason": "Không dùng bare infinitive sau 'decide'."
-            },
-            {
-              "option": "establishing",
-              "reason": "'decide' không đi kèm gerund trực tiếp."
-            },
-            {
-              "option": "established",
-              "reason": "Phân từ quá khứ sai cấu trúc."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "establish",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             },
             {
               "option": "establishing",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             },
             {
               "option": "established",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             }
           ],
           "context_is_sufficient": true,
@@ -1875,47 +1704,20 @@
         "target_structure": "relative clauses",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "who",
-          "why_correct_is_unique": "Defining relative clause specifying which mentor among many.",
-          "why_other_options_are_wrong": [
-            {
-              "option": ", who",
-              "reason": "Sử dụng dấu phẩy biến mệnh đề thành không xác định, không phù hợp ngữ cảnh nhiều cố vấn cần xác định."
-            },
-            {
-              "option": ", which",
-              "reason": "Dùng cho vật và có dấu phẩy, sai ngữ cảnh hoàn toàn."
-            },
-            {
-              "option": "whose",
-              "reason": "Dùng chỉ sở hữu, không làm chủ ngữ trực tiếp cho động từ 'lives'."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": ", who",
-              "is_correct": false,
-              "why_wrong": "wrong clause type (non-defining instead of defining)"
+              "reason": "wrong clause type (non-defining instead of defining)"
             },
             {
               "option": ", which",
-              "is_correct": false,
-              "why_wrong": "wrong pronoun and wrong clause type"
+              "reason": "wrong pronoun and wrong clause type"
             },
             {
               "option": "whose",
-              "is_correct": false,
-              "why_wrong": "wrong relative pronoun"
+              "reason": "wrong relative pronoun"
             }
           ],
           "context_is_sufficient": true,
@@ -1950,47 +1752,20 @@
         "target_structure": "present perfect vs past simple",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "was studying",
-          "why_correct_is_unique": "Past continuous describes background action interrupted by a completed action.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "studied",
-              "reason": "Quá khứ đơn không nhấn mạnh tính tiếp diễn của hành động làm nền."
-            },
-            {
-              "option": "has studied",
-              "reason": "Hiện tại hoàn thành không dùng trong ngữ cảnh quá khứ xen kẽ."
-            },
-            {
-              "option": "studies",
-              "reason": "Hiện tại đơn không khớp ngữ cảnh quá khứ."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "studied",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             },
             {
               "option": "has studied",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             },
             {
               "option": "studies",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             }
           ],
           "context_is_sufficient": true,
@@ -2025,47 +1800,20 @@
         "target_structure": "gerunds and infinitives after verbs",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "spending",
-          "why_correct_is_unique": "'mind' requires a gerund.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "spend",
-              "reason": "Không đi với bare infinitive."
-            },
-            {
-              "option": "to spend",
-              "reason": "Mind không đi với to-infinitive."
-            },
-            {
-              "option": "spent",
-              "reason": "Phân từ quá khứ sai cấu trúc."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "spend",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             },
             {
               "option": "to spend",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             },
             {
               "option": "spent",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             }
           ],
           "context_is_sufficient": true,
@@ -2100,47 +1848,20 @@
         "target_structure": "relative clauses",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "which",
-          "why_correct_is_unique": "'which' represents the non-defining clause referring to the preceding statement.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "who",
-              "reason": "Dùng cho người, không dùng cho vật/sự việc."
-            },
-            {
-              "option": "that",
-              "reason": "Không dùng sau dấu phẩy trong mệnh đề quan hệ không xác định."
-            },
-            {
-              "option": "where",
-              "reason": "Trạng từ quan hệ không làm chủ ngữ cho động từ 'enables'."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "who",
-              "is_correct": false,
-              "why_wrong": "wrong relative pronoun type"
+              "reason": "wrong relative pronoun type"
             },
             {
               "option": "that",
-              "is_correct": false,
-              "why_wrong": "forbidden in non-defining clauses"
+              "reason": "forbidden in non-defining clauses"
             },
             {
               "option": "where",
-              "is_correct": false,
-              "why_wrong": "wrong relative pronoun"
+              "reason": "wrong relative pronoun"
             }
           ],
           "context_is_sufficient": true,
@@ -2175,47 +1896,20 @@
         "target_structure": "present perfect vs past simple",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "has been working",
-          "why_correct_is_unique": "'since' combined with active continuation to the present requires present perfect continuous.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "worked",
-              "reason": "Quá khứ đơn chỉ dùng cho hành động đã chấm dứt."
-            },
-            {
-              "option": "is working",
-              "reason": "Hiện tại tiếp diễn không kết hợp với mốc thời gian bắt đầu trong quá khứ 'since'."
-            },
-            {
-              "option": "works",
-              "reason": "Hiện tại đơn không thể hiện khoảng thời gian tích lũy từ quá khứ."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "worked",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             },
             {
               "option": "is working",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             },
             {
               "option": "works",
-              "is_correct": false,
-              "why_wrong": "wrong tense"
+              "reason": "wrong tense"
             }
           ],
           "context_is_sufficient": true,
@@ -2250,47 +1944,20 @@
         "target_structure": "gerunds and infinitives after verbs",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "to develop",
-          "why_correct_is_unique": "'manage' requires to-infinitive.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "develop",
-              "reason": "Không dùng bare infinitive sau 'manage'."
-            },
-            {
-              "option": "developing",
-              "reason": "Manage không đi với gerund."
-            },
-            {
-              "option": "developed",
-              "reason": "Phân từ quá khứ sai cấu trúc."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "develop",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             },
             {
               "option": "developing",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             },
             {
               "option": "developed",
-              "is_correct": false,
-              "why_wrong": "wrong verb pattern"
+              "reason": "wrong verb pattern"
             }
           ],
           "context_is_sufficient": true,
@@ -2319,12 +1986,6 @@
         "target_structure": "linkers (cause, contrast, result)",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2364,12 +2025,6 @@
         "target_structure": "linkers (cause, contrast, result)",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2409,12 +2064,6 @@
         "target_structure": "linkers (cause, contrast, result)",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2454,12 +2103,6 @@
         "target_structure": "relative clauses",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2499,12 +2142,6 @@
         "target_structure": "linkers (cause, contrast, result)",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2544,12 +2181,6 @@
         "target_structure": "linkers (cause, contrast, result)",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2588,12 +2219,6 @@
         "target_structure": "present perfect vs past simple",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2634,12 +2259,6 @@
         "target_structure": "gerunds and infinitives after verbs",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2680,12 +2299,6 @@
         "target_structure": "present perfect vs past simple",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2726,12 +2339,6 @@
         "target_structure": "gerunds and infinitives after verbs",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2772,12 +2379,6 @@
         "target_structure": "relative clauses",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2818,12 +2419,6 @@
         "target_structure": "present perfect vs past simple",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2864,12 +2459,6 @@
         "target_structure": "gerunds and infinitives after verbs",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2908,12 +2497,6 @@
         "target_structure": "gerunds and infinitives after verbs",
         "level": "B1",
         "stretch": false,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [],
@@ -2958,47 +2541,20 @@
         "target_structure": "subject-verb agreement",
         "level": "B2",
         "stretch": true,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "is",
-          "why_correct_is_unique": "'The number of' agrees with a singular verb, unlike 'A number of'.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "are",
-              "reason": "Dùng cho danh từ số nhiều, sai quy tắc 'The number of'."
-            },
-            {
-              "option": "have",
-              "reason": "Sai cấu trúc tiếp diễn và sai dạng số ít."
-            },
-            {
-              "option": "were",
-              "reason": "Thì quá khứ số nhiều, không phù hợp quy tắc số ít."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "are",
-              "is_correct": false,
-              "why_wrong": "agreement error"
+              "reason": "agreement error"
             },
             {
               "option": "have",
-              "is_correct": false,
-              "why_wrong": "agreement error"
+              "reason": "agreement error"
             },
             {
               "option": "were",
-              "is_correct": false,
-              "why_wrong": "agreement error"
+              "reason": "agreement error"
             }
           ],
           "context_is_sufficient": true,
@@ -3033,47 +2589,20 @@
         "target_structure": "relative clauses",
         "level": "B2",
         "stretch": true,
-        "logic_validation": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "participating",
-          "why_correct_is_unique": "Active reduced relative clause uses present participle.",
-          "why_other_options_are_wrong": [
-            {
-              "option": "participate",
-              "reason": "Thiếu đại từ quan hệ 'who' nếu dùng động từ chia trực tiếp."
-            },
-            {
-              "option": "who participating",
-              "reason": "Sai cấu trúc vì sau 'who' phải là động từ chia thì chứ không dùng V-ing đơn lẻ."
-            },
-            {
-              "option": "are participating",
-              "reason": "Khiến câu có hai động từ chính chia thì mà không có từ nối."
-            }
-          ]
-        },
         "one_answer_check": {
           "has_exactly_one_valid_answer": true,
           "why_other_options_are_wrong": [
             {
               "option": "participate",
-              "is_correct": false,
-              "why_wrong": "wrong relative pronoun usage"
+              "reason": "wrong relative pronoun usage"
             },
             {
               "option": "who participating",
-              "is_correct": false,
-              "why_wrong": "wrong relative clause structure"
+              "reason": "wrong relative clause structure"
             },
             {
               "option": "are participating",
-              "is_correct": false,
-              "why_wrong": "agreement/clause structure error"
+              "reason": "agreement/clause structure error"
             }
           ],
           "context_is_sufficient": true,
@@ -3210,118 +2739,144 @@
       {
         "question_id": 1,
         "correct_answer": "TRUE",
+        "question_type": "True/False/Not Given",
         "evidence_quote": "Leaving familiar support systems behind often leads to feelings of **homesickness**.",
         "evidence_paragraph": 1,
         "explanation_vi": "Câu hỏi nói rằng việc rời xa gia đình có thể khiến sinh viên mới cảm thấy cô đơn và nhớ nhà. Điều này hoàn toàn khớp với thông tin trong đoạn 1: 'Leaving familiar support systems behind often leads to feelings of homesickness.'",
-        "why_others_wrong_vi": "Đáp án là TRUE nên FALSE và NOT GIVEN là sai.",
+        "why_others_wrong_vi": "Các phương án FALSE và NOT GIVEN đều không chính xác vì thông tin trong bài viết xác nhận nhận định này là đúng.",
+        "depth_check_vi": "Câu hỏi suy luận (Inference) mức độ trung bình để liên kết việc rời xa gia đình với sự nhớ nhà.",
         "tip_vi": "Tìm các cụm từ đồng nghĩa như 'leaving familiar support systems' = 'leaving their homes', 'homesickness' = 'miss their families'."
       },
       {
         "question_id": 2,
         "correct_answer": "TRUE",
+        "question_type": "True/False/Not Given",
         "evidence_paragraph": 2,
         "evidence_quote": "Many organizations focus on academic fields or professional development, which are highly beneficial for students looking to prepare for their future careers.",
         "explanation_vi": "Nhận định trong câu hỏi hoàn toàn khớp với câu đầu tiên của đoạn 2: việc tham gia các nhóm học thuật/chuyên môn rất có lợi cho việc chuẩn bị sự nghiệp tương lai.",
-        "why_others_wrong_vi": "Đáp án là TRUE nên các phương án trái ngược là sai.",
+        "why_others_wrong_vi": "Các phương án khác (FALSE, NOT GIVEN) đều sai vì thông tin bài đọc đã khẳng định trực tiếp tính có lợi cho nghề nghiệp tương lai.",
+        "depth_check_vi": "Câu hỏi suy luận (Inference) mức độ trung bình để xác nhận các lợi ích nghề nghiệp từ nhóm học thuật.",
         "tip_vi": "Đối chiếu từ khóa 'academic or professional group' = 'academic fields or professional development'."
       },
       {
         "question_id": 3,
         "correct_answer": "NOT GIVEN",
+        "question_type": "True/False/Not Given",
         "evidence_paragraph": 2,
         "evidence_quote": "For example, joining a business society or an economics club allows members to hear from experts, attend networking events, and apply their classroom knowledge to real-world projects.",
         "explanation_vi": "Mặc dù đoạn 2 đưa ra ví dụ về các câu lạc bộ kinh tế và kinh doanh, bài đọc không hề đề cập đến việc hầu hết các doanh nghiệp lớn có thích tuyển sinh viên từ các nhóm này hơn hay không.",
-        "why_others_wrong_vi": "Không có thông tin này trong bài đọc.",
+        "why_others_wrong_vi": "Bài đọc chỉ nói sinh viên được nghe chuyên gia và kết nối, chứ không nói về việc các doanh nghiệp thích tuyển đối tượng nào hơn.",
+        "depth_check_vi": "Câu hỏi suy luận (Inference) mức độ trung bình yêu cầu học sinh phân biệt giữa suy đoán và thông tin thực tế được viết trong bài.",
         "tip_vi": "Nếu một nhận định có vẻ hợp lý ngoài đời thực nhưng không được xác nhận cụ thể trong bài đọc, hãy chọn NOT GIVEN."
       },
       {
         "question_id": 4,
         "correct_answer": "FALSE",
+        "question_type": "True/False/Not Given",
         "evidence_paragraph": 3,
         "evidence_quote": "Whether participating in a **creative writing** workshop or a recreational sports club, students find a positive outlet to manage stress",
         "explanation_vi": "Câu hỏi khẳng định hoạt động ngoại khóa chỉ hữu ích cho sinh viên học viết sáng tạo. Tuy nhiên, đoạn 3 đề cập cả câu lạc bộ viết sáng tạo lẫn câu lạc bộ thể thao giải trí, phủ định tính chất 'chỉ dành cho viết sáng tạo'.",
-        "why_others_wrong_vi": "Thông tin trong câu hỏi trái ngược trực tiếp với bài viết.",
+        "why_others_wrong_vi": "Các phương án TRUE và NOT GIVEN đều sai vì thông tin bài học chỉ ra sự đa dạng các nhóm hữu ích, trực tiếp phủ nhận từ 'only' trong nhận định.",
+        "depth_check_vi": "Câu hỏi suy luận (Inference) mức độ trung bình kiểm tra từ khóa tuyệt đối 'only'.",
         "tip_vi": "Hãy cẩn thận với những từ ngữ mang tính tuyệt đối như 'only', 'always'."
       },
       {
         "question_id": 5,
         "correct_answer": "FALSE",
+        "question_type": "True/False/Not Given",
         "evidence_paragraph": 4,
         "evidence_quote": "To ensure these student groups stay **aligned** with university policies, they are typically required to have a **faculty advisor** who guides their activities. This structured guidance helps student leaders learn project management",
         "explanation_vi": "Câu hỏi nói cố vấn học tập phải làm toàn bộ công việc dự án cho nhóm. Tuy nhiên, đoạn 4 chỉ ra cố vấn chỉ đóng vai trò hướng dẫn, còn thủ lĩnh sinh viên mới là người thực hành quản lý dự án.",
-        "why_others_wrong_vi": "Thông tin trong câu hỏi trái ngược trực tiếp với bài viết.",
+        "why_others_wrong_vi": "Các phương án khác (TRUE, NOT GIVEN) sai vì bài đọc chỉ rõ sinh viên là người làm việc dự án để học quản lý dự án.",
+        "depth_check_vi": "Câu hỏi suy luận (Inference) mức độ trung bình phân biệt vai trò hỗ trợ và thực hiện.",
         "tip_vi": "Chú ý phân biệt vai trò của giáo viên cố vấn ('guides') và của sinh viên ('student leaders learn project management')."
       },
       {
         "question_id": 6,
         "correct_answer": "vibrant",
+        "question_type": "Gap Fill",
         "evidence_quote": "notes that campuses offer a **vibrant** community outside of the lecture hall.",
         "evidence_paragraph": 1,
         "explanation_vi": "Vị trí cần điền một tính từ đứng trước danh từ 'community'. Đoạn 1 nêu rõ Couch ghi nhận các khuôn viên trường đại học cung cấp một cộng đồng sôi nổi (vibrant) bên ngoài giảng đường.",
-        "why_others_wrong_vi": "Các từ khác không phù hợp ngữ pháp hoặc ý nghĩa.",
+        "why_others_wrong_vi": "Các từ khác từ đoạn văn như 'lonely', 'excited' không đi kèm 'community' và không phản ánh đúng lời nhận xét tích cực ngoài giảng đường.",
+        "depth_check_vi": "Câu hỏi từ vựng trong ngữ cảnh (Vocabulary in Context) mức độ thấp để kiểm tra tính từ mô tả cộng đồng.",
         "tip_vi": "Xác định loại từ cần điền (tính từ) và quét các tính từ mô tả cộng đồng trong đoạn 1."
       },
       {
         "question_id": 7,
         "correct_answer": "navigate",
+        "question_type": "Gap Fill",
         "evidence_paragraph": 3,
         "evidence_quote": "find a positive outlet to manage stress and **navigate** [R] the demands of university life.",
         "explanation_vi": "Vị trí cần điền một động từ nguyên mẫu đứng sau từ nối 'and'. Trong đoạn 3, động từ 'navigate' đi cùng cụm 'manage stress and navigate the demands'.",
-        "why_others_wrong_vi": "Các từ khác không phù hợp ngữ pháp hoặc ý nghĩa.",
+        "why_others_wrong_vi": "Các động từ khác như 'prevent' hay 'manage' không đúng vị trí hoặc ý nghĩa ngữ pháp chỉ việc định hướng các yêu cầu học tập.",
+        "depth_check_vi": "Câu hỏi từ vựng trong văn cảnh (Vocabulary in Context) mức độ thấp để kiểm tra động từ đi kèm cụm 'the demands of'.",
         "tip_vi": "Tìm động từ song hành với 'manage' qua từ nối 'and'."
       },
       {
         "question_id": 8,
         "correct_answer": "faculty advisor",
+        "question_type": "Gap Fill",
         "evidence_paragraph": 4,
         "evidence_quote": "To ensure these student groups stay **aligned** with university policies, they are typically required to have a **faculty advisor** who guides their activities.",
         "explanation_vi": "Từ cần điền là danh từ chỉ người/đối tượng quản lý nhóm. Đoạn 4 nêu rõ yêu cầu bắt buộc là có một giáo viên cố vấn (faculty advisor).",
-        "why_others_wrong_vi": "Các danh từ khác không phù hợp ngữ cảnh hoặc ngữ pháp.",
+        "why_others_wrong_vi": "Các chức danh khác như 'student leader' không phù hợp về ý nghĩa giám sát tuân thủ chính sách của trường.",
+        "depth_check_vi": "Câu hỏi nhận biết trực tiếp (Literal) mức độ thấp để điền danh từ chỉ vai trò cố vấn.",
         "tip_vi": "Tìm danh từ đứng trước mệnh đề quan hệ 'who guides'."
       },
       {
         "question_id": 9,
         "correct_answer": "establish",
+        "question_type": "Gap Fill",
         "evidence_paragraph": 5,
         "evidence_quote": "Dr. Couch suggests that if students cannot find a club that matches their specific interests, they should **establish** their own.",
         "explanation_vi": "Vị trí cần điền một động từ nguyên mẫu đứng sau trợ động từ 'can'. Đoạn 5 ghi nhận lời khuyên của Dr. Couch là sinh viên nên tự thành lập (establish) câu lạc bộ riêng nếu không tìm thấy cái phù hợp.",
-        "why_others_wrong_vi": "Các từ khác không phù hợp ngữ nghĩa hoặc ngữ pháp.",
+        "why_others_wrong_vi": "Các động từ như 'find' hay 'match' không phù hợp ngữ pháp hoặc ý nghĩa tự thành lập nhóm mới.",
+        "depth_check_vi": "Câu hỏi nhận biết trực tiếp (Literal) mức độ thấp về động từ thành lập.",
         "tip_vi": "Tìm động từ thể hiện hành động tạo dựng/tự lập nhóm mới."
       },
       {
         "question_id": 10,
         "correct_answer": "Develop key soft skills like teamwork to appeal to employers",
+        "question_type": "Multiple Choice",
         "evidence_paragraph": 2,
         "evidence_quote": "students develop crucial **soft skills**—such as leadership, communication, and **teamwork**—which can make them much more appealing to a **prospective employer** [R].",
         "explanation_vi": "Đoạn 2 nêu rõ thông qua các hoạt động này, sinh viên phát triển kỹ năng mềm quan trọng như kỹ năng lãnh đạo, giao tiếp và làm việc nhóm, giúp họ trở nên hấp dẫn hơn với nhà tuyển dụng tương lai.",
-        "why_others_wrong_vi": "Phương án A, D chứa các chi tiết không có trong bài đọc (bố mẹ giới thiệu, tránh mạng lưới quan hệ). Phương án C ngược với tinh thần của đoạn văn là khuyến khích hoạt động ngoài giờ học.",
+        "why_others_wrong_vi": "Phương án A (xin giới thiệu từ bố mẹ) không xuất hiện. Phương án C (chỉ tập trung vào giảng đường) trái với bài đọc. Phương án D (tránh sự kiện kết nối) ngược hoàn toàn với lời khuyên tham gia sự kiện kết nối.",
+        "depth_check_vi": "Câu hỏi suy luận (Inference) mức độ trung bình yêu cầu tìm chi tiết tương đương với 'benefit students' careers'.",
         "tip_vi": "Quét từ khóa 'appealing to prospective employer' để tìm câu trả lời tương đương trong đoạn văn."
       },
       {
         "question_id": 11,
         "correct_answer": "It helps prevent burnout by providing a necessary mental break.",
+        "question_type": "Multiple Choice",
         "evidence_paragraph": 3,
         "evidence_quote": "These extracurricular activities offer a healthy balance, helping to prevent burnout and giving students a much-needed mental break between exams.",
         "explanation_vi": "Đoạn 3 chỉ ra rằng câu lạc bộ xã hội mang lại sự cân bằng, giúp ngăn ngừa kiệt sức (prevent burnout) và đem lại một kỳ nghỉ tinh thần cần thiết giữa các kỳ thi.",
-        "why_others_wrong_vi": "Phương án A, C, D đều chứa thông tin sai lệch không được đề cập hoặc trái ngược với bài đọc (là lớp học bắt buộc, là cách duy nhất nhận hỗ trợ tài chính, bảo đảm có việc ngay).",
+        "why_others_wrong_vi": "Phương án A sai vì đây không phải lớp bắt buộc. Phương án C sai vì đây không phải là cách duy nhất nhận hỗ trợ tài chính. Phương án D sai vì không có bảo đảm việc làm ngay.",
+        "depth_check_vi": "Câu hỏi nguyên nhân - kết quả (Cause & Effect) mức độ trung bình về lợi ích ngăn ngừa kiệt sức.",
         "tip_vi": "Đối chiếu lý do có lợi với các cụm từ 'prevent burnout' và 'mental break'."
       },
       {
         "question_id": 12,
         "correct_answer": "By providing financial assistance or meeting spaces",
+        "question_type": "Multiple Choice",
         "evidence_paragraph": 4,
         "evidence_quote": "support them by providing **financial assistance** or meeting spaces.",
         "explanation_vi": "Đoạn 4 nói rằng các trường đại học hỗ trợ các tổ chức này bằng cách cung cấp trợ giúp tài chính hoặc không gian họp hành.",
-        "why_others_wrong_vi": "Các phương án khác (không có cố vấn, cấm lập nhóm, giảm thời gian học) hoàn toàn sai lệch hoặc trái với nội dung đoạn văn.",
+        "why_others_wrong_vi": "Phương án A (yêu cầu làm không có cố vấn) sai. Phương án C (cấm mở câu lạc bộ) sai. Phương án D (giảm giờ học) không được đề cập.",
+        "depth_check_vi": "Câu hỏi nhận biết trực tiếp (Literal) mức độ thấp về các hình thức hỗ trợ tài chính và không gian.",
         "tip_vi": "Tìm từ khóa 'support' và quét thông tin đi kèm trong đoạn 4."
       },
       {
         "question_id": 13,
         "correct_answer": "An increased likelihood of graduation and better academic performance",
+        "question_type": "Multiple Choice",
         "evidence_paragraph": 5,
         "evidence_quote": "Research indicates that active students show a higher **likelihood** of completing their degrees and maintaining a strong **academic performance**.",
         "explanation_vi": "Đoạn 5 khẳng định nghiên cứu chỉ ra sinh viên năng nổ có khả năng tốt nghiệp cao hơn và kết quả học tập tốt hơn.",
-        "why_others_wrong_vi": "Các phương án khác đưa ra thông tin trái ngược (tỷ lệ tốt nghiệp thấp hơn, nhận việc làm cố vấn ngay lập tức, loại bỏ nhu cầu hệ thống nâng đỡ) đều sai.",
+        "why_others_wrong_vi": "Phương án A (tỷ lệ tốt nghiệp thấp) ngược nghĩa bài đọc. Phương án C (làm cố vấn học tập ngay) lấy sai từ khóa đoạn 4. Phương án D (loại bỏ hệ thống hỗ trợ) sai lệch thông tin.",
+        "depth_check_vi": "Câu hỏi ý chính (Main Idea) mức độ trung bình để tổng kết mối quan hệ giữa tham gia hoạt động ngoại khóa và thành công học tập.",
         "tip_vi": "Tìm các cụm từ đồng nghĩa trong đoạn 5 như 'completing their degrees' = 'graduation', 'academic performance' = 'academic success'."
       }
     ],
@@ -3329,167 +2884,361 @@
       {
         "question_id": 1,
         "correct_answer": "has invited",
-        "analysis_vi": "Dùng thì Hiện tại Hoàn thành vì có từ chỉ thời gian bắt đầu từ quá khứ 'since'.",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Cấu trúc Hiện tại hoàn thành: S + has/have + V3/ed. Diễn tả hành động bắt đầu trong quá khứ kéo dài đến hiện tại.",
+        "use_in_context_vi": "Mốc thời gian bắt đầu 'Since the student organization was established in 2024' (Kể từ khi được thành lập vào năm 2024) yêu cầu chia động từ chính ở Hiện tại Hoàn thành.",
+        "trap_logic_vi": "Bẫy dùng thì quá khứ đơn 'invited' do nhầm lẫn mốc 2024 là sự việc đã kết thúc hoàn toàn.",
+        "why_others_wrong_vi": "invited: Quá khứ đơn không khớp với 'since'. invites: Hiện tại đơn sai nghĩa thời gian. is inviting: Hiện tại tiếp diễn không diễn tả kết quả từ quá khứ.",
+        "depth_check_vi": "Câu hỏi Form Check ở mức độ thấp, nhận diện cấu trúc tương thích với giới từ 'since'.",
+        "analysis_vi": "Giới từ 'since' đòi hỏi mệnh đề chính chia ở Hiện tại hoàn thành để thể hiện tính liên kết kéo dài đến nay.",
         "tip_vi": "Dấu hiệu 'since' chỉ hành động kéo dài đến hiện tại."
       },
       {
         "question_id": 2,
         "correct_answer": "to avoid",
-        "analysis_vi": "Cấu trúc 'advise someone to do something' yêu cầu động từ nguyên mẫu có 'to'.",
+        "grammar_target": "gerunds and infinitives after verbs",
+        "form_meaning_vi": "Cấu trúc to-infinitive đóng vai trò tân ngữ gián tiếp sau cấu trúc tác động: S + advise + O + to-V.",
+        "use_in_context_vi": "Động từ 'advised' đi với tân ngữ 'the student leaders' yêu cầu động từ theo sau ở dạng nguyên mẫu có to.",
+        "trap_logic_vi": "Bẫy dùng danh động từ 'avoiding' do nhầm lẫn cấu trúc khuyên bảo trực tiếp 'advise doing' (không có tân ngữ người).",
+        "why_others_wrong_vi": "avoid: Bare infinitive sai ngữ pháp. avoiding: Gerund không đi sau tân ngữ. avoided: Past participle sai cấu trúc.",
+        "depth_check_vi": "Câu hỏi Form Check mức độ thấp để kiểm tra thuộc tính động từ đi sau Advise.",
+        "analysis_vi": "Advise có hai cấu trúc chính: advise + V-ing (khuyên làm gì chung chung) và advise + O + to-V (khuyên ai đó làm gì cụ thể).",
         "tip_vi": "advise + object + to-infinitive."
       },
       {
         "question_id": 3,
         "correct_answer": "which",
-        "analysis_vi": "Dùng đại từ quan hệ 'which' thay thế cho vật trong mệnh đề quan hệ không xác định.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Đại từ quan hệ 'which' thay thế cho danh từ chỉ vật làm chủ ngữ.",
+        "use_in_context_vi": "Cụm danh từ chỉ vật 'The campus activity hall' đứng trước mệnh đề quan hệ không xác định (có dấu phẩy) đòi hỏi dùng 'which' làm chủ ngữ cho động từ 'stands'.",
+        "trap_logic_vi": "Bẫy dùng đại từ 'that' vốn bị cấm trong mệnh đề quan hệ không xác định (mệnh đề có dấu phẩy).",
+        "why_others_wrong_vi": "who: Chỉ dùng cho người. where: Trạng từ chỉ nơi chốn không thể làm chủ ngữ của động từ 'stands'. that: Không đứng sau dấu phẩy trong mệnh đề không xác định.",
+        "depth_check_vi": "Câu hỏi Form Check mức độ trung bình kiểm tra giới hạn của 'that' trong mệnh đề không xác định.",
+        "analysis_vi": "Trong mệnh đề quan hệ không xác định (non-defining), ta chỉ dùng 'which' để chỉ vật và không bao giờ dùng 'that'.",
         "tip_vi": "Mệnh đề không xác định có dấu phẩy dùng 'which', cấm dùng 'that'."
       },
       {
         "question_id": 4,
         "correct_answer": "joined",
-        "analysis_vi": "Dùng thì Quá khứ Đơn vì hành động xảy ra tại thời điểm cụ thể đã qua 'Last semester'.",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Cấu trúc Quá khứ đơn: S + V2/ed. Diễn tả hành động xảy ra và kết thúc hoàn toàn tại thời điểm cụ thể trong quá khứ.",
+        "use_in_context_vi": "Trạng ngữ chỉ thời gian đã chấm dứt 'Last semester' (Học kỳ trước) yêu cầu sử dụng thì Quá khứ Đơn.",
+        "trap_logic_vi": "Bẫy dùng thì Hiện tại hoàn thành 'has joined' do liên kết hoạt động với nghề nghiệp hiện tại.",
+        "why_others_wrong_vi": "has joined: Hiện tại hoàn thành không dùng với mốc thời gian cụ thể đã qua. joins: Hiện tại đơn sai thời gian. is joining: Hiện tại tiếp diễn sai ngữ cảnh hành động đã qua.",
+        "depth_check_vi": "Câu hỏi Form Check mức độ thấp nhận diện mốc thời gian hoàn thành cụ thể.",
+        "analysis_vi": "Các trạng từ như 'last semester', 'yesterday', 'in 2020' là các mốc thời gian kết thúc hẳn, buộc dùng Quá khứ đơn.",
         "tip_vi": "Dấu hiệu 'Last semester' đi với Quá khứ Đơn."
       },
       {
         "question_id": 5,
         "correct_answer": "participating",
-        "analysis_vi": "Sau cụm từ 'look forward to' dùng danh động từ V-ing.",
+        "grammar_target": "gerunds and infinitives after verbs",
+        "form_meaning_vi": "Cấu trúc danh động từ (Gerund - V-ing) đứng sau giới từ.",
+        "use_in_context_vi": "Cụm động từ 'look forward to' đi kèm giới từ 'to', do đó động từ chính theo sau phải chia ở dạng danh động từ (V-ing).",
+        "trap_logic_vi": "Bẫy dùng động từ nguyên mẫu 'to participate' do nhầm lẫn từ 'to' trong cụm là to-infinitive.",
+        "why_others_wrong_vi": "participate: Bare infinitive sai sau giới từ. to participate: Trùng giới từ 'to'. participated: Phân từ quá khứ sai cấu trúc.",
+        "depth_check_vi": "Câu hỏi Form Check mức độ thấp kiểm tra nhận diện giới từ 'to' trong cụm cố định.",
+        "analysis_vi": "Trong 'look forward to', 'to' là một giới từ thực sự chứ không phải là từ tạo động từ nguyên mẫu, nên bắt buộc dùng V-ing.",
         "tip_vi": "look forward to + V-ing."
       },
       {
         "question_id": 6,
         "correct_answer": "who",
-        "analysis_vi": "Dùng đại từ quan hệ 'who' thay thế cho chủ ngữ chỉ người.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Đại từ quan hệ 'who' thay thế cho danh từ chỉ người đóng vai trò chủ ngữ.",
+        "use_in_context_vi": "Danh từ chỉ người 'faculty advisor' đóng vai trò chủ ngữ cho mệnh đề phụ, cần đại từ làm chủ ngữ đứng trước động từ 'guides'.",
+        "trap_logic_vi": "Bẫy dùng 'whom' vốn chỉ làm tân ngữ, hoặc 'whose' chỉ sở hữu.",
+        "why_others_wrong_vi": "which: Dùng chỉ vật. whom: Dùng làm tân ngữ (ở đây cần chủ ngữ cho 'guides'). whose: Đại từ sở hữu đòi hỏi danh từ đi kèm.",
+        "depth_check_vi": "Câu hỏi Form Check mức độ thấp phân biệt chức năng chủ ngữ/tân ngữ của đại từ quan hệ chỉ người.",
+        "analysis_vi": "Đứng ngay trước động từ chính 'guides' làm vị ngữ trong mệnh đề quan hệ, bắt buộc phải dùng đại từ làm chủ ngữ 'who'.",
         "tip_vi": "who làm chủ ngữ thay cho người."
       },
       {
         "question_id": 7,
         "correct_answer": "has won",
-        "analysis_vi": "Dùng thì Hiện tại Hoàn thành để diễn tả kết quả tích lũy tính đến hiện tại.",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Hiện tại hoàn thành diễn tả hành động xảy ra trong quá khứ kéo dài hoặc để lại kết quả/thành tựu tích lũy ở hiện tại.",
+        "use_in_context_vi": "Bối cảnh so sánh quá khứ khởi đầu ('started with only five') với hiện tại tích lũy ('Today, it is... and has won...') đòi hỏi dùng Hiện tại Hoàn thành thể hiện thành tựu tính đến nay.",
+        "trap_logic_vi": "Bẫy dùng quá khứ đơn 'won' vốn chỉ dùng cho một giải đấu cụ thể đã kết thúc hoàn toàn.",
+        "why_others_wrong_vi": "won: Quá khứ đơn chỉ dùng cho hành động kết thúc ở mốc xác định. wins: Hiện tại đơn sai nghĩa kết quả tích lũy. is winning: Hiện tại tiếp diễn sai ngữ cảnh tích lũy.",
+        "depth_check_vi": "Câu hỏi Meaning Contrast mức độ trung bình yêu cầu học viên phân biệt việc tích lũy kết quả với hành động quá khứ đơn thuần.",
+        "analysis_vi": "Khi nói về thành quả đạt được tính đến thời điểm hiện tại ('Today... has won...'), Hiện tại hoàn thành là thì phù hợp nhất.",
         "tip_vi": "Liên kết kết quả quá khứ với hiện tại."
       },
       {
         "question_id": 8,
         "correct_answer": "to establish",
-        "analysis_vi": "Động từ 'decide' đi kèm động từ nguyên mẫu có 'to' (to-infinitive).",
+        "grammar_target": "gerunds and infinitives after verbs",
+        "form_meaning_vi": "Cấu trúc động từ nguyên mẫu có to làm tân ngữ sau động từ chỉ ý chí: S + decide + to-V.",
+        "use_in_context_vi": "Động từ 'decide' diễn tả một quyết định hướng tới hành động trong tương lai, yêu cầu động từ theo sau dạng to-infinitive.",
+        "trap_logic_vi": "Bẫy dùng danh động từ 'establishing' do nhầm lẫn sau giới từ hoặc động từ thảo luận trước đó.",
+        "why_others_wrong_vi": "establish: Bare infinitive sai ngữ pháp. establishing: Gerund không đi sau 'decide'. established: Phân từ quá khứ không đi sau 'decide'.",
+        "depth_check_vi": "Câu hỏi Meaning Contrast mức độ trung bình kiểm tra ý nghĩa của quyết định thực hiện hành động.",
+        "analysis_vi": "Decide thuộc nhóm động từ chỉ ý định, ý muốn hướng tới tương lai, luôn đi kèm động từ nguyên mẫu có 'to'.",
         "tip_vi": "decide + to-infinitive."
       },
       {
         "question_id": 9,
         "correct_answer": "who",
-        "analysis_vi": "Đây là mệnh đề quan hệ xác định làm rõ cố vấn nào giúp đỡ, không dùng dấu phẩy.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Mệnh đề quan hệ xác định (defining) giới hạn thông tin để làm rõ danh từ đứng trước.",
+        "use_in_context_vi": "Do có nhiều cố vấn ký túc xá ('many student mentors'), mệnh đề quan hệ cần giới hạn cụ thể người sống cạnh phòng để xác định đối tượng giúp đỡ, do đó là mệnh đề xác định và không dùng dấu phẩy.",
+        "trap_logic_vi": "Bẫy dùng dấu phẩy kết hợp 'who' (', who') tạo thành mệnh đề không xác định, biến thông tin thành bổ sung không cần thiết.",
+        "why_others_wrong_vi": ", who: Sai vì tạo mệnh đề không xác định có dấu phẩy. , which: Sai pronoun chỉ vật và dấu phẩy. whose: Sai vì không đóng vai trò chủ ngữ.",
+        "depth_check_vi": "Câu hỏi Context/Discourse mức độ trung bình yêu cầu học viên phân tích bối cảnh 'nhiều cố vấn' để chọn mệnh đề xác định phù hợp.",
+        "analysis_vi": "Context 'many student mentors' đòi hỏi mệnh đề quan hệ phải đóng vai trò xác định danh từ (defining relative clause) để câu có nghĩa đầy đủ.",
         "tip_vi": "Xác định đối tượng trong nhóm nhiều người."
       },
       {
         "question_id": 10,
         "correct_answer": "was studying",
-        "analysis_vi": "Dùng thì Quá khứ Tiếp diễn mô tả hành động làm nền đang xảy ra trong quá khứ.",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Quá khứ tiếp diễn diễn tả hành động đang diễn ra tại một thời điểm trong quá khứ làm nền cho hành động khác xen vào.",
+        "use_in_context_vi": "Liên từ 'While' diễn tả quá trình đang học bài ở thư viện ('was studying') bị hành động nhìn thấy tấm áp phích ('saw') cắt ngang.",
+        "trap_logic_vi": "Bẫy dùng thì quá khứ đơn 'studied' làm mất đi tính nền tảng/tiếp diễn của hành động.",
+        "why_others_wrong_vi": "studied: Quá khứ đơn không nhấn mạnh hành động nền. has studied: Hiện tại hoàn thành sai ngữ cảnh quá khứ. studies: Hiện tại đơn sai thời gian.",
+        "depth_check_vi": "Câu hỏi Meaning Contrast mức độ trung bình yêu cầu phân tích sự kết hợp giữa hành động nền và hành động xen vào.",
+        "analysis_vi": "Sự kết hợp giữa Quá khứ tiếp diễn (was/were V-ing) and Quá khứ đơn (V2/ed) được sử dụng để chỉ một hành động đang xảy ra thì bị một hành động khác xen vào.",
         "tip_vi": "Hành động đang diễn ra thì bị hành động khác xen vào."
       },
       {
         "question_id": 11,
         "correct_answer": "spending",
-        "analysis_vi": "Động từ 'mind' đi kèm danh động từ V-ing.",
+        "grammar_target": "gerunds and infinitives after verbs",
+        "form_meaning_vi": "Cấu trúc danh động từ (Gerund) làm tân ngữ cho động từ chỉ thái độ: S + mind + V-ing.",
+        "use_in_context_vi": "Động từ 'mind' (phiền/ngại) đòi hỏi động từ chính đi sau chia ở dạng danh động từ (V-ing).",
+        "trap_logic_vi": "Bẫy dùng động từ nguyên mẫu 'to spend' do nhầm lẫn thói quen dùng to-infinitive sau các động từ khuyên bảo.",
+        "why_others_wrong_vi": "spend: Bare infinitive sai ngữ pháp. to spend: To-infinitive không đi sau 'mind'. spent: Quá khứ phân từ không phù hợp cấu trúc.",
+        "depth_check_vi": "Câu hỏi Meaning Contrast mức độ trung bình kiểm tra nhận diện thái độ với hành động thông qua 'mind'.",
+        "analysis_vi": "Động từ 'mind' thuộc nhóm bắt buộc đi kèm với V-ing để thể hiện thái độ đối với việc làm gì đó.",
         "tip_vi": "mind + V-ing."
       },
       {
         "question_id": 12,
         "correct_answer": "which",
-        "analysis_vi": "Sử dụng 'which' làm chủ ngữ bổ nghĩa cho cả mệnh đề đứng trước.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Đại từ quan hệ 'which' đứng sau dấu phẩy có thể thay thế cho toàn bộ mệnh đề/sự việc đứng trước nó.",
+        "use_in_context_vi": "Đại từ quan hệ cần thay thế cho cả sự việc 'nhà trường cung cấp hỗ trợ tài chính' để dẫn tới kết quả giúp câu lạc bộ tổ chức chuyến đi, do đó dùng 'which'.",
+        "trap_logic_vi": "Bẫy dùng 'that' vốn bị cấm sau dấu phẩy, hoặc 'where' chỉ nơi chốn.",
+        "why_others_wrong_vi": "who: Chỉ dùng cho người. that: Không đứng sau dấu phẩy thay thế mệnh đề. where: Chỉ nơi chốn, không làm chủ ngữ của 'enables'.",
+        "depth_check_vi": "Câu hỏi Meaning Contrast mức độ trung bình kiểm tra khả năng sử dụng 'which' thay thế cho cả mệnh đề.",
+        "analysis_vi": "Which ngoài thay thế danh từ chỉ vật còn có chức năng thay thế cho toàn bộ ý tưởng của mệnh đề trước nó sau dấu phẩy.",
         "tip_vi": "which thay thế cho cả mệnh đề đứng trước sau dấu phẩy."
       },
       {
         "question_id": 13,
         "correct_answer": "has been working",
-        "analysis_vi": "Dùng Hiện tại Hoàn thành Tiếp diễn nhấn mạnh tính liên tục của hành động kéo dài từ quá khứ đến nay.",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Hiện tại hoàn thành tiếp diễn nhấn mạnh khoảng thời gian kéo dài liên tục của hành động từ quá khứ đến hiện tại.",
+        "use_in_context_vi": "Mốc thời gian 'since last year' kết hợp với ý nghĩa tiếp diễn liên tục của công việc điều phối viên dẫn tới kết quả hiện tại ('strong sense of belonging') đòi hỏi Hiện tại hoàn thành tiếp diễn.",
+        "trap_logic_vi": "Bẫy dùng thì quá khứ đơn 'worked' (mất liên kết hiện tại) hoặc hiện tại tiếp diễn 'is working' (thiếu mốc bắt đầu).",
+        "why_others_wrong_vi": "worked: Quá khứ đơn cắt đứt liên hệ hiện tại. is working: Hiện tại tiếp diễn không kết hợp với 'since'. works: Hiện tại đơn không chỉ khoảng thời gian kéo dài.",
+        "depth_check_vi": "Câu hỏi Context/Discourse mức độ trung bình phân tích khoảng thời gian liên tục dẫn đến trạng thái hiện tại.",
+        "analysis_vi": "Hiện tại hoàn thành tiếp diễn (has/have been V-ing) nhấn mạnh tính liên tục và thời lượng của một hành động bắt đầu trong quá khứ và vẫn đang tiếp diễn ở hiện tại.",
         "tip_vi": "Hành động liên tục với since."
       },
       {
         "question_id": 14,
         "correct_answer": "to develop",
-        "analysis_vi": "Động từ 'manage' đi kèm động từ nguyên mẫu có 'to'.",
+        "grammar_target": "gerunds and infinitives after verbs",
+        "form_meaning_vi": "Cấu trúc động từ nguyên mẫu có to biểu thị khả năng/sự nỗ lực đạt được: S + manage + to-V.",
+        "use_in_context_vi": "Động từ 'managed' (xoay xở/thành công làm gì) yêu cầu động từ theo sau ở dạng nguyên mẫu có to.",
+        "trap_logic_vi": "Bẫy dùng danh động từ 'developing' do nhầm lẫn với từ chỉ kỹ năng mềm.",
+        "why_others_wrong_vi": "develop: Bare infinitive sai cấu trúc. developing: Gerund không đi sau 'manage'. developed: Phân từ quá khứ sai ngữ pháp.",
+        "depth_check_vi": "Câu hỏi Meaning Contrast mức độ trung bình kiểm tra sự xoay xở thành công của hành động.",
+        "analysis_vi": "Manage + to-V thể hiện việc vượt qua khó khăn để hoàn thành một hành động cụ thể.",
         "tip_vi": "manage + to-infinitive."
       },
       {
         "question_id": 15,
         "correct_answer": "New students often feel homesick because they leave their familiar support systems behind.",
-        "analysis_vi": "Sử dụng liên từ chỉ nguyên nhân 'because' để kết nối mệnh đề kết quả và nguyên nhân."
+        "grammar_target": "linkers (cause, contrast, result)",
+        "form_meaning_vi": "Liên từ nguyên nhân 'because' kết nối mệnh đề chỉ nguyên nhân sau mệnh đề chính chỉ kết quả.",
+        "use_in_context_vi": "Nguyên nhân của việc 'cảm thấy nhớ nhà' là do 'rời xa hệ thống hỗ trợ quen thuộc', do đó dùng 'because' để kết nối hợp lý.",
+        "trap_logic_vi": "Bẫy đảo lộn mệnh đề nguyên nhân kết quả dẫn đến sai lệch logic ý nghĩa.",
+        "why_others_wrong_vi": "Không có phương án gây nhiễu vì đây là câu viết tự luận kết hợp câu.",
+        "depth_check_vi": "Câu hỏi Context/Discourse mức độ trung bình để thiết lập quan hệ nguyên nhân - kết quả.",
+        "analysis_vi": "Mệnh đề nguyên nhân (leave support systems) đứng sau 'because', bổ nghĩa cho mệnh đề kết quả đứng trước.",
+        "tip_vi": "Sử dụng liên từ chỉ nguyên nhân 'because' để kết nối mệnh đề kết quả và nguyên nhân."
       },
       {
         "question_id": 16,
         "correct_answer": "Although college life can be lonely, campuses offer a vibrant community.",
-        "analysis_vi": "Sử dụng liên từ chỉ sự tương phản 'although' đứng đầu câu nhượng bộ."
+        "grammar_target": "linkers (cause, contrast, result)",
+        "form_meaning_vi": "Liên từ nhượng bộ 'Although' đứng đầu mệnh đề phụ chỉ sự tương phản, đi kèm dấu phẩy ngăn cách mệnh đề chính.",
+        "use_in_context_vi": "Sự cô đơn ('can be lonely') tương phản với cộng đồng sôi nổi ('vibrant community'), dùng 'Although' ở đầu câu để tạo mối quan hệ nhượng bộ.",
+        "trap_logic_vi": "Bẫy dùng thêm từ nối 'but' ở mệnh đề chính khi đã dùng 'Although' ở đầu câu.",
+        "why_others_wrong_vi": "Không có phương án gây nhiễu vì đây là câu viết tự luận kết hợp câu.",
+        "depth_check_vi": "Câu hỏi Transformation/Error Correction mức độ trung bình kiểm tra cấu trúc nhượng bộ tương phản.",
+        "analysis_vi": "Cấu trúc: Although + Clause 1, Clause 2. Không dùng 'but' ở Clause 2.",
+        "tip_vi": "Sử dụng liên từ chỉ sự tương phản 'although' đứng đầu câu nhượng bộ."
       },
       {
         "question_id": 17,
         "correct_answer": "Students join business societies so that they can prepare for their future careers.",
-        "analysis_vi": "Sử dụng liên từ chỉ mục đích 'so that' kết hợp hai mệnh đề."
+        "grammar_target": "linkers (cause, contrast, result)",
+        "form_meaning_vi": "Cụm liên từ chỉ mục đích 'so that' đi kèm mệnh đề chứa động từ khuyết thiếu (can/may/will).",
+        "use_in_context_vi": "Mục đích của việc 'tham gia hội kinh doanh' là để 'chuẩn bị cho sự nghiệp', do đó sử dụng 'so that' nối hai mệnh đề.",
+        "trap_logic_vi": "Bẫy dùng 'so that' nhưng lược bỏ động từ khuyết thiếu 'can' làm câu thiếu tự nhiên.",
+        "why_others_wrong_vi": "Không có phương án gây nhiễu vì đây là câu viết tự luận kết hợp câu.",
+        "depth_check_vi": "Câu hỏi Transformation/Error Correction mức độ trung bình kiểm tra cấu trúc chỉ mục đích.",
+        "analysis_vi": "Cấu trúc: S + V + so that + S + can/could/will/would + V.",
+        "tip_vi": "Sử dụng liên từ chỉ mục đích 'so that' kết hợp hai mệnh đề."
       },
       {
         "question_id": 18,
         "correct_answer": "The student leaders who organized the orientation wanted to help freshmen make friends.",
-        "analysis_vi": "Sử dụng mệnh đề quan hệ xác định với 'who' để kết hợp câu rút gọn danh từ lặp."
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Mệnh đề quan hệ xác định dùng 'who' thay thế danh từ làm chủ ngữ đứng ngay sau danh từ chỉ người đó.",
+        "use_in_context_vi": "Danh từ lặp 'student leaders' / 'They' được kết hợp bằng đại từ 'who' đặt ngay sau 'The student leaders' để làm chủ ngữ cho mệnh đề phụ.",
+        "trap_logic_vi": "Bẫy đặt mệnh đề quan hệ sai vị trí (ví dụ đặt ở cuối câu sau 'friends') làm sai lệch nghĩa.",
+        "why_others_wrong_vi": "Không có phương án gây nhiễu vì đây là câu viết tự luận kết hợp câu.",
+        "depth_check_vi": "Câu hỏi Transformation/Error Correction mức độ trung bình kiểm tra trật tự mệnh đề quan hệ.",
+        "analysis_vi": "Mệnh đề quan hệ phải đứng ngay sau danh từ mà nó bổ nghĩa để tránh gây mơ hồ về nghĩa.",
+        "tip_vi": "Sử dụng mệnh đề quan hệ xác định với 'who' để kết hợp câu rút gọn danh từ lặp."
       },
       {
         "question_id": 19,
         "correct_answer": "Since the club is aligned with university policies, it received financial assistance.",
-        "analysis_vi": "Sử dụng liên từ chỉ lý do 'since' ở đầu câu để kết nối."
+        "grammar_target": "linkers (cause, contrast, result)",
+        "form_meaning_vi": "Liên từ nguyên nhân 'Since' (vì/bởi vì) đứng đầu câu để thiết lập nguyên nhân cho hành động nhận tài trợ ở mệnh đề chính.",
+        "use_in_context_vi": "Việc tuân thủ chính sách là nguyên nhân giúp nhận hỗ trợ tài chính, sử dụng 'Since' ở đầu câu để nối hai mệnh đề.",
+        "trap_logic_vi": "Bẫy nhầm lẫn giữa 'since' chỉ mốc thời gian (yêu cầu hiện tại hoàn thành) và 'since' chỉ lý do (đi với quá khứ đơn hợp ngữ cảnh).",
+        "why_others_wrong_vi": "Không có phương án gây nhiễu vì đây là câu viết tự luận kết hợp câu.",
+        "depth_check_vi": "Câu hỏi Context/Discourse mức độ trung bình kiểm tra ý nghĩa chỉ lý do của liên từ 'Since'.",
+        "analysis_vi": "Since ngoài nghĩa là 'từ khi' còn có nghĩa tương đương với 'because/as' để chỉ lý do.",
+        "tip_vi": "Sử dụng liên từ chỉ lý do 'since' ở đầu câu để kết nối."
       },
       {
         "question_id": 20,
         "correct_answer": "Sports clubs are based on active games, whereas creative writing workshops focus on artistic expression.",
-        "analysis_vi": "Sử dụng 'whereas' để so sánh đối chiếu tương phản hai sự việc."
+        "grammar_target": "linkers (cause, contrast, result)",
+        "form_meaning_vi": "Liên từ 'whereas' (trong khi/trái lại) dùng để đối chiếu tương phản trực tiếp hai sự việc/sự vật.",
+        "use_in_context_vi": "Thay thế cho liên từ kết hợp 'but' để nâng cao tính học thuật của câu đối chiếu hoạt động thể thao và viết sáng tạo.",
+        "trap_logic_vi": "Bẫy đặt 'whereas' ở sai vị trí giữa câu hoặc viết hoa tùy tiện làm hỏng cấu trúc đối chiếu.",
+        "why_others_wrong_vi": "Không có phương án gây nhiễu vì đây là câu viết tự luận kết hợp câu.",
+        "depth_check_vi": "Câu hỏi Transformation/Error Correction mức độ khó kiểm tra từ nối đối chiếu học thuật.",
+        "analysis_vi": "Whereas được sử dụng giữa hai mệnh đề độc lập để tạo ra sự đối lập rõ rệt, thường đi sau dấu phẩy.",
+        "tip_vi": "Sử dụng 'whereas' để so sánh đối chiếu tương phản hai sự việc."
       },
       {
         "question_id": 21,
         "correct_answer": "She joined the creative writing club last month.",
-        "analysis_vi": "Thời gian xác định 'last month' đòi hỏi thì Quá khứ Đơn. Sửa 'has joined' thành 'joined'."
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì quá khứ đơn (joined) thay thế cho Hiện tại hoàn thành (has joined) khi có mốc thời gian cụ thể.",
+        "use_in_context_vi": "Mốc thời gian xác định kết thúc 'last month' buộc động từ chính phải dùng Quá khứ Đơn.",
+        "trap_logic_vi": "Lỗi dùng thì Hiện tại hoàn thành với mốc thời gian cụ thể trong quá khứ.",
+        "why_others_wrong_vi": "Không có phương án nhiễu vì đây là bài sửa lỗi sai.",
+        "depth_check_vi": "Câu hỏi Form Check sửa lỗi sai mức độ thấp về mâu thuẫn thời gian.",
+        "analysis_vi": "Sự xuất hiện của 'last month' xung đột trực tiếp với thì Hiện tại hoàn thành, cần sửa thành Quá khứ đơn.",
+        "tip_vi": "Thời gian xác định 'last month' đòi hỏi thì Quá khứ Đơn. Sửa 'has joined' thành 'joined'."
       },
       {
         "question_id": 22,
         "correct_answer": "The student union suggested establishing a new music society.",
-        "analysis_vi": "Động từ 'suggest' đi kèm gerund. Sửa 'to establish' thành 'establishing'."
+        "grammar_target": "gerunds and infinitives after verbs",
+        "form_meaning_vi": "Cấu trúc danh động từ (Gerund) làm tân ngữ cho động từ gợi ý: suggest + V-ing.",
+        "use_in_context_vi": "Động từ 'suggested' đòi hỏi động từ đi sau trực tiếp phải ở dạng V-ing.",
+        "trap_logic_vi": "Lỗi dùng động từ nguyên mẫu 'to establish' sau động từ 'suggest'.",
+        "why_others_wrong_vi": "Không có phương án nhiễu vì đây là bài sửa lỗi sai.",
+        "depth_check_vi": "Câu hỏi Form Check sửa lỗi sai mức độ thấp về mẫu động từ.",
+        "analysis_vi": "Suggest bắt buộc đi kèm V-ing khi nói về việc đề xuất một hành động.",
+        "tip_vi": "Động từ 'suggest' đi kèm gerund. Sửa 'to establish' thành 'establishing'."
       },
       {
         "question_id": 23,
         "correct_answer": "I have lived in the dormitory since my first semester.",
-        "analysis_vi": "Có trạng từ chỉ mốc thời gian bắt đầu 'since' kéo dài đến hiện tại, cần dùng Hiện tại Hoàn thành. Sửa 'am living' thành 'have lived'."
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Hiện tại hoàn thành thay thế cho Hiện tại tiếp diễn để chỉ trạng thái kéo dài từ quá khứ đến nay.",
+        "use_in_context_vi": "Giới từ 'since my first semester' đòi hỏi dùng Hiện tại Hoàn thành để thể hiện thời gian bắt đầu hành động kéo dài đến nay.",
+        "trap_logic_vi": "Lỗi dùng Hiện tại tiếp diễn 'am living' để chỉ hành động kéo dài có mốc thời gian bắt đầu.",
+        "why_others_wrong_vi": "Không có phương án nhiễu vì đây là bài sửa lỗi sai.",
+        "depth_check_vi": "Câu hỏi Meaning Contrast sửa lỗi sai mức độ khó về thời lượng và trạng thái liên tục.",
+        "analysis_vi": "Thì Hiện tại tiếp diễn không thể đi cùng với khoảng thời gian bắt đầu bằng 'since', phải dùng Hiện tại hoàn thành.",
+        "tip_vi": "Có trạng từ chỉ mốc thời gian bắt đầu 'since' kéo dài đến hiện tại, cần dùng Hiện tại Hoàn thành. Sửa 'am living' thành 'have lived'."
       },
       {
         "question_id": 24,
         "correct_answer": "The faculty advisor recommended holding the meeting next week.",
-        "analysis_vi": "Động từ 'recommend' yêu cầu gerund. Sửa 'to hold' thành 'holding'."
+        "grammar_target": "gerunds and infinitives after verbs",
+        "form_meaning_vi": "Cấu trúc danh động từ làm tân ngữ sau động từ đề xuất: recommend + V-ing.",
+        "use_in_context_vi": "Động từ 'recommended' khi không có tân ngữ chỉ người đòi hỏi động từ theo sau trực tiếp phải ở dạng V-ing.",
+        "trap_logic_vi": "Lỗi dùng động từ nguyên mẫu 'to hold' sau 'recommend'.",
+        "why_others_wrong_vi": "Không có phương án nhiễu vì đây là bài sửa lỗi sai.",
+        "depth_check_vi": "Câu hỏi Meaning Contrast sửa lỗi sai mức độ khó về mẫu động từ đề xuất.",
+        "analysis_vi": "Recommend giống như suggest, yêu cầu danh động từ theo sau.",
+        "tip_vi": "Động từ 'recommend' yêu cầu gerund. Sửa 'to hold' thành 'holding'."
       },
       {
         "question_id": 25,
         "correct_answer": "This is the student who organized the campus sports club.",
-        "analysis_vi": "Cố vấn người chỉ dùng 'who' hoặc 'that', không dùng 'which'. Sửa 'which' thành 'who'."
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Đại từ quan hệ chỉ người 'who' thay thế cho đại từ chỉ vật 'which'.",
+        "use_in_context_vi": "Danh từ đứng trước là người ('the student') làm chủ ngữ đòi hỏi dùng đại từ quan hệ 'who'.",
+        "trap_logic_vi": "Lỗi sử dụng sai đại từ quan hệ chỉ vật 'which' cho người.",
+        "why_others_wrong_vi": "Không có phương án nhiễu vì đây là bài sửa lỗi sai.",
+        "depth_check_vi": "Câu hỏi Form Check sửa lỗi sai mức độ thấp về loại đại từ quan hệ.",
+        "analysis_vi": "Which thay thế cho vật, who thay thế cho người. Không thể dùng chéo.",
+        "tip_vi": "Cố vấn người chỉ dùng 'who' hoặc 'that', không dùng 'which'. Sửa 'which' thành 'who'."
       },
       {
         "question_id": 26,
         "correct_answer": "Yesterday evening, they finished their project proposal.",
-        "analysis_vi": "Mốc thời gian kết thúc 'Yesterday evening' cần dùng Quá khứ Đơn. Sửa 'have finished' thành 'finished'."
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì quá khứ đơn (finished) thay thế cho Hiện tại hoàn thành (have finished) khi có mốc thời gian quá khứ xác định.",
+        "use_in_context_vi": "Mốc thời gian 'Yesterday evening' đã chấm dứt hoàn toàn yêu cầu động từ chia ở Quá khứ Đơn.",
+        "trap_logic_vi": "Lỗi sử dụng Hiện tại hoàn thành cho sự việc xảy ra tại thời điểm cụ thể đã qua.",
+        "why_others_wrong_vi": "Không có phương án nhiễu vì đây là bài sửa lỗi sai.",
+        "depth_check_vi": "Câu hỏi Meaning Contrast sửa lỗi sai mức độ trung bình về mốc thời gian quá khứ.",
+        "analysis_vi": "Khi có thời gian quá khứ cụ thể rõ ràng ('yesterday evening'), ta bắt buộc phải dùng Quá khứ đơn.",
+        "tip_vi": "Mốc thời gian kết thúc 'Yesterday evening' cần dùng Quá khứ Đơn. Sửa 'have finished' thành 'finished'."
       },
       {
         "question_id": 27,
         "correct_answer": "He expects to join the economics society next term.",
-        "analysis_vi": "Thay thế 'hopes that he will' bằng 'expects to + V' giữ nguyên nghĩa."
+        "grammar_target": "gerunds and infinitives after verbs",
+        "form_meaning_vi": "Cấu trúc động từ nguyên mẫu có to sau động từ mong đợi: S + expect + to-V.",
+        "use_in_context_vi": "Thay đổi mệnh đề tương lai 'hopes that he will' thành cấu trúc ngắn gọn 'expects to + V' giữ nguyên nghĩa mong đợi hành động.",
+        "trap_logic_vi": "Lỗi sử dụng danh động từ sau expect hoặc sai dạng động từ nguyên mẫu.",
+        "why_others_wrong_vi": "Không có phương án nhiễu vì đây là câu viết lại câu.",
+        "depth_check_vi": "Câu hỏi Meaning Contrast viết lại câu mức độ trung bình kiểm tra sự chuyển đổi tương đương giữa hope và expect.",
+        "analysis_vi": "Expect to-V biểu thị sự mong đợi thực hiện hành động, tương đương ngữ nghĩa với hope that S will V.",
+        "tip_vi": "Thay thế 'hopes that he will' bằng 'expects to + V' giữ nguyên nghĩa."
       },
       {
         "question_id": 28,
         "correct_answer": "Joining campus groups is very helpful for new students.",
-        "analysis_vi": "Biến đổi động từ thành danh động từ 'Joining...' đóng vai trò làm chủ ngữ."
+        "grammar_target": "gerunds and infinitives after verbs",
+        "form_meaning_vi": "Danh động từ (Gerund - V-ing) đứng làm chủ ngữ số ít của câu.",
+        "use_in_context_vi": "Chuyển đổi cấu trúc giả định 'It is helpful to-V' thành câu có danh động từ làm chủ ngữ 'V-ing is helpful'.",
+        "trap_logic_vi": "Lỗi chia động từ số nhiều sau chủ ngữ danh động từ hoặc dùng sai dạng động từ.",
+        "why_others_wrong_vi": "Không có phương án nhiễu vì đây là câu viết lại câu.",
+        "depth_check_vi": "Câu hỏi Meaning Contrast viết lại câu mức độ trung bình kiểm tra danh động từ làm chủ ngữ.",
+        "analysis_vi": "Khi danh động từ làm chủ ngữ, động từ chính đi sau luôn chia ở dạng số ít ('is').",
+        "tip_vi": "Biến đổi động từ thành danh động từ 'Joining...' đóng vai trò làm chủ ngữ."
       },
       {
         "question_id": 29,
         "correct_answer": "is",
-        "analysis_vi": "Cấu trúc 'The number of + danh từ số nhiều' luôn đi kèm động từ chia ở số ít ('is').",
+        "grammar_target": "subject-verb agreement",
+        "form_meaning_vi": "Sự hòa hợp chủ ngữ và động từ: 'The number of + plural noun' đi kèm động từ số ít.",
+        "use_in_context_vi": "Cụm chủ ngữ 'The number of students' đòi hỏi động từ chia ở dạng số ít ('is') để phù hợp quy tắc.",
+        "trap_logic_vi": "Bẫy dùng động từ số nhiều 'are' do nhầm lẫn danh từ số nhiều 'students' đứng trước là chủ ngữ chính.",
+        "why_others_wrong_vi": "are: Sai vì đây là động từ số nhiều. have: Sai vì đây là động từ số nhiều và sai cấu trúc tiếp diễn. were: Sai vì đây là quá khứ số nhiều.",
+        "depth_check_vi": "Câu hỏi Context/Discourse mức độ khó để phân biệt cấu trúc 'The number of' và 'A number of'.",
+        "analysis_vi": "Chủ ngữ chính của câu là 'The number' (số lượng - danh từ số ít), chứ không phải 'students', nên động từ phải chia số ít.",
         "tip_vi": "Nhận biết cụm 'The number of' phân biệt với 'A number of'."
       },
       {
         "question_id": 30,
         "correct_answer": "participating",
-        "analysis_vi": "Sử dụng phân từ hiện tại 'participating' rút gọn mệnh đề quan hệ chủ động.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Mệnh đề quan hệ rút gọn chủ động sử dụng phân từ hiện tại (Present Participle - V-ing).",
+        "use_in_context_vi": "Rút gọn mệnh đề chủ động 'who participate' thành phân từ hiện tại 'participating' để câu ngắn gọn hơn.",
+        "trap_logic_vi": "Bẫy dùng động từ chia thì 'participate' khi câu đã có động từ chính 'develop', hoặc dùng 'who participating' sai ngữ pháp.",
+        "why_others_wrong_vi": "participate: Khiến câu có hai động từ chia thì mà không có từ nối. who participating: Sai cấu trúc mệnh đề quan hệ. are participating: Làm câu thừa động từ chia thì chính.",
+        "depth_check_vi": "Câu hỏi Context/Discourse mức độ khó kiểm tra mệnh đề quan hệ rút gọn chủ động.",
+        "analysis_vi": "Khi rút gọn mệnh đề quan hệ chủ động, ta bỏ đại từ quan hệ và động từ 'to be' (nếu có), chuyển động từ chính sang dạng V-ing.",
         "tip_vi": "Rút gọn mệnh đề quan hệ: who participate -> participating."
       }
     ],
@@ -3571,6 +3320,6 @@
   "lesson_id": "LSN-20260705-B1-a5d6e2c3",
   "practice_markdown": "Reading: B1\nWriting: A2\n\n## Reading Source Verification\n| Source title | Publisher/Organization | Date/Access date | Final verified URL | URL status | Source type | Reliability check | How the passage uses the source |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| College Success: Joining Campus Groups to Feel Connected | VOA Learning English | 2019-07-27 / 2026-07-04 | https://learningenglish.voanews.com/a/college-success-joining-campus-groups-to-feel-connected/4988772.html | active | Educational News Article | VOA Learning English is a reputable public educational resource. | Discusses student involvement in campus organizations to reduce loneliness and improve performance. |\n\n## Warm-up\nAnswer the following questions in Vietnamese or English:\n1. Why do you think new university students often feel lonely or homesick?\n2. What kind of clubs or student organizations are you most interested in joining, and why?\n3. Do you agree that participating in extracurricular activities helps students study better?\n\n## Reading Passage\n### College Success: Joining Campus Groups to Feel Connected\n\nThe transition to college life is an exciting journey, but it can also be a challenging and lonely time for many new students. Leaving familiar support systems behind often leads to feelings of **homesickness**. However, Dr. Matt Couch, an Associate Dean of Students at The Ohio State University, notes that campuses offer a **vibrant** community outside of the lecture hall. Joining a **student organization** is one of the best ways for students to meet people, **foster** friendships, and build a strong sense of **belonging** early in their academic journey.\n\nMany organizations focus on academic fields or professional development, which are highly beneficial for students looking to prepare for their future careers. For example, joining a business society or an economics club allows members to hear from experts, attend networking events, and apply their classroom knowledge to real-world projects. Through these activities, students develop crucial **soft skills**—such as leadership, communication, and **teamwork**—which can make them much more appealing to a **prospective employer** [R].\n\nFor other students, casual social clubs based on creative hobbies are a **necessary** escape from academic pressures. Whether participating in a **creative writing** workshop or a recreational sports club, students find a positive outlet to manage stress and **navigate** [R] the demands of university life. These extracurricular activities offer a healthy balance, helping to prevent burnout and giving students a much-needed mental break between exams.\n\nUniversities recognize the value of these organizations and often support them by providing **financial assistance** or meeting spaces. To ensure these student groups stay **aligned** with university policies, they are typically required to have a **faculty advisor** who guides their activities. This structured guidance helps student leaders learn project management and maintain a high level of **commitment** [R] to their organization's long-term goals.\n\nUltimately, getting involved in campus life is an investment in both personal and academic success. Research indicates that active students show a higher **likelihood** of completing their degrees and maintaining a strong **academic performance**. Dr. Couch suggests that if students cannot find a club that matches their specific interests, they should **establish** their own. By taking this initiative, they can build a customized **support system** that enriches their entire university experience.\n\n## Questions for Reading\n### Questions 1–5: True/False/Not Given\n\n1. Leaving their homes can make new college students feel lonely and miss their families.\n2. Joining an academic or professional group helps students prepare for their future careers.\n3. Most corporate businesses prefer to hire students who were members of an economics club.\n4. Extracurricular activities are only useful for students who study creative writing.\n5. A faculty advisor is responsible for doing all the project work for the student group.\n\n### Questions 6–9: Gap Fill\n\n6. Dr. Couch notes that universities have a _______ community outside the classroom where students can meet peers.\n7. Participating in recreational clubs helps students manage stress and _______ the demands of college.\n8. To make sure that clubs follow rules, universities typically require them to have a _______.\n9. Dr. Couch advises that students can _______ a new club if none of the existing ones fit their needs.\n\n### Questions 10–13: Multiple Choice\n\n10. According to paragraph 2, how can participating in academic student organizations benefit students' careers?\n    A. Ask their parents for professional references\n    B. Develop key soft skills like teamwork to appeal to employers\n    C. Focus exclusively on classroom lectures to get top marks\n    D. Avoid attending any networking events until graduation\n11. Why are social and creative clubs described as beneficial in paragraph 3?\n    A. It is a required class for all first-year university students.\n    B. It helps prevent burnout by providing a necessary mental break.\n    C. It is the only way to get financial assistance from the school.\n    D. It guarantees that a student will get a job immediately after exams.\n12. How do universities show support for student organizations according to paragraph 4?\n    A. By demanding that student leaders work without any faculty advisor\n    B. By providing financial assistance or meeting spaces\n    C. By banning students from starting new organizations\n    D. By reducing the amount of study time allowed on campus\n13. What is the relationship between campus involvement and academic success mentioned in paragraph 5?\n    A. A lower rate of graduation and poor exam grades\n    B. An increased likelihood of graduation and better academic performance\n    C. An immediate job offer as a university faculty advisor\n    D. A complete elimination of the need for any support system\n\n## Questions for Grammar\n### Grammar in context\n\n1. Since the student organization was established in 2024, it _______ several guest speakers to campus.\n    A. invited\n    B. has invited\n    C. invites\n    D. is inviting\n2. The faculty advisor advised the student leaders _______ spending all their budget on one event.\n    A. avoid\n    B. to avoid\n    C. avoiding\n    D. avoided\n3. The campus activity hall, _______ stands near the library, offers meeting spaces for social clubs.\n    A. which\n    B. who\n    C. where\n    D. that\n4. Last semester, she _______ the business society to prepare for her future career.\n    A. has joined\n    B. joined\n    C. joins\n    D. is joining\n5. Many first-year students look forward to _______ in extracurricular activities.\n    A. participate\n    B. to participate\n    C. participating\n    D. participated\n6. We met a faculty advisor _______ guides the economics club and helps students find internships.\n    A. which\n    B. who\n    C. whom\n    D. whose\n7. The debating society started with only five members. Today, it is the largest club on campus and _______ three national trophies.\n    A. won\n    B. has won\n    C. wins\n    D. is winning\n8. After discussing their homesickness, the roommates decided _______ a peer support group.\n    A. establish\n    B. to establish\n    C. establishing\n    D. established\n9. There are many student mentors in the dormitory. The mentor _______ lives next door helps new students navigate campus life.\n    A. who\n    B. , who\n    C. , which\n    D. whose\n10. While she _______ in the library, she saw the poster for the creative writing workshop.\n    A. studied\n    B. was studying\n    C. has studied\n    D. studies\n11. Students who want to improve their academic performance should not mind _______ extra hours on study groups.\n    A. spend\n    B. to spend\n    C. spending\n    D. spent\n12. The university provides financial assistance, _______ enables student clubs to organize regular trips.\n    A. which\n    B. who\n    C. that\n    D. where\n13. He has a strong sense of belonging because he _______ as a volunteer coordinator since last year.\n    A. worked\n    B. has been working\n    C. is working\n    D. works\n14. To appeal to a prospective employer, she managed _______ crucial soft skills like leadership.\n    A. develop\n    B. to develop\n    C. developing\n    D. developed\n\n### Linkers, clauses, and meaning\n\n15. Combine the sentences using 'because': New students often feel homesick. They leave their familiar support systems behind.\n16. Combine the sentences using 'although': College life can be lonely. Campuses offer a vibrant community.\n17. Combine the sentences using 'so that': Students join business societies. They can prepare for their future careers.\n18. Combine the sentences using 'who': The student leaders organized the orientation. They wanted to help freshmen make friends.\n19. Combine the sentences using 'since': The club is aligned with university policies. It received financial assistance.\n20. Rewrite the sentence using 'whereas': Sports clubs are based on active games, but creative writing workshops focus on artistic expression.\n\n### Error correction\n\n21. Correct the error: She has joined the creative writing club last month.\n22. Correct the error: The student union suggested to establish a new music society.\n23. Correct the error: I am living in the dormitory since my first semester.\n24. Correct the error: The faculty advisor recommended to hold the meeting next week.\n25. Correct the error: This is the student which organized the campus sports club.\n26. Correct the error: Yesterday evening, they have finished their project proposal.\n\n### Sentence combining and transformation\n\n27. Rewrite the sentence: He hopes that he will join the economics society next term. (Use \"expects to\")\n28. Rewrite the sentence starting with 'Joining': It is very helpful for new students to join campus groups.\n29. The number of students who participate in extracurricular activities _______ increasing. (*) (*)\n    A. is\n    B. are\n    C. have\n    D. were\n30. Students _______ in student organizations often develop stronger soft skills. (*) (*)\n    A. participate\n    B. participating\n    C. who participating\n    D. are participating\n\n## Questions for Writing\n| # | Task | Target length | Focus skill | Useful language | Success criteria |\n| --- | --- | --- | --- | --- | --- |\n| 1 | Sentence Building: Sắp xếp các từ sau thành các câu hoàn chỉnh về chủ đề tham gia câu lạc bộ sinh viên: | 2 sentences (approx. 15-20 words) | Correct word order for gerund subjects and modal verbs. | 1. campus / joining / groups / helps / make / friends / easily.<br>2. university / we / decided / to / establish / a / new / society / this / semester. | Correct word order and grammar structure.<br>Correct punctuation and capitalization. |\n| 2 | Short Email: Write a short email to a club president asking to join the debating society and explaining what skills you hope to learn. Write 3-4 sentences. | 3-4 sentences (approx. 40-50 words) | Writing a polite thank-you email and asking for information. | Dear President,<br>I am writing to express my interest in joining the debating society.<br>I hope to improve my public speaking and soft skills.<br>I look forward to hearing from you. | Write exactly 3 to 4 sentences in the email body.<br>Include a formal greeting and sign-off.<br>State clearly your reason for joining and the skills you hope to gain. |\n| 3 | Data Description: Describe the chart below showing the average weekly hours students spend on different extracurricular groups. Write 3 sentences.<br><br><svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'Times New Roman', Times, serif; background-color: #fcfcfc; border: 1px solid #eaeaea; border-radius: 6px;\"><text x=\"200\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#2c3e50\">Average Weekly Hours in Extracurriculars</text><text x=\"15\" y=\"125\" text-anchor=\"middle\" font-size=\"10\" fill=\"#7f8c8d\" transform=\"rotate(-90 15 125)\">Hours</text><line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"190\" stroke=\"#cccccc\" stroke-width=\"1\"/><line x1=\"60\" y1=\"190\" x2=\"360\" y2=\"190\" stroke=\"#555555\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"190\" x2=\"60\" y2=\"50\" stroke=\"#555555\" stroke-width=\"1.5\"/><line x1=\"55\" y1=\"150\" x2=\"60\" y2=\"150\" stroke=\"#555555\"/><text x=\"48\" y=\"153\" font-size=\"10\" text-anchor=\"end\" fill=\"#555555\">4h</text><line x1=\"55\" y1=\"110\" x2=\"60\" y2=\"110\" stroke=\"#555555\"/><text x=\"48\" y=\"113\" font-size=\"10\" text-anchor=\"end\" fill=\"#555555\">8h</text><line x1=\"55\" y1=\"70\" x2=\"60\" y2=\"70\" stroke=\"#555555\"/><text x=\"48\" y=\"73\" font-size=\"10\" text-anchor=\"end\" fill=\"#555555\">12h</text><rect x=\"90\" y=\"90\" width=\"50\" height=\"100\" fill=\"#3498db\" rx=\"3\"/><text x=\"115\" y=\"80\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#3498db\">10h</text><text x=\"115\" y=\"208\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#2c3e50\">Sports</text><rect x=\"180\" y=\"130\" width=\"50\" height=\"60\" fill=\"#2ecc71\" rx=\"3\"/><text x=\"205\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2ecc71\">6h</text><text x=\"205\" y=\"208\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#2c3e50\">Music</text><rect x=\"270\" y=\"150\" width=\"50\" height=\"40\" fill=\"#e74c3c\" rx=\"3\"/><text x=\"295\" y=\"140\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#e74c3c\">4h</text><text x=\"295\" y=\"208\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#2c3e50\">Academic</text></svg> | 3 sentences (approx. 40-50 words) | Comparing quantities and writing simple chart summaries. | The chart compares the average weekly hours...<br>Students in sports spend the most time...<br>In contrast, academic groups require the least involvement... | Write exactly three sentences.<br>Describe the highest category (Sports at 10 hours) and the lowest category (Academic at 4 hours).<br>Use a contrast linker like 'in contrast' or 'however'. |\n| 4 | Short Paragraph: Write a short paragraph describing a student organization you would like to join, how it relates to your studies, and what you hope to achieve. Write 3-4 sentences. | 3-4 sentences (approx. 40-50 words) | Describing educational history and future career goals. | I would like to join the economics club on campus.<br>Since my major is business administration, this club will help me learn real-world applications.<br>In the future, I hope to gain valuable leadership skills. | Write exactly 3 to 4 sentences.<br>Connect the club to your current major or studies.<br>Explain your future goals related to the club's activities. |\n| 5 | Short Description: Compare the two student organizations in the table below. Write a short paragraph describing their differences in weekly meetings and membership fees. Write 3 sentences.<br><br>\\| Feature \\| Debating Society \\| Outdoor Adventure Club \\|<br>\\| --- \\| --- \\| --- \\|<br>\\| Meeting Frequency \\| Twice a week \\| Once a month \\|<br>\\| Membership Fee \\| $15 per semester \\| $50 per semester \\|<br>\\| Main Activity \\| Structured debates & discussions \\| Hiking & camping trips \\| | 3 sentences (approx. 40-50 words) | Comparing features from a table. | The table illustrates the differences between...<br>The Debating Society meets more frequently than...<br>On the other hand, the Outdoor Adventure Club has a higher fee... | Write exactly three sentences.<br>Compare meeting frequency (twice a week vs once a month).<br>Compare membership fees ($15 vs $50 per semester). |\n\n## Review Bridge\n#### V. Review Bridge / Ôn tập liên chủ đề\n1. She hopes (get) _______ the job at the bank.\n\n2. I don't mind (work) _______ late tonight.\n\n3. We (already submit) _______ our applications.\n",
   "vocabulary_grammar_markdown": "## Vocabulary Table\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |\n| --- | --- | --- | --- | --- |\n| vibrant | /ˈvaɪ.brənt/ | adjective | sôi nổi, đầy sức sống (full of energy and life) | Campuses offer a vibrant community outside the classroom. |\n| student organization | /ˈstjuː.dənt ˌɔː.ɡən.aɪˈzeɪ.ʃən/ | noun phrase | tổ chức sinh viên (a group run by students at a college or university) | Joining a student organization is a great way to make friends. |\n| foster | /ˈfɒs.tər/ | verb | thúc đẩy, nuôi dưỡng (to encourage or promote the development of something) | Extracurricular activities help foster new friendships. |\n| belonging | /bɪˈlɒŋ.ɪŋ/ | noun | cảm giác gắn kết, thuộc về (a feeling of being happy and comfortable in a place or group) | Participating in clubs gives students a sense of belonging. |\n| soft skills | /sɒft skɪlz/ | noun phrase | kỹ năng mềm (personal attributes that enable someone to interact effectively) | Employers look for soft skills like communication and leadership. |\n| teamwork | /ˈtiːm.wɜːk/ | noun | làm việc nhóm (the combined action of a group, especially when effective and efficient) | Academic projects require strong teamwork among members. |\n| creative writing | /kriˈeɪ.tɪv ˈraɪ.tɪŋ/ | noun phrase | viết sáng tạo (writing, typically fiction or poetry, which displays imagination) | She joined a creative writing club to improve her stories. |\n| necessary | /ˈnes.ə.ser.i/ | adjective | cần thiết (needed to be done, achieved, or present; essential) | A balanced routine is necessary for college success. |\n| financial assistance | /faɪˈnæn.ʃəl əˈsɪs.təns/ | noun phrase | hỗ trợ tài chính (money given to support a person or group) | The university provides financial assistance to student groups. |\n| faculty advisor | /ˈfæk.əl.ti ədˈvaɪ.zər/ | noun phrase | cố vấn học tập, giáo viên cố vấn (a teacher or staff member who guides a student group) | Our club's faculty advisor helped us plan the event. |\n| aligned | /əˈlaɪnd/ | adjective | liên kết, phù hợp (giving support to or agreeing with a policy or group) | The club's goals are aligned with the university's values. |\n| likelihood | /ˈlaɪ.kli.hʊd/ | noun | khả năng xảy ra (the state or fact of something's being likely; probability) | Active involvement increases the likelihood of graduation. |\n| academic performance | /ˌæk.əˈdem.ɪk pəˈfɔː.məns/ | noun phrase | kết quả học tập (the extent to which a student has achieved their educational goals) | Student involvement is linked to higher academic performance. |\n| establish | /ɪˈstæb.lɪʃ/ | verb | thành lập (to set up an organization, system, or set of rules on a firm basis) | They decided to establish a new debating society. |\n| support system | /səˈpɔːt ˌsɪs.təm/ | noun phrase | hệ thống nâng đỡ, hệ thống hỗ trợ (a network of people who provide practical or emotional support) | Friends on campus form an essential support system. |\n| extracurricular | /ˌek.strə.kəˈrɪk.jə.lər/ | adjective | ngoại khóa (activities done in addition to the normal course of study) | She participates in several extracurricular projects. |\n| homesickness | /ˈhəʊm.sɪk.nəs/ | noun | sự nhớ nhà (a feeling of longing for one's home during an absence from it) | Joining campus groups is a good way to overcome homesickness. |\n| peer support | /pɪər səˈpɔːt/ | noun phrase | sự hỗ trợ từ bạn bè (help and support from people of the same age or status) | The student union organizes a peer support network. |\n| residence life | /ˈrez.ɪ.dəns laɪf/ | noun phrase | đời sống nội trú (the experience of living in university housing) | Residence life offers many opportunities to make friends. |\n| personal growth | /ˈpɜː.sən.əl ɡrəʊθ/ | noun phrase | sự phát triển cá nhân (the process of developing new skills and understanding oneself) | Extracurricular involvement contributes to personal growth. |\n\n## Recycled Vocabulary (Từ vựng ôn tập)\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Bài học gốc (Day) |\n| --- | --- | --- | --- | --- |\n| prospective employer | /prəˈspek.tɪv ɪmˈplɔɪ.ər/ | noun phrase | nhà tuyển dụng tiềm năng | Day 20260704 |\n| navigate | /ˈnæv.ɪ.ɡeɪt/ | verb | định hướng, vượt qua | Day 20260704 |\n| commitment | /kəˈmɪt.mənt/ | noun | sự cam kết | Day 20260704 |\n\n## Detailed Grammar Guide\n#### Card 1: Present Perfect vs Past Simple\nUse **Past Simple** for actions completed at a specific time in the past (yesterday, last year, in 2020). Use **Present Perfect** for actions connected to the present or occurring at an unstated time (since, yet, so far, up to now).\n\n#### Card 2: Gerunds and Infinitives after Verbs\nSome verbs require a **Gerund** (-ing form) like *avoid*, *enjoy*, *mind*, *suggest*, *recommend*. Other verbs require a **to-infinitive** like *decide*, *hope*, *manage*, *ask someone*.\n\n## Common Mistakes / IELTS Traps for This Topic\n| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |\n| --- | --- | --- | --- |\n| Using present perfect with specific past time words | I have graduated in 2022. | I graduated in 2022. | 'in 2022' is a completed time period, so Past Simple must be used. |\n| Using to-infinitive instead of gerund after avoid/suggest | The manager suggested to hire him. | The manager suggested hiring him. | 'suggest' requires the gerund form for grammatical correctness. |\n| Using present continuous for long-term continuous states starting in the past | I am working here for three years. | I have worked here for three years. | 'for three years' signals that the state started in the past and continues, which requires Present Perfect. |\n",
-  "answers_markdown": "## Reading Answer Key and Detailed Explanations\n\n📖 **Tóm tắt bài đọc:** Bài đọc mô tả chi tiết thông tin từ nguồn đã xác thực.\n\n1. **TRUE**\n- Bằng chứng: \"Leaving familiar support systems behind often leads to feelings of **homesickness**.\" (§1)\n- Cách tìm đáp án: Câu hỏi nói rằng việc rời xa gia đình có thể khiến sinh viên mới cảm thấy cô đơn và nhớ nhà. Điều này hoàn toàn khớp với thông tin trong đoạn 1: 'Leaving familiar support systems behind often leads to feelings of homesickness.' Đáp án là TRUE nên FALSE và NOT GIVEN là sai.\n> **💡 Mẹo:** Tìm các cụm từ đồng nghĩa như 'leaving familiar support systems' = 'leaving their homes', 'homesickness' = 'miss their families'.\n\n2. **TRUE**\n- Bằng chứng: \"Many organizations focus on academic fields or professional development, which are highly beneficial for students looking to prepare for their future careers.\" (§2)\n- Cách tìm đáp án: Nhận định trong câu hỏi hoàn toàn khớp với câu đầu tiên của đoạn 2: việc tham gia các nhóm học thuật/chuyên môn rất có lợi cho việc chuẩn bị sự nghiệp tương lai. Đáp án là TRUE nên các phương án trái ngược là sai.\n> **💡 Mẹo:** Đối chiếu từ khóa 'academic or professional group' = 'academic fields or professional development'.\n\n3. **NOT GIVEN**\n- Bằng chứng: \"For example, joining a business society or an economics club allows members to hear from experts, attend networking events, and apply their classroom knowledge to real-world projects.\" (§2)\n- Cách tìm đáp án: Mặc dù đoạn 2 đưa ra ví dụ về các câu lạc bộ kinh tế và kinh doanh, bài đọc không hề đề cập đến việc hầu hết các doanh nghiệp lớn có thích tuyển sinh viên từ các nhóm này hơn hay không. Không có thông tin này trong bài đọc.\n> **💡 Mẹo:** Nếu một nhận định có vẻ hợp lý ngoài đời thực nhưng không được xác nhận cụ thể trong bài đọc, hãy chọn NOT GIVEN.\n\n4. **FALSE**\n- Bằng chứng: \"Whether participating in a **creative writing** workshop or a recreational sports club, students find a positive outlet to manage stress\" (§3)\n- Cách tìm đáp án: Câu hỏi khẳng định hoạt động ngoại khóa chỉ hữu ích cho sinh viên học viết sáng tạo. Tuy nhiên, đoạn 3 đề cập cả câu lạc bộ viết sáng tạo lẫn câu lạc bộ thể thao giải trí, phủ định tính chất 'chỉ dành cho viết sáng tạo'. Thông tin trong câu hỏi trái ngược trực tiếp với bài viết.\n> **💡 Mẹo:** Hãy cẩn thận với những từ ngữ mang tính tuyệt đối như 'only', 'always'.\n\n5. **FALSE**\n- Bằng chứng: \"To ensure these student groups stay **aligned** with university policies, they are typically required to have a **faculty advisor** who guides their activities. This structured guidance helps student leaders learn project management\" (§4)\n- Cách tìm đáp án: Câu hỏi nói cố vấn học tập phải làm toàn bộ công việc dự án cho nhóm. Tuy nhiên, đoạn 4 chỉ ra cố vấn chỉ đóng vai trò hướng dẫn, còn thủ lĩnh sinh viên mới là người thực hành quản lý dự án. Thông tin trong câu hỏi trái ngược trực tiếp với bài viết.\n> **💡 Mẹo:** Chú ý phân biệt vai trò của giáo viên cố vấn ('guides') và của sinh viên ('student leaders learn project management').\n\n6. **vibrant**\n- Bằng chứng: \"notes that campuses offer a **vibrant** community outside of the lecture hall.\" (§1)\n- Cách tìm đáp án: Vị trí cần điền một tính từ đứng trước danh từ 'community'. Đoạn 1 nêu rõ Couch ghi nhận các khuôn viên trường đại học cung cấp một cộng đồng sôi nổi (vibrant) bên ngoài giảng đường. Các từ khác không phù hợp ngữ pháp hoặc ý nghĩa.\n> **💡 Mẹo:** Xác định loại từ cần điền (tính từ) và quét các tính từ mô tả cộng đồng trong đoạn 1.\n\n7. **navigate**\n- Bằng chứng: \"find a positive outlet to manage stress and **navigate** [R] the demands of university life.\" (§3)\n- Cách tìm đáp án: Vị trí cần điền một động từ nguyên mẫu đứng sau từ nối 'and'. Trong đoạn 3, động từ 'navigate' đi cùng cụm 'manage stress and navigate the demands'. Các từ khác không phù hợp ngữ pháp hoặc ý nghĩa.\n> **💡 Mẹo:** Tìm động từ song hành với 'manage' qua từ nối 'and'.\n\n8. **faculty advisor**\n- Bằng chứng: \"To ensure these student groups stay **aligned** with university policies, they are typically required to have a **faculty advisor** who guides their activities.\" (§4)\n- Cách tìm đáp án: Từ cần điền là danh từ chỉ người/đối tượng quản lý nhóm. Đoạn 4 nêu rõ yêu cầu bắt buộc là có một giáo viên cố vấn (faculty advisor). Các danh từ khác không phù hợp ngữ cảnh hoặc ngữ pháp.\n> **💡 Mẹo:** Tìm danh từ đứng trước mệnh đề quan hệ 'who guides'.\n\n9. **establish**\n- Bằng chứng: \"Dr. Couch suggests that if students cannot find a club that matches their specific interests, they should **establish** their own.\" (§5)\n- Cách tìm đáp án: Vị trí cần điền một động từ nguyên mẫu đứng sau trợ động từ 'can'. Đoạn 5 ghi nhận lời khuyên của Dr. Couch là sinh viên nên tự thành lập (establish) câu lạc bộ riêng nếu không tìm thấy cái phù hợp. Các từ khác không phù hợp ngữ nghĩa hoặc ngữ pháp.\n> **💡 Mẹo:** Tìm động từ thể hiện hành động tạo dựng/tự lập nhóm mới.\n\n10. **Develop key soft skills like teamwork to appeal to employers**\n- Bằng chứng: \"students develop crucial **soft skills**—such as leadership, communication, and **teamwork**—which can make them much more appealing to a **prospective employer** [R].\" (§2)\n- Cách tìm đáp án: Đoạn 2 nêu rõ thông qua các hoạt động này, sinh viên phát triển kỹ năng mềm quan trọng như kỹ năng lãnh đạo, giao tiếp và làm việc nhóm, giúp họ trở nên hấp dẫn hơn với nhà tuyển dụng tương lai. Phương án A, D chứa các chi tiết không có trong bài đọc (bố mẹ giới thiệu, tránh mạng lưới quan hệ). Phương án C ngược với tinh thần của đoạn văn là khuyến khích hoạt động ngoài giờ học.\n> **💡 Mẹo:** Quét từ khóa 'appealing to prospective employer' để tìm câu trả lời tương đương trong đoạn văn.\n\n11. **It helps prevent burnout by providing a necessary mental break.**\n- Bằng chứng: \"These extracurricular activities offer a healthy balance, helping to prevent burnout and giving students a much-needed mental break between exams.\" (§3)\n- Cách tìm đáp án: Đoạn 3 chỉ ra rằng câu lạc bộ xã hội mang lại sự cân bằng, giúp ngăn ngừa kiệt sức (prevent burnout) và đem lại một kỳ nghỉ tinh thần cần thiết giữa các kỳ thi. Phương án A, C, D đều chứa thông tin sai lệch không được đề cập hoặc trái ngược với bài đọc (là lớp học bắt buộc, là cách duy nhất nhận hỗ trợ tài chính, bảo đảm có việc ngay).\n> **💡 Mẹo:** Đối chiếu lý do có lợi với các cụm từ 'prevent burnout' và 'mental break'.\n\n12. **By providing financial assistance or meeting spaces**\n- Bằng chứng: \"support them by providing **financial assistance** or meeting spaces.\" (§4)\n- Cách tìm đáp án: Đoạn 4 nói rằng các trường đại học hỗ trợ các tổ chức này bằng cách cung cấp trợ giúp tài chính hoặc không gian họp hành. Các phương án khác (không có cố vấn, cấm lập nhóm, giảm thời gian học) hoàn toàn sai lệch hoặc trái với nội dung đoạn văn.\n> **💡 Mẹo:** Tìm từ khóa 'support' và quét thông tin đi kèm trong đoạn 4.\n\n13. **An increased likelihood of graduation and better academic performance**\n- Bằng chứng: \"Research indicates that active students show a higher **likelihood** of completing their degrees and maintaining a strong **academic performance**.\" (§5)\n- Cách tìm đáp án: Đoạn 5 khẳng định nghiên cứu chỉ ra sinh viên năng nổ có khả năng tốt nghiệp cao hơn và kết quả học tập tốt hơn. Các phương án khác đưa ra thông tin trái ngược (tỷ lệ tốt nghiệp thấp hơn, nhận việc làm cố vấn ngay lập tức, loại bỏ nhu cầu hệ thống nâng đỡ) đều sai.\n> **💡 Mẹo:** Tìm các cụm từ đồng nghĩa trong đoạn 5 như 'completing their degrees' = 'graduation', 'academic performance' = 'academic success'.\n\n## Grammar Answer Key and Detailed Explanations\n\n> **Bảng phân biệt nhanh / Công thức bỏ túi:**\n> - Ôn tập lý thuyết đã học trong bài.\n\n1. **has invited**\n- Dấu hiệu / Phân tích: Dùng thì Hiện tại Hoàn thành vì có từ chỉ thời gian bắt đầu từ quá khứ 'since'.\n> **💡 Mẹo:** Dấu hiệu 'since' chỉ hành động kéo dài đến hiện tại.\n\n2. **to avoid**\n- Dấu hiệu / Phân tích: Cấu trúc 'advise someone to do something' yêu cầu động từ nguyên mẫu có 'to'.\n> **💡 Mẹo:** advise + object + to-infinitive.\n\n3. **which**\n- Dấu hiệu / Phân tích: Dùng đại từ quan hệ 'which' thay thế cho vật trong mệnh đề quan hệ không xác định.\n> **💡 Mẹo:** Mệnh đề không xác định có dấu phẩy dùng 'which', cấm dùng 'that'.\n\n4. **joined**\n- Dấu hiệu / Phân tích: Dùng thì Quá khứ Đơn vì hành động xảy ra tại thời điểm cụ thể đã qua 'Last semester'.\n> **💡 Mẹo:** Dấu hiệu 'Last semester' đi với Quá khứ Đơn.\n\n5. **participating**\n- Dấu hiệu / Phân tích: Sau cụm từ 'look forward to' dùng danh động từ V-ing.\n> **💡 Mẹo:** look forward to + V-ing.\n\n6. **who**\n- Dấu hiệu / Phân tích: Dùng đại từ quan hệ 'who' thay thế cho chủ ngữ chỉ người.\n> **💡 Mẹo:** who làm chủ ngữ thay cho người.\n\n7. **has won**\n- Dấu hiệu / Phân tích: Dùng thì Hiện tại Hoàn thành để diễn tả kết quả tích lũy tính đến hiện tại.\n> **💡 Mẹo:** Liên kết kết quả quá khứ với hiện tại.\n\n8. **to establish**\n- Dấu hiệu / Phân tích: Động từ 'decide' đi kèm động từ nguyên mẫu có 'to' (to-infinitive).\n> **💡 Mẹo:** decide + to-infinitive.\n\n9. **who**\n- Dấu hiệu / Phân tích: Đây là mệnh đề quan hệ xác định làm rõ cố vấn nào giúp đỡ, không dùng dấu phẩy.\n> **💡 Mẹo:** Xác định đối tượng trong nhóm nhiều người.\n\n10. **was studying**\n- Dấu hiệu / Phân tích: Dùng thì Quá khứ Tiếp diễn mô tả hành động làm nền đang xảy ra trong quá khứ.\n> **💡 Mẹo:** Hành động đang diễn ra thì bị hành động khác xen vào.\n\n11. **spending**\n- Dấu hiệu / Phân tích: Động từ 'mind' đi kèm danh động từ V-ing.\n> **💡 Mẹo:** mind + V-ing.\n\n12. **which**\n- Dấu hiệu / Phân tích: Sử dụng 'which' làm chủ ngữ bổ nghĩa cho cả mệnh đề đứng trước.\n> **💡 Mẹo:** which thay thế cho cả mệnh đề đứng trước sau dấu phẩy.\n\n13. **has been working**\n- Dấu hiệu / Phân tích: Dùng Hiện tại Hoàn thành Tiếp diễn nhấn mạnh tính liên tục của hành động kéo dài từ quá khứ đến nay.\n> **💡 Mẹo:** Hành động liên tục với since.\n\n14. **to develop**\n- Dấu hiệu / Phân tích: Động từ 'manage' đi kèm động từ nguyên mẫu có 'to'.\n> **💡 Mẹo:** manage + to-infinitive.\n\n15. **New students often feel homesick because they leave their familiar support systems behind.**\n- Dấu hiệu / Phân tích: Sử dụng liên từ chỉ nguyên nhân 'because' để kết nối mệnh đề kết quả và nguyên nhân.\n\n16. **Although college life can be lonely, campuses offer a vibrant community.**\n- Dấu hiệu / Phân tích: Sử dụng liên từ chỉ sự tương phản 'although' đứng đầu câu nhượng bộ.\n\n17. **Students join business societies so that they can prepare for their future careers.**\n- Dấu hiệu / Phân tích: Sử dụng liên từ chỉ mục đích 'so that' kết hợp hai mệnh đề.\n\n18. **The student leaders who organized the orientation wanted to help freshmen make friends.**\n- Dấu hiệu / Phân tích: Sử dụng mệnh đề quan hệ xác định với 'who' để kết hợp câu rút gọn danh từ lặp.\n\n19. **Since the club is aligned with university policies, it received financial assistance.**\n- Dấu hiệu / Phân tích: Sử dụng liên từ chỉ lý do 'since' ở đầu câu để kết nối.\n\n20. **Sports clubs are based on active games, whereas creative writing workshops focus on artistic expression.**\n- Dấu hiệu / Phân tích: Sử dụng 'whereas' để so sánh đối chiếu tương phản hai sự việc.\n\n21. **She joined the creative writing club last month.**\n- Dấu hiệu / Phân tích: Thời gian xác định 'last month' đòi hỏi thì Quá khứ Đơn. Sửa 'has joined' thành 'joined'.\n\n22. **The student union suggested establishing a new music society.**\n- Dấu hiệu / Phân tích: Động từ 'suggest' đi kèm gerund. Sửa 'to establish' thành 'establishing'.\n\n23. **I have lived in the dormitory since my first semester.**\n- Dấu hiệu / Phân tích: Có trạng từ chỉ mốc thời gian bắt đầu 'since' kéo dài đến hiện tại, cần dùng Hiện tại Hoàn thành. Sửa 'am living' thành 'have lived'.\n\n24. **The faculty advisor recommended holding the meeting next week.**\n- Dấu hiệu / Phân tích: Động từ 'recommend' yêu cầu gerund. Sửa 'to hold' thành 'holding'.\n\n25. **This is the student who organized the campus sports club.**\n- Dấu hiệu / Phân tích: Cố vấn người chỉ dùng 'who' hoặc 'that', không dùng 'which'. Sửa 'which' thành 'who'.\n\n26. **Yesterday evening, they finished their project proposal.**\n- Dấu hiệu / Phân tích: Mốc thời gian kết thúc 'Yesterday evening' cần dùng Quá khứ Đơn. Sửa 'have finished' thành 'finished'.\n\n27. **He expects to join the economics society next term.**\n- Dấu hiệu / Phân tích: Thay thế 'hopes that he will' bằng 'expects to + V' giữ nguyên nghĩa.\n\n28. **Joining campus groups is very helpful for new students.**\n- Dấu hiệu / Phân tích: Biến đổi động từ thành danh động từ 'Joining...' đóng vai trò làm chủ ngữ.\n\n29. **is**\n- Dấu hiệu / Phân tích: Cấu trúc 'The number of + danh từ số nhiều' luôn đi kèm động từ chia ở số ít ('is').\n> **💡 Mẹo:** Nhận biết cụm 'The number of' phân biệt với 'A number of'.\n\n30. **participating**\n- Dấu hiệu / Phân tích: Sử dụng phân từ hiện tại 'participating' rút gọn mệnh đề quan hệ chủ động.\n> **💡 Mẹo:** Rút gọn mệnh đề quan hệ: who participate -> participating.\n\n## Writing Guidance / Suggested Answers\n\n#### Task 1\n> **Suggested Model Answer:**\n> \"1. Joining campus groups helps make friends easily.\n2. This semester we decided to establish a new university society.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Bài tập sắp xếp từ giúp học sinh làm quen với vị trí của danh động từ làm chủ ngữ (Joining...) và cụm động từ chỉ quyết định (decide to do) chia ở quá khứ đơn.\n- *Tự kiểm tra:* * Correct word order and grammar structure. * Correct punctuation and capitalization.\n\n#### Task 2\n> **Suggested Model Answer:**\n> \"Dear President,\nI am writing to ask if I can join the university debating society this semester. Since my major is international relations, I believe this club will help me develop my communication and public speaking skills. I hope to learn how to construct logical arguments and improve my teamwork skills. I look forward to hearing from you.\nBest regards,\nJohn Doe\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Thư điện tử viết ngắn (3-4 câu) cần mở đầu và kết thúc trang trọng. Thân thư viết đủ 3 câu, bày tỏ sự cảm ơn, ấn tượng tốt về cuộc gặp và hỏi lịch trình đưa ra quyết định một cách lịch sự.\n- *Tự kiểm tra:* * Write exactly 3 to 4 sentences in the email body. * Include a formal greeting and sign-off. * State clearly your reason for joining and the skills you hope to gain.\n\n#### Task 3\n> **Suggested Model Answer:**\n> \"The chart illustrates the average weekly hours that college students spend participating in three types of extracurricular activities. Overall, students in sports groups spend the most time on their activities, averaging 10 hours per week. In contrast, academic organizations require the least weekly commitment, with students spending only 4 hours on average.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Đoạn mô tả biểu đồ gồm đúng ba câu. Đã nêu đầy đủ số liệu của câu lạc bộ có số giờ nhiều nhất (Sports - 10h) và thấp nhất (Academic - 4h), sử dụng liên từ tương phản 'In contrast'.\n- *Tự kiểm tra:* * Write exactly three sentences. * Describe the highest category (Sports at 10 hours) and the lowest category (Academic at 4 hours). * Use a contrast linker like 'in contrast' or 'however'.\n\n#### Task 4\n> **Suggested Model Answer:**\n> \"I would like to join the university student activities committee this year. Since I have always been interested in event coordination and communications, this club aligns perfectly with my personal growth goals. Through participating in their weekly projects, I hope to establish a strong network of friends and learn how to manage budgets effectively.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Đoạn văn viết đúng 3 câu. Thể hiện được liên kết giữa câu lạc bộ và chuyên ngành học tập/mối quan tâm cá nhân, đồng thời nêu rõ dự định đóng góp và học hỏi.\n- *Tự kiểm tra:* * Write exactly 3 to 4 sentences. * Connect the club to your current major or studies. * Explain your future goals related to the club's activities.\n\n#### Task 5\n> **Suggested Model Answer:**\n> \"The table compares two student organizations, the Debating Society and the Outdoor Adventure Club, across three features. The first major difference is their meeting frequency, with the Debating Society meeting twice a week while the Outdoor Adventure Club meets only once a month. Additionally, the Outdoor Adventure Club has a significantly higher membership fee at $50 per semester, compared to just $15 for the Debating Society.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Đoạn văn viết đúng 3 câu so sánh rõ ràng các tiêu chí trong bảng, sử dụng từ nối so sánh tương phản 'while' và 'compared to'.\n- *Tự kiểm tra:* * Write exactly three sentences. * Compare meeting frequency (twice a week vs once a month). * Compare membership fees ($15 vs $50 per semester).\n\n## Review Bridge\n#### IV. Review Bridge / Ôn tập liên chủ đề\n1. She hopes (get) _______ the job at the bank.\n- **Đáp án:** to get\n- **Giải thích:** Động từ 'hope' đi với động từ nguyên mẫu có 'to' (to-infinitive).\n\n2. I don't mind (work) _______ late tonight.\n- **Đáp án:** working\n- **Giải thích:** Động từ 'mind' đi với danh động từ (V-ing).\n\n3. We (already submit) _______ our applications.\n- **Đáp án:** have already submitted\n- **Giải thích:** Có trạng từ 'already' diễn tả hành động vừa mới hoàn thành, yêu cầu dùng Hiện tại Hoàn thành.\n",
+  "answers_markdown": "## Reading Answer Key and Detailed Explanations\n\n📖 **Tóm tắt bài đọc:** Bài đọc mô tả chi tiết thông tin từ nguồn đã xác thực.\n\n1. **TRUE**\n- Bằng chứng: \"Leaving familiar support systems behind often leads to feelings of **homesickness**.\" (§1)\n- Cách tìm đáp án: Câu hỏi nói rằng việc rời xa gia đình có thể khiến sinh viên mới cảm thấy cô đơn và nhớ nhà. Điều này hoàn toàn khớp với thông tin trong đoạn 1: 'Leaving familiar support systems behind often leads to feelings of homesickness.' Các phương án FALSE và NOT GIVEN đều không chính xác vì thông tin trong bài viết xác nhận nhận định này là đúng.\n> **💡 Mẹo:** Tìm các cụm từ đồng nghĩa như 'leaving familiar support systems' = 'leaving their homes', 'homesickness' = 'miss their families'.\n\n2. **TRUE**\n- Bằng chứng: \"Many organizations focus on academic fields or professional development, which are highly beneficial for students looking to prepare for their future careers.\" (§2)\n- Cách tìm đáp án: Nhận định trong câu hỏi hoàn toàn khớp với câu đầu tiên của đoạn 2: việc tham gia các nhóm học thuật/chuyên môn rất có lợi cho việc chuẩn bị sự nghiệp tương lai. Các phương án khác (FALSE, NOT GIVEN) đều sai vì thông tin bài đọc đã khẳng định trực tiếp tính có lợi cho nghề nghiệp tương lai.\n> **💡 Mẹo:** Đối chiếu từ khóa 'academic or professional group' = 'academic fields or professional development'.\n\n3. **NOT GIVEN**\n- Bằng chứng: \"For example, joining a business society or an economics club allows members to hear from experts, attend networking events, and apply their classroom knowledge to real-world projects.\" (§2)\n- Cách tìm đáp án: Mặc dù đoạn 2 đưa ra ví dụ về các câu lạc bộ kinh tế và kinh doanh, bài đọc không hề đề cập đến việc hầu hết các doanh nghiệp lớn có thích tuyển sinh viên từ các nhóm này hơn hay không. Bài đọc chỉ nói sinh viên được nghe chuyên gia và kết nối, chứ không nói về việc các doanh nghiệp thích tuyển đối tượng nào hơn.\n> **💡 Mẹo:** Nếu một nhận định có vẻ hợp lý ngoài đời thực nhưng không được xác nhận cụ thể trong bài đọc, hãy chọn NOT GIVEN.\n\n4. **FALSE**\n- Bằng chứng: \"Whether participating in a **creative writing** workshop or a recreational sports club, students find a positive outlet to manage stress\" (§3)\n- Cách tìm đáp án: Câu hỏi khẳng định hoạt động ngoại khóa chỉ hữu ích cho sinh viên học viết sáng tạo. Tuy nhiên, đoạn 3 đề cập cả câu lạc bộ viết sáng tạo lẫn câu lạc bộ thể thao giải trí, phủ định tính chất 'chỉ dành cho viết sáng tạo'. Các phương án TRUE và NOT GIVEN đều sai vì thông tin bài học chỉ ra sự đa dạng các nhóm hữu ích, trực tiếp phủ nhận từ 'only' trong nhận định.\n> **💡 Mẹo:** Hãy cẩn thận với những từ ngữ mang tính tuyệt đối như 'only', 'always'.\n\n5. **FALSE**\n- Bằng chứng: \"To ensure these student groups stay **aligned** with university policies, they are typically required to have a **faculty advisor** who guides their activities. This structured guidance helps student leaders learn project management\" (§4)\n- Cách tìm đáp án: Câu hỏi nói cố vấn học tập phải làm toàn bộ công việc dự án cho nhóm. Tuy nhiên, đoạn 4 chỉ ra cố vấn chỉ đóng vai trò hướng dẫn, còn thủ lĩnh sinh viên mới là người thực hành quản lý dự án. Các phương án khác (TRUE, NOT GIVEN) sai vì bài đọc chỉ rõ sinh viên là người làm việc dự án để học quản lý dự án.\n> **💡 Mẹo:** Chú ý phân biệt vai trò của giáo viên cố vấn ('guides') và của sinh viên ('student leaders learn project management').\n\n6. **vibrant**\n- Bằng chứng: \"notes that campuses offer a **vibrant** community outside of the lecture hall.\" (§1)\n- Cách tìm đáp án: Vị trí cần điền một tính từ đứng trước danh từ 'community'. Đoạn 1 nêu rõ Couch ghi nhận các khuôn viên trường đại học cung cấp một cộng đồng sôi nổi (vibrant) bên ngoài giảng đường. Các từ khác từ đoạn văn như 'lonely', 'excited' không đi kèm 'community' và không phản ánh đúng lời nhận xét tích cực ngoài giảng đường.\n> **💡 Mẹo:** Xác định loại từ cần điền (tính từ) và quét các tính từ mô tả cộng đồng trong đoạn 1.\n\n7. **navigate**\n- Bằng chứng: \"find a positive outlet to manage stress and **navigate** [R] the demands of university life.\" (§3)\n- Cách tìm đáp án: Vị trí cần điền một động từ nguyên mẫu đứng sau từ nối 'and'. Trong đoạn 3, động từ 'navigate' đi cùng cụm 'manage stress and navigate the demands'. Các động từ khác như 'prevent' hay 'manage' không đúng vị trí hoặc ý nghĩa ngữ pháp chỉ việc định hướng các yêu cầu học tập.\n> **💡 Mẹo:** Tìm động từ song hành với 'manage' qua từ nối 'and'.\n\n8. **faculty advisor**\n- Bằng chứng: \"To ensure these student groups stay **aligned** with university policies, they are typically required to have a **faculty advisor** who guides their activities.\" (§4)\n- Cách tìm đáp án: Từ cần điền là danh từ chỉ người/đối tượng quản lý nhóm. Đoạn 4 nêu rõ yêu cầu bắt buộc là có một giáo viên cố vấn (faculty advisor). Các chức danh khác như 'student leader' không phù hợp về ý nghĩa giám sát tuân thủ chính sách của trường.\n> **💡 Mẹo:** Tìm danh từ đứng trước mệnh đề quan hệ 'who guides'.\n\n9. **establish**\n- Bằng chứng: \"Dr. Couch suggests that if students cannot find a club that matches their specific interests, they should **establish** their own.\" (§5)\n- Cách tìm đáp án: Vị trí cần điền một động từ nguyên mẫu đứng sau trợ động từ 'can'. Đoạn 5 ghi nhận lời khuyên của Dr. Couch là sinh viên nên tự thành lập (establish) câu lạc bộ riêng nếu không tìm thấy cái phù hợp. Các động từ như 'find' hay 'match' không phù hợp ngữ pháp hoặc ý nghĩa tự thành lập nhóm mới.\n> **💡 Mẹo:** Tìm động từ thể hiện hành động tạo dựng/tự lập nhóm mới.\n\n10. **Develop key soft skills like teamwork to appeal to employers**\n- Bằng chứng: \"students develop crucial **soft skills**—such as leadership, communication, and **teamwork**—which can make them much more appealing to a **prospective employer** [R].\" (§2)\n- Cách tìm đáp án: Đoạn 2 nêu rõ thông qua các hoạt động này, sinh viên phát triển kỹ năng mềm quan trọng như kỹ năng lãnh đạo, giao tiếp và làm việc nhóm, giúp họ trở nên hấp dẫn hơn với nhà tuyển dụng tương lai. Phương án A (xin giới thiệu từ bố mẹ) không xuất hiện. Phương án C (chỉ tập trung vào giảng đường) trái với bài đọc. Phương án D (tránh sự kiện kết nối) ngược hoàn toàn với lời khuyên tham gia sự kiện kết nối.\n> **💡 Mẹo:** Quét từ khóa 'appealing to prospective employer' để tìm câu trả lời tương đương trong đoạn văn.\n\n11. **It helps prevent burnout by providing a necessary mental break.**\n- Bằng chứng: \"These extracurricular activities offer a healthy balance, helping to prevent burnout and giving students a much-needed mental break between exams.\" (§3)\n- Cách tìm đáp án: Đoạn 3 chỉ ra rằng câu lạc bộ xã hội mang lại sự cân bằng, giúp ngăn ngừa kiệt sức (prevent burnout) và đem lại một kỳ nghỉ tinh thần cần thiết giữa các kỳ thi. Phương án A sai vì đây không phải lớp bắt buộc. Phương án C sai vì đây không phải là cách duy nhất nhận hỗ trợ tài chính. Phương án D sai vì không có bảo đảm việc làm ngay.\n> **💡 Mẹo:** Đối chiếu lý do có lợi với các cụm từ 'prevent burnout' và 'mental break'.\n\n12. **By providing financial assistance or meeting spaces**\n- Bằng chứng: \"support them by providing **financial assistance** or meeting spaces.\" (§4)\n- Cách tìm đáp án: Đoạn 4 nói rằng các trường đại học hỗ trợ các tổ chức này bằng cách cung cấp trợ giúp tài chính hoặc không gian họp hành. Phương án A (yêu cầu làm không có cố vấn) sai. Phương án C (cấm mở câu lạc bộ) sai. Phương án D (giảm giờ học) không được đề cập.\n> **💡 Mẹo:** Tìm từ khóa 'support' và quét thông tin đi kèm trong đoạn 4.\n\n13. **An increased likelihood of graduation and better academic performance**\n- Bằng chứng: \"Research indicates that active students show a higher **likelihood** of completing their degrees and maintaining a strong **academic performance**.\" (§5)\n- Cách tìm đáp án: Đoạn 5 khẳng định nghiên cứu chỉ ra sinh viên năng nổ có khả năng tốt nghiệp cao hơn và kết quả học tập tốt hơn. Phương án A (tỷ lệ tốt nghiệp thấp) ngược nghĩa bài đọc. Phương án C (làm cố vấn học tập ngay) lấy sai từ khóa đoạn 4. Phương án D (loại bỏ hệ thống hỗ trợ) sai lệch thông tin.\n> **💡 Mẹo:** Tìm các cụm từ đồng nghĩa trong đoạn 5 như 'completing their degrees' = 'graduation', 'academic performance' = 'academic success'.\n\n## Grammar Answer Key and Detailed Explanations\n\n> **Bảng phân biệt nhanh / Công thức bỏ túi:**\n> - Ôn tập lý thuyết đã học trong bài.\n\n1. **has invited**\n- Dấu hiệu / Phân tích: Giới từ 'since' đòi hỏi mệnh đề chính chia ở Hiện tại hoàn thành để thể hiện tính liên kết kéo dài đến nay.\n> **💡 Mẹo:** Dấu hiệu 'since' chỉ hành động kéo dài đến hiện tại.\n\n2. **to avoid**\n- Dấu hiệu / Phân tích: Advise có hai cấu trúc chính: advise + V-ing (khuyên làm gì chung chung) và advise + O + to-V (khuyên ai đó làm gì cụ thể).\n> **💡 Mẹo:** advise + object + to-infinitive.\n\n3. **which**\n- Dấu hiệu / Phân tích: Trong mệnh đề quan hệ không xác định (non-defining), ta chỉ dùng 'which' để chỉ vật và không bao giờ dùng 'that'.\n> **💡 Mẹo:** Mệnh đề không xác định có dấu phẩy dùng 'which', cấm dùng 'that'.\n\n4. **joined**\n- Dấu hiệu / Phân tích: Các trạng từ như 'last semester', 'yesterday', 'in 2020' là các mốc thời gian kết thúc hẳn, buộc dùng Quá khứ đơn.\n> **💡 Mẹo:** Dấu hiệu 'Last semester' đi với Quá khứ Đơn.\n\n5. **participating**\n- Dấu hiệu / Phân tích: Trong 'look forward to', 'to' là một giới từ thực sự chứ không phải là từ tạo động từ nguyên mẫu, nên bắt buộc dùng V-ing.\n> **💡 Mẹo:** look forward to + V-ing.\n\n6. **who**\n- Dấu hiệu / Phân tích: Đứng ngay trước động từ chính 'guides' làm vị ngữ trong mệnh đề quan hệ, bắt buộc phải dùng đại từ làm chủ ngữ 'who'.\n> **💡 Mẹo:** who làm chủ ngữ thay cho người.\n\n7. **has won**\n- Dấu hiệu / Phân tích: Khi nói về thành quả đạt được tính đến thời điểm hiện tại ('Today... has won...'), Hiện tại hoàn thành là thì phù hợp nhất.\n> **💡 Mẹo:** Liên kết kết quả quá khứ với hiện tại.\n\n8. **to establish**\n- Dấu hiệu / Phân tích: Decide thuộc nhóm động từ chỉ ý định, ý muốn hướng tới tương lai, luôn đi kèm động từ nguyên mẫu có 'to'.\n> **💡 Mẹo:** decide + to-infinitive.\n\n9. **who**\n- Dấu hiệu / Phân tích: Context 'many student mentors' đòi hỏi mệnh đề quan hệ phải đóng vai trò xác định danh từ (defining relative clause) để câu có nghĩa đầy đủ.\n> **💡 Mẹo:** Xác định đối tượng trong nhóm nhiều người.\n\n10. **was studying**\n- Dấu hiệu / Phân tích: Sự kết hợp giữa Quá khứ tiếp diễn (was/were V-ing) and Quá khứ đơn (V2/ed) được sử dụng để chỉ một hành động đang xảy ra thì bị một hành động khác xen vào.\n> **💡 Mẹo:** Hành động đang diễn ra thì bị hành động khác xen vào.\n\n11. **spending**\n- Dấu hiệu / Phân tích: Động từ 'mind' thuộc nhóm bắt buộc đi kèm với V-ing để thể hiện thái độ đối với việc làm gì đó.\n> **💡 Mẹo:** mind + V-ing.\n\n12. **which**\n- Dấu hiệu / Phân tích: Which ngoài thay thế danh từ chỉ vật còn có chức năng thay thế cho toàn bộ ý tưởng của mệnh đề trước nó sau dấu phẩy.\n> **💡 Mẹo:** which thay thế cho cả mệnh đề đứng trước sau dấu phẩy.\n\n13. **has been working**\n- Dấu hiệu / Phân tích: Hiện tại hoàn thành tiếp diễn (has/have been V-ing) nhấn mạnh tính liên tục và thời lượng của một hành động bắt đầu trong quá khứ và vẫn đang tiếp diễn ở hiện tại.\n> **💡 Mẹo:** Hành động liên tục với since.\n\n14. **to develop**\n- Dấu hiệu / Phân tích: Manage + to-V thể hiện việc vượt qua khó khăn để hoàn thành một hành động cụ thể.\n> **💡 Mẹo:** manage + to-infinitive.\n\n15. **New students often feel homesick because they leave their familiar support systems behind.**\n- Dấu hiệu / Phân tích: Mệnh đề nguyên nhân (leave support systems) đứng sau 'because', bổ nghĩa cho mệnh đề kết quả đứng trước.\n> **💡 Mẹo:** Sử dụng liên từ chỉ nguyên nhân 'because' để kết nối mệnh đề kết quả và nguyên nhân.\n\n16. **Although college life can be lonely, campuses offer a vibrant community.**\n- Dấu hiệu / Phân tích: Cấu trúc: Although + Clause 1, Clause 2. Không dùng 'but' ở Clause 2.\n> **💡 Mẹo:** Sử dụng liên từ chỉ sự tương phản 'although' đứng đầu câu nhượng bộ.\n\n17. **Students join business societies so that they can prepare for their future careers.**\n- Dấu hiệu / Phân tích: Cấu trúc: S + V + so that + S + can/could/will/would + V.\n> **💡 Mẹo:** Sử dụng liên từ chỉ mục đích 'so that' kết hợp hai mệnh đề.\n\n18. **The student leaders who organized the orientation wanted to help freshmen make friends.**\n- Dấu hiệu / Phân tích: Mệnh đề quan hệ phải đứng ngay sau danh từ mà nó bổ nghĩa để tránh gây mơ hồ về nghĩa.\n> **💡 Mẹo:** Sử dụng mệnh đề quan hệ xác định với 'who' để kết hợp câu rút gọn danh từ lặp.\n\n19. **Since the club is aligned with university policies, it received financial assistance.**\n- Dấu hiệu / Phân tích: Since ngoài nghĩa là 'từ khi' còn có nghĩa tương đương với 'because/as' để chỉ lý do.\n> **💡 Mẹo:** Sử dụng liên từ chỉ lý do 'since' ở đầu câu để kết nối.\n\n20. **Sports clubs are based on active games, whereas creative writing workshops focus on artistic expression.**\n- Dấu hiệu / Phân tích: Whereas được sử dụng giữa hai mệnh đề độc lập để tạo ra sự đối lập rõ rệt, thường đi sau dấu phẩy.\n> **💡 Mẹo:** Sử dụng 'whereas' để so sánh đối chiếu tương phản hai sự việc.\n\n21. **She joined the creative writing club last month.**\n- Dấu hiệu / Phân tích: Sự xuất hiện của 'last month' xung đột trực tiếp với thì Hiện tại hoàn thành, cần sửa thành Quá khứ đơn.\n> **💡 Mẹo:** Thời gian xác định 'last month' đòi hỏi thì Quá khứ Đơn. Sửa 'has joined' thành 'joined'.\n\n22. **The student union suggested establishing a new music society.**\n- Dấu hiệu / Phân tích: Suggest bắt buộc đi kèm V-ing khi nói về việc đề xuất một hành động.\n> **💡 Mẹo:** Động từ 'suggest' đi kèm gerund. Sửa 'to establish' thành 'establishing'.\n\n23. **I have lived in the dormitory since my first semester.**\n- Dấu hiệu / Phân tích: Thì Hiện tại tiếp diễn không thể đi cùng với khoảng thời gian bắt đầu bằng 'since', phải dùng Hiện tại hoàn thành.\n> **💡 Mẹo:** Có trạng từ chỉ mốc thời gian bắt đầu 'since' kéo dài đến hiện tại, cần dùng Hiện tại Hoàn thành. Sửa 'am living' thành 'have lived'.\n\n24. **The faculty advisor recommended holding the meeting next week.**\n- Dấu hiệu / Phân tích: Recommend giống như suggest, yêu cầu danh động từ theo sau.\n> **💡 Mẹo:** Động từ 'recommend' yêu cầu gerund. Sửa 'to hold' thành 'holding'.\n\n25. **This is the student who organized the campus sports club.**\n- Dấu hiệu / Phân tích: Which thay thế cho vật, who thay thế cho người. Không thể dùng chéo.\n> **💡 Mẹo:** Cố vấn người chỉ dùng 'who' hoặc 'that', không dùng 'which'. Sửa 'which' thành 'who'.\n\n26. **Yesterday evening, they finished their project proposal.**\n- Dấu hiệu / Phân tích: Khi có thời gian quá khứ cụ thể rõ ràng ('yesterday evening'), ta bắt buộc phải dùng Quá khứ đơn.\n> **💡 Mẹo:** Mốc thời gian kết thúc 'Yesterday evening' cần dùng Quá khứ Đơn. Sửa 'have finished' thành 'finished'.\n\n27. **He expects to join the economics society next term.**\n- Dấu hiệu / Phân tích: Expect to-V biểu thị sự mong đợi thực hiện hành động, tương đương ngữ nghĩa với hope that S will V.\n> **💡 Mẹo:** Thay thế 'hopes that he will' bằng 'expects to + V' giữ nguyên nghĩa.\n\n28. **Joining campus groups is very helpful for new students.**\n- Dấu hiệu / Phân tích: Khi danh động từ làm chủ ngữ, động từ chính đi sau luôn chia ở dạng số ít ('is').\n> **💡 Mẹo:** Biến đổi động từ thành danh động từ 'Joining...' đóng vai trò làm chủ ngữ.\n\n29. **is**\n- Dấu hiệu / Phân tích: Chủ ngữ chính của câu là 'The number' (số lượng - danh từ số ít), chứ không phải 'students', nên động từ phải chia số ít.\n> **💡 Mẹo:** Nhận biết cụm 'The number of' phân biệt với 'A number of'.\n\n30. **participating**\n- Dấu hiệu / Phân tích: Khi rút gọn mệnh đề quan hệ chủ động, ta bỏ đại từ quan hệ và động từ 'to be' (nếu có), chuyển động từ chính sang dạng V-ing.\n> **💡 Mẹo:** Rút gọn mệnh đề quan hệ: who participate -> participating.\n\n## Writing Guidance / Suggested Answers\n\n#### Task 1\n> **Suggested Model Answer:**\n> \"1. Joining campus groups helps make friends easily.\n2. This semester we decided to establish a new university society.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Bài tập sắp xếp từ giúp học sinh làm quen với vị trí của danh động từ làm chủ ngữ (Joining...) và cụm động từ chỉ quyết định (decide to do) chia ở quá khứ đơn.\n- *Tự kiểm tra:* * Correct word order and grammar structure. * Correct punctuation and capitalization.\n\n#### Task 2\n> **Suggested Model Answer:**\n> \"Dear President,\nI am writing to ask if I can join the university debating society this semester. Since my major is international relations, I believe this club will help me develop my communication and public speaking skills. I hope to learn how to construct logical arguments and improve my teamwork skills. I look forward to hearing from you.\nBest regards,\nJohn Doe\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Thư điện tử viết ngắn (3-4 câu) cần mở đầu và kết thúc trang trọng. Thân thư viết đủ 3 câu, bày tỏ sự cảm ơn, ấn tượng tốt về cuộc gặp và hỏi lịch trình đưa ra quyết định một cách lịch sự.\n- *Tự kiểm tra:* * Write exactly 3 to 4 sentences in the email body. * Include a formal greeting and sign-off. * State clearly your reason for joining and the skills you hope to gain.\n\n#### Task 3\n> **Suggested Model Answer:**\n> \"The chart illustrates the average weekly hours that college students spend participating in three types of extracurricular activities. Overall, students in sports groups spend the most time on their activities, averaging 10 hours per week. In contrast, academic organizations require the least weekly commitment, with students spending only 4 hours on average.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Đoạn mô tả biểu đồ gồm đúng ba câu. Đã nêu đầy đủ số liệu của câu lạc bộ có số giờ nhiều nhất (Sports - 10h) và thấp nhất (Academic - 4h), sử dụng liên từ tương phản 'In contrast'.\n- *Tự kiểm tra:* * Write exactly three sentences. * Describe the highest category (Sports at 10 hours) and the lowest category (Academic at 4 hours). * Use a contrast linker like 'in contrast' or 'however'.\n\n#### Task 4\n> **Suggested Model Answer:**\n> \"I would like to join the university student activities committee this year. Since I have always been interested in event coordination and communications, this club aligns perfectly with my personal growth goals. Through participating in their weekly projects, I hope to establish a strong network of friends and learn how to manage budgets effectively.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Đoạn văn viết đúng 3 câu. Thể hiện được liên kết giữa câu lạc bộ và chuyên ngành học tập/mối quan tâm cá nhân, đồng thời nêu rõ dự định đóng góp và học hỏi.\n- *Tự kiểm tra:* * Write exactly 3 to 4 sentences. * Connect the club to your current major or studies. * Explain your future goals related to the club's activities.\n\n#### Task 5\n> **Suggested Model Answer:**\n> \"The table compares two student organizations, the Debating Society and the Outdoor Adventure Club, across three features. The first major difference is their meeting frequency, with the Debating Society meeting twice a week while the Outdoor Adventure Club meets only once a month. Additionally, the Outdoor Adventure Club has a significantly higher membership fee at $50 per semester, compared to just $15 for the Debating Society.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Đoạn văn viết đúng 3 câu so sánh rõ ràng các tiêu chí trong bảng, sử dụng từ nối so sánh tương phản 'while' và 'compared to'.\n- *Tự kiểm tra:* * Write exactly three sentences. * Compare meeting frequency (twice a week vs once a month). * Compare membership fees ($15 vs $50 per semester).\n\n## Review Bridge\n#### IV. Review Bridge / Ôn tập liên chủ đề\n1. She hopes (get) _______ the job at the bank.\n- **Đáp án:** to get\n- **Giải thích:** Động từ 'hope' đi với động từ nguyên mẫu có 'to' (to-infinitive).\n\n2. I don't mind (work) _______ late tonight.\n- **Đáp án:** working\n- **Giải thích:** Động từ 'mind' đi với danh động từ (V-ing).\n\n3. We (already submit) _______ our applications.\n- **Đáp án:** have already submitted\n- **Giải thích:** Có trạng từ 'already' diễn tả hành động vừa mới hoàn thành, yêu cầu dùng Hiện tại Hoàn thành.\n",
   "quizlet_markdown": "## Section 1: Simple Vocabulary List (Học từ vựng đơn giản)\n| Từ vựng tiếng Anh | Nghĩa tiếng Việt |\n| --- | --- |\n| vibrant | sôi nổi, đầy sức sống |\n| student organization | tổ chức sinh viên |\n| foster | thúc đẩy, nuôi dưỡng |\n| belonging | cảm giác gắn kết, thuộc về |\n| soft skills | kỹ năng mềm |\n| teamwork | làm việc nhóm |\n| creative writing | viết sáng tạo |\n| necessary | cần thiết |\n| financial assistance | hỗ trợ tài chính |\n| faculty advisor | cố vấn học tập, giáo viên cố vấn |\n| aligned | liên kết, phù hợp |\n| likelihood | khả năng xảy ra |\n| academic performance | kết quả học tập |\n| establish | thành lập |\n| support system | hệ thống nâng đỡ, hệ thống hỗ trợ |\n| extracurricular | ngoại khóa |\n| homesickness | sự nhớ nhà |\n| peer support | sự hỗ trợ từ bạn bè |\n| residence life | đời sống nội trú |\n| personal growth | sự phát triển cá nhân |\n\n## Section 2: Detailed Vocabulary List (Học từ vựng đầy đủ)\n| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |\n| --- | --- |\n| vibrant (adjective) /ˈvaɪ.brənt/ | full of energy and life - sôi nổi, đầy sức sống. Ví dụ: Campuses offer a vibrant community outside the classroom. |\n| student organization (noun phrase) /ˈstjuː.dənt ˌɔː.ɡən.aɪˈzeɪ.ʃən/ | a group run by students at a college or university - tổ chức sinh viên. Ví dụ: Joining a student organization is a great way to make friends. |\n| foster (verb) /ˈfɒs.tər/ | to encourage or promote the development of something - thúc đẩy, nuôi dưỡng. Ví dụ: Extracurricular activities help foster new friendships. |\n| belonging (noun) /bɪˈlɒŋ.ɪŋ/ | a feeling of being happy and comfortable in a place or group - cảm giác gắn kết, thuộc về. Ví dụ: Participating in clubs gives students a sense of belonging. |\n| soft skills (noun phrase) /sɒft skɪlz/ | personal attributes that enable someone to interact effectively - kỹ năng mềm. Ví dụ: Employers look for soft skills like communication and leadership. |\n| teamwork (noun) /ˈtiːm.wɜːk/ | the combined action of a group, especially when effective and efficient - làm việc nhóm. Ví dụ: Academic projects require strong teamwork among members. |\n| creative writing (noun phrase) /kriˈeɪ.tɪv ˈraɪ.tɪŋ/ | writing, typically fiction or poetry, which displays imagination - viết sáng tạo. Ví dụ: She joined a creative writing club to improve her stories. |\n| necessary (adjective) /ˈnes.ə.ser.i/ | needed to be done, achieved, or present; essential - cần thiết. Ví dụ: A balanced routine is necessary for college success. |\n| financial assistance (noun phrase) /faɪˈnæn.ʃəl əˈsɪs.təns/ | money given to support a person or group - hỗ trợ tài chính. Ví dụ: The university provides financial assistance to student groups. |\n| faculty advisor (noun phrase) /ˈfæk.əl.ti ədˈvaɪ.zər/ | a teacher or staff member who guides a student group - cố vấn học tập, giáo viên cố vấn. Ví dụ: Our club's faculty advisor helped us plan the event. |\n| aligned (adjective) /əˈlaɪnd/ | giving support to or agreeing with a policy or group - liên kết, phù hợp. Ví dụ: The club's goals are aligned with the university's values. |\n| likelihood (noun) /ˈlaɪ.kli.hʊd/ | the state or fact of something's being likely; probability - khả năng xảy ra. Ví dụ: Active involvement increases the likelihood of graduation. |\n| academic performance (noun phrase) /ˌæk.əˈdem.ɪk pəˈfɔː.məns/ | the extent to which a student has achieved their educational goals - kết quả học tập. Ví dụ: Student involvement is linked to higher academic performance. |\n| establish (verb) /ɪˈstæb.lɪʃ/ | to set up an organization, system, or set of rules on a firm basis - thành lập. Ví dụ: They decided to establish a new debating society. |\n| support system (noun phrase) /səˈpɔːt ˌsɪs.təm/ | a network of people who provide practical or emotional support - hệ thống nâng đỡ, hệ thống hỗ trợ. Ví dụ: Friends on campus form an essential support system. |\n| extracurricular (adjective) /ˌek.strə.kəˈrɪk.jə.lər/ | activities done in addition to the normal course of study - ngoại khóa. Ví dụ: She participates in several extracurricular projects. |\n| homesickness (noun) /ˈhəʊm.sɪk.nəs/ | a feeling of longing for one's home during an absence from it - sự nhớ nhà. Ví dụ: Joining campus groups is a good way to overcome homesickness. |\n| peer support (noun phrase) /pɪər səˈpɔːt/ | help and support from people of the same age or status - sự hỗ trợ từ bạn bè. Ví dụ: The student union organizes a peer support network. |\n| residence life (noun phrase) /ˈrez.ɪ.dəns laɪf/ | the experience of living in university housing - đời sống nội trú. Ví dụ: Residence life offers many opportunities to make friends. |\n| personal growth (noun phrase) /ˈpɜː.sən.əl ɡrəʊθ/ | the process of developing new skills and understanding oneself - sự phát triển cá nhân. Ví dụ: Extracurricular involvement contributes to personal growth. |\n"
 }

@@ -4,15 +4,27 @@
 
 Each grammar set must include a balanced distribution of cognitive levels. Do not allow the grammar section to rely mainly on isolated form recognition.
 
-For each grammar set:
-- 20-30% Form Recognition:
-  Learners identify the correct grammatical form from a controlled sentence.
-- 30-40% Context Use:
-  Learners must use sentence meaning, time context, logical relationship, or surrounding clues.
-- 20-30% Meaning Preservation / Sentence Combining:
-  Learners rewrite, combine, or transform sentences while preserving the original meaning.
-- 10-20% IELTS Editing Accuracy:
-  Learners correct realistic learner errors similar to IELTS Writing mistakes.
+Use these maximum/minimum ratios by level:
+
+| Level | Mechanical Form | Meaning Contrast | Context / Discourse | Transformation / Error Correction / Writing Transfer |
+|---|---:|---:|---:|---:|
+| A1 | <=60% | >=20% | >=10% | >=10% |
+| A1+ | <=55% | >=20% | >=15% | >=10% |
+| A2 | <=45% | >=25% | >=15% | >=15% |
+| A2+ | <=40% | >=25% | >=20% | >=15% |
+| B1 | <=30% | >=30% | >=20% | >=20% |
+| B1+ | <=25% | >=30% | >=25% | >=20% |
+| B2 | <=20% | >=30% | >=30% | >=20% |
+| B2+ | <=15% | >=30% | >=35% | >=20% |
+| C1 | <=10% | >=30% | >=35% | >=25% |
+| C1+ | <=10% | >=30% | >=40% | >=25% |
+| C2 | <=5% | >=30% | >=40% | >=30% |
+
+Categories:
+- Mechanical Form: learners identify the correct grammatical form from a controlled sentence.
+- Meaning Contrast: learners choose forms based on meaning differences, not only patterns.
+- Context / Discourse: learners use sentence meaning, time context, logical relationship, register, cohesion, or surrounding clues.
+- Transformation / Error Correction / Writing Transfer: learners rewrite, combine, correct, edit, or produce language for writing.
 
 For lower levels A1 and A1+:
 - keep sentences short
@@ -260,7 +272,7 @@ Important:
 **Deep Goal:** Test control, precision, register, rhetorical purpose. Express ideas academically, reduce clumsy clauses, manage concession, avoid overstatement.
 **Stretch:** dense noun phrases, rhetorical fronting, nuanced modality, advanced punctuation, register shifting.
 
-## C2 / C2+
+## C2
 - **Mandatory Types**: Fine-grained grammar nuance; Ambiguity resolution; Register and rhetorical effect; Complex clause architecture; Advanced cohesion; Grammar affecting implication/stance; Grammatically possible but contextually wrong distractors.
 **Targets (1-3):** stylistic control, register shifting, dense noun phrases, advanced subordination, rhetorical emphasis, nuanced modality, subjunctive/mandative structures, parallelism, ambiguity reduction, complex punctuation.
 **Deep Goal:** Test expert-level control. Exact meaning, subtle register, concision, rhetorical rhythm, information structure, ambiguity management, academic polish.
@@ -417,8 +429,11 @@ Sentence Transformation / Combining includes: `meaning_preservation_validation`.
 The pack MUST FAIL if any of the following are true:
 - > 5 consecutive questions with the same target grammar and clue type.
 - > 40% of questions use obvious surface clues at B1 or above.
+- > 30% of questions use obvious surface clues at B2 or above.
+- The level-specific distribution table in this reference is violated.
 - 0 error correction or transformation questions at B1 or above.
 - 0 paragraph/context grammar questions at B2 or above.
+- 0 writing-transfer grammar questions at B1 or above.
 - Explanations only state the formula without explaining meaning/use.
 - A question lacks a reasonable/plausible distractor.
 - The grammar target is drastically lower than the current level.

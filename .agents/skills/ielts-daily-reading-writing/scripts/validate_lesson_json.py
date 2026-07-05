@@ -5,6 +5,54 @@ import re
 import argparse
 from pathlib import Path
 
+ALLOWED_LEVELS = ["A1", "A1+", "A2", "A2+", "B1", "B1+", "B2", "B2+", "C1", "C1+", "C2"]
+
+READING_MAX_LITERAL = {
+    "A1": 0.70,
+    "A1+": 0.60,
+    "A2": 0.50,
+    "A2+": 0.45,
+    "B1": 0.40,
+    "B1+": 0.35,
+    "B2": 0.30,
+    "B2+": 0.25,
+    "C1": 0.20,
+    "C1+": 0.15,
+    "C2": 0.10,
+}
+
+GRAMMAR_MAX_MECHANICAL = {
+    "A1": 0.60,
+    "A1+": 0.55,
+    "A2": 0.45,
+    "A2+": 0.40,
+    "B1": 0.30,
+    "B1+": 0.25,
+    "B2": 0.20,
+    "B2+": 0.15,
+    "C1": 0.10,
+    "C1+": 0.10,
+    "C2": 0.05,
+}
+
+READING_BLUEPRINT_FIELDS = [
+    "question_no",
+    "type",
+    "depth",
+    "target_skill",
+    "evidence_strategy",
+    "distractor_strategy",
+]
+
+GRAMMAR_BLUEPRINT_FIELDS = [
+    "question_no",
+    "grammar_target",
+    "question_type",
+    "depth",
+    "tested_dimension",
+    "trap",
+]
+
 # Ensure UTF-8 output on all systems
 if sys.stdout.encoding != 'utf-8':
     try:
@@ -56,6 +104,9 @@ def validate_lesson_json(json_path: Path) -> bool:
     target_gq = meta["grammar_question_count"]
     target_wt = meta["writing_task_count"]
 
+    if level not in ALLOWED_LEVELS:
+        errors.append(f"FAIL: lesson_meta.level must be one of {ALLOWED_LEVELS}. Got: {level}")
+
     # 2. Validate source
     source = data["source"]
     if source.get("status") != "verified":
@@ -86,13 +137,38 @@ def validate_lesson_json(json_path: Path) -> bool:
     if len(rqs) != target_rq:
         errors.append(f"FAIL: Reading questions count mismatch. Expected {target_rq}, got {len(rqs)}")
 
+    reading_blueprint = reading.get("reading_blueprint", [])
+    if len(reading_blueprint) != target_rq:
+        errors.append(f"FAIL: Reading blueprint count mismatch. Expected {target_rq}, got {len(reading_blueprint)}")
+    for idx, bp in enumerate(reading_blueprint):
+        for field in READING_BLUEPRINT_FIELDS:
+            if field not in bp or bp.get(field) in [None, ""]:
+                errors.append(f"FAIL: reading.reading_blueprint[{idx}] missing field: {field}")
+        if bp.get("question_no") != idx + 1:
+            errors.append(f"FAIL: reading.reading_blueprint[{idx}] question_no must be {idx + 1}. Got {bp.get('question_no')}")
+
     # 4. Validate evidence quotes in passage & reasoning distribution
     passage_text = ""
     if "passage" in reading and "paragraphs" in reading["passage"]:
         passage_text = " ".join([p.get("text", "") for p in reading["passage"]["paragraphs"]])
 
-    non_literal_count = 0
-    valid_reasoning_skills = ["literal", "paraphrase", "inference", "comparison", "cause_effect", "contrast", "classification", "writer_purpose"]
+    literal_count = 0
+    valid_reasoning_skills = [
+        "literal",
+        "paraphrase",
+        "inference",
+        "reference",
+        "main_idea",
+        "author_purpose",
+        "structure_function",
+        "vocabulary_in_context",
+        "synthesis",
+        "comparison",
+        "cause_effect",
+        "contrast",
+        "classification",
+        "writer_purpose",
+    ]
     type_last_paragraph = {}
 
     for idx, q in enumerate(rqs):
@@ -115,8 +191,9 @@ def validate_lesson_json(json_path: Path) -> bool:
         r_skill = q.get("reasoning_skill")
         if r_skill not in valid_reasoning_skills:
             errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) has invalid reasoning_skill: '{r_skill}'")
-        elif r_skill != "literal":
-            non_literal_count += 1
+        elif r_skill == "literal":
+            literal_count += 1
+        else:
             if "paraphrase_mapping" not in q:
                 errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) is non-literal but missing 'paraphrase_mapping'")
         
@@ -174,13 +251,40 @@ def validate_lesson_json(json_path: Path) -> bool:
             errors.append(f"FAIL: Reading distractors must have >= 30% keyword traps. Got {trap_ratio*100:.1f}% ({keyword_traps}/{total_distractors})")
 
     if len(rqs) > 0:
-        ratio = non_literal_count / len(rqs)
-        if level in ["A2"]:
-            if ratio < 0.50:
-                errors.append(f"FAIL: A2 reading requires at least 50% non-literal reasoning questions. Got {ratio*100:.1f}% ({non_literal_count}/{len(rqs)})")
-        elif level in ["B1", "B2", "C1", "C2"]:
-            if ratio < 0.60:
-                errors.append(f"FAIL: B1+ reading requires at least 60% non-literal reasoning questions. Got {ratio*100:.1f}% ({non_literal_count}/{len(rqs)})")
+        literal_ratio = literal_count / len(rqs)
+        max_literal = READING_MAX_LITERAL.get(level)
+        if max_literal is not None and literal_ratio > max_literal:
+            errors.append(
+                f"FAIL: {level} reading allows at most {max_literal*100:.0f}% literal/keyword-scan questions. "
+                f"Got {literal_ratio*100:.1f}% ({literal_count}/{len(rqs)})"
+            )
+
+        reading_types = {str(q.get("reasoning_skill", "")).lower() for q in rqs}
+        blueprint_types = {str(bp.get("type", "")).lower() for bp in reading_blueprint}
+        all_reading_types = reading_types | blueprint_types
+
+        if level in ["B1", "B1+", "B2", "B2+", "C1", "C1+", "C2"]:
+            if not ({"inference", "synthesis"} & all_reading_types):
+                errors.append(f"FAIL: {level} reading requires at least 1 inference/synthesis question.")
+            if not ({"main_idea", "author_purpose", "writer_purpose"} & all_reading_types):
+                errors.append(f"FAIL: {level} reading requires at least 1 main idea or author purpose question.")
+            if not ({"reference", "vocabulary_in_context"} & all_reading_types):
+                errors.append(f"FAIL: {level} reading requires at least 1 reference or vocabulary-in-context question.")
+            if not ({"cause_effect", "contrast", "structure_function", "synthesis"} & all_reading_types):
+                errors.append(f"FAIL: {level} reading requires at least 1 cause-effect, contrast, reason, result, implication, or structure/function question.")
+
+        if level in ["B2", "B2+", "C1", "C1+", "C2"] and len(rqs) >= 4:
+            if "structure_function" not in all_reading_types:
+                errors.append(f"FAIL: {level} reading requires a paragraph/function structure question when count allows.")
+            if not ({"author_purpose", "writer_purpose"} & all_reading_types):
+                errors.append(f"FAIL: {level} reading requires an author stance/purpose question when count allows.")
+            multi_evidence_blueprint = any(
+                bp.get("evidence_strategy") in ["multiple sentences", "paragraph-level", "cross-paragraph"]
+                and str(bp.get("type", "")).lower() in ["inference", "synthesis"]
+                for bp in reading_blueprint
+            )
+            if not multi_evidence_blueprint:
+                errors.append(f"FAIL: {level} reading requires a multi-evidence inference/synthesis blueprint item when count allows.")
 
     # 5. Validate vocabulary
     vocab = data["vocabulary"]
@@ -201,7 +305,7 @@ def validate_lesson_json(json_path: Path) -> bool:
             errors.append(f"FAIL: Vocabulary item {vi_id or idx} (term='{vi.get('term')}') has invalid vocab_type: '{vtype}'")
 
     # Vocab mix validation for B1+
-    if len(vocab_items) > 0 and level in ["B1", "B2", "C1", "C2"]:
+    if len(vocab_items) > 0 and level in ["B1", "B1+", "B2", "B2+", "C1", "C1+", "C2"]:
         vtypes = [vi.get("vocab_type") for vi in vocab_items]
         phrase_count = sum(1 for t in vtypes if t in ["phrase", "fixed_expression", "idiom"])
         colloc_count = sum(1 for t in vtypes if t == "collocation")
@@ -218,7 +322,7 @@ def validate_lesson_json(json_path: Path) -> bool:
             errors.append("FAIL: B1+ vocabulary list must not contain only single words")
 
     # Vocab mix validation for A2
-    if len(vocab_items) > 0 and level == "A2":
+    if len(vocab_items) > 0 and level in ["A2", "A2+"]:
         vtypes = [vi.get("vocab_type") for vi in vocab_items]
         phrase_count = sum(1 for t in vtypes if t in ["phrase", "fixed_expression", "idiom"])
         colloc_count = sum(1 for t in vtypes if t == "collocation")
@@ -253,6 +357,55 @@ def validate_lesson_json(json_path: Path) -> bool:
     if len(gqs) != target_gq:
         errors.append(f"FAIL: Grammar questions count mismatch. Expected {target_gq}, got {len(gqs)}")
 
+    grammar_blueprint = grammar.get("grammar_blueprint", [])
+    if len(grammar_blueprint) != target_gq:
+        errors.append(f"FAIL: Grammar blueprint count mismatch. Expected {target_gq}, got {len(grammar_blueprint)}")
+    for idx, bp in enumerate(grammar_blueprint):
+        for field in GRAMMAR_BLUEPRINT_FIELDS:
+            if field not in bp or bp.get(field) in [None, ""]:
+                errors.append(f"FAIL: grammar.grammar_blueprint[{idx}] missing field: {field}")
+        if bp.get("question_no") != idx + 1:
+            errors.append(f"FAIL: grammar.grammar_blueprint[{idx}] question_no must be {idx + 1}. Got {bp.get('question_no')}")
+
+    if grammar_blueprint:
+        mechanical_count = sum(1 for bp in grammar_blueprint if str(bp.get("tested_dimension", "")).lower() == "form")
+        mechanical_ratio = mechanical_count / len(grammar_blueprint)
+        max_mechanical = GRAMMAR_MAX_MECHANICAL.get(level)
+        if max_mechanical is not None and mechanical_ratio > max_mechanical:
+            errors.append(
+                f"FAIL: {level} grammar allows at most {max_mechanical*100:.0f}% mechanical form items. "
+                f"Got {mechanical_ratio*100:.1f}% ({mechanical_count}/{len(grammar_blueprint)})"
+            )
+
+        bp_question_types = {str(bp.get("question_type", "")).lower() for bp in grammar_blueprint}
+        bp_dimensions = {str(bp.get("tested_dimension", "")).lower() for bp in grammar_blueprint}
+        if level in ["B1", "B1+", "B2", "B2+", "C1", "C1+", "C2"] and len(grammar_blueprint) >= 5:
+            if not ({"meaning", "use", "discourse", "register", "writing transfer"} & bp_dimensions):
+                errors.append(f"FAIL: {level} grammar requires context/meaning/use dimensions, not only form.")
+            if not ({"error correction", "transformation"} & bp_question_types):
+                errors.append(f"FAIL: {level} grammar requires at least 1 error correction or transformation item.")
+            if "writing transfer" not in bp_question_types and "writing transfer" not in bp_dimensions:
+                errors.append(f"FAIL: {level} grammar requires at least 1 writing-transfer item.")
+        if level in ["B2", "B2+", "C1", "C1+", "C2"] and len(grammar_blueprint) >= 5:
+            if "paragraph editing" not in bp_question_types and "discourse" not in bp_dimensions:
+                errors.append(f"FAIL: {level} grammar requires paragraph/context or discourse grammar.")
+
+        repeated_run = 1
+        previous_key = None
+        for bp in grammar_blueprint:
+            current_key = (
+                str(bp.get("grammar_target", "")).strip().lower(),
+                str(bp.get("trap", "")).strip().lower(),
+            )
+            if current_key == previous_key:
+                repeated_run += 1
+            else:
+                repeated_run = 1
+                previous_key = current_key
+            if repeated_run > 5:
+                errors.append("FAIL: Grammar blueprint has more than 5 consecutive questions with the same target grammar and clue/trap type.")
+                break
+
     # Grammar questions numbering starting from 1 continuously
     for idx, g in enumerate(gqs):
         g_id = g.get("id")
@@ -265,9 +418,9 @@ def validate_lesson_json(json_path: Path) -> bool:
                 errors.append(f"FAIL: Grammar question {g_id} missing field: {f}")
 
         # Logic Validation checks
-        lval = g.get("logic_validation")
+        lval = g.get("one_answer_check") or g.get("logic_validation")
         if not lval:
-            errors.append(f"FAIL: grammar.questions[{idx}] (id={g_id}) is missing 'logic_validation' metadata block.")
+            errors.append(f"FAIL: grammar.questions[{idx}] (id={g_id}) is missing 'one_answer_check' metadata block.")
         else:
             if not lval.get("has_exactly_one_valid_answer"):
                 errors.append(f"FAIL: grammar.questions[{idx}] (id={g_id}) has_exactly_one_valid_answer is not true.")
@@ -400,6 +553,20 @@ def validate_lesson_json(json_path: Path) -> bool:
                 if iw in q_text and re.search(pattern, correct_ans_lower):
                     errors.append(f"FAIL: grammar.questions[{idx}] passive voice forced onto intransitive verb '{iw}'. This changes the original meaning.")
 
+    surface_clue_count = sum(
+        1
+        for g in gqs
+        if g.get("deep_grammar_validation", {}).get("is_not_surface_clue_only") is False
+    )
+    if gqs and level in ["B1", "B1+", "B2", "B2+", "C1", "C1+", "C2"]:
+        surface_ratio = surface_clue_count / len(gqs)
+        surface_limit = 0.30 if level in ["B2", "B2+", "C1", "C1+", "C2"] else 0.40
+        if surface_ratio > surface_limit:
+            errors.append(
+                f"FAIL: {level} grammar allows at most {surface_limit*100:.0f}% obvious surface-clue items. "
+                f"Got {surface_ratio*100:.1f}% ({surface_clue_count}/{len(gqs)})"
+            )
+
     # Grammar detailed guide & mistakes checks
     if not grammar.get("guide"):
         errors.append("FAIL: Missing grammar.guide")
@@ -479,6 +646,39 @@ def validate_lesson_json(json_path: Path) -> bool:
     if len(review_bridge) != 3:
         errors.append(f"FAIL: Review bridge answers must contain exactly 3 items. Got {len(review_bridge)}")
 
+    required_reading_answer_fields = [
+        "question_id",
+        "correct_answer",
+        "question_type",
+        "evidence_quote",
+        "evidence_paragraph",
+        "explanation_vi",
+        "why_others_wrong_vi",
+        "depth_check_vi",
+        "tip_vi",
+    ]
+    for idx, ans in enumerate(reading_ans):
+        for field in required_reading_answer_fields:
+            if field not in ans or ans.get(field) in [None, ""]:
+                errors.append(f"FAIL: answers.reading_answers[{idx}] missing field: {field}")
+
+    required_grammar_answer_fields = [
+        "question_id",
+        "correct_answer",
+        "grammar_target",
+        "form_meaning_vi",
+        "use_in_context_vi",
+        "trap_logic_vi",
+        "why_others_wrong_vi",
+        "depth_check_vi",
+        "analysis_vi",
+        "tip_vi",
+    ]
+    for idx, ans in enumerate(grammar_ans):
+        for field in required_grammar_answer_fields:
+            if field not in ans or ans.get(field) in [None, ""]:
+                errors.append(f"FAIL: answers.grammar_answers[{idx}] missing field: {field}")
+
     # 9. Validate workload and Time Allowed
     printed_time = meta.get("printed_time_allowed_minutes")
     if printed_time:
@@ -552,6 +752,12 @@ def validate_lesson_json(json_path: Path) -> bool:
         "vocabulary_imbalance",
         "missing_vocab_type",
         "grammar_target_mismatch",
+        "grammar_pattern_repetition",
+        "surface_clue_only",
+        "cognitive_level_imbalance",
+        "missing_deep_grammar_validation",
+        "missing_blueprint",
+        "blueprint_mismatch",
         "logic_error",
         "incomplete_punctuation",
         "incomplete_inserted_option",
@@ -567,6 +773,7 @@ def validate_lesson_json(json_path: Path) -> bool:
         "meaning_changed",
         "topic_alignment",
         "time_workload_mismatch",
+        "reading_order_violation",
     }
     for chg in challenges:
         chg_id = chg.get("id", "unknown")

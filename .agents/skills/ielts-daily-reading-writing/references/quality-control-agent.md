@@ -16,11 +16,14 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
    - Verify that all reading questions have exactly one correct answer.
    - **CRITICAL**: Verify that all reading questions follow the sequence of information in the passage within each question type group (non-decreasing `evidence_paragraph` indices). Raise a critical challenge (`reading_order_violation`) if any question targets a paragraph before the previous question's paragraph within the same type group.
 3. **Reading Deep Comprehension & Anti-Scanning QC**:
-   - **CRITICAL REQUIREMENT**: You MUST evaluate the Reading section against the detailed level-by-level rubric in `references/deep-reading-qc.md`.
+   - **CRITICAL REQUIREMENT**: You MUST evaluate the Reading section against the detailed level-by-level rubric in `references/deep-reading-qc.md`, the generation table in `references/deep-reading-generation-rules.md`, the blueprint contract in `references/deep-question-blueprint.md`, and the fail gates in `references/regeneration-quality-gates.md`.
+   - Verify that `reading.reading_blueprint` exists, has exactly the requested count, includes `question_no`, `type`, `depth`, `target_skill`, `evidence_strategy`, and `distractor_strategy`, and matches the generated questions.
    - Inspect whether Reading questions are too keyword-based and classify them into the 8 cognitive depth types (Literal, Direct paraphrase, Local comprehension, Light inference, Integration, Main idea/writer purpose, Discourse relationship, Evaluation/implication).
    - For `+` levels, enforce the transition rules described in `references/deep-reading-qc.md`.
-   - For A2 and above, raise a high challenge (`keyword_scanning`) if more than 50% of questions can be answered by direct keyword matching/scanning (i.e. literal questions exceed 50%).
-   - For B1 and above, raise a high challenge (`keyword_scanning`) if literal questions exceed 40% (meaning less than 60% are non-literal).
+   - Enforce the maximum/minimum ratio table in `references/deep-reading-generation-rules.md`; raise `keyword_scanning` or `level_mismatch` if the section is more literal than allowed.
+   - For B1 and above, regenerate Reading if more than 50% of questions can be answered by direct keyword matching/scanning; for B2 and above, regenerate if more than 40% are keyword-scanning.
+   - For B1 and above, raise a high challenge if missing inference, main idea/purpose, reference or vocabulary-in-context, or cause-effect/contrast/reason/result/implication.
+   - For B2 and above, raise a high challenge if missing paragraph function, author stance/attitude, or multi-evidence inference when the question count allows.
    - Raise a critical challenge (`missing_paraphrase_mapping`) if a non-literal question is missing the `paraphrase_mapping` field.
    - Check that at least 30% of distractors contain wording related to the passage but are logically wrong (keyword traps). Raise `weak_distractor` challenge if the proportion is below 30%.
    - For B2 to C2 levels, penalize the pack (High/Medium challenge depending on severity) if there is a clear lack of inference, synthesis, writer purpose, or discourse relationship questions.
@@ -38,11 +41,14 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
    - Check grammar transformation/combine questions: Raise a high challenge (`meaning_changed`) if the expected answer changes the meaning, if a passive voice transformation is forced onto an intransitive verb (like "stop" without a transitive subject/object), or if multiple valid answers exist without constraints.
    - Check that the bẫy lỗi (IELTS traps) table does not contain vocabulary definitions or IPA.
 5.1. **Deep Grammar & Anti-Repetition QC**:
-   - **CRITICAL REQUIREMENT**: You MUST evaluate the Grammar section against the detailed rubric in `references/deep-grammar-rules.md`.
-   - Verify the cognitive level distribution (20-30% Form, 30-40% Context, 20-30% Meaning, 10-20% Editing). Raise a medium challenge (`cognitive_level_imbalance`) if it violates these bounds (e.g. mostly form recognition).
-   - Verify Anti-Pattern Repetition. Raise a high challenge (`grammar_pattern_repetition`) if more than 3 consecutive questions test the exact same surface pattern (e.g., 4 consecutive tense items).
+   - **CRITICAL REQUIREMENT**: You MUST evaluate the Grammar section against the detailed rubric in `references/deep-grammar-rules.md`, the generation table in `references/deep-grammar-generation-rules.md`, the blueprint contract in `references/deep-question-blueprint.md`, and the fail gates in `references/regeneration-quality-gates.md`.
+   - Verify that `grammar.grammar_blueprint` exists, has exactly the requested count, includes `question_no`, `grammar_target`, `question_type`, `depth`, `tested_dimension`, and `trap`, and matches the generated questions.
+   - Verify the level-specific distribution from `references/deep-grammar-generation-rules.md`. Raise `cognitive_level_imbalance` if the set is mostly mechanical form or misses meaning/context/discourse/writing-transfer requirements.
+   - Verify Anti-Pattern Repetition. Raise a high challenge (`grammar_pattern_repetition`) if more than 3 consecutive questions test the exact same surface pattern (e.g., 4 consecutive tense items), and require regeneration if more than 5 consecutive items share the same target and clue type.
    - Check for surface-clues. Raise a high challenge (`surface_clue_only`) if a question can be answered blindly using a single obvious keyword without understanding context.
-   - Verify that B1-C2 questions utilize advanced features like nominalisation, hedging, precision, and text cohesion where appropriate, instead of merely testing simple forms.
+   - For B1 and above, require context-level reasoning, error correction or transformation, short paragraph/context grammar, and writing-transfer grammar when the count allows.
+   - For B2 and above, require paragraph editing/context grammar, cohesion grammar, register-aware grammar, meaning contrast, and tone/precision choices when the count allows.
+   - Verify that B1-C2 questions utilize level-appropriate features like relative clauses, conditionals, cohesion, nominalisation, hedging, precision, and text cohesion where appropriate, instead of merely testing simple forms.
    - Verify that all metadata block validations (e.g. `deep_grammar_validation`, `one_answer_check`) are filled out accurately.
 6. **Writing Topic Alignment QC**:
    - Verify that the number of writing tasks matches `writing_task_count` exactly.
@@ -60,6 +66,7 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
 8. **Answers Check**:
    - Verify that every reading and grammar question has a corresponding explanation block in the answer payload.
    - Verify that the 3 Review Bridge items exist.
+   - Apply `references/deep-answer-key-rules.md`: fail answers that only copy evidence, omit distractor-by-distractor reasoning, state grammar formulas without meaning/use, or omit trap/depth checks.
 9. **Warm-up Specificity Check**:
    - **CRITICAL**: Rejects generic placeholders (e.g., "What do you think about this topic?"). Warm-up questions must activate background knowledge specific to the topic.
 10. **JSON Schema Check**:
@@ -89,7 +96,7 @@ Return JSON only:
     {
       "id": "CHG-001",
       "to_agent": "reading | vocabulary | grammar | writing | answers",
-      "challenge_type": "source_quality | level_mismatch | ambiguity | multiple_answers | multiple_valid_answers | missing_evidence | insufficient_context | weak_distractor | keyword_scanning | vocabulary_imbalance | missing_vocab_type | grammar_target_mismatch | grammar_pattern_repetition | surface_clue_only | cognitive_level_imbalance | missing_deep_grammar_validation | logic_error | incomplete_punctuation | incomplete_inserted_option | missing_error_in_error_correction | answer_identical_to_prompt | explanation_mismatch | writing_visual_missing | answer_explanation_weak | pdf_layout_risk | schema_error | numbering_error | meaning_changed | topic_alignment | time_workload_mismatch | reading_order_violation",
+      "challenge_type": "source_quality | level_mismatch | ambiguity | multiple_answers | multiple_valid_answers | missing_evidence | insufficient_context | weak_distractor | keyword_scanning | vocabulary_imbalance | missing_vocab_type | grammar_target_mismatch | grammar_pattern_repetition | surface_clue_only | cognitive_level_imbalance | missing_deep_grammar_validation | blueprint_mismatch | missing_blueprint | logic_error | incomplete_punctuation | incomplete_inserted_option | missing_error_in_error_correction | answer_identical_to_prompt | explanation_mismatch | writing_visual_missing | answer_explanation_weak | pdf_layout_risk | schema_error | numbering_error | meaning_changed | topic_alignment | time_workload_mismatch | reading_order_violation",
       "severity": "low | medium | high | critical",
       "location": "reading.questions[4]",
       "problem": "The question repeats exact wording from the passage and can be answered by scanning.",
@@ -272,4 +279,3 @@ QC must fail these exact patterns:
     Answer: This school is more expensive than that school.
     ```
     Reason: Original sentence is already correct and answer is identical.
-

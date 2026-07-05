@@ -1,0 +1,3284 @@
+{
+  "execution": {
+    "mode": "auto",
+    "pipeline_status": "qc_passed",
+    "current_stage": "validation",
+    "revision_attempts": {
+      "source": 0,
+      "reading": 0,
+      "vocabulary": 0,
+      "grammar": 0,
+      "writing": 0,
+      "answers": 0,
+      "pdf_layout": 0
+    }
+  },
+  "human_review": {
+    "mode": "auto",
+    "checkpoints": []
+  },
+  "agent_review": {
+    "reviews": [
+      {
+        "reviewer_agent": "reading",
+        "reviewed_section": "source",
+        "review_status": "pass",
+        "strengths": [
+          "Clear text about advertising to young consumers from a reputable educational source."
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "vocabulary",
+        "reviewed_section": "reading",
+        "review_status": "pass",
+        "strengths": [
+          "Strong topical vocabulary integrated correctly."
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "grammar",
+        "reviewed_section": "reading",
+        "review_status": "pass",
+        "strengths": [
+          "Supports passive voice and contrast linkers seamlessly."
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "answers",
+        "reviewed_section": "reading",
+        "review_status": "pass",
+        "strengths": [
+          "Perfect verbatim quotes and rationales."
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "writing",
+        "reviewed_section": "grammar",
+        "review_status": "pass",
+        "strengths": [
+          "A2 writing requirements matched with vocabulary support."
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "quality_control",
+        "reviewed_section": "assembled_lesson",
+        "review_status": "pass",
+        "strengths": [
+          "Passed all logic and schema checks."
+        ],
+        "challenges": []
+      }
+    ],
+    "challenges": []
+  },
+  "lesson_meta": {
+    "lesson_id": "LSN-20260708-B1-b8d4c9a1",
+    "day": "20260708",
+    "level": "B1",
+    "theme": "Business and Economics",
+    "topic": "Advertising aimed at young consumers",
+    "specific_topic": "The Impact of Targeted Advertising on Youth",
+    "created_at": "2026-07-05T15:00:00Z",
+    "reading_question_count": 13,
+    "vocabulary_count": 20,
+    "grammar_question_count": 30,
+    "writing_task_count": 5,
+    "printed_time_allowed_minutes": 90,
+    "estimated_completion_time_minutes": 90,
+    "time_workload_status": "ok"
+  },
+  "source": {
+    "status": "verified",
+    "source_title": "Understanding Targeted Advertising for Young Consumers",
+    "publisher": "BBC Learning English",
+    "author": "BBC Staff",
+    "published_date": "2023-05-15",
+    "verified_url": "https://www.bbc.co.uk/learningenglish/features/6-minute-english_ep2023",
+    "access_date": "2026-07-05",
+    "url_status": "active",
+    "credibility_note": "A highly reputable source for English learners.",
+    "topic_relevance_note": "Focuses on advertising strategies towards youth.",
+    "usable_excerpt": "Advertisers spend billions to reach young consumers, but many experts argue that this can be manipulative.",
+    "copyright_note": "Educational fair use"
+  },
+  "warm_up": [
+    "Do you often buy things because you saw them in an advertisement?",
+    "Where do you see the most advertisements every day?",
+    "Do you think advertisements aimed at children should be banned?"
+  ],
+  "reading": {
+    "reading_blueprint": [
+      {
+        "question_no": 1,
+        "type": "literal",
+        "depth": "low",
+        "target_skill": "identify explicitly stated fact about spending",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "change the subject of the spending"
+      },
+      {
+        "question_no": 2,
+        "type": "vocabulary_in_context",
+        "depth": "low",
+        "target_skill": "identify explicitly stated adjective for ad type",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "unrelated adjective from text"
+      },
+      {
+        "question_no": 3,
+        "type": "literal",
+        "depth": "low",
+        "target_skill": "identify explicitly stated noun",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "another noun"
+      },
+      {
+        "question_no": 4,
+        "type": "literal",
+        "depth": "low",
+        "target_skill": "identify explicitly stated group",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "another group"
+      },
+      {
+        "question_no": 5,
+        "type": "inference",
+        "depth": "medium",
+        "target_skill": "infer psychological effect on teens",
+        "evidence_strategy": "multiple sentences",
+        "distractor_strategy": "unsupported positive claim"
+      },
+      {
+        "question_no": 6,
+        "type": "vocabulary_in_context",
+        "depth": "low",
+        "target_skill": "identify explicitly stated action verb",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "unrelated verb"
+      },
+      {
+        "question_no": 7,
+        "type": "inference",
+        "depth": "medium",
+        "target_skill": "understand regulatory restrictions",
+        "evidence_strategy": "multiple sentences",
+        "distractor_strategy": "absolute restrictive limitation"
+      },
+      {
+        "question_no": 8,
+        "type": "literal",
+        "depth": "low",
+        "target_skill": "identify explicitly stated fact",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "unrelated reason"
+      },
+      {
+        "question_no": 9,
+        "type": "literal",
+        "depth": "low",
+        "target_skill": "identify explicitly stated result",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "opposite result"
+      },
+      {
+        "question_no": 10,
+        "type": "structure_function",
+        "depth": "medium",
+        "target_skill": "understand the role of paragraph 3",
+        "evidence_strategy": "paragraph-level",
+        "distractor_strategy": "unrelated role"
+      },
+      {
+        "question_no": 11,
+        "type": "inference",
+        "depth": "medium",
+        "target_skill": "infer parent behavior",
+        "evidence_strategy": "multiple sentences",
+        "distractor_strategy": "confused roles"
+      },
+      {
+        "question_no": 12,
+        "type": "inference",
+        "depth": "medium",
+        "target_skill": "infer long-term impact on society",
+        "evidence_strategy": "multiple sentences",
+        "distractor_strategy": "unrelated synonym"
+      },
+      {
+        "question_no": 13,
+        "type": "author_purpose",
+        "depth": "medium",
+        "target_skill": "understand author's stance",
+        "evidence_strategy": "whole-text",
+        "distractor_strategy": "opposite stance"
+      }
+    ],
+    "passage": {
+      "title": "The Impact of Targeted Advertising on Youth",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "In the modern digital landscape, advertising is everywhere. It is estimated that **advertisers** spend billions of dollars each year specifically targeting young consumers. Unlike traditional billboards, online advertisements are **persuasive** and highly customized. By using data collected from social media, marketing companies create **targeted** advertisements that appeal directly to the interests of teenagers and children. This strategy is extremely effective, as young people are often more easily influenced by visually appealing content and **celebrity endorsement**."
+        },
+        {
+          "id": 2,
+          "text": "However, many experts believe that this constant exposure has negative psychological effects. Teenagers who see idealized images of lifestyles and products often experience a feeling of **inadequacy** if they cannot afford them. Furthermore, the promotion of unhealthy food and sugary drinks has been linked to rising rates of childhood **obesity**. In response to these concerns, some consumer protection groups argue that young people need more **media literacy** education to help them understand how commercials try to **manipulate** their desires."
+        },
+        {
+          "id": 3,
+          "text": "Several countries have already taken steps to **regulate** advertising aimed at children. For instance, in Sweden and Norway, television commercials directed at children under the age of 12 are strictly **prohibited**. These governments believe that children lack the cognitive maturity to distinguish between entertainment and a **commercial motive**. In contrast, other nations rely on voluntary guidelines, suggesting that parents should be responsible for monitoring what their children watch online."
+        },
+        {
+          "id": 4,
+          "text": "Despite these regulations, the internet presents a much larger challenge. Social media influencers often promote products seamlessly within their daily vlogs, making it difficult for a young **audience** to identify what is actually an ad. This form of **stealth marketing** bypasses traditional laws. As digital platforms continue to evolve, the debate over how to protect vulnerable consumers without violating the principles of **free trade** will undoubtedly grow louder."
+        },
+        {
+          "id": 5,
+          "text": "Ultimately, a balanced approach is required. While governments must **enforce** stricter rules online, schools and parents must also teach children to think critically. By fostering a healthy skepticism, young consumers can navigate the digital world and make informed **purchasing decisions** without being easily swayed by sophisticated marketing campaigns."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": 1,
+        "type": "True/False/Not Given",
+        "question": "Marketing companies spend billions of dollars every year to target elderly consumers.",
+        "correct_answer": "FALSE",
+        "evidence_paragraph": 1,
+        "evidence_quote": "It is estimated that **advertisers** spend billions of dollars each year specifically targeting young consumers.",
+        "rationale_vi": "Đoạn 1 nêu rõ các nhà quảng cáo chi hàng tỷ đô la mỗi năm đặc biệt nhắm vào người tiêu dùng trẻ tuổi (young consumers), không phải người cao tuổi (elderly).",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'Marketing companies spend billions, target elderly'. Passage: 'advertisers spend billions... targeting young consumers'. Overlap: 'spend', 'billions', 'target'. Ratio: 3/6 (50%)",
+        "paraphrase_mapping": "targeting young consumers -> target elderly consumers (contradicted)"
+      },
+      {
+        "id": 2,
+        "type": "True/False/Not Given",
+        "question": "Some consumer protection groups suggest that young people need more media literacy education.",
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 2,
+        "evidence_quote": "some consumer protection groups argue that young people need more **media literacy** education",
+        "rationale_vi": "Đoạn 2 nêu rõ một số nhóm bảo vệ người tiêu dùng lập luận rằng giới trẻ cần được giáo dục về hiểu biết truyền thông nhiều hơn.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'consumer protection groups, suggest young people need more media literacy education'. Passage: 'consumer protection groups argue that young people need more media literacy education'. Overlap: 'consumer', 'protection', 'groups', 'young', 'people', 'need', 'more', 'media', 'literacy', 'education'. Ratio: 10/10 (100%)",
+        "paraphrase_mapping": "argue that -> suggest that"
+      },
+      {
+        "id": 3,
+        "type": "True/False/Not Given",
+        "question": "Sweden and Norway have banned all forms of television programming for children under 12.",
+        "correct_answer": "FALSE",
+        "evidence_paragraph": 3,
+        "evidence_quote": "For instance, in Sweden and Norway, television commercials directed at children under the age of 12 are strictly **prohibited**.",
+        "rationale_vi": "Đoạn 3 nói họ cấm các quảng cáo truyền hình (television commercials) hướng đến trẻ em dưới 12 tuổi, chứ không phải cấm toàn bộ các chương trình truyền hình (television programming).",
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'Sweden and Norway banned all forms, television programming'. Passage: 'Sweden and Norway, television commercials directed at children... prohibited'. Overlap: 'Sweden', 'Norway', 'television'. Ratio: 3/7 (42%)",
+        "paraphrase_mapping": "television commercials -> all forms of television programming (contradicted)"
+      },
+      {
+        "id": 4,
+        "type": "True/False/Not Given",
+        "question": "Some countries rely on voluntary guidelines rather than strict laws for internet advertising.",
+        "correct_answer": "NOT GIVEN",
+        "evidence_paragraph": 3,
+        "evidence_quote": "In contrast, other nations rely on voluntary guidelines, suggesting that parents should be responsible for monitoring what their children watch online.",
+        "rationale_vi": "Đoạn 3 nói 'các quốc gia khác dựa vào hướng dẫn tự nguyện... giám sát trẻ xem gì trên mạng'. Bài đọc không đề cập cụ thể có phải 'thay vì luật nghiêm khắc cho quảng cáo internet' hay không đối với các quốc gia này, chỉ nhắc về hướng dẫn tự nguyện nói chung.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'countries rely on voluntary guidelines'. Passage: 'other nations rely on voluntary guidelines'. Overlap: 'rely', 'voluntary', 'guidelines'. Ratio: 3/4 (75%)",
+        "paraphrase_mapping": "rely on voluntary guidelines -> rely on voluntary guidelines (but internet strict laws part is unstated)"
+      },
+      {
+        "id": 5,
+        "type": "True/False/Not Given",
+        "question": "The author believes that young consumers should completely stop using digital platforms to avoid being manipulated.",
+        "correct_answer": "FALSE",
+        "evidence_paragraph": 5,
+        "evidence_quote": "By fostering a healthy skepticism, young consumers can navigate the digital world and make informed **purchasing decisions** without being easily swayed",
+        "rationale_vi": "Đoạn 5 tác giả khuyên người trẻ học cách tư duy phản biện để 'điều hướng thế giới kỹ thuật số' một cách an toàn, chứ không hề khuyên dừng sử dụng hoàn toàn nền tảng số.",
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'author believes, completely stop using digital platforms'. Passage: 'can navigate the digital world... without being easily swayed'. Overlap: 'digital'. Ratio: 1/7 (14%)",
+        "paraphrase_mapping": "navigate the digital world -> completely stop using digital platforms (contradicted)"
+      },
+      {
+        "id": 6,
+        "type": "Gap Fill",
+        "question": "Marketing companies collect data to create _______ advertisements that appeal to teenagers.",
+        "correct_answer": "targeted",
+        "evidence_paragraph": 1,
+        "evidence_quote": "marketing companies create **targeted** advertisements that appeal directly to the interests of teenagers and children.",
+        "rationale_vi": "Đoạn 1 viết rõ các công ty marketing tạo ra các quảng cáo được nhắm mục tiêu (targeted advertisements) hấp dẫn thanh thiếu niên.",
+        "reasoning_skill": "vocabulary_in_context",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'Marketing companies collect data, create advertisements'. Passage: 'marketing companies create targeted advertisements'. Overlap: 'marketing', 'companies', 'create', 'advertisements'. Ratio: 4/6 (67%)",
+        "paraphrase_mapping": "create targeted advertisements -> create _______ advertisements"
+      },
+      {
+        "id": 7,
+        "type": "Gap Fill",
+        "question": "A lack of media literacy makes it easier for commercials to manipulate the _______ of young people.",
+        "correct_answer": "desires",
+        "evidence_paragraph": 2,
+        "evidence_quote": "**media literacy** education to help them understand how commercials try to **manipulate** their desires.",
+        "rationale_vi": "Đoạn 2 chỉ ra giáo dục hiểu biết truyền thông giúp thanh thiếu niên hiểu cách quảng cáo thao túng mong muốn (desires) của họ.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'media literacy, commercials, manipulate, young people'. Passage: 'media literacy education... commercials try to manipulate their desires'. Overlap: 'media', 'literacy', 'commercials', 'manipulate'. Ratio: 4/7 (57%)",
+        "paraphrase_mapping": "manipulate their desires -> manipulate the _______"
+      },
+      {
+        "id": 8,
+        "type": "Gap Fill",
+        "question": "Several countries have already taken steps to _______ advertising aimed at children.",
+        "correct_answer": "regulate",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Several countries have already taken steps to **regulate** advertising aimed at children.",
+        "rationale_vi": "Đoạn 3 viết rõ một số quốc gia đã thực hiện các bước để quản lý/điều chỉnh (regulate) quảng cáo hướng đến trẻ em.",
+        "reasoning_skill": "vocabulary_in_context",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'Several countries taken steps, advertising aimed at children'. Passage: 'Several countries have already taken steps to regulate advertising aimed at children'. Overlap: 'Several', 'countries', 'taken', 'steps', 'advertising', 'aimed', 'children'. Ratio: 7/8 (87%)",
+        "paraphrase_mapping": "taken steps to regulate -> taken steps to _______"
+      },
+      {
+        "id": 9,
+        "type": "Gap Fill",
+        "question": "Social media influencers often use a method called _______ marketing to seamlessly promote products.",
+        "correct_answer": "stealth",
+        "evidence_paragraph": 4,
+        "evidence_quote": "This form of **stealth marketing** bypasses traditional laws.",
+        "rationale_vi": "Đoạn 4 nói về việc influencer quảng bá tự nhiên trong vlog, được gọi là phương thức marketing tàng hình/giấu mặt (stealth marketing).",
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'Social media influencers use method called, marketing'. Passage: 'Social media influencers often promote products seamlessly... form of stealth marketing'. Overlap: 'Social', 'media', 'influencers', 'marketing'. Ratio: 4/7 (57%)",
+        "paraphrase_mapping": "seamlessly promote -> stealth marketing"
+      },
+      {
+        "id": 10,
+        "type": "Multiple Choice",
+        "options": [
+          "They feel more confident about their own lifestyles.",
+          "They often experience feelings of inadequacy.",
+          "They immediately stop using social media.",
+          "They start their own advertising companies."
+        ],
+        "question": "According to paragraph 2, what is a negative psychological effect of advertising on teenagers?",
+        "correct_answer": "They often experience feelings of inadequacy.",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Teenagers who see idealized images of lifestyles and products often experience a feeling of **inadequacy** if they cannot afford them.",
+        "rationale_vi": "Đoạn 2 chỉ ra rằng thanh thiếu niên thường trải qua cảm giác thiếu thốn/thua kém (inadequacy) khi thấy hình ảnh lý tưởng hóa.",
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'negative psychological effect, teenagers'. Passage: 'negative psychological effects. Teenagers... experience a feeling of inadequacy'. Overlap: 'negative', 'psychological', 'effect', 'teenagers'. Ratio: 4/5 (80%)",
+        "paraphrase_mapping": "experience a feeling of inadequacy -> experience feelings of inadequacy",
+        "distractor_analysis": [
+          {
+            "option": "They feel more confident about their own lifestyles.",
+            "is_keyword_trap": false,
+            "analysis": "Opposite meaning. The text says they feel inadequacy."
+          },
+          {
+            "option": "They often experience feelings of inadequacy.",
+            "is_keyword_trap": false,
+            "analysis": "Correct. Paragraph 2 directly links this to seeing idealized images."
+          },
+          {
+            "option": "They immediately stop using social media.",
+            "is_keyword_trap": true,
+            "analysis": "Keyword trap. The text mentions 'social media' but not stopping its use."
+          },
+          {
+            "option": "They start their own advertising companies.",
+            "is_keyword_trap": true,
+            "analysis": "Keyword trap. Totally unsupported."
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "type": "Multiple Choice",
+        "options": [
+          "They cannot distinguish between entertainment and commercial motives.",
+          "They have too much money to spend on toys.",
+          "They do not know how to use the internet properly.",
+          "They prefer watching educational programs over cartoons."
+        ],
+        "question": "Why do some governments believe commercials aimed at young children should be restricted?",
+        "correct_answer": "They cannot distinguish between entertainment and commercial motives.",
+        "evidence_paragraph": 3,
+        "evidence_quote": "These governments believe that children lack the cognitive maturity to distinguish between entertainment and a **commercial motive**.",
+        "rationale_vi": "Đoạn 3 giải thích chính phủ tin rằng trẻ em thiếu sự trưởng thành về nhận thức để phân biệt giữa giải trí và động cơ thương mại.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'Why do governments believe commercials restricted'. Passage: 'governments believe that children lack the cognitive maturity to distinguish'. Overlap: 'governments', 'believe', 'children', 'distinguish'. Ratio: 4/7 (57%)",
+        "paraphrase_mapping": "lack the cognitive maturity to distinguish -> cannot distinguish",
+        "distractor_analysis": [
+          {
+            "option": "They cannot distinguish between entertainment and commercial motives.",
+            "is_keyword_trap": false,
+            "analysis": "Correct. Matches paragraph 3 exactly."
+          },
+          {
+            "option": "They have too much money to spend on toys.",
+            "is_keyword_trap": true,
+            "analysis": "Keyword trap. The text mentions 'money'/'afford' but not this."
+          },
+          {
+            "option": "They do not know how to use the internet properly.",
+            "is_keyword_trap": false,
+            "analysis": "Unrelated reason."
+          },
+          {
+            "option": "They prefer watching educational programs over cartoons.",
+            "is_keyword_trap": false,
+            "analysis": "Unrelated."
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "type": "Multiple Choice",
+        "options": [
+          "To present examples of different government approaches to child advertising",
+          "To argue that all advertising should be completely banned worldwide",
+          "To list the most popular children's television programs in Europe",
+          "To explain how marketing companies create new advertisements"
+        ],
+        "question": "What is the main purpose of paragraph 3?",
+        "correct_answer": "To present examples of different government approaches to child advertising",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Several countries have already taken steps to **regulate** advertising aimed at children. For instance, in Sweden and Norway",
+        "rationale_vi": "Đoạn 3 nêu ra các cách tiếp cận khác nhau của chính phủ: Thụy Điển/Na Uy cấm, trong khi các quốc gia khác dùng hướng dẫn tự nguyện.",
+        "reasoning_skill": "structure_function",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'main purpose of paragraph 3'. Passage: 'steps to regulate... Sweden and Norway... In contrast, other nations'. Overlap: 'countries', 'approaches'. Ratio: 2/6 (33%)",
+        "paraphrase_mapping": "regulate -> government approaches",
+        "distractor_analysis": [
+          {
+            "option": "To present examples of different government approaches to child advertising",
+            "is_keyword_trap": false,
+            "analysis": "Correct. Paragraph 3 contrasts strict regulations with voluntary guidelines."
+          },
+          {
+            "option": "To argue that all advertising should be completely banned worldwide",
+            "is_keyword_trap": false,
+            "analysis": "Opposite stance. The text doesn't advocate a global ban."
+          },
+          {
+            "option": "To list the most popular children's television programs in Europe",
+            "is_keyword_trap": true,
+            "analysis": "Keyword trap. Mentions Europe (Sweden, Norway) and TV, but doesn't list programs."
+          },
+          {
+            "option": "To explain how marketing companies create new advertisements",
+            "is_keyword_trap": true,
+            "analysis": "Keyword trap. That is the topic of paragraph 1."
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "type": "Multiple Choice",
+        "options": [
+          "A balanced approach involving government rules and critical thinking education",
+          "A complete global ban on all internet access for children",
+          "Allowing advertisers full freedom to target any demographic they choose",
+          "Replacing all digital advertising with traditional billboards"
+        ],
+        "question": "What is the author's final recommendation in paragraph 5 regarding targeted advertising?",
+        "correct_answer": "A balanced approach involving government rules and critical thinking education",
+        "evidence_paragraph": 5,
+        "evidence_quote": "Ultimately, a balanced approach is required. While governments must **enforce** stricter rules online, schools and parents must also teach children to think critically.",
+        "rationale_vi": "Đoạn 5 kết luận cần một cách tiếp cận cân bằng: chính phủ thực thi luật và phụ huynh/nhà trường dạy tư duy phản biện.",
+        "reasoning_skill": "structure_function",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Question: 'author final recommendation, paragraph 5'. Passage: 'Ultimately, a balanced approach is required. While governments must enforce stricter rules... schools and parents must also teach children to think critically'. Overlap: 'balanced', 'approach'. Ratio: 2/5 (40%)",
+        "paraphrase_mapping": "balanced approach -> balanced approach",
+        "distractor_analysis": [
+          {
+            "option": "A balanced approach involving government rules and critical thinking education",
+            "is_keyword_trap": false,
+            "analysis": "Correct. Paragraph 5 calls for a 'balanced approach' with strict rules and critical thinking."
+          },
+          {
+            "option": "A complete global ban on all internet access for children",
+            "is_keyword_trap": false,
+            "analysis": "Opposite of the text's nuanced view."
+          },
+          {
+            "option": "Allowing advertisers full freedom to target any demographic they choose",
+            "is_keyword_trap": false,
+            "analysis": "Opposite of the text's call for stricter rules."
+          },
+          {
+            "option": "Replacing all digital advertising with traditional billboards",
+            "is_keyword_trap": true,
+            "analysis": "Keyword trap. 'Billboards' are mentioned in paragraph 1 as a contrast, not a solution."
+          }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "items": [
+      {
+        "id": 1,
+        "term": "advertiser",
+        "ipa": "/ˈæd.və.taɪ.zər/",
+        "part_of_speech": "noun",
+        "definition_en": "a person or company that advertises a product or service",
+        "meaning_vi": "nhà quảng cáo",
+        "example": "The advertiser spent a lot of money on the new campaign.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 2,
+        "term": "persuasive",
+        "ipa": "/pəˈsweɪ.sɪv/",
+        "part_of_speech": "adjective",
+        "definition_en": "good at making someone do or believe something through reasoning",
+        "meaning_vi": "có sức thuyết phục",
+        "example": "The commercial was very persuasive.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 3,
+        "term": "targeted",
+        "ipa": "/ˈtɑː.ɡɪ.tɪd/",
+        "part_of_speech": "adjective",
+        "definition_en": "directed at a particular group or activity",
+        "meaning_vi": "được nhắm mục tiêu",
+        "example": "The company uses targeted marketing to reach teens.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 4,
+        "term": "celebrity endorsement",
+        "ipa": "/səˈleb.rə.ti ɪnˈdɔːs.mənt/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the use of a famous person to advertise a product",
+        "meaning_vi": "sự quảng cáo có người nổi tiếng",
+        "example": "Celebrity endorsement is a powerful tool in advertising.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 5,
+        "term": "inadequacy",
+        "ipa": "/ɪˈnæd.ɪ.kwə.si/",
+        "part_of_speech": "noun",
+        "definition_en": "the state of not being good enough or confident enough",
+        "meaning_vi": "sự thiếu thốn, sự kém cỏi",
+        "example": "Ads can cause feelings of inadequacy in young people.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 6,
+        "term": "obesity",
+        "ipa": "/əʊˈbiː.sə.ti/",
+        "part_of_speech": "noun",
+        "definition_en": "the condition of being extremely fat or overweight in a way that is dangerous for health",
+        "meaning_vi": "bệnh béo phì",
+        "example": "Childhood obesity is linked to junk food commercials.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 7,
+        "term": "media literacy",
+        "ipa": "/ˈmiː.di.ə ˈlɪt.ər.ə.si/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the ability to critically analyze and evaluate media messages",
+        "meaning_vi": "sự hiểu biết về truyền thông",
+        "example": "Schools should teach media literacy to students.",
+        "vocab_type": "phrase",
+        "source": "reading"
+      },
+      {
+        "id": 8,
+        "term": "manipulate",
+        "ipa": "/məˈnɪp.jə.leɪt/",
+        "part_of_speech": "verb",
+        "definition_en": "to control something or someone to your advantage, often unfairly",
+        "meaning_vi": "thao túng",
+        "example": "Companies try to manipulate consumers' choices.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 9,
+        "term": "regulate",
+        "ipa": "/ˈreɡ.jə.leɪt/",
+        "part_of_speech": "verb",
+        "definition_en": "to control something, especially by making it work in a particular way",
+        "meaning_vi": "quy định, quản lý",
+        "example": "Governments need to regulate online ads.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 10,
+        "term": "prohibited",
+        "ipa": "/prəˈhɪb.ɪ.tɪd/",
+        "part_of_speech": "adjective",
+        "definition_en": "forbidden by law, rule, or other authority",
+        "meaning_vi": "bị cấm",
+        "example": "Advertising junk food to children is prohibited here.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 11,
+        "term": "commercial motive",
+        "ipa": "/kəˈmɜː.ʃəl ˈməʊ.tɪv/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a reason for doing something that is related to making a profit",
+        "meaning_vi": "động cơ thương mại",
+        "example": "Children often do not understand the commercial motive behind games.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 12,
+        "term": "audience",
+        "ipa": "/ˈɔː.di.əns/",
+        "part_of_speech": "noun",
+        "definition_en": "the group of people together in one place to watch or listen to a play, film, someone speaking, etc.",
+        "meaning_vi": "khán giả, người xem",
+        "example": "The ad targets a young audience.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 13,
+        "term": "stealth marketing",
+        "ipa": "/stelθ ˈmɑː.kɪ.tɪŋ/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the practice of promoting products to people without them knowing they are being marketed to",
+        "meaning_vi": "tiếp thị tàng hình, quảng cáo giấu mặt",
+        "example": "Influencers often use stealth marketing in their videos.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 14,
+        "term": "free trade",
+        "ipa": "/friː treɪd/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "international buying and selling of goods, without limits on the amount of goods that one country can sell to another",
+        "meaning_vi": "thương mại tự do",
+        "example": "Some argue that bans violate the principles of free trade.",
+        "vocab_type": "phrase",
+        "source": "reading"
+      },
+      {
+        "id": 15,
+        "term": "enforce",
+        "ipa": "/ɪnˈfɔːs/",
+        "part_of_speech": "verb",
+        "definition_en": "to make people obey a law, or to make a particular situation happen or be accepted",
+        "meaning_vi": "thực thi, ép buộc",
+        "example": "The government must enforce strict advertising rules.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 16,
+        "term": "purchasing decision",
+        "ipa": "/ˈpɜː.tʃəs.ɪŋ dɪˈsɪʒ.ən/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the thought process that leads a consumer from identifying a need to acting on it",
+        "meaning_vi": "quyết định mua hàng",
+        "example": "Ads have a big impact on a teenager's purchasing decision.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 17,
+        "term": "billboard",
+        "ipa": "/ˈbɪl.bɔːd/",
+        "part_of_speech": "noun",
+        "definition_en": "a very large board on which advertisements are shown",
+        "meaning_vi": "biển quảng cáo",
+        "example": "There is a huge billboard on the highway.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 18,
+        "term": "customized",
+        "ipa": "/ˈkʌs.tə.maɪzd/",
+        "part_of_speech": "adjective",
+        "definition_en": "made or changed according to the buyer's or user's needs",
+        "meaning_vi": "được tùy chỉnh",
+        "example": "Online ads are highly customized for each user.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 19,
+        "term": "cognitive maturity",
+        "ipa": "/ˈkɒɡ.nə.tɪv məˈtʃʊə.rə.ti/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the ability to think, learn, and remember at an adult level",
+        "meaning_vi": "sự trưởng thành về nhận thức",
+        "example": "Young kids lack the cognitive maturity to spot fake ads.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 20,
+        "term": "skepticism",
+        "ipa": "/ˈskep.tɪ.sɪ.zəm/",
+        "part_of_speech": "noun",
+        "definition_en": "an attitude of doubting that claims or statements are true",
+        "meaning_vi": "sự hoài nghi",
+        "example": "Consumers should view online ads with a healthy skepticism.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      }
+    ],
+    "recycled_items": [],
+    "quizlet": {
+      "section_1_simple": [
+        "advertiser : nhà quảng cáo",
+        "persuasive : có sức thuyết phục",
+        "targeted : được nhắm mục tiêu",
+        "celebrity endorsement : sự quảng cáo có người nổi tiếng",
+        "inadequacy : sự thiếu thốn, sự kém cỏi",
+        "obesity : bệnh béo phì",
+        "media literacy : sự hiểu biết về truyền thông",
+        "manipulate : thao túng",
+        "regulate : quy định, quản lý",
+        "prohibited : bị cấm",
+        "commercial motive : động cơ thương mại",
+        "audience : khán giả, người xem",
+        "stealth marketing : tiếp thị tàng hình, quảng cáo giấu mặt",
+        "free trade : thương mại tự do",
+        "enforce : thực thi, ép buộc",
+        "purchasing decision : quyết định mua hàng",
+        "billboard : biển quảng cáo",
+        "customized : được tùy chỉnh",
+        "cognitive maturity : sự trưởng thành về nhận thức",
+        "skepticism : sự hoài nghi"
+      ],
+      "section_2_detailed": [
+        "advertiser (noun) /ˈæd.və.taɪ.zər/ : a person or company that advertises a product or service - nhà quảng cáo. Ví dụ: The advertiser spent a lot of money on the new campaign.",
+        "persuasive (adjective) /pəˈsweɪ.sɪv/ : good at making someone do or believe something through reasoning - có sức thuyết phục. Ví dụ: The commercial was very persuasive.",
+        "targeted (adjective) /ˈtɑː.ɡɪ.tɪd/ : directed at a particular group or activity - được nhắm mục tiêu. Ví dụ: The company uses targeted marketing to reach teens.",
+        "celebrity endorsement (noun phrase) /səˈleb.rə.ti ɪnˈdɔːs.mənt/ : the use of a famous person to advertise a product - sự quảng cáo có người nổi tiếng. Ví dụ: Celebrity endorsement is a powerful tool in advertising.",
+        "inadequacy (noun) /ɪˈnæd.ɪ.kwə.si/ : the state of not being good enough or confident enough - sự thiếu thốn, sự kém cỏi. Ví dụ: Ads can cause feelings of inadequacy in young people.",
+        "obesity (noun) /əʊˈbiː.sə.ti/ : the condition of being extremely fat or overweight in a way that is dangerous for health - bệnh béo phì. Ví dụ: Childhood obesity is linked to junk food commercials.",
+        "media literacy (noun phrase) /ˈmiː.di.ə ˈlɪt.ər.ə.si/ : the ability to critically analyze and evaluate media messages - sự hiểu biết về truyền thông. Ví dụ: Schools should teach media literacy to students.",
+        "manipulate (verb) /məˈnɪp.jə.leɪt/ : to control something or someone to your advantage, often unfairly - thao túng. Ví dụ: Companies try to manipulate consumers' choices.",
+        "regulate (verb) /ˈreɡ.jə.leɪt/ : to control something, especially by making it work in a particular way - quy định, quản lý. Ví dụ: Governments need to regulate online ads.",
+        "prohibited (adjective) /prəˈhɪb.ɪ.tɪd/ : forbidden by law, rule, or other authority - bị cấm. Ví dụ: Advertising junk food to children is prohibited here.",
+        "commercial motive (noun phrase) /kəˈmɜː.ʃəl ˈməʊ.tɪv/ : a reason for doing something that is related to making a profit - động cơ thương mại. Ví dụ: Children often do not understand the commercial motive behind games.",
+        "audience (noun) /ˈɔː.di.əns/ : the group of people together in one place to watch or listen to a play, film, someone speaking, etc. - khán giả, người xem. Ví dụ: The ad targets a young audience.",
+        "stealth marketing (noun phrase) /stelθ ˈmɑː.kɪ.tɪŋ/ : the practice of promoting products to people without them knowing they are being marketed to - tiếp thị tàng hình, quảng cáo giấu mặt. Ví dụ: Influencers often use stealth marketing in their videos.",
+        "free trade (noun phrase) /friː treɪd/ : international buying and selling of goods, without limits on the amount of goods that one country can sell to another - thương mại tự do. Ví dụ: Some argue that bans violate the principles of free trade.",
+        "enforce (verb) /ɪnˈfɔːs/ : to make people obey a law, or to make a particular situation happen or be accepted - thực thi, ép buộc. Ví dụ: The government must enforce strict advertising rules.",
+        "purchasing decision (noun phrase) /ˈpɜː.tʃəs.ɪŋ dɪˈsɪʒ.ən/ : the thought process that leads a consumer from identifying a need to acting on it - quyết định mua hàng. Ví dụ: Ads have a big impact on a teenager's purchasing decision.",
+        "billboard (noun) /ˈbɪl.bɔːd/ : a very large board on which advertisements are shown - biển quảng cáo. Ví dụ: There is a huge billboard on the highway.",
+        "customized (adjective) /ˈkʌs.tə.maɪzd/ : made or changed according to the buyer's or user's needs - được tùy chỉnh. Ví dụ: Online ads are highly customized for each user.",
+        "cognitive maturity (noun phrase) /ˈkɒɡ.nə.tɪv məˈtʃʊə.rə.ti/ : the ability to think, learn, and remember at an adult level - sự trưởng thành về nhận thức. Ví dụ: Young kids lack the cognitive maturity to spot fake ads.",
+        "skepticism (noun) /ˈskep.tɪ.sɪ.zəm/ : an attitude of doubting that claims or statements are true - sự hoài nghi. Ví dụ: Consumers should view online ads with a healthy skepticism."
+      ]
+    },
+    "vocab_checker_items": [
+      {
+        "term": "advertiser",
+        "ipa": "/ˈæd.və.taɪ.zər/",
+        "part_of_speech": "noun",
+        "definition_en": "a person or company that advertises a product or service",
+        "meaning_vi": "nhà quảng cáo"
+      },
+      {
+        "term": "persuasive",
+        "ipa": "/pəˈsweɪ.sɪv/",
+        "part_of_speech": "adjective",
+        "definition_en": "good at making someone do or believe something through reasoning",
+        "meaning_vi": "có sức thuyết phục"
+      },
+      {
+        "term": "targeted",
+        "ipa": "/ˈtɑː.ɡɪ.tɪd/",
+        "part_of_speech": "adjective",
+        "definition_en": "directed at a particular group or activity",
+        "meaning_vi": "được nhắm mục tiêu"
+      },
+      {
+        "term": "celebrity endorsement",
+        "ipa": "/səˈleb.rə.ti ɪnˈdɔːs.mənt/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the use of a famous person to advertise a product",
+        "meaning_vi": "sự quảng cáo có người nổi tiếng"
+      },
+      {
+        "term": "inadequacy",
+        "ipa": "/ɪˈnæd.ɪ.kwə.si/",
+        "part_of_speech": "noun",
+        "definition_en": "the state of not being good enough or confident enough",
+        "meaning_vi": "sự thiếu thốn, sự kém cỏi"
+      },
+      {
+        "term": "obesity",
+        "ipa": "/əʊˈbiː.sə.ti/",
+        "part_of_speech": "noun",
+        "definition_en": "the condition of being extremely fat or overweight in a way that is dangerous for health",
+        "meaning_vi": "bệnh béo phì"
+      },
+      {
+        "term": "media literacy",
+        "ipa": "/ˈmiː.di.ə ˈlɪt.ər.ə.si/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the ability to critically analyze and evaluate media messages",
+        "meaning_vi": "sự hiểu biết về truyền thông"
+      },
+      {
+        "term": "manipulate",
+        "ipa": "/məˈnɪp.jə.leɪt/",
+        "part_of_speech": "verb",
+        "definition_en": "to control something or someone to your advantage, often unfairly",
+        "meaning_vi": "thao túng"
+      },
+      {
+        "term": "regulate",
+        "ipa": "/ˈreɡ.jə.leɪt/",
+        "part_of_speech": "verb",
+        "definition_en": "to control something, especially by making it work in a particular way",
+        "meaning_vi": "quy định, quản lý"
+      },
+      {
+        "term": "prohibited",
+        "ipa": "/prəˈhɪb.ɪ.tɪd/",
+        "part_of_speech": "adjective",
+        "definition_en": "forbidden by law, rule, or other authority",
+        "meaning_vi": "bị cấm"
+      },
+      {
+        "term": "commercial motive",
+        "ipa": "/kəˈmɜː.ʃəl ˈməʊ.tɪv/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a reason for doing something that is related to making a profit",
+        "meaning_vi": "động cơ thương mại"
+      },
+      {
+        "term": "audience",
+        "ipa": "/ˈɔː.di.əns/",
+        "part_of_speech": "noun",
+        "definition_en": "the group of people together in one place to watch or listen to a play, film, someone speaking, etc.",
+        "meaning_vi": "khán giả, người xem"
+      },
+      {
+        "term": "stealth marketing",
+        "ipa": "/stelθ ˈmɑː.kɪ.tɪŋ/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the practice of promoting products to people without them knowing they are being marketed to",
+        "meaning_vi": "tiếp thị tàng hình, quảng cáo giấu mặt"
+      },
+      {
+        "term": "free trade",
+        "ipa": "/friː treɪd/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "international buying and selling of goods, without limits on the amount of goods that one country can sell to another",
+        "meaning_vi": "thương mại tự do"
+      },
+      {
+        "term": "enforce",
+        "ipa": "/ɪnˈfɔːs/",
+        "part_of_speech": "verb",
+        "definition_en": "to make people obey a law, or to make a particular situation happen or be accepted",
+        "meaning_vi": "thực thi, ép buộc"
+      },
+      {
+        "term": "purchasing decision",
+        "ipa": "/ˈpɜː.tʃəs.ɪŋ dɪˈsɪʒ.ən/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the thought process that leads a consumer from identifying a need to acting on it",
+        "meaning_vi": "quyết định mua hàng"
+      },
+      {
+        "term": "billboard",
+        "ipa": "/ˈbɪl.bɔːd/",
+        "part_of_speech": "noun",
+        "definition_en": "a very large board on which advertisements are shown",
+        "meaning_vi": "biển quảng cáo"
+      },
+      {
+        "term": "customized",
+        "ipa": "/ˈkʌs.tə.maɪzd/",
+        "part_of_speech": "adjective",
+        "definition_en": "made or changed according to the buyer's or user's needs",
+        "meaning_vi": "được tùy chỉnh"
+      },
+      {
+        "term": "cognitive maturity",
+        "ipa": "/ˈkɒɡ.nə.tɪv məˈtʃʊə.rə.ti/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the ability to think, learn, and remember at an adult level",
+        "meaning_vi": "sự trưởng thành về nhận thức"
+      },
+      {
+        "term": "skepticism",
+        "ipa": "/ˈskep.tɪ.sɪ.zəm/",
+        "part_of_speech": "noun",
+        "definition_en": "an attitude of doubting that claims or statements are true",
+        "meaning_vi": "sự hoài nghi"
+      }
+    ]
+  },
+  "grammar": {
+    "targets": [
+      {
+        "name": "Passive voice basic forms",
+        "level": "B1",
+        "reason": "Used heavily in business and advertising to describe how consumers are targeted."
+      },
+      {
+        "name": "Contrast linkers (while, whereas, by contrast, in contrast)",
+        "level": "B1",
+        "reason": "Essential for A2/B1 chart descriptions comparing consumer habits."
+      }
+    ],
+    "grammar_blueprint": [
+      {
+        "question_no": 1,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "contextual choice",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "active voice trap"
+      },
+      {
+        "question_no": 2,
+        "grammar_target": "contrast linkers",
+        "question_type": "contextual choice",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "addition linker"
+      },
+      {
+        "question_no": 3,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "contextual choice",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "wrong tense passive"
+      },
+      {
+        "question_no": 4,
+        "grammar_target": "contrast linkers",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "because linker"
+      },
+      {
+        "question_no": 5,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "contextual choice",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "present continuous active"
+      },
+      {
+        "question_no": 6,
+        "grammar_target": "contrast linkers",
+        "question_type": "contextual choice",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "so that linker"
+      },
+      {
+        "question_no": 7,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "future passive instead of past"
+      },
+      {
+        "question_no": 8,
+        "grammar_target": "contrast linkers",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "although punctuation error"
+      },
+      {
+        "question_no": 9,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "wrong participle form"
+      },
+      {
+        "question_no": 10,
+        "grammar_target": "contrast linkers",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "addition logic"
+      },
+      {
+        "question_no": 11,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "agent omitted but active chosen"
+      },
+      {
+        "question_no": 12,
+        "grammar_target": "contrast linkers",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "but with wrong punctuation"
+      },
+      {
+        "question_no": 13,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "past perfect passive instead of present"
+      },
+      {
+        "question_no": 14,
+        "grammar_target": "contrast linkers",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "however uncapitalized"
+      },
+      {
+        "question_no": 15,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "transformation",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "wrong tense in transformation"
+      },
+      {
+        "question_no": 16,
+        "grammar_target": "contrast linkers",
+        "question_type": "sentence combining",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "wrong clause order"
+      },
+      {
+        "question_no": 17,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "transformation",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "missing the agent by phrase"
+      },
+      {
+        "question_no": 18,
+        "grammar_target": "contrast linkers",
+        "question_type": "sentence combining",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "run on sentence"
+      },
+      {
+        "question_no": 19,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "transformation",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "subject confusion"
+      },
+      {
+        "question_no": 20,
+        "grammar_target": "contrast linkers",
+        "question_type": "sentence combining",
+        "depth": "hard",
+        "tested_dimension": "use",
+        "trap": "punctuation error with whereas"
+      },
+      {
+        "question_no": 21,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "error correction",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "missing auxiliary be"
+      },
+      {
+        "question_no": 22,
+        "grammar_target": "contrast linkers",
+        "question_type": "error correction",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "misspelled whereas"
+      },
+      {
+        "question_no": 23,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "error correction",
+        "depth": "medium",
+        "tested_dimension": "form",
+        "trap": "bare infinitive instead of past participle"
+      },
+      {
+        "question_no": 24,
+        "grammar_target": "contrast linkers",
+        "question_type": "error correction",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "using 'by contrast' without comma"
+      },
+      {
+        "question_no": 25,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "error correction",
+        "depth": "medium",
+        "tested_dimension": "form",
+        "trap": "wrong auxiliary tense"
+      },
+      {
+        "question_no": 26,
+        "grammar_target": "contrast linkers",
+        "question_type": "error correction",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "while with no contrast"
+      },
+      {
+        "question_no": 27,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "error correction",
+        "depth": "hard",
+        "tested_dimension": "meaning",
+        "trap": "active voice applied to object"
+      },
+      {
+        "question_no": 28,
+        "grammar_target": "contrast linkers",
+        "question_type": "error correction",
+        "depth": "hard",
+        "tested_dimension": "use",
+        "trap": "whereas starting a new sentence"
+      },
+      {
+        "question_no": 29,
+        "grammar_target": "passive voice basic forms",
+        "question_type": "contextual choice",
+        "depth": "hard",
+        "tested_dimension": "discourse",
+        "trap": "stretching continuous passive form"
+      },
+      {
+        "question_no": 30,
+        "grammar_target": "contrast linkers",
+        "question_type": "contextual choice",
+        "depth": "hard",
+        "tested_dimension": "writing transfer",
+        "trap": "stretching contrast in long paragraph"
+      }
+    ],
+    "guide": [
+      {
+        "heading": "#### Card 1: Passive Voice Basics",
+        "content": "The **Passive Voice** focuses on the action or the object receiving the action. Form: **Subject + BE + Past Participle (V3)**. Example: 'Young consumers are targeted by ads' (not: 'Young consumers target by ads')."
+      },
+      {
+        "heading": "#### Card 2: Contrast Linkers",
+        "content": "Use **while** or **whereas** to connect two contrasting clauses in one sentence (e.g. 'Adults ignore ads, whereas children watch them'). Use **By contrast,** or **In contrast,** at the beginning of a new sentence."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "trap": "Forgetting the 'be' verb in passive sentences",
+        "wrong_example": "The laws passed last year.",
+        "correct_version": "The laws were passed last year.",
+        "why_it_matters": "Without 'be', the sentence sounds like the laws did the action themselves."
+      },
+      {
+        "trap": "Using 'whereas' as a separate sentence",
+        "wrong_example": "Children like toys. Whereas adults like cars.",
+        "correct_version": "Children like toys, whereas adults like cars.",
+        "why_it_matters": "'Whereas' is a conjunction; it must connect two clauses within the same sentence."
+      }
+    ],
+    "sections": [
+      {
+        "section_title": "Grammar in context",
+        "internal_question_start": 1,
+        "internal_question_end": 14,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Sentence combining and transformation",
+        "internal_question_start": 15,
+        "internal_question_end": 20,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Error correction",
+        "internal_question_start": 21,
+        "internal_question_end": 28,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Advanced discourse",
+        "internal_question_start": 29,
+        "internal_question_end": 30,
+        "compiler_computed_range": true
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "type": "Grammar in context",
+        "question": "Every day, millions of young people _______ by online advertisements.",
+        "options": [
+          "target",
+          "are targeted",
+          "targeting",
+          "targets"
+        ],
+        "correct_answer": "are targeted",
+        "explanation_vi": "Người trẻ bị nhắm mục tiêu bởi quảng cáo, nên dùng bị động (are targeted).",
+        "difficulty": "easy",
+        "cognitive_level": "form_recognition",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "target",
+              "reason": "active voice"
+            },
+            {
+              "option": "targeting",
+              "reason": "participle only"
+            },
+            {
+              "option": "targets",
+              "reason": "active singular"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Every day, millions of young people are targeted by online advertisements.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 2,
+        "type": "Grammar in context",
+        "question": "Adults usually ignore pop-up ads, _______ teenagers often click on them.",
+        "options": [
+          "because",
+          "whereas",
+          "so",
+          "and"
+        ],
+        "correct_answer": "whereas",
+        "explanation_vi": "Hai vế câu tương phản (người lớn phớt lờ, thanh thiếu niên hay click) nên dùng 'whereas'.",
+        "difficulty": "easy",
+        "cognitive_level": "form_recognition",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "because",
+              "reason": "shows reason, not contrast"
+            },
+            {
+              "option": "so",
+              "reason": "shows result"
+            },
+            {
+              "option": "and",
+              "reason": "shows addition"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Adults usually ignore pop-up ads, whereas teenagers often click on them.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 3,
+        "type": "Grammar in context",
+        "question": "Last year, a strict law on internet advertising _______ by the government.",
+        "options": [
+          "is passed",
+          "was passed",
+          "passed",
+          "passes"
+        ],
+        "correct_answer": "was passed",
+        "explanation_vi": "'Last year' chỉ quá khứ đơn, chủ ngữ là luật nên dùng bị động quá khứ đơn (was passed).",
+        "difficulty": "easy",
+        "cognitive_level": "form_recognition",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "is passed",
+              "reason": "present tense"
+            },
+            {
+              "option": "passed",
+              "reason": "active voice"
+            },
+            {
+              "option": "passes",
+              "reason": "present active"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Last year, a strict law on internet advertising was passed by the government.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 4,
+        "type": "Grammar in context",
+        "question": "Some countries strictly regulate ads. _______, other nations rely on voluntary guidelines.",
+        "options": [
+          "Therefore",
+          "Because",
+          "In contrast",
+          "For example"
+        ],
+        "correct_answer": "In contrast",
+        "explanation_vi": "Hai câu có nghĩa trái ngược nhau, nên dùng 'In contrast' đứng đầu câu thứ hai.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "Therefore",
+              "reason": "shows result"
+            },
+            {
+              "option": "Because",
+              "reason": "shows reason"
+            },
+            {
+              "option": "For example",
+              "reason": "shows example"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Some countries strictly regulate ads. In contrast, other nations rely on voluntary guidelines.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 5,
+        "type": "Grammar in context",
+        "question": "Currently, millions of dollars _______ on social media marketing.",
+        "options": [
+          "spend",
+          "are spending",
+          "are spent",
+          "spent"
+        ],
+        "correct_answer": "are spent",
+        "explanation_vi": "Chủ ngữ là tiền ('millions of dollars'), bị tiêu xài nên dùng bị động thì hiện tại đơn.",
+        "difficulty": "easy",
+        "cognitive_level": "form_recognition",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "spend",
+              "reason": "active voice"
+            },
+            {
+              "option": "are spending",
+              "reason": "active continuous"
+            },
+            {
+              "option": "spent",
+              "reason": "active past"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Currently, millions of dollars are spent on social media marketing.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 6,
+        "type": "Grammar in context",
+        "question": "_______ television ads are decreasing, online stealth marketing is growing rapidly.",
+        "options": [
+          "While",
+          "So that",
+          "Because",
+          "Therefore"
+        ],
+        "correct_answer": "While",
+        "explanation_vi": "Diễn tả sự tương phản giữa hai sự việc đang diễn ra đồng thời, dùng 'While'.",
+        "difficulty": "easy",
+        "cognitive_level": "form_recognition",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "So that",
+              "reason": "purpose linker"
+            },
+            {
+              "option": "Because",
+              "reason": "reason linker"
+            },
+            {
+              "option": "Therefore",
+              "reason": "result linker"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "While television ads are decreasing, online stealth marketing is growing rapidly.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 7,
+        "type": "Grammar in context",
+        "question": "The new regulations on junk food ads _______ next month.",
+        "options": [
+          "were introduced",
+          "are introduced",
+          "will be introduced",
+          "introduce"
+        ],
+        "correct_answer": "will be introduced",
+        "explanation_vi": "Sự việc sẽ xảy ra 'next month', cần dùng bị động thì tương lai đơn.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "were introduced",
+              "reason": "past tense"
+            },
+            {
+              "option": "are introduced",
+              "reason": "present tense"
+            },
+            {
+              "option": "introduce",
+              "reason": "active voice"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The new regulations on junk food ads will be introduced next month.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 8,
+        "type": "Grammar in context",
+        "question": "Teenagers spend four hours on social media, _______ young children only spend one hour.",
+        "options": [
+          "in contrast",
+          "however",
+          "whereas",
+          "despite"
+        ],
+        "correct_answer": "whereas",
+        "explanation_vi": "Nối 2 vế trong cùng một câu, sau dấu phẩy, dùng 'whereas'. 'in contrast' và 'however' thường đi sau dấu chấm hoặc chấm phẩy.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "in contrast",
+              "reason": "requires a new sentence or semicolon"
+            },
+            {
+              "option": "however",
+              "reason": "requires a new sentence or semicolon"
+            },
+            {
+              "option": "despite",
+              "reason": "must be followed by noun"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Teenagers spend four hours on social media, whereas young children only spend one hour.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 9,
+        "type": "Grammar in context",
+        "question": "Many popular products _______ by social media influencers to boost sales.",
+        "options": [
+          "are promoting",
+          "are promoted",
+          "promote",
+          "promotes"
+        ],
+        "correct_answer": "are promoted",
+        "explanation_vi": "Sản phẩm được quảng bá, cần dùng bị động hiện tại đơn (are promoted).",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "are promoting",
+              "reason": "active continuous"
+            },
+            {
+              "option": "promote",
+              "reason": "active"
+            },
+            {
+              "option": "promotes",
+              "reason": "active singular"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Many popular products are promoted by social media influencers to boost sales.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 10,
+        "type": "Grammar in context",
+        "question": "The older campaign used TV ads. _______, the new campaign focuses entirely on the internet.",
+        "options": [
+          "By contrast",
+          "Furthermore",
+          "Because",
+          "So"
+        ],
+        "correct_answer": "By contrast",
+        "explanation_vi": "So sánh sự khác biệt giữa cũ và mới, đầu câu mới nên dùng 'By contrast'.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "Furthermore",
+              "reason": "addition"
+            },
+            {
+              "option": "Because",
+              "reason": "reason"
+            },
+            {
+              "option": "So",
+              "reason": "result"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The older campaign used TV ads. By contrast, the new campaign focuses entirely on the internet.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 11,
+        "type": "Grammar in context",
+        "question": "Consumer desires _______ easily by sophisticated marketing strategies.",
+        "options": [
+          "manipulate",
+          "are manipulated",
+          "have manipulated",
+          "manipulating"
+        ],
+        "correct_answer": "are manipulated",
+        "explanation_vi": "Mong muốn bị thao túng, dùng thể bị động.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "manipulate",
+              "reason": "active voice"
+            },
+            {
+              "option": "have manipulated",
+              "reason": "active perfect"
+            },
+            {
+              "option": "manipulating",
+              "reason": "participle"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Consumer desires are manipulated easily by sophisticated marketing strategies.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 12,
+        "type": "Grammar in context",
+        "question": "Children often believe ads are true, _______ adults approach them with skepticism.",
+        "options": [
+          "while",
+          "however",
+          "therefore",
+          "in contrast"
+        ],
+        "correct_answer": "while",
+        "explanation_vi": "Nối hai vế đối lập trong cùng một câu, dùng 'while'.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "however",
+              "reason": "requires a new sentence or semicolon"
+            },
+            {
+              "option": "therefore",
+              "reason": "result linker"
+            },
+            {
+              "option": "in contrast",
+              "reason": "requires a new sentence or semicolon"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Children often believe ads are true, while adults approach them with skepticism.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 13,
+        "type": "Grammar in context",
+        "question": "A lot of personal data _______ by tech companies to create targeted ads.",
+        "options": [
+          "is collected",
+          "are collected",
+          "collects",
+          "collected"
+        ],
+        "correct_answer": "is collected",
+        "explanation_vi": "'Data' là danh từ không đếm được (trong ngữ cảnh phổ thông), dùng bị động số ít.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "are collected",
+              "reason": "plural verb with uncountable noun"
+            },
+            {
+              "option": "collects",
+              "reason": "active voice"
+            },
+            {
+              "option": "collected",
+              "reason": "past active"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "A lot of personal data is collected by tech companies to create targeted ads.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 14,
+        "type": "Grammar in context",
+        "question": "In Sweden, ads aimed at children are banned. _______, in the UK they are only restricted.",
+        "options": [
+          "In contrast",
+          "Whereas",
+          "Because",
+          "While"
+        ],
+        "correct_answer": "In contrast",
+        "explanation_vi": "Đứng đầu câu mới, ngăn cách bằng dấu phẩy, dùng 'In contrast'.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "Whereas",
+              "reason": "conjunction, not transition adverb"
+            },
+            {
+              "option": "Because",
+              "reason": "reason linker"
+            },
+            {
+              "option": "While",
+              "reason": "conjunction, not transition adverb"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "In Sweden, ads aimed at children are banned. In contrast, in the UK they are only restricted.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 15,
+        "type": "Sentence combining and transformation",
+        "question": "Rewrite using passive voice: Marketing companies create targeted advertisements.",
+        "correct_answer": "Targeted advertisements are created by marketing companies.",
+        "explanation_vi": "Chủ ngữ thành 'Targeted advertisements', động từ ở hiện tại đơn bị động.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Targeted advertisements are created by marketing companies.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_sentences": [
+            "Marketing companies create targeted advertisements."
+          ],
+          "transformed_sentence": "Targeted advertisements are created by marketing companies.",
+          "meaning_is_preserved": true,
+          "context_retained": true,
+          "no_extra_info_added": true
+        }
+      },
+      {
+        "id": 16,
+        "type": "Sentence combining and transformation",
+        "question": "Combine using 'whereas': Boys prefer video game ads. Girls often prefer clothing ads.",
+        "correct_answer": "Boys prefer video game ads, whereas girls often prefer clothing ads.",
+        "explanation_vi": "Dùng 'whereas' với dấu phẩy để nối hai mệnh đề.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Boys prefer video game ads, whereas girls often prefer clothing ads.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_sentences": [
+            "Boys prefer video game ads.",
+            "Girls often prefer clothing ads."
+          ],
+          "transformed_sentence": "Boys prefer video game ads, whereas girls often prefer clothing ads.",
+          "meaning_is_preserved": true,
+          "context_retained": true,
+          "no_extra_info_added": true
+        }
+      },
+      {
+        "id": 17,
+        "type": "Sentence combining and transformation",
+        "question": "Rewrite using passive voice: They banned junk food commercials in 2020.",
+        "correct_answer": "Junk food commercials were banned in 2020.",
+        "explanation_vi": "Quá khứ đơn bị động. Bỏ 'by them'.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Junk food commercials were banned in 2020.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_sentences": [
+            "They banned junk food commercials in 2020."
+          ],
+          "transformed_sentence": "Junk food commercials were banned in 2020.",
+          "meaning_is_preserved": true,
+          "context_retained": true,
+          "no_extra_info_added": true
+        }
+      },
+      {
+        "id": 18,
+        "type": "Sentence combining and transformation",
+        "question": "Combine using 'while': Children watch YouTube. Parents watch traditional television.",
+        "correct_answer": "Children watch YouTube, while parents watch traditional television.",
+        "explanation_vi": "Sử dụng 'while' để nối hai hoạt động diễn ra tương phản.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Children watch YouTube, while parents watch traditional television.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_sentences": [
+            "Children watch YouTube.",
+            "Parents watch traditional television."
+          ],
+          "transformed_sentence": "Children watch YouTube, while parents watch traditional television.",
+          "meaning_is_preserved": true,
+          "context_retained": true,
+          "no_extra_info_added": true
+        }
+      },
+      {
+        "id": 19,
+        "type": "Sentence combining and transformation",
+        "question": "Rewrite using passive voice: The government will enforce stricter rules.",
+        "correct_answer": "Stricter rules will be enforced by the government.",
+        "explanation_vi": "Cấu trúc tương lai đơn bị động: will be + V3/ed.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Stricter rules will be enforced by the government.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_sentences": [
+            "The government will enforce stricter rules."
+          ],
+          "transformed_sentence": "Stricter rules will be enforced by the government.",
+          "meaning_is_preserved": true,
+          "context_retained": true,
+          "no_extra_info_added": true
+        }
+      },
+      {
+        "id": 20,
+        "type": "Sentence combining and transformation",
+        "question": "Combine using 'In contrast,': Print ads are expensive. Online ads are relatively cheap.",
+        "correct_answer": "Print ads are expensive. In contrast, online ads are relatively cheap.",
+        "explanation_vi": "Dùng 'In contrast' đứng đầu câu thứ hai.",
+        "difficulty": "hard",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Print ads are expensive. In contrast, online ads are relatively cheap.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_sentences": [
+            "Print ads are expensive.",
+            "Online ads are relatively cheap."
+          ],
+          "transformed_sentence": "Print ads are expensive. In contrast, online ads are relatively cheap.",
+          "meaning_is_preserved": true,
+          "context_retained": true,
+          "no_extra_info_added": true
+        }
+      },
+      {
+        "id": 21,
+        "type": "Error correction",
+        "question": "Correct the error: The new product was promote by a famous celebrity.",
+        "correct_answer": "The new product was promoted by a famous celebrity.",
+        "explanation_vi": "Bị động cần V3/ed (promoted), không dùng động từ nguyên mẫu (promote).",
+        "difficulty": "easy",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The new product was promoted by a famous celebrity.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The new product was promote by a famous celebrity.",
+          "corrected_sentence": "The new product was promoted by a famous celebrity.",
+          "target_error_text": "was promote",
+          "target_error_type": "form",
+          "correction_text": "was promoted",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 22,
+        "type": "Error correction",
+        "question": "Correct the error: Children like bright colors. Where as adults prefer calm tones.",
+        "correct_answer": "Children like bright colors, whereas adults prefer calm tones.",
+        "explanation_vi": "'whereas' viết liền và là liên từ nối 2 mệnh đề trong cùng một câu.",
+        "difficulty": "easy",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Children like bright colors, whereas adults prefer calm tones.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "Children like bright colors. Where as adults prefer calm tones.",
+          "corrected_sentence": "Children like bright colors, whereas adults prefer calm tones.",
+          "target_error_text": ". Where as",
+          "target_error_type": "punctuation",
+          "correction_text": ", whereas",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 23,
+        "type": "Error correction",
+        "question": "Correct the error: The rules are introduce to protect teenagers.",
+        "correct_answer": "The rules are introduced to protect teenagers.",
+        "explanation_vi": "Thiếu hậu tố -d cho động từ ở dạng bị động.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The rules are introduced to protect teenagers.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The rules are introduce to protect teenagers.",
+          "corrected_sentence": "The rules are introduced to protect teenagers.",
+          "target_error_text": "introduce",
+          "target_error_type": "form",
+          "correction_text": "introduced",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 24,
+        "type": "Error correction",
+        "question": "Correct the error: Boys play video games by contrast girls use social media.",
+        "correct_answer": "Boys play video games. By contrast, girls use social media.",
+        "explanation_vi": "By contrast bắt đầu câu mới và cần có dấu phẩy.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Boys play video games. By contrast, girls use social media.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "Boys play video games by contrast girls use social media.",
+          "corrected_sentence": "Boys play video games. By contrast, girls use social media.",
+          "target_error_text": "games by contrast",
+          "target_error_type": "punctuation",
+          "correction_text": "games. By contrast,",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 25,
+        "type": "Error correction",
+        "question": "Correct the error: The problem has discussed at yesterday's meeting.",
+        "correct_answer": "The problem was discussed at yesterday's meeting.",
+        "explanation_vi": "Với 'yesterday', dùng quá khứ đơn bị động (was discussed) chứ không dùng hiện tại hoàn thành chủ động/bị động.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The problem was discussed at yesterday's meeting.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The problem has discussed at yesterday's meeting.",
+          "corrected_sentence": "The problem was discussed at yesterday's meeting.",
+          "target_error_text": "has discussed",
+          "target_error_type": "tense/voice",
+          "correction_text": "was discussed",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 26,
+        "type": "Error correction",
+        "question": "Correct the error: While I agree with you, whereas I cannot support your plan.",
+        "correct_answer": "While I agree with you, I cannot support your plan.",
+        "explanation_vi": "Không dùng cả 'while' và 'whereas' trong một câu.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "While I agree with you, I cannot support your plan.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "While I agree with you, whereas I cannot support your plan.",
+          "corrected_sentence": "While I agree with you, I cannot support your plan.",
+          "target_error_text": "whereas ",
+          "target_error_type": "redundancy",
+          "correction_text": "",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 27,
+        "type": "Error correction",
+        "question": "Correct the error: These ads are designed to manipulate by children's desires.",
+        "correct_answer": "These ads are designed to manipulate children's desires.",
+        "explanation_vi": "'manipulate' ở đây là chủ động tác động lên 'desires', không cần giới từ 'by'.",
+        "difficulty": "hard",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "These ads are designed to manipulate children's desires.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "These ads are designed to manipulate by children's desires.",
+          "corrected_sentence": "These ads are designed to manipulate children's desires.",
+          "target_error_text": "manipulate by",
+          "target_error_type": "voice",
+          "correction_text": "manipulate",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 28,
+        "type": "Error correction",
+        "question": "Correct the error: The TV ad is very loud, in contrast the print ad is quiet.",
+        "correct_answer": "The TV ad is very loud. In contrast, the print ad is quiet.",
+        "explanation_vi": "'In contrast' cần bắt đầu một câu mới hoặc đứng sau dấu chấm phẩy.",
+        "difficulty": "hard",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The TV ad is very loud. In contrast, the print ad is quiet.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The TV ad is very loud, in contrast the print ad is quiet.",
+          "corrected_sentence": "The TV ad is very loud. In contrast, the print ad is quiet.",
+          "target_error_text": ", in contrast",
+          "target_error_type": "punctuation",
+          "correction_text": ". In contrast,",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 29,
+        "type": "Advanced discourse",
+        "question": "At this exact moment, their private information _______ to create highly targeted ads.",
+        "options": [
+          "is being collected",
+          "is collected",
+          "has been collected",
+          "collects"
+        ],
+        "correct_answer": "is being collected",
+        "explanation_vi": "Diễn tả hành động đang bị tác động ngay tại thời điểm hiện tại, dùng bị động thì hiện tại tiếp diễn.",
+        "difficulty": "hard",
+        "cognitive_level": "context_use",
+        "source_connection": "passage_derived",
+        "target_structure": "passive voice basic forms",
+        "level": "B2",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "is collected",
+              "reason": "simple tense"
+            },
+            {
+              "option": "has been collected",
+              "reason": "perfect tense"
+            },
+            {
+              "option": "collects",
+              "reason": "active voice"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "At this exact moment, their personal data is being collected to create highly targeted ads.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 30,
+        "type": "Advanced discourse",
+        "question": "He argued that the campaign was manipulative, _______ she believed it was just smart business.",
+        "options": [
+          "whereas",
+          "despite",
+          "therefore",
+          "in contrast"
+        ],
+        "correct_answer": "whereas",
+        "explanation_vi": "Nối hai vế đối lập trong một câu phức tạp, dùng 'whereas'.",
+        "difficulty": "hard",
+        "cognitive_level": "context_use",
+        "source_connection": "passage_derived",
+        "target_structure": "contrast linkers",
+        "level": "B2",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "why_other_options_are_wrong": [
+            {
+              "option": "despite",
+              "reason": "preposition requiring a noun phrase"
+            },
+            {
+              "option": "therefore",
+              "reason": "shows result"
+            },
+            {
+              "option": "in contrast",
+              "reason": "needs new sentence"
+            }
+          ],
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "He argued that the campaign was manipulative, whereas she believed it was just smart business.",
+          "meaning_preserved": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      }
+    ]
+  },
+  "writing": {
+    "tasks": [
+      {
+        "id": 1,
+        "task_type": "Sentence Building",
+        "prompt": "Sắp xếp các từ sau thành các câu hoàn chỉnh về chủ đề quảng cáo:",
+        "target_length": "2 sentences (approx. 15-20 words)",
+        "focus_skill": "Correct word order with comparatives and passives.",
+        "useful_language": [
+          "1. online / ads / are / more / persuasive / than / print / ads.",
+          "2. children / are / easily / influenced / by / TV / commercials."
+        ],
+        "success_criteria": [
+          "Correct word order and grammar structure.",
+          "Correct punctuation and capitalization."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 2,
+        "task_type": "Short Email",
+        "prompt": "Write a short email to a company complaining about an advertisement that targets young children. Write 3-4 sentences.",
+        "target_length": "3-4 sentences (approx. 40-50 words)",
+        "focus_skill": "Writing a polite complaint email.",
+        "useful_language": [
+          "Dear Marketing Manager,",
+          "I am writing to complain about your recent advertisement.",
+          "It is inappropriate to target young children.",
+          "Please reconsider your marketing strategy."
+        ],
+        "success_criteria": [
+          "Write exactly 3 to 4 sentences in the email body.",
+          "Include a formal greeting and sign-off.",
+          "State clearly the reason for the complaint."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 3,
+        "task_type": "Data Description",
+        "prompt": "Describe the chart below showing where young people see advertisements. Write 3 sentences.",
+        "target_length": "3 sentences (approx. 40-50 words)",
+        "focus_skill": "Comparing quantities and writing simple chart summaries.",
+        "useful_language": [
+          "The chart compares...",
+          "Social media has the highest percentage...",
+          "In contrast, print media has the lowest percentage..."
+        ],
+        "success_criteria": [
+          "Write exactly three sentences.",
+          "Describe the highest category and the lowest category.",
+          "Use a contrast linker."
+        ],
+        "visual_data": {
+          "type": "svg",
+          "content": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'Times New Roman', Times, serif; background-color: #fcfcfc; border: 1px solid #eaeaea; border-radius: 6px;\"><text x=\"200\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#2c3e50\">Where Young People See Ads</text><text x=\"15\" y=\"125\" text-anchor=\"middle\" font-size=\"10\" fill=\"#7f8c8d\" transform=\"rotate(-90 15 125)\">Percentage</text><line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"190\" stroke=\"#cccccc\" stroke-width=\"1\"/><line x1=\"60\" y1=\"190\" x2=\"360\" y2=\"190\" stroke=\"#555555\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"190\" x2=\"60\" y2=\"50\" stroke=\"#555555\" stroke-width=\"1.5\"/><line x1=\"55\" y1=\"150\" x2=\"60\" y2=\"150\" stroke=\"#555555\"/><text x=\"48\" y=\"153\" font-size=\"10\" text-anchor=\"end\" fill=\"#555555\">20%</text><line x1=\"55\" y1=\"110\" x2=\"60\" y2=\"110\" stroke=\"#555555\"/><text x=\"48\" y=\"113\" font-size=\"10\" text-anchor=\"end\" fill=\"#555555\">40%</text><line x1=\"55\" y1=\"70\" x2=\"60\" y2=\"70\" stroke=\"#555555\"/><text x=\"48\" y=\"73\" font-size=\"10\" text-anchor=\"end\" fill=\"#555555\">60%</text><rect x=\"90\" y=\"70\" width=\"50\" height=\"120\" fill=\"#3498db\" rx=\"3\"/><text x=\"115\" y=\"60\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#3498db\">60%</text><text x=\"115\" y=\"208\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#2c3e50\">Social Media</text><rect x=\"180\" y=\"130\" width=\"50\" height=\"60\" fill=\"#2ecc71\" rx=\"3\"/><text x=\"205\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2ecc71\">30%</text><text x=\"205\" y=\"208\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#2c3e50\">Television</text><rect x=\"270\" y=\"170\" width=\"50\" height=\"20\" fill=\"#e74c3c\" rx=\"3\"/><text x=\"295\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#e74c3c\">10%</text><text x=\"295\" y=\"208\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#2c3e50\">Print</text></svg>"
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 4,
+        "task_type": "Short Paragraph",
+        "prompt": "Write a short paragraph describing an advertisement that you think is very effective. Explain why. Write 3-4 sentences.",
+        "target_length": "3-4 sentences (approx. 40-50 words)",
+        "focus_skill": "Describing opinions and reasons.",
+        "useful_language": [
+          "One effective advertisement I saw was for...",
+          "It was very persuasive because...",
+          "I think it appeals to young people because..."
+        ],
+        "success_criteria": [
+          "Write exactly 3 to 4 sentences.",
+          "Describe the ad.",
+          "Give a reason why it is effective."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 5,
+        "task_type": "Short Description",
+        "prompt": "Compare the two advertising methods in the table below. Write a short paragraph describing their differences. Write 3 sentences.",
+        "target_length": "3 sentences (approx. 40-50 words)",
+        "focus_skill": "Comparing features from a table.",
+        "useful_language": [
+          "The table illustrates the differences between...",
+          "Online ads are cheaper than...",
+          "On the other hand, TV ads reach a wider audience..."
+        ],
+        "success_criteria": [
+          "Write exactly three sentences.",
+          "Compare the cost and reach.",
+          "Use a contrast linker."
+        ],
+        "visual_data": {
+          "type": "markdown_table",
+          "content": "| Feature | Online Ads | TV Commercials |\n| --- | --- | --- |\n| Cost | Low | Very High |\n| Target Audience | Highly specific | General public |\n| Interactivity | High (clickable) | Low (view only) |"
+        },
+        "topic_alignment": true
+      }
+    ]
+  },
+  "answers": {
+    "reading_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "FALSE",
+        "question_type": "True/False/Not Given",
+        "evidence_quote": "It is estimated that **advertisers** spend billions of dollars each year specifically targeting young consumers.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Bài đọc nói rằng các công ty quảng cáo chi hàng tỷ đô la để nhắm mục tiêu vào giới trẻ (young consumers), không phải người cao tuổi (elderly).",
+        "why_others_wrong_vi": "Nhận định này trái ngược hoàn toàn với thông tin trong bài, do đó FALSE là đáp án chính xác.",
+        "depth_check_vi": "Câu hỏi nhận biết trực tiếp (Literal) mức độ thấp.",
+        "tip_vi": "So sánh đối tượng được nhắm mục tiêu trong câu hỏi và bài đọc."
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "TRUE",
+        "question_type": "True/False/Not Given",
+        "evidence_quote": "some consumer protection groups argue that young people need more **media literacy** education",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Nhận định hoàn toàn khớp với câu trong đoạn 2.",
+        "why_others_wrong_vi": "Các phương án FALSE, NOT GIVEN sai vì thông tin đã có rõ ràng.",
+        "depth_check_vi": "Câu hỏi nhận biết trực tiếp (Literal) mức độ thấp.",
+        "tip_vi": "So sánh các cụm từ khóa 'consumer protection groups', 'young people', 'media literacy education'."
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "FALSE",
+        "question_type": "True/False/Not Given",
+        "evidence_quote": "For instance, in Sweden and Norway, television commercials directed at children under the age of 12 are strictly **prohibited**.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Họ cấm 'quảng cáo truyền hình' (television commercials) chứ không cấm 'mọi hình thức chương trình truyền hình' (all forms of television programming).",
+        "why_others_wrong_vi": "Câu hỏi phóng đại từ 'quảng cáo' thành 'chương trình truyền hình', do đó câu trả lời phải là FALSE.",
+        "depth_check_vi": "Câu hỏi suy luận (Inference) mức độ trung bình.",
+        "tip_vi": "Phân biệt giữa commercials (quảng cáo) và programming (chương trình nói chung)."
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "NOT GIVEN",
+        "question_type": "True/False/Not Given",
+        "evidence_quote": "In contrast, other nations rely on voluntary guidelines, suggesting that parents should be responsible for monitoring what their children watch online.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Bài đọc nói các quốc gia khác dựa vào hướng dẫn tự nguyện, nhưng không trực tiếp so sánh là 'thay vì luật nghiêm ngặt cho internet' một cách rõ ràng trong câu đó, phần strict laws cho internet là không được đề cập đích danh cho nhóm quốc gia này.",
+        "why_others_wrong_vi": "Không có đủ thông tin để khẳng định đúng hay sai.",
+        "depth_check_vi": "Câu hỏi nhận biết trực tiếp (Literal) mức độ thấp.",
+        "tip_vi": "Nếu một thông tin quá cụ thể ('rather than strict laws for internet') không có trong văn bản, đó là NOT GIVEN."
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "FALSE",
+        "question_type": "True/False/Not Given",
+        "evidence_quote": "By fostering a healthy skepticism, young consumers can navigate the digital world and make informed **purchasing decisions** without being easily swayed",
+        "evidence_paragraph": 5,
+        "explanation_vi": "Tác giả khuyên người trẻ học cách điều hướng (navigate) thế giới số bằng tư duy phản biện, chứ không khuyên ngừng sử dụng hoàn toàn (completely stop using).",
+        "why_others_wrong_vi": "Nhận định này trái với đề xuất thực tế của tác giả.",
+        "depth_check_vi": "Câu hỏi suy luận (Inference) mức độ trung bình.",
+        "tip_vi": "So sánh 'navigate the digital world' với 'completely stop using'."
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "targeted",
+        "question_type": "Gap Fill",
+        "evidence_quote": "marketing companies create **targeted** advertisements that appeal directly to the interests of teenagers and children.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Cần một tính từ bổ nghĩa cho 'advertisements'. Bài đọc dùng từ 'targeted' (được nhắm mục tiêu).",
+        "why_others_wrong_vi": "Các tính từ khác không đúng nghĩa với hành động tạo quảng cáo của công ty marketing trong ngữ cảnh này.",
+        "depth_check_vi": "Câu hỏi từ vựng trong văn cảnh (Vocabulary in Context) mức độ thấp.",
+        "tip_vi": "Tìm cụm từ 'create ... advertisements'."
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "desires",
+        "question_type": "Gap Fill",
+        "evidence_quote": "**media literacy** education to help them understand how commercials try to **manipulate** their desires.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Cần một danh từ đứng sau 'manipulate the'. Bài đọc ghi rõ là 'manipulate their desires'.",
+        "why_others_wrong_vi": "Các từ khác không phù hợp với cấu trúc câu này.",
+        "depth_check_vi": "Câu hỏi nhận biết trực tiếp (Literal) mức độ thấp.",
+        "tip_vi": "Tìm động từ 'manipulate' và xem nó tác động lên cái gì."
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "regulate",
+        "question_type": "Gap Fill",
+        "evidence_quote": "Several countries have already taken steps to **regulate** advertising aimed at children.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Cần một động từ nguyên mẫu có 'to'. Bài đọc dùng 'to regulate'.",
+        "why_others_wrong_vi": "Các động từ khác không phù hợp cấu trúc câu.",
+        "depth_check_vi": "Câu hỏi từ vựng (Vocabulary in Context) mức độ thấp.",
+        "tip_vi": "Tìm cụm 'taken steps to...'."
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "stealth",
+        "question_type": "Gap Fill",
+        "evidence_quote": "This form of **stealth marketing** bypasses traditional laws.",
+        "evidence_paragraph": 4,
+        "explanation_vi": "Cần một từ ghép với 'marketing'. Bài đọc gọi đây là 'stealth marketing' (quảng cáo tàng hình).",
+        "why_others_wrong_vi": "Các từ khác không đúng thuật ngữ.",
+        "depth_check_vi": "Câu hỏi suy luận (Inference) mức độ trung bình.",
+        "tip_vi": "Tìm tên phương pháp mà influencer sử dụng."
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "They often experience feelings of inadequacy.",
+        "question_type": "Multiple Choice",
+        "evidence_quote": "Teenagers who see idealized images of lifestyles and products often experience a feeling of **inadequacy** if they cannot afford them.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Đoạn 2 nêu rõ thanh thiếu niên thường có cảm giác thiếu thốn/yếu kém (inadequacy) khi xem quảng cáo.",
+        "why_others_wrong_vi": "Cảm thấy tự tin hơn là ngược nghĩa. Ngừng dùng MXH và lập công ty là không có trong bài.",
+        "depth_check_vi": "Câu hỏi suy luận (Inference) mức độ trung bình.",
+        "tip_vi": "Tìm kết quả tâm lý (psychological effect) được nhắc đến ở đoạn 2."
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "They cannot distinguish between entertainment and commercial motives.",
+        "question_type": "Multiple Choice",
+        "evidence_quote": "These governments believe that children lack the cognitive maturity to distinguish between entertainment and a **commercial motive**.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Chính phủ tin rằng trẻ em thiếu sự trưởng thành để phân biệt giữa giải trí và động cơ thương mại.",
+        "why_others_wrong_vi": "Tiêu nhiều tiền, không biết dùng internet, hay thích xem phim tài liệu không phải là lý do được nêu trong bài.",
+        "depth_check_vi": "Câu hỏi nhận biết trực tiếp (Literal) mức độ thấp.",
+        "tip_vi": "Tìm đoạn nói về 'believe' hoặc 'reason'."
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "To present examples of different government approaches to child advertising",
+        "question_type": "Multiple Choice",
+        "evidence_quote": "Several countries have already taken steps to **regulate** advertising aimed at children. For instance, in Sweden and Norway",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Đoạn 3 đưa ra ví dụ về các cách tiếp cận khác nhau của chính phủ (quản lý nghiêm ngặt so với hướng dẫn tự nguyện).",
+        "why_others_wrong_vi": "Không cổ vũ cấm toàn cầu, không liệt kê chương trình TV, không giải thích cách tạo quảng cáo.",
+        "depth_check_vi": "Câu hỏi chức năng cấu trúc (Function/Structure) mức độ trung bình.",
+        "tip_vi": "Nhìn vào các câu chủ đề và từ nối tương phản 'In contrast' trong đoạn."
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "A balanced approach involving government rules and critical thinking education",
+        "question_type": "Multiple Choice",
+        "evidence_quote": "Ultimately, a balanced approach is required. While governments must **enforce** stricter rules online, schools and parents must also teach children to think critically.",
+        "evidence_paragraph": 5,
+        "explanation_vi": "Tác giả kết luận cần một 'balanced approach' bao gồm luật của chính phủ và giáo dục tư duy phản biện.",
+        "why_others_wrong_vi": "Cấm hoàn toàn internet, tự do quảng cáo, hoặc chỉ dùng biển quảng cáo đều không phải là ý của tác giả.",
+        "depth_check_vi": "Câu hỏi chức năng cấu trúc (Function/Structure) mức độ trung bình.",
+        "tip_vi": "Nhìn vào câu đầu tiên 'Ultimately...' trong đoạn cuối."
+      }
+    ],
+    "grammar_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "are targeted",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Bị động hiện tại đơn.",
+        "use_in_context_vi": "Người trẻ 'bị nhắm mục tiêu' bởi quảng cáo.",
+        "trap_logic_vi": "Bẫy dùng dạng chủ động.",
+        "why_others_wrong_vi": "target: Chủ động. targeting: Không tạo thành thì. targets: Số ít chủ động.",
+        "depth_check_vi": "Dạng thức cơ bản mức thấp.",
+        "analysis_vi": "Nhận diện bị động qua tác nhân 'by'.",
+        "tip_vi": "Tìm 'by' chỉ tác nhân."
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "whereas",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Từ nối chỉ tương phản.",
+        "use_in_context_vi": "Nối hai vế đối lập.",
+        "trap_logic_vi": "Bẫy dùng từ chỉ nguyên nhân hoặc kết quả.",
+        "why_others_wrong_vi": "because: Nguyên nhân. so: Kết quả. and: Bổ sung.",
+        "depth_check_vi": "Dạng thức cơ bản mức thấp.",
+        "analysis_vi": "Tương phản giữa người lớn và trẻ em.",
+        "tip_vi": "Dùng whereas để nối hai mệnh đề trái ngược."
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "was passed",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Bị động quá khứ đơn.",
+        "use_in_context_vi": "Sự việc xảy ra 'last year'.",
+        "trap_logic_vi": "Bẫy dùng hiện tại hoặc chủ động.",
+        "why_others_wrong_vi": "is passed: Hiện tại. passed: Chủ động. passes: Hiện tại chủ động.",
+        "depth_check_vi": "Dạng thức cơ bản mức thấp.",
+        "analysis_vi": "Luật 'được thông qua'.",
+        "tip_vi": "Dấu hiệu quá khứ 'last year'."
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "In contrast",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Cụm từ nối tương phản đầu câu.",
+        "use_in_context_vi": "Chỉ sự khác biệt giữa hai quốc gia.",
+        "trap_logic_vi": "Bẫy dùng từ nối sai chức năng.",
+        "why_others_wrong_vi": "Therefore: Kết quả. Because: Nguyên nhân. For example: Ví dụ.",
+        "depth_check_vi": "Hiểu nghĩa mức trung bình.",
+        "analysis_vi": "Đứng đầu câu cần In contrast.",
+        "tip_vi": "So sánh hai cách tiếp cận."
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "are spent",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Bị động hiện tại đơn.",
+        "use_in_context_vi": "Tiền được chi tiêu.",
+        "trap_logic_vi": "Bẫy dùng chủ động tiếp diễn.",
+        "why_others_wrong_vi": "spend: Chủ động. are spending: Tiếp diễn. spent: Quá khứ chủ động.",
+        "depth_check_vi": "Dạng thức cơ bản mức thấp.",
+        "analysis_vi": "Dollars 'bị tiêu xài'.",
+        "tip_vi": "Nhận diện tân ngữ tiền tệ."
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "While",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Liên từ tương phản.",
+        "use_in_context_vi": "Một giảm, một tăng.",
+        "trap_logic_vi": "Bẫy dùng từ chỉ mục đích.",
+        "why_others_wrong_vi": "So that: Mục đích. Because: Nguyên nhân. Therefore: Kết quả.",
+        "depth_check_vi": "Dạng thức cơ bản mức thấp.",
+        "analysis_vi": "While đứng đầu diễn tả hai hành động song song tương phản.",
+        "tip_vi": "Giảm vs tăng -> Tương phản."
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "will be introduced",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Bị động tương lai đơn.",
+        "use_in_context_vi": "Sự việc tháng sau.",
+        "trap_logic_vi": "Bẫy dùng quá khứ.",
+        "why_others_wrong_vi": "were introduced: Quá khứ. are introduced: Hiện tại. introduce: Chủ động.",
+        "depth_check_vi": "Hiểu nghĩa mức trung bình.",
+        "analysis_vi": "Tương lai bị động.",
+        "tip_vi": "Dấu hiệu 'next month'."
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "whereas",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Liên từ tương phản.",
+        "use_in_context_vi": "Kết nối hai mệnh đề.",
+        "trap_logic_vi": "Bẫy dùng 'however' sau dấu phẩy.",
+        "why_others_wrong_vi": "in contrast: Cần câu mới. however: Cần câu mới. despite: Cần cụm danh từ.",
+        "depth_check_vi": "Sử dụng ngữ cảnh mức trung.",
+        "analysis_vi": "Whereas kết nối mệnh đề sau phẩy.",
+        "tip_vi": "Chú ý dấu phẩy."
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "are promoted",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Bị động hiện tại đơn.",
+        "use_in_context_vi": "Sản phẩm được quảng bá.",
+        "trap_logic_vi": "Bẫy dùng tiếp diễn chủ động.",
+        "why_others_wrong_vi": "are promoting: Chủ động. promote: Chủ động. promotes: Chủ động số ít.",
+        "depth_check_vi": "Sử dụng ngữ cảnh mức trung.",
+        "analysis_vi": "Tác nhân 'by'.",
+        "tip_vi": "Tìm chữ 'by'."
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "By contrast",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Từ nối tương phản đầu câu.",
+        "use_in_context_vi": "Cũ vs Mới.",
+        "trap_logic_vi": "Bẫy dùng từ thêm ý.",
+        "why_others_wrong_vi": "Furthermore: Bổ sung. Because: Lý do. So: Kết quả.",
+        "depth_check_vi": "Sử dụng ngữ cảnh mức trung.",
+        "analysis_vi": "Chuyển tiếp ý.",
+        "tip_vi": "Đầu câu nối tương phản."
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "are manipulated",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Bị động hiện tại đơn.",
+        "use_in_context_vi": "Mong muốn bị thao túng.",
+        "trap_logic_vi": "Bẫy dùng chủ động.",
+        "why_others_wrong_vi": "manipulate: Chủ động. have manipulated: Chủ động hoàn thành. manipulating: Phân từ.",
+        "depth_check_vi": "Sử dụng ngữ cảnh mức trung.",
+        "analysis_vi": "Tác nhân 'by'.",
+        "tip_vi": "Bị động với 'by'."
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "while",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Liên từ tương phản.",
+        "use_in_context_vi": "Trẻ em tin vs Người lớn hoài nghi.",
+        "trap_logic_vi": "Bẫy dùng however sau phẩy.",
+        "why_others_wrong_vi": "however: Sai ngữ pháp. therefore: Sai nghĩa. in contrast: Cần câu mới.",
+        "depth_check_vi": "Sử dụng ngữ cảnh mức trung.",
+        "analysis_vi": "Nối câu sau phẩy.",
+        "tip_vi": "Nối câu dùng while."
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "is collected",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Bị động số ít.",
+        "use_in_context_vi": "Data là không đếm được.",
+        "trap_logic_vi": "Bẫy dùng số nhiều.",
+        "why_others_wrong_vi": "are collected: Số nhiều. collects: Chủ động. collected: Quá khứ.",
+        "depth_check_vi": "Sử dụng ngữ cảnh mức trung.",
+        "analysis_vi": "Data thường là số ít.",
+        "tip_vi": "Data số ít."
+      },
+      {
+        "question_id": 14,
+        "correct_answer": "In contrast",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Chuyển tiếp đầu câu.",
+        "use_in_context_vi": "Thụy Điển vs UK.",
+        "trap_logic_vi": "Bẫy dùng Whereas làm từ nối đầu câu.",
+        "why_others_wrong_vi": "Whereas: Liên từ nối mệnh đề. Because: Lý do. While: Liên từ nối mệnh đề.",
+        "depth_check_vi": "Sử dụng ngữ cảnh mức trung.",
+        "analysis_vi": "Đầu câu mới dùng In contrast.",
+        "tip_vi": "Câu mới dùng In contrast."
+      },
+      {
+        "question_id": 15,
+        "correct_answer": "Targeted advertisements are created by marketing companies.",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Viết lại câu sang bị động.",
+        "use_in_context_vi": "Hiện tại đơn bị động.",
+        "trap_logic_vi": "Sai thì động từ.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sử dụng cấu trúc mức trung.",
+        "analysis_vi": "Chuyển tân ngữ lên làm chủ ngữ.",
+        "tip_vi": "Dùng to be + V3."
+      },
+      {
+        "question_id": 16,
+        "correct_answer": "Boys prefer video game ads, whereas girls often prefer clothing ads.",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Nối hai câu tương phản bằng whereas.",
+        "use_in_context_vi": "Thêm phẩy, dùng whereas.",
+        "trap_logic_vi": "Sắp xếp sai mệnh đề.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sử dụng cấu trúc mức trung.",
+        "analysis_vi": "Whereas nối hai mệnh đề.",
+        "tip_vi": "Dùng whereas giữa hai câu."
+      },
+      {
+        "question_id": 17,
+        "correct_answer": "Junk food commercials were banned in 2020.",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Viết bị động không cần tác nhân.",
+        "use_in_context_vi": "Bỏ 'by them'.",
+        "trap_logic_vi": "Thiếu be verb.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sử dụng cấu trúc mức trung.",
+        "analysis_vi": "They không xác định, bỏ 'by them'.",
+        "tip_vi": "Bỏ tác nhân không quan trọng."
+      },
+      {
+        "question_id": 18,
+        "correct_answer": "Children watch YouTube, while parents watch traditional television.",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Nối câu bằng while.",
+        "use_in_context_vi": "Tương phản.",
+        "trap_logic_vi": "Lỗi nối câu.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sử dụng cấu trúc mức trung.",
+        "analysis_vi": "While nối 2 câu.",
+        "tip_vi": "While đứng giữa."
+      },
+      {
+        "question_id": 19,
+        "correct_answer": "Stricter rules will be enforced by the government.",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Bị động tương lai.",
+        "use_in_context_vi": "will be + V3.",
+        "trap_logic_vi": "Thiếu be verb.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sử dụng cấu trúc mức trung.",
+        "analysis_vi": "Will be enforced.",
+        "tip_vi": "Will be + ed."
+      },
+      {
+        "question_id": 20,
+        "correct_answer": "Print ads are expensive. In contrast, online ads are relatively cheap.",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Kết nối hai ý tưởng.",
+        "use_in_context_vi": "In contrast đứng đầu.",
+        "trap_logic_vi": "Viết thường in contrast.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sử dụng cấu trúc mức khó.",
+        "analysis_vi": "Bắt đầu câu thứ 2 bằng In contrast.",
+        "tip_vi": "Viết hoa In contrast."
+      },
+      {
+        "question_id": 21,
+        "correct_answer": "The new product was promoted by a famous celebrity.",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Sửa lỗi dạng động từ.",
+        "use_in_context_vi": "Cần thêm -d.",
+        "trap_logic_vi": "Thiếu hậu tố.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sửa lỗi cơ bản mức thấp.",
+        "analysis_vi": "Bị động bắt buộc dùng V3/ed.",
+        "tip_vi": "promote -> promoted."
+      },
+      {
+        "question_id": 22,
+        "correct_answer": "Children like bright colors, whereas adults prefer calm tones.",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Sửa lỗi chính tả và dấu câu.",
+        "use_in_context_vi": "Whereas viết liền, có dấu phẩy.",
+        "trap_logic_vi": "Lỗi Where as.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sửa lỗi cơ bản mức thấp.",
+        "analysis_vi": "Whereas là liên từ viết liền.",
+        "tip_vi": "Where as -> whereas."
+      },
+      {
+        "question_id": 23,
+        "correct_answer": "The rules are introduced to protect teenagers.",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Sửa lỗi V3.",
+        "use_in_context_vi": "Thêm -d.",
+        "trap_logic_vi": "Dùng V1.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sửa lỗi hình thức trung bình.",
+        "analysis_vi": "introduced mới đúng.",
+        "tip_vi": "introduce -> introduced."
+      },
+      {
+        "question_id": 24,
+        "correct_answer": "Boys play video games. By contrast, girls use social media.",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Sửa lỗi thiếu dấu câu.",
+        "use_in_context_vi": "By contrast nối hai câu độc lập.",
+        "trap_logic_vi": "Dùng by contrast như liên từ.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sửa lỗi nghĩa mức trung bình.",
+        "analysis_vi": "Cần câu mới hoặc chấm phẩy.",
+        "tip_vi": "Thêm dấu chấm trước By contrast."
+      },
+      {
+        "question_id": 25,
+        "correct_answer": "The problem was discussed at yesterday's meeting.",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Sửa lỗi thì.",
+        "use_in_context_vi": "Yesterday -> quá khứ đơn.",
+        "trap_logic_vi": "Hiện tại hoàn thành chủ động sai.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sửa lỗi hình thức trung bình.",
+        "analysis_vi": "has discussed -> was discussed.",
+        "tip_vi": "Sửa thì."
+      },
+      {
+        "question_id": 26,
+        "correct_answer": "While I agree with you, I cannot support your plan.",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Bỏ thừa từ.",
+        "use_in_context_vi": "Chỉ dùng một từ nối.",
+        "trap_logic_vi": "Dùng 2 từ nối.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sửa lỗi dùng từ mức trung bình.",
+        "analysis_vi": "Thừa whereas.",
+        "tip_vi": "Bỏ whereas."
+      },
+      {
+        "question_id": 27,
+        "correct_answer": "These ads are designed to manipulate children's desires.",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Bỏ giới từ 'by'.",
+        "use_in_context_vi": "Manipulate là hành động chủ động lên desires.",
+        "trap_logic_vi": "Nhầm tưởng cần by.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sửa lỗi nghĩa mức khó.",
+        "analysis_vi": "Động từ dạng to-infinitive chủ động.",
+        "tip_vi": "Bỏ by."
+      },
+      {
+        "question_id": 28,
+        "correct_answer": "The TV ad is very loud. In contrast, the print ad is quiet.",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Sửa lỗi dấu câu liên kết.",
+        "use_in_context_vi": "In contrast đầu câu mới.",
+        "trap_logic_vi": "In contrast dùng sau phẩy.",
+        "why_others_wrong_vi": "Không có.",
+        "depth_check_vi": "Sửa lỗi dùng từ mức khó.",
+        "analysis_vi": "Dấu chấm hoặc chấm phẩy.",
+        "tip_vi": "Sửa phẩy thành chấm."
+      },
+      {
+        "question_id": 29,
+        "correct_answer": "is being collected",
+        "grammar_target": "passive voice basic forms",
+        "form_meaning_vi": "Bị động tiếp diễn.",
+        "use_in_context_vi": "At this exact moment.",
+        "trap_logic_vi": "Bẫy dùng hiện tại đơn.",
+        "why_others_wrong_vi": "is collected: Đơn giản. has been: Hoàn thành. collects: Chủ động.",
+        "depth_check_vi": "Sử dụng đàm thoại khó.",
+        "analysis_vi": "Đang xảy ra.",
+        "tip_vi": "is being + V3."
+      },
+      {
+        "question_id": 30,
+        "correct_answer": "whereas",
+        "grammar_target": "contrast linkers",
+        "form_meaning_vi": "Nối hai ý tương phản trực tiếp.",
+        "use_in_context_vi": "Argued vs believed.",
+        "trap_logic_vi": "Bẫy từ vựng.",
+        "why_others_wrong_vi": "despite: Cần Noun. therefore: KQ. in contrast: Sai dấu.",
+        "depth_check_vi": "Sử dụng đàm thoại khó.",
+        "analysis_vi": "Nối hai mệnh đề.",
+        "tip_vi": "whereas."
+      }
+    ],
+    "writing_guidance": [
+      {
+        "task_id": 1,
+        "model_answer": "1. Online ads are more persuasive than print ads.\n2. Children are easily influenced by TV commercials.",
+        "guidance_vi": "Bài tập câu.",
+        "self_checklist": [
+          "Correct word order and grammar structure.",
+          "Correct punctuation and capitalization."
+        ]
+      },
+      {
+        "task_id": 2,
+        "model_answer": "Dear Marketing Manager,\nI am writing to complain about your recent advertisement. It is inappropriate to target young children. Please reconsider your marketing strategy.\nSincerely,\nCustomer",
+        "guidance_vi": "Thư khiếu nại.",
+        "self_checklist": [
+          "Write exactly 3 to 4 sentences in the email body.",
+          "Include a formal greeting and sign-off.",
+          "State clearly the reason for the complaint."
+        ]
+      },
+      {
+        "task_id": 3,
+        "model_answer": "The chart compares where young people see advertisements. Social media has the highest percentage at 60%. In contrast, print media has the lowest percentage at just 10%.",
+        "guidance_vi": "Mô tả biểu đồ đơn giản.",
+        "self_checklist": [
+          "Write exactly three sentences.",
+          "Describe the highest category and the lowest category.",
+          "Use a contrast linker."
+        ]
+      },
+      {
+        "task_id": 4,
+        "model_answer": "One effective advertisement I saw was for a sports shoe. It was very persuasive because it used a famous athlete. I think it appeals to young people because they admire the celebrity.",
+        "guidance_vi": "Đoạn văn tự do.",
+        "self_checklist": [
+          "Write exactly 3 to 4 sentences.",
+          "Describe the ad.",
+          "Give a reason why it is effective."
+        ]
+      },
+      {
+        "task_id": 5,
+        "model_answer": "The table illustrates the differences between online ads and TV commercials. Online ads are cheaper than TV commercials. On the other hand, TV ads reach a wider, general public audience.",
+        "guidance_vi": "Đoạn văn so sánh bảng.",
+        "self_checklist": [
+          "Write exactly three sentences.",
+          "Compare the cost and reach.",
+          "Use a contrast linker."
+        ]
+      }
+    ],
+    "review_bridge": [
+      {
+        "id": 1,
+        "prompt": "She (live) _______ in this city for ten years.",
+        "correct_answer": "has lived",
+        "rationale_vi": "Hiện tại hoàn thành."
+      },
+      {
+        "id": 2,
+        "prompt": "The book (publish) _______ in 1999.",
+        "correct_answer": "was published",
+        "rationale_vi": "Bị động quá khứ đơn."
+      },
+      {
+        "id": 3,
+        "prompt": "He hopes (become) _______ a doctor.",
+        "correct_answer": "to become",
+        "rationale_vi": "Hope + to V."
+      }
+    ]
+  },
+  "level": "B1",
+  "topic": "Advertising aimed at young consumers",
+  "day": "20260708",
+  "lesson_id": "LSN-20260708-B1-b8d4c9a1",
+  "practice_markdown": "Reading: B1\nWriting: A2\n\n## Reading Source Verification\n| Source title | Publisher/Organization | Date/Access date | Final verified URL | URL status | Source type | Reliability check | How the passage uses the source |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Understanding Targeted Advertising for Young Consumers | BBC Learning English | 2023-05-15 / 2026-07-05 | https://www.bbc.co.uk/learningenglish/features/6-minute-english_ep2023 | active | Educational News Article | A highly reputable source for English learners. | Focuses on advertising strategies towards youth. |\n\n## Warm-up\nAnswer the following questions in Vietnamese or English:\n1. Do you often buy things because you saw them in an advertisement?\n2. Where do you see the most advertisements every day?\n3. Do you think advertisements aimed at children should be banned?\n\n## Reading Passage\n### The Impact of Targeted Advertising on Youth\n\nIn the modern digital landscape, advertising is everywhere. It is estimated that **advertisers** spend billions of dollars each year specifically targeting young consumers. Unlike traditional billboards, online advertisements are **persuasive** and highly customized. By using data collected from social media, marketing companies create **targeted** advertisements that appeal directly to the interests of teenagers and children. This strategy is extremely effective, as young people are often more easily influenced by visually appealing content and **celebrity endorsement**.\n\nHowever, many experts believe that this constant exposure has negative psychological effects. Teenagers who see idealized images of lifestyles and products often experience a feeling of **inadequacy** if they cannot afford them. Furthermore, the promotion of unhealthy food and sugary drinks has been linked to rising rates of childhood **obesity**. In response to these concerns, some consumer protection groups argue that young people need more **media literacy** education to help them understand how commercials try to **manipulate** their desires.\n\nSeveral countries have already taken steps to **regulate** advertising aimed at children. For instance, in Sweden and Norway, television commercials directed at children under the age of 12 are strictly **prohibited**. These governments believe that children lack the cognitive maturity to distinguish between entertainment and a **commercial motive**. In contrast, other nations rely on voluntary guidelines, suggesting that parents should be responsible for monitoring what their children watch online.\n\nDespite these regulations, the internet presents a much larger challenge. Social media influencers often promote products seamlessly within their daily vlogs, making it difficult for a young **audience** to identify what is actually an ad. This form of **stealth marketing** bypasses traditional laws. As digital platforms continue to evolve, the debate over how to protect vulnerable consumers without violating the principles of **free trade** will undoubtedly grow louder.\n\nUltimately, a balanced approach is required. While governments must **enforce** stricter rules online, schools and parents must also teach children to think critically. By fostering a healthy skepticism, young consumers can navigate the digital world and make informed **purchasing decisions** without being easily swayed by sophisticated marketing campaigns.\n\n## Questions for Reading\n### Questions 1–5: True/False/Not Given\n\n1. Marketing companies spend billions of dollars every year to target elderly consumers.\n2. Some consumer protection groups suggest that young people need more media literacy education.\n3. Sweden and Norway have banned all forms of television programming for children under 12.\n4. Some countries rely on voluntary guidelines rather than strict laws for internet advertising.\n5. The author believes that young consumers should completely stop using digital platforms to avoid being manipulated.\n\n### Questions 6–9: Gap Fill\n\n6. Marketing companies collect data to create _______ advertisements that appeal to teenagers.\n7. A lack of media literacy makes it easier for commercials to manipulate the _______ of young people.\n8. Several countries have already taken steps to _______ advertising aimed at children.\n9. Social media influencers often use a method called _______ marketing to seamlessly promote products.\n\n### Questions 10–13: Multiple Choice\n\n10. According to paragraph 2, what is a negative psychological effect of advertising on teenagers?\n    A. They feel more confident about their own lifestyles.\n    B. They often experience feelings of inadequacy.\n    C. They immediately stop using social media.\n    D. They start their own advertising companies.\n11. Why do some governments believe commercials aimed at young children should be restricted?\n    A. They cannot distinguish between entertainment and commercial motives.\n    B. They have too much money to spend on toys.\n    C. They do not know how to use the internet properly.\n    D. They prefer watching educational programs over cartoons.\n12. What is the main purpose of paragraph 3?\n    A. To present examples of different government approaches to child advertising\n    B. To argue that all advertising should be completely banned worldwide\n    C. To list the most popular children's television programs in Europe\n    D. To explain how marketing companies create new advertisements\n13. What is the author's final recommendation in paragraph 5 regarding targeted advertising?\n    A. A balanced approach involving government rules and critical thinking education\n    B. A complete global ban on all internet access for children\n    C. Allowing advertisers full freedom to target any demographic they choose\n    D. Replacing all digital advertising with traditional billboards\n\n## Questions for Grammar\n### Grammar in context\n\n1. Every day, millions of young people _______ by online advertisements.\n    A. target\n    B. are targeted\n    C. targeting\n    D. targets\n2. Adults usually ignore pop-up ads, _______ teenagers often click on them.\n    A. because\n    B. whereas\n    C. so\n    D. and\n3. Last year, a strict law on internet advertising _______ by the government.\n    A. is passed\n    B. was passed\n    C. passed\n    D. passes\n4. Some countries strictly regulate ads. _______, other nations rely on voluntary guidelines.\n    A. Therefore\n    B. Because\n    C. In contrast\n    D. For example\n5. Currently, millions of dollars _______ on social media marketing.\n    A. spend\n    B. are spending\n    C. are spent\n    D. spent\n6. _______ television ads are decreasing, online stealth marketing is growing rapidly.\n    A. While\n    B. So that\n    C. Because\n    D. Therefore\n7. The new regulations on junk food ads _______ next month.\n    A. were introduced\n    B. are introduced\n    C. will be introduced\n    D. introduce\n8. Teenagers spend four hours on social media, _______ young children only spend one hour.\n    A. in contrast\n    B. however\n    C. whereas\n    D. despite\n9. Many popular products _______ by social media influencers to boost sales.\n    A. are promoting\n    B. are promoted\n    C. promote\n    D. promotes\n10. The older campaign used TV ads. _______, the new campaign focuses entirely on the internet.\n    A. By contrast\n    B. Furthermore\n    C. Because\n    D. So\n11. Consumer desires _______ easily by sophisticated marketing strategies.\n    A. manipulate\n    B. are manipulated\n    C. have manipulated\n    D. manipulating\n12. Children often believe ads are true, _______ adults approach them with skepticism.\n    A. while\n    B. however\n    C. therefore\n    D. in contrast\n13. A lot of personal data _______ by tech companies to create targeted ads.\n    A. is collected\n    B. are collected\n    C. collects\n    D. collected\n14. In Sweden, ads aimed at children are banned. _______, in the UK they are only restricted.\n    A. In contrast\n    B. Whereas\n    C. Because\n    D. While\n\n### Sentence combining and transformation\n\n15. Rewrite using passive voice: Marketing companies create targeted advertisements.\n16. Combine using 'whereas': Boys prefer video game ads. Girls often prefer clothing ads.\n17. Rewrite using passive voice: They banned junk food commercials in 2020.\n18. Combine using 'while': Children watch YouTube. Parents watch traditional television.\n19. Rewrite using passive voice: The government will enforce stricter rules.\n20. Combine using 'In contrast,': Print ads are expensive. Online ads are relatively cheap.\n\n### Error correction\n\n21. Correct the error: The new product was promote by a famous celebrity.\n22. Correct the error: Children like bright colors. Where as adults prefer calm tones.\n23. Correct the error: The rules are introduce to protect teenagers.\n24. Correct the error: Boys play video games by contrast girls use social media.\n25. Correct the error: The problem has discussed at yesterday's meeting.\n26. Correct the error: While I agree with you, whereas I cannot support your plan.\n27. Correct the error: These ads are designed to manipulate by children's desires.\n28. Correct the error: The TV ad is very loud, in contrast the print ad is quiet.\n\n### Advanced discourse\n\n29. At this exact moment, their private information _______ to create highly targeted ads. (*)\n    A. is being collected\n    B. is collected\n    C. has been collected\n    D. collects\n30. He argued that the campaign was manipulative, _______ she believed it was just smart business. (*)\n    A. whereas\n    B. despite\n    C. therefore\n    D. in contrast\n\n## Questions for Writing\n| # | Task | Target length | Focus skill | Useful language | Success criteria |\n| --- | --- | --- | --- | --- | --- |\n| 1 | Sentence Building: Sắp xếp các từ sau thành các câu hoàn chỉnh về chủ đề quảng cáo: | 2 sentences (approx. 15-20 words) | Correct word order with comparatives and passives. | 1. online / ads / are / more / persuasive / than / print / ads.<br>2. children / are / easily / influenced / by / TV / commercials. | Correct word order and grammar structure.<br>Correct punctuation and capitalization. |\n| 2 | Short Email: Write a short email to a company complaining about an advertisement that targets young children. Write 3-4 sentences. | 3-4 sentences (approx. 40-50 words) | Writing a polite complaint email. | Dear Marketing Manager,<br>I am writing to complain about your recent advertisement.<br>It is inappropriate to target young children.<br>Please reconsider your marketing strategy. | Write exactly 3 to 4 sentences in the email body.<br>Include a formal greeting and sign-off.<br>State clearly the reason for the complaint. |\n| 3 | Data Description: Describe the chart below showing where young people see advertisements. Write 3 sentences.<br><br><svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'Times New Roman', Times, serif; background-color: #fcfcfc; border: 1px solid #eaeaea; border-radius: 6px;\"><text x=\"200\" y=\"30\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#2c3e50\">Where Young People See Ads</text><text x=\"15\" y=\"125\" text-anchor=\"middle\" font-size=\"10\" fill=\"#7f8c8d\" transform=\"rotate(-90 15 125)\">Percentage</text><line x1=\"60\" y1=\"50\" x2=\"60\" y2=\"190\" stroke=\"#cccccc\" stroke-width=\"1\"/><line x1=\"60\" y1=\"190\" x2=\"360\" y2=\"190\" stroke=\"#555555\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"190\" x2=\"60\" y2=\"50\" stroke=\"#555555\" stroke-width=\"1.5\"/><line x1=\"55\" y1=\"150\" x2=\"60\" y2=\"150\" stroke=\"#555555\"/><text x=\"48\" y=\"153\" font-size=\"10\" text-anchor=\"end\" fill=\"#555555\">20%</text><line x1=\"55\" y1=\"110\" x2=\"60\" y2=\"110\" stroke=\"#555555\"/><text x=\"48\" y=\"113\" font-size=\"10\" text-anchor=\"end\" fill=\"#555555\">40%</text><line x1=\"55\" y1=\"70\" x2=\"60\" y2=\"70\" stroke=\"#555555\"/><text x=\"48\" y=\"73\" font-size=\"10\" text-anchor=\"end\" fill=\"#555555\">60%</text><rect x=\"90\" y=\"70\" width=\"50\" height=\"120\" fill=\"#3498db\" rx=\"3\"/><text x=\"115\" y=\"60\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#3498db\">60%</text><text x=\"115\" y=\"208\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#2c3e50\">Social Media</text><rect x=\"180\" y=\"130\" width=\"50\" height=\"60\" fill=\"#2ecc71\" rx=\"3\"/><text x=\"205\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#2ecc71\">30%</text><text x=\"205\" y=\"208\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#2c3e50\">Television</text><rect x=\"270\" y=\"170\" width=\"50\" height=\"20\" fill=\"#e74c3c\" rx=\"3\"/><text x=\"295\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#e74c3c\">10%</text><text x=\"295\" y=\"208\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#2c3e50\">Print</text></svg> | 3 sentences (approx. 40-50 words) | Comparing quantities and writing simple chart summaries. | The chart compares...<br>Social media has the highest percentage...<br>In contrast, print media has the lowest percentage... | Write exactly three sentences.<br>Describe the highest category and the lowest category.<br>Use a contrast linker. |\n| 4 | Short Paragraph: Write a short paragraph describing an advertisement that you think is very effective. Explain why. Write 3-4 sentences. | 3-4 sentences (approx. 40-50 words) | Describing opinions and reasons. | One effective advertisement I saw was for...<br>It was very persuasive because...<br>I think it appeals to young people because... | Write exactly 3 to 4 sentences.<br>Describe the ad.<br>Give a reason why it is effective. |\n| 5 | Short Description: Compare the two advertising methods in the table below. Write a short paragraph describing their differences. Write 3 sentences.<br><br>\\| Feature \\| Online Ads \\| TV Commercials \\|<br>\\| --- \\| --- \\| --- \\|<br>\\| Cost \\| Low \\| Very High \\|<br>\\| Target Audience \\| Highly specific \\| General public \\|<br>\\| Interactivity \\| High (clickable) \\| Low (view only) \\| | 3 sentences (approx. 40-50 words) | Comparing features from a table. | The table illustrates the differences between...<br>Online ads are cheaper than...<br>On the other hand, TV ads reach a wider audience... | Write exactly three sentences.<br>Compare the cost and reach.<br>Use a contrast linker. |\n\n## Review Bridge\n#### V. Review Bridge / Ôn tập liên chủ đề\n1. She (live) _______ in this city for ten years.\n\n2. The book (publish) _______ in 1999.\n\n3. He hopes (become) _______ a doctor.\n",
+  "vocabulary_grammar_markdown": "## Vocabulary Table\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |\n| --- | --- | --- | --- | --- |\n| advertiser | /ˈæd.və.taɪ.zər/ | noun | nhà quảng cáo (a person or company that advertises a product or service) | The advertiser spent a lot of money on the new campaign. |\n| persuasive | /pəˈsweɪ.sɪv/ | adjective | có sức thuyết phục (good at making someone do or believe something through reasoning) | The commercial was very persuasive. |\n| targeted | /ˈtɑː.ɡɪ.tɪd/ | adjective | được nhắm mục tiêu (directed at a particular group or activity) | The company uses targeted marketing to reach teens. |\n| celebrity endorsement | /səˈleb.rə.ti ɪnˈdɔːs.mənt/ | noun phrase | sự quảng cáo có người nổi tiếng (the use of a famous person to advertise a product) | Celebrity endorsement is a powerful tool in advertising. |\n| inadequacy | /ɪˈnæd.ɪ.kwə.si/ | noun | sự thiếu thốn, sự kém cỏi (the state of not being good enough or confident enough) | Ads can cause feelings of inadequacy in young people. |\n| obesity | /əʊˈbiː.sə.ti/ | noun | bệnh béo phì (the condition of being extremely fat or overweight in a way that is dangerous for health) | Childhood obesity is linked to junk food commercials. |\n| media literacy | /ˈmiː.di.ə ˈlɪt.ər.ə.si/ | noun phrase | sự hiểu biết về truyền thông (the ability to critically analyze and evaluate media messages) | Schools should teach media literacy to students. |\n| manipulate | /məˈnɪp.jə.leɪt/ | verb | thao túng (to control something or someone to your advantage, often unfairly) | Companies try to manipulate consumers' choices. |\n| regulate | /ˈreɡ.jə.leɪt/ | verb | quy định, quản lý (to control something, especially by making it work in a particular way) | Governments need to regulate online ads. |\n| prohibited | /prəˈhɪb.ɪ.tɪd/ | adjective | bị cấm (forbidden by law, rule, or other authority) | Advertising junk food to children is prohibited here. |\n| commercial motive | /kəˈmɜː.ʃəl ˈməʊ.tɪv/ | noun phrase | động cơ thương mại (a reason for doing something that is related to making a profit) | Children often do not understand the commercial motive behind games. |\n| audience | /ˈɔː.di.əns/ | noun | khán giả, người xem (the group of people together in one place to watch or listen to a play, film, someone speaking, etc.) | The ad targets a young audience. |\n| stealth marketing | /stelθ ˈmɑː.kɪ.tɪŋ/ | noun phrase | tiếp thị tàng hình, quảng cáo giấu mặt (the practice of promoting products to people without them knowing they are being marketed to) | Influencers often use stealth marketing in their videos. |\n| free trade | /friː treɪd/ | noun phrase | thương mại tự do (international buying and selling of goods, without limits on the amount of goods that one country can sell to another) | Some argue that bans violate the principles of free trade. |\n| enforce | /ɪnˈfɔːs/ | verb | thực thi, ép buộc (to make people obey a law, or to make a particular situation happen or be accepted) | The government must enforce strict advertising rules. |\n| purchasing decision | /ˈpɜː.tʃəs.ɪŋ dɪˈsɪʒ.ən/ | noun phrase | quyết định mua hàng (the thought process that leads a consumer from identifying a need to acting on it) | Ads have a big impact on a teenager's purchasing decision. |\n| billboard | /ˈbɪl.bɔːd/ | noun | biển quảng cáo (a very large board on which advertisements are shown) | There is a huge billboard on the highway. |\n| customized | /ˈkʌs.tə.maɪzd/ | adjective | được tùy chỉnh (made or changed according to the buyer's or user's needs) | Online ads are highly customized for each user. |\n| cognitive maturity | /ˈkɒɡ.nə.tɪv məˈtʃʊə.rə.ti/ | noun phrase | sự trưởng thành về nhận thức (the ability to think, learn, and remember at an adult level) | Young kids lack the cognitive maturity to spot fake ads. |\n| skepticism | /ˈskep.tɪ.sɪ.zəm/ | noun | sự hoài nghi (an attitude of doubting that claims or statements are true) | Consumers should view online ads with a healthy skepticism. |\n\n## Detailed Grammar Guide\n#### Card 1: Passive Voice Basics\nThe **Passive Voice** focuses on the action or the object receiving the action. Form: **Subject + BE + Past Participle (V3)**. Example: 'Young consumers are targeted by ads' (not: 'Young consumers target by ads').\n\n#### Card 2: Contrast Linkers\nUse **while** or **whereas** to connect two contrasting clauses in one sentence (e.g. 'Adults ignore ads, whereas children watch them'). Use **By contrast,** or **In contrast,** at the beginning of a new sentence.\n\n## Common Mistakes / IELTS Traps for This Topic\n| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |\n| --- | --- | --- | --- |\n| Forgetting the 'be' verb in passive sentences | The laws passed last year. | The laws were passed last year. | Without 'be', the sentence sounds like the laws did the action themselves. |\n| Using 'whereas' as a separate sentence | Children like toys. Whereas adults like cars. | Children like toys, whereas adults like cars. | 'Whereas' is a conjunction; it must connect two clauses within the same sentence. |\n",
+  "answers_markdown": "## Reading Answer Key and Detailed Explanations\n\n📖 **Tóm tắt bài đọc:** Bài đọc mô tả chi tiết thông tin từ nguồn đã xác thực.\n\n1. **FALSE**\n- Bằng chứng: \"It is estimated that **advertisers** spend billions of dollars each year specifically targeting young consumers.\" (§1)\n- Cách tìm đáp án: Bài đọc nói rằng các công ty quảng cáo chi hàng tỷ đô la để nhắm mục tiêu vào giới trẻ (young consumers), không phải người cao tuổi (elderly). Nhận định này trái ngược hoàn toàn với thông tin trong bài, do đó FALSE là đáp án chính xác.\n> **💡 Mẹo:** So sánh đối tượng được nhắm mục tiêu trong câu hỏi và bài đọc.\n\n2. **TRUE**\n- Bằng chứng: \"some consumer protection groups argue that young people need more **media literacy** education\" (§2)\n- Cách tìm đáp án: Nhận định hoàn toàn khớp với câu trong đoạn 2. Các phương án FALSE, NOT GIVEN sai vì thông tin đã có rõ ràng.\n> **💡 Mẹo:** So sánh các cụm từ khóa 'consumer protection groups', 'young people', 'media literacy education'.\n\n3. **FALSE**\n- Bằng chứng: \"For instance, in Sweden and Norway, television commercials directed at children under the age of 12 are strictly **prohibited**.\" (§3)\n- Cách tìm đáp án: Họ cấm 'quảng cáo truyền hình' (television commercials) chứ không cấm 'mọi hình thức chương trình truyền hình' (all forms of television programming). Câu hỏi phóng đại từ 'quảng cáo' thành 'chương trình truyền hình', do đó câu trả lời phải là FALSE.\n> **💡 Mẹo:** Phân biệt giữa commercials (quảng cáo) và programming (chương trình nói chung).\n\n4. **NOT GIVEN**\n- Bằng chứng: \"In contrast, other nations rely on voluntary guidelines, suggesting that parents should be responsible for monitoring what their children watch online.\" (§3)\n- Cách tìm đáp án: Bài đọc nói các quốc gia khác dựa vào hướng dẫn tự nguyện, nhưng không trực tiếp so sánh là 'thay vì luật nghiêm ngặt cho internet' một cách rõ ràng trong câu đó, phần strict laws cho internet là không được đề cập đích danh cho nhóm quốc gia này. Không có đủ thông tin để khẳng định đúng hay sai.\n> **💡 Mẹo:** Nếu một thông tin quá cụ thể ('rather than strict laws for internet') không có trong văn bản, đó là NOT GIVEN.\n\n5. **FALSE**\n- Bằng chứng: \"By fostering a healthy skepticism, young consumers can navigate the digital world and make informed **purchasing decisions** without being easily swayed\" (§5)\n- Cách tìm đáp án: Tác giả khuyên người trẻ học cách điều hướng (navigate) thế giới số bằng tư duy phản biện, chứ không khuyên ngừng sử dụng hoàn toàn (completely stop using). Nhận định này trái với đề xuất thực tế của tác giả.\n> **💡 Mẹo:** So sánh 'navigate the digital world' với 'completely stop using'.\n\n6. **targeted**\n- Bằng chứng: \"marketing companies create **targeted** advertisements that appeal directly to the interests of teenagers and children.\" (§1)\n- Cách tìm đáp án: Cần một tính từ bổ nghĩa cho 'advertisements'. Bài đọc dùng từ 'targeted' (được nhắm mục tiêu). Các tính từ khác không đúng nghĩa với hành động tạo quảng cáo của công ty marketing trong ngữ cảnh này.\n> **💡 Mẹo:** Tìm cụm từ 'create ... advertisements'.\n\n7. **desires**\n- Bằng chứng: \"**media literacy** education to help them understand how commercials try to **manipulate** their desires.\" (§2)\n- Cách tìm đáp án: Cần một danh từ đứng sau 'manipulate the'. Bài đọc ghi rõ là 'manipulate their desires'. Các từ khác không phù hợp với cấu trúc câu này.\n> **💡 Mẹo:** Tìm động từ 'manipulate' và xem nó tác động lên cái gì.\n\n8. **regulate**\n- Bằng chứng: \"Several countries have already taken steps to **regulate** advertising aimed at children.\" (§3)\n- Cách tìm đáp án: Cần một động từ nguyên mẫu có 'to'. Bài đọc dùng 'to regulate'. Các động từ khác không phù hợp cấu trúc câu.\n> **💡 Mẹo:** Tìm cụm 'taken steps to...'.\n\n9. **stealth**\n- Bằng chứng: \"This form of **stealth marketing** bypasses traditional laws.\" (§4)\n- Cách tìm đáp án: Cần một từ ghép với 'marketing'. Bài đọc gọi đây là 'stealth marketing' (quảng cáo tàng hình). Các từ khác không đúng thuật ngữ.\n> **💡 Mẹo:** Tìm tên phương pháp mà influencer sử dụng.\n\n10. **They often experience feelings of inadequacy.**\n- Bằng chứng: \"Teenagers who see idealized images of lifestyles and products often experience a feeling of **inadequacy** if they cannot afford them.\" (§2)\n- Cách tìm đáp án: Đoạn 2 nêu rõ thanh thiếu niên thường có cảm giác thiếu thốn/yếu kém (inadequacy) khi xem quảng cáo. Cảm thấy tự tin hơn là ngược nghĩa. Ngừng dùng MXH và lập công ty là không có trong bài.\n> **💡 Mẹo:** Tìm kết quả tâm lý (psychological effect) được nhắc đến ở đoạn 2.\n\n11. **They cannot distinguish between entertainment and commercial motives.**\n- Bằng chứng: \"These governments believe that children lack the cognitive maturity to distinguish between entertainment and a **commercial motive**.\" (§3)\n- Cách tìm đáp án: Chính phủ tin rằng trẻ em thiếu sự trưởng thành để phân biệt giữa giải trí và động cơ thương mại. Tiêu nhiều tiền, không biết dùng internet, hay thích xem phim tài liệu không phải là lý do được nêu trong bài.\n> **💡 Mẹo:** Tìm đoạn nói về 'believe' hoặc 'reason'.\n\n12. **To present examples of different government approaches to child advertising**\n- Bằng chứng: \"Several countries have already taken steps to **regulate** advertising aimed at children. For instance, in Sweden and Norway\" (§3)\n- Cách tìm đáp án: Đoạn 3 đưa ra ví dụ về các cách tiếp cận khác nhau của chính phủ (quản lý nghiêm ngặt so với hướng dẫn tự nguyện). Không cổ vũ cấm toàn cầu, không liệt kê chương trình TV, không giải thích cách tạo quảng cáo.\n> **💡 Mẹo:** Nhìn vào các câu chủ đề và từ nối tương phản 'In contrast' trong đoạn.\n\n13. **A balanced approach involving government rules and critical thinking education**\n- Bằng chứng: \"Ultimately, a balanced approach is required. While governments must **enforce** stricter rules online, schools and parents must also teach children to think critically.\" (§5)\n- Cách tìm đáp án: Tác giả kết luận cần một 'balanced approach' bao gồm luật của chính phủ và giáo dục tư duy phản biện. Cấm hoàn toàn internet, tự do quảng cáo, hoặc chỉ dùng biển quảng cáo đều không phải là ý của tác giả.\n> **💡 Mẹo:** Nhìn vào câu đầu tiên 'Ultimately...' trong đoạn cuối.\n\n## Grammar Answer Key and Detailed Explanations\n\n> **Bảng phân biệt nhanh / Công thức bỏ túi:**\n> - Ôn tập lý thuyết đã học trong bài.\n\n1. **are targeted**\n- Dấu hiệu / Phân tích: Nhận diện bị động qua tác nhân 'by'.\n> **💡 Mẹo:** Tìm 'by' chỉ tác nhân.\n\n2. **whereas**\n- Dấu hiệu / Phân tích: Tương phản giữa người lớn và trẻ em.\n> **💡 Mẹo:** Dùng whereas để nối hai mệnh đề trái ngược.\n\n3. **was passed**\n- Dấu hiệu / Phân tích: Luật 'được thông qua'.\n> **💡 Mẹo:** Dấu hiệu quá khứ 'last year'.\n\n4. **In contrast**\n- Dấu hiệu / Phân tích: Đứng đầu câu cần In contrast.\n> **💡 Mẹo:** So sánh hai cách tiếp cận.\n\n5. **are spent**\n- Dấu hiệu / Phân tích: Dollars 'bị tiêu xài'.\n> **💡 Mẹo:** Nhận diện tân ngữ tiền tệ.\n\n6. **While**\n- Dấu hiệu / Phân tích: While đứng đầu diễn tả hai hành động song song tương phản.\n> **💡 Mẹo:** Giảm vs tăng -> Tương phản.\n\n7. **will be introduced**\n- Dấu hiệu / Phân tích: Tương lai bị động.\n> **💡 Mẹo:** Dấu hiệu 'next month'.\n\n8. **whereas**\n- Dấu hiệu / Phân tích: Whereas kết nối mệnh đề sau phẩy.\n> **💡 Mẹo:** Chú ý dấu phẩy.\n\n9. **are promoted**\n- Dấu hiệu / Phân tích: Tác nhân 'by'.\n> **💡 Mẹo:** Tìm chữ 'by'.\n\n10. **By contrast**\n- Dấu hiệu / Phân tích: Chuyển tiếp ý.\n> **💡 Mẹo:** Đầu câu nối tương phản.\n\n11. **are manipulated**\n- Dấu hiệu / Phân tích: Tác nhân 'by'.\n> **💡 Mẹo:** Bị động với 'by'.\n\n12. **while**\n- Dấu hiệu / Phân tích: Nối câu sau phẩy.\n> **💡 Mẹo:** Nối câu dùng while.\n\n13. **is collected**\n- Dấu hiệu / Phân tích: Data thường là số ít.\n> **💡 Mẹo:** Data số ít.\n\n14. **In contrast**\n- Dấu hiệu / Phân tích: Đầu câu mới dùng In contrast.\n> **💡 Mẹo:** Câu mới dùng In contrast.\n\n15. **Targeted advertisements are created by marketing companies.**\n- Dấu hiệu / Phân tích: Chuyển tân ngữ lên làm chủ ngữ.\n> **💡 Mẹo:** Dùng to be + V3.\n\n16. **Boys prefer video game ads, whereas girls often prefer clothing ads.**\n- Dấu hiệu / Phân tích: Whereas nối hai mệnh đề.\n> **💡 Mẹo:** Dùng whereas giữa hai câu.\n\n17. **Junk food commercials were banned in 2020.**\n- Dấu hiệu / Phân tích: They không xác định, bỏ 'by them'.\n> **💡 Mẹo:** Bỏ tác nhân không quan trọng.\n\n18. **Children watch YouTube, while parents watch traditional television.**\n- Dấu hiệu / Phân tích: While nối 2 câu.\n> **💡 Mẹo:** While đứng giữa.\n\n19. **Stricter rules will be enforced by the government.**\n- Dấu hiệu / Phân tích: Will be enforced.\n> **💡 Mẹo:** Will be + ed.\n\n20. **Print ads are expensive. In contrast, online ads are relatively cheap.**\n- Dấu hiệu / Phân tích: Bắt đầu câu thứ 2 bằng In contrast.\n> **💡 Mẹo:** Viết hoa In contrast.\n\n21. **The new product was promoted by a famous celebrity.**\n- Dấu hiệu / Phân tích: Bị động bắt buộc dùng V3/ed.\n> **💡 Mẹo:** promote -> promoted.\n\n22. **Children like bright colors, whereas adults prefer calm tones.**\n- Dấu hiệu / Phân tích: Whereas là liên từ viết liền.\n> **💡 Mẹo:** Where as -> whereas.\n\n23. **The rules are introduced to protect teenagers.**\n- Dấu hiệu / Phân tích: introduced mới đúng.\n> **💡 Mẹo:** introduce -> introduced.\n\n24. **Boys play video games. By contrast, girls use social media.**\n- Dấu hiệu / Phân tích: Cần câu mới hoặc chấm phẩy.\n> **💡 Mẹo:** Thêm dấu chấm trước By contrast.\n\n25. **The problem was discussed at yesterday's meeting.**\n- Dấu hiệu / Phân tích: has discussed -> was discussed.\n> **💡 Mẹo:** Sửa thì.\n\n26. **While I agree with you, I cannot support your plan.**\n- Dấu hiệu / Phân tích: Thừa whereas.\n> **💡 Mẹo:** Bỏ whereas.\n\n27. **These ads are designed to manipulate children's desires.**\n- Dấu hiệu / Phân tích: Động từ dạng to-infinitive chủ động.\n> **💡 Mẹo:** Bỏ by.\n\n28. **The TV ad is very loud. In contrast, the print ad is quiet.**\n- Dấu hiệu / Phân tích: Dấu chấm hoặc chấm phẩy.\n> **💡 Mẹo:** Sửa phẩy thành chấm.\n\n29. **is being collected**\n- Dấu hiệu / Phân tích: Đang xảy ra.\n> **💡 Mẹo:** is being + V3.\n\n30. **whereas**\n- Dấu hiệu / Phân tích: Nối hai mệnh đề.\n> **💡 Mẹo:** whereas.\n\n## Writing Guidance / Suggested Answers\n\n#### Task 1\n> **Suggested Model Answer:**\n> \"1. Online ads are more persuasive than print ads.\n2. Children are easily influenced by TV commercials.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Bài tập câu.\n- *Tự kiểm tra:* * Correct word order and grammar structure. * Correct punctuation and capitalization.\n\n#### Task 2\n> **Suggested Model Answer:**\n> \"Dear Marketing Manager,\nI am writing to complain about your recent advertisement. It is inappropriate to target young children. Please reconsider your marketing strategy.\nSincerely,\nCustomer\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Thư khiếu nại.\n- *Tự kiểm tra:* * Write exactly 3 to 4 sentences in the email body. * Include a formal greeting and sign-off. * State clearly the reason for the complaint.\n\n#### Task 3\n> **Suggested Model Answer:**\n> \"The chart compares where young people see advertisements. Social media has the highest percentage at 60%. In contrast, print media has the lowest percentage at just 10%.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Mô tả biểu đồ đơn giản.\n- *Tự kiểm tra:* * Write exactly three sentences. * Describe the highest category and the lowest category. * Use a contrast linker.\n\n#### Task 4\n> **Suggested Model Answer:**\n> \"One effective advertisement I saw was for a sports shoe. It was very persuasive because it used a famous athlete. I think it appeals to young people because they admire the celebrity.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Đoạn văn tự do.\n- *Tự kiểm tra:* * Write exactly 3 to 4 sentences. * Describe the ad. * Give a reason why it is effective.\n\n#### Task 5\n> **Suggested Model Answer:**\n> \"The table illustrates the differences between online ads and TV commercials. Online ads are cheaper than TV commercials. On the other hand, TV ads reach a wider, general public audience.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Đoạn văn so sánh bảng.\n- *Tự kiểm tra:* * Write exactly three sentences. * Compare the cost and reach. * Use a contrast linker.\n\n## Review Bridge\n#### IV. Review Bridge / Ôn tập liên chủ đề\n1. She (live) _______ in this city for ten years.\n- **Đáp án:** has lived\n- **Giải thích:** Hiện tại hoàn thành.\n\n2. The book (publish) _______ in 1999.\n- **Đáp án:** was published\n- **Giải thích:** Bị động quá khứ đơn.\n\n3. He hopes (become) _______ a doctor.\n- **Đáp án:** to become\n- **Giải thích:** Hope + to V.\n",
+  "quizlet_markdown": "## Section 1: Simple Vocabulary List (Học từ vựng đơn giản)\n| Từ vựng tiếng Anh | Nghĩa tiếng Việt |\n| --- | --- |\n| advertiser | nhà quảng cáo |\n| persuasive | có sức thuyết phục |\n| targeted | được nhắm mục tiêu |\n| celebrity endorsement | sự quảng cáo có người nổi tiếng |\n| inadequacy | sự thiếu thốn, sự kém cỏi |\n| obesity | bệnh béo phì |\n| media literacy | sự hiểu biết về truyền thông |\n| manipulate | thao túng |\n| regulate | quy định, quản lý |\n| prohibited | bị cấm |\n| commercial motive | động cơ thương mại |\n| audience | khán giả, người xem |\n| stealth marketing | tiếp thị tàng hình, quảng cáo giấu mặt |\n| free trade | thương mại tự do |\n| enforce | thực thi, ép buộc |\n| purchasing decision | quyết định mua hàng |\n| billboard | biển quảng cáo |\n| customized | được tùy chỉnh |\n| cognitive maturity | sự trưởng thành về nhận thức |\n| skepticism | sự hoài nghi |\n\n## Section 2: Detailed Vocabulary List (Học từ vựng đầy đủ)\n| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |\n| --- | --- |\n| advertiser (noun) /ˈæd.və.taɪ.zər/ | a person or company that advertises a product or service - nhà quảng cáo. Ví dụ: The advertiser spent a lot of money on the new campaign. |\n| persuasive (adjective) /pəˈsweɪ.sɪv/ | good at making someone do or believe something through reasoning - có sức thuyết phục. Ví dụ: The commercial was very persuasive. |\n| targeted (adjective) /ˈtɑː.ɡɪ.tɪd/ | directed at a particular group or activity - được nhắm mục tiêu. Ví dụ: The company uses targeted marketing to reach teens. |\n| celebrity endorsement (noun phrase) /səˈleb.rə.ti ɪnˈdɔːs.mənt/ | the use of a famous person to advertise a product - sự quảng cáo có người nổi tiếng. Ví dụ: Celebrity endorsement is a powerful tool in advertising. |\n| inadequacy (noun) /ɪˈnæd.ɪ.kwə.si/ | the state of not being good enough or confident enough - sự thiếu thốn, sự kém cỏi. Ví dụ: Ads can cause feelings of inadequacy in young people. |\n| obesity (noun) /əʊˈbiː.sə.ti/ | the condition of being extremely fat or overweight in a way that is dangerous for health - bệnh béo phì. Ví dụ: Childhood obesity is linked to junk food commercials. |\n| media literacy (noun phrase) /ˈmiː.di.ə ˈlɪt.ər.ə.si/ | the ability to critically analyze and evaluate media messages - sự hiểu biết về truyền thông. Ví dụ: Schools should teach media literacy to students. |\n| manipulate (verb) /məˈnɪp.jə.leɪt/ | to control something or someone to your advantage, often unfairly - thao túng. Ví dụ: Companies try to manipulate consumers' choices. |\n| regulate (verb) /ˈreɡ.jə.leɪt/ | to control something, especially by making it work in a particular way - quy định, quản lý. Ví dụ: Governments need to regulate online ads. |\n| prohibited (adjective) /prəˈhɪb.ɪ.tɪd/ | forbidden by law, rule, or other authority - bị cấm. Ví dụ: Advertising junk food to children is prohibited here. |\n| commercial motive (noun phrase) /kəˈmɜː.ʃəl ˈməʊ.tɪv/ | a reason for doing something that is related to making a profit - động cơ thương mại. Ví dụ: Children often do not understand the commercial motive behind games. |\n| audience (noun) /ˈɔː.di.əns/ | the group of people together in one place to watch or listen to a play, film, someone speaking, etc. - khán giả, người xem. Ví dụ: The ad targets a young audience. |\n| stealth marketing (noun phrase) /stelθ ˈmɑː.kɪ.tɪŋ/ | the practice of promoting products to people without them knowing they are being marketed to - tiếp thị tàng hình, quảng cáo giấu mặt. Ví dụ: Influencers often use stealth marketing in their videos. |\n| free trade (noun phrase) /friː treɪd/ | international buying and selling of goods, without limits on the amount of goods that one country can sell to another - thương mại tự do. Ví dụ: Some argue that bans violate the principles of free trade. |\n| enforce (verb) /ɪnˈfɔːs/ | to make people obey a law, or to make a particular situation happen or be accepted - thực thi, ép buộc. Ví dụ: The government must enforce strict advertising rules. |\n| purchasing decision (noun phrase) /ˈpɜː.tʃəs.ɪŋ dɪˈsɪʒ.ən/ | the thought process that leads a consumer from identifying a need to acting on it - quyết định mua hàng. Ví dụ: Ads have a big impact on a teenager's purchasing decision. |\n| billboard (noun) /ˈbɪl.bɔːd/ | a very large board on which advertisements are shown - biển quảng cáo. Ví dụ: There is a huge billboard on the highway. |\n| customized (adjective) /ˈkʌs.tə.maɪzd/ | made or changed according to the buyer's or user's needs - được tùy chỉnh. Ví dụ: Online ads are highly customized for each user. |\n| cognitive maturity (noun phrase) /ˈkɒɡ.nə.tɪv məˈtʃʊə.rə.ti/ | the ability to think, learn, and remember at an adult level - sự trưởng thành về nhận thức. Ví dụ: Young kids lack the cognitive maturity to spot fake ads. |\n| skepticism (noun) /ˈskep.tɪ.sɪ.zəm/ | an attitude of doubting that claims or statements are true - sự hoài nghi. Ví dụ: Consumers should view online ads with a healthy skepticism. |\n"
+}

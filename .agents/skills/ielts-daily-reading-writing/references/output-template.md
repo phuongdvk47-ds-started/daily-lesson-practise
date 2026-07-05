@@ -66,7 +66,8 @@ Provide the verified reading text with title.
 - Use exact source wording for the selected excerpt when allowed.
 - Do not present AI-written, shortened, or paraphrased text as the original article.
 - If an adapted learner version is explicitly requested, label it as adapted and keep a separate source note; otherwise preserve the source text/excerpt.
-- **Vocabulary bolding**: Bold all occurrences of target vocabulary words from Part 2 inside the reading passage using `**word**` (or its inflected forms).
+- **No Vocabulary bolding**: Do not bold target vocabulary words in the reading passage.
+- **Recycled Tagging**: Any recycled vocabulary words must be marked with `[R]` immediately after the word in the passage (e.g. `word [R]`).
 
 ### 5. Questions for Reading
 Generate exactly the requested number of IELTS-style reading questions. Group by question type. Number continuously. Every question must have exactly one unique correct answer (ensure distractor options are clearly incorrect). Apply anti-skimming/scanning design: use synonyms/paraphrases in the prompts and place scannable keywords in incorrect distractors to test comprehension rather than word-matching. Include a controlled band-bridge challenge: 10-20% of the questions should approach the next level and be marked `(*)`.

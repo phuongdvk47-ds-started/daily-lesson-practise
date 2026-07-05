@@ -2,6 +2,8 @@
 
 Choose 1-3 targets per daily pack. Recycle a recent weak target when learner history is available.
 
+For `+` levels (`A1+`, `A2+`, `B1+`, `B2+`, `C1+`), choose 60-70% targets from the base level and 30-40% bridge targets from the next level. Mark only the hardest 10-20% as stretch.
+
 ## A1
 - be, have, there is/there are
 - present simple for routines and facts

@@ -5,7 +5,7 @@ Coordinate the modular daily IELTS pack pipeline and cumulative review packs. Do
 
 ## Inputs
 - `day`: defaults to `current_date` from the active environment/local timezone in `YYYYMMDD` format.
-- `level`: defaults to `A2` if not specified or invalid. Valid levels: `A1`, `A2`, `B1`, `B2`, `C1`, `C2`.
+- `level`: defaults to `A2` if not specified or invalid. Valid levels: `A1`, `A1+`, `A2`, `A2+`, `B1`, `B1+`, `B2`, `B2+`, `C1`, `C1+`, `C2`.
 - `topic`: defaults via `scripts/select_daily_inputs.py` or a level-appropriate topic from `references/topic-bank.md`.
 - `reading_question_count`: defaults to `13`.
 - `vocabulary_count`: defaults to `20`.
@@ -35,7 +35,9 @@ Coordinate the modular daily IELTS pack pipeline and cumulative review packs. Do
 8. **Checkpoint 1: Source Approval (If in Review Mode)**:
    - Stop and present source details. Wait for user approval before continuing.
 9. **Call Reading Agent**:
-   - Generate passage (with bolded vocab and recycled `[R]` tags) and IELTS questions (Single Answer + Anti-Skimming).
+   - Load `references/deep-question-blueprint.md` and `references/deep-reading-generation-rules.md`.
+   - Generate `reading_blueprint` before questions, then generate passage (with recycled `[R]` tags) and IELTS questions aligned to the blueprint.
+   - Reject Reading output before QC if it violates blueprint fields, deep-reading ratios, printed-passage evidence, or the gates in `references/regeneration-quality-gates.md`.
 10. **Run Vocabulary Agent review of Reading**:
     - Vocabulary Agent checks if there are enough B1+ phrases/chunks or B2+ academic terms, and correct `[R]` recycling.
 11. **Run Grammar Agent review of Reading**:
@@ -51,7 +53,9 @@ Coordinate the modular daily IELTS pack pipeline and cumulative review packs. Do
 16. **Route Vocabulary Challenges**:
     - If challenges are raised, route them back to Vocabulary Agent.
 17. **Call Grammar Agent**:
-    - Generate guide, IELTS traps, and practice questions (starting from index 1).
+    - Load `references/deep-question-blueprint.md` and `references/deep-grammar-generation-rules.md`.
+    - Generate `grammar_blueprint` before questions, then generate guide, IELTS traps, and practice questions (starting from index 1) aligned to the blueprint.
+    - Reject Grammar output before QC if it violates blueprint fields, level-specific deep-grammar ratios, one-answer logic, meaning preservation, or the gates in `references/regeneration-quality-gates.md`.
 18. **Run Writing Agent review of Grammar**:
     - Writing Agent checks if writing tasks can reinforce the grammar targets.
 19. **Route Grammar Challenges**:
@@ -63,8 +67,11 @@ Coordinate the modular daily IELTS pack pipeline and cumulative review packs. Do
 22. **Route Writing Challenges**:
     - If challenges are raised, route them back to Writing Agent.
 23. **Call Answer Agent**:
+    - Load `references/deep-answer-key-rules.md`.
     - Generate answer key, detailed Vietnamese explanations, tips, model answers, and Review Bridge.
+    - Challenge Reading or Grammar instead of explaining around any shallow reasoning, missing distractor logic, formula-only grammar explanation, or unproven answer uniqueness.
 24. **Call Quality Control Agent**:
+    - Load `references/regeneration-quality-gates.md`.
     - Run QC Challenge Loop on the fully assembled payload.
 25. **Route QC Challenges**:
     - Route challenges to responsible agents. Merge revised sections into `lesson_source.json`.

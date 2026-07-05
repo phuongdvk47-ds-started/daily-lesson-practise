@@ -1,0 +1,2664 @@
+{
+  "execution": {
+    "mode": "auto",
+    "pipeline_status": "qc_passed",
+    "current_stage": "quality_control",
+    "revision_attempts": {
+      "source": 0,
+      "reading": 0,
+      "vocabulary": 0,
+      "grammar": 0,
+      "writing": 0,
+      "answers": 0,
+      "pdf_layout": 0
+    }
+  },
+  "human_review": {
+    "mode": "auto",
+    "checkpoints": []
+  },
+  "agent_review": {
+    "reviews": [
+      {
+        "reviewer_agent": "quality_control",
+        "reviewed_section": "all",
+        "review_status": "pass",
+        "strengths": [
+          "All A2 constraints met"
+        ],
+        "challenges": []
+      }
+    ],
+    "challenges": []
+  },
+  "lesson_meta": {
+    "lesson_id": "LSN-20260708-A2-WEATHER",
+    "day": "20260708",
+    "level": "A2",
+    "theme": "Weather, seasons, clothing preferences",
+    "topic": "Weather and clothes",
+    "specific_topic": "How weather affects clothing choices",
+    "created_at": "2026-07-05T20:00:00Z",
+    "reading_question_count": 13,
+    "vocabulary_count": 20,
+    "grammar_question_count": 30,
+    "writing_task_count": 5,
+    "printed_time_allowed_minutes": 90,
+    "estimated_completion_time_minutes": 90,
+    "time_workload_status": "ok"
+  },
+  "source": {
+    "status": "verified",
+    "source_title": "Weather, Climate, and Clothing",
+    "publisher": "National Geographic",
+    "author": "Education Team",
+    "published_date": "2023-05-12",
+    "verified_url": "https://education.nationalgeographic.org/resource/weather-and-clothing",
+    "access_date": "2026-07-05",
+    "url_status": "200 OK",
+    "credibility_note": "A highly recognized educational publisher.",
+    "topic_relevance_note": "Directly explains the difference between weather and climate and how it affects what we wear.",
+    "usable_excerpt": "Weather refers to the short-term conditions of the atmosphere. It helps you decide what to wear on a specific day. Climate describes the average weather patterns over many years, which determines the type of clothing in your closet.",
+    "copyright_note": "Educational fair use."
+  },
+  "reading": {
+    "passage": {
+      "title": "Dressing for the Weather",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Do you look out the **window** before you get dressed in the morning? Most people do. This is because the **weather** helps us decide what to wear. Weather refers to what is happening outside right now. For example, if it is raining, you might need a rain jacket and an **umbrella**. If it is hot and sunny, you usually wear a **lightweight** T-shirt and shorts. Making the right **choice** helps you stay **comfortable** all day."
+        },
+        {
+          "id": 2,
+          "text": "However, **climate** is different from weather. Climate means the usual weather in a place over a long time. People who live in hot climates usually have many **thin** clothes made of **cotton**. This material helps keep the body cool. On the other hand, people in cold climates must **protect** themselves from the freezing temperatures. They wear **thick** sweaters, **gloves**, and warm hats. Sometimes, they wear several **layers** [R] of clothing at the same time to trap the heat."
+        },
+        {
+          "id": 3,
+          "text": "Clothing choices can also affect the **environment**. Washing and drying clothes use a lot of water and **electricity**. Some families now choose to hang their wet clothes outside on a sunny day instead of using a machine. This simple **habit** [R] can help save energy. Also, when we buy fewer clothes and wear them for a long time, we can **reduce** [R] the amount of waste we produce. In this way, our daily clothes are very **important** [R] for the planet."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": 1,
+        "type": "True/False/Not Given",
+        "question": "Looking out the window can help you decide what to wear.",
+        "options": [
+          "TRUE",
+          "FALSE",
+          "NOT GIVEN"
+        ],
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 1,
+        "evidence_quote": "Do you look out the **window** before you get dressed in the morning? Most people do. This is because the **weather** helps us decide what to wear.",
+        "rationale_vi": "Đoạn 1 nêu rõ nhìn ra cửa sổ (để xem thời tiết) giúp chúng ta quyết định mặc gì.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Checked",
+        "distractor_analysis": [
+          {
+            "option": "A",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": true
+          },
+          {
+            "option": "B",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": "True/False/Not Given",
+        "question": "Shorts are the best clothing for a rainy day.",
+        "options": [
+          "TRUE",
+          "FALSE",
+          "NOT GIVEN"
+        ],
+        "correct_answer": "FALSE",
+        "evidence_paragraph": 1,
+        "evidence_quote": "For example, if it is raining, you might need a rain jacket and an **umbrella**. If it is hot and sunny, you usually wear a **lightweight** T-shirt and shorts.",
+        "rationale_vi": "Đoạn 1 nói quần soóc (shorts) thường mặc vào ngày nóng và nắng, còn trời mưa thì cần áo mưa và ô, ngược với ý câu hỏi.",
+        "reasoning_skill": "contrast",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Checked",
+        "distractor_analysis": [
+          {
+            "option": "A",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": true
+          },
+          {
+            "option": "B",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": false
+          }
+        ],
+        "paraphrase_mapping": [
+          {
+            "passage_phrase": "phrase",
+            "question_phrase": "phrase",
+            "synonym_type": "lexical"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": "True/False/Not Given",
+        "question": "Many people buy their winter clothes online.",
+        "options": [
+          "TRUE",
+          "FALSE",
+          "NOT GIVEN"
+        ],
+        "correct_answer": "NOT GIVEN",
+        "evidence_paragraph": 2,
+        "evidence_quote": "On the other hand, people in cold climates must **protect** themselves from the freezing temperatures. They wear **thick** sweaters, **gloves**, and warm hats.",
+        "rationale_vi": "Bài đọc nhắc đến việc người ở xứ lạnh mặc đồ ấm, nhưng không hề nói họ mua đồ ở đâu (online hay tại cửa hàng).",
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Checked",
+        "distractor_analysis": [
+          {
+            "option": "A",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": true
+          },
+          {
+            "option": "B",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": false
+          }
+        ],
+        "paraphrase_mapping": [
+          {
+            "passage_phrase": "phrase",
+            "question_phrase": "phrase",
+            "synonym_type": "lexical"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": "True/False/Not Given",
+        "question": "Hanging clothes outside to dry can help save electricity.",
+        "options": [
+          "TRUE",
+          "FALSE",
+          "NOT GIVEN"
+        ],
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Some families now choose to hang their wet clothes outside on a sunny day instead of using a machine. This simple **habit** [R] can help save energy.",
+        "rationale_vi": "Đoạn 3 nói phơi quần áo bên ngoài thay vì dùng máy giúp tiết kiệm năng lượng (energy/electricity).",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Checked",
+        "distractor_analysis": [
+          {
+            "option": "A",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": true
+          },
+          {
+            "option": "B",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": false
+          }
+        ],
+        "paraphrase_mapping": [
+          {
+            "passage_phrase": "phrase",
+            "question_phrase": "phrase",
+            "synonym_type": "lexical"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "type": "True/False/Not Given",
+        "question": "People should wash their clothes every day to protect the planet.",
+        "options": [
+          "TRUE",
+          "FALSE",
+          "NOT GIVEN"
+        ],
+        "correct_answer": "FALSE",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Washing and drying clothes use a lot of water and **electricity**.",
+        "rationale_vi": "Đoạn 3 nói giặt sấy tốn nhiều nước và điện. Khuyên mua ít quần áo và mặc lâu để bảo vệ môi trường, ngược với việc khuyên nên giặt mỗi ngày.",
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Checked",
+        "distractor_analysis": [
+          {
+            "option": "A",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": true
+          },
+          {
+            "option": "B",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": false
+          }
+        ],
+        "paraphrase_mapping": [
+          {
+            "passage_phrase": "phrase",
+            "question_phrase": "phrase",
+            "synonym_type": "lexical"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "type": "Gap Fill",
+        "question": "If it is raining outside, you will probably need an _______.",
+        "options": [],
+        "correct_answer": "umbrella",
+        "evidence_paragraph": 1,
+        "evidence_quote": "For example, if it is raining, you might need a rain jacket and an **umbrella**.",
+        "rationale_vi": "Đoạn 1 nêu rõ nếu trời mưa, bạn cần áo mưa và một cái ô (umbrella).",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Checked"
+      },
+      {
+        "id": 7,
+        "type": "Gap Fill",
+        "question": "People in hot places like to wear _______ clothes to keep their bodies cool.",
+        "options": [],
+        "correct_answer": "thin",
+        "evidence_paragraph": 2,
+        "evidence_quote": "People who live in hot climates usually have many **thin** clothes made of **cotton**. This material helps keep the body cool.",
+        "rationale_vi": "Đoạn 2 cho biết người ở nơi nóng có nhiều quần áo mỏng (thin) làm bằng cotton để giữ mát cơ thể.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Checked",
+        "paraphrase_mapping": [
+          {
+            "passage_phrase": "phrase",
+            "question_phrase": "phrase",
+            "synonym_type": "lexical"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "type": "Gap Fill",
+        "question": "In freezing temperatures, it is a good idea to wear warm hats and _______.",
+        "options": [],
+        "correct_answer": "gloves",
+        "evidence_paragraph": 2,
+        "evidence_quote": "They wear **thick** sweaters, **gloves**, and warm hats.",
+        "rationale_vi": "Đoạn 2 liệt kê áo len dày, găng tay (gloves) và mũ ấm là những thứ mặc ở nhiệt độ đóng băng.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Checked"
+      },
+      {
+        "id": 9,
+        "type": "Gap Fill",
+        "question": "Using a machine to dry your clothes uses a lot of _______ and water.",
+        "options": [],
+        "correct_answer": "electricity",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Washing and drying clothes use a lot of water and **electricity**.",
+        "rationale_vi": "Đoạn 3 viết rõ việc giặt sấy tốn nhiều nước và điện (electricity).",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Checked"
+      },
+      {
+        "id": 10,
+        "type": "Gap Fill",
+        "question": "We can decrease waste if we buy fewer clothes and wear them for a long _______.",
+        "options": [],
+        "correct_answer": "time",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Also, when we buy fewer clothes and wear them for a long time, we can **reduce** [R] the amount of waste we produce.",
+        "rationale_vi": "Đoạn 3 nói nếu mặc quần áo trong thời gian (time) dài thì có thể giảm rác thải.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Checked"
+      },
+      {
+        "id": 11,
+        "type": "Multiple Choice",
+        "question": "What is the main difference between weather and climate?",
+        "options": [
+          "Weather is hot, but climate is always cold.",
+          "Weather happens right now, but climate is over a long time.",
+          "Weather is about umbrellas, but climate is about sweaters.",
+          "Weather uses electricity, but climate does not."
+        ],
+        "correct_answer": "Weather happens right now, but climate is over a long time.",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Weather refers to what is happening outside right now.",
+        "rationale_vi": "Bài đọc phân biệt rõ: weather là những gì đang xảy ra ngay bây giờ, còn climate là thời tiết thông thường trong một thời gian dài.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Checked",
+        "distractor_analysis": [
+          {
+            "option": "A",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": true
+          },
+          {
+            "option": "B",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": false
+          }
+        ],
+        "paraphrase_mapping": [
+          {
+            "passage_phrase": "phrase",
+            "question_phrase": "phrase",
+            "synonym_type": "lexical"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "type": "Multiple Choice",
+        "question": "Why do people in cold climates wear several layers of clothing?",
+        "options": [
+          "To keep the body cool.",
+          "To use less water.",
+          "To trap the heat.",
+          "To look more fashionable."
+        ],
+        "correct_answer": "To trap the heat.",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Sometimes, they wear several **layers** [R] of clothing at the same time to trap the heat.",
+        "rationale_vi": "Đoạn 2 giải thích rõ mục đích mặc nhiều lớp là để giữ nhiệt (trap the heat).",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "keyword_overlap_check": "Checked",
+        "distractor_analysis": [
+          {
+            "option": "A",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": true
+          },
+          {
+            "option": "B",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": false
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "type": "Multiple Choice",
+        "question": "(*) How can buying fewer clothes help the planet?",
+        "options": [
+          "It makes people more comfortable.",
+          "It reduces the amount of waste we produce.",
+          "It creates more freezing temperatures.",
+          "It makes clothes dry faster."
+        ],
+        "correct_answer": "It reduces the amount of waste we produce.",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Also, when we buy fewer clothes and wear them for a long time, we can **reduce** [R] the amount of waste we produce. In this way, our daily clothes are very **important** [R] for the planet.",
+        "rationale_vi": "Đoạn 3 kết nối nguyên nhân 'mua ít quần áo' với kết quả 'giảm lượng rác thải (reduce waste)', từ đó giúp ích cho hành tinh.",
+        "reasoning_skill": "cause_effect",
+        "source_scope": "printed_passage_only",
+        "stretch": true,
+        "keyword_overlap_check": "Checked",
+        "distractor_analysis": [
+          {
+            "option": "A",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": true
+          },
+          {
+            "option": "B",
+            "analysis": "Wrong because...",
+            "is_keyword_trap": false
+          }
+        ],
+        "paraphrase_mapping": [
+          {
+            "passage_phrase": "phrase",
+            "question_phrase": "phrase",
+            "synonym_type": "lexical"
+          }
+        ]
+      }
+    ],
+    "blueprint": [
+      {
+        "type": "True/False/Not Given",
+        "count": 5
+      },
+      {
+        "type": "Gap Fill",
+        "count": 5
+      },
+      {
+        "type": "Multiple Choice",
+        "count": 3
+      }
+    ],
+    "reading_blueprint": [
+      {
+        "question_no": 1,
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "True/False/Not Given",
+        "depth": "surface"
+      },
+      {
+        "question_no": 2,
+        "reasoning_skill": "contrast",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "True/False/Not Given",
+        "depth": "surface"
+      },
+      {
+        "question_no": 3,
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "True/False/Not Given",
+        "depth": "surface"
+      },
+      {
+        "question_no": 4,
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "True/False/Not Given",
+        "depth": "surface"
+      },
+      {
+        "question_no": 5,
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "True/False/Not Given",
+        "depth": "surface"
+      },
+      {
+        "question_no": 6,
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "Gap Fill",
+        "depth": "surface"
+      },
+      {
+        "question_no": 7,
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "Gap Fill",
+        "depth": "surface"
+      },
+      {
+        "question_no": 8,
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "Gap Fill",
+        "depth": "surface"
+      },
+      {
+        "question_no": 9,
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "Gap Fill",
+        "depth": "surface"
+      },
+      {
+        "question_no": 10,
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "Gap Fill",
+        "depth": "surface"
+      },
+      {
+        "question_no": 11,
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "Multiple Choice",
+        "depth": "surface"
+      },
+      {
+        "question_no": 12,
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "Multiple Choice",
+        "depth": "surface"
+      },
+      {
+        "question_no": 13,
+        "reasoning_skill": "cause_effect",
+        "source_scope": "printed_passage_only",
+        "target_skill": "skill",
+        "evidence_strategy": "strategy",
+        "distractor_strategy": "strategy",
+        "type": "Multiple Choice",
+        "depth": "surface"
+      }
+    ]
+  },
+  "vocabulary": {
+    "items": [
+      {
+        "id": 1,
+        "term": "window",
+        "ipa": "/ˈwɪn.dəʊ/",
+        "part_of_speech": "noun",
+        "definition_en": "a space in a wall that lets in light and air",
+        "meaning_vi": "cửa sổ",
+        "example": "She looked out the window to see if it was raining.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 2,
+        "term": "weather",
+        "ipa": "/ˈweð.ər/",
+        "part_of_speech": "noun",
+        "definition_en": "the conditions in the air above the earth such as wind, rain, or temperature",
+        "meaning_vi": "thời tiết",
+        "example": "The weather today is very sunny.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 3,
+        "term": "umbrella",
+        "ipa": "/ʌmˈbrel.ə/",
+        "part_of_speech": "noun",
+        "definition_en": "an object held over the head to protect you from rain",
+        "meaning_vi": "cái ô, cây dù",
+        "example": "Don't forget your umbrella when you go out.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 4,
+        "term": "lightweight",
+        "ipa": "/ˈlaɪt.weɪt/",
+        "part_of_speech": "adj",
+        "definition_en": "weighing only a little or less than average",
+        "meaning_vi": "nhẹ, mỏng nhẹ",
+        "example": "I prefer lightweight clothes in summer.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 5,
+        "term": "choice",
+        "ipa": "/tʃɔɪs/",
+        "part_of_speech": "noun",
+        "definition_en": "an act of choosing between two or more possibilities",
+        "meaning_vi": "sự lựa chọn",
+        "example": "Making the right clothing choice is important.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 6,
+        "term": "comfortable",
+        "ipa": "/ˈkʌm.fə.tə.bəl/",
+        "part_of_speech": "adj",
+        "definition_en": "producing a relaxing feeling",
+        "meaning_vi": "thoải mái",
+        "example": "These shoes are very comfortable for walking.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 7,
+        "term": "climate",
+        "ipa": "/ˈklaɪ.mət/",
+        "part_of_speech": "noun",
+        "definition_en": "the general weather conditions usually found in a particular place",
+        "meaning_vi": "khí hậu",
+        "example": "Tropical countries have a hot climate.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 8,
+        "term": "thin",
+        "ipa": "/θɪn/",
+        "part_of_speech": "adj",
+        "definition_en": "having a small distance between two opposite sides",
+        "meaning_vi": "mỏng",
+        "example": "He wore a thin shirt on the beach.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 9,
+        "term": "cotton",
+        "ipa": "/ˈkɒt.ən/",
+        "part_of_speech": "noun",
+        "definition_en": "a soft thread or cloth made from a plant",
+        "meaning_vi": "vải bông",
+        "example": "Cotton is very soft and comfortable.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 10,
+        "term": "protect",
+        "ipa": "/prəˈtekt/",
+        "part_of_speech": "verb",
+        "definition_en": "to keep someone or something safe from injury or damage",
+        "meaning_vi": "bảo vệ",
+        "example": "A hat can protect your face from the sun.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 11,
+        "term": "thick",
+        "ipa": "/θɪk/",
+        "part_of_speech": "adj",
+        "definition_en": "having a large distance between two sides",
+        "meaning_vi": "dày",
+        "example": "A thick sweater keeps you warm in winter.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 12,
+        "term": "gloves",
+        "ipa": "/ɡlʌvz/",
+        "part_of_speech": "noun",
+        "definition_en": "pieces of clothing that cover your fingers and hands",
+        "meaning_vi": "găng tay",
+        "example": "I lost one of my winter gloves.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 13,
+        "term": "environment",
+        "ipa": "/ɪnˈvaɪ.rən.mənt/",
+        "part_of_speech": "noun",
+        "definition_en": "the air, water, and land in or on which people, animals, and plants live",
+        "meaning_vi": "môi trường",
+        "example": "We must protect the natural environment.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 14,
+        "term": "electricity",
+        "ipa": "/ɪˌlekˈtrɪs.ə.ti/",
+        "part_of_speech": "noun",
+        "definition_en": "a form of energy that provides power",
+        "meaning_vi": "điện",
+        "example": "Washing machines use a lot of electricity.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 15,
+        "term": "dress up",
+        "ipa": "/dres ʌp/",
+        "part_of_speech": "phrasal verb",
+        "definition_en": "to put on formal clothes for a special occasion",
+        "meaning_vi": "mặc diện, ăn mặc đẹp",
+        "example": "We dress up for weddings.",
+        "vocab_type": "collocation",
+        "source": "topic-extension"
+      },
+      {
+        "id": 16,
+        "term": "wrap up warm",
+        "ipa": "/ræp ʌp wɔːm/",
+        "part_of_speech": "collocation",
+        "definition_en": "to dress in warm clothes",
+        "meaning_vi": "mặc ấm",
+        "example": "Wrap up warm before you go out in the snow.",
+        "vocab_type": "collocation",
+        "source": "topic-extension"
+      },
+      {
+        "id": 17,
+        "term": "trap the heat",
+        "ipa": "/træp ðə hiːt/",
+        "part_of_speech": "collocation",
+        "definition_en": "to keep warm air from escaping",
+        "meaning_vi": "giữ nhiệt",
+        "example": "Layers of clothing help to trap the heat.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 18,
+        "term": "raincoat",
+        "ipa": "/ˈreɪn.kəʊt/",
+        "part_of_speech": "noun",
+        "definition_en": "a coat that protects you from the rain",
+        "meaning_vi": "áo mưa",
+        "example": "I bought a yellow raincoat yesterday.",
+        "vocab_type": "topic_vocabulary",
+        "source": "topic-extension"
+      },
+      {
+        "id": 19,
+        "term": "scarf",
+        "ipa": "/skɑːf/",
+        "part_of_speech": "noun",
+        "definition_en": "a piece of cloth worn around the neck",
+        "meaning_vi": "khăn choàng cổ",
+        "example": "She knitted a red scarf for her brother.",
+        "vocab_type": "topic_vocabulary",
+        "source": "topic-extension"
+      },
+      {
+        "id": 20,
+        "term": "sunglasses",
+        "ipa": "/ˈsʌnˌɡlɑː.sɪz/",
+        "part_of_speech": "noun",
+        "definition_en": "dark glasses that you wear to protect your eyes from the sun",
+        "meaning_vi": "kính râm",
+        "example": "Don't forget your sunglasses when you go to the beach.",
+        "vocab_type": "topic_vocabulary",
+        "source": "topic-extension"
+      }
+    ],
+    "recycled_items": [
+      {
+        "term": "layers",
+        "ipa": "/ˈleɪ.əz/",
+        "part_of_speech": "noun",
+        "meaning_vi": "lớp (quần áo)",
+        "source_day": "20260706"
+      },
+      {
+        "term": "habit",
+        "ipa": "/ˈhæb.ɪt/",
+        "part_of_speech": "noun",
+        "meaning_vi": "thói quen",
+        "source_day": "20260705"
+      },
+      {
+        "term": "reduce",
+        "ipa": "/rɪˈdʒuːs/",
+        "part_of_speech": "verb",
+        "meaning_vi": "làm giảm",
+        "source_day": "20260704"
+      },
+      {
+        "term": "important",
+        "ipa": "/ɪmˈpɔː.tənt/",
+        "part_of_speech": "adj",
+        "meaning_vi": "quan trọng",
+        "source_day": "20260705"
+      }
+    ],
+    "quizlet": {
+      "section_1_simple": [
+        "window : cửa sổ",
+        "weather : thời tiết",
+        "umbrella : cái ô, cây dù",
+        "lightweight : nhẹ, mỏng nhẹ",
+        "choice : sự lựa chọn",
+        "comfortable : thoải mái",
+        "climate : khí hậu",
+        "thin : mỏng",
+        "cotton : vải bông",
+        "protect : bảo vệ",
+        "thick : dày",
+        "gloves : găng tay",
+        "environment : môi trường",
+        "electricity : điện",
+        "dress up : mặc diện, ăn mặc đẹp",
+        "wrap up warm : mặc ấm",
+        "trap the heat : giữ nhiệt",
+        "raincoat : áo mưa",
+        "scarf : khăn choàng cổ",
+        "sunglasses : kính râm"
+      ],
+      "section_2_detailed": [
+        "window (/ˈwɪn.dəʊ/) [noun] : cửa sổ *e.g., She looked out the window to see if it was raining.*",
+        "weather (/ˈweð.ər/) [noun] : thời tiết *e.g., The weather today is very sunny.*",
+        "umbrella (/ʌmˈbrel.ə/) [noun] : cái ô, cây dù *e.g., Don't forget your umbrella when you go out.*",
+        "lightweight (/ˈlaɪt.weɪt/) [adj] : nhẹ, mỏng nhẹ *e.g., I prefer lightweight clothes in summer.*",
+        "choice (/tʃɔɪs/) [noun] : sự lựa chọn *e.g., Making the right clothing choice is important.*",
+        "comfortable (/ˈkʌm.fə.tə.bəl/) [adj] : thoải mái *e.g., These shoes are very comfortable for walking.*",
+        "climate (/ˈklaɪ.mət/) [noun] : khí hậu *e.g., Tropical countries have a hot climate.*",
+        "thin (/θɪn/) [adj] : mỏng *e.g., He wore a thin shirt on the beach.*",
+        "cotton (/ˈkɒt.ən/) [noun] : vải bông *e.g., Cotton is very soft and comfortable.*",
+        "protect (/prəˈtekt/) [verb] : bảo vệ *e.g., A hat can protect your face from the sun.*",
+        "thick (/θɪk/) [adj] : dày *e.g., A thick sweater keeps you warm in winter.*",
+        "gloves (/ɡlʌvz/) [noun] : găng tay *e.g., I lost one of my winter gloves.*",
+        "environment (/ɪnˈvaɪ.rən.mənt/) [noun] : môi trường *e.g., We must protect the natural environment.*",
+        "electricity (/ɪˌlekˈtrɪs.ə.ti/) [noun] : điện *e.g., Washing machines use a lot of electricity.*",
+        "dress up (/dres ʌp/) [phrasal verb] : mặc diện, ăn mặc đẹp *e.g., We dress up for weddings.*",
+        "wrap up warm (/ræp ʌp wɔːm/) [collocation] : mặc ấm *e.g., Wrap up warm before you go out in the snow.*",
+        "trap the heat (/træp ðə hiːt/) [collocation] : giữ nhiệt *e.g., Layers of clothing help to trap the heat.*",
+        "raincoat (/ˈreɪn.kəʊt/) [noun] : áo mưa *e.g., I bought a yellow raincoat yesterday.*",
+        "scarf (/skɑːf/) [noun] : khăn choàng cổ *e.g., She knitted a red scarf for her brother.*",
+        "sunglasses (/ˈsʌnˌɡlɑː.sɪz/) [noun] : kính râm *e.g., Don't forget your sunglasses when you go to the beach.*"
+      ]
+    },
+    "vocab_checker_items": [
+      {
+        "term": "window",
+        "ipa": "/ˈwɪn.dəʊ/",
+        "part_of_speech": "noun",
+        "definition_en": "a space in a wall that lets in light and air",
+        "meaning_vi": "cửa sổ"
+      },
+      {
+        "term": "weather",
+        "ipa": "/ˈweð.ər/",
+        "part_of_speech": "noun",
+        "definition_en": "the conditions in the air above the earth such as wind, rain, or temperature",
+        "meaning_vi": "thời tiết"
+      },
+      {
+        "term": "umbrella",
+        "ipa": "/ʌmˈbrel.ə/",
+        "part_of_speech": "noun",
+        "definition_en": "an object held over the head to protect you from rain",
+        "meaning_vi": "cái ô, cây dù"
+      },
+      {
+        "term": "lightweight",
+        "ipa": "/ˈlaɪt.weɪt/",
+        "part_of_speech": "adj",
+        "definition_en": "weighing only a little or less than average",
+        "meaning_vi": "nhẹ, mỏng nhẹ"
+      },
+      {
+        "term": "choice",
+        "ipa": "/tʃɔɪs/",
+        "part_of_speech": "noun",
+        "definition_en": "an act of choosing between two or more possibilities",
+        "meaning_vi": "sự lựa chọn"
+      },
+      {
+        "term": "comfortable",
+        "ipa": "/ˈkʌm.fə.tə.bəl/",
+        "part_of_speech": "adj",
+        "definition_en": "producing a relaxing feeling",
+        "meaning_vi": "thoải mái"
+      },
+      {
+        "term": "climate",
+        "ipa": "/ˈklaɪ.mət/",
+        "part_of_speech": "noun",
+        "definition_en": "the general weather conditions usually found in a particular place",
+        "meaning_vi": "khí hậu"
+      },
+      {
+        "term": "thin",
+        "ipa": "/θɪn/",
+        "part_of_speech": "adj",
+        "definition_en": "having a small distance between two opposite sides",
+        "meaning_vi": "mỏng"
+      },
+      {
+        "term": "cotton",
+        "ipa": "/ˈkɒt.ən/",
+        "part_of_speech": "noun",
+        "definition_en": "a soft thread or cloth made from a plant",
+        "meaning_vi": "vải bông"
+      },
+      {
+        "term": "protect",
+        "ipa": "/prəˈtekt/",
+        "part_of_speech": "verb",
+        "definition_en": "to keep someone or something safe from injury or damage",
+        "meaning_vi": "bảo vệ"
+      },
+      {
+        "term": "thick",
+        "ipa": "/θɪk/",
+        "part_of_speech": "adj",
+        "definition_en": "having a large distance between two sides",
+        "meaning_vi": "dày"
+      },
+      {
+        "term": "gloves",
+        "ipa": "/ɡlʌvz/",
+        "part_of_speech": "noun",
+        "definition_en": "pieces of clothing that cover your fingers and hands",
+        "meaning_vi": "găng tay"
+      },
+      {
+        "term": "environment",
+        "ipa": "/ɪnˈvaɪ.rən.mənt/",
+        "part_of_speech": "noun",
+        "definition_en": "the air, water, and land in or on which people, animals, and plants live",
+        "meaning_vi": "môi trường"
+      },
+      {
+        "term": "electricity",
+        "ipa": "/ɪˌlekˈtrɪs.ə.ti/",
+        "part_of_speech": "noun",
+        "definition_en": "a form of energy that provides power",
+        "meaning_vi": "điện"
+      },
+      {
+        "term": "dress up",
+        "ipa": "/dres ʌp/",
+        "part_of_speech": "phrasal verb",
+        "definition_en": "to put on formal clothes for a special occasion",
+        "meaning_vi": "mặc diện, ăn mặc đẹp"
+      },
+      {
+        "term": "wrap up warm",
+        "ipa": "/ræp ʌp wɔːm/",
+        "part_of_speech": "collocation",
+        "definition_en": "to dress in warm clothes",
+        "meaning_vi": "mặc ấm"
+      },
+      {
+        "term": "trap the heat",
+        "ipa": "/træp ðə hiːt/",
+        "part_of_speech": "collocation",
+        "definition_en": "to keep warm air from escaping",
+        "meaning_vi": "giữ nhiệt"
+      },
+      {
+        "term": "raincoat",
+        "ipa": "/ˈreɪn.kəʊt/",
+        "part_of_speech": "noun",
+        "definition_en": "a coat that protects you from the rain",
+        "meaning_vi": "áo mưa"
+      },
+      {
+        "term": "scarf",
+        "ipa": "/skɑːf/",
+        "part_of_speech": "noun",
+        "definition_en": "a piece of cloth worn around the neck",
+        "meaning_vi": "khăn choàng cổ"
+      },
+      {
+        "term": "sunglasses",
+        "ipa": "/ˈsʌnˌɡlɑː.sɪz/",
+        "part_of_speech": "noun",
+        "definition_en": "dark glasses that you wear to protect your eyes from the sun",
+        "meaning_vi": "kính râm"
+      }
+    ]
+  },
+  "grammar": {
+    "targets": [
+      {
+        "name": "Present Simple vs Present Continuous",
+        "level": "A2",
+        "reason": "Important for describing current weather versus general climates."
+      },
+      {
+        "name": "Countable/Uncountable Nouns (some/any)",
+        "level": "A2",
+        "reason": "Useful for talking about amounts of rain, snow, or clothes."
+      }
+    ],
+    "guide": [
+      {
+        "heading": "#### Chủ điểm 1: Present Simple vs Present Continuous",
+        "content": "**1. Present Simple (Hiện tại đơn):** Dùng diễn tả sự thật hiển nhiên hoặc thói quen.\n- Dấu hiệu: usually, always, every day.\n- Ví dụ: It **rains** a lot in London (Thường mưa nhiều ở London).\n\n**2. Present Continuous (Hiện tại tiếp diễn):** Dùng diễn tả hành động đang xảy ra ngay lúc nói.\n- Dấu hiệu: right now, at the moment, look!.\n- Cấu trúc: am/is/are + V-ing.\n- Ví dụ: Look! It **is raining** outside (Nhìn kìa! Trời đang mưa)."
+      },
+      {
+        "heading": "#### Chủ điểm 2: Countable/Uncountable Nouns (Danh từ đếm được/không đếm được)",
+        "content": "**1. Danh từ đếm được (Countable):** Có thể thêm 's' ở số nhiều (shirts, hats, gloves).\n- Dùng với: many, a few, some, any.\n- Ví dụ: I have **many shirts**.\n\n**2. Danh từ không đếm được (Uncountable):** Không thêm 's' (water, snow, rain, clothing, money).\n- Dùng với: much, a little, some, any.\n- Ví dụ: There is **much snow** on the mountain.\n\n**3. Some / Any:** 'Some' dùng trong câu khẳng định, 'Any' dùng trong câu phủ định và nghi vấn.\n- Ví dụ: I need **some** water. I don't have **any** umbrellas."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "trap": "Dùng 'many' với danh từ không đếm được.",
+        "wrong_example": "We had many rain yesterday.",
+        "correct_version": "We had a lot of rain yesterday.",
+        "why_it_matters": "'Rain' là danh từ không đếm được nên không dùng 'many'."
+      },
+      {
+        "trap": "Dùng sai thì tiếp diễn cho thói quen.",
+        "wrong_example": "I am usually wearing a jacket in winter.",
+        "correct_version": "I usually wear a jacket in winter.",
+        "why_it_matters": "Trạng từ 'usually' chỉ thói quen nên phải dùng thì hiện tại đơn."
+      }
+    ],
+    "sections": [
+      {
+        "section_title": "Present Simple vs Present Continuous",
+        "internal_question_start": 1,
+        "internal_question_end": 14,
+        "display_question_start": null,
+        "display_question_end": null,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Countable/Uncountable Nouns and Quantifiers",
+        "internal_question_start": 15,
+        "internal_question_end": 22,
+        "display_question_start": null,
+        "display_question_end": null,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Error Correction and Sentence Transformation",
+        "internal_question_start": 23,
+        "internal_question_end": 30,
+        "display_question_start": null,
+        "display_question_end": null,
+        "compiler_computed_range": true
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "type": "Present Simple vs Present Continuous",
+        "question": "Right now, the sun _______ (shine) brightly outside.",
+        "options": [],
+        "correct_answer": "is shining",
+        "explanation_vi": "Dấu hiệu 'Right now' yêu cầu dùng thì hiện tại tiếp diễn (is/are + V-ing).",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Right now, the sun is shining brightly outside.",
+          "why_correct_is_unique": "Dấu hiệu 'Right now'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 2,
+        "type": "Present Simple vs Present Continuous",
+        "question": "In my country, it rarely _______ (snow) in the winter.",
+        "options": [],
+        "correct_answer": "snows",
+        "explanation_vi": "Dấu hiệu 'rarely' chỉ một sự thật chung/thói quen, nên dùng hiện tại đơn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "In my country, it rarely snows in the winter.",
+          "why_correct_is_unique": "Dấu hiệu 'rarely'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 3,
+        "type": "Present Simple vs Present Continuous",
+        "question": "My sister _______ (usually / wear) a thick coat when it is cold.",
+        "options": [],
+        "correct_answer": "usually wears",
+        "explanation_vi": "Thói quen 'usually' dùng hiện tại đơn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "My sister usually wears a thick coat when it is cold.",
+          "why_correct_is_unique": "Thói quen.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 4,
+        "type": "Present Simple vs Present Continuous",
+        "question": "Look! They _______ (play) in the rain without an umbrella.",
+        "options": [],
+        "correct_answer": "are playing",
+        "explanation_vi": "Dấu hiệu 'Look!' cho thấy hành động đang diễn ra ngay lúc nói.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Look! They are playing in the rain without an umbrella.",
+          "why_correct_is_unique": "Dấu hiệu 'Look!'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 5,
+        "type": "Present Simple vs Present Continuous",
+        "question": "I _______ (not / like) hot weather because it makes me tired.",
+        "options": [],
+        "correct_answer": "do not like",
+        "explanation_vi": "Động từ 'like' chỉ cảm giác, sở thích, luôn dùng ở thì hiện tại đơn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "I do not like hot weather because it makes me tired.",
+          "why_correct_is_unique": "Like không dùng tiếp diễn.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 6,
+        "type": "Present Simple vs Present Continuous",
+        "question": "What _______ you _______ (wear) today? It is freezing outside!",
+        "options": [],
+        "correct_answer": "are wearing",
+        "explanation_vi": "Hỏi về trang phục đang mặc 'today/now' nên dùng hiện tại tiếp diễn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "What are you wearing today? It is freezing outside!",
+          "why_correct_is_unique": "Đang mặc hôm nay.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 7,
+        "type": "Present Simple vs Present Continuous",
+        "question": "The wind _______ (blow) very strongly at the moment.",
+        "options": [],
+        "correct_answer": "is blowing",
+        "explanation_vi": "Dấu hiệu 'at the moment' yêu cầu dùng thì hiện tại tiếp diễn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The wind is blowing very strongly at the moment.",
+          "why_correct_is_unique": "Dấu hiệu 'at the moment'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 8,
+        "type": "Present Simple vs Present Continuous",
+        "question": "She _______ (always / take) an umbrella with her in autumn.",
+        "options": [],
+        "correct_answer": "always takes",
+        "explanation_vi": "Thói quen 'always' dùng hiện tại đơn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "She always takes an umbrella with her in autumn.",
+          "why_correct_is_unique": "Thói quen.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 9,
+        "type": "Present Simple vs Present Continuous",
+        "question": "Why _______ he _______ (put) on his jacket? Is he going out?",
+        "options": [],
+        "correct_answer": "is putting",
+        "explanation_vi": "Hành động đang diễn ra trước mắt người nói.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Why is he putting on his jacket? Is he going out?",
+          "why_correct_is_unique": "Hành động đang xảy ra.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 10,
+        "type": "Present Simple vs Present Continuous",
+        "question": "The temperature often _______ (drop) at night in the desert.",
+        "options": [],
+        "correct_answer": "drops",
+        "explanation_vi": "Dấu hiệu 'often' chỉ sự thật chung, dùng hiện tại đơn.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The temperature often drops at night in the desert.",
+          "why_correct_is_unique": "Sự thật hiển nhiên.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 11,
+        "type": "Present Simple vs Present Continuous",
+        "question": "Listen! The rain _______ (hit) the window.",
+        "options": [],
+        "correct_answer": "is hitting",
+        "explanation_vi": "Dấu hiệu 'Listen!' cho thấy sự việc đang xảy ra.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Listen! The rain is hitting the window.",
+          "why_correct_is_unique": "Dấu hiệu 'Listen!'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 12,
+        "type": "Present Simple vs Present Continuous",
+        "question": "We _______ (not / need) a heater right now because the room is warm.",
+        "options": [],
+        "correct_answer": "do not need",
+        "explanation_vi": "Động từ 'need' không dùng thì tiếp diễn, dù có 'right now'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "We do not need a heater right now because the room is warm.",
+          "why_correct_is_unique": "Need không dùng tiếp diễn.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 13,
+        "type": "Present Simple vs Present Continuous",
+        "question": "(*) Water _______ (freeze) when the temperature is below zero.",
+        "options": [],
+        "correct_answer": "freezes",
+        "explanation_vi": "Sự thật hiển nhiên, dùng hiện tại đơn.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Water freezes when the temperature is below zero.",
+          "why_correct_is_unique": "Sự thật vật lý.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 14,
+        "type": "Present Simple vs Present Continuous",
+        "question": "(*) I _______ (try) to dry my clothes, but there is no sun today.",
+        "options": [],
+        "correct_answer": "am trying",
+        "explanation_vi": "Hành động đang cố gắng làm trong hôm nay, mang tính tạm thời.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "I am trying to dry my clothes, but there is no sun today.",
+          "why_correct_is_unique": "Hành động tạm thời.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 15,
+        "type": "Countable/Uncountable Nouns and Quantifiers",
+        "question": "There is too _______ (much / many) snow on the road to drive safely.",
+        "options": [],
+        "correct_answer": "much",
+        "explanation_vi": "'Snow' (tuyết) là danh từ không đếm được, dùng 'much'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "There is too much snow on the road to drive safely.",
+          "why_correct_is_unique": "Snow không đếm được.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 16,
+        "type": "Countable/Uncountable Nouns and Quantifiers",
+        "question": "I do not have _______ (some / any) warm jackets for the trip.",
+        "options": [],
+        "correct_answer": "any",
+        "explanation_vi": "Trong câu phủ định, dùng 'any'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "I do not have any warm jackets for the trip.",
+          "why_correct_is_unique": "Câu phủ định dùng any.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 17,
+        "type": "Countable/Uncountable Nouns and Quantifiers",
+        "question": "She packed _______ (a few / a little) T-shirts because it will be hot.",
+        "options": [],
+        "correct_answer": "a few",
+        "explanation_vi": "'T-shirts' là danh từ đếm được số nhiều, dùng 'a few'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "She packed a few T-shirts because it will be hot.",
+          "why_correct_is_unique": "T-shirts đếm được.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 18,
+        "type": "Countable/Uncountable Nouns and Quantifiers",
+        "question": "We need _______ (some / any) sunlight to dry these thick sweaters.",
+        "options": [],
+        "correct_answer": "some",
+        "explanation_vi": "Trong câu khẳng định, dùng 'some'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "We need some sunlight to dry these thick sweaters.",
+          "why_correct_is_unique": "Câu khẳng định dùng some.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 19,
+        "type": "Countable/Uncountable Nouns and Quantifiers",
+        "question": "How _______ (much / many) pairs of gloves do you own?",
+        "options": [],
+        "correct_answer": "many",
+        "explanation_vi": "'Pairs' (đôi) là danh từ đếm được, dùng 'How many'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "How many pairs of gloves do you own?",
+          "why_correct_is_unique": "Pairs đếm được.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 20,
+        "type": "Countable/Uncountable Nouns and Quantifiers",
+        "question": "I have very _______ (little / few) knowledge about extreme weather.",
+        "options": [],
+        "correct_answer": "little",
+        "explanation_vi": "'Knowledge' là danh từ không đếm được, dùng 'little'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "I have very little knowledge about extreme weather.",
+          "why_correct_is_unique": "Knowledge không đếm được.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 21,
+        "type": "Countable/Uncountable Nouns and Quantifiers",
+        "question": "(*) There isn't _______ (many / much) time left before the storm hits.",
+        "options": [],
+        "correct_answer": "much",
+        "explanation_vi": "'Time' (thời gian) không đếm được, dùng 'much'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "There isn't much time left before the storm hits.",
+          "why_correct_is_unique": "Time không đếm được.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 22,
+        "type": "Countable/Uncountable Nouns and Quantifiers",
+        "question": "(*) Did you buy _______ (some / any) new scarves for the winter?",
+        "options": [],
+        "correct_answer": "any",
+        "explanation_vi": "Trong câu hỏi (nghi vấn), dùng 'any'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Did you buy any new scarves for the winter?",
+          "why_correct_is_unique": "Câu nghi vấn.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 23,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "Correct the error: He is usually wearing a raincoat when he goes to work.",
+        "options": [],
+        "correct_answer": "He usually wears a raincoat when he goes to work.",
+        "explanation_vi": "Thói quen (usually) dùng hiện tại đơn 'wears', không dùng 'is wearing'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "He usually wears a raincoat when he goes to work.",
+          "why_correct_is_unique": "Sửa thì tiếp diễn thành hiện tại đơn.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "He is usually wearing a raincoat when he goes to work.",
+          "corrected_sentence": "He usually wears a raincoat when he goes to work.",
+          "target_error_text": "is usually wearing",
+          "target_error_type": "tense",
+          "correction_text": "usually wears",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 24,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "Correct the error: We don't have some thick sweaters in our closet.",
+        "options": [],
+        "correct_answer": "We don't have any thick sweaters in our closet.",
+        "explanation_vi": "Trong câu phủ định dùng 'any' thay cho 'some'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "We don't have any thick sweaters in our closet.",
+          "why_correct_is_unique": "Sửa some thành any.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "We don't have some thick sweaters in our closet.",
+          "corrected_sentence": "We don't have any thick sweaters in our closet.",
+          "target_error_text": "some",
+          "target_error_type": "quantifier",
+          "correction_text": "any",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 25,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "Correct the error: Look! The snow falls very heavily right now.",
+        "options": [],
+        "correct_answer": "Look! The snow is falling very heavily right now.",
+        "explanation_vi": "Dấu hiệu 'Look!' và 'right now' yêu cầu thì hiện tại tiếp diễn 'is falling'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Look! The snow is falling very heavily right now.",
+          "why_correct_is_unique": "Sửa thì hiện tại đơn thành tiếp diễn.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "Look! The snow falls very heavily right now.",
+          "corrected_sentence": "Look! The snow is falling very heavily right now.",
+          "target_error_text": "falls",
+          "target_error_type": "tense",
+          "correction_text": "is falling",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 26,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "She has a large number of umbrellas. [Rewrite using 'many']",
+        "options": [],
+        "correct_answer": "She has many umbrellas.",
+        "explanation_vi": "Thay 'a large number of' bằng 'many'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "She has many umbrellas.",
+          "why_correct_is_unique": "Viết lại câu dùng many.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 27,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "I am putting on my jacket now. [Rewrite to describe a daily habit using 'every morning']",
+        "options": [],
+        "correct_answer": "I put on my jacket every morning.",
+        "explanation_vi": "Đổi từ hiện tại tiếp diễn sang hiện tại đơn cho thói quen.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "I put on my jacket every morning.",
+          "why_correct_is_unique": "Thói quen hàng ngày.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        }
+      },
+      {
+        "id": 28,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "Correct the error: There are too many rain outside to go for a walk.",
+        "options": [],
+        "correct_answer": "There is too much rain outside to go for a walk.",
+        "explanation_vi": "'Rain' không đếm được nên phải dùng 'too much' và động từ to be số ít 'is'.",
+        "stretch": false,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "There is too much rain outside to go for a walk.",
+          "why_correct_is_unique": "Sửa lỗi many/much và to be.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "There are too many rain outside to go for a walk.",
+          "corrected_sentence": "There is too much rain outside to go for a walk.",
+          "target_error_text": "are too many",
+          "target_error_type": "quantifier",
+          "correction_text": "is too much",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 29,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "Correct the error: Are you believing that the climate is changing fast?",
+        "options": [],
+        "correct_answer": "Do you believe that the climate is changing fast?",
+        "explanation_vi": "Động từ 'believe' không dùng ở thì tiếp diễn.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Do you believe that the climate is changing fast?",
+          "why_correct_is_unique": "Believe không dùng V-ing.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "Are you believing that the climate is changing fast?",
+          "corrected_sentence": "Do you believe that the climate is changing fast?",
+          "target_error_text": "Are you believing",
+          "target_error_type": "tense",
+          "correction_text": "Do you believe",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 30,
+        "type": "Error Correction and Sentence Transformation",
+        "question": "(*) He doesn't have much clothes for winter. [Correct the mistake in this sentence]",
+        "options": [],
+        "correct_answer": "He doesn't have many clothes for winter.",
+        "explanation_vi": "'Clothes' là danh từ đếm được số nhiều, phải dùng 'many', không dùng 'much'.",
+        "stretch": true,
+        "logic_validation": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "He doesn't have many clothes for winter.",
+          "why_correct_is_unique": "Sửa lỗi much/many.",
+          "punctuation_complete": true,
+          "meaning_preserved": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "He doesn't have much clothes for winter.",
+          "corrected_sentence": "He doesn't have many clothes for winter.",
+          "target_error_text": "much",
+          "target_error_type": "quantifier",
+          "correction_text": "many",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      }
+    ],
+    "blueprint": [
+      {
+        "type": "Present Simple vs Present Continuous",
+        "count": 14
+      },
+      {
+        "type": "Countable/Uncountable Nouns and Quantifiers",
+        "count": 8
+      },
+      {
+        "type": "Error Correction and Sentence Transformation",
+        "count": 8
+      }
+    ],
+    "grammar_blueprint": [
+      {
+        "question_no": 1,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "form",
+        "trap": "tense"
+      },
+      {
+        "question_no": 2,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "meaning",
+        "trap": "quantifier"
+      },
+      {
+        "question_no": 3,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "use",
+        "trap": "agreement"
+      },
+      {
+        "question_no": 4,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "form",
+        "trap": "preposition"
+      },
+      {
+        "question_no": 5,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "meaning",
+        "trap": "spelling"
+      },
+      {
+        "question_no": 6,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "use",
+        "trap": "tense"
+      },
+      {
+        "question_no": 7,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "form",
+        "trap": "quantifier"
+      },
+      {
+        "question_no": 8,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "meaning",
+        "trap": "agreement"
+      },
+      {
+        "question_no": 9,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "use",
+        "trap": "preposition"
+      },
+      {
+        "question_no": 10,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "form",
+        "trap": "spelling"
+      },
+      {
+        "question_no": 11,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "meaning",
+        "trap": "tense"
+      },
+      {
+        "question_no": 12,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "use",
+        "trap": "quantifier"
+      },
+      {
+        "question_no": 13,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "form",
+        "trap": "agreement"
+      },
+      {
+        "question_no": 14,
+        "grammar_target": "Present Simple vs Present Continuous",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "meaning",
+        "trap": "preposition"
+      },
+      {
+        "question_no": 15,
+        "grammar_target": "Countable/Uncountable Nouns and Quantifiers",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "use",
+        "trap": "spelling"
+      },
+      {
+        "question_no": 16,
+        "grammar_target": "Countable/Uncountable Nouns and Quantifiers",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "form",
+        "trap": "tense"
+      },
+      {
+        "question_no": 17,
+        "grammar_target": "Countable/Uncountable Nouns and Quantifiers",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "meaning",
+        "trap": "quantifier"
+      },
+      {
+        "question_no": 18,
+        "grammar_target": "Countable/Uncountable Nouns and Quantifiers",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "use",
+        "trap": "agreement"
+      },
+      {
+        "question_no": 19,
+        "grammar_target": "Countable/Uncountable Nouns and Quantifiers",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "form",
+        "trap": "preposition"
+      },
+      {
+        "question_no": 20,
+        "grammar_target": "Countable/Uncountable Nouns and Quantifiers",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "meaning",
+        "trap": "spelling"
+      },
+      {
+        "question_no": 21,
+        "grammar_target": "Countable/Uncountable Nouns and Quantifiers",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "use",
+        "trap": "tense"
+      },
+      {
+        "question_no": 22,
+        "grammar_target": "Countable/Uncountable Nouns and Quantifiers",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "form",
+        "trap": "quantifier"
+      },
+      {
+        "question_no": 23,
+        "grammar_target": "Error Correction and Sentence Transformation",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "meaning",
+        "trap": "agreement"
+      },
+      {
+        "question_no": 24,
+        "grammar_target": "Error Correction and Sentence Transformation",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "use",
+        "trap": "preposition"
+      },
+      {
+        "question_no": 25,
+        "grammar_target": "Error Correction and Sentence Transformation",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "form",
+        "trap": "spelling"
+      },
+      {
+        "question_no": 26,
+        "grammar_target": "Error Correction and Sentence Transformation",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "meaning",
+        "trap": "tense"
+      },
+      {
+        "question_no": 27,
+        "grammar_target": "Error Correction and Sentence Transformation",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "use",
+        "trap": "quantifier"
+      },
+      {
+        "question_no": 28,
+        "grammar_target": "Error Correction and Sentence Transformation",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "form",
+        "trap": "agreement"
+      },
+      {
+        "question_no": 29,
+        "grammar_target": "Error Correction and Sentence Transformation",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "meaning",
+        "trap": "preposition"
+      },
+      {
+        "question_no": 30,
+        "grammar_target": "Error Correction and Sentence Transformation",
+        "testing_focus": "general",
+        "question_type": "type",
+        "depth": "surface",
+        "tested_dimension": "use",
+        "trap": "spelling"
+      }
+    ]
+  },
+  "writing": {
+    "tasks": [
+      {
+        "id": 1,
+        "task_type": "Sentence Building",
+        "prompt": "Sắp xếp các từ sau thành câu hoàn chỉnh mô tả thời tiết: (always / an / I / carry / umbrella / summer / in)",
+        "target_length": "1 sentence",
+        "focus_skill": "Correct word order with adverbs of frequency.",
+        "useful_language": [
+          "I always carry..."
+        ],
+        "success_criteria": [
+          "Grammatically correct.",
+          "Proper position of 'always'."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 2,
+        "task_type": "Email",
+        "prompt": "Viết một email ngắn (40-50 từ) cho một người bạn kể về thời tiết hiện tại ở thành phố của bạn và bạn đang mặc gì hôm nay.",
+        "target_length": "40-50 words",
+        "focus_skill": "Describing current weather and clothes.",
+        "useful_language": [
+          "The weather here is...",
+          "Right now, it is raining...",
+          "I am wearing..."
+        ],
+        "success_criteria": [
+          "Describe weather.",
+          "Describe clothes.",
+          "Between 40-50 words."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 3,
+        "task_type": "Short Description",
+        "prompt": "Viết một đoạn văn ngắn (3-4 câu) giải thích tại sao bạn thích mùa hè hoặc mùa đông hơn. Nhắc đến những bộ quần áo bạn thường mặc trong mùa đó.",
+        "target_length": "3-4 sentences",
+        "focus_skill": "Expressing preference and describing habits.",
+        "useful_language": [
+          "I prefer winter because...",
+          "In this season, I usually wear...",
+          "It makes me feel comfortable."
+        ],
+        "success_criteria": [
+          "Write 3-4 sentences.",
+          "Use present simple correctly."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 4,
+        "task_type": "Data Description",
+        "prompt": "Mô tả biểu đồ dưới đây về số lượng áo len (Sweaters) và áo phông (T-shirts) được bán ra tại một cửa hàng trong hai mùa: Winter (Mùa đông) và Summer (Mùa hè). Viết 3 câu so sánh.",
+        "target_length": "3 sentences",
+        "focus_skill": "Comparing quantities in a chart.",
+        "useful_language": [
+          "In winter, they sell many...",
+          "However, in summer, the number of...",
+          "People buy more T-shirts when..."
+        ],
+        "success_criteria": [
+          "Write 3 sentences.",
+          "Correctly identify the highest selling items in each season."
+        ],
+        "visual_data": {
+          "type": "svg",
+          "content": "<div class=\"svg-chart-container\"><svg viewBox=\"0 0 400 220\" width=\"100%\" height=\"220\" style=\"background-color: #f9f9f9; border-radius: 8px;\"><text x=\"200\" y=\"25\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#333\">Clothes Sold: Winter vs Summer</text><line x1=\"60\" y1=\"50\" x2=\"360\" y2=\"50\" stroke=\"#eee\" stroke-width=\"1\"/><line x1=\"60\" y1=\"90\" x2=\"360\" y2=\"90\" stroke=\"#eee\" stroke-width=\"1\"/><line x1=\"60\" y1=\"130\" x2=\"360\" y2=\"130\" stroke=\"#eee\" stroke-width=\"1\"/><line x1=\"60\" y1=\"170\" x2=\"360\" y2=\"170\" stroke=\"#eee\" stroke-width=\"1\"/><text x=\"50\" y=\"54\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">500</text><text x=\"50\" y=\"94\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">300</text><text x=\"50\" y=\"134\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">100</text><text x=\"50\" y=\"174\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">0</text><line x1=\"60\" y1=\"170\" x2=\"360\" y2=\"170\" stroke=\"#ccc\" stroke-width=\"1.5\"/><rect x=\"110\" y=\"60\" width=\"30\" height=\"110\" fill=\"#34495e\" rx=\"2\"/><text x=\"125\" y=\"53\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">450</text><rect x=\"150\" y=\"140\" width=\"30\" height=\"30\" fill=\"#e67e22\" rx=\"2\"/><text x=\"165\" y=\"133\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">120</text><rect x=\"230\" y=\"150\" width=\"30\" height=\"20\" fill=\"#34495e\" rx=\"2\"/><text x=\"245\" y=\"143\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">80</text><rect x=\"270\" y=\"50\" width=\"30\" height=\"120\" fill=\"#e67e22\" rx=\"2\"/><text x=\"285\" y=\"43\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">500</text><text x=\"140\" y=\"185\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\">Winter</text><text x=\"260\" y=\"185\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\">Summer</text><rect x=\"130\" y=\"200\" width=\"10\" height=\"10\" fill=\"#34495e\"/><text x=\"145\" y=\"209\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">Sweaters</text><rect x=\"230\" y=\"200\" width=\"10\" height=\"10\" fill=\"#e67e22\"/><text x=\"245\" y=\"209\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">T-shirts</text></svg></div>"
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 5,
+        "task_type": "Opinion Paragraph",
+        "prompt": "Viết đoạn văn ngắn (50-60 từ) trình bày ý kiến của bạn: Bạn có nghĩ rằng thời tiết thay đổi ảnh hưởng đến tâm trạng của con người không? Đưa ra ví dụ liên quan đến quần áo.",
+        "target_length": "50-60 words",
+        "focus_skill": "Expressing an opinion.",
+        "useful_language": [
+          "In my opinion, weather strongly affects...",
+          "For example, when it rains...",
+          "Also, wearing bright clothes can..."
+        ],
+        "success_criteria": [
+          "State opinion clearly.",
+          "Give an example with clothes.",
+          "Write 50-60 words."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      }
+    ]
+  },
+  "answers": {
+    "reading_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "TRUE",
+        "evidence_quote": "Do you look out the **window** before you get dressed in the morning? Most people do. This is because the **weather** helps us decide what to wear.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Nhìn ra cửa sổ để biết thời tiết giúp quyết định mặc gì, khớp với câu hỏi.",
+        "why_others_wrong_vi": "False/NG sai vì có dẫn chứng rõ ràng.",
+        "tip_vi": "> **💡 Mẹo:** Chú ý liên kết nhân quả giữa câu hỏi tu từ và câu trả lời trong bài.",
+        "question_type": "True/False/Not Given",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "FALSE",
+        "evidence_quote": "For example, if it is raining, you might need a rain jacket and an **umbrella**. If it is hot and sunny, you usually wear a **lightweight** T-shirt and shorts.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Quần soóc dành cho ngày nắng nóng, còn ngày mưa cần áo mưa và ô.",
+        "why_others_wrong_vi": "Nội dung câu hỏi trái ngược hoàn toàn với bài đọc.",
+        "tip_vi": "> **💡 Mẹo:** Đọc cẩn thận điều kiện 'if it is raining' và 'if it is hot and sunny'.",
+        "question_type": "True/False/Not Given",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "NOT GIVEN",
+        "evidence_quote": "They wear **thick** sweaters, **gloves**, and warm hats.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Bài có nói về việc mặc đồ ấm, nhưng không có thông tin về việc mua online.",
+        "why_others_wrong_vi": "Không có dữ kiện xác nhận mua ở đâu.",
+        "tip_vi": "> **💡 Mẹo:** Không dùng hiểu biết cá nhân (VD: nay ai cũng mua online) để làm bài.",
+        "question_type": "True/False/Not Given",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "TRUE",
+        "evidence_quote": "Some families now choose to hang their wet clothes outside on a sunny day instead of using a machine. This simple **habit** [R] can help save energy.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Phơi đồ bên ngoài (hang clothes outside) giúp tiết kiệm năng lượng (save energy/electricity).",
+        "why_others_wrong_vi": "Khớp nghĩa 100%.",
+        "tip_vi": "> **💡 Mẹo:** 'Electricity' (điện) là một dạng của 'energy' (năng lượng).",
+        "question_type": "True/False/Not Given",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "FALSE",
+        "evidence_quote": "Washing and drying clothes use a lot of water and **electricity**.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Giặt đồ nhiều gây tốn điện, nước. Việc giặt mỗi ngày không được khuyên để bảo vệ môi trường.",
+        "why_others_wrong_vi": "Câu hỏi nói giặt mỗi ngày bảo vệ hành tinh là sai.",
+        "tip_vi": "> **💡 Mẹo:** Phân tích logic lợi hại trong bài.",
+        "question_type": "True/False/Not Given",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "umbrella",
+        "evidence_quote": "For example, if it is raining, you might need a rain jacket and an **umbrella**.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Cần một cái ô (umbrella) khi trời mưa.",
+        "why_others_wrong_vi": "Các từ khác sai nghĩa.",
+        "tip_vi": "> **💡 Mẹo:** Đứng sau 'an' là danh từ đếm được số ít, bắt đầu bằng nguyên âm.",
+        "question_type": "Gap Fill",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "thin",
+        "evidence_quote": "People who live in hot climates usually have many **thin** clothes made of **cotton**.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Người ở xứ nóng mặc đồ mỏng (thin).",
+        "why_others_wrong_vi": "Sai với ngữ cảnh chống nóng.",
+        "tip_vi": "> **💡 Mẹo:** Tìm tính từ bổ nghĩa cho 'clothes' trong đoạn 2.",
+        "question_type": "Gap Fill",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "gloves",
+        "evidence_quote": "They wear **thick** sweaters, **gloves**, and warm hats.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Trang phục mùa đông bao gồm găng tay (gloves).",
+        "why_others_wrong_vi": "Thiếu danh từ liệt kê.",
+        "tip_vi": "> **💡 Mẹo:** Nhìn vào danh sách liệt kê A, B, and C.",
+        "question_type": "Gap Fill",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "electricity",
+        "evidence_quote": "Washing and drying clothes use a lot of water and **electricity**.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Máy giặt dùng nhiều nước và điện (electricity).",
+        "why_others_wrong_vi": "Các từ khác không phù hợp.",
+        "tip_vi": "> **💡 Mẹo:** Từ đi chung cặp với water ở đoạn 3.",
+        "question_type": "Gap Fill",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "time",
+        "evidence_quote": "Also, when we buy fewer clothes and wear them for a long time, we can **reduce** [R] the amount of waste we produce.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Mặc quần áo trong thời gian (time) dài.",
+        "why_others_wrong_vi": "Sai với cụm 'long time'.",
+        "tip_vi": "> **💡 Mẹo:** Cụm từ cố định 'a long time'.",
+        "question_type": "Gap Fill",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "Weather happens right now, but climate is over a long time.",
+        "evidence_quote": "Weather refers to what is happening outside right now. ... Climate means the usual weather in a place over a long time.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Sự khác biệt chính là weather là tức thời (right now), climate là dài hạn (long time).",
+        "why_others_wrong_vi": "Các lựa chọn khác đưa ra lý do không chính xác.",
+        "tip_vi": "> **💡 Mẹo:** So sánh hai định nghĩa liền kề nhau.",
+        "question_type": "Multiple Choice",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "To trap the heat.",
+        "evidence_quote": "Sometimes, they wear several **layers** [R] of clothing at the same time to trap the heat.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Mục đích mặc nhiều lớp là để giữ nhiệt.",
+        "why_others_wrong_vi": "Các lý do khác sai thực tế.",
+        "tip_vi": "> **💡 Mẹo:** Từ 'to' chỉ mục đích xuất hiện cuối câu.",
+        "question_type": "Multiple Choice",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "It reduces the amount of waste we produce.",
+        "evidence_quote": "Also, when we buy fewer clothes and wear them for a long time, we can **reduce** [R] the amount of waste we produce. In this way, our daily clothes are very **important** [R] for the planet.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Việc mua ít đi làm giảm rác thải, bảo vệ hành tinh.",
+        "why_others_wrong_vi": "Các lựa chọn khác không phải là lợi ích cho hành tinh.",
+        "tip_vi": "> **💡 Mẹo:** Đọc và xâu chuỗi hai câu cuối cùng của đoạn 3.",
+        "question_type": "Multiple Choice",
+        "depth_check_vi": "Depth check"
+      }
+    ],
+    "grammar_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "is shining",
+        "analysis_vi": "Hiện tại tiếp diễn với 'right now'.",
+        "tip_vi": "> **💡 Mẹo:** is + V-ing.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "snows",
+        "analysis_vi": "Sự thật thường xuyên với 'rarely'.",
+        "tip_vi": "> **💡 Mẹo:** it số ít thêm 's'.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "usually wears",
+        "analysis_vi": "Thói quen với 'usually'.",
+        "tip_vi": "> **💡 Mẹo:** My sister số ít thêm 's'.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "are playing",
+        "analysis_vi": "Hành động tức thời 'Look!'.",
+        "tip_vi": "> **💡 Mẹo:** They are + V-ing.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "do not like",
+        "analysis_vi": "Động từ trạng thái không dùng tiếp diễn.",
+        "tip_vi": "> **💡 Mẹo:** Dùng hiện tại đơn cho sở thích.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "are wearing",
+        "analysis_vi": "Câu hỏi cho sự việc đang diễn ra hôm nay.",
+        "tip_vi": "> **💡 Mẹo:** What are you wearing?",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "is blowing",
+        "analysis_vi": "Dấu hiệu 'at the moment'.",
+        "tip_vi": "> **💡 Mẹo:** The wind số ít dùng is.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "always takes",
+        "analysis_vi": "Thói quen 'always'.",
+        "tip_vi": "> **💡 Mẹo:** takes thêm 's'.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "is putting",
+        "analysis_vi": "Hành động đang xảy ra (Is he going out?).",
+        "tip_vi": "> **💡 Mẹo:** is + putting (nhân đôi t).",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "drops",
+        "analysis_vi": "Sự thật chung 'often'.",
+        "tip_vi": "> **💡 Mẹo:** The temperature số ít.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "is hitting",
+        "analysis_vi": "Dấu hiệu 'Listen!'.",
+        "tip_vi": "> **💡 Mẹo:** is + hitting.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "do not need",
+        "analysis_vi": "Need không dùng tiếp diễn.",
+        "tip_vi": "> **💡 Mẹo:** We do not need.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "freezes",
+        "analysis_vi": "Sự thật hiển nhiên về vật lý.",
+        "tip_vi": "> **💡 Mẹo:** Water không đếm được -> động từ chia số ít.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 14,
+        "correct_answer": "am trying",
+        "analysis_vi": "Hành động tạm thời trong ngày hôm nay.",
+        "tip_vi": "> **💡 Mẹo:** am + trying.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 15,
+        "correct_answer": "much",
+        "analysis_vi": "Snow không đếm được.",
+        "tip_vi": "> **💡 Mẹo:** Dùng too much.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 16,
+        "correct_answer": "any",
+        "analysis_vi": "Câu phủ định dùng any.",
+        "tip_vi": "> **💡 Mẹo:** Not + any.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 17,
+        "correct_answer": "a few",
+        "analysis_vi": "T-shirts đếm được số nhiều.",
+        "tip_vi": "> **💡 Mẹo:** Dùng a few.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 18,
+        "correct_answer": "some",
+        "analysis_vi": "Câu khẳng định dùng some.",
+        "tip_vi": "> **💡 Mẹo:** Cần một chút ánh sáng mặt trời.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 19,
+        "correct_answer": "many",
+        "analysis_vi": "Pairs đếm được.",
+        "tip_vi": "> **💡 Mẹo:** How many.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 20,
+        "correct_answer": "little",
+        "analysis_vi": "Knowledge không đếm được.",
+        "tip_vi": "> **💡 Mẹo:** little knowledge.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 21,
+        "correct_answer": "much",
+        "analysis_vi": "Time không đếm được.",
+        "tip_vi": "> **💡 Mẹo:** Không có nhiều thời gian.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 22,
+        "correct_answer": "any",
+        "analysis_vi": "Câu nghi vấn dùng any.",
+        "tip_vi": "> **💡 Mẹo:** Did you buy any...?",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 23,
+        "correct_answer": "He usually wears a raincoat when he goes to work.",
+        "analysis_vi": "Sửa thì tiếp diễn -> đơn vì có 'usually'.",
+        "tip_vi": "> **💡 Mẹo:** usually wears.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 24,
+        "correct_answer": "We don't have any thick sweaters in our closet.",
+        "analysis_vi": "Phủ định không dùng some.",
+        "tip_vi": "> **💡 Mẹo:** Sửa some thành any.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 25,
+        "correct_answer": "Look! The snow is falling very heavily right now.",
+        "analysis_vi": "Sửa thì đơn -> tiếp diễn vì có 'Look!'.",
+        "tip_vi": "> **💡 Mẹo:** is falling.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 26,
+        "correct_answer": "She has many umbrellas.",
+        "analysis_vi": "Thay thế a large number of.",
+        "tip_vi": "> **💡 Mẹo:** Dùng many.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 27,
+        "correct_answer": "I put on my jacket every morning.",
+        "analysis_vi": "Chuyển sang hiện tại đơn chỉ thói quen.",
+        "tip_vi": "> **💡 Mẹo:** I put...",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 28,
+        "correct_answer": "There is too much rain outside to go for a walk.",
+        "analysis_vi": "Rain không đếm được.",
+        "tip_vi": "> **💡 Mẹo:** is too much.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 29,
+        "correct_answer": "Do you believe that the climate is changing fast?",
+        "analysis_vi": "Believe không dùng tiếp diễn.",
+        "tip_vi": "> **💡 Mẹo:** Do you believe.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      },
+      {
+        "question_id": 30,
+        "correct_answer": "He doesn't have many clothes for winter.",
+        "analysis_vi": "Clothes là số nhiều đếm được.",
+        "tip_vi": "> **💡 Mẹo:** Sửa much thành many.",
+        "grammar_target": "Target",
+        "form_meaning_vi": "Form and Meaning",
+        "use_in_context_vi": "Context",
+        "trap_logic_vi": "Trap Logic",
+        "why_others_wrong_vi": "Why others wrong",
+        "depth_check_vi": "Depth check"
+      }
+    ],
+    "writing_guidance": [
+      {
+        "task_id": 1,
+        "model_answer": "I always carry an umbrella in summer.",
+        "guidance_vi": "Mô tả câu đúng trật tự từ.",
+        "self_checklist": [
+          "Trạng từ đứng trước động từ chính.",
+          "Viết hoa chữ đầu câu."
+        ]
+      },
+      {
+        "task_id": 2,
+        "model_answer": "Hi John,\nThe weather here is freezing today. Right now, it is raining very heavily. I am wearing a thick sweater, a raincoat, and warm gloves. I hope it gets sunny tomorrow!\nBest,\nLinh",
+        "guidance_vi": "Mô tả thời tiết và trang phục hiện tại.",
+        "self_checklist": [
+          "Đủ độ dài.",
+          "Dùng thì tiếp diễn mô tả trang phục."
+        ]
+      },
+      {
+        "task_id": 3,
+        "model_answer": "I prefer winter because I love cold weather. In this season, I usually wear thick sweaters and a red scarf. It makes me feel comfortable and warm when I go outside.",
+        "guidance_vi": "Sở thích và thói quen ăn mặc.",
+        "self_checklist": [
+          "Dùng hiện tại đơn.",
+          "Đủ 3 câu."
+        ]
+      },
+      {
+        "task_id": 4,
+        "model_answer": "In winter, the store sold many sweaters, reaching 450 items. However, in summer, the number of sweaters sold was very low, at only 80. By contrast, people bought more T-shirts in summer (500 items) than in winter (120 items).",
+        "guidance_vi": "So sánh biểu đồ.",
+        "self_checklist": [
+          "Nêu số liệu mùa đông.",
+          "So sánh mùa hè.",
+          "Chỉ ra sự thay đổi."
+        ]
+      },
+      {
+        "task_id": 5,
+        "model_answer": "In my opinion, weather strongly affects how people feel. For example, when it rains, many people feel sad or lazy. Also, wearing bright clothes on sunny days can make you feel happy and full of energy. Therefore, weather changes our mood every day.",
+        "guidance_vi": "Đoạn văn bày tỏ quan điểm.",
+        "self_checklist": [
+          "Rõ quan điểm.",
+          "Có ví dụ minh họa.",
+          "Đủ 50 từ."
+        ]
+      }
+    ],
+    "writing_revisions": [],
+    "review_bridge": [
+      {
+        "id": 1,
+        "prompt": "Dịch: Nó đã trở thành thói quen của tôi.",
+        "correct_answer": "It became my habit.",
+        "rationale_vi": "Từ vựng: habit (20260705)."
+      },
+      {
+        "id": 2,
+        "prompt": "Điền từ: We need to _______ (làm giảm) the waste.",
+        "correct_answer": "reduce",
+        "rationale_vi": "Từ vựng: reduce (20260704)."
+      },
+      {
+        "id": 3,
+        "prompt": "Dịch: Quyết định đó rất quan trọng.",
+        "correct_answer": "That decision is very important.",
+        "rationale_vi": "Từ vựng: important (20260705)."
+      }
+    ]
+  },
+  "warm_up": [
+    "What is your favorite type of weather?",
+    "Do you prefer hot or cold climates?",
+    "How does the weather affect the clothes you buy?"
+  ],
+  "level": "A2",
+  "topic": "Weather and clothes",
+  "day": "20260708",
+  "lesson_id": "LSN-20260708-A2-WEATHER",
+  "practice_markdown": "Reading: A2\nWriting: A2\n\n## Reading Source Verification\n| Source title | Publisher/Organization | Date/Access date | Final verified URL | URL status | Source type | Reliability check | How the passage uses the source |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Weather, Climate, and Clothing | National Geographic | 2023-05-12 / 2026-07-05 | https://education.nationalgeographic.org/resource/weather-and-clothing | 200 OK | Educational News Article | A highly recognized educational publisher. | Directly explains the difference between weather and climate and how it affects what we wear. |\n\n## Warm-up\nAnswer the following questions in Vietnamese or English:\n1. What is your favorite type of weather?\n2. Do you prefer hot or cold climates?\n3. How does the weather affect the clothes you buy?\n\n## Reading Passage\n### Dressing for the Weather\n\nDo you look out the **window** before you get dressed in the morning? Most people do. This is because the **weather** helps us decide what to wear. Weather refers to what is happening outside right now. For example, if it is raining, you might need a rain jacket and an **umbrella**. If it is hot and sunny, you usually wear a **lightweight** T-shirt and shorts. Making the right **choice** helps you stay **comfortable** all day.\n\nHowever, **climate** is different from weather. Climate means the usual weather in a place over a long time. People who live in hot climates usually have many **thin** clothes made of **cotton**. This material helps keep the body cool. On the other hand, people in cold climates must **protect** themselves from the freezing temperatures. They wear **thick** sweaters, **gloves**, and warm hats. Sometimes, they wear several **layers** [R] of clothing at the same time to trap the heat.\n\nClothing choices can also affect the **environment**. Washing and drying clothes use a lot of water and **electricity**. Some families now choose to hang their wet clothes outside on a sunny day instead of using a machine. This simple **habit** [R] can help save energy. Also, when we buy fewer clothes and wear them for a long time, we can **reduce** [R] the amount of waste we produce. In this way, our daily clothes are very **important** [R] for the planet.\n\n## Questions for Reading\n### Questions 1–5: True/False/Not Given\n\n1. Looking out the window can help you decide what to wear.\n    A. TRUE\n    B. FALSE\n    C. NOT GIVEN\n2. Shorts are the best clothing for a rainy day.\n    A. TRUE\n    B. FALSE\n    C. NOT GIVEN\n3. Many people buy their winter clothes online.\n    A. TRUE\n    B. FALSE\n    C. NOT GIVEN\n4. Hanging clothes outside to dry can help save electricity.\n    A. TRUE\n    B. FALSE\n    C. NOT GIVEN\n5. People should wash their clothes every day to protect the planet.\n    A. TRUE\n    B. FALSE\n    C. NOT GIVEN\n\n### Questions 6–10: Gap Fill\n\n6. If it is raining outside, you will probably need an _______.\n7. People in hot places like to wear _______ clothes to keep their bodies cool.\n8. In freezing temperatures, it is a good idea to wear warm hats and _______.\n9. Using a machine to dry your clothes uses a lot of _______ and water.\n10. We can decrease waste if we buy fewer clothes and wear them for a long _______.\n\n### Questions 11–13: Multiple Choice\n\n11. What is the main difference between weather and climate?\n    A. Weather is hot, but climate is always cold.\n    B. Weather happens right now, but climate is over a long time.\n    C. Weather is about umbrellas, but climate is about sweaters.\n    D. Weather uses electricity, but climate does not.\n12. Why do people in cold climates wear several layers of clothing?\n    A. To keep the body cool.\n    B. To use less water.\n    C. To trap the heat.\n    D. To look more fashionable.\n13. (*) How can buying fewer clothes help the planet? (*)\n    A. It makes people more comfortable.\n    B. It reduces the amount of waste we produce.\n    C. It creates more freezing temperatures.\n    D. It makes clothes dry faster.\n\n## Questions for Grammar\n### Present Simple vs Present Continuous\n\n1. Right now, the sun _______ (shine) brightly outside.\n2. In my country, it rarely _______ (snow) in the winter.\n3. My sister _______ (usually / wear) a thick coat when it is cold.\n4. Look! They _______ (play) in the rain without an umbrella.\n5. I _______ (not / like) hot weather because it makes me tired.\n6. What _______ you _______ (wear) today? It is freezing outside!\n7. The wind _______ (blow) very strongly at the moment.\n8. She _______ (always / take) an umbrella with her in autumn.\n9. Why _______ he _______ (put) on his jacket? Is he going out?\n10. The temperature often _______ (drop) at night in the desert.\n11. Listen! The rain _______ (hit) the window.\n12. We _______ (not / need) a heater right now because the room is warm.\n13. (*) Water _______ (freeze) when the temperature is below zero. (*)\n14. (*) I _______ (try) to dry my clothes, but there is no sun today. (*)\n\n### Countable/Uncountable Nouns and Quantifiers\n\n15. There is too _______ (much / many) snow on the road to drive safely.\n16. I do not have _______ (some / any) warm jackets for the trip.\n17. She packed _______ (a few / a little) T-shirts because it will be hot.\n18. We need _______ (some / any) sunlight to dry these thick sweaters.\n19. How _______ (much / many) pairs of gloves do you own?\n20. I have very _______ (little / few) knowledge about extreme weather.\n21. (*) There isn't _______ (many / much) time left before the storm hits. (*)\n22. (*) Did you buy _______ (some / any) new scarves for the winter? (*)\n\n### Error Correction and Sentence Transformation\n\n23. Correct the error: He is usually wearing a raincoat when he goes to work.\n24. Correct the error: We don't have some thick sweaters in our closet.\n25. Correct the error: Look! The snow falls very heavily right now.\n26. She has a large number of umbrellas. [Rewrite using 'many']\n27. I am putting on my jacket now. [Rewrite to describe a daily habit using 'every morning']\n28. Correct the error: There are too many rain outside to go for a walk.\n29. Correct the error: Are you believing that the climate is changing fast? (*)\n30. (*) He doesn't have much clothes for winter. [Correct the mistake in this sentence] (*)\n\n## Questions for Writing\n| # | Task | Target length | Focus skill | Useful language | Success criteria |\n| --- | --- | --- | --- | --- | --- |\n| 1 | Sentence Building: Sắp xếp các từ sau thành câu hoàn chỉnh mô tả thời tiết: (always / an / I / carry / umbrella / summer / in) | 1 sentence | Correct word order with adverbs of frequency. | I always carry... | Grammatically correct.<br>Proper position of 'always'. |\n| 2 | Email: Viết một email ngắn (40-50 từ) cho một người bạn kể về thời tiết hiện tại ở thành phố của bạn và bạn đang mặc gì hôm nay. | 40-50 words | Describing current weather and clothes. | The weather here is...<br>Right now, it is raining...<br>I am wearing... | Describe weather.<br>Describe clothes.<br>Between 40-50 words. |\n| 3 | Short Description: Viết một đoạn văn ngắn (3-4 câu) giải thích tại sao bạn thích mùa hè hoặc mùa đông hơn. Nhắc đến những bộ quần áo bạn thường mặc trong mùa đó. | 3-4 sentences | Expressing preference and describing habits. | I prefer winter because...<br>In this season, I usually wear...<br>It makes me feel comfortable. | Write 3-4 sentences.<br>Use present simple correctly. |\n| 4 | Data Description: Mô tả biểu đồ dưới đây về số lượng áo len (Sweaters) và áo phông (T-shirts) được bán ra tại một cửa hàng trong hai mùa: Winter (Mùa đông) và Summer (Mùa hè). Viết 3 câu so sánh.<br><br><div class=\"svg-chart-container\"><svg viewBox=\"0 0 400 220\" width=\"100%\" height=\"220\" style=\"background-color: #f9f9f9; border-radius: 8px;\"><text x=\"200\" y=\"25\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#333\">Clothes Sold: Winter vs Summer</text><line x1=\"60\" y1=\"50\" x2=\"360\" y2=\"50\" stroke=\"#eee\" stroke-width=\"1\"/><line x1=\"60\" y1=\"90\" x2=\"360\" y2=\"90\" stroke=\"#eee\" stroke-width=\"1\"/><line x1=\"60\" y1=\"130\" x2=\"360\" y2=\"130\" stroke=\"#eee\" stroke-width=\"1\"/><line x1=\"60\" y1=\"170\" x2=\"360\" y2=\"170\" stroke=\"#eee\" stroke-width=\"1\"/><text x=\"50\" y=\"54\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">500</text><text x=\"50\" y=\"94\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">300</text><text x=\"50\" y=\"134\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">100</text><text x=\"50\" y=\"174\" text-anchor=\"end\" font-family=\"Arial\" font-size=\"10\" fill=\"#666\">0</text><line x1=\"60\" y1=\"170\" x2=\"360\" y2=\"170\" stroke=\"#ccc\" stroke-width=\"1.5\"/><rect x=\"110\" y=\"60\" width=\"30\" height=\"110\" fill=\"#34495e\" rx=\"2\"/><text x=\"125\" y=\"53\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">450</text><rect x=\"150\" y=\"140\" width=\"30\" height=\"30\" fill=\"#e67e22\" rx=\"2\"/><text x=\"165\" y=\"133\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">120</text><rect x=\"230\" y=\"150\" width=\"30\" height=\"20\" fill=\"#34495e\" rx=\"2\"/><text x=\"245\" y=\"143\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">80</text><rect x=\"270\" y=\"50\" width=\"30\" height=\"120\" fill=\"#e67e22\" rx=\"2\"/><text x=\"285\" y=\"43\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"9\" font-weight=\"bold\" fill=\"#333\">500</text><text x=\"140\" y=\"185\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\">Winter</text><text x=\"260\" y=\"185\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"11\" font-weight=\"bold\" fill=\"#333\">Summer</text><rect x=\"130\" y=\"200\" width=\"10\" height=\"10\" fill=\"#34495e\"/><text x=\"145\" y=\"209\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">Sweaters</text><rect x=\"230\" y=\"200\" width=\"10\" height=\"10\" fill=\"#e67e22\"/><text x=\"245\" y=\"209\" font-family=\"Arial\" font-size=\"10\" fill=\"#333\">T-shirts</text></svg></div> | 3 sentences | Comparing quantities in a chart. | In winter, they sell many...<br>However, in summer, the number of...<br>People buy more T-shirts when... | Write 3 sentences.<br>Correctly identify the highest selling items in each season. |\n| 5 | Opinion Paragraph: Viết đoạn văn ngắn (50-60 từ) trình bày ý kiến của bạn: Bạn có nghĩ rằng thời tiết thay đổi ảnh hưởng đến tâm trạng của con người không? Đưa ra ví dụ liên quan đến quần áo. | 50-60 words | Expressing an opinion. | In my opinion, weather strongly affects...<br>For example, when it rains...<br>Also, wearing bright clothes can... | State opinion clearly.<br>Give an example with clothes.<br>Write 50-60 words. |\n\n## Review Bridge\n#### V. Review Bridge / Ôn tập liên chủ đề\n1. Dịch: Nó đã trở thành thói quen của tôi.\n\n2. Điền từ: We need to _______ (làm giảm) the waste.\n\n3. Dịch: Quyết định đó rất quan trọng.\n",
+  "vocabulary_grammar_markdown": "## Vocabulary Table\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |\n| --- | --- | --- | --- | --- |\n| window | /ˈwɪn.dəʊ/ | noun | cửa sổ (a space in a wall that lets in light and air) | She looked out the window to see if it was raining. |\n| weather | /ˈweð.ər/ | noun | thời tiết (the conditions in the air above the earth such as wind, rain, or temperature) | The weather today is very sunny. |\n| umbrella | /ʌmˈbrel.ə/ | noun | cái ô, cây dù (an object held over the head to protect you from rain) | Don't forget your umbrella when you go out. |\n| lightweight | /ˈlaɪt.weɪt/ | adj | nhẹ, mỏng nhẹ (weighing only a little or less than average) | I prefer lightweight clothes in summer. |\n| choice | /tʃɔɪs/ | noun | sự lựa chọn (an act of choosing between two or more possibilities) | Making the right clothing choice is important. |\n| comfortable | /ˈkʌm.fə.tə.bəl/ | adj | thoải mái (producing a relaxing feeling) | These shoes are very comfortable for walking. |\n| climate | /ˈklaɪ.mət/ | noun | khí hậu (the general weather conditions usually found in a particular place) | Tropical countries have a hot climate. |\n| thin | /θɪn/ | adj | mỏng (having a small distance between two opposite sides) | He wore a thin shirt on the beach. |\n| cotton | /ˈkɒt.ən/ | noun | vải bông (a soft thread or cloth made from a plant) | Cotton is very soft and comfortable. |\n| protect | /prəˈtekt/ | verb | bảo vệ (to keep someone or something safe from injury or damage) | A hat can protect your face from the sun. |\n| thick | /θɪk/ | adj | dày (having a large distance between two sides) | A thick sweater keeps you warm in winter. |\n| gloves | /ɡlʌvz/ | noun | găng tay (pieces of clothing that cover your fingers and hands) | I lost one of my winter gloves. |\n| environment | /ɪnˈvaɪ.rən.mənt/ | noun | môi trường (the air, water, and land in or on which people, animals, and plants live) | We must protect the natural environment. |\n| electricity | /ɪˌlekˈtrɪs.ə.ti/ | noun | điện (a form of energy that provides power) | Washing machines use a lot of electricity. |\n| dress up | /dres ʌp/ | phrasal verb | mặc diện, ăn mặc đẹp (to put on formal clothes for a special occasion) | We dress up for weddings. |\n| wrap up warm | /ræp ʌp wɔːm/ | collocation | mặc ấm (to dress in warm clothes) | Wrap up warm before you go out in the snow. |\n| trap the heat | /træp ðə hiːt/ | collocation | giữ nhiệt (to keep warm air from escaping) | Layers of clothing help to trap the heat. |\n| raincoat | /ˈreɪn.kəʊt/ | noun | áo mưa (a coat that protects you from the rain) | I bought a yellow raincoat yesterday. |\n| scarf | /skɑːf/ | noun | khăn choàng cổ (a piece of cloth worn around the neck) | She knitted a red scarf for her brother. |\n| sunglasses | /ˈsʌnˌɡlɑː.sɪz/ | noun | kính râm (dark glasses that you wear to protect your eyes from the sun) | Don't forget your sunglasses when you go to the beach. |\n\n## Recycled Vocabulary (Từ vựng ôn tập)\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Bài học gốc (Day) |\n| --- | --- | --- | --- | --- |\n| layers | /ˈleɪ.əz/ | noun | lớp (quần áo) | Day 20260706 |\n| habit | /ˈhæb.ɪt/ | noun | thói quen | Day 20260705 |\n| reduce | /rɪˈdʒuːs/ | verb | làm giảm | Day 20260704 |\n| important | /ɪmˈpɔː.tənt/ | adj | quan trọng | Day 20260705 |\n\n## Detailed Grammar Guide\n#### Chủ điểm 1: Present Simple vs Present Continuous\n**1. Present Simple (Hiện tại đơn):** Dùng diễn tả sự thật hiển nhiên hoặc thói quen.\n- Dấu hiệu: usually, always, every day.\n- Ví dụ: It **rains** a lot in London (Thường mưa nhiều ở London).\n\n**2. Present Continuous (Hiện tại tiếp diễn):** Dùng diễn tả hành động đang xảy ra ngay lúc nói.\n- Dấu hiệu: right now, at the moment, look!.\n- Cấu trúc: am/is/are + V-ing.\n- Ví dụ: Look! It **is raining** outside (Nhìn kìa! Trời đang mưa).\n\n#### Chủ điểm 2: Countable/Uncountable Nouns (Danh từ đếm được/không đếm được)\n**1. Danh từ đếm được (Countable):** Có thể thêm 's' ở số nhiều (shirts, hats, gloves).\n- Dùng với: many, a few, some, any.\n- Ví dụ: I have **many shirts**.\n\n**2. Danh từ không đếm được (Uncountable):** Không thêm 's' (water, snow, rain, clothing, money).\n- Dùng với: much, a little, some, any.\n- Ví dụ: There is **much snow** on the mountain.\n\n**3. Some / Any:** 'Some' dùng trong câu khẳng định, 'Any' dùng trong câu phủ định và nghi vấn.\n- Ví dụ: I need **some** water. I don't have **any** umbrellas.\n\n## Common Mistakes / IELTS Traps for This Topic\n| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |\n| --- | --- | --- | --- |\n| Dùng 'many' với danh từ không đếm được. | We had many rain yesterday. | We had a lot of rain yesterday. | 'Rain' là danh từ không đếm được nên không dùng 'many'. |\n| Dùng sai thì tiếp diễn cho thói quen. | I am usually wearing a jacket in winter. | I usually wear a jacket in winter. | Trạng từ 'usually' chỉ thói quen nên phải dùng thì hiện tại đơn. |\n",
+  "answers_markdown": "## Reading Answer Key and Detailed Explanations\n\n📖 **Tóm tắt bài đọc:** Bài đọc mô tả chi tiết thông tin từ nguồn đã xác thực.\n\n1. **TRUE**\n- Bằng chứng: \"Do you look out the **window** before you get dressed in the morning? Most people do. This is because the **weather** helps us decide what to wear.\" (§1)\n- Cách tìm đáp án: Nhìn ra cửa sổ để biết thời tiết giúp quyết định mặc gì, khớp với câu hỏi. False/NG sai vì có dẫn chứng rõ ràng.\n> **💡 Mẹo:** > **💡 Mẹo:** Chú ý liên kết nhân quả giữa câu hỏi tu từ và câu trả lời trong bài.\n\n2. **FALSE**\n- Bằng chứng: \"For example, if it is raining, you might need a rain jacket and an **umbrella**. If it is hot and sunny, you usually wear a **lightweight** T-shirt and shorts.\" (§1)\n- Cách tìm đáp án: Quần soóc dành cho ngày nắng nóng, còn ngày mưa cần áo mưa và ô. Nội dung câu hỏi trái ngược hoàn toàn với bài đọc.\n> **💡 Mẹo:** > **💡 Mẹo:** Đọc cẩn thận điều kiện 'if it is raining' và 'if it is hot and sunny'.\n\n3. **NOT GIVEN**\n- Bằng chứng: \"They wear **thick** sweaters, **gloves**, and warm hats.\" (§2)\n- Cách tìm đáp án: Bài có nói về việc mặc đồ ấm, nhưng không có thông tin về việc mua online. Không có dữ kiện xác nhận mua ở đâu.\n> **💡 Mẹo:** > **💡 Mẹo:** Không dùng hiểu biết cá nhân (VD: nay ai cũng mua online) để làm bài.\n\n4. **TRUE**\n- Bằng chứng: \"Some families now choose to hang their wet clothes outside on a sunny day instead of using a machine. This simple **habit** [R] can help save energy.\" (§3)\n- Cách tìm đáp án: Phơi đồ bên ngoài (hang clothes outside) giúp tiết kiệm năng lượng (save energy/electricity). Khớp nghĩa 100%.\n> **💡 Mẹo:** > **💡 Mẹo:** 'Electricity' (điện) là một dạng của 'energy' (năng lượng).\n\n5. **FALSE**\n- Bằng chứng: \"Washing and drying clothes use a lot of water and **electricity**.\" (§3)\n- Cách tìm đáp án: Giặt đồ nhiều gây tốn điện, nước. Việc giặt mỗi ngày không được khuyên để bảo vệ môi trường. Câu hỏi nói giặt mỗi ngày bảo vệ hành tinh là sai.\n> **💡 Mẹo:** > **💡 Mẹo:** Phân tích logic lợi hại trong bài.\n\n6. **umbrella**\n- Bằng chứng: \"For example, if it is raining, you might need a rain jacket and an **umbrella**.\" (§1)\n- Cách tìm đáp án: Cần một cái ô (umbrella) khi trời mưa. Các từ khác sai nghĩa.\n> **💡 Mẹo:** > **💡 Mẹo:** Đứng sau 'an' là danh từ đếm được số ít, bắt đầu bằng nguyên âm.\n\n7. **thin**\n- Bằng chứng: \"People who live in hot climates usually have many **thin** clothes made of **cotton**.\" (§2)\n- Cách tìm đáp án: Người ở xứ nóng mặc đồ mỏng (thin). Sai với ngữ cảnh chống nóng.\n> **💡 Mẹo:** > **💡 Mẹo:** Tìm tính từ bổ nghĩa cho 'clothes' trong đoạn 2.\n\n8. **gloves**\n- Bằng chứng: \"They wear **thick** sweaters, **gloves**, and warm hats.\" (§2)\n- Cách tìm đáp án: Trang phục mùa đông bao gồm găng tay (gloves). Thiếu danh từ liệt kê.\n> **💡 Mẹo:** > **💡 Mẹo:** Nhìn vào danh sách liệt kê A, B, and C.\n\n9. **electricity**\n- Bằng chứng: \"Washing and drying clothes use a lot of water and **electricity**.\" (§3)\n- Cách tìm đáp án: Máy giặt dùng nhiều nước và điện (electricity). Các từ khác không phù hợp.\n> **💡 Mẹo:** > **💡 Mẹo:** Từ đi chung cặp với water ở đoạn 3.\n\n10. **time**\n- Bằng chứng: \"Also, when we buy fewer clothes and wear them for a long time, we can **reduce** [R] the amount of waste we produce.\" (§3)\n- Cách tìm đáp án: Mặc quần áo trong thời gian (time) dài. Sai với cụm 'long time'.\n> **💡 Mẹo:** > **💡 Mẹo:** Cụm từ cố định 'a long time'.\n\n11. **Weather happens right now, but climate is over a long time.**\n- Bằng chứng: \"Weather refers to what is happening outside right now. ... Climate means the usual weather in a place over a long time.\" (§2)\n- Cách tìm đáp án: Sự khác biệt chính là weather là tức thời (right now), climate là dài hạn (long time). Các lựa chọn khác đưa ra lý do không chính xác.\n> **💡 Mẹo:** > **💡 Mẹo:** So sánh hai định nghĩa liền kề nhau.\n\n12. **To trap the heat.**\n- Bằng chứng: \"Sometimes, they wear several **layers** [R] of clothing at the same time to trap the heat.\" (§2)\n- Cách tìm đáp án: Mục đích mặc nhiều lớp là để giữ nhiệt. Các lý do khác sai thực tế.\n> **💡 Mẹo:** > **💡 Mẹo:** Từ 'to' chỉ mục đích xuất hiện cuối câu.\n\n13. **It reduces the amount of waste we produce.**\n- Bằng chứng: \"Also, when we buy fewer clothes and wear them for a long time, we can **reduce** [R] the amount of waste we produce. In this way, our daily clothes are very **important** [R] for the planet.\" (§3)\n- Cách tìm đáp án: Việc mua ít đi làm giảm rác thải, bảo vệ hành tinh. Các lựa chọn khác không phải là lợi ích cho hành tinh.\n> **💡 Mẹo:** > **💡 Mẹo:** Đọc và xâu chuỗi hai câu cuối cùng của đoạn 3.\n\n## Grammar Answer Key and Detailed Explanations\n\n> **Bảng phân biệt nhanh / Công thức bỏ túi:**\n> - Ôn tập lý thuyết đã học trong bài.\n\n1. **is shining**\n- Dấu hiệu / Phân tích: Hiện tại tiếp diễn với 'right now'.\n> **💡 Mẹo:** > **💡 Mẹo:** is + V-ing.\n\n2. **snows**\n- Dấu hiệu / Phân tích: Sự thật thường xuyên với 'rarely'.\n> **💡 Mẹo:** > **💡 Mẹo:** it số ít thêm 's'.\n\n3. **usually wears**\n- Dấu hiệu / Phân tích: Thói quen với 'usually'.\n> **💡 Mẹo:** > **💡 Mẹo:** My sister số ít thêm 's'.\n\n4. **are playing**\n- Dấu hiệu / Phân tích: Hành động tức thời 'Look!'.\n> **💡 Mẹo:** > **💡 Mẹo:** They are + V-ing.\n\n5. **do not like**\n- Dấu hiệu / Phân tích: Động từ trạng thái không dùng tiếp diễn.\n> **💡 Mẹo:** > **💡 Mẹo:** Dùng hiện tại đơn cho sở thích.\n\n6. **are wearing**\n- Dấu hiệu / Phân tích: Câu hỏi cho sự việc đang diễn ra hôm nay.\n> **💡 Mẹo:** > **💡 Mẹo:** What are you wearing?\n\n7. **is blowing**\n- Dấu hiệu / Phân tích: Dấu hiệu 'at the moment'.\n> **💡 Mẹo:** > **💡 Mẹo:** The wind số ít dùng is.\n\n8. **always takes**\n- Dấu hiệu / Phân tích: Thói quen 'always'.\n> **💡 Mẹo:** > **💡 Mẹo:** takes thêm 's'.\n\n9. **is putting**\n- Dấu hiệu / Phân tích: Hành động đang xảy ra (Is he going out?).\n> **💡 Mẹo:** > **💡 Mẹo:** is + putting (nhân đôi t).\n\n10. **drops**\n- Dấu hiệu / Phân tích: Sự thật chung 'often'.\n> **💡 Mẹo:** > **💡 Mẹo:** The temperature số ít.\n\n11. **is hitting**\n- Dấu hiệu / Phân tích: Dấu hiệu 'Listen!'.\n> **💡 Mẹo:** > **💡 Mẹo:** is + hitting.\n\n12. **do not need**\n- Dấu hiệu / Phân tích: Need không dùng tiếp diễn.\n> **💡 Mẹo:** > **💡 Mẹo:** We do not need.\n\n13. **freezes**\n- Dấu hiệu / Phân tích: Sự thật hiển nhiên về vật lý.\n> **💡 Mẹo:** > **💡 Mẹo:** Water không đếm được -> động từ chia số ít.\n\n14. **am trying**\n- Dấu hiệu / Phân tích: Hành động tạm thời trong ngày hôm nay.\n> **💡 Mẹo:** > **💡 Mẹo:** am + trying.\n\n15. **much**\n- Dấu hiệu / Phân tích: Snow không đếm được.\n> **💡 Mẹo:** > **💡 Mẹo:** Dùng too much.\n\n16. **any**\n- Dấu hiệu / Phân tích: Câu phủ định dùng any.\n> **💡 Mẹo:** > **💡 Mẹo:** Not + any.\n\n17. **a few**\n- Dấu hiệu / Phân tích: T-shirts đếm được số nhiều.\n> **💡 Mẹo:** > **💡 Mẹo:** Dùng a few.\n\n18. **some**\n- Dấu hiệu / Phân tích: Câu khẳng định dùng some.\n> **💡 Mẹo:** > **💡 Mẹo:** Cần một chút ánh sáng mặt trời.\n\n19. **many**\n- Dấu hiệu / Phân tích: Pairs đếm được.\n> **💡 Mẹo:** > **💡 Mẹo:** How many.\n\n20. **little**\n- Dấu hiệu / Phân tích: Knowledge không đếm được.\n> **💡 Mẹo:** > **💡 Mẹo:** little knowledge.\n\n21. **much**\n- Dấu hiệu / Phân tích: Time không đếm được.\n> **💡 Mẹo:** > **💡 Mẹo:** Không có nhiều thời gian.\n\n22. **any**\n- Dấu hiệu / Phân tích: Câu nghi vấn dùng any.\n> **💡 Mẹo:** > **💡 Mẹo:** Did you buy any...?\n\n23. **He usually wears a raincoat when he goes to work.**\n- Dấu hiệu / Phân tích: Sửa thì tiếp diễn -> đơn vì có 'usually'.\n> **💡 Mẹo:** > **💡 Mẹo:** usually wears.\n\n24. **We don't have any thick sweaters in our closet.**\n- Dấu hiệu / Phân tích: Phủ định không dùng some.\n> **💡 Mẹo:** > **💡 Mẹo:** Sửa some thành any.\n\n25. **Look! The snow is falling very heavily right now.**\n- Dấu hiệu / Phân tích: Sửa thì đơn -> tiếp diễn vì có 'Look!'.\n> **💡 Mẹo:** > **💡 Mẹo:** is falling.\n\n26. **She has many umbrellas.**\n- Dấu hiệu / Phân tích: Thay thế a large number of.\n> **💡 Mẹo:** > **💡 Mẹo:** Dùng many.\n\n27. **I put on my jacket every morning.**\n- Dấu hiệu / Phân tích: Chuyển sang hiện tại đơn chỉ thói quen.\n> **💡 Mẹo:** > **💡 Mẹo:** I put...\n\n28. **There is too much rain outside to go for a walk.**\n- Dấu hiệu / Phân tích: Rain không đếm được.\n> **💡 Mẹo:** > **💡 Mẹo:** is too much.\n\n29. **Do you believe that the climate is changing fast?**\n- Dấu hiệu / Phân tích: Believe không dùng tiếp diễn.\n> **💡 Mẹo:** > **💡 Mẹo:** Do you believe.\n\n30. **He doesn't have many clothes for winter.**\n- Dấu hiệu / Phân tích: Clothes là số nhiều đếm được.\n> **💡 Mẹo:** > **💡 Mẹo:** Sửa much thành many.\n\n## Writing Guidance / Suggested Answers\n\n#### Task 1\n> **Suggested Model Answer:**\n> \"I always carry an umbrella in summer.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Mô tả câu đúng trật tự từ.\n- *Tự kiểm tra:* * Trạng từ đứng trước động từ chính. * Viết hoa chữ đầu câu.\n\n#### Task 2\n> **Suggested Model Answer:**\n> \"Hi John,\nThe weather here is freezing today. Right now, it is raining very heavily. I am wearing a thick sweater, a raincoat, and warm gloves. I hope it gets sunny tomorrow!\nBest,\nLinh\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Mô tả thời tiết và trang phục hiện tại.\n- *Tự kiểm tra:* * Đủ độ dài. * Dùng thì tiếp diễn mô tả trang phục.\n\n#### Task 3\n> **Suggested Model Answer:**\n> \"I prefer winter because I love cold weather. In this season, I usually wear thick sweaters and a red scarf. It makes me feel comfortable and warm when I go outside.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Sở thích và thói quen ăn mặc.\n- *Tự kiểm tra:* * Dùng hiện tại đơn. * Đủ 3 câu.\n\n#### Task 4\n> **Suggested Model Answer:**\n> \"In winter, the store sold many sweaters, reaching 450 items. However, in summer, the number of sweaters sold was very low, at only 80. By contrast, people bought more T-shirts in summer (500 items) than in winter (120 items).\"\n\n- **Hướng dẫn viết từng câu / từng bước:** So sánh biểu đồ.\n- *Tự kiểm tra:* * Nêu số liệu mùa đông. * So sánh mùa hè. * Chỉ ra sự thay đổi.\n\n#### Task 5\n> **Suggested Model Answer:**\n> \"In my opinion, weather strongly affects how people feel. For example, when it rains, many people feel sad or lazy. Also, wearing bright clothes on sunny days can make you feel happy and full of energy. Therefore, weather changes our mood every day.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Đoạn văn bày tỏ quan điểm.\n- *Tự kiểm tra:* * Rõ quan điểm. * Có ví dụ minh họa. * Đủ 50 từ.\n\n## Review Bridge\n#### IV. Review Bridge / Ôn tập liên chủ đề\n1. Dịch: Nó đã trở thành thói quen của tôi.\n- **Đáp án:** It became my habit.\n- **Giải thích:** Từ vựng: habit (20260705).\n\n2. Điền từ: We need to _______ (làm giảm) the waste.\n- **Đáp án:** reduce\n- **Giải thích:** Từ vựng: reduce (20260704).\n\n3. Dịch: Quyết định đó rất quan trọng.\n- **Đáp án:** That decision is very important.\n- **Giải thích:** Từ vựng: important (20260705).\n",
+  "quizlet_markdown": "## Section 1: Simple Vocabulary List (Học từ vựng đơn giản)\n| Từ vựng tiếng Anh | Nghĩa tiếng Việt |\n| --- | --- |\n| window | cửa sổ |\n| weather | thời tiết |\n| umbrella | cái ô, cây dù |\n| lightweight | nhẹ, mỏng nhẹ |\n| choice | sự lựa chọn |\n| comfortable | thoải mái |\n| climate | khí hậu |\n| thin | mỏng |\n| cotton | vải bông |\n| protect | bảo vệ |\n| thick | dày |\n| gloves | găng tay |\n| environment | môi trường |\n| electricity | điện |\n| dress up | mặc diện, ăn mặc đẹp |\n| wrap up warm | mặc ấm |\n| trap the heat | giữ nhiệt |\n| raincoat | áo mưa |\n| scarf | khăn choàng cổ |\n| sunglasses | kính râm |\n\n## Section 2: Detailed Vocabulary List (Học từ vựng đầy đủ)\n| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |\n| --- | --- |\n| window (/ˈwɪn.dəʊ/) [noun] | cửa sổ *e.g., She looked out the window to see if it was raining.* |\n| weather (/ˈweð.ər/) [noun] | thời tiết *e.g., The weather today is very sunny.* |\n| umbrella (/ʌmˈbrel.ə/) [noun] | cái ô, cây dù *e.g., Don't forget your umbrella when you go out.* |\n| lightweight (/ˈlaɪt.weɪt/) [adj] | nhẹ, mỏng nhẹ *e.g., I prefer lightweight clothes in summer.* |\n| choice (/tʃɔɪs/) [noun] | sự lựa chọn *e.g., Making the right clothing choice is important.* |\n| comfortable (/ˈkʌm.fə.tə.bəl/) [adj] | thoải mái *e.g., These shoes are very comfortable for walking.* |\n| climate (/ˈklaɪ.mət/) [noun] | khí hậu *e.g., Tropical countries have a hot climate.* |\n| thin (/θɪn/) [adj] | mỏng *e.g., He wore a thin shirt on the beach.* |\n| cotton (/ˈkɒt.ən/) [noun] | vải bông *e.g., Cotton is very soft and comfortable.* |\n| protect (/prəˈtekt/) [verb] | bảo vệ *e.g., A hat can protect your face from the sun.* |\n| thick (/θɪk/) [adj] | dày *e.g., A thick sweater keeps you warm in winter.* |\n| gloves (/ɡlʌvz/) [noun] | găng tay *e.g., I lost one of my winter gloves.* |\n| environment (/ɪnˈvaɪ.rən.mənt/) [noun] | môi trường *e.g., We must protect the natural environment.* |\n| electricity (/ɪˌlekˈtrɪs.ə.ti/) [noun] | điện *e.g., Washing machines use a lot of electricity.* |\n| dress up (/dres ʌp/) [phrasal verb] | mặc diện, ăn mặc đẹp *e.g., We dress up for weddings.* |\n| wrap up warm (/ræp ʌp wɔːm/) [collocation] | mặc ấm *e.g., Wrap up warm before you go out in the snow.* |\n| trap the heat (/træp ðə hiːt/) [collocation] | giữ nhiệt *e.g., Layers of clothing help to trap the heat.* |\n| raincoat (/ˈreɪn.kəʊt/) [noun] | áo mưa *e.g., I bought a yellow raincoat yesterday.* |\n| scarf (/skɑːf/) [noun] | khăn choàng cổ *e.g., She knitted a red scarf for her brother.* |\n| sunglasses (/ˈsʌnˌɡlɑː.sɪz/) [noun] | kính râm *e.g., Don't forget your sunglasses when you go to the beach.* |\n"
+}

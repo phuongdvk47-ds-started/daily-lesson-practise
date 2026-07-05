@@ -100,6 +100,12 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
                   "vocabulary_imbalance",
                   "missing_vocab_type",
                   "grammar_target_mismatch",
+                  "grammar_pattern_repetition",
+                  "surface_clue_only",
+                  "cognitive_level_imbalance",
+                  "missing_deep_grammar_validation",
+                  "missing_blueprint",
+                  "blueprint_mismatch",
                   "logic_error",
                   "incomplete_punctuation",
                   "incomplete_inserted_option",
@@ -114,7 +120,8 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
                   "numbering_error",
                   "meaning_changed",
                   "topic_alignment",
-                  "time_workload_mismatch"
+                  "time_workload_mismatch",
+                  "reading_order_violation"
                 ]
               },
               "severity": { "type": "STRING", "enum": ["low", "medium", "high", "critical"] },
@@ -135,7 +142,7 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
       "properties": {
         "lesson_id": { "type": "STRING", "description": "Unique format LSN-[Day]-[Level]-[Random8]" },
         "day": { "type": "STRING", "description": "YYYYMMDD format" },
-        "level": { "type": "STRING", "enum": ["A1", "A2", "B1", "B2", "C1", "C2"] },
+        "level": { "type": "STRING", "enum": ["A1", "A1+", "A2", "A2+", "B1", "B1+", "B2", "B2+", "C1", "C1+", "C2"] },
         "theme": { "type": "STRING" },
         "topic": { "type": "STRING" },
         "specific_topic": { "type": "STRING" },
@@ -181,9 +188,10 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
               "type": { "type": "STRING" },
               "depth": { "type": "STRING" },
               "target_skill": { "type": "STRING" },
+              "evidence_strategy": { "type": "STRING", "enum": ["single sentence", "multiple sentences", "paragraph-level", "cross-paragraph"] },
               "distractor_strategy": { "type": "STRING" }
             },
-            "required": ["question_no", "type", "depth", "target_skill", "distractor_strategy"]
+            "required": ["question_no", "type", "depth", "target_skill", "evidence_strategy", "distractor_strategy"]
           }
         },
         "passage": {
@@ -220,7 +228,7 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
               "evidence_paragraph": { "type": "INTEGER" },
               "evidence_quote": { "type": "STRING" },
               "rationale_vi": { "type": "STRING" },
-              "reasoning_skill": { "type": "STRING", "enum": ["literal", "paraphrase", "inference", "comparison", "cause_effect", "contrast", "classification", "writer_purpose"] },
+              "reasoning_skill": { "type": "STRING", "enum": ["literal", "paraphrase", "inference", "reference", "main_idea", "author_purpose", "structure_function", "vocabulary_in_context", "synthesis", "comparison", "cause_effect", "contrast", "classification", "writer_purpose"] },
               "source_scope": { "type": "STRING", "enum": ["printed_passage_only"] },
               "stretch": { "type": "BOOLEAN" },
               "paraphrase_mapping": { "type": "STRING" },
@@ -320,11 +328,12 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
             "properties": {
               "question_no": { "type": "INTEGER" },
               "grammar_target": { "type": "STRING" },
+              "question_type": { "type": "STRING", "enum": ["controlled choice", "contextual choice", "error correction", "transformation", "paragraph editing", "writing transfer"] },
               "depth": { "type": "STRING" },
               "tested_dimension": { "type": "STRING" },
               "trap": { "type": "STRING" }
             },
-            "required": ["question_no", "grammar_target", "depth", "tested_dimension", "trap"]
+            "required": ["question_no", "grammar_target", "question_type", "depth", "tested_dimension", "trap"]
           }
         },
         "targets": {
@@ -558,12 +567,13 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
               "form_meaning_vi": { "type": "STRING" },
               "use_in_context_vi": { "type": "STRING" },
               "trap_logic_vi": { "type": "STRING" },
+              "why_others_wrong_vi": { "type": "STRING" },
               "depth_check_vi": { "type": "STRING" },
               "analysis_vi": { "type": "STRING" },
               "tip_vi": { "type": "STRING" },
               "stretch_note": { "type": "STRING" }
             },
-            "required": ["question_id", "correct_answer", "grammar_target", "form_meaning_vi", "use_in_context_vi", "trap_logic_vi", "depth_check_vi", "analysis_vi", "tip_vi"]
+            "required": ["question_id", "correct_answer", "grammar_target", "form_meaning_vi", "use_in_context_vi", "trap_logic_vi", "why_others_wrong_vi", "depth_check_vi", "analysis_vi", "tip_vi"]
           }
         },
         "writing_guidance": {

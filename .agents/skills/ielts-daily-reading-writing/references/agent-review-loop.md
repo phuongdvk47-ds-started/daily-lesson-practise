@@ -49,9 +49,12 @@ Grammar Agent may request Reading Agent to adjust passage complexity if:
 Answer Agent must review Reading questions and check:
 - **CRITICAL**: Can every reading question be answered *only* using information printed in the passage?
 - **CRITICAL**: Does every reading question correct answer map directly to an `evidence_quote` present *verbatim* in the passage text?
+- Does the question match its `reading_blueprint` item?
+- Does B1+ Reading include required inference, purpose/main idea, reference/vocabulary-in-context, and logic relationship items?
 - Are distractors explainable?
 - Is there exactly one correct answer?
-If any question relies on omitted source facts or general knowledge, or lacks verbatim passage evidence, the Answer Agent **must raise a critical challenge** to the Reading Agent.
+- Does the answer explanation require real reasoning, not only evidence copying?
+If any question relies on omitted source facts or general knowledge, lacks verbatim passage evidence, misses required blueprint depth, or has weak distractor logic, the Answer Agent **must raise a challenge** to the Reading Agent.
 
 ### Vocabulary → Writing
 Writing Agent must review vocabulary output and check:
@@ -93,7 +96,7 @@ QC Agent must not pass weak content just because counts match.
 QC Agent and downstream agents may raise these challenge types:
 ```json
 {
-  "challenge_type": "source_quality | level_mismatch | ambiguity | multiple_answers | multiple_valid_answers | missing_evidence | insufficient_context | weak_distractor | keyword_scanning | vocabulary_imbalance | missing_vocab_type | grammar_target_mismatch | logic_error | incomplete_punctuation | incomplete_inserted_option | missing_error_in_error_correction | answer_identical_to_prompt | explanation_mismatch | writing_visual_missing | answer_explanation_weak | pdf_layout_risk | schema_error | numbering_error | meaning_changed | topic_alignment | time_workload_mismatch",
+  "challenge_type": "source_quality | level_mismatch | ambiguity | multiple_answers | multiple_valid_answers | missing_evidence | insufficient_context | weak_distractor | keyword_scanning | vocabulary_imbalance | missing_vocab_type | grammar_target_mismatch | grammar_pattern_repetition | surface_clue_only | cognitive_level_imbalance | missing_deep_grammar_validation | missing_blueprint | blueprint_mismatch | logic_error | incomplete_punctuation | incomplete_inserted_option | missing_error_in_error_correction | answer_identical_to_prompt | explanation_mismatch | writing_visual_missing | answer_explanation_weak | pdf_layout_risk | schema_error | numbering_error | meaning_changed | topic_alignment | time_workload_mismatch | reading_order_violation",
   "severity": "low | medium | high | critical",
   "challenged_agent": "",
   "location": "",
@@ -178,10 +181,12 @@ Before finalizing grammar answers, Answer Agent must verify:
 - the selected answer is the only valid answer
 - each distractor is clearly wrong
 - the explanation can prove why all other options are wrong
+- the explanation covers form, meaning, use in context, and trap logic
+- the item matches its `grammar_blueprint`
 - no hidden context is required
 - punctuation is complete in the final reconstructed sentence
 
-If Answer Agent cannot prove uniqueness, it must challenge Grammar Agent.
+If Answer Agent cannot prove uniqueness, context use, meaning preservation, or blueprint alignment, it must challenge Grammar Agent.
 
 ## PDF QC Must Challenge Logic-Related Rendering
 Post-render PDF QC must detect whether punctuation or blanks were lost in PDF rendering in a way that creates ambiguity.
@@ -214,4 +219,3 @@ Example challenge:
   "required_fix": "Rewrite the prompt so the original sentence contains exactly one target error."
 }
 ```
-

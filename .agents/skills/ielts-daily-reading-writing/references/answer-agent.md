@@ -14,18 +14,19 @@ Generate detailed answer keys, explanations, model writing answers, and cumulati
 ## Rules
 1. **No Web Search**: Work only from the generated lesson sections.
 2. **Vietnamese Language**: Write all summaries, rationales, tips, and guidelines in clear, natural Vietnamese.
-3. **Reading Answers Structure**:
+3. **Deep Answer Key Contract**: Follow `references/deep-answer-key-rules.md`. Do not finalize an answer key that merely repeats evidence, states a formula without meaning/use, or fails to explain why distractors are wrong.
+4. **Reading Answers Structure**:
    - **Reading Summary (Tóm tắt bài đọc)**: Start with `📖 **Tóm tắt bài đọc:** [Vietnamese summary]`.
    - **Each Item**:
      - Correct Answer: `Câu X. [Đáp án chữ] — [Nội dung câu trả lời]`
      - Question Type: `*Loại câu hỏi: [Literal / Inference / Function / Vocab]*`
      - Evidence Quote: `*Bằng chứng: "[Direct quote from passage]" (§[Paragraph number])*`
-     - Cognitive Logic: `**Cách tìm đáp án:** [Step-by-step keyword matching and reasoning in Vietnamese, explaining why other options are wrong]. Answer explanations must teach the reasoning path, explicitly demonstrating the mapping from the passage wording to the paraphrased question/answer wording.`
+     - Cognitive Logic: `**Cách tìm đáp án:** [Step-by-step reasoning in Vietnamese, explaining the logic from evidence to answer]. Answer explanations must teach the reasoning path, explicitly demonstrating the mapping from the passage wording to the paraphrased question/answer wording. For inference items, state the evidence pieces that must be connected.`
      - Why Others Wrong: `**Phân tích nhiễu:** [Explain exactly why each incorrect option is wrong, identifying if it's a keyword trap].`
      - Depth Check: `**Đánh giá chiều sâu:** [Briefly explain how this question meets the Deep Reading standard for its level].`
      - Tip: `> **💡 Mẹo:** [Helpful test tip in Vietnamese]`
      - For stretch items `(*)`: Append `*[Stretch Point]*` to the answer header and explain the next-level skill being introduced.
-4. **Grammar Answers Structure**:
+5. **Grammar Answers Structure**:
    - **Pocket Formula Box**: Start with:
      ```markdown
      > **Bảng phân biệt nhanh / Công thức bỏ túi:**
@@ -36,14 +37,14 @@ Generate detailed answer keys, explanations, model writing answers, and cumulati
      - Grammar Target: `*Chủ điểm: [Name of the grammar target]*`
      - Form & Meaning: `**Cấu trúc & Ý nghĩa:** [Explain the form used and what it means in this specific context]`
      - Use in Context: `**Sử dụng trong ngữ cảnh:** [Explain why this specific form fits the surrounding sentence/paragraph]`
-     - Trap Logic & Why Others Wrong: `**Bẫy & Phân tích lỗi:** [Explain why the distractors are wrong and what common trap they represent]`
+     - Trap Logic & Why Others Wrong: `**Bẫy & Phân tích lỗi:** [Explain why each distractor is wrong and what common trap it represents]`
      - Depth Check: `**Đánh giá chiều sâu:** [Explain how this item meets the Deep Grammar standard rather than just being a mechanical drill]`
      - Tip: `> **💡 Mẹo:** [Grammar tip or common trap to avoid]`
-5. **Writing Answers Structure**:
+6. **Writing Answers Structure**:
    - **Suggested Model Answer**: Wrap a high-scoring model answer in a blockquote.
    - **Step-by-Step Guidance**: Provide structural analysis, useful phrases, and vocabulary cues in Vietnamese.
    - **Self-Check List (Tự kiểm tra)**: Provide bullet points to help students self-correct common mistakes.
-6. **Review Bridge Section**:
+7. **Review Bridge Section**:
    - Add `IV. Review Bridge / Ôn tập liên chủ đề` at the end containing exactly 3 translation or sentence completion items reinforcing recycled vocabulary, complete with correct answers and Vietnamese explanations.
 
 ## Output JSON
@@ -72,6 +73,7 @@ Return JSON only:
       "form_meaning_vi": "Cấu trúc 'Each of + Noun (số nhiều)' mang ý nghĩa từng cá nhân trong một nhóm.",
       "use_in_context_vi": "Ngữ cảnh đang nhấn mạnh việc từng người tham gia phải ký form độc lập.",
       "trap_logic_vi": "Bẫy ở đây là từ 'participants' ở dạng số nhiều nằm ngay trước chỗ trống. Các đáp án 'are' hay 'were' sai vì động từ phải chia theo 'Each'.",
+      "why_others_wrong_vi": "A sai vì... B sai vì... C sai vì...",
       "depth_check_vi": "Câu này kiểm tra sự hiểu biết về ngữ cảnh và cấu trúc nâng cao thay vì chỉ chia động từ cơ bản.",
       "analysis_vi": "Đứng đầu câu là 'Each of' nên động từ luôn chia ở dạng số ít, do đó chọn 'is'.",
       "tip_vi": "Cảnh giác với các từ đi sau 'of' ở dạng số nhiều (participants) vì chúng dễ đánh lừa bạn chia động từ số nhiều.",

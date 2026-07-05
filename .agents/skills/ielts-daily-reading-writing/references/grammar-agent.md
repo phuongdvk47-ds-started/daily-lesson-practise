@@ -11,24 +11,33 @@ Generate grammar guides, IELTS common traps, and targeted grammar practice exerc
 - `grammar_targets`: level-appropriate targets from `grammar-by-level.md`.
 
 ## Rules
-1. **Deep Grammar Target Selection**: Select targets by strictly following the **CEFR Deep Grammar Level Map** and **Level Alias and Target Selection Rule** in `references/deep-grammar-rules.md`. Ensure high-impact targets and appropriate bridge targets for `+` levels are included.
-2. **Deep Grammar Execution**: You MUST generate a `grammar_blueprint` strictly according to `references/level-blueprint-rules.md` BEFORE generating questions. Your generated questions MUST perfectly match this blueprint. You MUST adhere to all Core Rules, Distribution Rules, and Checklists defined in `references/deep-grammar-rules.md`. Do not rely solely on form recognition.
-3. **Detailed Grammar Guide**:
+1. **Deep Grammar Target Selection**: Select targets by strictly following the **CEFR Deep Grammar Level Map** and **Level Alias and Target Selection Rule** in `references/deep-grammar-rules.md`, plus the level-specific ratio rules in `references/deep-grammar-generation-rules.md`. Ensure high-impact targets and appropriate bridge targets for `+` levels are included.
+2. **Deep Grammar Execution**: You MUST generate a `grammar_blueprint` strictly according to `references/deep-question-blueprint.md`, `references/deep-grammar-generation-rules.md`, and `references/level-blueprint-rules.md` BEFORE generating questions. Your generated questions MUST perfectly match this blueprint. You MUST adhere to all Core Rules, Distribution Rules, and Checklists defined in `references/deep-grammar-rules.md`. Do not rely solely on form recognition.
+3. **Form + Meaning + Use**:
+   - Each item must plan and test the structure form, the meaning it creates, the use in the surrounding context, and the trap/distractor logic.
+   - B1 and above: at least 40% of items must require meaning/context rather than a surface clue.
+   - B2 and above: at least 50% of items must require discourse/context/register.
+   - C1/C2: test nuance, stance, register, precision, cohesion, information structure, or rhetorical effect.
+4. **Context-Level and Writing Transfer**:
+   - B1 and above: include context-level reasoning, error correction or transformation, grammar in short paragraph/context, and writing-transfer grammar when the requested count allows.
+   - B2 and above: include paragraph editing, cohesion grammar, register-aware grammar, meaning contrast, and grammar choices affecting tone/precision.
+   - C1/C2: include hedging, nominalisation, advanced modality, information structure, and stance/argument/diplomacy/precision control.
+5. **Detailed Grammar Guide**:
    - Split grammar points using headers starting with `#### Chủ điểm X: [Topic]` or `#### Tips & Tricks: [Topic]`.
    - Never write all points in a single long block.
-4. **Common Mistakes & IELTS Traps Table**:
+6. **Common Mistakes & IELTS Traps Table**:
    - Provide a 4-column Markdown table: `| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |`.
    - **CRITICAL WARNING**: Do NOT put vocabulary items, IPAs, or word definitions in this table. It must contain actual grammatical traps (e.g. double comparatives, incorrect prepositions, incorrect subject-verb agreement, verb tense mistakes) and exam strategy pitfalls.
-5. **Meaning Preservation Rule**:
+7. **Meaning Preservation Rule**:
    - Transformation, rewrite, combine, and correction questions **must strictly preserve the original meaning**.
    - Before finalizing each question, check: Does the expected answer keep the same meaning? Does the prompt provide enough context? Is there exactly one target structure? Is there exactly one expected answer or one narrow answer family?
-6. **Passive Voice Transformation Rules**:
+8. **Passive Voice Transformation Rules**:
    - Only require passive voice when the original prompt contains:
      * a transitive verb
      * a clear object
      * preferably a clear agent if needed
    - **Do not force passive voice onto intransitive verbs** (like "stop", "go", "arrive", "happen", "occur", "exist") unless the prompt supplies a transitive source sentence such as "The police stopped the cars."
-7. **Grammar Questions Numbering**:
+9. **Grammar Questions Numbering**:
    - Generate exactly `grammar_question_count` questions.
    - Mix exercise types (gap-fill, transformation, error correction, sentence combining).
    - **Question Numbering**: Always number questions starting from **1** continuously (e.g., `1.`, `2.`, `3.`). Do not add reading question offsets.
@@ -37,12 +46,16 @@ Generate grammar guides, IELTS common traps, and targeted grammar practice exerc
      * `Part B. Prepositions of place and movement`
      * `Part C. Error correction and sentence combining`
    - Or output metadata `sections` containing computed boundary markers.
-8. **Ambiguity Prevention**:
+10. **Ambiguity Prevention**:
    - Gap-fill items must be constrained (e.g., by providing the base word in parentheses) to prevent multiple correct tenses/forms.
    - Correct-the-error questions must contain exactly one target grammatical error.
    - Combine questions must specify the required connector, relative pronoun, clause type, or target structure.
    - Reject or revise a question if multiple unrelated answers are possible or if it tests two unrelated grammar points unintentionally.
-9. **Stretch Items**: Mark 10-20% of questions as stretch questions targeting the next level with a `(*)` label, and set `"stretch": true` in JSON.
+11. **Surface-Clue Reduction**:
+   - Avoid items where one clue word reveals the answer without understanding the sentence.
+   - Do not rely on repeated formula drills such as `since` -> Present Perfect, `yesterday` -> Past Simple, `look forward to` -> V-ing, `manage` -> to V, or `avoid` -> V-ing unless the item also requires context, meaning, register, or writing purpose.
+   - Reject more than 5 consecutive questions with the same grammar target and same clue type.
+12. **Stretch Items**: Mark 10-20% of questions as stretch questions targeting the next level with a `(*)` label, and set `"stretch": true` in JSON.
 
 ## Output JSON
 Return JSON only:
@@ -52,6 +65,7 @@ Return JSON only:
     {
       "question_no": 1,
       "grammar_target": "present perfect vs past simple",
+      "question_type": "contextual choice",
       "depth": "medium",
       "tested_dimension": "meaning/use",
       "trap": "past time phrase distractor"
@@ -122,6 +136,9 @@ Return JSON only:
   ]
 }
 ```
+
+## Self-Regeneration Gate
+Before returning JSON, apply `references/regeneration-quality-gates.md`. Regenerate only the failed Grammar item(s) or Grammar section if any gate fails.
 
 # Grammar Logic and Ambiguity Prevention Rules
 
@@ -327,5 +344,4 @@ Otherwise, remove "According to the report" and make the sentence hypothetical/g
 Example:
 - Invalid: "According to the report, going to school in year-round systems is twice as expensive..." (Passage does not support "twice")
 - Valid: "This new school calendar is twice as expensive as the old one." (Hypothetical/general sentence)
-
 

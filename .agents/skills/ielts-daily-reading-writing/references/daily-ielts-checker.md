@@ -13,10 +13,14 @@ The QC Agent calculates a Reading Logic Score out of 100 based on the following 
 
 ### Reading Fail Conditions
 The reading section immediately scores 0 and FAILS if:
-- > 60% of questions have evidence verbatim in a single sentence.
+- The level-specific distribution in `deep-reading-generation-rules.md` is violated.
+- > 50% of questions are keyword-scan/literal at B1 or above.
+- > 40% of questions are keyword-scan/literal at B2 or above.
 - 0 inference questions at B1 or above.
+- 0 main idea or purpose questions at B1 or above.
+- 0 reference or vocabulary-in-context questions at B1 or above.
+- 0 cause-effect, contrast, reason, result, or implication items at B1 or above.
 - 0 vocabulary-in-context questions at A2 or above.
-- 0 main idea/purpose questions at B1 or above.
 - Distractors are obviously wrong (no plausible keyword traps).
 - Answer explanation simply copies evidence without reasoning.
 - TFNG relies solely on keywords without paraphrasing.
@@ -33,9 +37,12 @@ The QC Agent calculates a Grammar Logic Score out of 100 based on the following 
 
 ### Grammar Fail Conditions
 The grammar section immediately scores 0 and FAILS if:
+- The level-specific distribution in `deep-grammar-generation-rules.md` is violated.
 - > 5 consecutive questions with the same target grammar and clue type.
 - > 40% of questions use obvious surface clues at B1 or above.
+- > 30% of questions use obvious surface clues at B2 or above.
 - 0 error correction or transformation questions at B1 or above.
+- 0 writing-transfer grammar questions at B1 or above.
 - 0 paragraph/context grammar questions at B2 or above.
 - Explanations only state the formula without explaining meaning/use.
 - A question lacks a reasonable/plausible distractor.

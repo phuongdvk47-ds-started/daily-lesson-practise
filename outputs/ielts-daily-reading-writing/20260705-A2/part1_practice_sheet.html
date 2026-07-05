@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAILY PRACTICE: DAY 20260705 - STREET NAVIGATION AND BUS SCHEDULES</title>
+    <style>
+        @page { 
+            size: A4; 
+            margin: 15mm 15mm 20mm 15mm; 
+        }
+        body { 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 11.5pt; 
+            line-height: 1.45; 
+            color: #1a1a1a; 
+            margin: 0; 
+            padding: 0;
+        }
+        .header { 
+            border-bottom: 2px double #2c3e50; 
+            padding-bottom: 8px; 
+            margin-bottom: 15px; 
+            text-align: center;
+        }
+        .header .center-name { 
+            font-size: 9.5pt; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            color: #7f8c8d; 
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .header h1 { 
+            font-size: 15pt; 
+            margin: 3px 0; 
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .header h2 { 
+            font-size: 11pt; 
+            margin: 3px 0; 
+            font-style: italic; 
+            color: #34495e;
+        }
+        .student-info { 
+            margin-top: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .section-title { 
+            font-size: 12pt; 
+            color: #2c3e50; 
+            border-left: 3px solid #27ae60; 
+            padding-left: 8px; 
+            margin-top: 18px; 
+            margin-bottom: 8px; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .passage-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .reading-text { 
+            text-align: justify; 
+            margin-bottom: 12px; 
+            text-indent: 25px;
+        }
+        .reading-text p {
+            margin: 0 0 6px 0;
+        }
+        .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }
+        .data-table th { 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }
+        .data-table td { 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }
+        .data-table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+        .svg-chart-container {
+            text-align: center;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+        .writing-line {
+            border-bottom: 1px dotted #bdc3c7;
+            height: 26px;
+            margin-top: 6px;
+            margin-bottom: 2px;
+            width: 98%;
+            page-break-inside: avoid;
+        }
+        .source-box { 
+            font-style: italic; 
+            font-size: 9pt; 
+            color: #7f8c8d; 
+            margin-bottom: 15px; 
+            padding: 6px 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #bdc3c7;
+        }
+        .source-box a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .question-instruction {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+        .question-group {
+            margin-bottom: 12px;
+        }
+        .question-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            text-indent: -20px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .question-options {
+            margin: 4px 0 4px 20px;
+            text-indent: 0;
+        }
+        .question-options div {
+            margin-bottom: 2px;
+        }
+        .fill-blank {
+            display: inline-block;
+            width: 100px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        .grammar-item {
+            margin-bottom: 8px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .writing-box {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            background-color: #fafbfc;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            text-align: left;
+            page-break-inside: avoid;
+        }
+        .writing-item {
+            margin-bottom: 10px;
+        }
+        .warmup-box {
+            background-color: #fcfcfc;
+            border: 1px dashed #bdc3c7;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            font-size: 10pt;
+        }
+        .warmup-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="center-name">IELTS PREMIUM PREPARATION ACADEMY</div>
+        <h1>DAILY PRACTICE: DAY 20260705 - STREET NAVIGATION AND BUS SCHEDULES</h1>
+        <h2>(Level: Reading A2 - Writing A2)</h2>
+        <div class="student-info">
+            <span>Student Name: ..............................................................</span>
+            <span>Time Allowed: 90 mins</span>
+        </div>
+    </div>
+
+    <!-- WARM-UP SECTION -->
+    <div class="section-title">Warm-up / Khởi động</div>
+    <div class="warmup-box">
+        <div class="warmup-title">Answer the following questions in Vietnamese or English:</div>
+        1. Khi đi đến một nơi mới bằng xe buýt, bạn thường kiểm tra bản đồ hay hỏi người khác trước?<br>
+        2. Nếu bạn thấy hai xe buýt có số tuyến gần giống nhau, bạn sẽ làm gì để tránh lên nhầm xe?<br>
+        3. Theo bạn, vì sao việc biết đọc lịch xe buýt có thể giúp học sinh tự lập hơn?
+    </div>
+
+    <!-- READING PASSAGE -->
+    <div class="section-title">I. Reading Passage</div>
+    <div class="passage-title">Planning a Simple Bus Trip</div>
+    
+    <div class="reading-text">
+        <p>Mina wants to visit a community sports centre by bus. Before she <b>leaves</b> home, she uses an <b>online</b> [R] <b><b>planner</b></b> to <b><b>plan a trip</b></b>. She types her starting address and the <b><b>destination</b></b>, then chooses the date and time. The <b><b>planner</b></b> shows the best <b><b>route</b></b> and tells her where to <b><b>get on and off</b></b>. Saving this search becomes a weekly <b>habit</b> [R].</p>
+        <p>At the street, Mina looks for a <b><b>bus stop</b></b>. It is marked by a pole and a <b><b>sign</b></b>. The <b><b>sign</b></b> lists the <b><b>route number</b></b>, and the same number appears on the front of the bus. She also checks the <b><b>direction</b></b>, because the same <b><b>route</b></b> can travel two ways. She waits on the <b><b>pavement</b></b>; some stops have a <b><b>shelter</b></b>, but some do not.</p>
+        <p>On the bus, Mina taps her <b><b>ticket</b></b> card and sits near the middle. She watches the screen and listens for announcements. When her next <b><b>bus stop</b></b> is announced, she can <b><b>press</b></b> the red <b><b>stop button</b></b>. A light says STOP REQUESTED, so the driver knows. Mina should <b><b>leave</b></b> through the side door and look both ways.</p>
+        <p>A <b><b>schedule</b></b> is useful, but real streets can change. If the bus is late, Mina checks <b>online</b> [R] arrival times or reads the printed <b><b>schedule</b></b>. If she rides in the wrong <b><b>direction</b></b>, she gets off at a <b><b>safe</b></b> stop, crosses at the <b><b>traffic light</b></b>, and checks the map again. A <b><b>calm</b></b> two-minute check can make a big <b>difference</b> [R] and help a new rider feel <b><b>independent</b></b>.</p>
+    </div>
+
+    <div class="source-box">
+        Source: Adapted from <i>King County Metro / King County, Washington</i> - "How to ride - King County, Washington" (Access date 2026-07-05)<br>
+        URL: <a href="https://kingcounty.gov/en/dept/metro/rider-tools/how-to-ride" target="_blank">https://kingcounty.gov/en/dept/metro/rider-tools/how-to-ride</a>
+    </div>
+
+    <!-- READING QUESTIONS -->
+    <div class="section-title">II. IELTS Reading Questions (13 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 1–5: </div>
+        <div style="margin-left: 20px; font-weight: bold; margin-bottom: 8px; font-size: 10pt;">
+            TRUE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement agrees with the information<br>
+            FALSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement contradicts the information<br>
+            NOT GIVEN &nbsp;&nbsp;&nbsp;&nbsp; if there is no information on this
+        </div>
+        <div class="question-item">
+            <span class="question-number">1.</span> A trip planner can show both the bus route and the places to enter and leave the bus.
+            <div class="question-options">
+                <div>A. TRUE</div>
+                <div>B. FALSE</div>
+                <div>C. NOT GIVEN</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">2.</span> In Paragraph 2, 'the same number' means the route number on the sign.
+            <div class="question-options">
+                <div>A. TRUE</div>
+                <div>B. FALSE</div>
+                <div>C. NOT GIVEN</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">3.</span> The sign at the stop gives the route number.
+            <div class="question-options">
+                <div>A. TRUE</div>
+                <div>B. FALSE</div>
+                <div>C. NOT GIVEN</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">4.</span> All stops have a place to sit and cover from rain.
+            <div class="question-options">
+                <div>A. TRUE</div>
+                <div>B. FALSE</div>
+                <div>C. NOT GIVEN</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">5.</span> The stop signal helps the driver know that a rider wants to leave soon.
+            <div class="question-options">
+                <div>A. TRUE</div>
+                <div>B. FALSE</div>
+                <div>C. NOT GIVEN</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 6–8: </div>
+        <div class="question-item">
+            <span class="question-number">6.</span> Saving the search becomes a weekly <span class="fill-blank">&nbsp;</span>.
+        </div>
+        <div class="question-item">
+            <span class="question-number">7.</span> A bus sign lists the route <span class="fill-blank">&nbsp;</span>.
+        </div>
+        <div class="question-item">
+            <span class="question-number">8.</span> When the next stop is announced, Mina can press the red stop <span class="fill-blank">&nbsp;</span>.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 9–13: </div>
+        <div class="question-item">
+            <span class="question-number">9.</span> What is Mina's first useful action before taking an unfamiliar bus?
+            <div class="question-options">
+                <div>A. She enters travel details in a planner.</div>
+                <div>B. She waits on the pavement.</div>
+                <div>C. She presses the red button.</div>
+                <div>D. She crosses at a traffic light.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">10.</span> Why should Mina compare the number on the sign with the number on the bus?
+            <div class="question-options">
+                <div>A. To avoid taking the wrong route.</div>
+                <div>B. To buy a cheaper ticket.</div>
+                <div>C. To find a seat near the middle.</div>
+                <div>D. To make the bus arrive earlier.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">11.</span> In Paragraph 3, the word 'requested' is closest in meaning to:
+            <div class="question-options">
+                <div>A. asked for</div>
+                <div>B. paid for</div>
+                <div>C. forgotten</div>
+                <div>D. painted</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">12.</span> What should a new rider do after going the wrong way?
+            <div class="question-options">
+                <div>A. Get off safely and check the map again.</div>
+                <div>B. Stay on the bus until the route ends.</div>
+                <div>C. Run across the street quickly.</div>
+                <div>D. Throw away the printed schedule.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">13.</span> What is the best overall message of the passage? (*)
+            <div class="question-options">
+                <div>A. Small checks can help riders travel more confidently.</div>
+                <div>B. Every bus stop has the same facilities.</div>
+                <div>C. A ticket card is the only important travel tool.</div>
+                <div>D. New riders should avoid public transport.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRAMMAR QUESTIONS -->
+    <div class="section-title">III. Questions for Grammar (30 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 14–19: Multiple Choice Questions</div>
+        <div class="question-item">
+            <span class="question-number">14.</span> The bus <span class="fill-blank">&nbsp;</span> at 8:10 every morning.
+            <div class="question-options">
+                <div>A. leaves</div>
+                <div>B. is leaving</div>
+                <div>C. left</div>
+                <div>D. leave</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">15.</span> Look at the map now. We <span class="fill-blank">&nbsp;</span> near the library, not the sports centre.
+            <div class="question-options">
+                <div>A. are standing</div>
+                <div>B. stand</div>
+                <div>C. stood</div>
+                <div>D. will stand</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">16.</span> I have only one coin, but I need <span class="fill-blank">&nbsp;</span> coins for the fare machine.
+            <div class="question-options">
+                <div>A. a few</div>
+                <div>B. a little</div>
+                <div>C. a bit</div>
+                <div>D. any</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">17.</span> It is advice, not a rule: You <span class="fill-blank">&nbsp;</span> cross the road at the traffic light.
+            <div class="question-options">
+                <div>A. should</div>
+                <div>B. must</div>
+                <div>C. can</div>
+                <div>D. did</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">18.</span> The new stop is only two minutes closer, so it is <span class="fill-blank">&nbsp;</span> closer to my house.
+            <div class="question-options">
+                <div>A. slightly</div>
+                <div>B. significantly</div>
+                <div>C. much</div>
+                <div>D. many</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">19.</span> We have decided; we <span class="fill-blank">&nbsp;</span> take the 7:30 bus tomorrow.
+            <div class="question-options">
+                <div>A. are going to</div>
+                <div>B. took</div>
+                <div>C. takes</div>
+                <div>D. taking</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 20–27: Gap Fill</div>
+        <div class="question-item">
+            <span class="question-number">20.</span> At weekends, my father usually <span class="fill-blank">&nbsp;</span> (drive) to the station, but today he is taking the bus.
+        </div>
+        <div class="question-item">
+            <span class="question-number">21.</span> Hurry up. The bus <span class="fill-blank">&nbsp;</span> (come) around the corner now.
+        </div>
+        <div class="question-item">
+            <span class="question-number">22.</span> Last Friday, we <span class="fill-blank">&nbsp;</span> (miss) the last bus because we read the schedule wrongly.
+        </div>
+        <div class="question-item">
+            <span class="question-number">23.</span> Use be going to + verb: Next week, our teacher <span class="fill-blank">&nbsp;</span> (take) the class to the transport museum by train.
+        </div>
+        <div class="question-item">
+            <span class="question-number">24.</span> There isn't <span class="fill-blank">&nbsp;</span> (much/many) traffic near the bus stop at night.
+        </div>
+        <div class="question-item">
+            <span class="question-number">25.</span> The route has <span class="fill-blank">&nbsp;</span> (a few/a little) stops before the market.
+        </div>
+        <div class="question-item">
+            <span class="question-number">26.</span> You <span class="fill-blank">&nbsp;</span> (must/should) show your ticket before you sit down; it is a rule on this coach.
+        </div>
+        <div class="question-item">
+            <span class="question-number">27.</span> The bus was <span class="fill-blank">&nbsp;</span> (slight) later than usual, so we waited five more minutes.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 28–33: Correct the Error</div>
+        <div class="question-item">
+            <span class="question-number">28.</span> Correct the error: She go to the bus stop at 7:00 every morning.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">29.</span> Correct the error: I am waiting at the wrong platform yesterday.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">30.</span> Correct the error: There are much buses on this route in the morning.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">31.</span> Correct the error: You must to show your ticket to the driver.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">32.</span> Correct the error: The bus was more closer to the school than the train station.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">33.</span> Correct the error: We missed the bus because we arrived late, so.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 34–38: Sentence Combining</div>
+        <div class="question-item">
+            <span class="question-number">34.</span> Combine with because: I checked the map. I did not know the street.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">35.</span> Combine with so: The stop was crowded. Because of this, we stood near the sign.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">36.</span> Combine with although: The bus was late. The driver was friendly.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">37.</span> Combine with when: The screen shows your stop. Press the red button.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">38.</span> Combine with and: Type your starting address. Choose the travel time.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 39–43: Sentence Transformation and Combining</div>
+        <div class="question-item">
+            <span class="question-number">39.</span> Rewrite using going to: We plan to take the bus to the market tomorrow.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">40.</span> Rewrite using should: It is a good idea to check the schedule before you leave.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">41.</span> Rewrite using closer than and keep both distances: Stop A is 200 metres from my house. Stop B is 500 metres from my house.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">42.</span> Rewrite using the present perfect: I used this route three times this month, and I know it well now. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">43.</span> Rewrite using if and will: The bus may be late. We will take the next train. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <!-- WRITING QUESTIONS -->
+    <div class="section-title">IV. Questions for Writing (5 tasks)</div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 1:  Giving clear directions with present simple and prepositions.</div>
+        <div class="writing-item">
+            Write 3 sentences giving simple directions from your home or school to the nearest bus stop.<br><br><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 2:  Writing practical travel instructions.</div>
+        <div class="writing-item">
+            Write a short message to a friend. Tell your friend which bus route to take, where to get on, and when to press the stop button.<br><br>To: ...................................................... Subject: ......................................................<br><br><br><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 3:  Asking for information politely.</div>
+        <div class="writing-item">
+            Write a short email to a transport help desk asking for help with a bus schedule and the best direction to the sports centre.<br><br>To: ...................................................... Subject: ......................................................<br><br><br><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 4:  Comparing simple travel data with slightly, faster/slower, and more expensive.</div>
+        <div class="writing-item">
+            Describe the table comparing three ways to get to the sports centre. Write 3 sentences.<br><br><table class="data-table"><thead><tr><th>Travel option</th><th>Time</th><th>Cost</th></tr></thead><tbody><tr><td>Bus route 12</td><td>22 minutes</td><td>$2</td></tr><tr><td>Walking</td><td>35 minutes</td><td>$0</td></tr><tr><td>Taxi</td><td>12 minutes</td><td>$9</td></tr></tbody></table><br><br><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div><div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 5:  Giving a simple opinion with because and so.</div>
+        <div class="writing-item">
+            Do you think students should learn how to read bus schedules? Give two reasons connected to daily travel.<br><br>Answer: <div class='writing-line' style='display:inline-block; width:90%; margin-top:0; vertical-align:middle;'></div>
+        </div>
+    </div>
+
+    <!-- REVIEW BRIDGE -->
+    <div class="section-title">V. Review Bridge / Ôn tập liên chủ đề</div>
+    <div class="warmup-box" style="background-color: #fafbfc; border: 1px solid #bdc3c7; border-radius: 4px; padding: 10px;">
+        <div class="question-instruction" style="margin-top: 15px; font-size: 11.5pt;">V. Review Bridge / Ôn tập liên chủ đề</div>
+1. Dịch: Kiểm tra bản đồ là một thói quen tốt.<br>
+<div class="writing-line"></div><br>
+2. Điền từ: A two-minute check can make a big <span class="fill-blank">&nbsp;</span>.<br>
+<div class="writing-line"></div><br>
+3. Dịch: Tôi thường kiểm tra lịch xe buýt trực tuyến.<br>
+<div class="writing-line"></div><br>
+    </div>
+
+</body>
+</html>

@@ -10,9 +10,9 @@ These pedagogical constraints must be strictly followed by all generation and re
   - B2: 550-750 words
   - C1: 750-950 words
   - C2: 900-1100 words
-- **Vocabulary Bolding**:
-  - All occurrences of target vocabulary words (from Part 2) inside the passage must be **bolded** (`**word**`).
-  - Recycled vocabulary words must be bolded and marked with `[R]` (e.g. `**word** [R]`).
+- **Vocabulary Presentation**:
+  - Do not bold target vocabulary words inside the passage.
+  - Recycled vocabulary words must be marked with `[R]` after the word (e.g. `word [R]`).
 - **Printed Passage Boundary Rule (Anti-Hallucination)**:
   - **Reading questions must be answerable only from the final printed reading passage.**
   - Omitted facts from original source web pages or outside general knowledge must never be tested.

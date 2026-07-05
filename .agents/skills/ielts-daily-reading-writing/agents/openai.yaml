@@ -1,5 +1,5 @@
 interface:
   display_name: "IELTS Daily Reading Writing"
-  short_description: "Generate daily IELTS-style Reading and Writing practice packs by level, topic, and counts."
+  short_description: "Generate deep IELTS Reading, Grammar, Writing, vocabulary, answer-key, and PDF practice packs by level and topic."
   icon: "📚"
   primary_color: "#2563EB"

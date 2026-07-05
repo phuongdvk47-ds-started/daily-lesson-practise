@@ -20,23 +20,23 @@ Both the Reading Agent (when creating) and the QC Agent (when evaluating) must c
 ## 2. Level Expectations & Distributions
 
 The Reading Agent must generate questions, and the QC Agent must evaluate the pack, against the expected distribution for its stated level.
-The Reading Agent must distribute questions according to these exact ratios:
+The Reading Agent must distribute questions according to these maximum/minimum ratios:
 
-| Level | Literal | Inference / Reasoning | Function / Structure | Vocab in Context |
+| Level | Literal | Inference / Reasoning | Function / Structure / Purpose | Vocab / Reference |
 | ----- | ------: | --------------------: | -------------------: | ---------------: |
-| A1    |     70% |                   10% |                  10% |              10% |
-| A1+   |     60% |                   15% |                  10% |              15% |
-| A2    |     50% |                   20% |                  15% |              15% |
-| A2+   |     45% |                   25% |                  15% |              15% |
-| B1    |     35% |                   30% |                  20% |              15% |
-| B1+   |     30% |                   35% |                  20% |              15% |
-| B2    |     25% |                   40% |                  20% |              15% |
-| B2+   |     20% |                   45% |                  20% |              15% |
-| C1    |     15% |                   45% |                  25% |              15% |
-| C1+   |     10% |                   50% |                  25% |              15% |
-| C2    |   5-10% |                  50%+ |                 25%+ |           10-15% |
+| A1    |   <=70% |                 >=10% |                >=10% |            >=10% |
+| A1+   |   <=60% |                 >=15% |                >=10% |            >=15% |
+| A2    |   <=50% |                 >=20% |                >=15% |            >=15% |
+| A2+   |   <=45% |                 >=25% |                >=15% |            >=15% |
+| B1    |   <=40% |                 >=30% |                >=15% |            >=15% |
+| B1+   |   <=35% |                 >=35% |                >=15% |            >=15% |
+| B2    |   <=30% |                 >=40% |                >=15% |            >=15% |
+| B2+   |   <=25% |                 >=45% |                >=15% |            >=15% |
+| C1    |   <=20% |                 >=45% |                >=20% |            >=15% |
+| C1+   |   <=15% |                 >=50% |                >=20% |            >=15% |
+| C2    |   <=10% |                 >=50% |                >=25% |            >=10% |
 
-**Rule for `+` levels:** A level with a `+` (e.g., A1+, A2+, B1+, B2+, C1+, C2+) is a transitional level. It must show a measurable step up from its base level.
+**Rule for `+` levels:** A level with a `+` (A1+, A2+, B1+, B2+, C1+) is a transitional level. It must show a measurable step up from its base level.
 
 ### A1 / A1+
 - **Mandatory Types**: Matching basic info; Simple reference (this, it, they); Understanding simple purpose (notice, email, message).
@@ -46,7 +46,7 @@ The Reading Agent must distribute questions according to these exact ratios:
 ### A2 / A2+
 - **Mandatory Types**: At least 1 simple inference; At least 1 vocabulary-in-context; At least 1 reference question; At least 1 question connecting two adjacent sentences.
 - **Rule**: Distractor must use near-synonyms or same topic, not obviously wrong.
-- **High Issue**: Almost entirely verbatim matching. Gap-fill only targets bolded words. No comprehension beyond single isolated phrases.
+- **High Issue**: Almost entirely verbatim matching. Gap-fill only targets vocabulary words. No comprehension beyond single isolated phrases.
 
 ### B1 / B1+
 - **Mandatory Types**: At least 2 inference questions; At least 1 main idea/purpose question; At least 1 reference question; At least 1 vocabulary-in-context question; At least 1 attitude/reason/result/contrast/cause-effect question.
@@ -79,14 +79,18 @@ The Reading Agent must distribute questions according to these exact ratios:
   - A1/A2: Max `CONDITIONAL PASS` if still useful for basic practice.
   - B1/B1+: `NEEDS REVISION` or `CONDITIONAL PASS`.
   - B2/B2+: `NEEDS REVISION` if inference/synthesis is clearly lacking.
-  - C1/C1+/C2/C2+: `NEEDS REVISION` or `FAIL` if the pack completely misses the level's objective.
+  - C1/C1+/C2: `NEEDS REVISION` or `FAIL` if the pack completely misses the level's objective.
 
 ### Fail Conditions (PDF Checker / Daily IELTS Checker)
 The pack MUST FAIL if any of the following are true:
-- > 60% of questions have evidence verbatim in a single sentence.
+- The level-specific distribution table above is violated.
+- > 50% of questions are keyword-scan/literal at B1 or above.
+- > 40% of questions are keyword-scan/literal at B2 or above.
 - 0 inference questions at B1 or above.
-- 0 vocabulary-in-context questions at A2 or above.
 - 0 main idea/purpose questions at B1 or above.
+- 0 reference or vocabulary-in-context questions at B1 or above.
+- 0 cause-effect, contrast, reason, result, or implication questions at B1 or above.
+- 0 vocabulary-in-context questions at A2 or above.
 - Distractors are obviously wrong (no plausible keyword traps).
 - Answer explanation simply copies evidence without reasoning.
 - TFNG relies solely on keywords without paraphrasing.
