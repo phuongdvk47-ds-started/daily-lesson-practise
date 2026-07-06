@@ -96,3 +96,50 @@ Return JSON only:
 
 ## Self-Regeneration Gate
 Before returning JSON, apply `references/regeneration-quality-gates.md`. Regenerate only the failed Reading item(s) or Reading section if any gate fails.
+
+## Barron-style Optional Reading Profile
+
+Use this only when the input includes `Practice Profile: barron_style` or the user explicitly asks for Barron-style practice.
+
+Additional rules:
+- Add `label` to every paragraph in `passage.paragraphs`, starting at `A` and continuing contiguously.
+- Reserve the first reading question group for `Paragraph Information Matching` when the requested count allows it. For a Barron-style 8-question set, use Questions 1-4 for paragraph information/gist matching.
+- For each paragraph matching item, `correct_answer` must be a paragraph label (`A`, `B`, `C`, ...), while `evidence_paragraph` remains the numeric paragraph id.
+- Add `reading.summary_completion` when using Summary Completion questions. For a Barron-style 8-question set, use Questions 5-8 for this type.
+- `reading.summary_completion.summary_text` must contain placeholders such as `{5}` or `[[5]]`; every Summary Completion question must have a matching placeholder.
+- `reading.summary_completion.word_bank` must include all correct answers plus plausible distractors, and each Summary Completion `correct_answer` must appear exactly as a word-bank item.
+
+Minimal JSON shape:
+```json
+{
+  "passage": {
+    "title": "Environmental Impacts of Logging",
+    "paragraphs": [
+      { "id": 1, "label": "A", "text": "..." },
+      { "id": 2, "label": "B", "text": "..." }
+    ]
+  },
+  "summary_completion": {
+    "instruction": "Complete the summary using words from the list below.",
+    "summary_text": "Logging can damage {5} and reduce {6}.",
+    "word_bank": ["habitats", "biodiversity", "profits", "machinery"]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "Paragraph Information Matching",
+      "question": "A paragraph describing the main environmental risk",
+      "correct_answer": "A",
+      "evidence_paragraph": 1,
+      "evidence_paragraph_label": "A"
+    },
+    {
+      "id": 5,
+      "type": "Summary Completion",
+      "question": "Blank 5",
+      "correct_answer": "habitats",
+      "evidence_paragraph": 1
+    }
+  ]
+}
+```

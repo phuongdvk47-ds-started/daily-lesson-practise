@@ -117,3 +117,31 @@ Use section titles based on vocab_type:
 - Phrases, Chunks & Collocations
 - Recycled Vocabulary
 
+## Barron-style Optional Vocabulary Profile
+
+Use this only when the input includes `Practice Profile: barron_style` or the user explicitly asks for Barron-style practice.
+
+Add these optional structures while keeping the normal `items`, `recycled_items`, `quizlet`, and `vocab_checker_items` fields.
+
+### Vocabulary Matching Test
+
+Create `vocabulary.matching_test` from high-value lesson words.
+- `items`: one object per word with `id`, `term`, and `correct_definition_label`.
+- `definitions`: one object per definition with `label` (`A`, `B`, `C`, ...), `part_of_speech`, and `definition`.
+- Definitions should be shuffled relative to the word order.
+- Definitions must be level-appropriate and distinct enough to allow one clear answer.
+
+### Word Families
+
+Create `vocabulary.word_families` for selected target words.
+- Each family has `family` and `members`.
+- Each member has `word`, `part_of_speech`, and a topic-specific `example`.
+- Include common forms that actually help students decode the reading or complete the practice.
+
+### Word Family Practice
+
+Create `vocabulary.word_family_practice`.
+- `practice_text` is a short cloze paragraph with placeholders such as `{1}` or `[[1]]`.
+- `items` contains `id`, `family`, `options`, `correct_answer`, and `explanation_vi`.
+- Each option set should contain forms from the same family, for example `destroy / destructive / destruction`.
+- The correct answer must be the only grammatically and semantically valid choice in context.

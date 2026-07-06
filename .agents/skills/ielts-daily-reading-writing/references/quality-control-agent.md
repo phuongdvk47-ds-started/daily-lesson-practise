@@ -72,6 +72,17 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
 10. **JSON Schema Check**:
     - Verify that the payload structure aligns 100% with the schema in `references/output-schema.md`.
 
+## Barron-style Optional QC
+
+Apply these checks when `Practice Profile: barron_style` is requested or any optional Barron-style field is present.
+
+- Paragraph labels: if any reading paragraph has `label`, every paragraph must have one, and labels must be contiguous `A`, `B`, `C`, ...
+- Paragraph Information Matching: answers must be valid paragraph labels; `evidence_paragraph` must still point to the numeric paragraph id; `evidence_quote` must remain verbatim from the printed passage.
+- Summary Completion: `reading.summary_completion.word_bank` must exist; every Summary Completion answer must appear in the word bank; `summary_text` must contain a placeholder for every summary item.
+- Vocabulary Matching Test: every item must have one `correct_definition_label` that exists in the definitions list; definitions must be unique and not ambiguous.
+- Word Family Practice: every item must have at least two options and exactly one correct option; the correct answer must fit both grammar and meaning.
+- Answer keys: `answers.vocabulary_matching_answers` and `answers.word_family_answers` must exist when the corresponding practice sections exist and must match the source item answers exactly.
+
 ## Render-Aware & Post-Render PDF QC Rules
 QC must also require Post-Render PDF QC. Raise a critical/high challenge if:
 - PDF rendered MCQ questions without options (Reading or Grammar)

@@ -19,6 +19,8 @@ Regenerate Reading if:
 - TFNG lacks paraphrase or reasoning.
 - A question relies on outside knowledge or omitted source information.
 - A question has multiple valid answers.
+- Barron-style paragraph labels are missing, non-contiguous, or do not match paragraph matching answers.
+- Summary Completion lacks a word bank, lacks placeholders for every blank, or has answers outside the word bank.
 
 ## Grammar Regeneration Gates
 
@@ -42,6 +44,7 @@ Regenerate Answers if:
 - Reading reasoning does not connect the evidence to the answer.
 - Grammar answers lack form, meaning, use in context, trap logic, or depth checks.
 - Grammar explanations do not prove uniqueness or meaning preservation.
+- Barron-style vocabulary matching answers or word family answers do not match the corresponding practice items.
 
 ## Challenge Severity
 

@@ -118,6 +118,9 @@ def validate_lesson_json(json_path: Path) -> bool:
 
     # 3. Validate reading
     reading = data["reading"]
+    paragraphs = []
+    paragraph_labels = []
+    paragraph_label_by_id = {}
     if "passage" not in reading:
         errors.append("FAIL: Missing reading.passage")
     else:
@@ -131,6 +134,16 @@ def validate_lesson_json(json_path: Path) -> bool:
             for idx, p in enumerate(paragraphs):
                 if "id" not in p or "text" not in p:
                     errors.append(f"FAIL: Paragraph at index {idx} missing id or text")
+                label = str(p.get("label", "")).strip()
+                if label:
+                    paragraph_labels.append(label)
+                    paragraph_label_by_id[p.get("id")] = label
+            if paragraph_labels:
+                if len(paragraph_labels) != len(paragraphs):
+                    errors.append("FAIL: Reading paragraph labels must be present on every paragraph when any label is used.")
+                expected_labels = [chr(65 + i) for i in range(len(paragraphs))]
+                if paragraph_labels != expected_labels:
+                    errors.append(f"FAIL: Reading paragraph labels must be contiguous A, B, C... Got: {paragraph_labels}")
 
     # Reading questions count
     rqs = reading.get("questions", [])
@@ -170,6 +183,7 @@ def validate_lesson_json(json_path: Path) -> bool:
         "writer_purpose",
     ]
     type_last_paragraph = {}
+    summary_completion = reading.get("summary_completion", {})
 
     for idx, q in enumerate(rqs):
         q_id = q.get("id")
@@ -186,6 +200,19 @@ def validate_lesson_json(json_path: Path) -> bool:
         # Validate source_scope
         if q.get("source_scope") != "printed_passage_only":
             errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) source_scope must be 'printed_passage_only'. Got: '{q.get('source_scope')}'")
+
+        q_type_lower = str(q.get("type", "")).lower()
+        if "paragraph" in q_type_lower and ("matching" in q_type_lower or "information" in q_type_lower):
+            if not paragraph_labels:
+                errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) uses paragraph matching but passage paragraphs have no labels.")
+            elif str(q.get("correct_answer", "")).strip() not in paragraph_labels:
+                errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) paragraph matching answer must be one of {paragraph_labels}. Got: {q.get('correct_answer')}")
+
+        evidence_label = str(q.get("evidence_paragraph_label", "")).strip()
+        if evidence_label:
+            expected_label = paragraph_label_by_id.get(q.get("evidence_paragraph"))
+            if expected_label and evidence_label != expected_label:
+                errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) evidence_paragraph_label must match paragraph {q.get('evidence_paragraph')} label {expected_label}. Got: {evidence_label}")
 
         # Validate reasoning_skill
         r_skill = q.get("reasoning_skill")
@@ -234,6 +261,22 @@ def validate_lesson_json(json_path: Path) -> bool:
 
             if clean_quote not in clean_passage and clean_quote_no_punc not in clean_passage_no_punc:
                 errors.append(f"FAIL: reading.questions[{idx}] (id={q_id}) evidence_quote not found in passage. Quote: '{quote[:50]}...'")
+
+    summary_questions = [q for q in rqs if "summary completion" in str(q.get("type", "")).lower()]
+    if summary_completion or summary_questions:
+        word_bank = summary_completion.get("word_bank", [])
+        summary_text = str(summary_completion.get("summary_text", ""))
+        if not word_bank:
+            errors.append("FAIL: reading.summary_completion.word_bank is required when Summary Completion questions are used.")
+        bank_norm = {str(word).strip().lower() for word in word_bank}
+        for q in summary_questions:
+            q_id = q.get("id")
+            answer_norm = str(q.get("correct_answer", "")).strip().lower()
+            if bank_norm and answer_norm not in bank_norm:
+                errors.append(f"FAIL: Summary Completion question {q_id} answer must appear in reading.summary_completion.word_bank.")
+            placeholder_variants = [f"{{{q_id}}}", f"[[{q_id}]]", f"{q_id}."]
+            if summary_text and not any(token in summary_text for token in placeholder_variants):
+                errors.append(f"FAIL: reading.summary_completion.summary_text must contain a placeholder for question {q_id}.")
 
     # Keyword Trap and Non-Literal checking
     total_distractors = 0
@@ -350,6 +393,64 @@ def validate_lesson_json(json_path: Path) -> bool:
     checker_items = vocab.get("vocab_checker_items", [])
     if not checker_items:
         errors.append("FAIL: Missing vocabulary.vocab_checker_items")
+
+    matching_test = vocab.get("matching_test", {})
+    if matching_test:
+        match_items = matching_test.get("items", [])
+        definitions = matching_test.get("definitions", [])
+        if not match_items:
+            errors.append("FAIL: vocabulary.matching_test.items must not be empty.")
+        if not definitions:
+            errors.append("FAIL: vocabulary.matching_test.definitions must not be empty.")
+        seen_item_ids = set()
+        definition_labels = set()
+        for idx, definition in enumerate(definitions):
+            label = str(definition.get("label", "")).strip()
+            if not label:
+                errors.append(f"FAIL: vocabulary.matching_test.definitions[{idx}] missing label.")
+                continue
+            if label in definition_labels:
+                errors.append(f"FAIL: duplicate vocabulary.matching_test definition label: {label}")
+            definition_labels.add(label)
+            if not definition.get("definition"):
+                errors.append(f"FAIL: vocabulary.matching_test.definitions[{idx}] missing definition.")
+        for idx, item in enumerate(match_items):
+            item_id = item.get("id")
+            if item_id in seen_item_ids:
+                errors.append(f"FAIL: duplicate vocabulary.matching_test item id: {item_id}")
+            seen_item_ids.add(item_id)
+            if not item.get("term"):
+                errors.append(f"FAIL: vocabulary.matching_test.items[{idx}] missing term.")
+            answer_label = str(item.get("correct_definition_label", "")).strip()
+            if answer_label not in definition_labels:
+                errors.append(f"FAIL: vocabulary.matching_test.items[{idx}] correct_definition_label must point to a definition label. Got: {answer_label}")
+
+    word_families = vocab.get("word_families", [])
+    for family_idx, family in enumerate(word_families):
+        if not family.get("family"):
+            errors.append(f"FAIL: vocabulary.word_families[{family_idx}] missing family.")
+        members = family.get("members", [])
+        if not members:
+            errors.append(f"FAIL: vocabulary.word_families[{family_idx}] must contain members.")
+        for member_idx, member in enumerate(members):
+            for field in ["word", "part_of_speech", "example"]:
+                if not member.get(field):
+                    errors.append(f"FAIL: vocabulary.word_families[{family_idx}].members[{member_idx}] missing {field}.")
+
+    word_family_practice = vocab.get("word_family_practice", {})
+    if word_family_practice:
+        practice_items = word_family_practice.get("items", [])
+        if not practice_items:
+            errors.append("FAIL: vocabulary.word_family_practice.items must not be empty.")
+        for idx, item in enumerate(practice_items):
+            for field in ["id", "options", "correct_answer", "explanation_vi"]:
+                if field not in item or item.get(field) in [None, "", []]:
+                    errors.append(f"FAIL: vocabulary.word_family_practice.items[{idx}] missing {field}.")
+            options = item.get("options", [])
+            if len(options) < 2:
+                errors.append(f"FAIL: vocabulary.word_family_practice.items[{idx}] must contain at least 2 options.")
+            if str(item.get("correct_answer", "")).strip() not in {str(opt).strip() for opt in options}:
+                errors.append(f"FAIL: vocabulary.word_family_practice.items[{idx}] correct_answer must be one of its options.")
 
     # 6. Validate grammar
     grammar = data["grammar"]
@@ -636,6 +737,8 @@ def validate_lesson_json(json_path: Path) -> bool:
     grammar_ans = answers.get("grammar_answers", [])
     writing_guidance = answers.get("writing_guidance", [])
     review_bridge = answers.get("review_bridge", [])
+    vocab_matching_ans = answers.get("vocabulary_matching_answers", [])
+    word_family_ans = answers.get("word_family_answers", [])
 
     if len(reading_ans) != len(rqs):
         errors.append(f"FAIL: Answers list count mismatch for Reading. Expected {len(rqs)}, got {len(reading_ans)}")
@@ -645,6 +748,33 @@ def validate_lesson_json(json_path: Path) -> bool:
         errors.append(f"FAIL: Answers list count mismatch for Writing. Expected {len(wts)}, got {len(writing_guidance)}")
     if len(review_bridge) != 3:
         errors.append(f"FAIL: Review bridge answers must contain exactly 3 items. Got {len(review_bridge)}")
+
+    if matching_test:
+        match_items = matching_test.get("items", [])
+        if len(vocab_matching_ans) != len(match_items):
+            errors.append(f"FAIL: Answers list count mismatch for Vocabulary Matching. Expected {len(match_items)}, got {len(vocab_matching_ans)}")
+        expected_match_answers = {item.get("id"): item.get("correct_definition_label") for item in match_items}
+        for idx, ans in enumerate(vocab_matching_ans):
+            item_id = ans.get("item_id")
+            if item_id not in expected_match_answers:
+                errors.append(f"FAIL: answers.vocabulary_matching_answers[{idx}] item_id does not match a vocabulary matching item.")
+                continue
+            answer_label = ans.get("correct_definition_label", ans.get("correct_answer"))
+            if answer_label != expected_match_answers[item_id]:
+                errors.append(f"FAIL: answers.vocabulary_matching_answers[{idx}] answer does not match vocabulary.matching_test.items.")
+
+    if word_family_practice:
+        practice_items = word_family_practice.get("items", [])
+        if len(word_family_ans) != len(practice_items):
+            errors.append(f"FAIL: Answers list count mismatch for Word Family Practice. Expected {len(practice_items)}, got {len(word_family_ans)}")
+        expected_word_family_answers = {item.get("id"): item.get("correct_answer") for item in practice_items}
+        for idx, ans in enumerate(word_family_ans):
+            item_id = ans.get("item_id")
+            if item_id not in expected_word_family_answers:
+                errors.append(f"FAIL: answers.word_family_answers[{idx}] item_id does not match a word family practice item.")
+                continue
+            if ans.get("correct_answer") != expected_word_family_answers[item_id]:
+                errors.append(f"FAIL: answers.word_family_answers[{idx}] answer does not match vocabulary.word_family_practice.items.")
 
     required_reading_answer_fields = [
         "question_id",
@@ -684,6 +814,10 @@ def validate_lesson_json(json_path: Path) -> bool:
     if printed_time:
         est_time = 8.0
         est_time += len(rqs) * 1.5
+        if matching_test:
+            est_time += len(matching_test.get("items", [])) * 0.5
+        if word_family_practice:
+            est_time += len(word_family_practice.get("items", [])) * 0.8
         
         for g in gqs:
             g_type = g.get("type", "").lower()

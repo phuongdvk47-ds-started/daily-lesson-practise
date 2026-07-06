@@ -47,6 +47,14 @@ Generate detailed answer keys, explanations, model writing answers, and cumulati
 7. **Review Bridge Section**:
    - Add `IV. Review Bridge / Ôn tập liên chủ đề` at the end containing exactly 3 translation or sentence completion items reinforcing recycled vocabulary, complete with correct answers and Vietnamese explanations.
 
+## Barron-style Optional Answer Keys
+
+Use this only when the lesson payload contains the corresponding optional sections.
+
+- For `vocabulary.matching_test`, create `answers.vocabulary_matching_answers`. Each item must include `item_id`, `term`, `correct_definition_label`, and `explanation_vi`. The label must match `vocabulary.matching_test.items[].correct_definition_label`.
+- For `vocabulary.word_family_practice`, create `answers.word_family_answers`. Each item must include `item_id`, `family`, `correct_answer`, and `explanation_vi`. The answer must match the practice item exactly.
+- Keep explanations concise, in Vietnamese, and focused on why the part of speech/meaning fits the sentence.
+
 ## Output JSON
 Return JSON only:
 ```json

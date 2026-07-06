@@ -175,8 +175,12 @@ MAJOR_SECTION_KEYWORDS = [
     "ielts traps",
     "reading source verification",
     "warm-up",
+    "vocabulary matching test",
     "reading passage",
     "questions for reading",
+    "word family practice",
+    "vocabulary answer key",
+    "word family practice answers",
     "questions for grammar",
     "questions for writing",
     "reading answer key",
@@ -307,6 +311,43 @@ def generate_warmup_html(sections: dict[str, str]) -> str:
         {questions_html}
     </div>"""
 
+def generate_vocabulary_matching_html(sections: dict[str, str]) -> str:
+    match_md = sections.get("Vocabulary Matching Test", "")
+    if not match_md:
+        for k in sections.keys():
+            if "vocabulary matching" in k.lower() or "words vs definitions" in k.lower():
+                match_md = sections[k]
+                break
+    if not match_md:
+        return ""
+
+    lines = match_md.splitlines()
+    instruction = "Match each word with its correct definition."
+    table_lines = []
+    other_lines = []
+
+    for line in lines:
+        line_str = line.strip()
+        if not line_str:
+            continue
+        if line_str.startswith("*") and line_str.endswith("*"):
+            instruction = line_str.replace("*", "").strip()
+        elif line_str.startswith("|") and line_str.endswith("|"):
+            table_lines.append(line_str)
+        else:
+            other_lines.append(line_str)
+
+    table_html = parse_markdown_table_to_html("\n".join(table_lines)) if table_lines else ""
+    other_html = "".join(f"<p>{format_markdown_inline(line)}</p>" for line in other_lines)
+
+    return f"""    <!-- VOCABULARY MATCHING TEST -->
+    <div class="section-title">Vocabulary Matching Test</div>
+    <div class="vocab-match-box">
+        <div class="question-instruction">{instruction}</div>
+        {other_html}
+        {table_html}
+    </div>"""
+
 def generate_reading_passage_html(sections: dict[str, str], source_box_html: str, vocab_words: list[str] = None) -> str:
     passage_md = sections.get("Reading Passage", "")
     if not passage_md:
@@ -331,6 +372,7 @@ def generate_reading_passage_html(sections: dict[str, str], source_box_html: str
             continue
         else:
             cleaned_line = format_markdown_inline(line_str)
+            cleaned_line = re.sub(r'^<b>([A-Z])</b>\s+', r'<span class="paragraph-label">\1</span> ', cleaned_line)
             passage_paras.append(f"        <p>{cleaned_line}</p>")
             
     paras_html = "\n".join(passage_paras)
@@ -350,6 +392,25 @@ def generate_reading_passage_html(sections: dict[str, str], source_box_html: str
 def parse_questions_section(md_text: str) -> list[dict]:
     groups = []
     current_group = None
+
+    def finalize_group(group: dict | None) -> None:
+        if not group:
+            return
+        title = group.get("title", "").lower()
+        instruction = group.get("instruction", "").lower()
+        is_summary = "summary completion" in title or "summary completion" in instruction
+        if is_summary and not group.get("questions"):
+            body = "\n".join(group.get("body_lines", []))
+            nums = re.findall(r'\b(\d+)\.\s*(?:_{3,}|<span class="fill-blank")', body)
+            for num in nums:
+                group["questions"].append({
+                    "num": num,
+                    "text": "",
+                    "options": [],
+                    "is_stretch": False
+                })
+        groups.append(group)
+
     lines = md_text.splitlines()
     i = 0
     while i < len(lines):
@@ -360,17 +421,18 @@ def parse_questions_section(md_text: str) -> list[dict]:
         
         if line.startswith("#### ") or line.startswith("### ") or line.startswith("## Exercise"):
             if current_group:
-                groups.append(current_group)
+                finalize_group(current_group)
             current_group = {
                 "title": re.sub(r'^[#\s\d\.]+', '', line).strip(),
                 "instruction": "",
+                "body_lines": [],
                 "questions": []
             }
             i += 1
             continue
             
         if not current_group:
-            current_group = {"title": "Questions", "instruction": "", "questions": []}
+            current_group = {"title": "Questions", "instruction": "", "body_lines": [], "questions": []}
             
         if line.startswith("*") and line.endswith("*"):
             current_group["instruction"] = line.replace("*", "").strip()
@@ -399,11 +461,12 @@ def parse_questions_section(md_text: str) -> list[dict]:
             })
             i += 1
             continue
-            
+
+        current_group["body_lines"].append(line)
         i += 1
         
     if current_group:
-        groups.append(current_group)
+        finalize_group(current_group)
     return groups
 
 def generate_reading_questions_html(sections: dict[str, str]) -> str:
@@ -425,8 +488,10 @@ def generate_reading_questions_html(sections: dict[str, str]) -> str:
         title = g["title"]
         instruction = g["instruction"]
         qs = g["questions"]
+        body_lines = g.get("body_lines", [])
         
         is_tfng = "true" in title.lower() or "true" in instruction.lower() or "false" in title.lower() or "false" in instruction.lower()
+        is_summary = "summary completion" in title.lower() or "summary completion" in instruction.lower()
         
         group_html = []
         group_html.append('    <div class="question-group">')
@@ -446,6 +511,23 @@ def generate_reading_questions_html(sections: dict[str, str]) -> str:
             FALSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement contradicts the information<br>
             NOT GIVEN &nbsp;&nbsp;&nbsp;&nbsp; if there is no information on this
         </div>""")
+
+        if is_summary and body_lines:
+            summary_parts = []
+            for raw_line in body_lines:
+                raw_line = raw_line.strip()
+                if not raw_line:
+                    continue
+                formatted = format_markdown_inline(raw_line)
+                formatted = re.sub(r'_{3,}', '<span class="fill-blank">&nbsp;</span>', formatted)
+                if raw_line.lower().startswith("word bank:"):
+                    summary_parts.append(f'<div class="word-bank">{formatted}</div>')
+                else:
+                    summary_parts.append(f'<p class="summary-completion-text">{formatted}</p>')
+            group_html.append("\n".join(summary_parts))
+            group_html.append('    </div>')
+            html_parts.append("\n".join(group_html))
+            continue
             
         for q in qs:
             num = q["num"]
@@ -469,6 +551,54 @@ def generate_reading_questions_html(sections: dict[str, str]) -> str:
         html_parts.append("\n".join(group_html))
         
     return "\n\n".join(html_parts)
+
+def generate_word_family_practice_html(sections: dict[str, str]) -> str:
+    wf_md = sections.get("Word Family Practice", "")
+    if not wf_md:
+        for k in sections.keys():
+            if "word family practice" in k.lower():
+                wf_md = sections[k]
+                break
+    if not wf_md:
+        return ""
+
+    instruction = "Choose the correct word family member to complete each blank."
+    table_lines = []
+    content_parts = []
+    pending_table = False
+
+    def flush_table() -> None:
+        nonlocal table_lines, pending_table
+        if table_lines:
+            content_parts.append(parse_markdown_table_to_html("\n".join(table_lines)))
+            table_lines = []
+            pending_table = False
+
+    for line in wf_md.splitlines():
+        line_str = line.strip()
+        if not line_str:
+            flush_table()
+            continue
+        if line_str.startswith("*") and line_str.endswith("*"):
+            instruction = line_str.replace("*", "").strip()
+            continue
+        if line_str.startswith("|") and line_str.endswith("|"):
+            table_lines.append(line_str)
+            pending_table = True
+            continue
+        if pending_table:
+            flush_table()
+        formatted = format_markdown_inline(line_str)
+        formatted = re.sub(r'_{3,}', '<span class="fill-blank">&nbsp;</span>', formatted)
+        content_parts.append(f"<p>{formatted}</p>")
+    flush_table()
+
+    return f"""    <!-- WORD FAMILY PRACTICE -->
+    <div class="section-title">Word Family Practice</div>
+    <div class="word-family-box">
+        <div class="question-instruction">{instruction}</div>
+        {"".join(content_parts)}
+    </div>"""
 
 def adjust_instruction_numbers(instruction: str, offset: int) -> str:
     if not offset:
@@ -781,9 +911,11 @@ def build_practice_html(practice_md: str, level: str, topic: str, day: str, voca
     topic_upper = topic.upper()
     
     source_box_html = generate_source_box(sections)
+    vocabulary_matching_html = generate_vocabulary_matching_html(sections)
     warmup_html = generate_warmup_html(sections)
     reading_html = generate_reading_passage_html(sections, source_box_html, vocab_words)
     reading_qs_html = generate_reading_questions_html(sections)
+    word_family_html = generate_word_family_practice_html(sections)
     
     reading_offset = 13
     groups = parse_questions_section(sections.get("Questions for Reading", ""))
@@ -884,6 +1016,34 @@ def build_practice_html(practice_md: str, level: str, topic: str, day: str, voca
         }}
         .reading-text p {{
             margin: 0 0 6px 0;
+        }}
+        .paragraph-label {{
+            display: inline-block;
+            min-width: 22px;
+            font-weight: bold;
+            color: #2980b9;
+            text-indent: 0;
+        }}
+        .vocab-match-box,
+        .word-family-box {{
+            background-color: #fafbfc;
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }}
+        .summary-completion-text {{
+            font-size: 11.5pt;
+            line-height: 1.7;
+            margin: 8px 0;
+        }}
+        .word-bank {{
+            margin: 8px 0 12px 0;
+            padding: 8px 10px;
+            background-color: #f2f4f8;
+            border-left: 3px solid #2980b9;
+            font-weight: bold;
+            color: #34495e;
         }}
         .data-table {{ 
             width: 100%; 
@@ -1007,11 +1167,15 @@ def build_practice_html(practice_md: str, level: str, topic: str, day: str, voca
         </div>
     </div>
 
+{vocabulary_matching_html}
+
 {warmup_html}
 
 {reading_html}
 
 {reading_qs_html}
+
+{word_family_html}
 
 {grammar_html}
 
@@ -1820,7 +1984,17 @@ def build_answers_html(answers_md: str, day: str, topic: str, practice_md: str) 
     groups = parse_questions_section(practice_sections.get("Questions for Reading", ""))
     if groups:
         reading_offset = sum(len(g["questions"]) for g in groups)
-        
+
+    vocab_sec = sections.get("Vocabulary Answer Key", "")
+    if not vocab_sec:
+        for k in sections.keys():
+            key = k.lower()
+            if "vocabulary" in key and "answer" in key:
+                vocab_sec = sections[k]
+                break
+    vocab_items = parse_explanation_items(vocab_sec, is_grammar=False, offset=0)
+    vocabulary_answers_html = "\n\n".join(render_explanation_item(item) for item in vocab_items)
+
     reading_sec = sections.get("Reading Answer Key and Detailed Explanations", "")
     if not reading_sec:
         for k in sections.keys():
@@ -1838,7 +2012,17 @@ def build_answers_html(answers_md: str, day: str, topic: str, practice_md: str) 
                 break
     grammar_items = parse_explanation_items(grammar_sec, is_grammar=True, offset=reading_offset)
     grammar_explanations_html = "\n\n".join(render_explanation_item(item) for item in grammar_items)
-    
+
+    word_family_sec = sections.get("Word Family Practice Answers", "")
+    if not word_family_sec:
+        for k in sections.keys():
+            key = k.lower()
+            if "word family" in key and "answer" in key:
+                word_family_sec = sections[k]
+                break
+    word_family_items = parse_explanation_items(word_family_sec, is_grammar=False, offset=0)
+    word_family_answers_html = "\n\n".join(render_explanation_item(item) for item in word_family_items)
+
     writing_sec = sections.get("Writing Guidance / Suggested Answers", "")
     if not writing_sec:
         for k in sections.keys():
@@ -1847,6 +2031,22 @@ def build_answers_html(answers_md: str, day: str, topic: str, practice_md: str) 
                 break
     writing_tasks = parse_writing_answers(writing_sec)
     writing_answers_html = "\n\n".join(render_writing_answer_task(task) for task in writing_tasks)
+
+    vocabulary_section_html = ""
+    if vocabulary_answers_html:
+        vocabulary_section_html = f"""    <!-- VOCABULARY ANSWERS -->
+    <div class="section-title">Vocabulary Matching Answers</div>
+
+{vocabulary_answers_html}
+"""
+
+    word_family_section_html = ""
+    if word_family_answers_html:
+        word_family_section_html = f"""    <!-- WORD FAMILY ANSWERS -->
+    <div class="section-title">Word Family Practice Answers</div>
+
+{word_family_answers_html}
+"""
     
     review_sec = sections.get("Review Bridge", "")
     if not review_sec:
@@ -1987,6 +2187,8 @@ def build_answers_html(answers_md: str, day: str, topic: str, practice_md: str) 
         <h1>ANSWER KEY & EXPLANATIONS - DAY {day_only}: {topic_upper}</h1>
     </div>
 
+{vocabulary_section_html}
+
     <!-- READING ANSWERS -->
     <div class="section-title">I. Reading Passage Answers & Explanations</div>
     
@@ -1996,6 +2198,8 @@ def build_answers_html(answers_md: str, day: str, topic: str, practice_md: str) 
     <div class="section-title">II. Grammar Practice Answers & Explanations</div>
     
 {grammar_explanations_html}
+
+{word_family_section_html}
 
     <!-- WRITING ANSWERS -->
     <div class="section-title">III. Writing Guidance / Suggested Answers</div>
@@ -2253,7 +2457,15 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
         for q_type in by_type:
             by_type[q_type].sort(key=lambda x: (x.get("evidence_paragraph", 0), x.get("id", 0)))
             
-        type_order = ["Heading Matching", "True/False/Not Given", "Gap Fill", "Multiple Choice"]
+        type_order = [
+            "Paragraph Information Matching",
+            "Paragraph Matching",
+            "Summary Completion",
+            "Heading Matching",
+            "True/False/Not Given",
+            "Gap Fill",
+            "Multiple Choice",
+        ]
         all_types = list(by_type.keys())
         sorted_types = sorted(all_types, key=lambda t: type_order.index(t) if t in type_order else len(type_order))
         
@@ -2313,6 +2525,31 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
         pm.append("| --- | --- | --- | --- | --- | --- | --- | --- |")
         pm.append(f"| {source.get('source_title', '')} | {source.get('publisher', '')} | {source.get('published_date', '')} / {source.get('access_date', '')} | {source.get('verified_url', '')} | {source.get('url_status', 'Active')} | {source.get('source_type', 'Educational News Article')} | {source.get('credibility_note', '')} | {source.get('topic_relevance_note', '')} |")
         pm.append("")
+
+    vocab = data.get("vocabulary", {})
+    matching_test = vocab.get("matching_test", {})
+    if matching_test:
+        pm.append("## Vocabulary Matching Test")
+        pm.append(f"*{matching_test.get('instruction', 'Look for the following words as you read the passage. Match each word with its correct definition.')}*")
+        pm.append("| Words | Definitions |")
+        pm.append("| --- | --- |")
+        items = matching_test.get("items", [])
+        definitions = matching_test.get("definitions", [])
+        max_rows = max(len(items), len(definitions))
+        for idx in range(max_rows):
+            word_cell = ""
+            definition_cell = ""
+            if idx < len(items):
+                item = items[idx]
+                word_cell = f"{item.get('id', idx + 1)}. {item.get('term', '')}"
+            if idx < len(definitions):
+                definition = definitions[idx]
+                label = definition.get("label", chr(65 + idx))
+                pos = definition.get("part_of_speech", "")
+                def_text = definition.get("definition", "")
+                definition_cell = f"{label}. {pos}, {def_text}" if pos else f"{label}. {def_text}"
+            pm.append(f"| {word_cell.replace('|', '/')} | {definition_cell.replace('|', '/')} |")
+        pm.append("")
         
     pm.append("## Warm-up")
     pm.append("Answer the following questions in Vietnamese or English:")
@@ -2333,7 +2570,11 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
         pm.append(f"### {passage.get('title', '')}")
         pm.append("")
         for p in passage.get("paragraphs", []):
-            pm.append(p.get("text", ""))
+            label = p.get("label")
+            if label:
+                pm.append(f"**{label}** {p.get('text', '')}")
+            else:
+                pm.append(p.get("text", ""))
             pm.append("")
             
     rqs = reading.get("questions", [])
@@ -2343,22 +2584,87 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
         for q in rqs:
             q_type = q.get("type", "Questions")
             by_type.setdefault(q_type, []).append(q)
-            
+
+        paragraph_labels = [
+            str(p.get("label", "")).strip()
+            for p in passage.get("paragraphs", [])
+            if str(p.get("label", "")).strip()
+        ]
+        label_range = ""
+        if paragraph_labels:
+            label_range = f"{paragraph_labels[0]}-{paragraph_labels[-1]}"
+
+        summary_completion = reading.get("summary_completion", {})
+
         for q_type, q_list in by_type.items():
             start_num = q_list[0]["id"]
             end_num = q_list[-1]["id"]
-            range_str = f"Questions {start_num}–{end_num}: " if start_num != end_num else f"Question {start_num}: "
+            range_str = f"Questions {start_num}-{end_num}: " if start_num != end_num else f"Question {start_num}: "
             pm.append(f"### {range_str}{q_type}")
             pm.append("")
+            q_type_lower = q_type.lower()
+
+            if "summary completion" in q_type_lower and summary_completion:
+                instruction = summary_completion.get("instruction", "Complete the summary using words from the list below.")
+                pm.append(f"*{instruction}*")
+                pm.append("")
+                summary_text = summary_completion.get("summary_text", "")
+                for q in q_list:
+                    blank = f"{q['id']}. ________"
+                    summary_text = summary_text.replace(f"{{{q['id']}}}", blank)
+                    summary_text = summary_text.replace(f"[[{q['id']}]]", blank)
+                if summary_text:
+                    pm.append(summary_text)
+                    pm.append("")
+                word_bank = summary_completion.get("word_bank", [])
+                if word_bank:
+                    pm.append("Word bank: " + " | ".join(str(word) for word in word_bank))
+                    pm.append("")
+                continue
+
+            if "paragraph" in q_type_lower and ("matching" in q_type_lower or "information" in q_type_lower):
+                if label_range:
+                    pm.append(f"*The reading passage contains paragraphs {label_range}. Which paragraph contains the following information? Write the correct letter, {label_range}.*")
+                else:
+                    pm.append("*Which paragraph contains the following information? Write the correct letter.*")
+                pm.append("")
+
             for q in q_list:
                 stretch_mark = " (*)" if q.get("stretch") else ""
                 options_str = ""
                 if q.get("options"):
                     letters = ["A", "B", "C", "D", "E", "F"]
                     options_str = "\n" + "\n".join([f"    {letters[opt_idx]}. {opt}" for opt_idx, opt in enumerate(q["options"])])
-                pm.append(f"{q['id']}. {q['question']}{stretch_mark}{options_str}")
+                prompt = q.get("question", "")
+                if "paragraph" in q_type_lower and ("matching" in q_type_lower or "information" in q_type_lower):
+                    prompt = prompt.rstrip()
+                    if not re.search(r'_{3,}', prompt):
+                        prompt = f"{prompt} ________"
+                pm.append(f"{q['id']}. {prompt}{stretch_mark}{options_str}")
             pm.append("")
-            
+
+    word_family_practice = vocab.get("word_family_practice", {})
+    if word_family_practice:
+        pm.append("## Word Family Practice")
+        pm.append(f"*{word_family_practice.get('instruction', 'Choose the correct word family member to complete each blank.')}*")
+        pm.append("")
+        practice_text = word_family_practice.get("practice_text", "")
+        for item in word_family_practice.get("items", []):
+            blank = f"{item.get('id')}. ________"
+            practice_text = practice_text.replace(f"{{{item.get('id')}}}", blank)
+            practice_text = practice_text.replace(f"[[{item.get('id')}]]", blank)
+        if practice_text:
+            pm.append(practice_text)
+            pm.append("")
+        items = word_family_practice.get("items", [])
+        if items:
+            pm.append("| # | Options |")
+            pm.append("| --- | --- |")
+            for item in items:
+                options = " / ".join(str(opt) for opt in item.get("options", []))
+                pm.append(f"| {item.get('id', '')} | {options.replace('|', '/')} |")
+            pm.append("")
+
     grammar = data.get("grammar", {})
     gqs = grammar.get("questions", [])
     if gqs:
@@ -2432,6 +2738,20 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
         for item in v_items:
             vgm.append(f"| {item.get('term', '')} | {item.get('ipa', '')} | {item.get('part_of_speech', '')} | {item.get('meaning_vi', '')} ({item.get('definition_en', '')}) | {item.get('example', '')} |")
         vgm.append("")
+
+    word_families = vocab.get("word_families", [])
+    if word_families:
+        vgm.append("## Word Families")
+        vgm.append("| Family | Word | Part of speech | Example |")
+        vgm.append("| --- | --- | --- | --- |")
+        for family in word_families:
+            family_name = str(family.get("family", "")).replace("|", "/")
+            for member in family.get("members", []):
+                word = str(member.get("word", "")).replace("|", "/")
+                pos = str(member.get("part_of_speech", "")).replace("|", "/")
+                example = str(member.get("example", "")).replace("|", "/")
+                vgm.append(f"| {family_name} | {word} | {pos} | {example} |")
+        vgm.append("")
         
     v_recycled = vocab.get("recycled_items", [])
     if v_recycled:
@@ -2463,6 +2783,19 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
     
     am = []
     answers = data.get("answers", {})
+    vocab_match_answers = answers.get("vocabulary_matching_answers", [])
+    if vocab_match_answers:
+        am.append("## Vocabulary Answer Key")
+        am.append("")
+        for idx, va in enumerate(vocab_match_answers):
+            q_id = va.get("item_id", idx + 1)
+            am.append(f"{q_id}. **{va.get('correct_definition_label', va.get('correct_answer', ''))}**")
+            if va.get("term"):
+                am.append(f"- Term: {va.get('term', '')}")
+            if va.get("explanation_vi"):
+                am.append(f"- Explanation: {va.get('explanation_vi', '')}")
+            am.append("")
+
     r_ans = answers.get("reading_answers", [])
     if r_ans:
         am.append("## Reading Answer Key and Detailed Explanations")
@@ -2492,6 +2825,19 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
             am.append(f"- Dấu hiệu / Phân tích: {ga.get('analysis_vi', '')}")
             if ga.get("tip_vi"):
                 am.append(f"> **💡 Mẹo:** {ga['tip_vi']}")
+            am.append("")
+
+    word_family_answers = answers.get("word_family_answers", [])
+    if word_family_answers:
+        am.append("## Word Family Practice Answers")
+        am.append("")
+        for idx, wa in enumerate(word_family_answers):
+            q_id = wa.get("item_id", idx + 1)
+            am.append(f"{q_id}. **{wa.get('correct_answer', '')}**")
+            if wa.get("family"):
+                am.append(f"- Family: {wa.get('family', '')}")
+            if wa.get("explanation_vi"):
+                am.append(f"- Explanation: {wa.get('explanation_vi', '')}")
             am.append("")
             
     w_guidance = answers.get("writing_guidance", [])
