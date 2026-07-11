@@ -1,0 +1,20 @@
+integrated (/ˈɪn.tɪ.ɡreɪ.tɪd/) [adjective]	Combining many parts into a single whole - được tích hợp, hợp nhất. Ví dụ: The smart home has an integrated security system.
+interconnected (/ˌɪn.tə.kəˈnek.tɪd/) [adjective]	Connected with each other - liên kết với nhau. Ví dụ: All the smart appliances are interconnected via Wi-Fi.
+remote management (/rɪˈməʊt ˈmæn.ɪdʒ.mənt/) [noun phrase]	The control of a system from a distant location - sự quản lý từ xa. Ví dụ: Remote management allows you to turn off lights while away.
+unprecedented (/ʌnˈpres.ɪ.den.tɪd/) [adjective]	Never having happened or existed in the past - chưa từng có, chưa từng xảy ra. Ví dụ: Technology provides unprecedented control over home devices.
+automated routine (/ˈɔː.tə.meɪ.tɪd ruːˈtiːn/) [noun phrase]	A series of actions performed by systems without human help - thao tác/quy trình tự động. Ví dụ: Creating an automated routine saves energy every night.
+energy efficiency (/ˈen.ə.dʒi ɪˈfɪʃ.ən.si/) [noun phrase]	Using less energy to perform the same task - hiệu quả năng lượng. Ví dụ: Modern smart appliances prioritize energy efficiency.
+occupancy sensor (/ˈɒk.jə.pən.si ˈsen.sər/) [noun phrase]	A device that detects if a room is being used - cảm biến nhận diện người. Ví dụ: The occupancy sensor turns off the heater when you leave.
+consumption (/kənˈsʌmp.ʃən/) [noun]	The amount of something that is used - sự tiêu thụ. Ví dụ: Smart meters help track daily energy consumption.
+environmental footprint (/ɪn.vaɪ.rənˈmen.təl ˈfʊt.prɪnt/) [noun phrase]	The effect that human activities have on the environment - dấu chân môi trường, tác động môi trường. Ví dụ: Lowering electricity usage reduces your environmental footprint.
+interoperability (/ˌɪn.tərˌɒp.ər.əˈbɪl.ə.ti/) [noun]	The ability of different systems to work together - khả năng tương thích giữa các hệ thống. Ví dụ: Interoperability is a major challenge for smart home brands.
+non-technical (/ˌnɒnˈtek.nɪ.kəl/) [adjective]	Not relating to science or technology - không thuộc chuyên môn kỹ thuật. Ví dụ: Non-technical users might need help setting up the system.
+learning curve (/ˈlɜː.nɪŋ kɜːv/) [noun phrase]	The rate of someone's progress in learning a new skill - tiến trình học hỏi, đường cong học tập. Ví dụ: Installing a central hub has a steep learning curve.
+widespread adoption (/ˌwaɪd.spred əˈdɒp.ʃən/) [noun phrase]	The act of accepting or using something very widely - sự áp dụng rộng rãi. Ví dụ: High costs prevent the widespread adoption of smart homes.
+behavioral data (/bɪˈheɪ.vjər.əl ˈdeɪ.tə/) [noun phrase]	Information collected about people's activities and habits - dữ liệu hành vi. Ví dụ: Devices collect behavioral data to automate household tasks.
+vulnerable (/ˈvʌl.nər.ə.bəl/) [adjective]	Easy to hurt, influence, or attack - dễ bị tổn thương, dễ gặp nguy hiểm. Ví dụ: Unsecured devices are vulnerable to hacking.
+cyberthreat (/ˈsaɪ.bə.θret/) [noun]	A threat of hacker attacks on computers or networks - mối đe dọa an ninh mạng. Ví dụ: A strong password protects your home from a cyberthreat.
+default password (/dɪˈfɔːlt ˈpɑːs.wɜːd/) [noun phrase]	A password set by the manufacturer for initial setup - mật khẩu mặc định. Ví dụ: You must change the default password immediately.
+device firmware (/dɪˈvaɪs ˈfɜːm.weər/) [noun phrase]	Software program written into a hardware device - phần sụn thiết bị. Ví dụ: Updating device firmware fixes security bugs.
+smart appliance (/smɑːt əˈplaɪ.əns/) [noun phrase]	A household device connected to the internet - thiết bị gia dụng thông minh. Ví dụ: A smart appliance can send alerts to your smartphone.
+seamlessly (/ˈsiːm.ləs.li/) [adverb]	Smoothly, without any gaps or problems - một cách liền mạch, mượt mà. Ví dụ: The lights and heating work together seamlessly.

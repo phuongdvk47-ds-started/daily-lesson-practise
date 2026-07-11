@@ -1,0 +1,20 @@
+integrated : được tích hợp, hợp nhất
+interconnected : liên kết với nhau
+remote management : sự quản lý từ xa
+unprecedented : chưa từng có, chưa từng xảy ra
+automated routine : thao tác/quy trình tự động
+energy efficiency : hiệu quả năng lượng
+occupancy sensor : cảm biến nhận diện người
+consumption : sự tiêu thụ
+environmental footprint : dấu chân môi trường, tác động môi trường
+interoperability : khả năng tương thích giữa các hệ thống
+non-technical : không thuộc chuyên môn kỹ thuật
+learning curve : tiến trình học hỏi, đường cong học tập
+widespread adoption : sự áp dụng rộng rãi
+behavioral data : dữ liệu hành vi
+vulnerable : dễ bị tổn thương, dễ gặp nguy hiểm
+cyberthreat : mối đe dọa an ninh mạng
+default password : mật khẩu mặc định
+device firmware : phần sụn thiết bị
+smart appliance : thiết bị gia dụng thông minh
+seamlessly : một cách liền mạch, mượt mà

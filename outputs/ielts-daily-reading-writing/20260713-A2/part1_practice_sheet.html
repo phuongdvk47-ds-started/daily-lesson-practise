@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAILY PRACTICE: DAY 20260713 - LEISURE ACTIVITIES, HOBBIES, SPORTS CLUBS</title>
+    <style>
+        @page { 
+            size: A4; 
+            margin: 15mm 15mm 20mm 15mm; 
+        }
+        body { 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 11.5pt; 
+            line-height: 1.45; 
+            color: #1a1a1a; 
+            margin: 0; 
+            padding: 0;
+        }
+        .header { 
+            border-bottom: 2px double #2c3e50; 
+            padding-bottom: 8px; 
+            margin-bottom: 15px; 
+            text-align: center;
+        }
+        .header .center-name { 
+            font-size: 9.5pt; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            color: #7f8c8d; 
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .header h1 { 
+            font-size: 15pt; 
+            margin: 3px 0; 
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .header h2 { 
+            font-size: 11pt; 
+            margin: 3px 0; 
+            font-style: italic; 
+            color: #34495e;
+        }
+        .student-info { 
+            margin-top: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .section-title { 
+            font-size: 12pt; 
+            color: #2c3e50; 
+            border-left: 3px solid #27ae60; 
+            padding-left: 8px; 
+            margin-top: 18px; 
+            margin-bottom: 8px; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .passage-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .reading-text { 
+            text-align: justify; 
+            margin-bottom: 12px; 
+            text-indent: 25px;
+        }
+        .reading-text p {
+            margin: 0 0 6px 0;
+        }
+        .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }
+        .data-table th { 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }
+        .data-table td { 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }
+        .data-table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+        .svg-chart-container {
+            text-align: center;
+            margin: 10px 0;
+            page-break-inside: avoid;
+        }
+        .writing-line {
+            border-bottom: 1px dotted #bdc3c7;
+            height: 22px;
+            margin-top: 4px;
+            margin-bottom: 1px;
+            width: 98%;
+            page-break-inside: avoid;
+        }
+        .writing-prompt-text {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .writing-prompt-sub-item {
+            margin-top: 4px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .source-box { 
+            font-style: italic; 
+            font-size: 9pt; 
+            color: #7f8c8d; 
+            margin-bottom: 15px; 
+            padding: 6px 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #bdc3c7;
+        }
+        .source-box a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .question-instruction {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+        .question-group {
+            margin-bottom: 12px;
+        }
+        .question-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            text-indent: -20px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .question-options {
+            margin: 4px 0 4px 20px;
+            text-indent: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .question-options div {
+            margin-bottom: 2px;
+            box-sizing: border-box;
+            padding-right: 8px;
+        }
+        .options-4col div {
+            width: 25%;
+        }
+        .options-2col div {
+            width: 50%;
+        }
+        .options-1col div {
+            width: 100%;
+        }
+        .fill-blank {
+            display: inline-block;
+            width: 100px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        .grammar-item {
+            margin-bottom: 8px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .writing-box {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            background-color: #fafbfc;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            text-align: left;
+            page-break-inside: avoid;
+        }
+        .writing-item {
+            margin-bottom: 10px;
+        }
+        .warmup-box {
+            background-color: #fcfcfc;
+            border: 1px dashed #bdc3c7;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            font-size: 10pt;
+        }
+        .warmup-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="center-name">IELTS PREMIUM PREPARATION ACADEMY</div>
+        <h1>DAILY PRACTICE: DAY 20260713 - LEISURE ACTIVITIES, HOBBIES, SPORTS CLUBS</h1>
+        <h2>(Level: Reading A2 - Writing A1)</h2>
+        <div class="student-info">
+            <span>Student Name: ..............................................................</span>
+            <span>Time Allowed: 75 mins</span>
+        </div>
+    </div>
+
+    <!-- WARM-UP SECTION -->
+    <div class="section-title">Warm-up / Khởi động</div>
+    <div class="warmup-box">
+        <div class="warmup-title">Answer the following questions in English:</div>
+        1. What is your favorite leisure activity and when do you usually do it?<br>
+        2. Have you ever joined a sports club in your town or school?<br>
+        3. Do you prefer indoor activities like chess or outdoor sports like football? Why?
+    </div>
+
+    <!-- READING PASSAGE -->
+    <div class="section-title">I. Reading Passage</div>
+    <div class="passage-title">The Benefits of Hobbies and Sports Clubs</div>
+    
+    <div class="reading-text">
+        <p>Hobbies are regular activities that people do for <b>enjoyment</b>, usually during their <b>leisure</b> time. There are many different hobbies <b>available</b> [R] for people of all ages. For example, some people like playing <b>outdoor</b> sports, while others prefer quiet <b>indoor</b> hobbies like reading, drawing, or playing <b>chess</b>. Joining a local club is a great way to meet new friends who share the same <b>interests</b>. In a <b>sports club</b>, <b>members</b> can <b>practice</b> together and improve their skills.</p>
+        <p>Participating in hobbies helps <b>individuals</b> learn important skills and gain <b>knowledge</b>. When you start a new activity, you often need to <b>book</b> [R] a class or buy some special <b>equipment</b>. For instance, if you want to play tennis, you must find a <b>court</b> and buy a racket. Many local schools and community centers have sports clubs where people can <b>register</b> easily. These activities help people relax and <b>reduce</b> <b>stress</b> after work.</p>
+        <p>If you want to join a <b>sports club</b>, you can <b>make a request</b> [R] at the office or online. <b>Members</b> can choose different times for their weekly activities because clubs are open every day. Hobbies make our daily lives more <b>interesting</b> and help us stay active. Whether you like creative arts or energetic sports, there is always a perfect hobby that you can enjoy.</p>
+    </div>
+
+    <div class="source-box">
+        Source: Adapted from <i>Wikipedia</i> - "Hobby" (2026-07-11)<br>
+        URL: <a href="https://en.wikipedia.org/wiki/Hobby" target="_blank">https://en.wikipedia.org/wiki/Hobby</a>
+    </div>
+
+    <!-- READING QUESTIONS -->
+    <div class="section-title">II. IELTS Reading Questions (13 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 1–4: </div>
+        <div style="margin-left: 20px; font-weight: bold; margin-bottom: 8px; font-size: 10pt;">
+            TRUE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement agrees with the information<br>
+            FALSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement contradicts the information<br>
+            NOT GIVEN &nbsp;&nbsp;&nbsp;&nbsp; if there is no information on this
+        </div>
+        <div class="question-item">
+            <span class="question-number">1.</span> Hobbies are activities that people do for work.
+        </div>
+        <div class="question-item">
+            <span class="question-number">2.</span> People can register for sports clubs at local community centers.
+        </div>
+        <div class="question-item">
+            <span class="question-number">3.</span> Tennis is the most popular sport in community centers.
+        </div>
+        <div class="question-item">
+            <span class="question-number">4.</span> Hobbies can help people reduce stress.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 5–8: </div>
+        <div class="question-item">
+            <span class="question-number">5.</span> There are many different hobbies <span class="fill-blank">&nbsp;</span> for people of all ages.
+        </div>
+        <div class="question-item">
+            <span class="question-number">6.</span> If you want to play tennis, you must find a <span class="fill-blank">&nbsp;</span> and buy a racket.
+        </div>
+        <div class="question-item">
+            <span class="question-number">7.</span> If you want to join a sports club, you can make a <span class="fill-blank">&nbsp;</span> at the office or online.
+        </div>
+        <div class="question-item">
+            <span class="question-number">8.</span> Hobbies make our daily lives more interesting and help us stay <span class="fill-blank">&nbsp;</span>.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 9–13: </div>
+        <div class="question-item">
+            <span class="question-number">9.</span> What is the main point of Paragraph 1?
+            <div class="question-options options-1col">
+                <div>A. Joining a sports club is the only way to stay healthy.</div>
+                <div>B. Hobbies are fun activities that people do during their free time.</div>
+                <div>C. Indoor hobbies are much better than outdoor hobbies.</div>
+                <div>D. People of all ages should play chess.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">10.</span> According to Paragraph 1, why is joining a local club beneficial?
+            <div class="question-options options-1col">
+                <div>A. It is cheaper than other hobbies.</div>
+                <div>B. It allows people to meet friends with similar interests.</div>
+                <div>C. It is a mandatory requirement for school students.</div>
+                <div>D. It helps people find jobs.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">11.</span> In Paragraph 2, what does the word 'court' refer to?
+            <div class="question-options options-2col">
+                <div>A. A place where people play tennis.</div>
+                <div>B. A type of special equipment.</div>
+                <div>C. A school classroom.</div>
+                <div>D. A building for stress management.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">12.</span> According to Paragraph 2, what is needed when starting a new activity?
+            <div class="question-options options-1col">
+                <div>A. You must always buy the most expensive equipment.</div>
+                <div>B. You might need to sign up for a class or purchase gear.</div>
+                <div>C. You have to travel to another city.</div>
+                <div>D. You must practice for at least five hours every day.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">13.</span> What is the main idea of Paragraph 3?
+            <div class="question-options options-1col">
+                <div>A. Hobbies are only useful for people who like outdoor sports.</div>
+                <div>B. Sports clubs are closed on weekends.</div>
+                <div>C. Joining a club is simple, and hobbies make our lives active and interesting.</div>
+                <div>D. You can only register for clubs online.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRAMMAR QUESTIONS -->
+    <div class="section-title">III. Questions for Grammar (30 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 14–23: Part A. Comparatives and Superlatives</div>
+        <div class="question-item">
+            <span class="question-number">14.</span> Playing chess is <span class="fill-blank">&nbsp;</span> than playing computer games. (Choose the correct comparative form)
+            <div class="question-options options-4col">
+                <div>A. more quiet</div>
+                <div>B. quieter</div>
+                <div>C. quietest</div>
+                <div>D. most quiet</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">15.</span> This is the <span class="fill-blank">&nbsp;</span> sports club in our city, with over five hundred members.
+            <div class="question-options options-4col">
+                <div>A. larger</div>
+                <div>B. largest</div>
+                <div>C. most large</div>
+                <div>D. more large</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">16.</span> Joining a football club is <span class="fill-blank">&nbsp;</span> than practicing alone because you can meet new friends.
+            <div class="question-options options-4col">
+                <div>A. excitinger</div>
+                <div>B. more exciting</div>
+                <div>C. most exciting</div>
+                <div>D. more excitinger</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">17.</span> She plays tennis <span class="fill-blank">&nbsp;</span> than her brother does.
+            <div class="question-options options-4col">
+                <div>A. gooder</div>
+                <div>B. better</div>
+                <div>C. well</div>
+                <div>D. more well</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">18.</span> This gym is twice as <span class="fill-blank">&nbsp;</span> as the one near my school.
+            <div class="question-options options-4col">
+                <div>A. expensive</div>
+                <div>B. more expensive</div>
+                <div>C. most expensive</div>
+                <div>D. expensiver</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">19.</span> Complete the sentence with the comparative form of 'expensive':<br>My new racket is <span class="fill-blank">&nbsp;</span> (expensive) than my old racket.
+        </div>
+        <div class="question-item">
+            <span class="question-number">20.</span> Complete the sentence using the superlative form of the adjective in brackets:<br>Swimming is the <span class="fill-blank">&nbsp;</span> (healthy) sport for your back.
+        </div>
+        <div class="question-item">
+            <span class="question-number">21.</span> The sports club has 20 members this year, but it had only 10 members last year. Complete the sentence showing comparison:<br>The sports club is twice as <span class="fill-blank">&nbsp;</span> (large) as it was last year.
+        </div>
+        <div class="question-item">
+            <span class="question-number">22.</span> Complete the sentence using the comparative form of the adjective in brackets:<br>Indoor activities are <span class="fill-blank">&nbsp;</span> (safe) than outdoor sports during a storm.
+        </div>
+        <div class="question-item">
+            <span class="question-number">23.</span> Complete the sentence with the comparative form of 'bad':<br>His sports injury was <span class="fill-blank">&nbsp;</span> than we expected.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 24–33: Part B. Present Perfect vs Past Simple</div>
+        <div class="question-item">
+            <span class="question-number">24.</span> I <span class="fill-blank">&nbsp;</span> a member of this swimming club since 2024.
+            <div class="question-options options-4col">
+                <div>A. am</div>
+                <div>B. was</div>
+                <div>C. have been</div>
+                <div>D. had been</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">25.</span> Yesterday, we <span class="fill-blank">&nbsp;</span> a football match in the stadium.
+            <div class="question-options options-4col">
+                <div>A. watched</div>
+                <div>B. have watched</div>
+                <div>C. watch</div>
+                <div>D. watching</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">26.</span> <span class="fill-blank">&nbsp;</span> you ever played chess before?
+            <div class="question-options options-4col">
+                <div>A. Did</div>
+                <div>B. Have</div>
+                <div>C. Do</div>
+                <div>D. Were</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">27.</span> He <span class="fill-blank">&nbsp;</span> playing tennis three years ago.
+            <div class="question-options options-4col">
+                <div>A. started</div>
+                <div>B. has started</div>
+                <div>C. starts</div>
+                <div>D. starting</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">28.</span> She is happy because she <span class="fill-blank">&nbsp;</span> her first competition today. (*)
+            <div class="question-options options-4col">
+                <div>A. won</div>
+                <div>B. has won</div>
+                <div>C. win</div>
+                <div>D. wins</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">29.</span> Complete the sentence with the correct form of the verb 'join' (past simple or present perfect):<br>They <span class="fill-blank">&nbsp;</span> (join) the sports club last week.
+        </div>
+        <div class="question-item">
+            <span class="question-number">30.</span> Complete the sentence using the present perfect form of 'book':<br>I <span class="fill-blank">&nbsp;</span> (already/book) the tennis court for tomorrow.
+        </div>
+        <div class="question-item">
+            <span class="question-number">31.</span> Complete the sentence with the present perfect of 'not play' (use full form, no contractions):<br>We <span class="fill-blank">&nbsp;</span> (not/play) badminton since last month.
+        </div>
+        <div class="question-item">
+            <span class="question-number">32.</span> Complete the sentence with the correct form of 'see':<br>Did you <span class="fill-blank">&nbsp;</span> (see) the match yesterday evening?
+        </div>
+        <div class="question-item">
+            <span class="question-number">33.</span> Complete the sentence with the correct form of the verb 'be':<br>He <span class="fill-blank">&nbsp;</span> (be) a runner when he was young, but now he only walks.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 34–43: Error Correction</div>
+        <div class="question-item">
+            <span class="question-number">34.</span> Correct the comparative mistake in this sentence:<br>Football is more popularer than table tennis.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">35.</span> Correct the tense mistake in this sentence:<br>I have visited that sports club yesterday afternoon.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">36.</span> Correct the superlative mistake in this sentence:<br>This is the most good book I have ever read about hobbies.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">37.</span> Correct the tense mistake in this sentence:<br>She has started a new hobby last month.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">38.</span> Correct the comparison mistake in this sentence:<br>Running is twice as faster as walking. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">39.</span> Correct the tense mistake in this sentence:<br>Did you ever book a class at that sports club?
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">40.</span> Rewrite this sentence using the present perfect and 'never'. Keep the meaning unchanged:<br>This is my first time playing chess.<br>Start with: 'I have never...'
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">41.</span> Rewrite this sentence using a comparative structure with 'cheaper'. Keep the meaning unchanged:<br>Playing football is less expensive than playing tennis.<br>Start with: 'Playing football is...'
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">42.</span> Rewrite this sentence using the past simple. Keep the meaning unchanged:<br>He has been a member of the gym for three weeks.<br>Start with: 'He joined...'
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">43.</span> Rewrite this sentence using 'as...as'. Keep the meaning unchanged:<br>The gym is larger than the sports club.<br>Start with: 'The sports club is not...'
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <!-- WRITING QUESTIONS -->
+    <div class="section-title">IV. Questions for Writing (5 tasks)</div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 1:  Word Ordering (Sắp xếp từ thành câu hoàn chỉnh)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Sắp xếp các từ sau thành câu hoàn chỉnh về sở thích:</div>
+<div class="writing-prompt-text">sports / local / like / I / playing / at / the / club</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 2:  Sentence Completion (Hoàn thành câu)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Kết hợp hai câu sau dùng liên từ 'because' để chỉ nguyên nhân-kết quả (không sử dụng dấu phẩy trước 'because'):</div>
+<div class="writing-prompt-text">Sentence 1: I enjoy playing soccer.</div>
+<div class="writing-prompt-text">Sentence 2: It helps me stay healthy.</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 3:  Identifying and correcting third-person singular verb agreement errors.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Sửa một lỗi sai ngữ pháp duy nhất trong câu sau và viết lại câu hoàn chỉnh:</div>
+<div class="writing-prompt-text">'My brother like going to the gym every weekend.'</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 4:  Comparing quantities and writing simple data description.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Describe the bar chart below showing the number of members in four sports clubs. Write 3-4 sentences comparing the figures.</div>
+<div class="svg-chart-container"><svg viewBox="0 0 400 200" width="100%" height="200" style="background:#f9f9f9; border:1px solid #ddd; border-radius:4px; font-family:sans-serif;"><text x="200" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Sports Club Membership (Number of Members)</text><line x1="50" y1="40" x2="50" y2="160" stroke="#666" stroke-width="1.5"/><line x1="50" y1="160" x2="360" y2="160" stroke="#666" stroke-width="1.5"/><text x="35" y="160" font-size="10" fill="#666" text-anchor="end">0</text><text x="35" y="120" font-size="10" fill="#666" text-anchor="end">20</text><text x="35" y="80" font-size="10" fill="#666" text-anchor="end">40</text><text x="35" y="40" font-size="10" fill="#666" text-anchor="end">60</text><line x1="50" y1="120" x2="360" y2="120" stroke="#e0e0e0" stroke-dasharray="4,4"/><line x1="50" y1="80" x2="360" y2="80" stroke="#e0e0e0" stroke-dasharray="4,4"/><line x1="50" y1="40" x2="360" y2="40" stroke="#e0e0e0" stroke-dasharray="4,4"/><rect x="75" y="80" width="40" height="80" fill="#3498db" rx="2"/><text x="95" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="#3498db">40</text><text x="95" y="175" text-anchor="middle" font-size="9" fill="#333">Football</text><rect x="145" y="100" width="40" height="60" fill="#2ecc71" rx="2"/><text x="165" y="95" text-anchor="middle" font-size="10" font-weight="bold" fill="#2ecc71">30</text><text x="165" y="175" text-anchor="middle" font-size="9" fill="#333">Swimming</text><rect x="215" y="130" width="40" height="30" fill="#e67e22" rx="2"/><text x="235" y="125" text-anchor="middle" font-size="10" font-weight="bold" fill="#e67e22">15</text><text x="235" y="175" text-anchor="middle" font-size="9" fill="#333">Tennis</text><rect x="285" y="110" width="40" height="50" fill="#9b59b6" rx="2"/><text x="305" y="105" text-anchor="middle" font-size="10" font-weight="bold" fill="#9b59b6">25</text><text x="305" y="175" text-anchor="middle" font-size="9" fill="#333">Basketball</text><text x="200" y="195" text-anchor="middle" font-size="10" fill="#666" font-style="italic">Source: City Sports Club Report 2026</text></svg></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 5:  Developing a topic sentence, adding supporting details, and using basic linking words.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Write a short paragraph about your favorite leisure activity. Describe what you do and who you do it with. (write 5-6 sentences)</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <!-- REVIEW BRIDGE -->
+    <div class="section-title">V. Review Bridge / Ôn tập liên chủ đề</div>
+    <div class="warmup-box" style="background-color: #fafbfc; border: 1px solid #bdc3c7; border-radius: 4px; padding: 10px;">
+        <div class="question-instruction" style="margin-top: 15px; font-size: 11.5pt;">V. Review Bridge / Ôn tập liên chủ đề</div>
+1. Playing tennis is <span class="fill-blank">&nbsp;</span> (expensive) than playing table tennis. (Complete the sentence using the comparative form)<br>
+<div class="writing-line"></div><br>
+2. We <span class="fill-blank">&nbsp;</span> (join) the local chess club last week. (Complete the sentence with the correct form of the verb)<br>
+<div class="writing-line"></div><br>
+3. I have <span class="fill-blank">&nbsp;</span> (already/book) the basketball court. (Fill in the blank with the correct verb form)<br>
+<div class="writing-line"></div><br>
+    </div>
+
+</body>
+</html>

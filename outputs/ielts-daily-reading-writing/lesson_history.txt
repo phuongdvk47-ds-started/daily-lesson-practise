@@ -24,4 +24,5 @@ A2 | 20260708 | Weather, seasons, clothing preferences | How weather affects clo
 B1 | 20260708 | Advertising aimed at young consumers | Stealth marketing and data tracking
 B1 | 20260710 | Sportsmanship and teamwork | The Role of Teamwork and Sportsmanship in Sports
 A2 | 20260710 | Booking hotels and simple travel arrangements | Learning English for a Hotel Job
+A2 | 20260713 | Leisure activities, hobbies, sports clubs | Leisure Activities and Sports Clubs
 

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAILY PRACTICE: DAY 20260713 - SMART HOME TECHNOLOGY AND SMART APPLIANCES</title>
+    <style>
+        @page { 
+            size: A4; 
+            margin: 15mm 15mm 20mm 15mm; 
+        }
+        body { 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 11.5pt; 
+            line-height: 1.45; 
+            color: #1a1a1a; 
+            margin: 0; 
+            padding: 0;
+        }
+        .header { 
+            border-bottom: 2px double #2c3e50; 
+            padding-bottom: 8px; 
+            margin-bottom: 15px; 
+            text-align: center;
+        }
+        .header .center-name { 
+            font-size: 9.5pt; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            color: #7f8c8d; 
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .header h1 { 
+            font-size: 15pt; 
+            margin: 3px 0; 
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .header h2 { 
+            font-size: 11pt; 
+            margin: 3px 0; 
+            font-style: italic; 
+            color: #34495e;
+        }
+        .student-info { 
+            margin-top: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .section-title { 
+            font-size: 12pt; 
+            color: #2c3e50; 
+            border-left: 3px solid #27ae60; 
+            padding-left: 8px; 
+            margin-top: 18px; 
+            margin-bottom: 8px; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .passage-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .reading-text { 
+            text-align: justify; 
+            margin-bottom: 12px; 
+            text-indent: 25px;
+        }
+        .reading-text p {
+            margin: 0 0 6px 0;
+        }
+        .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }
+        .data-table th { 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }
+        .data-table td { 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }
+        .data-table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+        .svg-chart-container {
+            text-align: center;
+            margin: 10px 0;
+            page-break-inside: avoid;
+        }
+        .writing-line {
+            border-bottom: 1px dotted #bdc3c7;
+            height: 22px;
+            margin-top: 4px;
+            margin-bottom: 1px;
+            width: 98%;
+            page-break-inside: avoid;
+        }
+        .writing-prompt-text {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .writing-prompt-sub-item {
+            margin-top: 4px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .source-box { 
+            font-style: italic; 
+            font-size: 9pt; 
+            color: #7f8c8d; 
+            margin-bottom: 15px; 
+            padding: 6px 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #bdc3c7;
+        }
+        .source-box a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .question-instruction {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+        .question-group {
+            margin-bottom: 12px;
+        }
+        .question-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            text-indent: -20px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .question-options {
+            margin: 4px 0 4px 20px;
+            text-indent: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .question-options div {
+            margin-bottom: 2px;
+            box-sizing: border-box;
+            padding-right: 8px;
+        }
+        .options-4col div {
+            width: 25%;
+        }
+        .options-2col div {
+            width: 50%;
+        }
+        .options-1col div {
+            width: 100%;
+        }
+        .fill-blank {
+            display: inline-block;
+            width: 100px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        .grammar-item {
+            margin-bottom: 8px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .writing-box {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            background-color: #fafbfc;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            text-align: left;
+            page-break-inside: avoid;
+        }
+        .writing-item {
+            margin-bottom: 10px;
+        }
+        .warmup-box {
+            background-color: #fcfcfc;
+            border: 1px dashed #bdc3c7;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            font-size: 10pt;
+        }
+        .warmup-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="center-name">IELTS PREMIUM PREPARATION ACADEMY</div>
+        <h1>DAILY PRACTICE: DAY 20260713 - SMART HOME TECHNOLOGY AND SMART APPLIANCES</h1>
+        <h2>(Level: Reading B1 - Writing A2)</h2>
+        <div class="student-info">
+            <span>Student Name: ..............................................................</span>
+            <span>Time Allowed: 90 mins</span>
+        </div>
+    </div>
+
+    <!-- WARM-UP SECTION -->
+    <div class="section-title">Warm-up / Khởi động</div>
+    <div class="warmup-box">
+        <div class="warmup-title">Answer the following questions in English:</div>
+        1. Do you have any smart devices in your home? If yes, which ones do you use most often?<br>
+        2. Why do you think smart thermostats and smart lighting have become so popular recently?<br>
+        3. What is one potential risk or concern you might have when using devices connected to the internet?
+    </div>
+
+    <!-- READING PASSAGE -->
+    <div class="section-title">I. Reading Passage</div>
+    <div class="passage-title">The Rise of Smart Home Technology</div>
+    
+    <div class="reading-text">
+        <p>Smart home technology has transformed modern living by integrating <b>interconnected</b> devices that allow <b>remote management</b> of household systems. Through a home Wi-Fi network, appliances such as lighting, security cameras, and heating systems can communicate with a central hub or a smartphone app. This connectivity offers homeowners <b>unprecedented</b> convenience, enabling them to control their environment from anywhere in the world. Instead of manually adjusting individual devices, users can create automated routines that run <b>seamlessly</b> in the background.</p>
+        <p>One of the most significant advantages of this technology is <b>energy efficiency</b>. Smart thermostats and occupancy sensors learn a household's habits, ensuring that heating and cooling are only active when rooms are occupied. Some advanced systems even manage electricity loads by scheduling energy-intensive chores during off-peak hours. Research indicates that these smart habits can help households reduce their overall energy <b>consumption</b> by 15% to 30%. Family members can collaborate on a common goal [R] of reducing their <b>environmental footprint</b> by adopting these energy-saving habits.</p>
+        <p>Despite these benefits, setting up a smart home is not without challenges. Users frequently face <b>interoperability</b> issues, where devices from different manufacturers fail to communicate with each other. While adjusting to smart home apps requires some self-discipline [R] to avoid over-reliance on automation, the convenience is undeniable. However, the initial financial investment is often high, and the technical complexity of installing these systems creates a steep <b>learning curve</b> for <b>non-technical</b> users.</p>
+        <p>Furthermore, security and privacy concerns remain a major obstacle to <b>widespread adoption</b>. Because smart speakers and cameras continuously monitor household activities, they collect a vast amount of <b>behavioral data</b>. If manufacturers fail to encrypt this data or if users choose weak passwords, hackers can easily gain access. Ultimately, neglecting network security can undermine [R] the entire system, leaving personal data <b>vulnerable</b> to <b>cyberthreats</b>. Therefore, users must prioritize changing default passwords and updating <b>device firmware</b> regularly.</p>
+    </div>
+
+    <div class="source-box">
+        Source: Adapted from <i>ScienceDaily</i> - "Understanding Smart Home Technology: Benefits and Environmental Impact" (2026-04-12)<br>
+        URL: <a href="https://www.sciencedaily.com/releases/2026/04/260412153012.htm" target="_blank">https://www.sciencedaily.com/releases/2026/04/260412153012.htm</a>
+    </div>
+
+    <!-- READING QUESTIONS -->
+    <div class="section-title">II. IELTS Reading Questions (13 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 1–4: </div>
+        <div style="margin-left: 20px; font-weight: bold; margin-bottom: 8px; font-size: 10pt;">
+            TRUE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement agrees with the information<br>
+            FALSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement contradicts the information<br>
+            NOT GIVEN &nbsp;&nbsp;&nbsp;&nbsp; if there is no information on this
+        </div>
+        <div class="question-item">
+            <span class="question-number">1.</span> Smart home technology allows users to manage their appliances remotely.
+        </div>
+        <div class="question-item">
+            <span class="question-number">2.</span> Smart home systems can schedule tasks to run when electricity rates are lower.
+        </div>
+        <div class="question-item">
+            <span class="question-number">3.</span> Non-technical users usually find the installation of smart homes very simple.
+        </div>
+        <div class="question-item">
+            <span class="question-number">4.</span> Most smart home devices are manufactured in the United States.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 5–8: </div>
+        <div class="question-item">
+            <span class="question-number">5.</span> Occupancy sensors ensure that temperature controls are active only when rooms are <span class="fill-blank">&nbsp;</span>.
+        </div>
+        <div class="question-item">
+            <span class="question-number">6.</span> People who lack technical skills often face a difficult <span class="fill-blank">&nbsp;</span> during installation.
+        </div>
+        <div class="question-item">
+            <span class="question-number">7.</span> Smart devices are able to gather personal data because they constantly <span class="fill-blank">&nbsp;</span> activities in the home.
+        </div>
+        <div class="question-item">
+            <span class="question-number">8.</span> Users are advised to regularly update their default passwords and device <span class="fill-blank">&nbsp;</span>.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 9–13: </div>
+        <div class="question-item">
+            <span class="question-number">9.</span> According to Paragraph 1, how do smart home devices primarily communicate with one another?
+            <div class="question-options options-1col">
+                <div>A. Through manual wiring of individual appliances</div>
+                <div>B. By connecting to a home Wi-Fi network</div>
+                <div>C. By using separate smartphone applications</div>
+                <div>D. Through physical links to a global server</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">10.</span> What is suggested in Paragraph 2 about scheduling energy-intensive household tasks during off-peak hours?
+            <div class="question-options options-1col">
+                <div>A. It reduces the comfort of the family members.</div>
+                <div>B. It is a mandatory requirement for all smart appliances.</div>
+                <div>C. It helps optimize resource consumption and reduce utility costs.</div>
+                <div>D. It is only possible when the household is completely empty.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">11.</span> Which of the following best summarizes the main idea of Paragraph 2?
+            <div class="question-options options-1col">
+                <div>A. Smart home technology primarily benefits families who want to collaborate.</div>
+                <div>B. The main contribution of home automation is enhancing convenience for homeowners.</div>
+                <div>C. Smart devices significantly lower energy waste and bills through smart management.</div>
+                <div>D. Energy savings are only achieved by using smart occupancy sensors.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">12.</span> What is identified as a major challenge in Paragraph 3 when combining smart devices?
+            <div class="question-options options-1col">
+                <div>A. Non-technical users are banned from installing them.</div>
+                <div>B. Devices from different brands often cannot communicate.</div>
+                <div>C. Homeowners must spend all their savings on installation.</div>
+                <div>D. Smart applications demand excessive self-discipline from children.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">13.</span> Based on Paragraph 4, what is the ultimate consequence of neglecting network security? (*)
+            <div class="question-options options-1col">
+                <div>A. The devices will require a new installation process.</div>
+                <div>B. It makes personal behavioral data vulnerable to cyberthreats.</div>
+                <div>C. The smart speakers will refuse to monitor household activities.</div>
+                <div>D. Firmware updates will be automatically blocked by the system.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRAMMAR QUESTIONS -->
+    <div class="section-title">III. Questions for Grammar (30 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 14–23: Part A. Relative clauses (Mệnh đề quan hệ)</div>
+        <div class="question-item">
+            <span class="question-number">14.</span> There is only one smart hub in my home. Choose the sentence that correctly adds extra, non-essential information about where it is located.
+            <div class="question-options options-1col">
+                <div>A. The smart hub which is in the kitchen controls the lights.</div>
+                <div>B. The smart hub, which is in the kitchen, controls the lights.</div>
+                <div>C. The smart hub that is in the kitchen controls the lights.</div>
+                <div>D. The smart hub which, is in the kitchen controls the lights.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">15.</span> There are many smart thermostats in the store. Choose the sentence that correctly identifies which thermostat has energy-saving features.
+            <div class="question-options options-1col">
+                <div>A. The smart thermostat, which is on the top shelf, saves energy.</div>
+                <div>B. The smart thermostat which is on the top shelf saves energy.</div>
+                <div>C. The smart thermostat who is on the top shelf saves energy.</div>
+                <div>D. The smart thermostat, that is on the top shelf saves energy.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">16.</span> My home has three cameras, but only one is placed outdoor. Choose the sentence that specifies the location of that camera.
+            <div class="question-options options-1col">
+                <div>A. The camera which is placed outdoor is waterproof.</div>
+                <div>B. The camera, which is placed outdoor, is waterproof.</div>
+                <div>C. The camera that is placed outdoor is waterproof.</div>
+                <div>D. Both A and C are correct.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">17.</span> Smart bulbs <span class="fill-blank">&nbsp;</span> consume less energy are becoming popular. (Choose the relative pronoun that fits the gap)
+            <div class="question-options options-4col">
+                <div>A. , which</div>
+                <div>B. that</div>
+                <div>C. , that</div>
+                <div>D. whom</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">18.</span> My smart TV, <span class="fill-blank">&nbsp;</span> has a 55-inch display, connects seamlessly to the speaker. (Choose the option with correct relative pronoun and punctuation) (*)
+            <div class="question-options options-4col">
+                <div>A. that</div>
+                <div>B. which</div>
+                <div>C. , which</div>
+                <div>D. who</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">19.</span> Combine the two sentences using a defining relative clause with 'that' to specify which appliance failed. Do not use commas.<br>Sentence 1: The smart refrigerator was delivered yesterday.<br>Sentence 2: It stopped working today.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">20.</span> Combine the two sentences using a non-defining relative clause with 'which' to add extra information about my smart speaker. Remember to use commas.<br>Sentence 1: My smart speaker stands in the living room.<br>Sentence 2: It cost me 100 dollars.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">21.</span> Combine the two sentences using a defining relative clause with 'where' to identify the room.<br>Sentence 1: We installed occupancy sensors in the server room.<br>Sentence 2: Temperatures must be kept low there.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">22.</span> Combine the two sentences using a non-defining relative clause with 'whose' to describe the inventor's project. Use commas.<br>Sentence 1: Dr. Green is a famous tech researcher.<br>Sentence 2: His smart home project won a global innovation award.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">23.</span> Combine the two sentences using a defining relative clause with 'which' without commas to identify the gadget.<br>Sentence 1: This is the smart gadget.<br>Sentence 2: We use it to monitor energy consumption.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 24–33: Part B. Conditionals (Câu điều kiện loại 1 & loại 2)</div>
+        <div class="question-item">
+            <span class="question-number">24.</span> If we install smart lighting in every room, we <span class="fill-blank">&nbsp;</span> (reduce) our electricity bill next month. (Choose the option representing a realistic future event)
+            <div class="question-options options-2col">
+                <div>A. would reduce</div>
+                <div>B. will reduce</div>
+                <div>C. reduced</div>
+                <div>D. would have reduced</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">25.</span> If smart devices <span class="fill-blank">&nbsp;</span> (be) cheaper right now, my family would buy a voice assistant immediately. (Choose the correct verb form for a hypothetical present situation)
+            <div class="question-options options-4col">
+                <div>A. are</div>
+                <div>B. will be</div>
+                <div>C. were</div>
+                <div>D. would be</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">26.</span> If everyone switched to smart appliances, global energy consumption <span class="fill-blank">&nbsp;</span> (drop) significantly. (Choose the option representing a hypothetical situation)
+            <div class="question-options options-4col">
+                <div>A. will drop</div>
+                <div>B. would drop</div>
+                <div>C. drops</div>
+                <div>D. would dropped</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">27.</span> We will secure our home network if we <span class="fill-blank">&nbsp;</span> (change) the default passwords tonight. (Choose the option representing a realistic future event) (*)
+            <div class="question-options options-4col">
+                <div>A. change</div>
+                <div>B. changed</div>
+                <div>C. will change</div>
+                <div>D. would change</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">28.</span> If a hacker accessed the smart camera, they <span class="fill-blank">&nbsp;</span> (see) all indoor activities. (Choose the option representing a hypothetical situation)
+            <div class="question-options options-4col">
+                <div>A. will see</div>
+                <div>B. would see</div>
+                <div>C. see</div>
+                <div>D. saw</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">29.</span> If you buy a smart thermostat today, you <span class="fill-blank">&nbsp;</span> (see) energy savings on your next bill.
+        </div>
+        <div class="question-item">
+            <span class="question-number">30.</span> If I <span class="fill-blank">&nbsp;</span> (have) enough money right now, I would install a smart lock on my front door.
+        </div>
+        <div class="question-item">
+            <span class="question-number">31.</span> If she <span class="fill-blank">&nbsp;</span> (update) the firmware tonight, the security bugs will be fixed.
+        </div>
+        <div class="question-item">
+            <span class="question-number">32.</span> If they purchase a central hub tomorrow, they <span class="fill-blank">&nbsp;</span> (connect) all devices easily.
+        </div>
+        <div class="question-item">
+            <span class="question-number">33.</span> If we <span class="fill-blank">&nbsp;</span> (not have) Wi-Fi right now, we would not be able to use any smart gadgets.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 34–43: Error Correction</div>
+        <div class="question-item">
+            <span class="question-number">34.</span> Correct the grammar/punctuation mistake in this sentence:<br>Samsung SmartThings, that is a central hub, works with many brands.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">35.</span> Correct the grammar mistake in this conditional sentence:<br>If I were you, I will buy a smart thermostat to save energy.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">36.</span> Correct the grammar/punctuation mistake in this sentence:<br>The smart lock, who was installed by a technician, stopped working.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">37.</span> Correct the grammar mistake in this conditional sentence:<br>If we don't have occupancy sensors right now, we would waste a lot of electricity.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">38.</span> Correct the grammar/punctuation mistake in this sentence:<br>My primary home server, that stores all automated routines crashed. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">39.</span> Correct the grammar mistake in this conditional sentence:<br>If the smart vacuum is not working tomorrow, I cleaned the floor manually.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">40.</span> Rewrite the following sentence using a first conditional structure to show a realistic cause-effect. Keep the meaning unchanged:<br>By changing your default passwords, you can protect your devices from cyberthreats.<br>Start with: 'If you...'
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">41.</span> Rewrite the sentence using a second conditional structure to express a hypothetical situation. Keep the meaning unchanged:<br>I do not own a smart vacuum, so I spend hours cleaning the floor.<br>Start with: 'If I...'
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">42.</span> Combine the two sentences using a first conditional structure to express a realistic consequence. Keep the meaning unchanged:<br>Sentence 1: You do not encrypt your personal data.<br>Sentence 2: Hackers will easily steal it.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">43.</span> Rewrite the sentence using a second conditional structure. Keep the meaning unchanged:<br>The initial cost is extremely high, so widespread adoption does not happen.<br>Start with: 'If the initial cost...'
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <!-- WRITING QUESTIONS -->
+    <div class="section-title">IV. Questions for Writing (5 tasks)</div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 1:  Word Ordering (Sắp xếp từ thành câu hoàn chỉnh)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Sắp xếp các từ sau thành câu hoàn chỉnh về thiết bị thông minh:</div>
+<div class="writing-prompt-text">device / lights / smart / app / controls / a / this / mobile / via</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 2:  Sentence Completion (Hoàn thành câu)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Kết hợp hai câu sau dùng liên từ 'because' để chỉ nguyên nhân-kết quả (không sử dụng dấu phẩy trước 'because'):</div>
+<div class="writing-prompt-text">Sentence 1: The smart vacuum is very popular.</div>
+<div class="writing-prompt-text">Sentence 2: It saves busy people a lot of time.</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 3:  Identifying and correcting modal verb agreement errors.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Sửa một lỗi sai ngữ pháp duy nhất trong câu sau và viết lại câu hoàn chỉnh:</div>
+<div class="writing-prompt-text">'My smart refrigerator can suggesting recipes based on what is inside.'</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 4:  Comparing quantities and writing data description.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Describe the bar chart below showing the average energy savings of four smart appliances. Write 3-4 sentences comparing the figures.</div>
+<div class="svg-chart-container"><svg viewBox="0 0 400 200" width="100%" height="200" style="background:#f9f9f9; border:1px solid #ddd; border-radius:4px; font-family:sans-serif;"><text x="200" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Average Energy Savings of Smart Appliances (%)</text><line x1="50" y1="40" x2="50" y2="160" stroke="#666" stroke-width="1.5"/><line x1="50" y1="160" x2="360" y2="160" stroke="#666" stroke-width="1.5"/><text x="35" y="160" font-size="10" fill="#666" text-anchor="end">0%</text><text x="35" y="120" font-size="10" fill="#666" text-anchor="end">10%</text><text x="35" y="80" font-size="10" fill="#666" text-anchor="end">20%</text><text x="35" y="40" font-size="10" fill="#666" text-anchor="end">30%</text><line x1="50" y1="120" x2="360" y2="120" stroke="#e0e0e0" stroke-dasharray="4,4"/><line x1="50" y1="80" x2="360" y2="80" stroke="#e0e0e0" stroke-dasharray="4,4"/><line x1="50" y1="40" x2="360" y2="40" stroke="#e0e0e0" stroke-dasharray="4,4"/><rect x="75" y="80" width="40" height="80" fill="#3498db" rx="2"/><text x="95" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="#3498db">20%</text><text x="95" y="175" text-anchor="middle" font-size="9" fill="#333">Thermostat</text><rect x="145" y="100" width="40" height="60" fill="#2ecc71" rx="2"/><text x="165" y="95" text-anchor="middle" font-size="10" font-weight="bold" fill="#2ecc71">15%</text><text x="165" y="175" text-anchor="middle" font-size="9" fill="#333">Lighting</text><rect x="215" y="60" width="40" height="100" fill="#e67e22" rx="2"/><text x="235" y="55" text-anchor="middle" font-size="10" font-weight="bold" fill="#e67e22">25%</text><text x="235" y="175" text-anchor="middle" font-size="9" fill="#333">AC Unit</text><rect x="285" y="120" width="40" height="40" fill="#9b59b6" rx="2"/><text x="305" y="115" text-anchor="middle" font-size="10" font-weight="bold" fill="#9b59b6">10%</text><text x="305" y="175" text-anchor="middle" font-size="9" fill="#333">Vacuum</text><text x="200" y="195" text-anchor="middle" font-size="10" fill="#666" font-style="italic">Source: Smart Home Resource Report 2026</text></svg></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 5:  Developing a topic sentence, adding supporting details, and using basic linking words.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Write a short paragraph about your favorite smart gadget. Describe its features and give reasons why you like it. (write 5-6 sentences)</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <!-- REVIEW BRIDGE -->
+    <div class="section-title">V. Review Bridge / Ôn tập liên chủ đề</div>
+    <div class="warmup-box" style="background-color: #fafbfc; border: 1px solid #bdc3c7; border-radius: 4px; padding: 10px;">
+        <div class="question-instruction" style="margin-top: 15px; font-size: 11.5pt;">V. Review Bridge / Ôn tập liên chủ đề</div>
+1. If you buy a smart thermostat today, you <span class="fill-blank">&nbsp;</span> (see) energy savings on your next bill. (Complete the sentence using the correct form of the verb)<br>
+<div class="writing-line"></div><br>
+2. Samsung SmartThings, <span class="fill-blank">&nbsp;</span> is a central hub, works with many brands. (Fill in the blank with appropriate relative pronoun)<br>
+<div class="writing-line"></div><br>
+3. Combine the two sentences using a second conditional structure:<br>Sentence 1: The initial cost is extremely high.<br>Sentence 2: Widespread adoption does not happen.<br>
+<div class="writing-line"></div><br>
+    </div>
+
+</body>
+</html>
