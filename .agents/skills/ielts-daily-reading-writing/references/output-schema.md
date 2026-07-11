@@ -643,4 +643,3 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
   ]
 }
 ```
-

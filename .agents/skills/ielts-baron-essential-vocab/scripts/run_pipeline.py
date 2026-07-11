@@ -660,17 +660,20 @@ def _handle_source_canonicalize(state: dict, ctx: dict) -> dict:
             continue
 
         # Detect section transitions
-        if re.search(r"(?i)(questions?\s*\d+|questions?\s*$)", text):
+        if re.search(r"(?i)(^questions?\s*\d+|^questions?$|^answer the questions)", text):
             current_section = "questions"
             continue
-        elif re.search(r"(?i)(vocabulary|target\s*words?)", text):
+        elif re.search(r"(?i)(vocabulary|target\s*words?|^Words$|^My Words$)", text):
             current_section = "vocabulary"
             continue
-        elif re.search(r"(?i)(word\s*famil|word\s*forms?)", text):
+        elif re.search(r"(?i)(word\s*famil|word\s*forms?|Word Skill)", text):
             current_section = "word_family"
             continue
         elif re.search(r"(?i)(answer\s*key|answers?\s*$)", text):
             current_section = "answer_key"
+            continue
+        elif re.search(r"(?i)(^Reading$|^Reading Passage$)", text):
+            current_section = "reading"
             continue
 
         source_ref = {
@@ -697,7 +700,7 @@ def _handle_source_canonicalize(state: dict, ctx: dict) -> dict:
 
         elif current_section == "questions":
             # Parse numbered questions
-            q_match = re.match(r"^(\d+)[.\)]\s*(.*)", text, re.DOTALL)
+            q_match = re.search(r"^\s*(?:_+\s*)?(\d+)\s*[.\)]\s*(.*)", text, re.DOTALL)
             if q_match:
                 question_counter += 1
                 questions.append({

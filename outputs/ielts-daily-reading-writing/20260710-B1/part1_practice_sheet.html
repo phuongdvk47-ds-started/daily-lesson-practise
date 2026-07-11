@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAILY PRACTICE: DAY 20260710 - SPORTSMANSHIP AND TEAMWORK</title>
+    <style>
+        @page { 
+            size: A4; 
+            margin: 15mm 15mm 20mm 15mm; 
+        }
+        body { 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 11.5pt; 
+            line-height: 1.45; 
+            color: #1a1a1a; 
+            margin: 0; 
+            padding: 0;
+        }
+        .header { 
+            border-bottom: 2px double #2c3e50; 
+            padding-bottom: 8px; 
+            margin-bottom: 15px; 
+            text-align: center;
+        }
+        .header .center-name { 
+            font-size: 9.5pt; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            color: #7f8c8d; 
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .header h1 { 
+            font-size: 15pt; 
+            margin: 3px 0; 
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .header h2 { 
+            font-size: 11pt; 
+            margin: 3px 0; 
+            font-style: italic; 
+            color: #34495e;
+        }
+        .student-info { 
+            margin-top: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .section-title { 
+            font-size: 12pt; 
+            color: #2c3e50; 
+            border-left: 3px solid #27ae60; 
+            padding-left: 8px; 
+            margin-top: 18px; 
+            margin-bottom: 8px; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .passage-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .reading-text { 
+            text-align: justify; 
+            margin-bottom: 12px; 
+            text-indent: 25px;
+        }
+        .reading-text p {
+            margin: 0 0 6px 0;
+        }
+        .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }
+        .data-table th { 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }
+        .data-table td { 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }
+        .data-table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+        .svg-chart-container {
+            text-align: center;
+            margin: 10px 0;
+            page-break-inside: avoid;
+        }
+        .writing-line {
+            border-bottom: 1px dotted #bdc3c7;
+            height: 22px;
+            margin-top: 4px;
+            margin-bottom: 1px;
+            width: 98%;
+            page-break-inside: avoid;
+        }
+        .writing-prompt-text {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .writing-prompt-sub-item {
+            margin-top: 4px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .source-box { 
+            font-style: italic; 
+            font-size: 9pt; 
+            color: #7f8c8d; 
+            margin-bottom: 15px; 
+            padding: 6px 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #bdc3c7;
+        }
+        .source-box a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .question-instruction {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+        .question-group {
+            margin-bottom: 12px;
+        }
+        .question-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            text-indent: -20px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .question-options {
+            margin: 4px 0 4px 20px;
+            text-indent: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .question-options div {
+            margin-bottom: 2px;
+            box-sizing: border-box;
+            padding-right: 8px;
+        }
+        .options-4col div {
+            width: 25%;
+        }
+        .options-2col div {
+            width: 50%;
+        }
+        .options-1col div {
+            width: 100%;
+        }
+        .fill-blank {
+            display: inline-block;
+            width: 100px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        .grammar-item {
+            margin-bottom: 8px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .writing-box {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            background-color: #fafbfc;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            text-align: left;
+            page-break-inside: avoid;
+        }
+        .writing-item {
+            margin-bottom: 10px;
+        }
+        .warmup-box {
+            background-color: #fcfcfc;
+            border: 1px dashed #bdc3c7;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            font-size: 10pt;
+        }
+        .warmup-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="center-name">IELTS PREMIUM PREPARATION ACADEMY</div>
+        <h1>DAILY PRACTICE: DAY 20260710 - SPORTSMANSHIP AND TEAMWORK</h1>
+        <h2>(Level: Reading B1 - Writing A2)</h2>
+        <div class="student-info">
+            <span>Student Name: ..............................................................</span>
+            <span>Time Allowed: 90 mins</span>
+        </div>
+    </div>
+
+    <!-- WARM-UP SECTION -->
+    <div class="section-title">Warm-up / Khởi động</div>
+    <div class="warmup-box">
+        <div class="warmup-title">Answer the following questions in English:</div>
+        1. Why do you think teamwork is often considered more important than individual skill in team sports?<br>
+        2. In your opinion, how can the pressure to win at all costs negatively affect an athlete's behavior?<br>
+        3. What role should coaches and parents play in fostering a healthy sense of sportsmanship in children?
+    </div>
+
+    <!-- READING PASSAGE -->
+    <div class="section-title">I. Reading Passage</div>
+    <div class="passage-title">The Role of Teamwork and Sportsmanship in Sports</div>
+    
+    <div class="reading-text">
+        <p>Playing sports offers numerous physical benefits, including improved <b>cardiovascular</b> fitness and overall health. Regular physical activity can prevent chronic diseases like diabetes and heart problems. Beyond physical wellness, sports also get kids and teens active and away from screens, countering modern public health issues like obesity and social <b>disengagement</b>. Moreover, participation in sports is widely believed to promote self-esteem and teach valuable personal traits such as <b>self-discipline</b>, teamwork [R], and leadership. In a team environment, individuals must learn to cooperate and work toward a <b>common goal</b>. Additionally, sports serve as a platform for social interaction, allowing participants to build strong community relationships.</p>
+        <p>However, sports can either support or <b>undermine</b> social relations. While sports are widely praised for their educational and character-building value, the effects of <b>socialization</b> through sports can be highly controversial. For instance, intense competition sometimes feeds a socially <b>destructive</b> desire to <b>win at all costs</b>. Some observers view these outcomes with skepticism [R], arguing that the pressure to win can encourage young athletes to play unfairly, break rules, or cheat. Players may feel that their self-worth is tied only to victory, leading to high levels of anxiety. There is indeed some evidence that this <b>propensity</b> to cheat increases as players grow older and the level of competition rises.</p>
+        <p>To <b>combat</b> these negative effects, sports organizations must enforce [R] strict rules and actively promote good <b>sportsmanship</b>. Coaches, parents, and administrators play a vital role as socializing agents. If these adults emphasize effort, skill development, and <b>fair play</b> over final scores, they can have a persuasive [R] influence on young athletes. By doing so, they help them understand that respecting teammates, opponents, and <b>referees</b> is the true heart of any game. Ultimately, the lessons learned on the sports field are <b>transferable</b> to school, work, and personal relationships, helping individuals become <b>cooperative</b> and responsible members of society.</p>
+    </div>
+
+    <div class="source-box">
+        Source: Adapted from <i>Encyclopedia Britannica</i> - "Sports" (2026-07-11)<br>
+        URL: <a href="https://www.britannica.com/sports/sports" target="_blank">https://www.britannica.com/sports/sports</a>
+    </div>
+
+    <!-- READING QUESTIONS -->
+    <div class="section-title">II. IELTS Reading Questions (13 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 1–6: </div>
+        <div style="margin-left: 20px; font-weight: bold; margin-bottom: 8px; font-size: 10pt;">
+            TRUE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement agrees with the information<br>
+            FALSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement contradicts the information<br>
+            NOT GIVEN &nbsp;&nbsp;&nbsp;&nbsp; if there is no information on this
+        </div>
+        <div class="question-item">
+            <span class="question-number">1.</span> Regular physical activity can help prevent some chronic illnesses.
+        </div>
+        <div class="question-item">
+            <span class="question-number">2.</span> Playing sports has no impact on a young person's self-esteem.
+        </div>
+        <div class="question-item">
+            <span class="question-number">3.</span> Most teenagers spend more than five hours a day looking at screens.
+        </div>
+        <div class="question-item">
+            <span class="question-number">4.</span> The pressure to win can lead some young athletes to play unfairly.
+        </div>
+        <div class="question-item">
+            <span class="question-number">5.</span> Older athletes are always more honest than younger ones when playing sports.
+        </div>
+        <div class="question-item">
+            <span class="question-number">6.</span> Sports organizations can completely eliminate cheating by enforcing rules. (*)
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 7–13: </div>
+        <div class="question-item">
+            <span class="question-number">7.</span> According to Paragraph 1, what is one health benefit of regular physical activity?
+            <div class="question-options options-1col">
+                <div>A. It prevents chronic diseases such as diabetes.</div>
+                <div>B. It increases screen time for kids and teens.</div>
+                <div>C. It guarantees a reduction in obesity rates.</div>
+                <div>D. It replaces the need for social interaction.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">8.</span> In Paragraph 1, the word 'countering' is closest in meaning to:
+            <div class="question-options options-2col">
+                <div>A. supporting</div>
+                <div>B. fighting against</div>
+                <div>C. describing</div>
+                <div>D. ignoring</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">9.</span> Why does teamwork play a crucial role in a team sports environment?
+            <div class="question-options options-1col">
+                <div>A. It helps players focus only on their individual achievements.</div>
+                <div>B. It requires members to collaborate to achieve a shared objective.</div>
+                <div>C. It guarantees that the team will win every competition.</div>
+                <div>D. It eliminates the need for coaches and parent involvement.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">10.</span> What is a potential negative consequence of having an intense desire to win at all costs?
+            <div class="question-options options-1col">
+                <div>A. It helps players develop stronger self-discipline.</div>
+                <div>B. It can cause players to experience higher levels of anxiety.</div>
+                <div>C. It reduces the propensity to cheat in older athletes.</div>
+                <div>D. It encourages observers to view games with skepticism.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">11.</span> Why does the writer mention the 'propensity to cheat' in Paragraph 2?
+            <div class="question-options options-1col">
+                <div>A. To show that cheating is only a problem for very young athletes.</div>
+                <div>B. To highlight how competitive pressure can negatively alter athlete behavior.</div>
+                <div>C. To argue that rules are unnecessary in elite sports.</div>
+                <div>D. To explain why older players have more self-worth.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">12.</span> In Paragraph 3, the word 'these' in the phrase 'these adults' refers to:
+            <div class="question-options options-1col">
+                <div>A. sports organizations</div>
+                <div>B. young athletes</div>
+                <div>C. coaches, parents, and administrators</div>
+                <div>D. referees and opponents</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">13.</span> What is the main message of the passage regarding the lessons learned in sports? (*)
+            <div class="question-options options-1col">
+                <div>A. They are only useful within competitive games and tournaments.</div>
+                <div>B. They help individuals develop skills that are valuable in broader life areas.</div>
+                <div>C. They encourage people to prioritize final scores over teamwork.</div>
+                <div>D. They show that cheating is an unavoidable part of becoming a professional.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRAMMAR QUESTIONS -->
+    <div class="section-title">III. Questions for Grammar (30 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 14–23: Multiple Choice Questions</div>
+        <div class="question-item">
+            <span class="question-number">14.</span> The athletic director is meeting with the coaches <span class="fill-blank">&nbsp;</span> teams won the regional championships last week.
+            <div class="question-options options-4col">
+                <div>A. who</div>
+                <div>B. whose</div>
+                <div>C. which</div>
+                <div>D. whom</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">15.</span> The school basketball court, <span class="fill-blank">&nbsp;</span> was recently renovated, now has a high-quality wood floor.
+            <div class="question-options options-4col">
+                <div>A. that</div>
+                <div>B. which</div>
+                <div>C. where</div>
+                <div>D. what</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">16.</span> Athletes <span class="fill-blank">&nbsp;</span> train daily tend to develop higher levels of endurance and self-discipline.
+            <div class="question-options options-4col">
+                <div>A. who</div>
+                <div>B. , who</div>
+                <div>C. which</div>
+                <div>D. , which</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">17.</span> Good sportsmanship is a quality <span class="fill-blank">&nbsp;</span> is highly valued in both team and individual sports.
+            <div class="question-options options-4col">
+                <div>A. who</div>
+                <div>B. whose</div>
+                <div>C. that</div>
+                <div>D. where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">18.</span> The stadium <span class="fill-blank">&nbsp;</span> the final match was played was packed with thousands of excited fans.
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. where</div>
+                <div>C. that</div>
+                <div>D. who</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">19.</span> Consider this context: The school has only one football coach, and he has just won an award. Choose the correct sentence to describe this:
+            <div class="question-options options-1col">
+                <div>A. The football coach who won the award is very proud.</div>
+                <div>B. The football coach, who won the award, is very proud.</div>
+                <div>C. The football coach which won the award is very proud.</div>
+                <div>D. The football coach, who won the award is very proud.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">20.</span> Consider this context: A school has several tennis players, but only some of them qualified for the tournament. Choose the correct sentence to describe those who qualified:
+            <div class="question-options options-1col">
+                <div>A. The tennis players, who qualified for the tournament, will travel tomorrow.</div>
+                <div>B. The tennis players who qualified for the tournament will travel tomorrow.</div>
+                <div>C. The tennis players which qualified for the tournament will travel tomorrow.</div>
+                <div>D. The tennis players, who qualified for the tournament will travel tomorrow.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">21.</span> The player to <span class="fill-blank">&nbsp;</span> the coach gave the captain's armband has played for the team for five years.
+            <div class="question-options options-4col">
+                <div>A. who</div>
+                <div>B. whom</div>
+                <div>C. that</div>
+                <div>D. whose</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">22.</span> The swimming pool, <span class="fill-blank">&nbsp;</span> the national team regularly practices, is closed for maintenance today.
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. where</div>
+                <div>C. that</div>
+                <div>D. in where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">23.</span> We visited the sports museum, <span class="fill-blank">&nbsp;</span> has a large collection of historical Olympic medals, last week.
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. where</div>
+                <div>C. that</div>
+                <div>D. in which</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 24–33: Multiple Choice Questions</div>
+        <div class="question-item">
+            <span class="question-number">24.</span> Individual sports require solo focus, <span class="fill-blank">&nbsp;</span> team sports depend on mutual cooperation.
+            <div class="question-options options-4col">
+                <div>A. whereas</div>
+                <div>B. by contrast</div>
+                <div>C. however</div>
+                <div>D. in contrast to</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">25.</span> Some players prefer intense training. <span class="fill-blank">&nbsp;</span>, others enjoy playing sports purely for recreation.
+            <div class="question-options options-4col">
+                <div>A. In contrast</div>
+                <div>B. Whereas</div>
+                <div>C. Although</div>
+                <div>D. While</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">26.</span> <span class="fill-blank">&nbsp;</span> soccer is popular worldwide, American football is played mainly in the United States.
+            <div class="question-options options-4col">
+                <div>A. While</div>
+                <div>B. In contrast</div>
+                <div>C. However</div>
+                <div>D. On the contrary</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">27.</span> The men's basketball team won their match easily, <span class="fill-blank">&nbsp;</span> the women's team lost in a close finish.
+            <div class="question-options options-4col">
+                <div>A. while</div>
+                <div>B. in contrast</div>
+                <div>C. despite</div>
+                <div>D. instead of</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">28.</span> Professional athletes earn millions of dollars. <span class="fill-blank">&nbsp;</span>, amateur players receive no payment for their participation.
+            <div class="question-options options-4col">
+                <div>A. By contrast</div>
+                <div>B. Whereas</div>
+                <div>C. In contrast to</div>
+                <div>D. Although</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">29.</span> <span class="fill-blank">&nbsp;</span> the high temperature outside, both teams played with great energy and sportsmanship.
+            <div class="question-options options-4col">
+                <div>A. Although</div>
+                <div>B. Despite</div>
+                <div>C. Whereas</div>
+                <div>D. While</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">30.</span> Regular exercise is good for physical health; <span class="fill-blank">&nbsp;</span>, overtraining can lead to severe injuries.
+            <div class="question-options options-4col">
+                <div>A. whereas</div>
+                <div>B. however</div>
+                <div>C. although</div>
+                <div>D. in contrast to</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">31.</span> Amateur sports focus on participation and fun, <span class="fill-blank">&nbsp;</span> professional sports are driven by financial motives.
+            <div class="question-options options-4col">
+                <div>A. in contrast to</div>
+                <div>B. whereas</div>
+                <div>C. despite</div>
+                <div>D. nevertheless</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">32.</span> The school team lost the championship game. <span class="fill-blank">&nbsp;</span>, they were praised for their excellent sportsmanship.
+            <div class="question-options options-4col">
+                <div>A. Although</div>
+                <div>B. Nevertheless</div>
+                <div>C. Whereas</div>
+                <div>D. In contrast to</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">33.</span> Team sports teach cooperation, <span class="fill-blank">&nbsp;</span> individual sports encourage self-reliance.
+            <div class="question-options options-4col">
+                <div>A. while</div>
+                <div>B. in contrast</div>
+                <div>C. but also</div>
+                <div>D. furthermore</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 34–38: Error Correction</div>
+        <div class="question-item">
+            <span class="question-number">34.</span> Correct the error: The athlete which won the marathon broke the world record.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">35.</span> Correct the error: The soccer match, that we watched yesterday, was very exciting.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">36.</span> Correct the error: She won the tennis tournament whereas she was injured.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">37.</span> Correct the error: The stadium where we visited last year has been demolished.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">38.</span> Correct the error: The referee, whose was very fair, managed the game perfectly. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 39–43: Sentence Transformation and Combining</div>
+        <div class="question-item">
+            <span class="question-number">39.</span> Combine the sentences using a relative clause: The team captain made a speech. He represents our school. (Start with 'The team captain who...')
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">40.</span> Combine the sentences using 'whereas' to show contrast: Team sports build social skills. Individual sports foster self-reliance. (Begin with 'Team sports build social skills, whereas...')
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">41.</span> Combine the sentences using a non-defining relative clause: We played a game of basketball. It lasted for two hours. (Combine into a single sentence starting with 'We played a game of basketball, which...')
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">42.</span> The boys' team won 80% of their matches, <span class="fill-blank">&nbsp;</span> the girls' team won only 40% of their matches. (Use the 5-letter contrast linker starting with 'w')
+        </div>
+        <div class="question-item">
+            <span class="question-number">43.</span> Complete the sentence describing a sports facility using a relative clause with 'where': The stadium is a modern venue. The national team trains there. (Write a single sentence starting with 'The stadium is a modern venue where...') (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <!-- WRITING QUESTIONS -->
+    <div class="section-title">IV. Questions for Writing (5 tasks)</div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 1:  Word Ordering (Sắp xếp từ thành câu hoàn chỉnh)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Sentence Building (Sắp xếp từ thành câu): Rearrange the following words to make a correct sentence about team sports:</div>
+<div class="writing-prompt-text">sports / skills / team / important / social / teach.</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 2:  Sentence Completion (Hoàn thành câu)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Sentence Combining (Kết hợp câu): Combine these two simple sentences using the word 'because':</div>
+<div class="writing-prompt-sub-item">- Swimming is a great exercise.</div>
+<div class="writing-line"></div>
+<div class="writing-prompt-sub-item">- It uses all the muscles in the body.</div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 3:  Data comparison and modifiers (more than, the most)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Short Description (Mô tả bảng số liệu): Look at the table showing the number of weekly training hours for different school sports. Write 3 sentences comparing the sports.</div>
+<table class="data-table"><thead><tr><th>Sport</th><th>Training Hours per Week</th></tr></thead><tbody><tr><td>Basketball</td><td>8 hours</td></tr><tr><td>Swimming</td><td>10 hours</td></tr><tr><td>Tennis</td><td>5 hours</td></tr></tbody></table>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 4:  Comparing percentages and using contrast linkers (while, whereas)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Short Description (Mô tả biểu đồ): (*) Look at the bar chart showing the percentage of students who play team sports vs. individual sports in three schools. Write a short paragraph (40-50 words, write 5-6 sentences) comparing the schools.</div>
+<div class="svg-chart-container"> <svg width="400" height="220" viewBox="0 0 400 220" style="font-family:sans-serif; background-color:#fafafa; border-radius:8px;"> <text x="200" y="25" font-size="14" text-anchor="middle" font-weight="bold" fill="#333">Students Playing Sports (%)</text> <line x1="50" y1="170" x2="350" y2="170" stroke="#ccc" stroke-width="1" /> <line x1="50" y1="120" x2="350" y2="120" stroke="#eee" stroke-dasharray="4" /> <line x1="50" y1="70" x2="350" y2="70" stroke="#eee" stroke-dasharray="4" /> <text x="40" y="174" font-size="10" text-anchor="end" fill="#666">0%</text> <text x="40" y="124" font-size="10" text-anchor="end" fill="#666">50%</text> <text x="40" y="74" font-size="10" text-anchor="end" fill="#666">100%</text> <rect x="80" y="90" width="25" height="80" fill="#3498db" rx="2" /> <rect x="110" y="130" width="25" height="40" fill="#e74c3c" rx="2" /> <text x="107" y="185" font-size="11" text-anchor="middle" font-weight="bold" fill="#333">School A</text> <rect x="180" y="100" width="25" height="70" fill="#3498db" rx="2" /> <rect x="210" y="110" width="25" height="60" fill="#e74c3c" rx="2" /> <text x="207" y="185" font-size="11" text-anchor="middle" font-weight="bold" fill="#333">School B</text> <rect x="280" y="80" width="25" height="90" fill="#3498db" rx="2" /> <rect x="310" y="140" width="25" height="30" fill="#e74c3c" rx="2" /> <text x="307" y="185" font-size="11" text-anchor="middle" font-weight="bold" fill="#333">School C</text> <rect x="100" y="200" width="12" height="12" fill="#3498db" rx="2" /> <text x="118" y="210" font-size="10" fill="#555">Team Sports</text> <rect x="220" y="200" width="12" height="12" fill="#e74c3c" rx="2" /> <text x="238" y="210" font-size="10" fill="#555">Individual Sports</text> </svg> </div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 5:  Explaining reasons and organizing ideas</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Short Paragraph (Viết đoạn văn ngắn): Write a short paragraph (50-60 words, write 6-8 sentences) explaining why teamwork is important in your daily life (e.g. at school or home).</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <!-- REVIEW BRIDGE -->
+    <div class="section-title">V. Review Bridge / Ôn tập liên chủ đề</div>
+    <div class="warmup-box" style="background-color: #fafbfc; border: 1px solid #bdc3c7; border-radius: 4px; padding: 10px;">
+        <div class="question-instruction" style="margin-top: 15px; font-size: 11.5pt;">V. Review Bridge / Ôn tập liên chủ đề</div>
+1. Dịch sang tiếng Anh: Trọng tài, người điều khiển trận đấu, đã thực thi luật lệ một cách nghiêm ngặt. (Gợi ý dùng mệnh đề quan hệ không xác định)<br>
+<div class="writing-line"></div><br>
+2. Dịch sang tiếng Anh: Thể thao đồng đội dạy chúng ta sự hợp tác, trong khi thể thao cá nhân thúc đẩy kỷ luật bản thân. (Gợi ý dùng 'whereas')<br>
+<div class="writing-line"></div><br>
+3. Dịch sang tiếng Anh: Chúng tôi đã có một cuộc thảo luận đầy hoài nghi về áp lực phải chiến thắng bằng mọi giá. (Gợi ý dùng 'skepticism')<br>
+<div class="writing-line"></div><br>
+    </div>
+
+</body>
+</html>

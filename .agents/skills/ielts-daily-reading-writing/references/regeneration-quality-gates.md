@@ -20,7 +20,6 @@ Regenerate Reading if:
 - A question relies on outside knowledge or omitted source information.
 - A question has multiple valid answers.
 
-
 ## Grammar Regeneration Gates
 
 Regenerate Grammar if:
@@ -43,7 +42,6 @@ Regenerate Answers if:
 - Reading reasoning does not connect the evidence to the answer.
 - Grammar answers lack form, meaning, use in context, trap logic, or depth checks.
 - Grammar explanations do not prove uniqueness or meaning preservation.
-
 
 ## Challenge Severity
 

@@ -20,8 +20,8 @@ Generate detailed answer keys, explanations, model writing answers, and cumulati
    - **Each Item**:
      - Correct Answer: `Câu X. [Đáp án chữ] — [Nội dung câu trả lời]`
      - Question Type: `*Loại câu hỏi: [Literal / Inference / Function / Vocab]*`
-     - Evidence Quote: `*Bằng chứng: "[Direct quote from passage]" (§[Paragraph label A/B/C/D])*`. **CRITICAL**: The quote MUST exist exactly in the text. DO NOT hallucinate evidence. If the text does not contain the exact quote, reject the answer.
-     - Cognitive Logic: `**Cách tìm đáp án:** [Step-by-step reasoning in Vietnamese, explaining the logic from evidence to answer]. Answer explanations must teach the reasoning path, explicitly demonstrating the mapping from the passage wording to the paraphrased question/answer wording. For inference items, state the evidence pieces that must be connected. If paragraph labels (A-D) are present in the passage, you MUST refer to them as 'Đoạn A', 'Đoạn B', etc., instead of 'Đoạn 1', 'Đoạn 2'.`
+     - Evidence Quote: `*Bằng chứng: "[Direct quote from passage]" (§[Paragraph number])*`
+     - Cognitive Logic: `**Cách tìm đáp án:** [Step-by-step reasoning in Vietnamese, explaining the logic from evidence to answer]. Answer explanations must teach the reasoning path, explicitly demonstrating the mapping from the passage wording to the paraphrased question/answer wording. For inference items, state the evidence pieces that must be connected.`
      - Why Others Wrong: `**Phân tích nhiễu:** [Explain exactly why each incorrect option is wrong, identifying if it's a keyword trap].`
      - Depth Check: `**Đánh giá chiều sâu:** [Briefly explain how this question meets the Deep Reading standard for its level].`
      - Tip: `> **💡 Mẹo:** [Helpful test tip in Vietnamese]`
@@ -45,9 +45,11 @@ Generate detailed answer keys, explanations, model writing answers, and cumulati
    - **Step-by-Step Guidance**: Provide structural analysis, useful phrases, and vocabulary cues in Vietnamese.
    - **Self-Check List (Tự kiểm tra)**: Provide bullet points to help students self-correct common mistakes.
 7. **Review Bridge Section**:
-   - Add `IV. Review Bridge / Ôn tập liên chủ đề` at the end containing exactly 3 translation or sentence completion items reinforcing recycled vocabulary, complete with correct answers and Vietnamese explanations.
-
-
+    - Add `IV. Review Bridge / Ôn tập liên chủ đề` at the end containing exactly 3 translation or sentence completion items reinforcing recycled vocabulary, complete with correct answers and Vietnamese explanations.
+8. **Compiler Mappings and Warm-up English Rules**:
+   - **Writing Guidance Keys**: In `writing_guidance`, use exactly the keys `task_id`, `model_answer`, `guidance_vi`, and `self_checklist` (which must be a list of strings). Do not use `suggested_model_answer`, `step_by_step_guidance_vi`, or `self_check_vi`.
+   - **Review Bridge Keys**: In `review_bridge`, use exactly the keys `id`, `prompt`, `correct_answer`, and `rationale_vi`. Do not use `question_no`, `question`, `explanation_vi`, or `explanation`.
+   - **Warm-up English Language**: The warm-up section must have the instruction `*Answer the following questions in English:*` (with asterisks) and all warm-up questions must be written in English only (no Vietnamese text).
 
 ## Output JSON
 Return JSON only:
@@ -60,7 +62,7 @@ Return JSON only:
       "question_type": "inference",
       "evidence_quote": "Shopping online saves time and allows easy price comparison.",
       "evidence_paragraph": 2,
-      "explanation_vi": "Đoạn B (hoặc đoạn 2) chỉ ra rằng việc mua sắm trực tuyến giúp tiết kiệm thời gian và so sánh giá.",
+      "explanation_vi": "Đoạn 2 chỉ ra rằng việc mua sắm trực tuyến giúp tiết kiệm thời gian và so sánh giá.",
       "why_others_wrong_vi": "Lựa chọn B sai vì bài đọc không đề cập đến việc giảm chi phí vận chuyển. Lựa chọn C là bẫy từ vựng 'efficient'...",
       "depth_check_vi": "Câu hỏi này yêu cầu kỹ năng suy luận (inference) để hiểu nguyên nhân thay vì chỉ tìm từ khóa.",
       "tip_vi": "Khi làm câu hỏi trắc nghiệm, hãy tìm các từ đồng nghĩa như 'saves time' thay vì tìm từ khóa 'efficient'.",

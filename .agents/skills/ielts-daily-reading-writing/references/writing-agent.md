@@ -33,6 +33,15 @@ Generate IELTS-aligned writing tasks incorporating grammar targets and lesson vo
 6. **Writing Space Constraints**:
    - Ensure instructions state the exact length requirements (e.g., "write 3 sentences" or "write a short paragraph").
    - Do NOT try to hardcode dotted lines (`...`) for writing spaces in the prompt text. The HTML compiler automatically parses instructions to render spacious `.writing-line` elements.
+7. **Compiler Compatibility Formatting Rules**:
+    - **Fields format**: `useful_language` and `success_criteria` must be arrays (lists of strings), e.g. `["term 1", "term 2"]`, NOT comma-separated strings.
+    - **Task 1 Useful Language Restriction**: For Writing Task 1 (e.g. Word Ordering / Sentence Building), the `useful_language` array must be empty (`[]`) to increase task difficulty.
+    - **Task 2 (Sentence Combining)**: The prompt must list the two sentences using simple hyphens (e.g., `\n- Sentence 1\n- Sentence 2`) rather than numbered prefixes (`1.`, `2.`) to prevent the compiler from splitting them with empty blank lines.
+    - **Visual Data Type**: When presenting tables in `visual_data`, the `"type"` field must be exactly `"markdown_table"` (not `"table"`).
+    - **SVG Formatting**: Flatten all SVG content in `visual_data.content` into a single continuous line (remove all newlines and multiple spaces) to prevent the HTML converter from injecting `<br>` breaks within XML tags.
+    - **Paragraph Lines Trigger**: For opinion paragraphs or descriptive essay tasks (e.g., Task 5/Task 4), the prompt must explicitly mention the sentence range (e.g., `(write 5-6 sentences)` or `(write 6-8 sentences)`) so the compiler can scale up the printed blank lines (giving 7 or 9 lines instead of the default 4).
+    - **Warm-up English Language**: The warm-up section must have the instruction `*Answer the following questions in English:*` (with asterisks) and all warm-up questions must be written in English only (no Vietnamese text).
+    - **Gap-Fill Table Blanks**: If a task requires a gap-fill table (like a registration form), use exactly `.......` (7 dots) as cells placeholders. If these placeholders are present, the compiler will suppress bottom writing lines. If the table contains raw data with no placeholders, the compiler will automatically draw student writing lines below.
 
 ## Output JSON
 Return JSON only:

@@ -82,7 +82,22 @@ To prevent rendering omissions, alignment mismatches, and parsing failures durin
 - **Writing Level Header Injection**: The structured JSON converter (`convert_json_to_markdown_fields`) must write the `Reading: {level}` and `Writing: {w_level}` lines at the very beginning of `practice_markdown` so that the compiler correctly parses and renders the Writing level in the Practice sheet header instead of defaulting to `A1`.
 - **Dynamic Vocabulary Table Numbering**: The compiler must dynamically index the vocabulary tables (Core, Topic, Phrases/Collocations, and Recycled) in the Materials sheet to prevent sequence gaps (such as skipping Table 2.2) when a table is empty.
 - **Review Bridge Rendering**: The compiler must include `"review bridge"` in the major section heading keywords to split it correctly. In student sheets, it must render the Review Bridge prompts with writing lines while completely hiding answers and explanations. In the teacher Answer Key, it must render the prompts along with their correct answers and explanations.
-
+- **Writing Formatting and Key Consistency**:
+  - `useful_language` and `success_criteria` must be lists/arrays of strings, not comma-separated strings.
+  - Prompts for Task 2 (Sentence Combining) must use bullet points (`-`) instead of numbered lists to avoid inserting blank lines in between.
+  - `visual_data.type` for tables must be exactly `"markdown_table"`.
+  - SVG visual content must be flattened to a single continuous line to prevent `<br>` injection.
+  - Paragraph writing tasks (e.g. Task 5) must specify `write X-Y sentences` to scale up the printed lines.
+  - Warm-up section instruction must be `*Answer the following questions in English:*` (with asterisks) and questions must be in English only.
+  - Answers keys must use the precise keys mapping: `writing_guidance` (`task_id`, `model_answer`, `guidance_vi`, `self_checklist`), `review_bridge` (`id`, `prompt`, `correct_answer`, `rationale_vi`).
+- **Reading Options Prefixes**: Multiple-choice options in the JSON payload must not contain manual prefixes like `A. `, `B. `, etc., as the compiler automatically pre-formats and prepends them.
+- **Writing Task Sub-Item Lines**: The compiler must support lists/bullet points (numbered `1.`, lettered `a)`, and bulleted `-`, `*`) as sub-items inside writing task prompts, drawing writing lines beneath each sub-item.
+- **Table-Based Writing Task Spacing**: If a writing task prompt or visual data contains a table, skip rendering duplicate trailing `Answer:` lines or empty writing lines at the bottom of the block only if the table contains fill-in-the-blank placeholders (like `.......`, `___`, or `[Fill`). For read-only data tables without placeholders, render the required writing lines below the table block for student comparisons and essays.
+- **Suggested Answers Table Rendering**: Suggested model answers for writing tasks containing tables must not be wrapped in markdown blockquotes (`>`) so the compiler can correctly parse and output them as HTML tables in the answer key.
+- **Writing Line Fallback**: The compiler must inspect the target length (e.g. `3 sentences`) when computing required student answer spaces to ensure at least 3-4 lines are rendered for paragraph-based tasks when English instructions are missing.
+- **Responsive MC Option Alignment**: Multiple-choice options must be dynamically aligned to 1, 2, or 4 columns based on the max and total text lengths of the options to conserve space and save paper.
+- **Compact Writing Space Layout**: Writing prompt items and lines must be structured using HTML block divs joined by newlines rather than using redundant `<br>` tags, which prevents wasteful blank vertical gaps.
+- **HTML/SVG Protection**: In writing task formatting, skip markdown inline replacement for lines that contain HTML/SVG markup tags to prevent corruption of rendered charts.
 
 ## Human-in-the-loop and Agent Review Loop
 Before finalizing any daily practice pack, use the review workflow described in:

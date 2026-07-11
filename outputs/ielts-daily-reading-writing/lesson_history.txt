@@ -22,3 +22,6 @@ B1 | 20260705 | Campus life | College Success: Joining Campus Groups to Feel Con
 A2 | 20260705 | Directions, street navigation, transport schedules | Using a trip planner, route signs, and bus schedules for a simple journey
 A2 | 20260708 | Weather, seasons, clothing preferences | How weather affects clothing choices
 B1 | 20260708 | Advertising aimed at young consumers | Stealth marketing and data tracking
+B1 | 20260710 | Sportsmanship and teamwork | The Role of Teamwork and Sportsmanship in Sports
+A2 | 20260710 | Booking hotels and simple travel arrangements | Learning English for a Hotel Job
+

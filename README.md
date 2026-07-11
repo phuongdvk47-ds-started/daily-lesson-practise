@@ -154,6 +154,27 @@ python scripts/run_pipeline.py --source "<source>" --from-stage extract --page 1
 python scripts/run_pipeline.py --resume --lesson-id "LSN-001-B2-A7K9P2QX"
 ```
 
+#### F. Hướng dẫn viết Prompt kích hoạt AI (Prompting Guide)
+Khi bạn muốn tạo một bài học từ vựng mới từ nguồn sách Barron hoặc tài liệu IELTS bất kỳ, hãy sử dụng các mẫu prompt ngắn gọn dưới đây để kích hoạt AI:
+
+##### Mẫu 1: Kích hoạt từ file sách PDF cục bộ (Có kiểm duyệt HITL)
+> Hãy tạo tài liệu học IELTS Barron mới cho ngày **Day 1** từ nguồn sách:
+> - **Source**: `/docs/IELTS/Barron_Essential_Words_For_IELTS.pdf`
+> - **Unit**: `Unit 1`
+> - **Topic**: `ENVIRONMENTAL IMPACTS OF LOGGING`
+> - **Yêu cầu**: Chạy ở chế độ có kiểm duyệt (`--human-review`) để dừng lại duyệt tại các checkpoint: Chọn nguồn, Chọn Unit, Xác nhận cấp độ và Chốt duyệt PDF.
+
+##### Mẫu 2: Chạy tự động hoàn toàn bằng Cache (Skip HITL)
+> Hãy tạo tài liệu học IELTS Barron từ link Google Drive:
+> - **Source**: `https://drive.google.com/file/d/1abc.../view`
+> - **Unit**: `Unit 5`
+> - **Yêu cầu**: Chạy chế độ bỏ qua kiểm duyệt (`--skip-human-review`) và tự động giải quyết các bước bằng Cache nếu tài liệu đã được xử lý trước đó.
+
+##### Mẫu 3: Chỉ render lại PDF từ Lesson ID cũ
+> Hãy kết xuất lại tệp PDF cho bài học cũ:
+> - **Lesson ID**: `LSN-001-B2-A7K9P2QX`
+> - **Yêu cầu**: Chỉ thực hiện render lại giao diện HTML/PDF (`--force-rerender` từ stage `html-render`) mà không chạy lại các tác vụ AI trích xuất nội dung.
+
 ---
 
 ## Kế hoạch Mở rộng các Skills Tương lai

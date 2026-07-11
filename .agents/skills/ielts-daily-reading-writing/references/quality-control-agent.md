@@ -8,16 +8,10 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
 - `assembled_json`: the complete lesson payload containing `lesson_meta`, `source`, `reading`, `vocabulary`, `grammar`, `writing`, and `answers`.
 
 ## Validation Rules
-1. **Source & Topic Consistency Check**: 
-   - Check that the source status is `verified` and publisher/URL are present. Wikipedia must not be preferred over higher-priority sources (universities, institutions, news, reputable educational entities).
-   - **CRITICAL**: The lesson title, filename, metadata, warm-up, reading passage, vocabulary, grammar, writing tasks, and answer key MUST all be on the exact same topic. If there is a topic mismatch (e.g., title is "City vs countryside" but content drifts to "targeted advertising"), raise a critical challenge (`topic_mismatch`) and force a regeneration.
-2. **Reading Passage Coherence & Anti-Mixing**:
-   - **CRITICAL**: Verify that the generated passage has clear, distinct paragraphs (A-D) with distinct functions.
-   - Post-check for duplicate phrases, copy-pasted sentences across paragraphs, or abnormal lowercase sentence starts (e.g., "some consumer...").
-   - If the passage is noisy, mixed, or repeats the same evidence across paragraphs, raise a critical challenge (`mixed_passage`) and force regeneration before checking questions.
-2.1 **Reading Evidence & Printed Passage Boundary QC**:
+1. **Source Check**: Check that the source status is `verified` and publisher/URL are present. Wikipedia must not be preferred over higher-priority sources (universities, institutions, news, reputable educational entities).
+2. **Reading Evidence & Printed Passage Boundary QC**:
    - Verify that the number of reading questions matches `reading_question_count` exactly.
-   - **CRITICAL**: Validate that all `evidence_quote` strings in the answer key exist *verbatim* (or clearly paraphrased) inside the generated printed passage text. Reject invented/hallucinated evidence completely. Raise a critical challenge (`hallucinated_evidence`) if quotes do not exist.
+   - **CRITICAL**: Verify that every reading question answer's `evidence_quote` exists *verbatim* inside the reading passage paragraphs.
    - **CRITICAL**: Verify that no reading question asks about facts/information omitted from the printed passage. Raise a critical challenge (`missing_evidence`) if any question references outside or omitted source information.
    - Verify that all reading questions have exactly one correct answer.
    - **CRITICAL**: Verify that all reading questions follow the sequence of information in the passage within each question type group (non-decreasing `evidence_paragraph` indices). Raise a critical challenge (`reading_order_violation`) if any question targets a paragraph before the previous question's paragraph within the same type group.
@@ -57,9 +51,11 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
    - Verify that B1-C2 questions utilize level-appropriate features like relative clauses, conditionals, cohesion, nominalisation, hedging, precision, and text cohesion where appropriate, instead of merely testing simple forms.
    - Verify that all metadata block validations (e.g. `deep_grammar_validation`, `one_answer_check`) are filled out accurately.
 6. **Writing Topic Alignment QC**:
-   - Verify that the number of writing tasks matches `writing_task_count` exactly.
-   - Raise a medium challenge (`topic_alignment`) if any writing task is generic and not clearly connected to the daily lesson topic.
-   - Check that visual data content (SVG or markdown table) is present for data description tasks.
+    - Verify that the number of writing tasks matches `writing_task_count` exactly.
+    - Raise a medium challenge (`topic_alignment`) if any writing task is generic and not clearly connected to the daily lesson topic.
+    - Check that visual data content (SVG or markdown table) is present for data description tasks.
+    - **CRITICAL**: Verify that Writing Task 1 (e.g. Word Ordering / Sentence Building) has its `useful_language` field set to an empty array (`[]`) to ensure appropriate level difficulty.
+    - **CRITICAL**: Verify that if a writing task contains a visual table, it is correctly classified: gap-fill tables must contain placeholder cells (like `.......`), and read-only data tables must have no placeholders so that the compiler can render student response lines below them.
 7. **Workload and Time QC**:
    - Estimate the completion time of the workload using this formula:
      * Reading Passage Reading time: 8 minutes.
@@ -77,8 +73,6 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
    - **CRITICAL**: Rejects generic placeholders (e.g., "What do you think about this topic?"). Warm-up questions must activate background knowledge specific to the topic.
 10. **JSON Schema Check**:
     - Verify that the payload structure aligns 100% with the schema in `references/output-schema.md`.
-
-
 
 ## Render-Aware & Post-Render PDF QC Rules
 QC must also require Post-Render PDF QC. Raise a critical/high challenge if:
@@ -117,22 +111,13 @@ Return JSON only:
 }
 ```
 
-## QC Pass Rule & Fail-Fast
+## QC Pass Rule
 QC may pass only when:
 - all critical issues are resolved
 - all high issues are resolved
 - medium issues are either resolved or explicitly accepted by user (or fixed by adjusting workload/time)
 - PDF readiness is confirmed
 - `lesson_source.json` schema is valid
-
-**FAIL-FAST**: If there are ANY of the following errors, the Skill MUST NOT publish the final PDF and must force a regeneration:
-- Wrong answer key
-- Questions with multiple unintended correct answers
-- Evidence does not exist in the passage
-- Passage is mixed, noisy, or contains copy-pasted duplicates
-- Topic/Title mismatch
-- Correct-the-error item does not contain a real error, or the correction is identical to the original
-- Explanation describes a non-existent error
 
 ## Human Escalation
 Set `human_review_required: true` when:

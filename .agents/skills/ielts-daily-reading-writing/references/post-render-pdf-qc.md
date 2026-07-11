@@ -176,4 +176,3 @@ Post-Render PDF QC passes only if:
 - Verify that writing tasks do not contain duplicate label headers (like `Word Ordering: Word Ordering:`).
 - Verify that Time Allowed matches the JSON and is a rounded standard value (45, 60, 75, 90, 105, 120).
 
-

@@ -65,6 +65,13 @@ def looks_like_soft_error(title: str, final_url: str) -> bool:
 
 
 def main() -> int:
+    # Ensure UTF-8 output on all systems
+    if sys.stdout.encoding != 'utf-8':
+        try:
+            sys.stdout.reconfigure(encoding='utf-8')
+        except Exception:
+            pass
+
     parser = argparse.ArgumentParser()
     parser.add_argument("url")
     args = parser.parse_args()
