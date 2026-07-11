@@ -804,19 +804,28 @@ def generate_writing_questions_html(sections: dict[str, str]) -> str:
         
     return "\n\n".join(html_parts)
 
-def build_practice_html(practice_md: str, level: str, topic: str, day: str, vocab_words: list[str] = None, time_allowed: int = None) -> str:
+def build_practice_html(practice_md: str, level: str, topic: str, day: str, vocab_words: list[str] = None, time_allowed: int = None, skill_level: dict = None) -> str:
     sections = split_sections_by_heading(practice_md)
-    
-    reading_level = level
-    writing_level = "A1"
-    intro_sec = sections.get("Intro", "")
-    r_match = re.search(r'Reading:\s*([A-C][1-2])', intro_sec, re.I)
-    if r_match:
-        reading_level = r_match.group(1).upper()
-    w_match = re.search(r'Writing:\s*([A-C][1-2])', intro_sec, re.I)
-    if w_match:
-        writing_level = w_match.group(1).upper()
-        
+
+    # Prefer explicit skill_level dict from lesson_meta; fall back to intro-section regex
+    if skill_level:
+        reading_level   = skill_level.get("reading_level",   level)
+        grammar_level   = skill_level.get("grammar_level",   "")
+        writing_level   = skill_level.get("writing_level",   "A1")
+        vocabulary_level = skill_level.get("vocabulary_level", "")
+    else:
+        reading_level    = level
+        writing_level    = "A1"
+        grammar_level    = ""
+        vocabulary_level = ""
+        intro_sec = sections.get("Intro", "")
+        r_match = re.search(r'Reading:\s*([A-C][1-2]\+?)', intro_sec, re.I)
+        if r_match:
+            reading_level = r_match.group(1).upper()
+        w_match = re.search(r'Writing:\s*([A-C][1-2]\+?)', intro_sec, re.I)
+        if w_match:
+            writing_level = w_match.group(1).upper()
+
     day_only = re.sub(r'^Day\s+', '', day.strip(), flags=re.I)
     topic_upper = topic.upper()
     
@@ -843,9 +852,11 @@ def build_practice_html(practice_md: str, level: str, topic: str, day: str, voca
     if review_sec:
         review_content = render_review_bridge(review_sec, is_answer=False)
         review_html = f"""    <!-- REVIEW BRIDGE -->
-    <div class="section-title">V. Review Bridge / Ôn tập liên chủ đề</div>
-    <div class="warmup-box" style="background-color: #fafbfc; border: 1px solid #bdc3c7; border-radius: 4px; padding: 10px;">
-        {review_content}
+    <div class="review-bridge-container" style="page-break-before: always; page-break-inside: avoid;">
+        <div class="section-title">V. Review Bridge / Ôn tập liên chủ đề</div>
+        <div class="warmup-box" style="background-color: #fafbfc; border: 1px solid #bdc3c7; border-radius: 4px; padding: 10px;">
+            {review_content}
+        </div>
     </div>"""
     
     html_content = f"""<!DOCTYPE html>
@@ -1063,7 +1074,7 @@ def build_practice_html(practice_md: str, level: str, topic: str, day: str, voca
     <div class="header">
         <div class="center-name">IELTS PREMIUM PREPARATION ACADEMY</div>
         <h1>DAILY PRACTICE: DAY {day_only} - {topic_upper}</h1>
-        <h2>(Level: Reading {reading_level} - Writing {writing_level})</h2>
+        <h2>(Level: Reading {reading_level} | Grammar {grammar_level} | Writing {writing_level} | Vocab {vocabulary_level})</h2>
         <div class="student-info">
             <span>Student Name: ..............................................................</span>
             <span>Time Allowed: {time_allowed or 50} mins</span>
@@ -1890,10 +1901,36 @@ def render_review_bridge(md_text: str, is_answer: bool = False) -> str:
             html_parts.append(f"<p>{format_markdown_inline(line_str)}</p>")
     return "\n".join(html_parts)
 
-def build_answers_html(answers_md: str, day: str, topic: str, practice_md: str) -> str:
+def build_answers_html(answers_md: str, day: str, topic: str, practice_md: str, skill_level: dict = None) -> str:
     sections = split_sections_by_heading(answers_md)
     practice_sections = split_sections_by_heading(practice_md)
-    
+
+    # Prefer explicit skill_level dict from lesson_meta; fall back to intro-section regex
+    if skill_level:
+        reading_level    = skill_level.get("reading_level",    "")
+        grammar_level    = skill_level.get("grammar_level",    "")
+        writing_level    = skill_level.get("writing_level",    "")
+        vocabulary_level = skill_level.get("vocabulary_level", "")
+    else:
+        reading_level = writing_level = grammar_level = vocabulary_level = ""
+        intro_sec = practice_sections.get("Intro", "")
+        top_of_md = practice_md[:200]
+        r_match = re.search(r'Reading:\s*([A-C][1-2]\+?)', intro_sec or top_of_md, re.I)
+        if r_match:
+            reading_level = r_match.group(1).upper()
+        w_match = re.search(r'Writing:\s*([A-C][1-2]\+?)', intro_sec or top_of_md, re.I)
+        if w_match:
+            writing_level = w_match.group(1).upper()
+
+    level_header_html = ""
+    parts = []
+    if reading_level:    parts.append(f"Reading {reading_level}")
+    if grammar_level:    parts.append(f"Grammar {grammar_level}")
+    if writing_level:    parts.append(f"Writing {writing_level}")
+    if vocabulary_level: parts.append(f"Vocab {vocabulary_level}")
+    if parts:
+        level_header_html = f'\n        <h2>(Level: {" | ".join(parts)})</h2>'
+
     reading_offset = 13
     groups = parse_questions_section(practice_sections.get("Questions for Reading", ""))
     if groups:
@@ -1936,9 +1973,11 @@ def build_answers_html(answers_md: str, day: str, topic: str, practice_md: str) 
     if review_sec:
         review_content = render_review_bridge(review_sec, is_answer=True)
         review_html = f"""    <!-- REVIEW BRIDGE -->
-    <div class="section-title">IV. Review Bridge / Ôn tập</div>
-    <div class="warmup-box">
-        {review_content}
+    <div class="review-bridge-container" style="page-break-before: always; page-break-inside: avoid;">
+        <div class="section-title">IV. Review Bridge / Ôn tập</div>
+        <div class="warmup-box">
+            {review_content}
+        </div>
     </div>"""
         
     day_only = re.sub(r'^Day\s+', '', day.strip(), flags=re.I)
@@ -2062,7 +2101,7 @@ def build_answers_html(answers_md: str, day: str, topic: str, practice_md: str) 
 <body>
 
     <div class="header">
-        <h1>ANSWER KEY & EXPLANATIONS - DAY {day_only}: {topic_upper}</h1>
+        <h1>ANSWER KEY & EXPLANATIONS - DAY {day_only}: {topic_upper}</h1>{level_header_html}
     </div>
 
     <!-- READING ANSWERS -->
@@ -2780,9 +2819,19 @@ def main() -> None:
     vocab_words = [item["word"] for item in vocab_items] if vocab_items else []
 
     printed_time = data.get("lesson_meta", {}).get("printed_time_allowed_minutes")
-    practice_html_content = build_practice_html(data.get("practice_markdown", ""), level, topic, day, vocab_words, time_allowed=printed_time)
+    skill_level = data.get("lesson_meta", {}).get("skill_level") or {}
+    # If skill_level dict is absent, build it from flat lesson_meta keys
+    if not skill_level:
+        meta_sl = data.get("lesson_meta", {})
+        skill_level = {
+            "reading_level":    meta_sl.get("reading_level", ""),
+            "grammar_level":    meta_sl.get("grammar_level", ""),
+            "writing_level":    meta_sl.get("writing_level", ""),
+            "vocabulary_level": meta_sl.get("vocabulary_level", ""),
+        }
+    practice_html_content = build_practice_html(data.get("practice_markdown", ""), level, topic, day, vocab_words, time_allowed=printed_time, skill_level=skill_level)
     materials_html_content = build_materials_html(data.get("vocabulary_grammar_markdown", ""), data.get("quizlet_markdown", ""), day, topic)
-    answers_html_content = build_answers_html(data.get("answers_markdown", ""), day, topic, data.get("practice_markdown", ""))
+    answers_html_content = build_answers_html(data.get("answers_markdown", ""), day, topic, data.get("practice_markdown", ""), skill_level=skill_level)
     
     # Shuffle vocab items once for the checker sheets
     # 1. Shuffle vocab_items for Checker 1 (Vietnamese to English)

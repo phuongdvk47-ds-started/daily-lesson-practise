@@ -187,4 +187,6 @@ def test_fail_keyword_trap_ratio():
     
     assert run_validation(payload) == False
 
-if __name__ == " __main__\:
+if __name__ == "__main__":
+    import pytest
+    pytest.main([__file__])

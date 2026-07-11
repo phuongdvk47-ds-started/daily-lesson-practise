@@ -12,7 +12,10 @@ Use a modular pipeline. Do not generate the full IELTS pack in one monolithic re
 Accept these parameters when provided:
 - `Day`: date label such as `Day 20260625`; default to `current_date` from the active environment/local timezone in `YYYYMMDD`.
 - `Topic`: topic name; default by running `scripts/select_daily_inputs.py` or selecting a level-appropriate topic from `references/topic-bank.md` while respecting history windows.
-- `Level`: one of `A1`, `A1+`, `A2`, `A2+`, `B1`, `B1+`, `B2`, `B2+`, `C1`, `C1+`, `C2`; default `A2`.
+- `Reading Level`: one of `A1`, `A1+`, `A2`, `A2+`, `B1`, `B1+`, `B2`, `B2+`, `C1`, `C1+`, `C2`; default `A2`. Also accepted as `Level` for backwards compatibility — treated as Reading Level.
+- `Grammar Level`: one of `A1`, `A1+`, `A2`, `A2+`, `B1`, `B1+`, `B2`, `B2+`, `C1`, `C1+`, `C2`; default = Reading Level.
+- `Writing Level`: one of `A1`, `A1+`, `A2`, `A2+`, `B1`, `B1+`, `B2`, `B2+`, `C1`, `C1+`, `C2`; default = Reading Level.
+- `Vocabulary Level`: one of `A1`, `A1+`, `A2`, `A2+`, `B1`, `B1+`, `B2`, `B2+`, `C1`, `C1+`, `C2`; default = Reading Level.
 - `Number of IELTS Reading Questions`: default `13`.
 - `Number of Vocabulary Words`: default `20`.
 - `Number of Grammar Questions`: default `30`.
@@ -20,7 +23,45 @@ Accept these parameters when provided:
 - Optional prior history: previous daily topics, learner errors, weak skills, or past outputs.
 - Optional cumulative review request.
 
-Normalize common variants: `Writting` means `Writing`; `IELTS Reading Questions` means reading question count.
+### Level Input Rules
+
+**Single-level input** (e.g. `Level: A2` or `Reading Level: A2`):
+- Set `reading_level = A2`.
+- Set `grammar_level = writing_level = vocabulary_level = reading_level` (inherit).
+
+**Split-level input** (e.g. `Reading Level: A2+, Writing Level: A1`):
+- Set each skill level independently.
+- Any unspecified skill level inherits from `reading_level`.
+
+**lesson_meta mapping** — always populate all four flat keys **and** the nested `skill_level` dict:
+```json
+{
+  "level": "<reading_level>",
+  "reading_level": "<reading_level>",
+  "grammar_level": "<grammar_level>",
+  "writing_level": "<writing_level>",
+  "vocabulary_level": "<vocabulary_level>",
+  "skill_level": {
+    "reading_level": "<reading_level>",
+    "grammar_level": "<grammar_level>",
+    "writing_level": "<writing_level>",
+    "vocabulary_level": "<vocabulary_level>"
+  }
+}
+```
+The top-level `level` key must always equal `reading_level` (used for file naming and history tracking).
+
+**PDF Header** — the compiler renders all four skill levels in the header:
+```
+(Level: Reading A2+ | Grammar A2 | Writing A1 | Vocab A2)
+```
+If all four levels are identical, a compact single-level form may be used instead:
+```
+(Level: A2)
+```
+
+Normalize common variants: `Writting` means `Writing`; `IELTS Reading Questions` means reading question count; `Vocab Level` means `Vocabulary Level`; `Grammar` alone means `Grammar Level`.
+
 
 ## Execution Model
 Each named Sub-Agent is a pipeline stage, not a free-form chat persona. For each stage:
@@ -34,10 +75,10 @@ Each named Sub-Agent is a pipeline stage, not a free-form chat persona. For each
 2. Load `references/orchestrator.md`.
 3. Check lesson history and anti-duplication rules. Find prior same-level lesson for vocabulary recycling.
 4. Run **Source Research Agent** using `references/source-research-agent.md`. If source verification fails, stop.
-5. Run **Reading Agent** using `references/reading-agent.md`, `references/deep-question-blueprint.md`, and `references/deep-reading-generation-rules.md`. Ensure the Reading blueprint is created before questions, all questions have verbatim evidence quotes, and the level-specific deep-reading ratios are met.
-6. Run **Vocabulary Agent** using `references/vocabulary-agent.md`.
-7. Run **Grammar Agent** using `references/grammar-agent.md`, `references/deep-question-blueprint.md`, and `references/deep-grammar-generation-rules.md`. Ensure the Grammar blueprint is created before questions, no hardcoded headings appear, and transformations preserve meaning.
-8. Run **Writing Agent** using `references/writing-agent.md`. Ensure daily topic relevance.
+5. Run **Reading Agent** using `references/reading-agent.md`, `references/deep-question-blueprint.md`, and `references/deep-reading-generation-rules.md`. **Crucially, the Reading Agent must strictly align its passage and question complexity to the resolved `Reading Level` (e.g. A2+) and its corresponding pedagogical rules.** Ensure the Reading blueprint is created before questions, all questions have verbatim evidence quotes, and the level-specific deep-reading ratios are met.
+6. Run **Vocabulary Agent** using `references/vocabulary-agent.md`. **The Vocabulary Agent must strictly target vocabulary extraction and check matching difficulty according to the resolved `Vocabulary Level`.**
+7. Run **Grammar Agent** using `references/grammar-agent.md`, `references/deep-question-blueprint.md`, and `references/deep-grammar-generation-rules.md`. **The Grammar Agent must strictly generate and validate grammar items according to the resolved `Grammar Level` (and its corresponding pedagogical rules).** Ensure the Grammar blueprint is created before questions, no hardcoded headings appear, and transformations preserve meaning.
+8. Run **Writing Agent** using `references/writing-agent.md`. **The Writing Agent must strictly align the writing tasks, prompts, and success criteria to the resolved `Writing Level`.** Ensure daily topic relevance.
 9. Run **Answer Agent** using `references/answer-agent.md` and `references/deep-answer-key-rules.md`.
 10. Assemble the complete payload into `lesson_source.json` according to `references/output-schema.md`.
 11. Run **Quality Control Agent** using `references/quality-control-agent.md` and `references/regeneration-quality-gates.md`.
@@ -149,6 +190,14 @@ The Skill must never finalize, export, or mark QC as passed if any question has:
 - mismatch between instruction and expected answer
 - answer key that is correct only under one unstated interpretation
 
+### Specific Logic & Quality Constraints:
+1. **Present Perfect vs. Past Simple Clarification**: When testing present perfect vs. past simple, the prompt sentence MUST contain an explicit time indicator (e.g., `so far today`, `since 2024`, `yesterday`, `three days ago`) to rule out any alternative interpretations and guarantee a single unique correct answer.
+2. **Inference Distractor Uniqueness**: Every inference question must have exactly one option that is logically supported by the passage. All other options must be unambiguously false, unsupported by the passage, or contain extreme language (e.g., `only`, `always`, `never`).
+3. **Main Idea Evidence Quotes**: Main idea questions must have a broad `evidence_quote` containing the entire paragraph or the sentences summarizing the core idea, rather than a single narrow sentence.
+4. **Draft Placeholder Removal**: All placeholders such as `[R]` or `[R]` must be completely removed from the reading passage text, question texts, option texts, and answer explanations. No draft markers are allowed in final student-facing sheets.
+5. **Level Consistency**: Suffix levels (e.g., `A2+`, `B1+`) must be consistent across `level`, `lesson_meta.level`, and the markdown header titles.
+6. **Detailed Explanations**: Grammar answer explanations (`analysis_vi`) must be comprehensive, explaining the grammar target, context clues, grammar rules, and explicitly detailing why each incorrect option is wrong.
+
 Any such issue must be marked as:
 `challenge_type: "logic_error"`
 with severity:
@@ -189,3 +238,233 @@ Load ONLY the files listed for the **current pipeline stage**. Do NOT pre-load a
 | **Human Review** | `human-in-loop.md`, `agent-review-loop.md` | All `deep-*` files |
 | **Schema Reference** | `output-schema.md` | `output-schema-full.md` (used only by `validate_lesson_json.py`) |
 | **Topic Selection** | `topic-bank.md` | All `deep-*` files, all agent files |
+
+## Recurring QA Errors — Prevention Registry
+
+This section documents every concrete error pattern that was caught during QA review and fixed in post-production. Each entry carries a **Root Cause**, **Prevention Rule**, and **Verification Step** that must be run before marking a lesson as final.
+
+---
+
+### RQA-01 · Double Letter Prefix in MCQ Options (`A. A.`)
+
+**Symptom**: Rendered PDF/HTML shows `A. A. Option text`, `B. B. Option text`, etc.
+
+**Root Cause**: The renderer automatically prefixes options with `A.`, `B.`, etc. If the `options` array in the JSON already contains hardcoded letter prefixes (`"A. Option text"`), the renderer doubles them.
+
+**Prevention Rule**:
+- Options in `lesson_source.json` must contain **raw option text only** — no leading `A. `, `B. `, `C. `, `D. ` prefix.
+- Applies to every question type: Reading MCQ, Grammar MCQ, Vocabulary Checker.
+- The QC Agent must reject any `options` element matching the regex `^[A-D]\.\s`.
+
+**Verification Step**:
+```python
+# Must return 0 matches
+import re, json
+data = json.load(open("lesson_source.json", encoding="utf-8"))
+bad = [f"Q{q['id']}: {opt}" for section in ["reading","grammar"]
+       for q in data[section]["questions"]
+       for opt in q.get("options", [])
+       if re.match(r'^[A-D]\.\s', opt)]
+assert not bad, bad
+```
+
+---
+
+### RQA-02 · Split-Level Metadata Not Synced to PDF Header
+
+**Symptom**: `lesson_meta` contains `reading_level`, `grammar_level`, `writing_level`, `vocabulary_level`, but the Practice PDF and/or Answer Key PDF header shows only the generic `level` or only two skills.
+
+**Root Cause**: `build_practice_html` and `build_answers_html` in `export_daily_pack.py` used to extract only `reading_level` and `writing_level` from the markdown `Intro` section via regex; they ignored the structured `skill_level` dict in `lesson_meta`.
+
+**Prevention Rule (JSON)**:
+Every lesson with split-level instruction must populate `lesson_meta` with:
+```json
+{
+  "reading_level": "A2+",
+  "grammar_level": "A2",
+  "writing_level": "A1",
+  "vocabulary_level": "A2",
+  "skill_level": {
+    "reading_level": "A2+",
+    "grammar_level": "A2",
+    "writing_level": "A1",
+    "vocabulary_level": "A2"
+  }
+}
+```
+All four flat keys AND the nested `skill_level` dict must be populated.
+
+**Prevention Rule (Compiler)**:
+`build_practice_html` and `build_answers_html` receive `skill_level: dict` from the call site. The rendered header must read:
+```
+(Level: Reading A2+ | Grammar A2 | Writing A1 | Vocab A2)
+```
+
+**Verification Step**:
+```python
+meta = data["lesson_meta"]
+assert meta.get("reading_level"), "missing reading_level"
+assert meta.get("grammar_level"), "missing grammar_level"
+assert meta.get("writing_level"), "missing writing_level"
+assert meta.get("vocabulary_level"), "missing vocabulary_level"
+assert meta.get("skill_level"), "missing skill_level dict"
+```
+And in both compiled HTML files:
+```python
+assert "(Level: Reading" in practice_html
+assert "(Level: Reading" in answer_html
+assert "Grammar" in practice_html  # all 4 parts present
+assert "Vocab" in practice_html
+```
+
+---
+
+### RQA-03 · Review Bridge Splitting Across Pages
+
+**Symptom**: The Review Bridge section is broken across two pages in the printed PDF.
+
+**Root Cause**: The Review Bridge `<div>` had no page-break CSS. Depending on where it fell on the page, it could be split mid-section.
+
+**Prevention Rule (Compiler)**:
+The Review Bridge wrapper div in `build_practice_html` and `build_answers_html` must always carry:
+```html
+<div class="review-bridge-container"
+     style="page-break-before: always; page-break-inside: avoid;">
+```
+This ensures it always starts on a fresh page and is never split.
+
+**Verification Step**:
+```python
+assert 'page-break-before: always' in practice_html
+assert 'review-bridge-container' in practice_html
+assert 'page-break-before: always' in answer_html
+assert 'review-bridge-container' in answer_html
+```
+
+---
+
+### RQA-04 · Ambiguous MCQ Distractor (Double Comparative / `more quiet`)
+
+**Symptom**: Option A reads `"more quiet"`, which is acceptable in informal English, making both `"more quiet"` and `"quieter"` valid answers — violating the Single Unique Answer Rule.
+
+**Root Cause**: The Grammar Agent selected `"more quiet"` as a plausible-but-incorrect distractor for a comparative question. However, `"more quiet"` is widely accepted in native speech.
+
+**Prevention Rule**:
+- **Never use `"more quiet"` as a distractor** for a question testing `"quieter"`.
+- Use demonstrably wrong double-comparative forms instead: `"more quieter"` (double comparative error) is unambiguously wrong.
+- The `one_answer_check.has_exactly_one_valid_answer` field must be `true` for every MCQ.
+- Any distractor that could be acceptable in informal or regional English must be replaced.
+
+**Verification Step**:
+```python
+for q in data["grammar"]["questions"]:
+    assert q.get("one_answer_check", {}).get("has_exactly_one_valid_answer") is True, \
+        f"Q{q['id']} fails one_answer_check"
+```
+
+---
+
+### RQA-05 · Multi-Error Sentence in Correct-the-Error Items
+
+**Symptom**: An error-correction prompt sentence contains two grammatical errors (e.g., wrong tense + wrong auxiliary). A student could correct either one, giving multiple valid corrected sentences.
+
+**Root Cause**: Grammar Agent generated a prompt sentence with both a tense and an auxiliary error simultaneously.
+
+**Prevention Rule**:
+- Each Correct-the-Error item must contain **exactly one target error** (confirmed by `error_correction_validation.exactly_one_target_error: true`).
+- `target_error_text` must be a single word or minimal phrase.
+- The corrected sentence must differ from the original in **exactly one token**.
+- Example compliant item: `"Have you ever book a class?"` → error = `"book"` → correction = `"booked"`.
+- Example non-compliant item: `"Did you ever booked a class?"` → two errors: `Did` + `booked`.
+
+**Verification Step**:
+```python
+for q in data["grammar"]["questions"]:
+    ecv = q.get("error_correction_validation", {})
+    if ecv:
+        assert ecv.get("exactly_one_target_error") is True, f"Q{q['id']} has multiple errors"
+        assert ecv.get("original_contains_error") is True, f"Q{q['id']} original has no error"
+```
+
+---
+
+### RQA-06 · Reading Q Reasoning Skill Mislabeled
+
+**Symptom**: A NOT GIVEN question is labeled `reasoning_skill: "inference"` instead of `"classification"`. This confuses the answer key explanation category.
+
+**Root Cause**: The Reading Agent used `"inference"` as a catch-all for all non-literal questions.
+
+**Prevention Rule**:
+- `reasoning_skill` must be one of the schema's allowed values. Common mappings:
+  - Literal information present → `"paraphrase"`
+  - Information missing from text → `"classification"` (NOT GIVEN)
+  - Implication from evidence → `"inference"`
+  - Writer's opinion/attitude → `"writer_purpose"`
+- The schema validator (`validate_lesson_json.py`) enforces the allowed list; do not invent new values.
+
+**Verification Step**:
+Run `python scripts/validate_lesson_json.py lesson_source.json` — any invalid `reasoning_skill` will cause validation failure.
+
+---
+
+### RQA-07 · Deep Reading Missing Author Attitude / Writer Purpose Question
+
+**Symptom**: A 13-question reading section has no question testing the author's tone, attitude, or purpose — a required deep-reading skill at A2+ and above.
+
+**Root Cause**: The Reading Agent filled all question slots with vocabulary, inference, and True/False questions, skipping the `writer_purpose` category.
+
+**Prevention Rule**:
+- At A2+ and above, the 13-question reading section **must include at least one** question with `reasoning_skill: "writer_purpose"` or `reasoning_skill: "author_attitude"`.
+- This question must cite evidence from the passage (no external knowledge).
+- The answer key must include a 3-step Thinking Process in Vietnamese.
+
+**Verification Step**:
+```python
+level = data["lesson_meta"].get("level", "")
+if "+" in level or level in ("B1","B2","C1","C2"):
+    skills = [q.get("reasoning_skill") for q in data["reading"]["questions"]]
+    assert "writer_purpose" in skills or "author_attitude" in skills, \
+        "Missing writer_purpose/author_attitude question at this level"
+```
+
+---
+
+### RQA-08 · Draft Marker `[R]` Left in Final Lesson
+
+**Symptom**: Practice PDF contains visible `[R]` placeholder text inside reading passages, question prompts, or answer explanations.
+
+**Root Cause**: Temporary research markers were inserted during source verification but never cleaned before finalization.
+
+**Prevention Rule**:
+- The Reading Agent must remove all `[R]`, ` [R]`, and `[R] ` markers from `passage_text`, question texts, option texts, and `answers` before committing to `lesson_source.json`.
+- The QC Agent must grep for `[R]` as a blocking condition.
+
+**Verification Step**:
+```python
+import re, json
+text = json.dumps(data)
+assert not re.search(r'\[R\]', text), "Draft [R] marker found in lesson_source.json"
+```
+
+---
+
+### Summary QA Gate (Run Before Every PDF Export)
+
+The following script must return `0 FAIL` before running `export_daily_pack.py`:
+
+```
+python scripts/validate_lesson_json.py lesson_source.json
+```
+
+In addition, confirm manually or via automated checks:
+
+| Gate | Check |
+|---|---|
+| RQA-01 | No `A./B./C./D.` prefix in any `options` array |
+| RQA-02 | `lesson_meta.skill_level` populated; PDF header shows all 4 skills |
+| RQA-03 | Review Bridge has `page-break-before: always` in compiled HTML |
+| RQA-04 | All grammar MCQs have `one_answer_check.has_exactly_one_valid_answer: true` |
+| RQA-05 | All error-correction items have `exactly_one_target_error: true` |
+| RQA-06 | All `reasoning_skill` values are in the schema-allowed list |
+| RQA-07 | At A2+ and above, at least one `writer_purpose` question exists |
+| RQA-08 | No `[R]` marker appears anywhere in the JSON |
