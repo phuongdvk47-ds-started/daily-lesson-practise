@@ -58,105 +58,41 @@ Generate grammar guides, IELTS common traps, and targeted grammar practice exerc
 12. **Stretch Items**: Mark 10-20% of questions as stretch questions targeting the next level with a `(*)` label, and set `"stretch": true` in JSON.
 
 ## Output JSON
-Return JSON only:
+Return JSON only. For the full field definitions, see `output-schema.md`. Abbreviated structure:
 ```json
 {
-  "grammar_blueprint": [
-    {
-      "question_no": 1,
-      "grammar_target": "present perfect vs past simple",
-      "question_type": "contextual choice",
-      "depth": "medium",
-      "tested_dimension": "meaning/use",
-      "trap": "past time phrase distractor"
-    }
-  ],
-  "targets": [
-    {
-      "name": "Subject-Verb Agreement",
-      "level": "B2",
-      "reason": "Essential for high grammatical accuracy in IELTS Writing Task 1 and 2."
-    }
-  ],
-  "guide": [
-    {
-      "heading": "#### Chủ điểm 1: Danh từ tập hợp và Danh từ không đếm được",
-      "content": "Explanation in Vietnamese with examples..."
-    }
-  ],
-  "common_mistakes": [
-    {
-      "trap": "Subject-verb agreement with compound subjects joined by 'as well as'",
-      "wrong_example": "The manager as well as his staff are attending the conference.",
-      "correct_version": "The manager as well as his staff is attending the conference.",
-      "why_it_matters": "IELTS examiners look for correct verb agreement in complex clauses. In this construction, the verb agrees with the first subject ('manager')."
-    }
-  ],
-  "sections": [
-    {
-      "section_title": "Relative pronouns and relative adverbs",
-      "internal_question_start": 1,
-      "internal_question_end": 10,
-      "display_question_start": null,
-      "display_question_end": null,
-      "compiler_computed_range": true
-    }
-  ],
-  "questions": [
-    {
-      "id": 1,
-      "type": "Gap Fill",
-      "question": "Each of the participants _______ (be) required to sign the form before entering. [Fill in the blank with the correct form of the verb]",
-      "options": [],
-      "correct_answer": "is",
-      "explanation_vi": "Chủ ngữ bắt đầu bằng 'Each of' luôn đi với động từ số ít.",
-      "difficulty": "medium",
-      "cognitive_level": "context_use",
-      "source_connection": "independent",
-      "target_structure": "subject-verb agreement",
-      "level": "B2",
-      "stretch": false,
-      "one_answer_check": {
-        "has_exactly_one_valid_answer": true,
-        "why_other_options_are_wrong": [],
-        "context_is_sufficient": true,
-        "final_sentence_after_insertion": "Each of the participants is required to sign the form before entering.",
-        "meaning_preserved": true
-      },
-      "deep_grammar_validation": {
-        "has_single_clear_answer": true,
-        "requires_context_or_meaning": true,
-        "meaning_preserved_if_transformation": true,
-        "is_not_surface_clue_only": true,
-        "matches_target_structure": true,
-        "difficulty_is_appropriate": true,
-        "level_is_appropriate": true
-      }
-    }
-  ]
+  "grammar_blueprint": [{"question_no": 1, "grammar_target": "...", "question_type": "contextual choice", "depth": "medium", "tested_dimension": "meaning/use", "trap": "..."}],
+  "targets": [{"name": "...", "level": "B2", "reason": "..."}],
+  "guide": [{"heading": "#### Chủ điểm 1: ...", "content": "..."}],
+  "common_mistakes": [{"trap": "...", "wrong_example": "...", "correct_version": "...", "why_it_matters": "..."}],
+  "sections": [{"section_title": "...", "internal_question_start": 1, "internal_question_end": 10, "display_question_start": null, "display_question_end": null, "compiler_computed_range": true}],
+  "questions": [{
+    "id": 1, "type": "Gap Fill", "question": "...", "options": [], "correct_answer": "is",
+    "explanation_vi": "...", "difficulty": "medium", "cognitive_level": "context_use",
+    "source_connection": "independent", "target_structure": "subject-verb agreement",
+    "level": "B2", "stretch": false,
+    "one_answer_check": {"has_exactly_one_valid_answer": true, "context_is_sufficient": true, "final_sentence_after_insertion": "...", "punctuation_complete": true, "meaning_preserved": true},
+    "deep_grammar_validation": {"has_single_clear_answer": true, "requires_context_or_meaning": true, "meaning_preserved_if_transformation": true, "is_not_surface_clue_only": true, "matches_target_structure": true, "difficulty_is_appropriate": true, "level_is_appropriate": true}
+  }]
 }
 ```
 
 ## Self-Regeneration Gate
 Before returning JSON, apply `references/regeneration-quality-gates.md`. Regenerate only the failed Grammar item(s) or Grammar section if any gate fails.
 
-# Grammar Logic and Ambiguity Prevention Rules
+# Grammar Logic and Ambiguity Prevention — Quick Reference
 
-## 1. One-Answer-Only Rule
-Every grammar question must have exactly one naturally valid answer.
-Before returning a grammar question, the Grammar Agent must run a self-check:
-```json
-{
-  "one_answer_check": {
-    "has_exactly_one_valid_answer": true,
-    "why_other_options_are_wrong": [],
-    "context_is_sufficient": true,
-    "final_sentence_after_insertion": "",
-    "meaning_preserved": true
-  }
-}
-```
-If this cannot be completed, the question is invalid and must be regenerated.
+> Full rules with all examples: `references/deep-grammar-rules.md §Grammar Logic and Ambiguity Prevention Rules`
+
+| Rule | Requirement | Invalid Pattern |
+|---|---|---|
+| **One-Answer-Only** | Every question has exactly one valid answer. Fill `one_answer_check` before returning. | Two options both produce acceptable English |
+| **Relative Clause Context** | Must provide context resolving defining vs non-defining interpretation | `"The student ____ lives next door"` without context |
+| **Inserted Option Completeness** | Every option inserted into sentence frame must produce complete, punctuated output | `, which` inserted without closing comma |
+| **Comma-Pair Rule** | Non-defining mid-sentence clause needs both commas | `Nick Lander, who is director gave advice.` |
+| **Generic Noun Ambiguity** | Add explicit context (`There are many...`, `There is only one...`) for generic nouns | `the student`, `the teacher` without context |
+| **Distractor Validity** | Each distractor must be wrong for a clear grammatical reason — include `option_validations` metadata | Distractor is merely "less preferred" |
+| **Regeneration Trigger** | Regenerate if: two options acceptable; answer depends on unstated context; option is incomplete; explanation uses "usually" | See `deep-grammar-rules.md §7` |
 
 ## 2. Relative Clause Context Rule
 For questions testing defining vs non-defining relative clauses, the question must provide context that determines whether the relative clause is essential or extra information.
@@ -262,86 +198,26 @@ Regenerate the question if:
 * the expected answer requires punctuation not shown in the option or sentence frame
 * the explanation uses words like "usually" or "probably" instead of giving a decisive reason
 
-# Correct-the-Error Logic Rules
+# Correct-the-Error — Quick Reference
 
-## 1. Error Must Exist Rule
-For every Correct-the-error item, the original sentence must contain exactly one target error.
-Invalid:
-```text
-Correct the error: Local businesses do not like the new calendar.
-```
-Reason: The sentence is already correct.
+> Full rules with all examples: `references/deep-grammar-rules.md §Correct-the-Error Logic Rules`
 
-Valid:
-```text
-Correct the error: Local businesses does not like the new calendar.
-Answer: Local businesses do not like the new calendar.
-```
+| Rule | Requirement |
+|---|---|
+| **Error Must Exist** | Original sentence must contain exactly one target grammatical error |
+| **Answer Must Differ** | `corrected_sentence` ≠ `original_sentence` |
+| **Explanation Matches** | Explanation describes the actual error present in original, not a hypothetical one |
+| **One Error Only** | Exactly one target error unless prompt explicitly says otherwise |
+| **Metadata Required** | Include `error_correction_validation` object (fields: `original_sentence`, `corrected_sentence`, `target_error_text`, `target_error_type`, `correction_text`, `original_contains_error`, `corrected_differs_from_original`, `exactly_one_target_error`, `explanation_matches_error`) |
+| **Prohibited** | `original_sentence == corrected_sentence`; `target_error_text` not in original; explanation references error not in original |
 
-## 2. Correct Answer Must Differ Rule
-The correct answer must not be identical to the original sentence.
-Invalid:
-```text
-Correct the error: This school is more expensive than that school.
-Answer: This school is more expensive than that school.
-```
-Reason: No correction was made.
+# According to the Report — Factual Check Rule
+If a grammar item uses "According to the report" or similar attribution, the claim must be supported by the reading passage. Otherwise remove the attribution and make the sentence hypothetical/general.
+- ❌ Invalid: "According to the report, going to school in year-round systems is twice as expensive..." (unsupported)
+- ✓ Valid: "This new school calendar is twice as expensive as the old one." (hypothetical)
 
-Valid:
-```text
-Correct the error: This school is the most expensive than that school.
-Answer: This school is more expensive than that school.
-```
+# Options and Multi-line Prompt Formatting Constraints
+1. **Option Formatting**: Option strings in the JSON `options`, `correct_answer`, `why_other_options_are_wrong.option` and `option_validations.option` fields MUST NOT be prefixed with option letters like `A.`, `B.`, `C.`, `D.`. Output only the clean option text (e.g. `"which"` instead of `"A. which"`).
+2. **Multi-line Prompt Formatting**: In sentence combining, rewriting, or error correction questions, never use `\n- ` or bullet points with newlines inside the `question` field. Instead, use `<br>` and clear text labels (e.g. `Sentence 1: ...<br>Sentence 2: ...`) to prevent the compiler's line-splitter from skipping lines in the practice booklet.
 
-## 3. Explanation Must Match Actual Error Rule
-The explanation must describe the actual error in the original sentence.
-Invalid:
-Original sentence: `Local businesses do not like the new calendar.`
-Explanation: `Change 'does not' to 'do not'.`
-Reason: The original sentence does not contain 'does not'.
-
-## 4. One Error Only Rule
-Correct-the-error items must contain exactly one target grammatical error unless explicitly stated otherwise.
-Invalid:
-```text
-Correct the errors: Students must to attends school early.
-```
-Valid:
-```text
-Correct the error: Students must to attend school early.
-Answer: Students must attend school early.
-```
-
-## 5. Required Metadata
-Every Correct-the-error item must include:
-```json
-{
-  "error_correction_validation": {
-    "original_sentence": "",
-    "corrected_sentence": "",
-    "target_error_text": "",
-    "target_error_type": "subject_verb_agreement | modal_infinitive | comparative | tense | article | preposition | punctuation | word_form | other",
-    "correction_text": "",
-    "original_contains_error": true,
-    "corrected_differs_from_original": true,
-    "exactly_one_target_error": true,
-    "explanation_matches_error": true
-  }
-}
-```
-
-## 6. Prohibited Patterns
-Reject any item where:
-- `original_sentence` == `corrected_sentence`
-- `target_error_text` is not found in `original_sentence`
-- `correction_text` is not found in `corrected_sentence`
-- explanation mentions an error not present in `original_sentence`
-- original sentence is already acceptable standard English
-
-# According to the report Factual Check Rule
-If a grammar item uses "According to the report" or similar text attributing a factual claim, that claim must be supported by the reading passage.
-Otherwise, remove "According to the report" and make the sentence hypothetical/general.
-Example:
-- Invalid: "According to the report, going to school in year-round systems is twice as expensive..." (Passage does not support "twice")
-- Valid: "This new school calendar is twice as expensive as the old one." (Hypothetical/general sentence)
 

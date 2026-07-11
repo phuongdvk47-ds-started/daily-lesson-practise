@@ -45,50 +45,22 @@ Generate the final reading passage and IELTS-style reading questions based *only
    - The `evidence_paragraph` of each generated question must be greater than or equal to that of the preceding question within the same type group (e.g., `evidence_paragraph` of question $N \le$ evidence_paragraph of question $N+1$ in the same group).
 
 ## Output JSON
-Return JSON only:
+Return JSON only. For full field definitions, see `output-schema.md §reading`. Abbreviated structure:
 ```json
 {
-  "reading_blueprint": [
-    {
-      "question_no": 1,
-      "type": "literal",
-      "depth": "low",
-      "target_skill": "identify explicitly stated information",
-      "evidence_strategy": "single sentence",
-      "distractor_strategy": "paraphrased but incorrect detail"
-    }
-  ],
-  "passage": {
-    "title": "Title of the reading passage",
-    "paragraphs": [
-      {
-        "id": 1,
-        "text": "Paragraph content..."
-      }
-    ]
-  },
+  "reading_blueprint": [{"question_no": 1, "type": "literal", "depth": "low", "target_skill": "...", "evidence_strategy": "single sentence", "distractor_strategy": "..."}],
+  "passage": {"title": "...", "paragraphs": [{"id": 1, "text": "..."}]},
   "questions": [
     {
-      "id": 1,
-      "type": "Multiple Choice | True/False/Not Given | Heading Matching | Gap Fill",
-      "question": "Question text using paraphrased terms...",
-      "options": ["Option A", "Option B", "Option C", "Option D"],
-      "correct_answer": "Option A or TRUE/FALSE/NOT GIVEN",
-      "evidence_paragraph": 1,
-      "evidence_quote": "Exact sentence quoted verbatim from paragraph 1",
-      "rationale_vi": "Detailed step-by-step reasoning in Vietnamese; explain the logic, not just keyword matching.",
-      "reasoning_skill": "literal | paraphrase | inference | reference | main_idea | author_purpose | structure_function | vocabulary_in_context | synthesis | comparison | cause_effect | contrast | classification | writer_purpose",
-      "source_scope": "printed_passage_only",
-      "stretch": false,
+      "id": 1, "type": "Multiple Choice | True/False/Not Given | Gap Fill",
+      "question": "...", "options": ["Option A", "Option B", "Option C", "Option D"],
+      "correct_answer": "A", "evidence_paragraph": 1,
+      "evidence_quote": "verbatim from passage...",
+      "rationale_vi": "...", "reasoning_skill": "literal | inference | paraphrase | ...",
+      "source_scope": "printed_passage_only", "stretch": false,
       "paraphrase_mapping": "passage phrase -> paraphrased question phrase",
-      "keyword_overlap_check": "explain if the question overlaps too much with exact keywords",
-      "distractor_analysis": [
-        {
-          "option": "Option B",
-          "is_keyword_trap": true,
-          "analysis": "Uses 'exact wording from passage' but is logically false because..."
-        }
-      ]
+      "keyword_overlap_check": "...",
+      "distractor_analysis": [{"option": "Option B", "is_keyword_trap": true, "analysis": "..."}]
     }
   ]
 }
@@ -96,3 +68,7 @@ Return JSON only:
 
 ## Self-Regeneration Gate
 Before returning JSON, apply `references/regeneration-quality-gates.md`. Regenerate only the failed Reading item(s) or Reading section if any gate fails.
+
+# Options Formatting Constraints
+1. **Option Formatting**: Option strings in the JSON `options` and `distractor_analysis.option` fields MUST NOT be prefixed with option letters like `A.`, `B.`, `C.`, `D.`. Output only the clean option text (e.g. `"By connecting to a home Wi-Fi network"` instead of `"B. By connecting to a home Wi-Fi network"`).
+

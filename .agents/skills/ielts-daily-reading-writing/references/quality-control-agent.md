@@ -151,76 +151,21 @@ For every Grammar Multiple Choice or Gap Fill question:
 7. If punctuation is tested, check opening and closing punctuation.
 
 ## Challenge Types
-Use these challenge types:
-```json
-{
-  "challenge_type": "logic_error",
-  "severity": "critical"
-}
-```
-```json
-{
-  "challenge_type": "multiple_valid_answers",
-  "severity": "critical"
-}
-```
-```json
-{
-  "challenge_type": "insufficient_context",
-  "severity": "critical"
-}
-```
-```json
-{
-  "challenge_type": "incomplete_punctuation",
-  "severity": "high"
-}
-```
-```json
-{
-  "challenge_type": "incomplete_inserted_option",
-  "severity": "high"
-}
-```
+Use these challenge types and severity levels (full enum in `output-schema.md §challenge_type Enum`):
+- `logic_error` → severity: **critical**
+- `multiple_valid_answers` → severity: **critical**
+- `insufficient_context` → severity: **critical**
+- `incomplete_punctuation` → severity: **high**
+- `incomplete_inserted_option` → severity: **high**
 
 ## Campus Life Regression Cases
-QC must fail the following patterns:
+> Full patterns with examples: `references/grammar-agent.md §Grammar Logic and Ambiguity Prevention Rules`
 
-### Pattern 1: Ambiguous defining/non-defining clause
-```text
-Identify the sentence that uses relative clause commas correctly.
-A. The student, who lives next door, is very loud.
-B. The student who lives next door is very loud.
-C. The student who lives, next door, is very loud.
-```
-Reason: A and B can both be correct depending on context.
-
-### Pattern 2: Missing closing comma
-```text
-Kansas State University ______ stands in the state of Kansas has a great campus.
-A. which
-B. , which
-C. , who
-```
-Reason: `, which` does not produce a complete correct sentence.
-
-### Pattern 3: Generic noun ambiguity
-```text
-Resident Assistants ______ must follow university rules.
-A. , who guide new students,
-B. who guide new students
-C. , which guide new students,
-```
-Reason: A and B can both be correct depending on whether the clause is defining or non-defining.
-
-### Pattern 4: Missing comma pair
-```text
-The main office ______ is located on the first floor is always busy.
-A. which
-B. , which
-C. , who
-```
-Reason: Non-defining clause requires both commas.
+QC must fail these pattern categories:
+- **Pattern 1**: Ambiguous defining/non-defining relative clause (both options grammatically valid without context)
+- **Pattern 2**: Non-defining clause inserted without closing comma/punctuation
+- **Pattern 3**: Generic noun (`the student`, `the teacher`) without explicit defining/non-defining context
+- **Pattern 4**: Mid-sentence non-defining clause missing second comma
 
 ## QC Pass Rule
 The lesson cannot pass QC if any grammar question has:
@@ -267,17 +212,8 @@ Use:
 ```
 
 ## Regression Cases
-QC must fail these exact patterns:
-*   Pattern 5 (A2 school life):
-    ```text
-    Correct the error: Local businesses do not like the new calendar.
-    Answer: Local businesses do not like the new calendar.
-    Explanation: Change 'does not' to 'do not'.
-    ```
-    Reason: Original sentence has no `does not` and is already correct.
-*   Pattern 6 (A2 school life):
-    ```text
-    Correct the error: This school is more expensive than that school.
-    Answer: This school is more expensive than that school.
-    ```
-    Reason: Original sentence is already correct and answer is identical.
+> Full patterns with examples: `references/grammar-agent.md §Correct-the-Error Logic Rules`
+
+QC must fail:
+- **Pattern 5**: Original sentence has no error but answer key claims an error exists
+- **Pattern 6**: Correct answer is identical to the original sentence

@@ -4,27 +4,13 @@
 
 Each grammar set must include a balanced distribution of cognitive levels. Do not allow the grammar section to rely mainly on isolated form recognition.
 
-Use these maximum/minimum ratios by level:
-
-| Level | Mechanical Form | Meaning Contrast | Context / Discourse | Transformation / Error Correction / Writing Transfer |
-|---|---:|---:|---:|---:|
-| A1 | <=60% | >=20% | >=10% | >=10% |
-| A1+ | <=55% | >=20% | >=15% | >=10% |
-| A2 | <=45% | >=25% | >=15% | >=15% |
-| A2+ | <=40% | >=25% | >=20% | >=15% |
-| B1 | <=30% | >=30% | >=20% | >=20% |
-| B1+ | <=25% | >=30% | >=25% | >=20% |
-| B2 | <=20% | >=30% | >=30% | >=20% |
-| B2+ | <=15% | >=30% | >=35% | >=20% |
-| C1 | <=10% | >=30% | >=35% | >=25% |
-| C1+ | <=10% | >=30% | >=40% | >=25% |
-| C2 | <=5% | >=30% | >=40% | >=30% |
+→ **Ratio table by level**: See `deep-grammar-generation-rules.md §Ratio Rules by Level` (this is the authoritative source; do not duplicate it here).
 
 Categories:
-- Mechanical Form: learners identify the correct grammatical form from a controlled sentence.
-- Meaning Contrast: learners choose forms based on meaning differences, not only patterns.
-- Context / Discourse: learners use sentence meaning, time context, logical relationship, register, cohesion, or surrounding clues.
-- Transformation / Error Correction / Writing Transfer: learners rewrite, combine, correct, edit, or produce language for writing.
+- **Mechanical Form**: learners identify the correct grammatical form from a controlled sentence.
+- **Meaning Contrast**: learners choose forms based on meaning differences, not only patterns.
+- **Context / Discourse**: learners use sentence meaning, time context, logical relationship, register, cohesion, or surrounding clues.
+- **Transformation / Error Correction / Writing Transfer**: learners rewrite, combine, correct, edit, or produce language for writing.
 
 For lower levels A1 and A1+:
 - keep sentences short
@@ -35,6 +21,7 @@ For lower levels A1 and A1+:
 For higher levels B2-C2:
 - increase complexity through meaning, clause structure, precision, register, cohesion, and editing accuracy
 - do not increase difficulty only by adding rare vocabulary
+
 
 ## 2. Difficulty Balance Rule
 

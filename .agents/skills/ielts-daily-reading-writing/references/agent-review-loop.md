@@ -93,18 +93,10 @@ QC Agent must challenge all outputs.
 QC Agent must not pass weak content just because counts match.
 
 ## 3. Challenge Types
-QC Agent and downstream agents may raise these challenge types:
-```json
-{
-  "challenge_type": "source_quality | level_mismatch | ambiguity | multiple_answers | multiple_valid_answers | missing_evidence | insufficient_context | weak_distractor | keyword_scanning | vocabulary_imbalance | missing_vocab_type | grammar_target_mismatch | grammar_pattern_repetition | surface_clue_only | cognitive_level_imbalance | missing_deep_grammar_validation | missing_blueprint | blueprint_mismatch | logic_error | incomplete_punctuation | incomplete_inserted_option | missing_error_in_error_correction | answer_identical_to_prompt | explanation_mismatch | writing_visual_missing | answer_explanation_weak | pdf_layout_risk | schema_error | numbering_error | meaning_changed | topic_alignment | time_workload_mismatch | reading_order_violation",
-  "severity": "low | medium | high | critical",
-  "challenged_agent": "",
-  "location": "",
-  "problem": "",
-  "required_fix": "",
-  "regenerate_scope": ""
-}
-```
+Use challenge types and severity levels defined in `output-schema.md §challenge_type Enum`.
+
+Required fields per challenge:
+`challenge_type` · `severity` (`low`|`medium`|`high`|`critical`) · `challenged_agent` · `location` · `problem` · `required_fix` · `regenerate_scope` (`single_question`|`section`|`full_agent_output`)
 
 ## 4. Revision Protocol
 When a challenge is raised:
@@ -131,40 +123,12 @@ If maximum attempts are exceeded:
 - Ask for human direction.
 
 ## 6. Challenge Log
-Record all challenges in `lesson_source.json`:
-```json
-{
-  "agent_review": {
-    "challenges": [
-      {
-        "id": "CHG-001",
-        "from_agent": "quality_control",
-        "to_agent": "reading",
-        "challenge_type": "keyword_scanning",
-        "severity": "high",
-        "location": "reading.questions[4]",
-        "problem": "The question repeats exact wording from the passage and can be answered by scanning.",
-        "required_fix": "Rewrite the question using paraphrase and add a stronger distractor.",
-        "status": "resolved",
-        "revision_attempt": 1
-      }
-    ]
-  }
-}
-```
+Record all challenges in `lesson_source.json` under `agent_review.challenges` (see `output-schema.md §Challenge Object`).
+Required fields: `id` · `from_agent` · `to_agent` · `challenge_type` · `severity` · `location` · `problem` · `required_fix` · `status` · `revision_attempt`
 
 ## 7. Review Output Format
-Every reviewing agent must return:
-```json
-{
-  "review_status": "pass | challenge",
-  "reviewer_agent": "",
-  "reviewed_section": "",
-  "strengths": [],
-  "challenges": [],
-  "recommended_revision_scope": ""
-}
-```
+Every reviewing agent must return a JSON object with keys:
+`review_status` (`pass`|`challenge`) · `reviewer_agent` (str) · `reviewed_section` (str) · `strengths` (str[]) · `challenges` (str[]) · `recommended_revision_scope` (str)
 
 ## 8. Pass Criteria
 A section can pass review only if:
