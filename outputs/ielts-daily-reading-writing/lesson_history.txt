@@ -21,3 +21,4 @@ A2 | 20260704 | Family relations, celebrations, household dynamics | The importa
 B1 | 20260705 | Campus life | College Success: Joining Campus Groups to Feel Connected
 A2 | 20260705 | Directions, street navigation, transport schedules | Using a trip planner, route signs, and bus schedules for a simple journey
 A2 | 20260708 | Weather, seasons, clothing preferences | How weather affects clothing choices
+B1 | 20260708 | Advertising aimed at young consumers | Stealth marketing and data tracking

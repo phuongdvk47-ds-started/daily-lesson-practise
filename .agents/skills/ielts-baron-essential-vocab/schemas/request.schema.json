@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "request.schema.json",
+  "title": "Normalized Request",
+  "description": "Input request after normalization by Agent 00.",
+  "type": "object",
+  "required": ["source", "target", "options", "request_id", "created_at"],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "pattern": "^REQ-[A-Z0-9]{8}$"
+    },
+    "source": {
+      "type": "object",
+      "required": ["type", "location"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["local_file", "uploaded_file", "google_drive_url"]
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "original_input": {
+          "type": "string"
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "required": ["day"],
+      "properties": {
+        "unit": { "type": ["string", "null"] },
+        "topic": { "type": ["string", "null"] },
+        "day": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "force_reextract": { "type": "boolean", "default": false },
+        "force_rebuild_content": { "type": "boolean", "default": false },
+        "force_rerender": { "type": "boolean", "default": false },
+        "human_review": { "type": "boolean", "default": true },
+        "skip_human_review": { "type": "boolean", "default": false },
+        "from_stage": { "type": ["string", "null"] },
+        "to_stage": { "type": ["string", "null"] },
+        "resume": { "type": "boolean", "default": false },
+        "lesson_id": { "type": ["string", "null"] },
+        "output_root": { "type": ["string", "null"] },
+        "cache_root": { "type": ["string", "null"] },
+        "page": { "type": ["integer", "null"] },
+        "force_page_reextract": { "type": "boolean", "default": false }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

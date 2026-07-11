@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "routing-decision.schema.json",
+  "title": "Routing Decision",
+  "description": "Output of the Execution & Model Router (Agent 00B).",
+  "type": "object",
+  "required": ["task_name", "selected_execution_class", "selected_engine"],
+  "properties": {
+    "task_name": { "type": "string" },
+    "task_complexity": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "required_quality": { "type": "number", "minimum": 0, "maximum": 1 },
+    "requires_reasoning": { "type": "boolean" },
+    "requires_provenance": { "type": "boolean" },
+    "privacy_level": {
+      "type": "string",
+      "enum": ["local-only", "restricted", "normal"]
+    },
+    "selected_execution_class": {
+      "type": "string",
+      "enum": ["DETERMINISTIC", "LOCAL_MODEL", "LOW_COST_LLM", "PREMIUM_LLM", "HUMAN_REQUIRED"]
+    },
+    "selected_engine": { "type": "string" },
+    "fallback_chain": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "budget": {
+      "type": "object",
+      "properties": {
+        "max_input_tokens": { "type": "integer" },
+        "max_output_tokens": { "type": "integer" },
+        "max_attempts": { "type": "integer" },
+        "max_cost_class": { "type": "string" },
+        "premium_escalation_allowed": { "type": "boolean" }
+      }
+    },
+    "cache_key": { "type": "string" },
+    "escalation_policy": {
+      "type": "object",
+      "properties": {
+        "escalate_on": { "type": "array", "items": { "type": "string" } },
+        "escalate_to": { "type": "string" }
+      }
+    },
+    "decision_reason": { "type": "string" }
+  }
+}

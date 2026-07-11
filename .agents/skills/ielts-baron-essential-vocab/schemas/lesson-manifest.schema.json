@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lesson-manifest.schema.json",
+  "title": "Lesson Manifest",
+  "description": "Final manifest for a completed lesson, bundled with output PDFs.",
+  "type": "object",
+  "required": [
+    "skill_name", "skill_version", "lession_id", "unique_source_id",
+    "source", "target", "level", "pipeline", "execution", "outputs",
+    "created_at", "updated_at"
+  ],
+  "properties": {
+    "skill_name": { "type": "string", "const": "ielts-baron-essential-vocab" },
+    "skill_version": { "type": "string" },
+    "lession_id": {
+      "type": "string",
+      "pattern": "^LSN-[0-9]{3}-[A-C][0-9]-[A-HJ-NP-Z2-9]{8}$"
+    },
+    "unique_source_id": { "type": "string" },
+    "source": {
+      "type": "object",
+      "required": ["filename", "checksum"],
+      "properties": {
+        "filename": { "type": "string" },
+        "checksum": { "type": "string" },
+        "page_range": {
+          "type": "array",
+          "items": { "type": "integer" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "original_url": { "type": "string" }
+      }
+    },
+    "target": {
+      "type": "object",
+      "required": ["unit", "day"],
+      "properties": {
+        "unit": { "type": "string" },
+        "topic": { "type": "string" },
+        "day": { "type": "integer" }
+      }
+    },
+    "level": {
+      "type": "object",
+      "required": ["cefr", "ielts_band_range", "approved_by"],
+      "properties": {
+        "cefr": { "type": "string" },
+        "ielts_band_range": { "type": "string" },
+        "approved_by": { "type": "string", "enum": ["agent", "human"] }
+      }
+    },
+    "pipeline": {
+      "type": "object",
+      "properties": {
+        "completed_stages": { "type": "array", "items": { "type": "string" } },
+        "cached_stages": { "type": "array", "items": { "type": "string" } },
+        "retried_stages": { "type": "array", "items": { "type": "string" } },
+        "skipped_stages": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "properties": {
+        "local_tasks": { "type": "integer", "minimum": 0 },
+        "local_model_tasks": { "type": "integer", "minimum": 0 },
+        "low_cost_llm_tasks": { "type": "integer", "minimum": 0 },
+        "premium_llm_tasks": { "type": "integer", "minimum": 0 },
+        "human_review_tasks": { "type": "integer", "minimum": 0 },
+        "cache_hits": { "type": "integer", "minimum": 0 },
+        "estimated_total_cost": { "type": "number", "minimum": 0 }
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["filename", "type", "page_count"],
+        "properties": {
+          "filename": { "type": "string" },
+          "type": { "type": "string", "enum": ["daily_practice", "vocabulary_grammar", "answer_key", "complete_booklet"] },
+          "page_count": { "type": "integer", "minimum": 1 },
+          "checksum": { "type": "string" }
+        }
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "human_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["checkpoint", "decision", "timestamp", "actor"],
+        "properties": {
+          "checkpoint": { "type": "string" },
+          "decision": { "type": "string" },
+          "reason": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "actor": { "type": "string", "enum": ["human", "agent"] }
+        }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  }
+}

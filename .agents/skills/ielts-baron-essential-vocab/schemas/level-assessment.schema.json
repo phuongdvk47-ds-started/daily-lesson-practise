@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "level-assessment.schema.json",
+  "title": "Reading Level Assessment",
+  "description": "CEFR and IELTS level assessment output from Agent 08.",
+  "type": "object",
+  "required": ["schema_version", "lession_id", "cefr_level", "ielts_band_range", "confidence", "evidence"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "lession_id": { "type": "string" },
+    "cefr_level": {
+      "type": "string",
+      "enum": ["A1", "A2", "B1", "B2", "C1", "C2"]
+    },
+    "ielts_band_range": {
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[05])?-[0-9]+(\\.[05])?$"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["lexical", "grammar", "discourse", "question_types"],
+      "properties": {
+        "lexical": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metric": { "type": "string" },
+              "value": {},
+              "interpretation": { "type": "string" }
+            }
+          }
+        },
+        "grammar": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metric": { "type": "string" },
+              "value": {},
+              "interpretation": { "type": "string" }
+            }
+          }
+        },
+        "discourse": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metric": { "type": "string" },
+              "value": {},
+              "interpretation": { "type": "string" }
+            }
+          }
+        },
+        "question_types": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string" },
+              "count": { "type": "integer" },
+              "difficulty_contribution": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "academic_density": {
+      "type": "object",
+      "properties": {
+        "awl_coverage": { "type": "number" },
+        "technical_term_ratio": { "type": "number" }
+      }
+    },
+    "inference_burden": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "approved_by": {
+      "type": "string",
+      "enum": ["agent", "human"]
+    },
+    "human_override": {
+      "type": "object",
+      "properties": {
+        "original_cefr": { "type": "string" },
+        "original_band": { "type": "string" },
+        "reason": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

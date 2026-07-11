@@ -2531,25 +2531,38 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
     if matching_test:
         pm.append("## Vocabulary Matching Test")
         pm.append(f"*{matching_test.get('instruction', 'Look for the following words as you read the passage. Match each word with its correct definition.')}*")
-        pm.append("| Words | Definitions |")
-        pm.append("| --- | --- |")
         items = matching_test.get("items", [])
         definitions = matching_test.get("definitions", [])
-        max_rows = max(len(items), len(definitions))
-        for idx in range(max_rows):
-            word_cell = ""
-            definition_cell = ""
-            if idx < len(items):
-                item = items[idx]
-                word_cell = f"{item.get('id', idx + 1)}. {item.get('term', '')}"
-            if idx < len(definitions):
-                definition = definitions[idx]
-                label = definition.get("label", chr(65 + idx))
-                pos = definition.get("part_of_speech", "")
-                def_text = definition.get("definition", "")
-                definition_cell = f"{label}. {pos}, {def_text}" if pos else f"{label}. {def_text}"
-            pm.append(f"| {word_cell.replace('|', '/')} | {definition_cell.replace('|', '/')} |")
-        pm.append("")
+        
+        pm.append("<b>Words:</b><br>")
+        pm.append("<table style='width:100%; border: none; margin-bottom: 10px; font-size: 0.95em;'>")
+        for i in range(0, len(items), 4):
+            pm.append("<tr>")
+            for j in range(4):
+                if i + j < len(items):
+                    item = items[i + j]
+                    pm.append(f"<td style='border: none; padding: 2px;'>{item.get('id', i + j + 1)}. {item.get('term', '')}</td>")
+                else:
+                    pm.append("<td style='border: none;'></td>")
+            pm.append("</tr>")
+        pm.append("</table>")
+        
+        pm.append("<b>Meanings:</b><br>")
+        pm.append("<table style='width:100%; border: none; font-size: 0.95em;'>")
+        for i in range(0, len(definitions), 2):
+            pm.append("<tr>")
+            for j in range(2):
+                if i + j < len(definitions):
+                    definition = definitions[i + j]
+                    label = definition.get("label", chr(65 + i + j))
+                    pos = definition.get("part_of_speech", "")
+                    def_text = definition.get("meaning_vi", definition.get("definition", ""))
+                    definition_cell = f"{label}. {pos}, {def_text}" if pos else f"{label}. {def_text}"
+                    pm.append(f"<td style='border: none; padding: 2px; vertical-align: top;'>{definition_cell}</td>")
+                else:
+                    pm.append("<td style='border: none;'></td>")
+            pm.append("</tr>")
+        pm.append("</table>")
         
     pm.append("## Warm-up")
     pm.append("Answer the following questions in Vietnamese or English:")

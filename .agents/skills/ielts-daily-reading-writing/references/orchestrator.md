@@ -21,6 +21,7 @@ Coordinate the modular daily IELTS pack pipeline and cumulative review packs. Do
    - Auto Mode (Default)
    - Review Mode (If explicitly requested by user)
 3. **Load pedagogical constraints** from `references/pedagogical-constraints.md`.
+3.1 **Enforce Global Topic Consistency**: The lesson title, reading passage, vocabulary, grammar tasks, and writing tasks MUST share the exact same core topic. Warn sub-agents heavily about topic drifting.
 4. **Consult History**:
    - Inspect `outputs/ielts-daily-reading-writing/lesson_history.txt` to find previous Themes and Specific Topics.
    - Filter by current Level and inspect only recent rows required by Theme and Topic windows.
@@ -78,9 +79,11 @@ Coordinate the modular daily IELTS pack pipeline and cumulative review packs. Do
     - If QC passes and no high/critical challenge remains open, set `execution.pipeline_status` to `qc_passed`.
 26. **Checkpoint 7: Pre-PDF Approval (If in Review Mode)**:
     - Stop, present QC status and output files. Wait for user approval.
-27. **Export PDFs**:
+27. **Validate PDF Output Conditions (Fail-Fast)**:
+    - You MUST NOT trigger PDF export if the QC Agent raised a Critical Challenge (e.g. topic mismatch, hallucinated evidence, multiple correct answers, fake grammar error). Force regeneration first.
+28. **Export PDFs**:
     - Run `scripts/validate_lesson_json.py`. If validation passes, run `scripts/export_daily_pack.py` to compile.
-28. **Post-Render QC**:
+29. **Post-Render QC**:
     - Run `scripts/validate_rendered_pdf.py` for the Practice PDF and use `references/post-render-pdf-qc.md` as the checklist for every exported PDF.
 
 ## Responsibilities for Cumulative Review Pack

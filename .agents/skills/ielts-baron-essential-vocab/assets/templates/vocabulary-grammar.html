@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabulary & Grammar — {{ model.unit.unit_name | default('IELTS Knowledge') }}</title>
+  <style>{{ print_css }}</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="lesson-header">
+    <div class="center-name">{{ model.center_name | default('IELTS Learning Center') }}</div>
+    <h1>Vocabulary & Grammar Knowledge</h1>
+    <div class="lesson-meta">
+      <span class="meta-item"><strong>Unit:</strong> {{ model.unit.unit_name | default('—') }}</span>
+      <span class="meta-item"><strong>Topic:</strong> {{ model.unit.topic | default('—') }}</span>
+      <span class="meta-item">
+        <span class="level-badge">CEFR {{ model.level.cefr | default('—') }}</span>
+        <span class="level-badge">IELTS {{ model.level.ielts_band_range | default('—') }}</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Academic Vocabulary -->
+  {% if model.vocabulary and model.vocabulary.academic %}
+  <h2>Academic Vocabulary</h2>
+  <table class="vocab-table">
+    <thead>
+      <tr>
+        <th>Word / Phrase</th>
+        <th>IPA</th>
+        <th>POS</th>
+        <th>Definition & Vietnamese</th>
+        <th>Example in Passage</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in model.vocabulary.academic %}
+      <tr>
+        <td><strong>{{ item.word }}</strong></td>
+        <td class="ipa">{{ item.ipa | default('—') }}</td>
+        <td>{{ item.pos | default('—') }}</td>
+        <td>
+          {{ item.definition | default('—') }}
+          {% if item.vietnamese %}<br><em>{{ item.vietnamese }}</em>{% endif %}
+          {% if item.content_class %}
+          <span class="content-label label-{{ item.content_class | lower | replace('_', '-') }}">{{ item.content_class }}</span>
+          {% endif %}
+        </td>
+        <td>
+          {% if item.example %}<em>"{{ item.example }}"</em>{% endif %}
+          {% if item.example_label %}<span class="content-label label-{{ item.example_label | lower | replace('_', '-') }}">{{ item.example_label }}</span>{% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  <!-- Compound Words -->
+  {% if model.vocabulary and model.vocabulary.compound_words %}
+  <h2>Compound Words</h2>
+  <table class="vocab-table">
+    <thead>
+      <tr><th>Compound</th><th>IPA</th><th>POS</th><th>Definition & Vietnamese</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      {% for item in model.vocabulary.compound_words %}
+      <tr>
+        <td><strong>{{ item.word }}</strong></td>
+        <td class="ipa">{{ item.ipa | default('—') }}</td>
+        <td>{{ item.pos | default('—') }}</td>
+        <td>{{ item.definition | default('—') }}{% if item.vietnamese %}<br><em>{{ item.vietnamese }}</em>{% endif %}
+          {% if item.content_class %}<span class="content-label label-{{ item.content_class | lower | replace('_', '-') }}">{{ item.content_class }}</span>{% endif %}
+        </td>
+        <td>{% if item.example %}<em>"{{ item.example }}"</em>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  <!-- Idioms -->
+  {% if model.vocabulary and model.vocabulary.idioms %}
+  <h2>Idioms & Phrasal Verbs</h2>
+  <table class="vocab-table">
+    <thead>
+      <tr><th>Expression</th><th>IPA</th><th>Type</th><th>Meaning & Vietnamese</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      {% for item in model.vocabulary.idioms %}
+      <tr>
+        <td><strong>{{ item.word }}</strong></td>
+        <td class="ipa">{{ item.ipa | default('—') }}</td>
+        <td>{{ item.pos | default('idiom') }}</td>
+        <td>{{ item.definition | default('—') }}{% if item.vietnamese %}<br><em>{{ item.vietnamese }}</em>{% endif %}
+          {% if item.content_class %}<span class="content-label label-{{ item.content_class | lower | replace('_', '-') }}">{{ item.content_class }}</span>{% endif %}
+        </td>
+        <td>{% if item.example %}<em>"{{ item.example }}"</em>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  <!-- Collocations -->
+  {% if model.vocabulary and model.vocabulary.collocations %}
+  <h2>Academic Collocations</h2>
+  <table class="vocab-table">
+    <thead>
+      <tr><th>Collocation</th><th>Definition & Vietnamese</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      {% for item in model.vocabulary.collocations %}
+      <tr>
+        <td><strong>{{ item.word }}</strong></td>
+        <td>{{ item.definition | default('—') }}{% if item.vietnamese %}<br><em>{{ item.vietnamese }}</em>{% endif %}</td>
+        <td>{% if item.example %}<em>"{{ item.example }}"</em>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  <!-- Grammar Detail -->
+  {% if model.grammar %}
+  <div class="page-break"></div>
+  <h2>Grammar Focus</h2>
+
+  {% for gp in model.grammar.points %}
+  <h3>{{ gp.name | default('Grammar Point') }}</h3>
+
+  {% if gp.formula %}
+  <div class="grammar-formula">{{ gp.formula }}</div>
+  {% endif %}
+
+  {% if gp.explanation %}
+  <p>{{ gp.explanation }}</p>
+  {% endif %}
+
+  {% if gp.source_example %}
+  <div class="evidence-quote">{{ gp.source_example }}</div>
+  {% endif %}
+
+  {% if gp.writing_application %}
+  <h4>Application in IELTS Writing Task 2</h4>
+  <p>{{ gp.writing_application }}</p>
+  {% endif %}
+  {% endfor %}
+
+  <!-- Tips & Tricks -->
+  {% if model.grammar.tips %}
+  <h3>Tips & Tricks</h3>
+  {% for tip in model.grammar.tips %}
+  <div class="tips-box">
+    <div class="tip-title">💡 Tip {{ loop.index }}</div>
+    <p>{{ tip }}</p>
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% endif %}
+
+  <!-- Learning Links -->
+  {% if model.learning_links %}
+  <h2>Learning Resources</h2>
+  <div class="learning-links">
+    {% for group in model.learning_links %}
+    <div class="link-group">
+      <div class="group-title">{{ group.source }}:</div>
+      <ul>
+        {% for link in group.links %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</body>
+</html>

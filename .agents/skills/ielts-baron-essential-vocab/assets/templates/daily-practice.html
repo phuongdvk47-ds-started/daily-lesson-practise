@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Practice — {{ model.unit.unit_name | default('IELTS Practice') }}</title>
+  <style>{{ print_css }}</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="lesson-header">
+    <div class="center-name">{{ model.center_name | default('IELTS Learning Center') }}</div>
+    <div class="daily-practice-title">DAILY PRACTICE</div>
+    <div class="lesson-meta">
+      <span class="meta-item"><strong>Unit:</strong> {{ model.unit.unit_name | default('—') }}</span>
+      <span class="meta-item"><strong>Topic:</strong> {{ model.unit.topic | default('—') }}</span>
+      <span class="meta-item">
+        <span class="level-badge">CEFR {{ model.level.cefr | default('—') }}</span>
+        <span class="level-badge">IELTS {{ model.level.ielts_band_range | default('—') }}</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Student Info -->
+  <div class="student-info">
+    <div class="field-line">
+      <span class="field-label">Student Name:</span>
+      <span class="field-value"></span>
+      <span class="field-label" style="margin-left: 16pt;">Date:</span>
+      <span class="field-value" style="max-width: 100pt;"></span>
+    </div>
+    <div class="field-line">
+      <span class="field-label">Time Allowed:</span>
+      <span class="field-value" style="max-width: 80pt;">{{ model.time_allowed | default('60 minutes') }}</span>
+    </div>
+  </div>
+
+  <!-- Reading Passage -->
+  <h2>Reading Passage</h2>
+  {% if model.reading_passage %}
+  <div class="reading-passage">
+    <h3>{{ model.reading_passage.title | default('') }}</h3>
+    {% for para in model.reading_passage.paragraphs %}
+    <p>
+      <span class="paragraph-label">{{ para.paragraph_id }}.</span>
+      {{ para.text }}
+    </p>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Source Images/Tables -->
+  {% if model.assets %}
+  {% for asset in model.assets %}
+  {% if asset.type == 'image' %}
+  <div class="source-figure">
+    <img src="{{ asset.path }}" alt="{{ asset.caption | default('Source figure') }}">
+    {% if asset.caption %}<div class="caption">{{ asset.caption }}</div>{% endif %}
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+
+  <!-- Questions -->
+  <div class="page-break"></div>
+  <h2>Questions</h2>
+  {% if model.questions %}
+  {% for q in model.questions %}
+  <div class="question-block">
+    <span class="question-number">{{ q.question_number | default(loop.index) }}.</span>
+    <span class="question-text">{{ q.text }}</span>
+
+    {% if q.options %}
+    <ul class="options-list">
+      {% for opt in q.options %}
+      <li><span class="option-label">{{ ['A', 'B', 'C', 'D'][loop.index0] }}.</span> {{ opt }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <div class="answer-space"></div>
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  <!-- Word Family Practice -->
+  {% if model.word_family %}
+  <div class="page-break"></div>
+  <h2>Word Family Practice</h2>
+  <div class="word-family-section">
+    {% for wf in model.word_family %}
+    <div class="word-family-item">
+      <strong>{{ wf.word }}</strong>
+      {% if wf.forms %}
+      <span style="color: #718096; font-size: 9.5pt;">
+        ({% for form in wf.forms %}{{ form.form }}{% if not loop.last %}, {% endif %}{% endfor %})
+      </span>
+      {% endif %}
+      <div class="answer-space"></div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</body>
+</html>

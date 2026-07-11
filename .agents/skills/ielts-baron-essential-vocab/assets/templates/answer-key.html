@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Answer Key — {{ model.unit.unit_name | default('IELTS Answers') }}</title>
+  <style>{{ print_css }}</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="lesson-header">
+    <div class="center-name">{{ model.center_name | default('IELTS Learning Center') }}</div>
+    <h1>Answer Key & Detailed Explanation</h1>
+    <div class="lesson-meta">
+      <span class="meta-item"><strong>Unit:</strong> {{ model.unit.unit_name | default('—') }}</span>
+      <span class="meta-item"><strong>Topic:</strong> {{ model.unit.topic | default('—') }}</span>
+      <span class="meta-item">
+        <span class="level-badge">CEFR {{ model.level.cefr | default('—') }}</span>
+        <span class="level-badge">IELTS {{ model.level.ielts_band_range | default('—') }}</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Quick Answer Key -->
+  {% if model.answers %}
+  <h2>Quick Answer Key</h2>
+  <div class="quick-answer-grid">
+    {% for ans in model.answers %}
+    <div class="quick-answer-item">
+      <strong>{{ ans.question_number | default(loop.index) }}.</strong> {{ ans.answer }}
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Detailed Breakdown -->
+  <div class="page-break"></div>
+  <h2>Detailed Breakdown</h2>
+
+  {% for ans in model.answers %}
+  <div class="detailed-answer">
+    <h4>Question {{ ans.question_number | default(loop.index) }}: {{ ans.answer }}</h4>
+
+    {% if ans.paragraph %}
+    <p><strong>Paragraph:</strong> {{ ans.paragraph }}</p>
+    {% endif %}
+
+    {% if ans.evidence %}
+    <div class="evidence-quote">{{ ans.evidence }}</div>
+    {% endif %}
+
+    {% if ans.reasoning %}
+    <p><strong>Reasoning:</strong> {{ ans.reasoning }}</p>
+    {% endif %}
+
+    {% if ans.distractor_analysis %}
+    <p><strong>Distractor Analysis:</strong></p>
+    <ul>
+      {% for d in ans.distractor_analysis %}
+      <li><strong>{{ d.option }}:</strong> {{ d.explanation }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if ans.paraphrase_matrix %}
+    <p><strong>Paraphrase Matrix:</strong></p>
+    <table>
+      <thead><tr><th>Source Text</th><th>Question Paraphrase</th></tr></thead>
+      <tbody>
+        {% for pm in ans.paraphrase_matrix %}
+        <tr><td>{{ pm.source }}</td><td>{{ pm.paraphrase }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+
+    {% if ans.confidence %}
+    <span class="confidence-badge {% if ans.confidence >= 0.9 %}confidence-high{% elif ans.confidence >= 0.7 %}confidence-medium{% else %}confidence-low{% endif %}">
+      Confidence: {{ (ans.confidence * 100) | round(0) }}%
+    </span>
+    {% endif %}
+
+    {% if ans.review_status %}
+    <span style="font-size: 8pt; color: #718096; margin-left: 6pt;">
+      [{{ ans.review_status }}]
+    </span>
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  <!-- Word Family Explanation -->
+  {% if model.word_family_answers %}
+  <div class="page-break"></div>
+  <h2>Word Family Explanation</h2>
+  {% for wf in model.word_family_answers %}
+  <div class="detailed-answer">
+    <h4>{{ wf.word }}</h4>
+    {% if wf.correct_form %}
+    <p><strong>Correct Form:</strong> {{ wf.correct_form }} ({{ wf.part_of_speech | default('—') }})</p>
+    {% endif %}
+    {% if wf.explanation %}
+    <p>{{ wf.explanation }}</p>
+    {% endif %}
+    {% if wf.rejected_forms %}
+    <p><strong>Why not other forms:</strong></p>
+    <ul>
+      {% for rf in wf.rejected_forms %}
+      <li><em>{{ rf.form }}</em> — {{ rf.reason }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pipeline-state.schema.json",
+  "title": "Pipeline State",
+  "description": "Tracks the state of every stage in a pipeline run.",
+  "type": "object",
+  "required": ["schema_version", "pipeline_id", "unique_source_id", "stages", "created_at", "updated_at"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "pipeline_id": { "type": "string" },
+    "unique_source_id": { "type": "string" },
+    "lession_id": { "type": ["string", "null"] },
+    "current_stage": { "type": ["string", "null"] },
+    "overall_status": {
+      "type": "string",
+      "enum": ["PENDING", "RUNNING", "COMPLETE", "FAILED", "BLOCKED", "WAITING_FOR_HUMAN"]
+    },
+    "stages": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["stage_name", "status"],
+        "properties": {
+          "stage_name": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["PENDING", "RUNNING", "COMPLETE", "FAILED", "BLOCKED", "WAITING_FOR_HUMAN", "STALE", "SKIPPED_FROM_CACHE"]
+          },
+          "input_checksum": { "type": "string" },
+          "output_checksum": { "type": "string" },
+          "stage_version": { "type": "string" },
+          "started_at": { "type": ["string", "null"], "format": "date-time" },
+          "completed_at": { "type": ["string", "null"], "format": "date-time" },
+          "retry_count": { "type": "integer", "minimum": 0 },
+          "error_code": { "type": ["string", "null"] },
+          "error_message": { "type": ["string", "null"] },
+          "artifacts": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "human_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["checkpoint", "decision", "timestamp", "actor"],
+        "properties": {
+          "checkpoint": { "type": "string" },
+          "decision": { "type": "string" },
+          "reason": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "actor": { "type": "string" }
+        }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  }
+}

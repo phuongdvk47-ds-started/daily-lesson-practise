@@ -20,8 +20,8 @@ Generate detailed answer keys, explanations, model writing answers, and cumulati
    - **Each Item**:
      - Correct Answer: `Câu X. [Đáp án chữ] — [Nội dung câu trả lời]`
      - Question Type: `*Loại câu hỏi: [Literal / Inference / Function / Vocab]*`
-     - Evidence Quote: `*Bằng chứng: "[Direct quote from passage]" (§[Paragraph number])*`
-     - Cognitive Logic: `**Cách tìm đáp án:** [Step-by-step reasoning in Vietnamese, explaining the logic from evidence to answer]. Answer explanations must teach the reasoning path, explicitly demonstrating the mapping from the passage wording to the paraphrased question/answer wording. For inference items, state the evidence pieces that must be connected.`
+     - Evidence Quote: `*Bằng chứng: "[Direct quote from passage]" (§[Paragraph label A/B/C/D])*`. **CRITICAL**: The quote MUST exist exactly in the text. DO NOT hallucinate evidence. If the text does not contain the exact quote, reject the answer.
+     - Cognitive Logic: `**Cách tìm đáp án:** [Step-by-step reasoning in Vietnamese, explaining the logic from evidence to answer]. Answer explanations must teach the reasoning path, explicitly demonstrating the mapping from the passage wording to the paraphrased question/answer wording. For inference items, state the evidence pieces that must be connected. If paragraph labels (A-D) are present in the passage, you MUST refer to them as 'Đoạn A', 'Đoạn B', etc., instead of 'Đoạn 1', 'Đoạn 2'.`
      - Why Others Wrong: `**Phân tích nhiễu:** [Explain exactly why each incorrect option is wrong, identifying if it's a keyword trap].`
      - Depth Check: `**Đánh giá chiều sâu:** [Briefly explain how this question meets the Deep Reading standard for its level].`
      - Tip: `> **💡 Mẹo:** [Helpful test tip in Vietnamese]`
@@ -47,13 +47,7 @@ Generate detailed answer keys, explanations, model writing answers, and cumulati
 7. **Review Bridge Section**:
    - Add `IV. Review Bridge / Ôn tập liên chủ đề` at the end containing exactly 3 translation or sentence completion items reinforcing recycled vocabulary, complete with correct answers and Vietnamese explanations.
 
-## Barron-style Optional Answer Keys
 
-Use this only when the lesson payload contains the corresponding optional sections.
-
-- For `vocabulary.matching_test`, create `answers.vocabulary_matching_answers`. Each item must include `item_id`, `term`, `correct_definition_label`, and `explanation_vi`. The label must match `vocabulary.matching_test.items[].correct_definition_label`.
-- For `vocabulary.word_family_practice`, create `answers.word_family_answers`. Each item must include `item_id`, `family`, `correct_answer`, and `explanation_vi`. The answer must match the practice item exactly.
-- Keep explanations concise, in Vietnamese, and focused on why the part of speech/meaning fits the sentence.
 
 ## Output JSON
 Return JSON only:
@@ -66,7 +60,7 @@ Return JSON only:
       "question_type": "inference",
       "evidence_quote": "Shopping online saves time and allows easy price comparison.",
       "evidence_paragraph": 2,
-      "explanation_vi": "Đoạn 2 chỉ ra rằng việc mua sắm trực tuyến giúp tiết kiệm thời gian và so sánh giá.",
+      "explanation_vi": "Đoạn B (hoặc đoạn 2) chỉ ra rằng việc mua sắm trực tuyến giúp tiết kiệm thời gian và so sánh giá.",
       "why_others_wrong_vi": "Lựa chọn B sai vì bài đọc không đề cập đến việc giảm chi phí vận chuyển. Lựa chọn C là bẫy từ vựng 'efficient'...",
       "depth_check_vi": "Câu hỏi này yêu cầu kỹ năng suy luận (inference) để hiểu nguyên nhân thay vì chỉ tìm từ khóa.",
       "tip_vi": "Khi làm câu hỏi trắc nghiệm, hãy tìm các từ đồng nghĩa như 'saves time' thay vì tìm từ khóa 'efficient'.",

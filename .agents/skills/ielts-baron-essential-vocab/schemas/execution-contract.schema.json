@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "execution-contract.schema.json",
+  "title": "Sub-Agent Execution Contract",
+  "description": "Contract declaring a sub-agent's responsibilities, I/O, engine preferences, and policies.",
+  "type": "object",
+  "required": [
+    "name", "purpose", "input_schema", "output_schema",
+    "execution_class", "preferred_engine"
+  ],
+  "properties": {
+    "name": { "type": "string" },
+    "purpose": { "type": "string" },
+    "input_schema": { "type": "string" },
+    "output_schema": { "type": "string" },
+    "execution_class": {
+      "type": "string",
+      "enum": ["DETERMINISTIC", "LOCAL_MODEL", "LOW_COST_LLM", "PREMIUM_LLM", "HUMAN_REQUIRED"]
+    },
+    "preferred_engine": { "type": "string" },
+    "fallback_engines": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "premium_llm_allowed": { "type": "boolean" },
+    "preconditions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "postconditions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "quality_thresholds": {
+      "type": "object",
+      "additionalProperties": { "type": "number" }
+    },
+    "retry_policy": {
+      "type": "object",
+      "properties": {
+        "max_retries": { "type": "integer", "minimum": 0 },
+        "backoff_strategy": { "type": "string", "enum": ["none", "linear", "exponential"] },
+        "retry_on": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "cache_policy": {
+      "type": "object",
+      "properties": {
+        "cacheable": { "type": "boolean" },
+        "cache_key_components": { "type": "array", "items": { "type": "string" } },
+        "ttl_seconds": { "type": ["integer", "null"] }
+      }
+    },
+    "error_codes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "human_review_conditions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "estimated_cost_class": {
+      "type": "string",
+      "enum": ["free", "low", "medium", "high"]
+    },
+    "token_budget": {
+      "type": "object",
+      "properties": {
+        "max_input_tokens": { "type": "integer" },
+        "max_output_tokens": { "type": "integer" }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "IELTS Barron Essential Vocab"
+  short_description: "Extract Barron PDF units into source-grounded IELTS practice booklets with vocabulary, grammar, answer keys, and A4 PDFs."
+  icon: "📖"
+  primary_color: "#7C3AED"

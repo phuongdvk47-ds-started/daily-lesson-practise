@@ -344,20 +344,3 @@ When compiling review packs, save the payload as a JSON file with these keys and
 3. **No Non-Standard Time Allowed**: Time Allowed must be rounded to a standard classroom value: `45, 60, 75, 90, 105, 120`. Do not print odd values like `111 mins`.
 4. **Vocabulary Section Title Division**: Instead of labeling everything as Academic Vocabulary, use section titles based on `vocab_type`: Core Words, Topic Vocabulary, Phrases, Chunks & Collocations, Recycled Vocabulary.
 
-## Barron-style Rendering Profile
-
-Use this only when the user requests Barron-style practice or `Practice Profile: barron_style`.
-
-Practice PDF additions:
-- Put `Vocabulary Matching Test` before Warm-up. Render it as a two-column Words vs Definitions table without answers.
-- In `Reading Passage`, print paragraph labels `A`, `B`, `C`, ... before each paragraph.
-- Reading Questions should start with `Paragraph Information Matching` items, usually Questions 1-4, asking learners to write paragraph letters.
-- Follow with `Summary Completion` items, usually Questions 5-8, using a summary paragraph and a visible `Word bank`.
-- Put `Word Family Practice` after Reading Questions and before Grammar. Render the cloze paragraph plus the option table; do not show answers.
-
-Vocabulary & Grammar PDF additions:
-- If `vocabulary.word_families` exists, render a `Word Families` table with Family, Word, Part of speech, and Example columns.
-
-Answers PDF additions:
-- If `answers.vocabulary_matching_answers` exists, render `Vocabulary Matching Answers`.
-- If `answers.word_family_answers` exists, render `Word Family Practice Answers`.

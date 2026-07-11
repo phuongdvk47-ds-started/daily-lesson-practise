@@ -176,11 +176,4 @@ Post-Render PDF QC passes only if:
 - Verify that writing tasks do not contain duplicate label headers (like `Word Ordering: Word Ordering:`).
 - Verify that Time Allowed matches the JSON and is a rounded standard value (45, 60, 75, 90, 105, 120).
 
-### 11. Barron-style Optional Sections
 
-When the lesson contains Barron-style fields, verify that the PDF renders:
-- `Vocabulary Matching Test` before Warm-up, including every word and definition label.
-- Reading paragraph labels `A`, `B`, `C`, ... before paragraph text.
-- Summary Completion text plus the visible `Word bank`.
-- `Word Family Practice` including the cloze text and option table.
-- Teacher answer PDF sections for Vocabulary Matching and Word Family Practice when answer data exists.

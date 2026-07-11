@@ -19,6 +19,11 @@ Generate grammar guides, IELTS common traps, and targeted grammar practice exerc
    - B2 and above: at least 50% of items must require discourse/context/register.
    - C1/C2: test nuance, stance, register, precision, cohesion, information structure, or rhetorical effect.
 4. **Context-Level and Writing Transfer**:
+   - **B1 Deep Grammar requirements**: Grammar B1 MUST test deeper contextual understanding, not just mechanical forms. Focus heavily on:
+     - Passive voice applied correctly based on tense and context.
+     - Contrast linkers (`whereas`, `while`, `in contrast`, `by contrast`, `however`) requiring logical context.
+     - Error correction in a paragraph or sentence.
+     - Sentence transformation that forces meaning preservation.
    - B1 and above: include context-level reasoning, error correction or transformation, grammar in short paragraph/context, and writing-transfer grammar when the requested count allows.
    - B2 and above: include paragraph editing, cohesion grammar, register-aware grammar, meaning contrast, and grammar choices affecting tone/precision.
    - C1/C2: include hedging, nominalisation, advanced modality, information structure, and stance/argument/diplomacy/precision control.
@@ -28,8 +33,9 @@ Generate grammar guides, IELTS common traps, and targeted grammar practice exerc
 6. **Common Mistakes & IELTS Traps Table**:
    - Provide a 4-column Markdown table: `| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |`.
    - **CRITICAL WARNING**: Do NOT put vocabulary items, IPAs, or word definitions in this table. It must contain actual grammatical traps (e.g. double comparatives, incorrect prepositions, incorrect subject-verb agreement, verb tense mistakes) and exam strategy pitfalls.
-7. **Meaning Preservation Rule**:
+7. **Meaning Preservation Rule (Sentence Transformation)**:
    - Transformation, rewrite, combine, and correction questions **must strictly preserve the original meaning**.
+   - Instructions must be clear and constrained enough so that they do not generate multiple opposite or overly broad answers.
    - Before finalizing each question, check: Does the expected answer keep the same meaning? Does the prompt provide enough context? Is there exactly one target structure? Is there exactly one expected answer or one narrow answer family?
 8. **Passive Voice Transformation Rules**:
    - Only require passive voice when the original prompt contains:
@@ -301,7 +307,7 @@ Explanation: `Change 'does not' to 'do not'.`
 Reason: The original sentence does not contain 'does not'.
 
 ## 4. One Error Only Rule
-Correct-the-error items must contain exactly one target grammatical error unless explicitly stated otherwise.
+Correct-the-error items must contain exactly one target main grammatical error unless explicitly stated otherwise. If there are multiple natural ways to correct this error, the Answer Key MUST list all acceptable alternatives so students aren't falsely marked wrong.
 Invalid:
 ```text
 Correct the errors: Students must to attends school early.
@@ -310,6 +316,7 @@ Valid:
 ```text
 Correct the error: Students must to attend school early.
 Answer: Students must attend school early.
+(Acceptable alternatives: "Students have to attend school early.")
 ```
 
 ## 5. Required Metadata

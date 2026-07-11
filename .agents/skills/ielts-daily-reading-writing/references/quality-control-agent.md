@@ -8,10 +8,16 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
 - `assembled_json`: the complete lesson payload containing `lesson_meta`, `source`, `reading`, `vocabulary`, `grammar`, `writing`, and `answers`.
 
 ## Validation Rules
-1. **Source Check**: Check that the source status is `verified` and publisher/URL are present. Wikipedia must not be preferred over higher-priority sources (universities, institutions, news, reputable educational entities).
-2. **Reading Evidence & Printed Passage Boundary QC**:
+1. **Source & Topic Consistency Check**: 
+   - Check that the source status is `verified` and publisher/URL are present. Wikipedia must not be preferred over higher-priority sources (universities, institutions, news, reputable educational entities).
+   - **CRITICAL**: The lesson title, filename, metadata, warm-up, reading passage, vocabulary, grammar, writing tasks, and answer key MUST all be on the exact same topic. If there is a topic mismatch (e.g., title is "City vs countryside" but content drifts to "targeted advertising"), raise a critical challenge (`topic_mismatch`) and force a regeneration.
+2. **Reading Passage Coherence & Anti-Mixing**:
+   - **CRITICAL**: Verify that the generated passage has clear, distinct paragraphs (A-D) with distinct functions.
+   - Post-check for duplicate phrases, copy-pasted sentences across paragraphs, or abnormal lowercase sentence starts (e.g., "some consumer...").
+   - If the passage is noisy, mixed, or repeats the same evidence across paragraphs, raise a critical challenge (`mixed_passage`) and force regeneration before checking questions.
+2.1 **Reading Evidence & Printed Passage Boundary QC**:
    - Verify that the number of reading questions matches `reading_question_count` exactly.
-   - **CRITICAL**: Verify that every reading question answer's `evidence_quote` exists *verbatim* inside the reading passage paragraphs.
+   - **CRITICAL**: Validate that all `evidence_quote` strings in the answer key exist *verbatim* (or clearly paraphrased) inside the generated printed passage text. Reject invented/hallucinated evidence completely. Raise a critical challenge (`hallucinated_evidence`) if quotes do not exist.
    - **CRITICAL**: Verify that no reading question asks about facts/information omitted from the printed passage. Raise a critical challenge (`missing_evidence`) if any question references outside or omitted source information.
    - Verify that all reading questions have exactly one correct answer.
    - **CRITICAL**: Verify that all reading questions follow the sequence of information in the passage within each question type group (non-decreasing `evidence_paragraph` indices). Raise a critical challenge (`reading_order_violation`) if any question targets a paragraph before the previous question's paragraph within the same type group.
@@ -72,16 +78,7 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
 10. **JSON Schema Check**:
     - Verify that the payload structure aligns 100% with the schema in `references/output-schema.md`.
 
-## Barron-style Optional QC
 
-Apply these checks when `Practice Profile: barron_style` is requested or any optional Barron-style field is present.
-
-- Paragraph labels: if any reading paragraph has `label`, every paragraph must have one, and labels must be contiguous `A`, `B`, `C`, ...
-- Paragraph Information Matching: answers must be valid paragraph labels; `evidence_paragraph` must still point to the numeric paragraph id; `evidence_quote` must remain verbatim from the printed passage.
-- Summary Completion: `reading.summary_completion.word_bank` must exist; every Summary Completion answer must appear in the word bank; `summary_text` must contain a placeholder for every summary item.
-- Vocabulary Matching Test: every item must have one `correct_definition_label` that exists in the definitions list; definitions must be unique and not ambiguous.
-- Word Family Practice: every item must have at least two options and exactly one correct option; the correct answer must fit both grammar and meaning.
-- Answer keys: `answers.vocabulary_matching_answers` and `answers.word_family_answers` must exist when the corresponding practice sections exist and must match the source item answers exactly.
 
 ## Render-Aware & Post-Render PDF QC Rules
 QC must also require Post-Render PDF QC. Raise a critical/high challenge if:
@@ -120,13 +117,22 @@ Return JSON only:
 }
 ```
 
-## QC Pass Rule
+## QC Pass Rule & Fail-Fast
 QC may pass only when:
 - all critical issues are resolved
 - all high issues are resolved
 - medium issues are either resolved or explicitly accepted by user (or fixed by adjusting workload/time)
 - PDF readiness is confirmed
 - `lesson_source.json` schema is valid
+
+**FAIL-FAST**: If there are ANY of the following errors, the Skill MUST NOT publish the final PDF and must force a regeneration:
+- Wrong answer key
+- Questions with multiple unintended correct answers
+- Evidence does not exist in the passage
+- Passage is mixed, noisy, or contains copy-pasted duplicates
+- Topic/Title mismatch
+- Correct-the-error item does not contain a real error, or the correction is identical to the original
+- Explanation describes a non-existent error
 
 ## Human Escalation
 Set `human_review_required: true` when:

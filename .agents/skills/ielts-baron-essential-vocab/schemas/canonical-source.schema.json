@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "canonical-source.schema.json",
+  "title": "Canonical Source Model",
+  "description": "Structured representation of a single unit extracted from source PDF. Created by Agent 06.",
+  "type": "object",
+  "required": ["schema_version", "unique_source_id", "unit", "reading_passage", "questions"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "unique_source_id": { "type": "string" },
+    "unit": {
+      "type": "object",
+      "required": ["unit_id", "unit_name", "page_range"],
+      "properties": {
+        "unit_id": { "type": "string" },
+        "unit_name": { "type": "string" },
+        "topic": { "type": "string" },
+        "page_range": {
+          "type": "array",
+          "items": { "type": "integer" },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    },
+    "reading_passage": {
+      "type": "object",
+      "required": ["title", "paragraphs"],
+      "properties": {
+        "title": { "type": "string" },
+        "paragraphs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["paragraph_id", "text", "source_refs"],
+            "properties": {
+              "paragraph_id": { "type": "string" },
+              "text": { "type": "string" },
+              "source_refs": {
+                "type": "array",
+                "items": { "$ref": "#/$defs/source_ref" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question_id", "question_type", "text", "source_refs"],
+        "properties": {
+          "question_id": { "type": "string" },
+          "question_number": { "type": "integer" },
+          "question_type": {
+            "type": "string",
+            "enum": [
+              "multiple_choice", "true_false_not_given",
+              "yes_no_not_given", "matching_headings",
+              "matching_information", "matching_features",
+              "sentence_completion", "summary_completion",
+              "note_completion", "table_completion",
+              "flow_chart_completion", "diagram_label",
+              "short_answer", "list_selection",
+              "word_family", "other"
+            ]
+          },
+          "text": { "type": "string" },
+          "options": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "source_refs": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/source_ref" }
+          }
+        }
+      }
+    },
+    "word_family": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["word", "forms"],
+        "properties": {
+          "word": { "type": "string" },
+          "forms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "form": { "type": "string" },
+                "part_of_speech": { "type": "string" }
+              }
+            }
+          },
+          "source_refs": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/source_ref" }
+          }
+        }
+      }
+    },
+    "core_vocabulary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["word"],
+        "properties": {
+          "word": { "type": "string" },
+          "part_of_speech": { "type": "string" },
+          "definition": { "type": "string" },
+          "source_refs": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/source_ref" }
+          }
+        }
+      }
+    },
+    "answer_key_source": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question_id", "answer"],
+        "properties": {
+          "question_id": { "type": "string" },
+          "answer": { "type": "string" },
+          "source_refs": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/source_ref" }
+          }
+        }
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["asset_id", "type", "path"],
+        "properties": {
+          "asset_id": { "type": "string" },
+          "type": { "type": "string", "enum": ["image", "table", "chart", "diagram"] },
+          "path": { "type": "string" },
+          "page": { "type": "integer" },
+          "caption": { "type": "string" },
+          "source_refs": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/source_ref" }
+          }
+        }
+      }
+    },
+    "unresolved_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item_id", "type", "description", "severity"],
+        "properties": {
+          "item_id": { "type": "string" },
+          "type": { "type": "string" },
+          "description": { "type": "string" },
+          "severity": { "type": "string", "enum": ["low", "medium", "high", "critical"] },
+          "suggested_action": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "source_ref": {
+      "type": "object",
+      "required": ["source_id", "page"],
+      "properties": {
+        "source_id": { "type": "string" },
+        "page": { "type": "integer" },
+        "block_id": { "type": "string" },
+        "paragraph_id": { "type": "string" },
+        "extraction_method": {
+          "type": "string",
+          "enum": ["native_text", "ocr", "table_parser", "image_extract"]
+        },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    }
+  }
+}

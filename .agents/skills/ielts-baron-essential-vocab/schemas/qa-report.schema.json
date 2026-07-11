@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "qa-report.schema.json",
+  "title": "QA Report",
+  "description": "Content QA and Visual PDF QA report schema.",
+  "type": "object",
+  "required": ["schema_version", "report_type", "lession_id", "status", "checks", "created_at"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "report_type": {
+      "type": "string",
+      "enum": ["content_qa", "visual_pdf_qa"]
+    },
+    "lession_id": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["PASS", "FAIL", "WARN"]
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["check_id", "check_name", "status"],
+        "properties": {
+          "check_id": { "type": "string" },
+          "check_name": { "type": "string" },
+          "category": {
+            "type": "string",
+            "enum": [
+              "reading_completeness", "question_integrity", "answer_leakage",
+              "answer_key_match", "source_refs", "enriched_labeling",
+              "level_evidence", "asset_preservation", "lesson_id",
+              "unresolved_items", "page_size", "text_overflow",
+              "table_overflow", "image_aspect", "blank_page",
+              "large_whitespace", "heading_orphan", "footer_correctness",
+              "page_numbering", "ipa_rendering", "vietnamese_rendering",
+              "asset_presence"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["PASS", "FAIL", "WARN", "SKIP"]
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["info", "low", "medium", "high", "critical"]
+          },
+          "message": { "type": "string" },
+          "details": {},
+          "page": { "type": ["integer", "null"] }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "total_checks": { "type": "integer" },
+        "passed": { "type": "integer" },
+        "failed": { "type": "integer" },
+        "warnings": { "type": "integer" },
+        "skipped": { "type": "integer" }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

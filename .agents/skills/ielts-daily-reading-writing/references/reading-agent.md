@@ -12,9 +12,11 @@ Generate the final reading passage and IELTS-style reading questions based *only
 
 ## Rules
 1. **No Web Search**: Work only from the verified source excerpt.
-2. **Text Construction**:
+2. **Text Construction & Passage Coherence**:
    - Construct a passage matching the level's length target: A1 (120-180w), A2 (180-260w), B1 (300-450w), B2 (550-750w), C1 (750-950w), C2 (900-1100w).
-   - Divide the passage into structured paragraphs with IDs starting from 1.
+   - Divide the passage into structured paragraphs with IDs starting from 1. 
+   - **CRITICAL**: Paragraphs MUST have distinct functions and clear boundaries. Do NOT mix or copy-paste the exact same idea/sentence across multiple paragraphs, as this destroys Paragraph Matching question logic.
+   - Avoid abnormal capitalization (e.g. starting sentences with lowercase letters like "some consumer...").
 3. **Printed Passage Boundary Rule (Anti-Hallucination)**:
    - **Reading questions must be answerable only from the final printed reading passage.**
    - Do not ask about facts that exist only in the original source but are omitted from the adapted printed passage.
@@ -35,10 +37,15 @@ Generate the final reading passage and IELTS-style reading questions based *only
    - Each option must include `distractor_analysis`, including whether it is a keyword trap.
    - **At least 30%** of distractors (incorrect options) must be plausible keyword traps (a keyword trap uses passage wording but is logically wrong).
    - Avoid copying key phrases from the passage directly into the question stem unless targeting literal scanning questions suitable for lower levels.
-   - Gap-fill items must require contextual understanding, grammar fit, paraphrase, or reference resolution; they must not simply ask learners to copy exact words from the passage.
-   - For B1 and above, include inference, main idea/purpose, reference or vocabulary-in-context, and cause-effect/contrast/reason/result/implication items.
+   - **T/F/NG Strict Logic**:
+     - TRUE: The statement is explicitly supported by the text (direct wording or clear paraphrase).
+     - FALSE: The statement directly contradicts information in the text.
+     - NOT GIVEN: The text does not provide enough information to confirm or deny the statement. Do not use outside knowledge.
+   - Gap-fill and Summary Completion items must require contextual understanding and must form grammatically correct and meaningful sentences when completed.
+   - **B1 Deep Reading Requirements**: For B1, the reading set MUST contain a mix of literal evidence, paraphrase, light inference, and simple writer purpose/implication. It must NOT be pure keyword scanning. However, all questions MUST still be answerable strictly from the printed passage. Do not invent overly academic inferences requiring outside knowledge.
    - For B2 and above, include paragraph function, author stance/attitude, and multi-evidence inference when the question count allows.
    - For C1/C2, include nuance, implication, rhetorical purpose, assumptions, and claim/evidence/limitation/concession analysis when supported by the source.
+   - **Paragraph Referencing**: If referring to a specific paragraph in a question (e.g., "According to paragraph X"), you MUST use the paragraph letter (A, B, C, D) if labels are used, rather than numerical references (e.g. "paragraph 2"), to ensure consistency.
 6. **Band-Bridge**: Mark 10-20% of questions as stretch questions targeting the next level with a `(*)` label, and set `"stretch": true` in JSON.
 7. **Sequential Order Rule**:
    - Reading questions must follow the sequence of information in the passage within each question type group (e.g., all True/False/Not Given questions are sequential, all Gap Fill questions are sequential, etc.).
@@ -97,49 +104,4 @@ Return JSON only:
 ## Self-Regeneration Gate
 Before returning JSON, apply `references/regeneration-quality-gates.md`. Regenerate only the failed Reading item(s) or Reading section if any gate fails.
 
-## Barron-style Optional Reading Profile
 
-Use this only when the input includes `Practice Profile: barron_style` or the user explicitly asks for Barron-style practice.
-
-Additional rules:
-- Add `label` to every paragraph in `passage.paragraphs`, starting at `A` and continuing contiguously.
-- Reserve the first reading question group for `Paragraph Information Matching` when the requested count allows it. For a Barron-style 8-question set, use Questions 1-4 for paragraph information/gist matching.
-- For each paragraph matching item, `correct_answer` must be a paragraph label (`A`, `B`, `C`, ...), while `evidence_paragraph` remains the numeric paragraph id.
-- Add `reading.summary_completion` when using Summary Completion questions. For a Barron-style 8-question set, use Questions 5-8 for this type.
-- `reading.summary_completion.summary_text` must contain placeholders such as `{5}` or `[[5]]`; every Summary Completion question must have a matching placeholder.
-- `reading.summary_completion.word_bank` must include all correct answers plus plausible distractors, and each Summary Completion `correct_answer` must appear exactly as a word-bank item.
-
-Minimal JSON shape:
-```json
-{
-  "passage": {
-    "title": "Environmental Impacts of Logging",
-    "paragraphs": [
-      { "id": 1, "label": "A", "text": "..." },
-      { "id": 2, "label": "B", "text": "..." }
-    ]
-  },
-  "summary_completion": {
-    "instruction": "Complete the summary using words from the list below.",
-    "summary_text": "Logging can damage {5} and reduce {6}.",
-    "word_bank": ["habitats", "biodiversity", "profits", "machinery"]
-  },
-  "questions": [
-    {
-      "id": 1,
-      "type": "Paragraph Information Matching",
-      "question": "A paragraph describing the main environmental risk",
-      "correct_answer": "A",
-      "evidence_paragraph": 1,
-      "evidence_paragraph_label": "A"
-    },
-    {
-      "id": 5,
-      "type": "Summary Completion",
-      "question": "Blank 5",
-      "correct_answer": "habitats",
-      "evidence_paragraph": 1
-    }
-  ]
-}
-```

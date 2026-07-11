@@ -17,7 +17,6 @@ Accept these parameters when provided:
 - `Number of Vocabulary Words`: default `20`.
 - `Number of Grammar Questions`: default `30`.
 - `Number of Writing Practice`: default `5`.
-- Optional `Practice Profile`: use `barron_style` when the user asks for Barron-style vocabulary/reading practice. This profile adds a Vocabulary Matching Test, paragraph-labelled reading, paragraph information matching, summary completion, and Word Family Practice.
 - Optional prior history: previous daily topics, learner errors, weak skills, or past outputs.
 - Optional cumulative review request.
 
@@ -83,8 +82,6 @@ To prevent rendering omissions, alignment mismatches, and parsing failures durin
 - **Writing Level Header Injection**: The structured JSON converter (`convert_json_to_markdown_fields`) must write the `Reading: {level}` and `Writing: {w_level}` lines at the very beginning of `practice_markdown` so that the compiler correctly parses and renders the Writing level in the Practice sheet header instead of defaulting to `A1`.
 - **Dynamic Vocabulary Table Numbering**: The compiler must dynamically index the vocabulary tables (Core, Topic, Phrases/Collocations, and Recycled) in the Materials sheet to prevent sequence gaps (such as skipping Table 2.2) when a table is empty.
 - **Review Bridge Rendering**: The compiler must include `"review bridge"` in the major section heading keywords to split it correctly. In student sheets, it must render the Review Bridge prompts with writing lines while completely hiding answers and explanations. In the teacher Answer Key, it must render the prompts along with their correct answers and explanations.
-- **Barron-style Optional Sections**: When `Practice Profile` is `barron_style`, the structured JSON may include `vocabulary.matching_test`, `reading.passage.paragraphs[].label`, `reading.summary_completion`, `vocabulary.word_families`, and `vocabulary.word_family_practice`. The compiler and validators must render and validate those sections without requiring them for ordinary lessons.
-
 
 
 ## Human-in-the-loop and Agent Review Loop

@@ -644,32 +644,3 @@ This document defines the JSON structure of `lesson_source.json`, which is the S
 }
 ```
 
-## Barron-style Optional Extension
-
-When `lesson_meta.practice_profile` or the user request indicates `barron_style`, the payload may add these optional fields. They are optional for ordinary daily packs, but if present they must be internally complete.
-
-### Reading
-
-- `reading.passage.paragraphs[].label`: uppercase paragraph label beginning with `A` and continuing contiguously (`A`, `B`, `C`, ...). If one paragraph has a label, every paragraph must have one.
-- `reading.summary_completion`:
-  - `instruction`: student instruction, usually "Complete the summary using words from the list below."
-  - `summary_text`: summary paragraph with placeholders such as `{5}` or `[[5]]`.
-  - `word_bank`: list of answer words plus plausible distractors.
-- Reading questions may include type `Paragraph Information Matching` for paragraph-label answers and `Summary Completion` for summary blanks. Paragraph matching answers must be paragraph labels; summary completion answers must appear in `reading.summary_completion.word_bank`.
-
-### Vocabulary
-
-- `vocabulary.matching_test`:
-  - `instruction`
-  - `items`: objects with `id`, `term`, and `correct_definition_label`
-  - `definitions`: objects with `label`, `part_of_speech`, and `definition`
-- `vocabulary.word_families`: array of families, each with `family` and `members`; each member has `word`, `part_of_speech`, and `example`.
-- `vocabulary.word_family_practice`:
-  - `instruction`
-  - `practice_text`: cloze paragraph with placeholders such as `{1}` or `[[1]]`
-  - `items`: objects with `id`, `family`, `options`, `correct_answer`, and `explanation_vi`.
-
-### Answers
-
-- `answers.vocabulary_matching_answers`: one item for each `vocabulary.matching_test.items[]`, with `item_id`, `term`, `correct_definition_label`, and `explanation_vi`.
-- `answers.word_family_answers`: one item for each `vocabulary.word_family_practice.items[]`, with `item_id`, `family`, `correct_answer`, and `explanation_vi`.

@@ -43,15 +43,15 @@ def validate_rendered_pdf(json_path: Path, pdf_path: Path) -> list[str]:
     pdf_norm = " ".join(pdf_text.split())
 
     vocabulary = data.get("vocabulary", {})
-    matching_test = vocabulary.get("matching_test", {})
-    if matching_test:
-        if "Vocabulary Matching Test" not in pdf_norm:
+    vocab_test = data.get("vocabulary", {}).get("matching_test")
+    if vocab_test:
+        if "vocabulary matching test" not in pdf_norm.lower():
             errors.append("Vocabulary Matching Test section missing in rendered PDF.")
-        for item in matching_test.get("items", []):
+        for item in vocab_test.get("items", []):
             term = " ".join(str(item.get("term", "")).split())
             if term and term not in pdf_norm:
                 errors.append(f"Vocabulary matching term missing in rendered PDF: '{term}'")
-        for definition in matching_test.get("definitions", []):
+        for definition in vocab_test.get("definitions", []):
             label = str(definition.get("label", "")).strip()
             definition_text = " ".join(str(definition.get("definition", "")).split())
             if label and f"{label}." not in pdf_norm:
@@ -75,11 +75,11 @@ def validate_rendered_pdf(json_path: Path, pdf_path: Path) -> list[str]:
             if word_clean and word_clean not in pdf_norm:
                 errors.append(f"Summary Completion word bank item missing in rendered PDF: '{word_clean}'")
 
-    word_family_practice = vocabulary.get("word_family_practice", {})
-    if word_family_practice:
-        if "Word Family Practice" not in pdf_norm:
+    word_family = data.get("vocabulary", {}).get("word_family_practice")
+    if word_family:
+        if "word family practice" not in pdf_norm.lower():
             errors.append("Word Family Practice section missing in rendered PDF.")
-        for item in word_family_practice.get("items", []):
+        for item in word_family.get("items", []):
             for option in item.get("options", []):
                 option_clean = " ".join(str(option).split())
                 if option_clean and option_clean not in pdf_norm:
