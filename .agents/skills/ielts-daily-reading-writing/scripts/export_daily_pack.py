@@ -15,7 +15,7 @@ from playwright.sync_api import sync_playwright
 
 def safe_filename_part(value: str) -> str:
     value = re.sub(r"^Day\s+", "", str(value).strip(), flags=re.I)
-    value = re.sub(r"[^\w\s.-]+", "", value, flags=re.UNICODE)
+    value = re.sub(r"[^\w\s.+\-]+", "", value, flags=re.UNICODE)
     value = re.sub(r"\s+", "-", value.strip())
     value = re.sub(r"-+", "-", value)
     return value or "Daily-Pack"
@@ -544,8 +544,12 @@ def generate_grammar_questions_html(sections: dict[str, str], offset: int = 13) 
                     display_title = "Multiple Choice Questions"
                 elif "error correction" in display_title.lower():
                     display_title = "Error Correction"
+                    if not adjusted_instruction.strip():
+                        adjusted_instruction = "Correct the single grammatical error in each of the following sentences."
                 elif "sentence transformation" in display_title.lower():
                     display_title = "Sentence Transformation and Combining"
+                    if not adjusted_instruction.strip():
+                        adjusted_instruction = "Combine or rewrite the sentences as instructed."
                 
                 if adjusted_instruction.strip():
                     adjusted_instruction = f"{prefix}{display_title} - {adjusted_instruction.strip()}"
@@ -1895,6 +1899,9 @@ def render_review_bridge(md_text: str, is_answer: bool = False) -> str:
             # Don't wrap headings in <p> tags
             # Strip markdown hashes
             clean_heading = re.sub(r'^#+\s*', '', line_str).strip()
+            # Skip the duplicate Review Bridge header
+            if "review bridge" in clean_heading.lower():
+                continue
             # If it's V. in practice sheet but we want IV. in answer key, let's keep what's in the markdown
             html_parts.append(f'<div class="question-instruction" style="margin-top: 15px; font-size: 11.5pt;">{clean_heading}</div>')
         else:
@@ -2670,6 +2677,56 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
     
     return converted
 
+def append_to_history(data: dict) -> None:
+    try:
+        level = str(data.get("level", "A2"))
+        day = str(data.get("day", ""))
+        day_part = re.sub(r"^Day\s+", "", day.strip(), flags=re.I)
+        meta = data.get("lesson_meta", {})
+        topic = meta.get("topic", data.get("topic", ""))
+        specific_topic = meta.get("specific_topic", "")
+        if specific_topic:
+            # Format to Title Case if it seems fully lowercase
+            words = specific_topic.split()
+            lower_words = {"in", "on", "at", "for", "to", "and", "but", "or", "the", "a", "an", "with", "against", "of"}
+            title_words = [
+                w.capitalize() if idx == 0 or w.lower() not in lower_words else w.lower()
+                for idx, w in enumerate(words)
+            ]
+            source_title = " ".join(title_words)
+        else:
+            source_title = data.get("source", {}).get("source_title") or meta.get("theme", "") or topic
+        
+        if not day_part or not level:
+            return
+            
+        history_path = Path("outputs/ielts-daily-reading-writing/lesson_history.txt")
+        history_path.parent.mkdir(parents=True, exist_ok=True)
+        
+        new_entry = f"{level} | {day_part} | {topic} | {source_title}"
+        
+        existing_content = ""
+        if history_path.exists():
+            existing_content = history_path.read_text(encoding="utf-8")
+            
+        # Check if this exact day and level already exists in the history to avoid duplicate entries
+        duplicate = False
+        for line in existing_content.splitlines():
+            parts = [p.strip() for p in line.split("|")]
+            if len(parts) >= 2 and parts[0] == level and parts[1] == day_part:
+                duplicate = True
+                break
+                
+        if not duplicate:
+            # Ensure trailing newline in existing content
+            if existing_content and not existing_content.endswith("\n"):
+                existing_content += "\n"
+            existing_content += new_entry + "\n"
+            history_path.write_text(existing_content, encoding="utf-8")
+            print(f"Logged lesson history entry: {new_entry}")
+    except Exception as e:
+        print(f"WARNING: Could not update lesson history: {e}", file=sys.stderr)
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("json_file", help="Daily pack JSON file")
@@ -2888,6 +2945,8 @@ def main() -> None:
             sys.exit(1)
         else:
             print("Post-Render PDF Quality Control PASSED successfully!")
+
+    append_to_history(data)
 
     quizlet_md_content = generate_quizlet_markdown(vocab_items)
     quizlet_txt_content = generate_quizlet_text(vocab_items)

@@ -21,7 +21,7 @@ if sys.stdout.encoding != 'utf-8':
 
 def safe_filename_part(value: str) -> str:
     value = re.sub(r"^Day\s+", "", str(value).strip(), flags=re.I)
-    value = re.sub(r"[^\w\s.-]+", "", value, flags=re.UNICODE)
+    value = re.sub(r"[^\w\s.+\-]+", "", value, flags=re.UNICODE)
     value = re.sub(r"\s+", "-", value.strip())
     value = re.sub(r"-+", "-", value)
     return value or "Review-Pack"

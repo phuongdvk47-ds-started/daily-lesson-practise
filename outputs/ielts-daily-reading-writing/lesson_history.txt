@@ -25,4 +25,6 @@ B1 | 20260708 | Advertising aimed at young consumers | Stealth marketing and dat
 B1 | 20260710 | Sportsmanship and teamwork | The Role of Teamwork and Sportsmanship in Sports
 A2 | 20260710 | Booking hotels and simple travel arrangements | Learning English for a Hotel Job
 A2 | 20260713 | Leisure activities, hobbies, sports clubs | Leisure Activities and Sports Clubs
-
+B1 | 20260713 | Smart Home Technology and Smart Appliances | Understanding Smart Home Technology: Benefits and Environmental Impact
+B1 | 20260715 | Community projects, volunteering, local club meetings | The Benefits of Volunteering for Older Adults
+A2+ | 20260715 | Community projects, volunteering, local club meetings | The Benefits of Volunteering for Older Adults

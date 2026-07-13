@@ -72,7 +72,15 @@ class TestIELTSRegression20260706(unittest.TestCase):
                 "rationale_vi": "Đoạn 1 nêu rõ dự án giúp cải thiện luồng giao thông.",
                 "reasoning_skill": "paraphrase",
                 "source_scope": "printed_passage_only",
-                "stretch": False
+                "stretch": False,
+                "paraphrase_mapping": "improve traffic flow -> improve city traffic flow",
+                "keyword_overlap_check": "Checked",
+                "distractor_analysis": [
+                  {"option": "To improve traffic flow", "is_keyword_trap": False, "analysis": "Correct option"},
+                  {"option": "To sell maps", "is_keyword_trap": True, "analysis": "Distractor map"},
+                  {"option": "To track people", "is_keyword_trap": True, "analysis": "Distractor track"},
+                  {"option": "To build cars", "is_keyword_trap": False, "analysis": "Distractor cars"}
+                ]
               },
               {
                 "id": 2,
@@ -85,7 +93,9 @@ class TestIELTSRegression20260706(unittest.TestCase):
                 "rationale_vi": "Đoạn 2 chỉ ra hệ thống đề xuất điều chỉnh tín hiệu.",
                 "reasoning_skill": "inference",
                 "source_scope": "printed_passage_only",
-                "stretch": False
+                "stretch": False,
+                "paraphrase_mapping": "traffic signal adjustments -> traffic signal adjustments",
+                "keyword_overlap_check": "Checked"
               }
             ]
           },

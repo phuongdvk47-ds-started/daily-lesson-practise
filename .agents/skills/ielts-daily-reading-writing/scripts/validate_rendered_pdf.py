@@ -200,7 +200,8 @@ def validate_rendered_pdf(json_path: Path, pdf_path: Path) -> list[str]:
         q_id = q.get("id")
         # Shift q_id to display ID (adding reading_count)
         display_id = q_id + len(reading_qs)
-        if q_raw.strip().lower().startswith(("correct the error", "correct the mistake", "error correction", "find and correct the error")):
+        q_type = str(q.get("type", "")).lower()
+        if "correct" in q_type or "error" in q_type or q_raw.strip().lower().startswith(("correct the error", "correct the mistake", "error correction", "find and correct the error")):
             expected_orig = re.sub(r'^(Correct the error|Correct the mistake|Error correction|Find and correct the error)\s*:\s*', '', q_raw, flags=re.IGNORECASE).strip()
             correct_ans = q.get("correct_answer", "")
             

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAILY PRACTICE: DAY 20260715 - COMMUNITY PROJECTS, VOLUNTEERING, LOCAL CLUB MEETINGS</title>
+    <style>
+        @page { 
+            size: A4; 
+            margin: 15mm 15mm 20mm 15mm; 
+        }
+        body { 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 11.5pt; 
+            line-height: 1.45; 
+            color: #1a1a1a; 
+            margin: 0; 
+            padding: 0;
+        }
+        .header { 
+            border-bottom: 2px double #2c3e50; 
+            padding-bottom: 8px; 
+            margin-bottom: 15px; 
+            text-align: center;
+        }
+        .header .center-name { 
+            font-size: 9.5pt; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            color: #7f8c8d; 
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .header h1 { 
+            font-size: 15pt; 
+            margin: 3px 0; 
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .header h2 { 
+            font-size: 11pt; 
+            margin: 3px 0; 
+            font-style: italic; 
+            color: #34495e;
+        }
+        .student-info { 
+            margin-top: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .section-title { 
+            font-size: 12pt; 
+            color: #2c3e50; 
+            border-left: 3px solid #27ae60; 
+            padding-left: 8px; 
+            margin-top: 18px; 
+            margin-bottom: 8px; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .passage-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .reading-text { 
+            text-align: justify; 
+            margin-bottom: 12px; 
+            text-indent: 25px;
+        }
+        .reading-text p {
+            margin: 0 0 6px 0;
+        }
+        .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }
+        .data-table th { 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }
+        .data-table td { 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }
+        .data-table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+        .svg-chart-container {
+            text-align: center;
+            margin: 10px 0;
+            page-break-inside: avoid;
+        }
+        .writing-line {
+            border-bottom: 1px dotted #bdc3c7;
+            height: 22px;
+            margin-top: 4px;
+            margin-bottom: 1px;
+            width: 98%;
+            page-break-inside: avoid;
+        }
+        .writing-prompt-text {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .writing-prompt-sub-item {
+            margin-top: 4px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .source-box { 
+            font-style: italic; 
+            font-size: 9pt; 
+            color: #7f8c8d; 
+            margin-bottom: 15px; 
+            padding: 6px 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #bdc3c7;
+        }
+        .source-box a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .question-instruction {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+        .question-group {
+            margin-bottom: 12px;
+        }
+        .question-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            text-indent: -20px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .question-options {
+            margin: 4px 0 4px 20px;
+            text-indent: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .question-options div {
+            margin-bottom: 2px;
+            box-sizing: border-box;
+            padding-right: 8px;
+        }
+        .options-4col div {
+            width: 25%;
+        }
+        .options-2col div {
+            width: 50%;
+        }
+        .options-1col div {
+            width: 100%;
+        }
+        .fill-blank {
+            display: inline-block;
+            width: 100px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        .grammar-item {
+            margin-bottom: 8px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .writing-box {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            background-color: #fafbfc;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            text-align: left;
+            page-break-inside: avoid;
+        }
+        .writing-item {
+            margin-bottom: 10px;
+        }
+        .warmup-box {
+            background-color: #fcfcfc;
+            border: 1px dashed #bdc3c7;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            font-size: 10pt;
+        }
+        .warmup-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="center-name">IELTS PREMIUM PREPARATION ACADEMY</div>
+        <h1>DAILY PRACTICE: DAY 20260715 - COMMUNITY PROJECTS, VOLUNTEERING, LOCAL CLUB MEETINGS</h1>
+        <h2>(Level: Reading A2+ | Grammar B1 | Writing A2 | Vocab A2+)</h2>
+        <div class="student-info">
+            <span>Student Name: ..............................................................</span>
+            <span>Time Allowed: 90 mins</span>
+        </div>
+    </div>
+
+    <!-- WARM-UP SECTION -->
+    <div class="section-title">Warm-up / Khởi động</div>
+    <div class="warmup-box">
+        <div class="warmup-title">Answer the following questions in English:</div>
+        1. Have you ever participated in any volunteer work or community projects in your local area?<br>
+        2. What do you think is the main benefit of volunteering for senior citizens in a community?<br>
+        3. In what ways can young volunteers help senior citizens in their neighborhood?
+    </div>
+
+    <!-- READING PASSAGE -->
+    <div class="section-title">I. Reading Passage</div>
+    <div class="passage-title">The Benefits of Volunteering for Older Adults</div>
+    
+    <div class="reading-text">
+        <p><b>Volunteering</b> in late life is a great way to help the <b>community</b>. A new study from UC Davis Health, which was presented at a conference in Amsterdam, shows that <b>volunteering</b> can also help older adults keep their brains <b>healthy</b>. Researchers studied 2,476 older people with an average age of 74. They found that older adults who volunteer have better <b>cognitive function</b>, especially <b>executive function</b> and verbal <b>episodic memory</b>. <b>Executive function</b> includes tasks like <b>planning</b>, focusing, and solving everyday problems in their leisure [R] time, without needing complex computer equipment [R]. Verbal <b>episodic memory</b> is the ability to remember lists of words or events.</p>
+        <p>The study is unique because the <b>participants</b> came from very <b>diverse</b> <b>backgrounds</b>. About 48% of the <b>participants</b> were Black, 20% were white, 17% were Asian, and 14% were Latino. Most earlier studies on brain health only looked at white populations. Rachel Whitmer, a professor at UC Davis, explained that <b>volunteerism</b> is important for cognitive aging in all <b>communities</b>. She encourages older adults of all <b>backgrounds</b> to consider <b>volunteering</b>. This activity can help their <b>neighborhoods</b> and also protect their own brain health.</p>
+        <p>The researchers also looked at whether <b>volunteering</b> could reduce [R] <b>cognitive decline</b> over 1.2 years. They found that people who volunteer several times per week had the highest levels of <b>executive function</b>. <b>Volunteering</b> might protect the brain because it offers cognitive <b>stimulation</b>, <b>social interaction</b>, and physical activity. Although more research is needed to prove if <b>volunteering</b> directly <b>prevents</b> <b>dementia</b>, the current findings show a positive relationship between <b>community</b> work and brain power.</p>
+    </div>
+
+    <div class="source-box">
+        Source: Adapted from <i>UC Davis Health</i> - "Volunteering in late life may protect the brain against cognitive decline and dementia" (2023-07-20)<br>
+        URL: <a href="https://health.ucdavis.edu/news/headlines/volunteering-in-late-life-may-protect-the-brain-against-cognitive-decline-and-dementia/2023/07" target="_blank">https://health.ucdavis.edu/news/headlines/volunteering-in-late-life-may-protect-the-brain-against-cognitive-decline-and-dementia/2023/07</a>
+    </div>
+
+    <!-- READING QUESTIONS -->
+    <div class="section-title">II. IELTS Reading Questions (13 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 1–6: </div>
+        <div class="question-item">
+            <span class="question-number">1.</span> In paragraph 1, the phrase 'cognitive function' is closest in meaning to
+            <div class="question-options options-2col">
+                <div>A. physical strength</div>
+                <div>B. mental ability</div>
+                <div>C. social relationship</div>
+                <div>D. daily routine</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">2.</span> According to paragraph 1, how old were the people in the study on average?
+            <div class="question-options options-4col">
+                <div>A. 48 years old</div>
+                <div>B. 74 years old</div>
+                <div>C. 20 years old</div>
+                <div>D. 14 years old</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">3.</span> Which of the following is an example of 'executive function' as described in paragraph 1? (*)
+            <div class="question-options options-1col">
+                <div>A. Remembering a list of random words.</div>
+                <div>B. Deciding which bus to take when traveling.</div>
+                <div>C. Cleaning up a local neighborhood park.</div>
+                <div>D. Buying new computer equipment.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">4.</span> According to paragraph 2, why was this study different from past research?
+            <div class="question-options options-1col">
+                <div>A. It studied older adults with an average age of 74.</div>
+                <div>B. It included participants from many different racial groups.</div>
+                <div>C. It was conducted by researchers in Amsterdam.</div>
+                <div>D. It focused only on non-Latino white people.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">5.</span> What is Rachel Whitmer's main purpose in paragraph 2?
+            <div class="question-options options-1col">
+                <div>A. To explain why older adults are under pressure.</div>
+                <div>B. To show that volunteering is good for everyone's brain health.</div>
+                <div>C. To compare Black and Latino participants.</div>
+                <div>D. To explain how to register for a local community project.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">6.</span> Based on paragraph 3, who had the best brain planning abilities?
+            <div class="question-options options-1col">
+                <div>A. People who volunteered once a month.</div>
+                <div>B. People who did volunteer work multiple times a week.</div>
+                <div>C. People who only participated in physical sports.</div>
+                <div>D. People who stopped volunteering after 1.2 years.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 7–10: </div>
+        <div style="margin-left: 20px; font-weight: bold; margin-bottom: 8px; font-size: 10pt;">
+            TRUE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement agrees with the information<br>
+            FALSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement contradicts the information<br>
+            NOT GIVEN &nbsp;&nbsp;&nbsp;&nbsp; if there is no information on this
+        </div>
+        <div class="question-item">
+            <span class="question-number">7.</span> The new study on volunteering was presented at a conference in Amsterdam.
+            <div class="question-options options-4col">
+                <div>A. TRUE</div>
+                <div>B. FALSE</div>
+                <div>C. NOT GIVEN</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">8.</span> Most previous studies on volunteering and brain health focused on white populations.
+            <div class="question-options options-4col">
+                <div>A. TRUE</div>
+                <div>B. FALSE</div>
+                <div>C. NOT GIVEN</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">9.</span> According to paragraph 3, volunteering can help decrease cognitive decline.
+            <div class="question-options options-4col">
+                <div>A. TRUE</div>
+                <div>B. FALSE</div>
+                <div>C. NOT GIVEN</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">10.</span> The researchers proved that volunteering completely prevents dementia. (*)
+            <div class="question-options options-4col">
+                <div>A. TRUE</div>
+                <div>B. FALSE</div>
+                <div>C. NOT GIVEN</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 11–13: </div>
+        <div class="question-item">
+            <span class="question-number">11.</span> According to paragraph 1, volunteering helps older adults maintain good (11) <span class="fill-blank">&nbsp;</span> function, which includes planning and focusing.
+        </div>
+        <div class="question-item">
+            <span class="question-number">12.</span> In terms of diversity, the study was unique because it included 48% Black participants and 14% (12) <span class="fill-blank">&nbsp;</span> participants.
+        </div>
+        <div class="question-item">
+            <span class="question-number">13.</span> Finally, researchers believe volunteering is beneficial because it offers mental stimulation, physical activity, and opportunities for (13) <span class="fill-blank">&nbsp;</span>.
+        </div>
+    </div>
+
+    <!-- GRAMMAR QUESTIONS -->
+    <div class="section-title">III. Questions for Grammar (30 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 14–27: Multiple Choice Questions</div>
+        <div class="question-item">
+            <span class="question-number">14.</span> The research team <span class="fill-blank">&nbsp;</span> (publish) a study about volunteering in 2023.
+            <div class="question-options options-4col">
+                <div>A. has published</div>
+                <div>B. published</div>
+                <div>C. publishes</div>
+                <div>D. publishing</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">15.</span> Since they started the project, the researchers <span class="fill-blank">&nbsp;</span> (collect) data from thousands of older adults.
+            <div class="question-options options-4col">
+                <div>A. collected</div>
+                <div>B. have collected</div>
+                <div>C. collect</div>
+                <div>D. are collecting</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">16.</span> Last weekend, many students <span class="fill-blank">&nbsp;</span> (volunteer) to clean up the local park.
+            <div class="question-options options-2col">
+                <div>A. volunteered</div>
+                <div>B. have volunteered</div>
+                <div>C. volunteer</div>
+                <div>D. volunteering</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">17.</span> So far this month, our club <span class="fill-blank">&nbsp;</span> (organize) three community meetings.
+            <div class="question-options options-4col">
+                <div>A. organized</div>
+                <div>B. has organized</div>
+                <div>C. organizes</div>
+                <div>D. organizing</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">18.</span> We met a senior citizen <span class="fill-blank">&nbsp;</span> volunteered at the library for ten years.
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. who</div>
+                <div>C. whose</div>
+                <div>D. whom</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">19.</span> The community center, <span class="fill-blank">&nbsp;</span> was built last year, offers many free classes.
+            <div class="question-options options-4col">
+                <div>A. who</div>
+                <div>B. which</div>
+                <div>C. where</div>
+                <div>D. that</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">20.</span> Mr. Adams is a retired teacher. He <span class="fill-blank">&nbsp;</span> a volunteer at the hospital since he retired.
+            <div class="question-options options-4col">
+                <div>A. was</div>
+                <div>B. has been</div>
+                <div>C. is</div>
+                <div>D. has had</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">21.</span> The Alzheimer's Association conference took place in Amsterdam. Many scientists <span class="fill-blank">&nbsp;</span> there to present their research.
+            <div class="question-options options-4col">
+                <div>A. went</div>
+                <div>B. have gone</div>
+                <div>C. go</div>
+                <div>D. were going</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">22.</span> We have two main volunteer programs. Identify the sentence that correctly uses a defining relative clause to specify one of them.
+            <div class="question-options options-1col">
+                <div>A. The program, which starts at 9 AM, is for cleaning the park.</div>
+                <div>B. The program which starts at 9 AM is for cleaning the park.</div>
+                <div>C. The program who starts at 9 AM is for cleaning the park.</div>
+                <div>D. The program which, starts at 9 AM, is for cleaning the park.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">23.</span> There is only one neighborhood park in our town. Add non-essential information about it using commas correctly.
+            <div class="question-options options-1col">
+                <div>A. The park, which has many old trees, is popular for sports.</div>
+                <div>B. The park which has many old trees is popular for sports.</div>
+                <div>C. The park who has many old trees is popular for sports.</div>
+                <div>D. The park, who has many old trees, is popular for sports.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">24.</span> I <span class="fill-blank">&nbsp;</span> (know) Sarah for five years. We first met at a volunteering event.
+            <div class="question-options options-4col">
+                <div>A. knew</div>
+                <div>B. have known</div>
+                <div>C. know</div>
+                <div>D. was knowing</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">25.</span> Yesterday, the coordinator <span class="fill-blank">&nbsp;</span> (call) to ask if I could help at the library.
+            <div class="question-options options-4col">
+                <div>A. has called</div>
+                <div>B. called</div>
+                <div>C. calls</div>
+                <div>D. calling</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">26.</span> The books, <span class="fill-blank">&nbsp;</span> were donated by local residents, are kept in the study room.
+            <div class="question-options options-4col">
+                <div>A. who</div>
+                <div>B. which</div>
+                <div>C. that</div>
+                <div>D. where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">27.</span> The students <span class="fill-blank">&nbsp;</span> participated in the clean-up received a certificate of appreciation.
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. who</div>
+                <div>C. whom</div>
+                <div>D. whose</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 28–33: Error Correction - Correct the single grammatical error in each of the following sentences.</div>
+        <div class="question-item">
+            <span class="question-number">28.</span> The UC Davis Health study, that was published in 2023, focused on older adults.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">29.</span> Researchers have completed the data collection last month.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">30.</span> I have joined the volunteer club in 2024.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">31.</span> The volunteer who bag is on the table is very helpful.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">32.</span> I lived in this city since I was ten years old.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">33.</span> The library, where we volunteer there, is very quiet.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 34–41: Sentence Transformation and Combining - Combine or rewrite the sentences as instructed.</div>
+        <div class="question-item">
+            <span class="question-number">34.</span> Combine the two sentences using a relative clause. Use 'who':<br>Sentence 1: Dr. Rachel Whitmer is a professor at UC Davis.<br>Sentence 2: She encourages older adults to volunteer.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">35.</span> Combine the two sentences using a relative clause. Use 'which':<br>Sentence 1: The researchers studied executive function.<br>Sentence 2: It includes planning and problem solving.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">36.</span> Combine the two sentences using 'since':<br>Sentence 1: I joined the community group.<br>Sentence 2: I made many new friends.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">37.</span> Combine the two sentences using a relative clause. Use 'where':<br>Sentence 1: This is the local school.<br>Sentence 2: We organize community meetings here.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">38.</span> Combine the two sentences using a relative clause. Use 'whose':<br>Sentence 1: We met a volunteer.<br>Sentence 2: His daughter works at the hospital.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">39.</span> Rewrite the sentence using the present perfect tense:<br>The study of older adults started in 2023 and is still continuing.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">40.</span> Rewrite the sentence using a relative clause. Use 'which':<br>Volunteering offers social interaction, and this is good for the brain.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">41.</span> Rewrite the sentence using the past simple tense:<br>I have volunteered at the school library in the past, but I don't volunteer there now.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 42–43: Multiple Choice Questions</div>
+        <div class="question-item">
+            <span class="question-number">42.</span> Identify the sentence that uses a reduced relative clause correctly. (*)
+            <div class="question-options options-1col">
+                <div>A. The participants studied by researchers showed better brain health.</div>
+                <div>B. The participants studying by researchers showed better brain health.</div>
+                <div>C. The participants who studied by researchers showed better brain health.</div>
+                <div>D. The participants studied researchers showed better brain health.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">43.</span> Complete the sentence using the correct linker for contrast: <span class="fill-blank">&nbsp;</span> volunteering is a low-cost activity, it provides high cognitive benefits. (*)
+            <div class="question-options options-4col">
+                <div>A. While</div>
+                <div>B. Despite</div>
+                <div>C. In spite of</div>
+                <div>D. However</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WRITING QUESTIONS -->
+    <div class="section-title">IV. Questions for Writing (5 tasks)</div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 1:  Word Ordering (Sắp xếp từ thành câu hoàn chỉnh)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Sắp xếp các từ sau thành câu hoàn chỉnh:</div>
+<div class="writing-prompt-text">Many / local / people / volunteered / to / clean / the / park / last / weekend</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 2:  Using non-defining relative clauses with commas.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Combine the two sentences using a relative clause. Use 'who':</div>
+<div class="writing-prompt-text">Sentence 1: Dr. Rachel Whitmer is a researcher at UC Davis.</div>
+<div class="writing-prompt-text">Sentence 2: She studies the benefits of volunteering.</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 3:  Guided Email Invite (Viết email ngắn)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Write a short email inviting a friend to join a local community project next Saturday. Write a short paragraph (approx. 40-50 words).</div>
+<div style='margin-top: 4px; margin-bottom: 2px;'>To: ...................................................... Subject: ......................................................</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 4:  Comparing quantities and reading data from a table.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Describe the table below comparing the number of volunteers and monthly hours across different age groups. Write 3 sentences.</div>
+<div class="writing-prompt-text">Use this sentence frame to write your answer:</div>
+<div class="writing-prompt-sub-item">- Sentence 1: The table shows ...</div>
+<div class="writing-line"></div>
+<div class="writing-prompt-sub-item">- Sentence 2: The highest number is ...</div>
+<div class="writing-line"></div>
+<div class="writing-prompt-sub-item">- Sentence 3: The lowest number is ...</div>
+<div class="writing-line"></div>
+<table class="data-table"><thead><tr><th>Age Group</th><th>Number of Volunteers (2025)</th><th>Hours per Month</th></tr></thead><tbody><tr><td>15–24</td><td>120</td><td>8</td></tr><tr><td>25–44</td><td>250</td><td>12</td></tr><tr><td>45–64</td><td>310</td><td>15</td></tr><tr><td>65 and over</td><td>450</td><td>20</td></tr></tbody></table>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 5:  Expressing opinions and listing supporting reasons.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Write an opinion paragraph about why older adults should volunteer. (write 4-5 sentences)</div>
+<div class="writing-prompt-text">Use this sentence frame to write your answer:</div>
+<div class="writing-prompt-sub-item">- Sentence 1: In my opinion, older adults should volunteer.</div>
+<div class="writing-line"></div>
+<div class="writing-prompt-sub-item">- Sentence 2: First, ...</div>
+<div class="writing-line"></div>
+<div class="writing-prompt-sub-item">- Sentence 3: Second, ...</div>
+<div class="writing-line"></div>
+<div class="writing-prompt-sub-item">- Sentence 4: Also, ...</div>
+<div class="writing-line"></div>
+<div class="writing-prompt-sub-item">- Sentence 5: That is why ...</div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <!-- REVIEW BRIDGE -->
+    <div class="review-bridge-container" style="page-break-before: always; page-break-inside: avoid;">
+        <div class="section-title">V. Review Bridge / Ôn tập liên chủ đề</div>
+        <div class="warmup-box" style="background-color: #fafbfc; border: 1px solid #bdc3c7; border-radius: 4px; padding: 10px;">
+            1. Dịch câu sau sang tiếng Anh: Hoạt động tình nguyện giúp tôi giảm bớt sự căng thẳng trong thời gian rảnh rỗi.<br>
+<div class="writing-line"></div><br>
+2. Dịch câu sau sang tiếng Anh: Chúng tôi cần mua một số thiết bị mới cho dự án cộng đồng này.<br>
+<div class="writing-line"></div><br>
+3. Dịch câu sau sang tiếng Anh: Tương tác xã hội là một cách tuyệt vời để tăng cường năng lực não bộ của bạn.<br>
+<div class="writing-line"></div><br>
+        </div>
+    </div>
+
+</body>
+</html>

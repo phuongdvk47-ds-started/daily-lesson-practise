@@ -448,6 +448,51 @@ assert not re.search(r'\[R\]', text), "Draft [R] marker found in lesson_source.j
 
 ---
 
+### RQA-09 · Subgroup Data Overclaim in Reading Questions
+
+**Symptom**: A reading question asks about a specific subgroup, but the answer key relies on data for the overall cohort (which contains multiple subgroups).
+
+**Root Cause**: The Reading Agent treats overall cohort statistics as applicable to a specific subgroup named in the passage.
+
+**Prevention Rule**:
+- Ensure reading questions referencing subgroups (e.g., specific studies or sub-populations) are supported explicitly and uniquely by details about that specific subgroup.
+- Do not generalize overall statistics to a named subgroup.
+
+---
+
+### RQA-10 · Double Punctuation in Grammar MCQ Options
+
+**Symptom**: Selecting the correct grammar option produces double commas or double periods (e.g., `, which, was built...` when a comma is already present in the prompt).
+
+**Root Cause**: The Grammar Agent includes surrounding punctuation in the option text without checking if that punctuation is already written in the prompt.
+
+**Prevention Rule**:
+- Any punctuation included in option texts (especially commas) must not duplicate the punctuation already present at the boundaries of the blank in the sentence prompt.
+
+---
+
+### RQA-11 · Reversed Cause-Effect in Connective Tasks
+
+**Symptom**: Sentence combination model answers reverse the natural cause-effect relationship (e.g., `A happened because B happened` when A is actually the cause of B).
+
+**Root Cause**: Writing Agent links sentences without checking semantic logic of the cause-effect direction.
+
+**Prevention Rule**:
+- Always check that the resulting sentence using `because`, `since`, `as`, `therefore`, or `consequently` correctly places the cause and effect: `Result because Cause` or `Because Cause, Result`.
+
+---
+
+### RQA-12 · Gap-Fill Numbering Mismatch with Blanks
+
+**Symptom**: In gap-fill questions, the blank label numbers inside parentheses (e.g. `(11)`) do not match the absolute question numbers (e.g. `Question 6`).
+
+**Root Cause**: Renumbering or re-ordering during compilation splits/changes question IDs but leaves the inner blank text unchanged.
+
+**Prevention Rule**:
+- Check that the label inside the gap-fill blank `(N)` exactly equals the question number `N` for that question.
+
+---
+
 ### Summary QA Gate (Run Before Every PDF Export)
 
 The following script must return `0 FAIL` before running `export_daily_pack.py`:
@@ -468,3 +513,24 @@ In addition, confirm manually or via automated checks:
 | RQA-06 | All `reasoning_skill` values are in the schema-allowed list |
 | RQA-07 | At A2+ and above, at least one `writer_purpose` question exists |
 | RQA-08 | No `[R]` marker appears anywhere in the JSON |
+| RQA-09 | Reading questions referencing subgroups are fully supported by subgroup-specific data |
+| RQA-10 | Grammar MCQ options do not create double punctuation when inserted |
+| RQA-11 | Writing combination task model answers preserve logical cause-effect relationships |
+| RQA-12 | Reading gap-fill blank numbers `(N)` match the question number `N` |
+| RQA-13 | Level '+' suffix (e.g., A2+, B1+) is correctly preserved in folder and file names |
+
+---
+
+### RQA-13 · Level '+' Suffix Stripped from File/Folder Names
+
+**Symptom**: Generated output folder is named `20260715-A2` instead of `20260715-A2+`, causing duplicate directories or level mismatch.
+
+**Root Cause**: The helper function `safe_filename_part()` in compilation/export scripts was stripping `+` characters from filenames.
+
+**Prevention Rule**:
+- Ensure `safe_filename_part()` allows `+` characters: `re.sub(r"[^\w\s.+\-]+", "", value)`.
+- Ensure levels containing `+` (e.g., `A2+`, `B1+`, `B2+`, `C1+`) are preserved in both folder names and compiled PDF/HTML filenames.
+
+**Verification Step**:
+Verify that the output directory contains the resolved level with its exact suffix (e.g., `outputs/ielts-daily-reading-writing/20260715-A2+`).
+
