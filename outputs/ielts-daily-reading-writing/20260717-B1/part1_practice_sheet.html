@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAILY PRACTICE: DAY 20260717 - WHY READING IS GOOD FOR YOU</title>
+    <style>
+        @page { 
+            size: A4; 
+            margin: 15mm 15mm 20mm 15mm; 
+        }
+        body { 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 11.5pt; 
+            line-height: 1.45; 
+            color: #1a1a1a; 
+            margin: 0; 
+            padding: 0;
+        }
+        .header { 
+            border-bottom: 2px double #2c3e50; 
+            padding-bottom: 8px; 
+            margin-bottom: 15px; 
+            text-align: center;
+        }
+        .header .center-name { 
+            font-size: 9.5pt; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            color: #7f8c8d; 
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .header h1 { 
+            font-size: 15pt; 
+            margin: 3px 0; 
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .header h2 { 
+            font-size: 11pt; 
+            margin: 3px 0; 
+            font-style: italic; 
+            color: #34495e;
+        }
+        .student-info { 
+            margin-top: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .section-title { 
+            font-size: 12pt; 
+            color: #2c3e50; 
+            border-left: 3px solid #27ae60; 
+            padding-left: 8px; 
+            margin-top: 18px; 
+            margin-bottom: 8px; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .passage-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .reading-text { 
+            text-align: justify; 
+            margin-bottom: 12px; 
+            text-indent: 25px;
+        }
+        .reading-text p {
+            margin: 0 0 6px 0;
+        }
+        .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }
+        .data-table th { 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }
+        .data-table td { 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }
+        .data-table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+        .svg-chart-container {
+            text-align: center;
+            margin: 10px 0;
+            page-break-inside: avoid;
+        }
+        .writing-line {
+            border-bottom: 1px dotted #bdc3c7;
+            height: 22px;
+            margin-top: 4px;
+            margin-bottom: 1px;
+            width: 98%;
+            page-break-inside: avoid;
+        }
+        .writing-prompt-text {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .writing-prompt-sub-item {
+            margin-top: 4px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .source-box { 
+            font-style: italic; 
+            font-size: 9pt; 
+            color: #7f8c8d; 
+            margin-bottom: 15px; 
+            padding: 6px 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #bdc3c7;
+        }
+        .source-box a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .question-instruction {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+        .question-group {
+            margin-bottom: 12px;
+        }
+        .question-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            text-indent: -20px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .question-options {
+            margin: 4px 0 4px 20px;
+            text-indent: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .question-options div {
+            margin-bottom: 2px;
+            box-sizing: border-box;
+            padding-right: 8px;
+        }
+        .options-4col div {
+            width: 25%;
+        }
+        .options-2col div {
+            width: 50%;
+        }
+        .options-1col div {
+            width: 100%;
+        }
+        .fill-blank {
+            display: inline-block;
+            width: 100px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        .grammar-item {
+            margin-bottom: 8px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .writing-box {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            background-color: #fafbfc;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            text-align: left;
+            page-break-inside: avoid;
+        }
+        .writing-item {
+            margin-bottom: 10px;
+        }
+        .warmup-box {
+            background-color: #fcfcfc;
+            border: 1px dashed #bdc3c7;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            font-size: 10pt;
+        }
+        .warmup-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="center-name">IELTS PREMIUM PREPARATION ACADEMY</div>
+        <h1>DAILY PRACTICE: DAY 20260717 - WHY READING IS GOOD FOR YOU</h1>
+        <h2>(Level: Reading B1 | Grammar B1+ | Writing A2 | Vocab B1)</h2>
+        <div class="student-info">
+            <span>Student Name: ..............................................................</span>
+            <span>Time Allowed: 90 mins</span>
+        </div>
+    </div>
+
+    <!-- WARM-UP SECTION -->
+    <div class="section-title">Warm-up / Khởi động</div>
+    <div class="warmup-box">
+        <div class="warmup-title">Answer the following questions in English:</div>
+        1. Do you prefer reading books or using a phone? Why?<br>
+        2. Why do you think reading might help people feel less stressed?<br>
+        3. What is one book or story that taught you something new?
+    </div>
+
+    <!-- READING PASSAGE -->
+    <div class="section-title">I. Reading Passage</div>
+    <div class="passage-title">Why Reading Is Good for You</div>
+    
+    <div class="reading-text">
+        <p>Many people enjoy <b>reading for pleasure</b>. They read novels, newspapers, articles, and websites every day. Reading is a popular hobby in almost every country in the world.</p>
+        <p>Reading is good <b>exercise</b> for the <b>brain</b>. When we read, our minds create mental simulations of the scenes in the story. This activity stimulates the <b>brain</b> and helps build new <b>neural pathways</b>. A study in Spain found that reading words related to smells, such as 'lavender', activated the <b>brain</b>'s smell-processing areas.</p>
+        <p>Stories also help us understand other people. Reading <b>fiction</b> activates the <b>brain</b> <b>networks</b> that we use for social interaction. As a result, regular readers often develop more <b>empathy</b> and stronger <b>emotional intelligence</b>. They find it easier to see situations from another person's point of view.</p>
+        <p>Reading can also improve our health and happiness. Research shows that reading for just thirty minutes a week can increase a person's health and <b>wellbeing</b>. It can also improve <b>confidence</b>, help people sleep better, and reduce feelings of <b>loneliness</b>. A 2024 study by the Reading Agency found that people who read regularly reported higher <b>life satisfaction</b> and better <b>concentration</b>.</p>
+        <p>In addition, reading is one of the best ways to reduce <b>stress</b>. In a large study called the 'Rest Test', reading was ranked the number one <b>stress</b> reliever, beating nature, music, and being alone. Some research even suggests that reading stories may help people live longer. One study found that thirty minutes of daily reading was linked to a longer life, and this benefit was unique to <b>narrative fiction</b>.</p>
+        <p>Finally, reading gives the <b>brain</b> regular cognitive stimulation and may protect long-term <b>brain</b> health. Mental activity like reading might delay the onset of dementia in older adults. Reading also expands a person's <b>vocabulary</b> and general <b>knowledge</b> of the world. For all these reasons, picking up a book is a simple <b>habit</b> with lasting benefits.</p>
+    </div>
+
+    <div class="source-box">
+        Source: Adapted from <i>BBC Bitesize</i> - "Why reading is good for you" (2024)<br>
+        URL: <a href="https://www.bbc.co.uk/bitesize/articles/z43jg2p" target="_blank">https://www.bbc.co.uk/bitesize/articles/z43jg2p</a>
+    </div>
+
+    <!-- READING QUESTIONS -->
+    <div class="section-title">II. IELTS Reading Questions (13 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 1–3: </div>
+        <div style="margin-left: 20px; font-weight: bold; margin-bottom: 8px; font-size: 10pt;">
+            TRUE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement agrees with the information<br>
+            FALSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement contradicts the information<br>
+            NOT GIVEN &nbsp;&nbsp;&nbsp;&nbsp; if there is no information on this
+        </div>
+        <div class="question-item">
+            <span class="question-number">1.</span> The Spanish study was led by a world-famous scientist.
+        </div>
+        <div class="question-item">
+            <span class="question-number">2.</span> A 2024 study found that regular readers had better concentration.
+        </div>
+        <div class="question-item">
+            <span class="question-number">3.</span> The 'Rest Test' found that being alone was a better stress reliever than reading.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 4–8: </div>
+        <div class="question-item">
+            <span class="question-number">4.</span> Complete the summary using words from the passage. Reading is good exercise for the brain because it (9) <span class="fill-blank">&nbsp;</span> new neural pathways. (No more than TWO words.)
+        </div>
+        <div class="question-item">
+            <span class="question-number">5.</span> Complete the summary using words from the passage. Stories help us understand other people and improve our (10) <span class="fill-blank">&nbsp;</span>. (No more than TWO words.)
+        </div>
+        <div class="question-item">
+            <span class="question-number">6.</span> Complete the summary using words from the passage. Reading for pleasure can increase health and (11) <span class="fill-blank">&nbsp;</span>, and it reduces stress better than music or nature. (No more than TWO words.)
+        </div>
+        <div class="question-item">
+            <span class="question-number">7.</span> Complete the summary using words from the passage. One study linked daily reading to a longer (12) <span class="fill-blank">&nbsp;</span>, and mental activity may delay (13) <span class="fill-blank">&nbsp;</span> in older adults.
+        </div>
+        <div class="question-item">
+            <span class="question-number">8.</span> Complete the summary using words from the passage. One study linked daily reading to a longer life, and mental activity may delay (13) <span class="fill-blank">&nbsp;</span> in older adults. (No more than TWO words.)
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 9–13: </div>
+        <div class="question-item">
+            <span class="question-number">9.</span> What does the writer say about reading as a hobby?
+            <div class="question-options options-1col">
+                <div>A. It is popular in almost every country in the world.</div>
+                <div>B. It is mainly for young children.</div>
+                <div>C. It is becoming less common each year.</div>
+                <div>D. People read only newspapers and novels.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">10.</span> In paragraph 2, what does the phrase 'mental simulations' refer to?
+            <div class="question-options options-1col">
+                <div>A. Images or experiences that the mind creates while reading.</div>
+                <div>B. Photographs printed inside the book.</div>
+                <div>C. The exact words on the page.</div>
+                <div>D. Physical exercise for the body.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">11.</span> In paragraph 3, what does the word 'they' refer to?
+            <div class="question-options options-4col">
+                <div>A. Regular readers</div>
+                <div>B. Stories</div>
+                <div>C. Brain networks</div>
+                <div>D. Other people</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">12.</span> Why might reading help people understand their friends better?
+            <div class="question-options options-1col">
+                <div>A. It builds brain networks used for understanding other people's feelings.</div>
+                <div>B. It reduces feelings of loneliness.</div>
+                <div>C. It teaches people to speak foreign languages.</div>
+                <div>D. It improves physical fitness.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">13.</span> What is the writer's main purpose in this passage?
+            <div class="question-options options-1col">
+                <div>A. To explain the many benefits of reading for the brain and wellbeing.</div>
+                <div>B. To compare books with television.</div>
+                <div>C. To teach readers how to write a novel.</div>
+                <div>D. To argue that reading is better than exercise.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRAMMAR QUESTIONS -->
+    <div class="section-title">III. Questions for Grammar (30 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 14–32: Multiple Choice Questions</div>
+        <div class="question-item">
+            <span class="question-number">14.</span> Maya started a book club in 2021. Since then, she <span class="fill-blank">&nbsp;</span> over fifty books with the other members.
+            <div class="question-options options-4col">
+                <div>A. has read</div>
+                <div>B. read</div>
+                <div>C. reads</div>
+                <div>D. was reading</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">16.</span> Many readers look forward to <span class="fill-blank">&nbsp;</span> their favourite author at the book festival.
+            <div class="question-options options-4col">
+                <div>A. meeting</div>
+                <div>B. to meet</div>
+                <div>C. meet</div>
+                <div>D. met</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">17.</span> Our teacher encouraged us <span class="fill-blank">&nbsp;</span> a short story for homework.
+            <div class="question-options options-4col">
+                <div>A. to write</div>
+                <div>B. writing</div>
+                <div>C. write</div>
+                <div>D. wrote</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">18.</span> There are many book clubs at the school. Which sentence correctly tells us which club meets on Fridays?
+            <div class="question-options options-1col">
+                <div>A. The club which meets on Fridays is very popular.</div>
+                <div>B. The club, which meets on Fridays, is very popular.</div>
+                <div>C. The club, that meets on Fridays, is very popular.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">19.</span> There is only one library in our town. Add extra information about when it was built.
+            <div class="question-options options-1col">
+                <div>A. The library, which was built in 1990, is still open.</div>
+                <div>B. The library which was built in 1990 is still open.</div>
+                <div>C. The library that was built in 1990 is still open.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">22.</span> If I <span class="fill-blank">&nbsp;</span> more free time, I would join a reading group at the library.
+            <div class="question-options options-4col">
+                <div>A. had</div>
+                <div>B. have</div>
+                <div>C. will have</div>
+                <div>D. has</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">24.</span> A famous novel <span class="fill-blank">&nbsp;</span> into a film by a well-known director next year.
+            <div class="question-options options-4col">
+                <div>A. will be made</div>
+                <div>B. will make</div>
+                <div>C. is making</div>
+                <div>D. makes</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">25.</span> Tom said, 'I am reading a good book.' -> Tom said that he <span class="fill-blank">&nbsp;</span> a good book.
+            <div class="question-options options-4col">
+                <div>A. was reading</div>
+                <div>B. is reading</div>
+                <div>C. reads</div>
+                <div>D. read</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">26.</span> Reading reduces stress, <span class="fill-blank">&nbsp;</span> it helps people relax after a long day.
+            <div class="question-options options-4col">
+                <div>A. because</div>
+                <div>B. although</div>
+                <div>C. whereas</div>
+                <div>D. unless</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">27.</span> City readers often prefer e-books, <span class="fill-blank">&nbsp;</span> village readers still like printed books.
+            <div class="question-options options-4col">
+                <div>A. whereas</div>
+                <div>B. because</div>
+                <div>C. so</div>
+                <div>D. if</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">28.</span> Reading improves focus, <span class="fill-blank">&nbsp;</span> watching too much TV can reduce it.
+            <div class="question-options options-4col">
+                <div>A. while</div>
+                <div>B. and</div>
+                <div>C. because</div>
+                <div>D. unless</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">29.</span> She reads the instructions carefully <span class="fill-blank">&nbsp;</span> she does not make mistakes.
+            <div class="question-options options-4col">
+                <div>A. so that</div>
+                <div>B. because</div>
+                <div>C. although</div>
+                <div>D. despite</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">30.</span> <span class="fill-blank">&nbsp;</span> reading is an important skill for lifelong learning. (*)
+            <div class="question-options options-4col">
+                <div>A. No article</div>
+                <div>B. The</div>
+                <div>C. A</div>
+                <div>D. An</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">32.</span> Regular reading <span class="fill-blank">&nbsp;</span> improve sleep quality, according to some studies. (*)
+            <div class="question-options options-4col">
+                <div>A. may</div>
+                <div>B. must</div>
+                <div>C. will</div>
+                <div>D. has to</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 15–33: Gap Fill</div>
+        <div class="question-item">
+            <span class="question-number">15.</span> I <span class="fill-blank">&nbsp;</span> (finish) three chapters of this novel yesterday evening.
+        </div>
+        <div class="question-item">
+            <span class="question-number">20.</span> The author <span class="fill-blank">&nbsp;</span> won the national prize lives in our city.
+        </div>
+        <div class="question-item">
+            <span class="question-number">21.</span> If you <span class="fill-blank">&nbsp;</span> (read) more books, your vocabulary will improve.
+        </div>
+        <div class="question-item">
+            <span class="question-number">23.</span> This novel <span class="fill-blank">&nbsp;</span> (translate) into more than twenty languages last year.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">31.</span> The number of pages in this book <span class="fill-blank">&nbsp;</span> (be) surprisingly large. (*)
+        </div>
+        <div class="question-item">
+            <span class="question-number">33.</span> Books <span class="fill-blank">&nbsp;</span> (write) for children often use simple language. (*)
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 34–39: Error Correction - Correct the single grammatical error in each of the following sentences.</div>
+        <div class="question-item">
+            <span class="question-number">34.</span> Correct the error: The book was so good that I readed it in two days.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">35.</span> Correct the error: If you will read more, your English will improve.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">36.</span> Correct the error: She enjoys to read science fiction in her free time.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">37.</span> Correct the error: The library which built in 1900 is now closed.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">38.</span> Correct the error: The number of pages are too small for this book. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">39.</span> Correct the error: He suggested to go to the bookshop after school.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 40–43: Sentence Combining</div>
+        <div class="question-item">
+            <span class="question-number">40.</span> Combine the two sentences using 'whereas'. Sentence 1: Reading improves focus. Sentence 2: Watching TV reduces focus.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">43.</span> Combine into one sentence using 'because'. Sentence 1: Reading builds vocabulary. Sentence 2: It helps students write better essays. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 41–42: Transformation</div>
+        <div class="question-item">
+            <span class="question-number">41.</span> Rewrite using 'so that'. Some students join clubs to reduce stress.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">42.</span> Rewrite using a reduced relative clause. Books that are written for children often use simple words. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <!-- WRITING QUESTIONS -->
+    <div class="section-title">IV. Questions for Writing (5 tasks)</div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 1:  Word Ordering (Sắp xếp từ thành câu hoàn chỉnh)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Sắp xếp các từ sau thành câu hoàn chỉnh:</div>
+<div class="writing-prompt-text">every / night / books / I / read /</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 2:  Joining two ideas with 'and' or 'because'.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Nối hai câu sau thành một câu hoàn chỉnh using 'and' or 'because'.</div>
+<div class="writing-prompt-text">Sentence 1: Reading is fun.</div>
+<div class="writing-prompt-text">Sentence 2: It helps me learn new words.</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 3:  Writing simple present sentences about a book.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Write 3 sentences about a book you like. Say the title, what it is about, and why you like it.</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 4:  Guided Email Invite (Viết email ngắn)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Write a short email to a friend. Invite them to visit the library with you this weekend.</div>
+<div style='margin-top: 4px; margin-bottom: 2px;'>To: ...................................................... Subject: ......................................................</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 5:  Writing a short paragraph with reasons.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Write 4-5 sentences about why reading is good for you. Use ideas from today's lesson (vocabulary, stress, sleep, brain).</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <!-- REVIEW BRIDGE -->
+    <div class="review-bridge-container" style="page-break-before: always; page-break-inside: avoid;">
+        <div class="section-title">V. Review Bridge / Ôn tập liên chủ đề</div>
+        <div class="warmup-box" style="background-color: #fafbfc; border: 1px solid #bdc3c7; border-radius: 4px; padding: 10px;">
+            1. Dịch câu sau: Đọc truyện giúp chúng ta hiểu better về tương tác xã hội với người khác.<br>
+<div class="writing-line"></div><br>
+2. Hoàn thành: Reading gives the brain regular <span class="fill-blank">&nbsp;</span> (sự kích thích nhận thức).<br>
+<div class="writing-line"></div><br>
+3. Dịch câu: Hoạt động đọc có thể bảo vệ sức khỏe não bộ lâu dài.<br>
+<div class="writing-line"></div><br>
+        </div>
+    </div>
+
+</body>
+</html>

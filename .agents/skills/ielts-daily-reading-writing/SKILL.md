@@ -48,6 +48,7 @@ Accept these parameters when provided:
     "vocabulary_level": "<vocabulary_level>"
   }
 }
+
 ```
 The top-level `level` key must always equal `reading_level` (used for file naming and history tracking).
 

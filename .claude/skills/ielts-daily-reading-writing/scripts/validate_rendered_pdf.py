@@ -73,17 +73,12 @@ def validate_rendered_pdf(json_path: Path, pdf_path: Path) -> list[str]:
             q_id = q.get("id")
             q_stem = q.get("question", "")
             
-            # Stem must be in PDF. Blanks may render as a visual line (no
-            # underscore text) and the JSON may use 4-7 underscores, so strip
-            # any run of underscores and verify the non-blank prefix/suffix.
-            stem_noblank = re.sub(r'_+', ' ', q_stem).replace("(*)", "")
-            stem_words = stem_noblank.split()
-            stem_noblank = " ".join(stem_words).strip()
-            prefix_str = " ".join(stem_words[:6])
-            suffix_str = " ".join(stem_words[-6:]) if len(stem_words) > 6 else ""
-            stem_ok = (prefix_str in pdf_norm) and (not suffix_str or suffix_str in pdf_norm)
-            if not stem_ok:
-                errors.append(f"Grammar question {q_id} stem missing in rendered PDF. Expected part: '{prefix_str}...'")
+            # Stem must be in PDF (with blanks replaced)
+            # Blanks use runs of 3+ underscores in source data; strip any such run.
+            stem_clean = re.sub(r"_{3,}", "", q_stem).replace("(*)", "")
+            stem_clean = " ".join(stem_clean.split()).strip()
+            if stem_clean[:30] not in pdf_norm:
+                errors.append(f"Grammar question {q_id} stem missing in rendered PDF. Expected part: '{stem_clean[:30]}...'")
                 
             # Options must be in PDF
             options = q.get("options", [])
