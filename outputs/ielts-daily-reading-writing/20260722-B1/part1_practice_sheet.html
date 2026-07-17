@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAILY PRACTICE: DAY 20260722 - MUSEUM LAYOUTS AND MONUMENT TOURS</title>
+    <style>
+        @page { 
+            size: A4; 
+            margin: 15mm 15mm 20mm 15mm; 
+        }
+        body { 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 11.5pt; 
+            line-height: 1.45; 
+            color: #1a1a1a; 
+            margin: 0; 
+            padding: 0;
+        }
+        .header { 
+            border-bottom: 2px double #2c3e50; 
+            padding-bottom: 8px; 
+            margin-bottom: 15px; 
+            text-align: center;
+        }
+        .header .center-name { 
+            font-size: 9.5pt; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            color: #7f8c8d; 
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .header h1 { 
+            font-size: 15pt; 
+            margin: 3px 0; 
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .header h2 { 
+            font-size: 11pt; 
+            margin: 3px 0; 
+            font-style: italic; 
+            color: #34495e;
+        }
+        .student-info { 
+            margin-top: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .section-title { 
+            font-size: 12pt; 
+            color: #2c3e50; 
+            border-left: 3px solid #27ae60; 
+            padding-left: 8px; 
+            margin-top: 18px; 
+            margin-bottom: 8px; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .passage-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .reading-text { 
+            text-align: justify; 
+            margin-bottom: 12px; 
+            text-indent: 25px;
+        }
+        .reading-text p {
+            margin: 0 0 6px 0;
+        }
+        .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }
+        .data-table th { 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }
+        .data-table td { 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }
+        .data-table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+        .svg-chart-container {
+            text-align: center;
+            margin: 10px 0;
+            page-break-inside: avoid;
+        }
+        .writing-line {
+            border-bottom: 1px dotted #bdc3c7;
+            height: 22px;
+            margin-top: 4px;
+            margin-bottom: 1px;
+            width: 98%;
+            page-break-inside: avoid;
+        }
+        .writing-prompt-text {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .writing-prompt-sub-item {
+            margin-top: 4px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .source-box { 
+            font-style: italic; 
+            font-size: 9pt; 
+            color: #7f8c8d; 
+            margin-bottom: 15px; 
+            padding: 6px 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #bdc3c7;
+        }
+        .source-box a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .question-instruction {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+        .question-group {
+            margin-bottom: 12px;
+        }
+        .question-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            text-indent: -20px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .question-options {
+            margin: 4px 0 4px 20px;
+            text-indent: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .question-options div {
+            margin-bottom: 2px;
+            box-sizing: border-box;
+            padding-right: 8px;
+        }
+        .options-4col div {
+            width: 25%;
+        }
+        .options-2col div {
+            width: 50%;
+        }
+        .options-1col div {
+            width: 100%;
+        }
+        .fill-blank {
+            display: inline-block;
+            width: 100px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        .grammar-item {
+            margin-bottom: 8px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .writing-box {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            background-color: #fafbfc;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            text-align: left;
+            page-break-inside: avoid;
+        }
+        .writing-item {
+            margin-bottom: 10px;
+        }
+        .warmup-box {
+            background-color: #fcfcfc;
+            border: 1px dashed #bdc3c7;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            font-size: 10pt;
+        }
+        .warmup-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="center-name">IELTS PREMIUM PREPARATION ACADEMY</div>
+        <h1>DAILY PRACTICE: DAY 20260722 - MUSEUM LAYOUTS AND MONUMENT TOURS</h1>
+        <h2>(Level: Reading B1 | Grammar B1+ | Writing A2 | Vocab B1)</h2>
+        <div class="student-info">
+            <span>Student Name: ..............................................................</span>
+            <span>Time Allowed: 90 mins</span>
+        </div>
+    </div>
+
+    <!-- WARM-UP SECTION -->
+    <div class="section-title">Warm-up / Khởi động</div>
+    <div class="warmup-box">
+        <div class="warmup-title">Answer the following questions in English:</div>
+        1. Have you ever visited a museum or monument? What did you see?<br>
+        2. Do you prefer exploring a museum by yourself or with a tour guide?<br>
+        3. What are the benefits of using an audio app on your smartphone during a tour?
+    </div>
+
+    <!-- READING PASSAGE -->
+    <div class="section-title">I. Reading Passage</div>
+    <div class="passage-title">Digital Guides in Modern Museums</div>
+    
+    <div class="reading-text">
+        <p>The British Museum Audio app is a digital guide designed to help visitors explore the Museum's vast <b>collection</b>. People can download this app directly onto their smartphones, allowing them to navigate the <b>galleries</b> easily or even explore the famous objects from home. The app includes expert <b>commentaries</b> written by the Museum's curatorial team. These <b>commentaries</b> explain the history and stories behind 250 <b>highlights</b> of the <b>collection</b>, offering visitors access to the latest research about these ancient <b>artifacts</b>.</p>
+        <p>To make a visit more enjoyable, the app provides introductions to 65 different <b>galleries</b> and features several self-guided themed tours. Visitors appreciate the <b>convenience</b> [R] of having a personal guide on their phone. Crucially, key <b>commentaries</b> are available in nine languages, including English, Chinese, French, and Japanese, as well as British Sign Language. This language variety helps international tourists understand the <b>exhibits</b> without needing a human translator, making the museum experience more inclusive for everyone.</p>
+        <p>Using the digital guide inside the <b>galleries</b> is straightforward. Visitors simply look for the <b>audio guide</b> symbol next to display cases or objects, then key in the object's number to hear the <b>commentary</b>. There are both <b>advantages and disadvantages</b> [R] to this technology. While it allows visitors to study <b>exhibits</b> at their own pace, they must bring their own headphones. Otherwise, they might disturb other people in the quiet <b>gallery</b> spaces.</p>
+        <p>Many visitors travel to the museum using <b>public transport</b> [R] because parking in London is extremely limited. Once inside, using the audio app can enrich their journey. However, visitors must ensure their phone batteries are fully charged before arrival. Ultimately, mobile applications like this one are changing how people interact with history, making cultural tours more accessible and educational for a new generation of learners who prefer digital learning over paper maps.</p>
+    </div>
+
+    <div class="source-box">
+        Source: Adapted from <i>The British Museum</i> - "British Museum Audio App" (2026-07-17)<br>
+        URL: <a href="https://www.britishmuseum.org/visit/audio-guide" target="_blank">https://www.britishmuseum.org/visit/audio-guide</a>
+    </div>
+
+    <!-- READING QUESTIONS -->
+    <div class="section-title">II. IELTS Reading Questions (13 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 1–4: </div>
+        <div style="margin-left: 20px; font-weight: bold; margin-bottom: 8px; font-size: 10pt;">
+            TRUE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement agrees with the information<br>
+            FALSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement contradicts the information<br>
+            NOT GIVEN &nbsp;&nbsp;&nbsp;&nbsp; if there is no information on this
+        </div>
+        <div class="question-item">
+            <span class="question-number">1.</span> Visitors can only use the audio app when they are physically inside the British Museum.
+        </div>
+        <div class="question-item">
+            <span class="question-number">2.</span> Commentaries on highlight objects are translated into all nine languages.
+        </div>
+        <div class="question-item">
+            <span class="question-number">3.</span> Visitors must enter a number to play the commentary for a specific object.
+        </div>
+        <div class="question-item">
+            <span class="question-number">4.</span> Most visitors prefer using the audio app to reading paper maps.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 5–8: </div>
+        <div class="question-item">
+            <span class="question-number">5.</span> Curators use the latest (10) <span class="fill-blank">&nbsp;</span> when writing the stories behind the objects.
+        </div>
+        <div class="question-item">
+            <span class="question-number">6.</span> To make a visit more enjoyable, the app provides introductions to 65 different galleries and features several self-guided themed (11) <span class="fill-blank">&nbsp;</span>.
+        </div>
+        <div class="question-item">
+            <span class="question-number">7.</span> On display cases or near objects, visitors should look for the audio guide (12) <span class="fill-blank">&nbsp;</span>.
+        </div>
+        <div class="question-item">
+            <span class="question-number">8.</span> Visitors should make sure their smartphone (13) <span class="fill-blank">&nbsp;</span> are charged before visiting the museum.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 9–13: </div>
+        <div class="question-item">
+            <span class="question-number">9.</span> What is the main purpose of the British Museum Audio app?
+            <div class="question-options options-1col">
+                <div>A. To help visitors navigate the museum and learn about objects</div>
+                <div>B. To sell tickets for special exhibitions</div>
+                <div>C. To contact museum tour guides</div>
+                <div>D. To play games inside the galleries</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">10.</span> In paragraph 1, the word 'These' refers to which of the following?
+            <div class="question-options options-2col">
+                <div>A. expert commentaries</div>
+                <div>B. ancient artifacts</div>
+                <div>C. smartphones</div>
+                <div>D. famous objects</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">11.</span> How many gallery introductions does the app offer?
+            <div class="question-options options-2col">
+                <div>A. Sixty-five gallery introductions</div>
+                <div>B. Nine gallery introductions</div>
+                <div>C. Two hundred and fifty highlights</div>
+                <div>D. Three themed tours</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">12.</span> Why are visitors advised to bring headphones?
+            <div class="question-options options-1col">
+                <div>A. To avoid disturbing other visitors in the quiet galleries</div>
+                <div>B. To improve the download speed of the application</div>
+                <div>C. To charge their smartphone batteries</div>
+                <div>D. To listen to the guide in their native language</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">13.</span> What is the author's main purpose in paragraph 4?
+            <div class="question-options options-1col">
+                <div>A. To explain how digital guides are transforming the museum experience</div>
+                <div>B. To advertise the public transport options in London</div>
+                <div>C. To complain about phone battery life in public places</div>
+                <div>D. To compare London museums with other European galleries</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRAMMAR QUESTIONS -->
+    <div class="section-title">III. Questions for Grammar (30 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 14–27: Multiple Choice Questions</div>
+        <div class="question-item">
+            <span class="question-number">14.</span> The museum curators <span class="fill-blank">&nbsp;</span> three new ancient artifacts since last winter, and they are now on display.
+            <div class="question-options options-4col">
+                <div>A. have restored</div>
+                <div>B. restored</div>
+                <div>C. restore</div>
+                <div>D. were restoring</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">15.</span> While the tour guide <span class="fill-blank">&nbsp;</span> the history of the monument yesterday, a sudden alarm went off.
+            <div class="question-options options-4col">
+                <div>A. was explaining</div>
+                <div>B. explained</div>
+                <div>C. has explained</div>
+                <div>D. explains</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">16.</span> The security system <span class="fill-blank">&nbsp;</span> (design) to protect the displays was updated last month.
+            <div class="question-options options-2col">
+                <div>A. that was designed</div>
+                <div>B. who was designed</div>
+                <div>C. which designed</div>
+                <div>D. was designed</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">17.</span> The British Museum, <span class="fill-blank">&nbsp;</span> in 1753, welcomes millions of visitors every year.
+            <div class="question-options options-2col">
+                <div>A. which was founded</div>
+                <div>B. that was founded</div>
+                <div>C. founded in</div>
+                <div>D. was founded</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">18.</span> A new gallery displaying ancient sculptures <span class="fill-blank">&nbsp;</span> (open) by the mayor next month.
+            <div class="question-options options-4col">
+                <div>A. will be opened</div>
+                <div>B. opened</div>
+                <div>C. will open</div>
+                <div>D. is opening</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">19.</span> Visitors usually avoid <span class="fill-blank">&nbsp;</span> (touch) the artifacts to prevent any accidental damage.
+            <div class="question-options options-4col">
+                <div>A. touching</div>
+                <div>B. to touch</div>
+                <div>C. touch</div>
+                <div>D. touched</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">20.</span> The curator said, 'We are updating the audio guide tomorrow.' -> The curator said they <span class="fill-blank">&nbsp;</span> the audio guide the next day.
+            <div class="question-options options-4col">
+                <div>A. were updating</div>
+                <div>B. are updating</div>
+                <div>C. had updated</div>
+                <div>D. will update</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">21.</span> Audio guides are expensive, <span class="fill-blank">&nbsp;</span> they provide massive benefits for international tourists.
+            <div class="question-options options-4col">
+                <div>A. but</div>
+                <div>B. because</div>
+                <div>C. so</div>
+                <div>D. whereas</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">22.</span> The number of visitors entering the historical monument <span class="fill-blank">&nbsp;</span> (be) rising every year. (*)
+            <div class="question-options options-4col">
+                <div>A. is</div>
+                <div>B. are</div>
+                <div>C. were</div>
+                <div>D. be</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">23.</span> Using an interactive mobile guide <span class="fill-blank">&nbsp;</span> reduce the time spent searching for displays. (*)
+            <div class="question-options options-4col">
+                <div>A. can</div>
+                <div>B. will be</div>
+                <div>C. is</div>
+                <div>D. must to</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">24.</span> Books <span class="fill-blank">&nbsp;</span> (write) by famous historians are kept in the museum archive. (*)
+            <div class="question-options options-4col">
+                <div>A. written</div>
+                <div>B. writing</div>
+                <div>C. which written</div>
+                <div>D. were written</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">25.</span> We spent the whole afternoon exploring the exhibits in <span class="fill-blank">&nbsp;</span> countryside.
+            <div class="question-options options-4col">
+                <div>A. the</div>
+                <div>B. a</div>
+                <div>C. an</div>
+                <div>D. zero article</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">26.</span> If the museum <span class="fill-blank">&nbsp;</span> (design) the layout better years ago, visitors would not get lost so easily today. (*)
+            <div class="question-options options-4col">
+                <div>A. had designed</div>
+                <div>B. designed</div>
+                <div>C. has designed</div>
+                <div>D. would design</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">27.</span> Audio guides <span class="fill-blank">&nbsp;</span> (must / return) to the reception desk after the tour ends.
+            <div class="question-options options-2col">
+                <div>A. must be returned</div>
+                <div>B. must return</div>
+                <div>C. must returned</div>
+                <div>D. must be return</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 28–33: Gap Fill</div>
+        <div class="question-item">
+            <span class="question-number">28.</span> I <span class="fill-blank">&nbsp;</span> (visit) this monument three times so far this year.
+        </div>
+        <div class="question-item">
+            <span class="question-number">29.</span> Many precious artifacts <span class="fill-blank">&nbsp;</span> (steal) from the gallery during the war in 1940.
+        </div>
+        <div class="question-item">
+            <span class="question-number">30.</span> The tourist guide <span class="fill-blank">&nbsp;</span> (lead) our group yesterday was highly knowledgeable.
+        </div>
+        <div class="question-item">
+            <span class="question-number">31.</span> A team of curators, along with a senior historian, <span class="fill-blank">&nbsp;</span> (be) currently checking the artifact's details. (*)
+        </div>
+        <div class="question-item">
+            <span class="question-number">32.</span> Museum guidelines <span class="fill-blank">&nbsp;</span> (appear) to discourage taking photos in this historic chamber. (*)
+        </div>
+        <div class="question-item">
+            <span class="question-number">33.</span> Ancient sculptures <span class="fill-blank">&nbsp;</span> (keep) in these display cases are made of pure marble. (*)
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 34–39: Error Correction - Correct the single grammatical error in each of the following sentences.</div>
+        <div class="question-item">
+            <span class="question-number">34.</span> Correct the error: The museum opened a new gallery after the number of paintings growed rapidly.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">35.</span> Correct the error: If the tourist guide speaks English, all visitors will understands the commentary.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">36.</span> Correct the error: The group spent three hours study the ancient ruins in Rome yesterday.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">37.</span> Correct the error: A collection of paintings, along with several ancient pottery pieces, are on display today. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">38.</span> Correct the error: We really enjoyed visiting the old monuments in countryside last Sunday.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">39.</span> Correct the error: The Rosetta Stone which is a famous ancient artifact attracts many tourists.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 40–41: Sentence Combining</div>
+        <div class="question-item">
+            <span class="question-number">40.</span> Combine the two sentences using 'whereas'. Sentence 1: Guided tours are informative. Sentence 2: Self-guided audio tours are more flexible.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">41.</span> Combine the two sentences using 'because'. Sentence 1: The museum layout was poorly designed. Sentence 2: Many visitors got lost in the galleries.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 42–43: Transformation</div>
+        <div class="question-item">
+            <span class="question-number">42.</span> Rewrite using 'so that': The museum installed digital maps to help visitors navigate easily.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">43.</span> Rewrite using a reduced relative clause: The displays that are kept in the main hall date back to the Roman Empire. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <!-- WRITING QUESTIONS -->
+    <div class="section-title">IV. Questions for Writing (5 tasks)</div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 1:  Word Ordering (Sắp xếp từ thành câu hoàn chỉnh)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Sắp xếp các từ sau thành câu hoàn chỉnh giới thiệu về bảo tàng (dùng từ chỉ mức độ very):</div>
+<div class="writing-prompt-text">museum / the / British / is / large / very /.</div>
+<div class="writing-prompt-text">The British Museum is ...</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 2:  Sentence Completion (Hoàn thành câu)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Nối hai câu sau thành một câu hoàn chỉnh dùng liên từ 'but' chỉ sự đối lập:</div>
+<div class="writing-prompt-text">Sentence 1: The museum is free to enter.</div>
+<div class="writing-prompt-text">Sentence 2: You need a ticket for special exhibitions.</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 3:  Writing a simple description of a past event.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Viết 3 câu mô tả về một chuyến đi bảo tàng của bạn. Sử dụng ít nhất 2 từ vựng từ bài học hôm nay (ví dụ: collection, gallery, audio guide, exhibits).</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 4:  Guided Email Invite (Viết email ngắn)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Viết một email ngắn (khoảng 4-5 câu) gửi cho bạn của bạn. Rủ họ đi tham quan một di tích lịch sử (monument) hoặc bảo tàng vào cuối tuần này. Nêu rõ phương tiện đi lại và thời gian hẹn.</div>
+<div style='margin-top: 4px; margin-bottom: 2px;'>To: ...................................................... Subject: ......................................................</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 5:  Expressing personal preferences and giving simple reasons.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Viết một đoạn văn ngắn (5-6 câu) trả lời câu hỏi sau: Bạn thích dùng thiết bị thuyết minh tự động (audio guide) hay đi theo hướng dẫn viên bảo tàng (guided tour) hơn? Vì sao?</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <!-- REVIEW BRIDGE -->
+    <div class="review-bridge-container" style="page-break-before: always; page-break-inside: avoid;">
+        <div class="section-title">V. Review Bridge / Ôn tập liên chủ đề</div>
+        <div class="warmup-box" style="background-color: #fafbfc; border: 1px solid #bdc3c7; border-radius: 4px; padding: 10px;">
+            1. Complete the sentence: Digital guides provide great <span class="fill-blank">&nbsp;</span> (convenient) for museum visitors.<br>
+<div class="writing-line"></div><br>
+2. Combine the sentences using 'whereas': Museums store historical artifacts. Art galleries display modern paintings.<br>
+<div class="writing-line"></div><br>
+3. Correct the error: The library, which was builded in 1920, is currently being renovated.<br>
+<div class="writing-line"></div><br>
+        </div>
+    </div>
+
+</body>
+</html>
