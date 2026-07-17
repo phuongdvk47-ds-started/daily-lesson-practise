@@ -1,0 +1,3647 @@
+{
+  "execution": {
+    "mode": "auto",
+    "pipeline_status": "qc_passed",
+    "current_stage": "export",
+    "revision_attempts": {
+      "source": 0,
+      "reading": 1,
+      "vocabulary": 0,
+      "grammar": 1,
+      "writing": 1,
+      "answers": 0,
+      "pdf_layout": 0
+    }
+  },
+  "human_review": {
+    "mode": "auto",
+    "checkpoints": []
+  },
+  "agent_review": {
+    "reviews": [
+      {
+        "reviewer_agent": "qc",
+        "reviewed_section": "reading",
+        "review_status": "pass",
+        "strengths": [
+          "Clear sequential layout",
+          "Verified BBC Bitesize source",
+          "Excellent writer purpose question with 3-step Vietnamese explanation"
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "qc",
+        "reviewed_section": "grammar",
+        "review_status": "pass",
+        "strengths": [
+          "Continuous numbering 1-30",
+          "Explicit time indicators for tense contrast",
+          "Complete 10-field answer definitions"
+        ],
+        "challenges": []
+      }
+    ],
+    "challenges": [
+      {
+        "id": "QC-READING-KEYWORD",
+        "from_agent": "qc",
+        "to_agent": "reading",
+        "challenge_type": "keyword_scanning",
+        "severity": "medium",
+        "location": "reading.questions[2] (id 3)",
+        "problem": "Question 3 had too many direct scannable keywords from the passage.",
+        "required_fix": "Paraphrase morning physical exercise to daily morning movement.",
+        "status": "resolved",
+        "revision_attempt": 1
+      },
+      {
+        "id": "QC-GRAMMAR-AMBIGUITY",
+        "from_agent": "qc",
+        "to_agent": "grammar",
+        "challenge_type": "logic_error",
+        "severity": "critical",
+        "location": "grammar.questions[13] (id 14)",
+        "problem": "In question 14, the base verb 'be' gap-fill was grammatically ambiguous.",
+        "required_fix": "Add explicit since-clause indicator 'since she started secondary school' to isolate 'has been'.",
+        "status": "resolved",
+        "revision_attempt": 1
+      },
+      {
+        "id": "QC-WRITING-TASK1-USEFUL-LANG",
+        "from_agent": "qc",
+        "to_agent": "writing",
+        "challenge_type": "schema_error",
+        "severity": "low",
+        "location": "writing.tasks[0] (id 1)",
+        "problem": "Task 1 (Word Ordering) had non-empty 'useful_language' array.",
+        "required_fix": "Clear 'useful_language' list to [] for Task 1.",
+        "status": "resolved",
+        "revision_attempt": 1
+      }
+    ]
+  },
+  "lesson_meta": {
+    "lesson_id": "LSN-20260722-A2+-H2F9N5K8",
+    "day": "20260722",
+    "level": "A2+",
+    "theme": "Daily routines, habits, time management",
+    "topic": "Daily routines, habits, time management",
+    "specific_topic": "Morning routines and time management habits of successful students: planning, sleep, and physical activity",
+    "created_at": "2026-07-22T08:00:00",
+    "reading_question_count": 13,
+    "vocabulary_count": 20,
+    "grammar_question_count": 30,
+    "writing_task_count": 5,
+    "reading_level": "A2+",
+    "grammar_level": "B1",
+    "writing_level": "A2",
+    "vocabulary_level": "A2+",
+    "skill_level": {
+      "reading_level": "A2+",
+      "grammar_level": "B1",
+      "writing_level": "A2",
+      "vocabulary_level": "A2+"
+    },
+    "printed_time_allowed_minutes": 90,
+    "estimated_completion_time_minutes": 87,
+    "time_workload_status": "ok"
+  },
+  "source": {
+    "status": "verified",
+    "source_priority": "primary",
+    "cross_check_required": false,
+    "source_title": "Revision tips: how to manage your time and study effectively",
+    "publisher": "BBC Bitesize",
+    "author": "",
+    "published_date": "",
+    "verified_url": "https://www.bbc.co.uk/bitesize/articles/zmy6qp3",
+    "access_date": "2026-07-22",
+    "url_status": "200 OK",
+    "credibility_note": "BBC Bitesize is a trusted national educational resource from the UK public broadcaster.",
+    "topic_relevance_note": "Directly explains the benefits of study scheduling, morning routines, and time management habits for students.",
+    "usable_excerpt": "Managing your time is one of the most important parts of revision. Breaking your revision down into small chunks helps prevent you from feeling overwhelmed. You should also create a realistic revision timetable that includes breaks for rest and exercise. Working for hours without a break actually reduces your focus and memory retention. Successful students always establish a consistent morning routine, which helps them start the day with energy and concentration.",
+    "copyright_note": "Educational fair use citation.",
+    "failure_reason": ""
+  },
+  "reading": {
+    "reading_blueprint": [
+      {
+        "question_no": 1,
+        "type": "literal",
+        "depth": "low",
+        "target_skill": "identify good student habit",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "keyword trap"
+      },
+      {
+        "question_no": 2,
+        "type": "literal",
+        "depth": "low",
+        "target_skill": "identify student travel method",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "reversed details"
+      },
+      {
+        "question_no": 3,
+        "type": "paraphrase",
+        "depth": "medium",
+        "target_skill": "understand benefit of morning exercise",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "unrelated keywords from text"
+      },
+      {
+        "question_no": 4,
+        "type": "writer_purpose",
+        "depth": "high",
+        "target_skill": "determine author's intent in paragraph 3",
+        "evidence_strategy": "paragraph-level",
+        "distractor_strategy": "details stated as main purpose"
+      },
+      {
+        "question_no": 5,
+        "type": "classification",
+        "depth": "medium",
+        "target_skill": "judge routine control claim (True)",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "generalization"
+      },
+      {
+        "question_no": 6,
+        "type": "classification",
+        "depth": "medium",
+        "target_skill": "judge transit speed comparison (NG)",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "wrong comparison"
+      },
+      {
+        "question_no": 7,
+        "type": "classification",
+        "depth": "medium",
+        "target_skill": "judge noise environment focus (False)",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "reversed logic"
+      },
+      {
+        "question_no": 8,
+        "type": "classification",
+        "depth": "medium",
+        "target_skill": "judge timetable mistake claim (NG)",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "unmentioned claim"
+      },
+      {
+        "question_no": 9,
+        "type": "classification",
+        "depth": "medium",
+        "target_skill": "judge library study environment (True)",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "paraphrase match"
+      },
+      {
+        "question_no": 10,
+        "type": "paraphrase",
+        "depth": "medium",
+        "target_skill": "fill blank lifestyle",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "grammar slot"
+      },
+      {
+        "question_no": 11,
+        "type": "paraphrase",
+        "depth": "medium",
+        "target_skill": "fill blank sleep",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "grammar slot"
+      },
+      {
+        "question_no": 12,
+        "type": "paraphrase",
+        "depth": "medium",
+        "target_skill": "fill blank memory",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "grammar slot"
+      },
+      {
+        "question_no": 13,
+        "type": "paraphrase",
+        "depth": "medium",
+        "target_skill": "fill blank libraries",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "grammar slot"
+      }
+    ],
+    "passage": {
+      "title": "Successful Student Morning Routines and Time Management",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Having a structured morning routine is essential for a successful student lifestyle [R]. When students start their day early and plan their activities, they feel more in control. A good habit is to review the daily schedule before school begins. This planning reduces stress and helps them focus on their lessons throughout the day."
+        },
+        {
+          "id": 2,
+          "text": "In addition to planning, daily physical activity and healthy sleep patterns are very important. Many students have to commute [R] to school by bus or bicycle. If they include a short walk or stretch in their morning routine, they feel more alert and ready to learn. Adequate sleep also improves their working memory [R] and cognitive [R] development, which are needed for solving complex math and science problems."
+        },
+        {
+          "id": 3,
+          "text": "Finally, using school facilities [R] effectively plays a major role in time management. Successful students often spend their break times in quiet study areas or libraries. These public facilities [R] allow them to complete homework without distraction. In contrast, studying in noisy environments reduces focus. Overall, a balanced daily routine helps students keep their study schedule on track."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": 1,
+        "type": "True/False/Not Given",
+        "question": "A morning routine can make students feel more in control of their day.",
+        "options": [],
+        "correct_answer": "True",
+        "evidence_paragraph": 1,
+        "evidence_quote": "When students start their day early and plan their activities, they feel more in control.",
+        "rationale_vi": "Đoạn 1 nêu rõ: 'When students start their day early and plan their activities, they feel more in control.' Điều này xác nhận nhận định câu hỏi là True.",
+        "reasoning_skill": "classification",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "feel more in control of their day -> feel more in control",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": []
+      },
+      {
+        "id": 2,
+        "type": "True/False/Not Given",
+        "question": "Commuting by bicycle is faster than by bus.",
+        "options": [],
+        "correct_answer": "Not Given",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Many students have to commute [R] to school by bus or bicycle.",
+        "rationale_vi": "Đoạn 2 liệt kê xe đạp và xe buýt. Không hề so sánh tốc độ di chuyển giữa hai phương tiện này.",
+        "reasoning_skill": "classification",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": []
+      },
+      {
+        "id": 3,
+        "type": "True/False/Not Given",
+        "question": "Most students study better in noisy environments.",
+        "options": [],
+        "correct_answer": "False",
+        "evidence_paragraph": 3,
+        "evidence_quote": "In contrast, studying in noisy environments reduces focus.",
+        "rationale_vi": "Bài đọc ghi rõ 'studying in noisy environments reduces focus' (học ở nơi ồn ào làm giảm tập trung). Nhận định nói học sinh học tốt hơn ở nơi ồn ào là sai (False).",
+        "reasoning_skill": "classification",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "study better -> reduces focus",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": []
+      },
+      {
+        "id": 4,
+        "type": "True/False/Not Given",
+        "question": "Successful students never make mistakes on their timetables.",
+        "options": [],
+        "correct_answer": "Not Given",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Overall, a balanced daily routine helps students keep their study schedule on track.",
+        "rationale_vi": "Văn bản chỉ đề cập thói quen cân bằng giúp học sinh giữ đúng lịch trình (keep schedule on track). Không có bất cứ thông tin nào về việc họ có bao giờ phạm sai lầm khi lập thời khóa biểu hay không.",
+        "reasoning_skill": "classification",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": []
+      },
+      {
+        "id": 5,
+        "type": "True/False/Not Given",
+        "question": "School libraries are quiet study areas.",
+        "options": [],
+        "correct_answer": "True",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Successful students often spend their break times in quiet study areas or libraries.",
+        "rationale_vi": "Đoạn 3 liên kết thư viện và phòng học yên tĩnh: 'spend their break times in quiet study areas or libraries'. Đáp án là True.",
+        "reasoning_skill": "classification",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": []
+      },
+      {
+        "id": 6,
+        "type": "Gap Fill",
+        "question": "Having a structured morning routine is essential for a student (10) ________.",
+        "options": [],
+        "correct_answer": "lifestyle",
+        "evidence_paragraph": 1,
+        "evidence_quote": "Having a structured morning routine is essential for a successful student lifestyle [R].",
+        "rationale_vi": "Từ cần điền là danh từ 'lifestyle' ở cuối câu đầu tiên đoạn 1.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "structured morning routine is essential -> structured morning routine is essential",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": []
+      },
+      {
+        "id": 7,
+        "type": "Gap Fill",
+        "question": "Physical activity and healthy (11) ________ patterns are very important.",
+        "options": [],
+        "correct_answer": "sleep",
+        "evidence_paragraph": 2,
+        "evidence_quote": "In addition to planning, daily physical activity and healthy sleep patterns are very important.",
+        "rationale_vi": "Từ cần điền là danh từ 'sleep' đứng trước 'patterns' ở đầu đoạn 2.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "healthy ... patterns -> healthy sleep patterns",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": []
+      },
+      {
+        "id": 8,
+        "type": "Gap Fill",
+        "question": "Adequate sleep improves students' working (12) ________.",
+        "options": [],
+        "correct_answer": "memory",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Adequate sleep also improves their working memory [R] and cognitive [R] development",
+        "rationale_vi": "Từ cần điền là 'memory' trong cụm 'working memory' được cải thiện nhờ ngủ đủ giấc.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "improves students' working -> improves their working memory",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": []
+      },
+      {
+        "id": 9,
+        "type": "Gap Fill",
+        "question": "Successful students often spend their breaks in quiet study spaces or (13) ________.",
+        "options": [],
+        "correct_answer": "libraries",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Successful students often spend their break times in quiet study areas or libraries.",
+        "rationale_vi": "Từ cần điền là danh từ số nhiều 'libraries' (thư viện), nơi học tập yên tĩnh của học sinh ở đoạn 3.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "quiet study spaces -> quiet study areas",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": []
+      },
+      {
+        "id": 10,
+        "type": "Multiple Choice",
+        "question": "What is a good habit for students to do before school starts?",
+        "options": [
+          "To commute by bus",
+          "To review their daily schedule",
+          "To study in noisy environments",
+          "To sleep late"
+        ],
+        "correct_answer": "B",
+        "evidence_paragraph": 1,
+        "evidence_quote": "A good habit is to review the daily schedule before school begins.",
+        "rationale_vi": "Đoạn 1 nêu rõ: 'A good habit is to review the daily schedule before school begins.' tương ứng với đáp án B.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": [
+          {
+            "option": "A",
+            "is_keyword_trap": true,
+            "analysis": "Commute by bus được nhắc ở đoạn 2 nhưng không phải thói quen trước giờ học ở đoạn 1."
+          },
+          {
+            "option": "C",
+            "is_keyword_trap": true,
+            "analysis": "Studying in noisy environments được nhắc ở đoạn 3 nhưng là điều không nên làm."
+          },
+          {
+            "option": "D",
+            "is_keyword_trap": false,
+            "analysis": "Ngủ muộn không được nhắc tới và đi ngược lại lối sống khoa học."
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "type": "Multiple Choice",
+        "question": "How do many students travel to school?",
+        "options": [
+          "By bus or bicycle",
+          "By walking only",
+          "By train",
+          "By car"
+        ],
+        "correct_answer": "A",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Many students have to commute [R] to school by bus or bicycle.",
+        "rationale_vi": "Đoạn 2 nêu rõ phương thức di chuyển đi học của nhiều học sinh là xe buýt hoặc xe đạp (bus or bicycle).",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": [
+          {
+            "option": "B",
+            "is_keyword_trap": true,
+            "analysis": "Đoạn 2 nhắc đến 'short walk' (đi bộ ngắn) như một phần tập thể dục chứ không phải phương tiện đi học chính."
+          },
+          {
+            "option": "C",
+            "is_keyword_trap": false,
+            "analysis": "Train không xuất hiện trong bài đọc."
+          },
+          {
+            "option": "D",
+            "is_keyword_trap": false,
+            "analysis": "Car không xuất hiện trong bài đọc."
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "type": "Multiple Choice",
+        "question": "Why is daily morning movement helpful for teenagers?",
+        "options": [
+          "It allows them to sleep during classes.",
+          "It helps them feel more alert and prepared for learning.",
+          "It reduces their working memory.",
+          "It makes their commute longer."
+        ],
+        "correct_answer": "B",
+        "evidence_paragraph": 2,
+        "evidence_quote": "If they include a short walk or stretch in their morning routine, they feel more alert and ready to learn.",
+        "rationale_vi": "Đoạn 2 chỉ ra rằng nếu học sinh đi bộ hoặc giãn cơ nhẹ buổi sáng, họ sẽ cảm thấy tỉnh táo (alert) và sẵn sàng học tập (ready to learn). Cụm 'movement' viết lại của 'walk or stretch', 'prepared' viết lại của 'ready'.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "daily morning movement -> short walk or stretch, prepared -> ready",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": [
+          {
+            "option": "A",
+            "is_keyword_trap": false,
+            "analysis": "Tập thể dục giúp tỉnh táo chứ không phải để ngủ trong lớp."
+          },
+          {
+            "option": "C",
+            "is_keyword_trap": true,
+            "analysis": "Bài đọc ghi ngủ đủ giấc giúp cải thiện working memory chứ không phải tập thể dục làm giảm nó."
+          },
+          {
+            "option": "D",
+            "is_keyword_trap": true,
+            "analysis": "Bài đọc có nhắc commute nhưng không liên kết với việc tập thể dục làm thời gian đi học lâu hơn."
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "type": "Multiple Choice",
+        "question": "What is the writer's main purpose in paragraph 3?",
+        "options": [
+          "To argue that libraries are the only useful facilities.",
+          "To explain how quiet study spaces help students manage time.",
+          "To show that noisy environments improve memory.",
+          "To describe different bus schedules in the city."
+        ],
+        "correct_answer": "B",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Finally, using school facilities [R] effectively plays a major role in time management.",
+        "rationale_vi": "Mục đích chính của tác giả ở đoạn 3 là chỉ ra vai trò của các phòng học yên tĩnh (quiet study areas) đối với việc quản lý thời gian học tập của học sinh.\n\n**QUY TRÌNH TƯ DUY 3 BƯỚC (Thinking Process):**\n1. *Bước 1 (Phân tích câu hỏi)*: Hỏi về mục đích chính của đoạn 3.\n2. *Bước 2 (Xem xét thông tin đoạn 3)*: Tác giả nhấn mạnh việc sử dụng cơ sở vật chất (thư viện, phòng tự học) một cách hiệu quả để học bài không xao nhãng.\n3. *Bước 3 (Chọn đáp án)*: Phương án B biểu thị hoàn hảo mục đích so sánh này. Các phương án khác mang tính cực đoan hoặc lạc đề.",
+        "reasoning_skill": "writer_purpose",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "quiet study spaces -> quiet study areas or libraries, manage time -> time management",
+        "keyword_overlap_check": "ok",
+        "distractor_analysis": [
+          {
+            "option": "A",
+            "is_keyword_trap": true,
+            "analysis": "Bản chất cực đoan 'only useful' không được tác giả ủng hộ."
+          },
+          {
+            "option": "C",
+            "is_keyword_trap": true,
+            "analysis": "Đi ngược lại thực tế bài đọc rằng môi trường ồn ào làm giảm tập trung."
+          },
+          {
+            "option": "D",
+            "is_keyword_trap": true,
+            "analysis": "Thông tin về bus schedules lấy từ chủ đề khác, hoàn toàn không xuất hiện ở đoạn 3."
+          }
+        ]
+      }
+    ]
+  },
+  "vocabulary": {
+    "items": [
+      {
+        "id": 1,
+        "term": "habit",
+        "ipa": "/ˈhæb.ɪt/",
+        "part_of_speech": "noun",
+        "definition_en": "a thing that you do often and almost without thinking",
+        "meaning_vi": "thói quen",
+        "example": "Reviewing your schedule daily is a very good habit.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 2,
+        "term": "routine",
+        "ipa": "/ruːˈtiːn/",
+        "part_of_speech": "noun",
+        "definition_en": "the normal order and way in which you regularly do things",
+        "meaning_vi": "thói quen hằng ngày, quy trình",
+        "example": "A morning routine helps you start the day calmly.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 3,
+        "term": "schedule",
+        "ipa": "/ˈʃedʒ.uːl/",
+        "part_of_speech": "noun",
+        "definition_en": "a plan that lists all the work that you have to do",
+        "meaning_vi": "lịch trình, thời khóa biểu",
+        "example": "I always write my exam dates in my study schedule.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 4,
+        "term": "productivity",
+        "ipa": "/ˌprɒd.ʌkˈtɪv.ə.ti/",
+        "part_of_speech": "noun",
+        "definition_en": "the rate at which a person does useful work",
+        "meaning_vi": "năng suất, hiệu quả làm việc",
+        "example": "Planning tasks in advance can boost your daily productivity.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 5,
+        "term": "focus",
+        "ipa": "/ˈfəʊ.kəs/",
+        "part_of_speech": "noun",
+        "definition_en": "the concentration of attention on a particular activity",
+        "meaning_vi": "sự tập trung",
+        "example": "Quiet libraries allow students to study with great focus.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 6,
+        "term": "active",
+        "ipa": "/ˈæk.tɪv/",
+        "part_of_speech": "adjective",
+        "definition_en": "doing things that require physical effort and energy",
+        "meaning_vi": "tích cực, năng động",
+        "example": "Playing sports keeps high school students active and healthy.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 7,
+        "term": "alert",
+        "ipa": "/əˈlɜːt/",
+        "part_of_speech": "adjective",
+        "definition_en": "able to think quickly and notice things",
+        "meaning_vi": "tỉnh táo, nhanh nhạy",
+        "example": "A short walk in the morning makes you feel more alert.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 8,
+        "term": "lifestyle",
+        "ipa": "/ˈlaɪf.staɪl/",
+        "part_of_speech": "noun",
+        "definition_en": "the way in which a person lives",
+        "meaning_vi": "lối sống, phong cách sống",
+        "example": "They want to change their lifestyle and live in a calmer environment.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 9,
+        "term": "commute",
+        "ipa": "/kəˈmjuːt/",
+        "part_of_speech": "verb",
+        "definition_en": "to travel regularly between home and work or school",
+        "meaning_vi": "đi lại đều đặn hàng ngày",
+        "example": "Many students commute to school by bicycle.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 10,
+        "term": "healthy",
+        "ipa": "/ˈhel.θi/",
+        "part_of_speech": "adjective",
+        "definition_en": "helping to produce good health",
+        "meaning_vi": "khỏe mạnh, lành mạnh",
+        "example": "Eating a balanced breakfast is a healthy morning habit.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 11,
+        "term": "timetable",
+        "ipa": "/ˈtaɪm.teɪ.bl̩/",
+        "part_of_speech": "noun",
+        "definition_en": "a list showing the times at which events will happen",
+        "meaning_vi": "thời khóa biểu",
+        "example": "We received our new class timetable last week.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 12,
+        "term": "prioritize",
+        "ipa": "/praɪˈɒr.ɪ.taɪz/",
+        "part_of_speech": "verb",
+        "definition_en": "to treat something as being more important than other things",
+        "meaning_vi": "ưu tiên",
+        "example": "You should prioritize your homework before playing games.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 13,
+        "term": "wellbeing",
+        "ipa": "/ˌwelˈbiː.ɪŋ/",
+        "part_of_speech": "noun",
+        "definition_en": "the state of being comfortable, healthy, or happy",
+        "meaning_vi": "sự khỏe mạnh, hạnh phúc",
+        "example": "Getting enough sleep is vital for a student's mental wellbeing.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 14,
+        "term": "distraction",
+        "ipa": "/dɪˈstræk.ʃən/",
+        "part_of_speech": "noun",
+        "definition_en": "something that takes your attention away from study",
+        "meaning_vi": "sự xao nhãng, làm mất tập trung",
+        "example": "Put your phone away to avoid any distraction.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 15,
+        "term": "facilities",
+        "ipa": "/fəˈsɪl.ə.tiz/",
+        "part_of_speech": "noun plural",
+        "definition_en": "buildings, services, or equipment provided for a purpose",
+        "meaning_vi": "cơ sở vật chất, tiện ích",
+        "example": "The school facilities include a library and science labs.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 16,
+        "term": "working memory",
+        "ipa": "/ˈwɜː.kɪŋ ˈmem.ər.i/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "memory used to hold information temporarily",
+        "meaning_vi": "trí nhớ làm việc",
+        "example": "Working memory is key to solving math equations.",
+        "vocab_type": "phrase",
+        "source": "reading"
+      },
+      {
+        "id": 17,
+        "term": "musical training",
+        "ipa": "/ˈmjuː.zɪ.kəl ˈtreɪ.nɪŋ/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "learning to play music or an instrument",
+        "meaning_vi": "sự luyện tập âm nhạc",
+        "example": "Musical training helps develop children's focus.",
+        "vocab_type": "phrase",
+        "source": "reading"
+      },
+      {
+        "id": 18,
+        "term": "cognitive",
+        "ipa": "/ˈkɒɡ.nə.tɪv/",
+        "part_of_speech": "adjective",
+        "definition_en": "connected with mental processes of learning",
+        "meaning_vi": "thuộc về nhận thức",
+        "example": "Cognitive development speeds up during childhood.",
+        "vocab_type": "phrase",
+        "source": "reading"
+      },
+      {
+        "id": 19,
+        "term": "time management",
+        "ipa": "/ˈtaɪm ˈmæn.ɪdʒ.mənt/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the ability to use one's time effectively",
+        "meaning_vi": "sự quản lý thời gian",
+        "example": "Time management is an essential skill for successful studying.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 20,
+        "term": "on track",
+        "ipa": "/ɒn træk/",
+        "part_of_speech": "phrase",
+        "definition_en": "progressing in the way that was planned",
+        "meaning_vi": "đúng lịch trình, đi đúng hướng",
+        "example": "Keep your goals clear to make sure you stay on track.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      }
+    ],
+    "recycled_items": [
+      {
+        "term": "facilities",
+        "ipa": "/fəˈsɪl.ə.tiz/",
+        "part_of_speech": "noun plural",
+        "meaning_vi": "cơ sở vật chất, tiện ích",
+        "source_day": "20260720"
+      },
+      {
+        "term": "lifestyle",
+        "ipa": "/ˈlaɪf.staɪl/",
+        "part_of_speech": "noun",
+        "meaning_vi": "lối sống, phong cách sống",
+        "source_day": "20260720"
+      },
+      {
+        "term": "commute",
+        "ipa": "/kəˈmjuːt/",
+        "part_of_speech": "verb",
+        "meaning_vi": "đi lại đều đặn hàng ngày",
+        "source_day": "20260720"
+      }
+    ],
+    "quizlet": {
+      "section_1_simple": [
+        "habit - thói quen",
+        "routine - thói quen hằng ngày, quy trình",
+        "schedule - lịch trình, thời khóa biểu",
+        "productivity - năng suất, hiệu quả làm việc",
+        "focus - sự tập trung",
+        "active - tích cực, năng động",
+        "alert - tỉnh táo, nhanh nhạy",
+        "lifestyle - lối sống, phong cách sống",
+        "commute - đi lại đều đặn hàng ngày",
+        "healthy - khỏe mạnh, lành mạnh",
+        "timetable - thời khóa biểu",
+        "prioritize - ưu tiên",
+        "wellbeing - sự khỏe mạnh, hạnh phúc",
+        "distraction - sự xao nhãng, làm mất tập trung",
+        "facilities - cơ sở vật chất, tiện ích",
+        "working memory - trí nhớ làm việc",
+        "musical training - sự luyện tập âm nhạc",
+        "cognitive - thuộc về nhận thức",
+        "time management - sự quản lý thời gian",
+        "on track - đúng lịch trình, đi đúng hướng"
+      ],
+      "section_2_detailed": [
+        "habit /ˈhæb.ɪt/, noun - thói quen",
+        "routine /ruːˈtiːn/, noun - thói quen hằng ngày, quy trình",
+        "schedule /ˈʃedʒ.uːl/, noun - lịch trình, thời khóa biểu",
+        "productivity /ˌprɒd.ʌkˈtɪv.ə.ti/, noun - năng suất, hiệu quả làm việc",
+        "focus /ˈfəʊ.kəs/, noun - sự tập trung",
+        "active /ˈæk.tɪv/, adjective - tích cực, năng động",
+        "alert /əˈlɜːt/, adjective - tỉnh táo, nhanh nhạy",
+        "lifestyle /ˈlaɪf.staɪl/, noun - lối sống, phong cách sống",
+        "commute /kəˈmjuːt/, verb - đi lại đều đặn hàng ngày",
+        "healthy /ˈhel.θi/, adjective - khỏe mạnh, lành mạnh",
+        "timetable /ˈtaɪm.teɪ.bl̩/, noun - thời khóa biểu",
+        "prioritize /praɪˈɒr.ɪ.taɪz/, verb - ưu tiên",
+        "wellbeing /ˌwelˈbiː.ɪŋ/, noun - sự khỏe mạnh, hạnh phúc",
+        "distraction /dɪˈstræk.ʃən/, noun - sự xao nhãng, làm mất tập trung",
+        "facilities /fəˈsɪl.ə.tiz/, noun plural - cơ sở vật chất, tiện ích",
+        "working memory /ˈwɜː.kɪŋ ˈmem.ər.i/, noun phrase - trí nhớ làm việc",
+        "musical training /ˈmjuː.zɪ.kəl ˈtreɪ.nɪŋ/, noun phrase - sự luyện tập âm nhạc",
+        "cognitive /ˈkɒɡ.nə.tɪv/, adjective - thuộc về nhận thức",
+        "time management /ˈtaɪm ˈmæn.ɪdʒ.mənt/, noun phrase - sự quản lý thời gian",
+        "on track /ɒn træk/, phrase - đúng lịch trình, đi đúng hướng"
+      ]
+    },
+    "vocab_checker_items": [
+      {
+        "term": "habit",
+        "ipa": "/ˈhæb.ɪt/",
+        "part_of_speech": "n",
+        "definition_en": "a thing you do often",
+        "meaning_vi": "thói quen"
+      },
+      {
+        "term": "routine",
+        "ipa": "/ruːˈtiːn/",
+        "part_of_speech": "n",
+        "definition_en": "normal order of doing things",
+        "meaning_vi": "thói quen hằng ngày, quy trình"
+      },
+      {
+        "term": "schedule",
+        "ipa": "/ˈʃedʒ.uːl/",
+        "part_of_speech": "n",
+        "definition_en": "plan listing work/tasks",
+        "meaning_vi": "lịch trình, thời khóa biểu"
+      },
+      {
+        "term": "productivity",
+        "ipa": "/ˌprɒd.ʌkˈtɪv.ə.ti/",
+        "part_of_speech": "n",
+        "definition_en": "rate of doing useful work",
+        "meaning_vi": "năng suất, hiệu quả làm việc"
+      },
+      {
+        "term": "focus",
+        "ipa": "/ˈfəʊ.kəs/",
+        "part_of_speech": "n",
+        "definition_en": "concentration of attention",
+        "meaning_vi": "sự tập trung"
+      },
+      {
+        "term": "active",
+        "ipa": "/ˈæk.tɪv/",
+        "part_of_speech": "adj",
+        "definition_en": "doing things requiring physical effort",
+        "meaning_vi": "tích cực, năng động"
+      },
+      {
+        "term": "alert",
+        "ipa": "/əˈlɜːt/",
+        "part_of_speech": "adj",
+        "definition_en": "able to think quickly",
+        "meaning_vi": "tỉnh táo, nhanh nhạy"
+      },
+      {
+        "term": "lifestyle",
+        "ipa": "/ˈlaɪf.staɪl/",
+        "part_of_speech": "n",
+        "definition_en": "the way in which one lives",
+        "meaning_vi": "lối sống, phong cách sống"
+      },
+      {
+        "term": "commute",
+        "ipa": "/kəˈmjuːt/",
+        "part_of_speech": "v",
+        "definition_en": "travel regularly to school/work",
+        "meaning_vi": "đi lại đều đặn hàng ngày"
+      },
+      {
+        "term": "healthy",
+        "ipa": "/ˈhel.θi/",
+        "part_of_speech": "adj",
+        "definition_en": "helping to produce good health",
+        "meaning_vi": "khỏe mạnh, lành mạnh"
+      },
+      {
+        "term": "timetable",
+        "ipa": "/ˈtaɪm.teɪ.bl̩/",
+        "part_of_speech": "n",
+        "definition_en": "list showing event times",
+        "meaning_vi": "thời khóa biểu"
+      },
+      {
+        "term": "prioritize",
+        "ipa": "/praɪˈɒr.ɪ.taɪz/",
+        "part_of_speech": "v",
+        "definition_en": "treat as more important",
+        "meaning_vi": "ưu tiên"
+      },
+      {
+        "term": "wellbeing",
+        "ipa": "/ˌwelˈbiː.ɪŋ/",
+        "part_of_speech": "n",
+        "definition_en": "state of comfort and health",
+        "meaning_vi": "sự khỏe mạnh, hạnh phúc"
+      },
+      {
+        "term": "distraction",
+        "ipa": "/dɪˈstræk.ʃən/",
+        "part_of_speech": "n",
+        "definition_en": "something taking attention away",
+        "meaning_vi": "sự xao nhãng, làm mất tập trung"
+      },
+      {
+        "term": "facilities",
+        "ipa": "/fəˈsɪl.ə.tiz/",
+        "part_of_speech": "n pl",
+        "definition_en": "buildings or equipment provided",
+        "meaning_vi": "cơ sở vật chất, tiện ích"
+      },
+      {
+        "term": "working memory",
+        "ipa": "/ˈwɜː.kɪŋ ˈmem.ər.i/",
+        "part_of_speech": "n phr",
+        "definition_en": "memory used temporarily",
+        "meaning_vi": "trí nhớ làm việc"
+      },
+      {
+        "term": "musical training",
+        "ipa": "/ˈmjuː.zɪ.kəl ˈtreɪ.nɪŋ/",
+        "part_of_speech": "n phr",
+        "definition_en": "learning to play an instrument",
+        "meaning_vi": "sự luyện tập âm nhạc"
+      },
+      {
+        "term": "cognitive",
+        "ipa": "/ˈkɒɡ.nə.tɪv/",
+        "part_of_speech": "adj",
+        "definition_en": "connected with mental learning",
+        "meaning_vi": "thuộc về nhận thức"
+      },
+      {
+        "term": "time management",
+        "ipa": "/ˈtaɪm ˈmæn.ɪdʒ.mənt/",
+        "part_of_speech": "n phr",
+        "definition_en": "ability to use time effectively",
+        "meaning_vi": "sự quản lý thời gian"
+      },
+      {
+        "term": "on track",
+        "ipa": "/ɒn træk/",
+        "part_of_speech": "phr",
+        "definition_en": "progressing as planned",
+        "meaning_vi": "đúng lịch trình, đi đúng hướng"
+      }
+    ]
+  },
+  "grammar": {
+    "grammar_blueprint": [
+      {
+        "question_no": 1,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "controlled choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "since-clause clue"
+      },
+      {
+        "question_no": 2,
+        "grammar_target": "relative clauses",
+        "question_type": "controlled choice",
+        "depth": "form",
+        "tested_dimension": "form/syntax",
+        "trap": "where vs which"
+      },
+      {
+        "question_no": 3,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "controlled choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "yesterday past indicator"
+      },
+      {
+        "question_no": 4,
+        "grammar_target": "relative clauses",
+        "question_type": "controlled choice",
+        "depth": "form",
+        "tested_dimension": "form/syntax",
+        "trap": "who vs which"
+      },
+      {
+        "question_no": 5,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "controlled choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "so far today clue"
+      },
+      {
+        "question_no": 6,
+        "grammar_target": "relative clauses",
+        "question_type": "controlled choice",
+        "depth": "context",
+        "tested_dimension": "syntax/punctuation",
+        "trap": "which vs that in non-defining"
+      },
+      {
+        "question_no": 7,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "controlled choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "three years ago past indicator"
+      },
+      {
+        "question_no": 8,
+        "grammar_target": "relative clauses",
+        "question_type": "controlled choice",
+        "depth": "form",
+        "tested_dimension": "form/syntax",
+        "trap": "where vs which"
+      },
+      {
+        "question_no": 9,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "controlled choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "past habit when he was child"
+      },
+      {
+        "question_no": 10,
+        "grammar_target": "relative clauses",
+        "question_type": "controlled choice",
+        "depth": "context",
+        "tested_dimension": "syntax/punctuation",
+        "trap": "which vs that non-defining subject"
+      },
+      {
+        "question_no": 11,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "up to now time clue"
+      },
+      {
+        "question_no": 12,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "last week time clue"
+      },
+      {
+        "question_no": 13,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "fixed past period from 2010 to 2020"
+      },
+      {
+        "question_no": 14,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "since finished university time clue"
+      },
+      {
+        "question_no": 15,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "yesterday time clue"
+      },
+      {
+        "question_no": 16,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "so far this month time clue"
+      },
+      {
+        "question_no": 17,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "intransitive verb happen active past"
+      },
+      {
+        "question_no": 18,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "known for five years present state"
+      },
+      {
+        "question_no": 19,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "in 2022 past indicator"
+      },
+      {
+        "question_no": 20,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "contextual choice",
+        "depth": "context",
+        "tested_dimension": "meaning/use",
+        "trap": "up to this point time clue"
+      },
+      {
+        "question_no": 21,
+        "grammar_target": "relative clauses",
+        "question_type": "error correction",
+        "depth": "context",
+        "tested_dimension": "syntax/punctuation",
+        "trap": "who for non-human subject"
+      },
+      {
+        "question_no": 22,
+        "grammar_target": "relative clauses",
+        "question_type": "error correction",
+        "depth": "form",
+        "tested_dimension": "form/syntax",
+        "trap": "which for human subject"
+      },
+      {
+        "question_no": 23,
+        "grammar_target": "relative clauses",
+        "question_type": "error correction",
+        "depth": "context",
+        "tested_dimension": "meaning/syntax",
+        "trap": "where for direct object of buy"
+      },
+      {
+        "question_no": 24,
+        "grammar_target": "relative clauses",
+        "question_type": "error correction",
+        "depth": "form",
+        "tested_dimension": "form/syntax",
+        "trap": "who for place object"
+      },
+      {
+        "question_no": 25,
+        "grammar_target": "relative clauses",
+        "question_type": "error correction",
+        "depth": "context",
+        "tested_dimension": "syntax/punctuation",
+        "trap": "that in non-defining comma boundary"
+      },
+      {
+        "question_no": 26,
+        "grammar_target": "relative clauses",
+        "question_type": "transformation",
+        "depth": "high",
+        "tested_dimension": "meaning_preservation",
+        "trap": "where preposition omission"
+      },
+      {
+        "question_no": 27,
+        "grammar_target": "relative clauses",
+        "question_type": "transformation",
+        "depth": "high",
+        "tested_dimension": "meaning_preservation",
+        "trap": "who subject pronoun inclusion"
+      },
+      {
+        "question_no": 28,
+        "grammar_target": "relative clauses",
+        "question_type": "transformation",
+        "depth": "high",
+        "tested_dimension": "meaning_preservation",
+        "trap": "which non-defining structure"
+      },
+      {
+        "question_no": 29,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "transformation",
+        "depth": "high",
+        "tested_dimension": "meaning_preservation",
+        "trap": "started past simple to present perfect for"
+      },
+      {
+        "question_no": 30,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "transformation",
+        "depth": "high",
+        "tested_dimension": "meaning_preservation",
+        "trap": "last visited past simple to present perfect since"
+      }
+    ],
+    "targets": [
+      {
+        "name": "Relative clauses (who/which/that/where)",
+        "level": "B1",
+        "reason": "Essential for complex sentence structures."
+      },
+      {
+        "name": "Present perfect vs past simple",
+        "level": "B1",
+        "reason": "Crucial for describing ongoing states vs finished past events."
+      }
+    ],
+    "guide": [
+      {
+        "heading": "#### 1. Relative Clauses (Mệnh đề quan hệ)",
+        "content": "Mệnh đề quan hệ được dùng để bổ sung thông tin cho một danh từ đi trước nó.\n- **Who**: Dùng làm chủ ngữ thay thế cho người.\n- **Which**: Dùng làm chủ ngữ hoặc tân ngữ thay thế cho vật.\n- **Where**: Dùng thay thế cho nơi chốn.\n- **That**: Có thể thay thế cho *who* hoặc *which* trong mệnh đề xác định (defining clause), nhưng KHÔNG được dùng trong mệnh đề không xác định (non-defining clause - có dấu phẩy)."
+      },
+      {
+        "heading": "#### 2. Present Perfect vs Past Simple (Thì Hiện tại hoàn thành vs Thì Quá khứ đơn)",
+        "content": "- **Past Simple (Quá khứ đơn)**: Dùng cho hành động đã kết thúc hoàn toàn trong quá khứ, có mốc thời gian cụ thể (ví dụ: *yesterday, last week, in 2022*).\n- **Present Perfect (Hiện tại hoàn thành)**: Dùng cho hành động bắt đầu trong quá khứ và vẫn tiếp diễn ở hiện tại, hoặc vừa hoàn thành tính đến nay (ví dụ: *since, for, so far today*)."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "trap": "Sử dụng 'that' trong mệnh đề quan hệ không xác định (có dấu phẩy).",
+        "wrong_example": "My study desk, that is new, helps me study.",
+        "correct_version": "My study desk, which is new, helps me study.",
+        "why_it_matters": "Không dùng 'that' sau dấu phẩy trong mệnh đề quan hệ."
+      },
+      {
+        "trap": "Sử dụng 'where' thay vì 'which' làm tân ngữ cho động từ cần tân ngữ trực tiếp.",
+        "wrong_example": "The school library where we visited yesterday was clean.",
+        "correct_version": "The school library which we visited yesterday was clean.",
+        "why_it_matters": "Động từ 'visit' cần một tân ngữ trực tiếp (visit something), do đó dùng 'which'."
+      },
+      {
+        "trap": "Nhầm lẫn giữa mốc thời gian hoàn thành (Quá khứ đơn) và thời gian kéo dài đến hiện tại (Hiện tại hoàn thành).",
+        "wrong_example": "I have planned my timetable three days ago.",
+        "correct_version": "I planned my timetable three days ago.",
+        "why_it_matters": "Từ 'ago' bắt buộc dùng thì Quá khứ đơn."
+      }
+    ],
+    "sections": [
+      {
+        "section_title": "Part A: Multiple Choice Questions",
+        "internal_question_start": 1,
+        "internal_question_end": 10,
+        "display_question_start": 1,
+        "display_question_end": 10,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Part B: Gap Fill Exercises",
+        "internal_question_start": 11,
+        "internal_question_end": 20,
+        "display_question_start": 11,
+        "display_question_end": 20,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Part C: Error Correction",
+        "internal_question_start": 21,
+        "internal_question_end": 25,
+        "display_question_start": 21,
+        "display_question_end": 25,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Part D: Sentence Combining",
+        "internal_question_start": 26,
+        "internal_question_end": 28,
+        "display_question_start": 26,
+        "display_question_end": 28,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Part E: Sentence Transformation",
+        "internal_question_start": 29,
+        "internal_question_end": 30,
+        "display_question_start": 29,
+        "display_question_end": 30,
+        "compiler_computed_range": true
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple choice",
+        "question": "We ________ our study habits since the beginning of this year.",
+        "options": [
+          "have improved",
+          "improved",
+          "improve",
+          "are improving"
+        ],
+        "correct_answer": "have improved",
+        "explanation_vi": "Trạng từ 'since' yêu cầu sử dụng thì Hiện tại hoàn thành.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "We have improved our study habits since the beginning of this year.",
+          "why_correct_is_unique": "Since dictates have improved.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "improved",
+              "reason": "Requires closed time frame."
+            },
+            {
+              "option": "improve",
+              "reason": "Simple present does not represent duration."
+            },
+            {
+              "option": "are improving",
+              "reason": "Temporary action focus."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "have improved",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 2,
+        "type": "multiple choice",
+        "question": "This is the study room ________ I write my daily timetable.",
+        "options": [
+          "where",
+          "which",
+          "who",
+          "when"
+        ],
+        "correct_answer": "where",
+        "explanation_vi": "'where' thay thế cho danh từ chỉ nơi chốn.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "This is the study room where I write my daily timetable.",
+          "why_correct_is_unique": "Where is the correct place adverbial.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "which",
+              "reason": "Requires a subject/object, but clause is complete."
+            },
+            {
+              "option": "who",
+              "reason": "Only for humans."
+            },
+            {
+              "option": "when",
+              "reason": "Only for time."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "where",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 3,
+        "type": "multiple choice",
+        "question": "Yesterday, Minh ________ his daily study plan to prepare for the test.",
+        "options": [
+          "created",
+          "has created",
+          "creates",
+          "was creating"
+        ],
+        "correct_answer": "created",
+        "explanation_vi": "'Yesterday' yêu cầu Quá khứ đơn.",
+        "difficulty": "easy",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Yesterday, Minh created his daily study plan to prepare for the test.",
+          "why_correct_is_unique": "Yesterday requires past simple.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "has created",
+              "reason": "Cannot use present perfect with specific past indicators."
+            },
+            {
+              "option": "creates",
+              "reason": "Simple present conflicts with past indicator."
+            },
+            {
+              "option": "was creating",
+              "reason": "Past continuous implies an action in progress rather than a simple fact."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "created",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 4,
+        "type": "multiple choice",
+        "question": "The learner ________ had the best morning habits won the scholarship.",
+        "options": [
+          "who",
+          "which",
+          "whom",
+          "where"
+        ],
+        "correct_answer": "who",
+        "explanation_vi": "'who' thay cho người làm chủ ngữ.",
+        "difficulty": "easy",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The learner who had the best morning habits won the scholarship.",
+          "why_correct_is_unique": "Who is the correct subject pronoun for a human.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "which",
+              "reason": "Only for non-humans."
+            },
+            {
+              "option": "whom",
+              "reason": "Used as object pronoun, but subject is needed."
+            },
+            {
+              "option": "where",
+              "reason": "Only for places."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "who",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 5,
+        "type": "multiple choice",
+        "question": "So far today, she ________ two hours organizing her study calendar.",
+        "options": [
+          "has spent",
+          "spent",
+          "spends",
+          "is spending"
+        ],
+        "correct_answer": "has spent",
+        "explanation_vi": "'So far today' yêu cầu Hiện tại hoàn thành.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "So far today, she has spent two hours organizing her study calendar.",
+          "why_correct_is_unique": "So far today requires present perfect.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "spent",
+              "reason": "Implies a completed past time window."
+            },
+            {
+              "option": "spends",
+              "reason": "Simple present does not represent accumulated time."
+            },
+            {
+              "option": "is spending",
+              "reason": "Focuses on the continuous progress rather than accumulated quantity."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "has spent",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 6,
+        "type": "multiple choice",
+        "question": "The study planner, ________ is my favorite study tool, helps me stay on track.",
+        "options": [
+          "which",
+          "who",
+          "where",
+          "that"
+        ],
+        "correct_answer": "which",
+        "explanation_vi": "Đây là mệnh đề quan hệ không xác định bổ nghĩa cho vật.",
+        "difficulty": "hard",
+        "cognitive_level": "register_control",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The study planner, which is my favorite study tool, helps me stay on track.",
+          "why_correct_is_unique": "Which is required in non-defining clause.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "who",
+              "reason": "Only for humans."
+            },
+            {
+              "option": "where",
+              "reason": "Where cannot act as a subject of is."
+            },
+            {
+              "option": "that",
+              "reason": "Cannot be used in non-defining clauses."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "which",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 7,
+        "type": "multiple choice",
+        "question": "Lisa ________ to a new school two months ago.",
+        "options": [
+          "moved",
+          "has moved",
+          "move",
+          "was moving"
+        ],
+        "correct_answer": "moved",
+        "explanation_vi": "'two months ago' yêu cầu Quá khứ đơn.",
+        "difficulty": "easy",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Lisa moved to a new school two months ago.",
+          "why_correct_is_unique": "Ago dictates past simple.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "has moved",
+              "reason": "Present perfect cannot be used with ago."
+            },
+            {
+              "option": "move",
+              "reason": "Simple present is incorrect for past events."
+            },
+            {
+              "option": "was moving",
+              "reason": "Past continuous implies an action in progress at a specific time."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "moved",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 8,
+        "type": "multiple choice",
+        "question": "The school library is a quiet space ________ students can study effectively.",
+        "options": [
+          "where",
+          "which",
+          "who",
+          "that"
+        ],
+        "correct_answer": "where",
+        "explanation_vi": "'where' thay thế cho danh từ chỉ nơi chốn.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The school library is a quiet space where students can study effectively.",
+          "why_correct_is_unique": "Where is the correct place adverbial.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "which",
+              "reason": "Requires a subject/object, but clause is complete."
+            },
+            {
+              "option": "who",
+              "reason": "Only for humans."
+            },
+            {
+              "option": "that",
+              "reason": "Similar to which, cannot act as adverbial here."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "where",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 9,
+        "type": "multiple choice",
+        "question": "He ________ the bus to school when he was a primary school student.",
+        "options": [
+          "took",
+          "has taken",
+          "takes",
+          "is taking"
+        ],
+        "correct_answer": "took",
+        "explanation_vi": "Chia Quá khứ đơn do mốc thời gian quá khứ chấm dứt.",
+        "difficulty": "easy",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "He took the bus to school when he was a primary school student.",
+          "why_correct_is_unique": "Past narrative time dictates took.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "has taken",
+              "reason": "Present perfect is incorrect in completed past context."
+            },
+            {
+              "option": "takes",
+              "reason": "Simple present conflicts with past clause."
+            },
+            {
+              "option": "is taking",
+              "reason": "Present continuous is incorrect."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "took",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 10,
+        "type": "multiple choice",
+        "question": "The timetable, ________ hangs on my wall, helps me plan my routines.",
+        "options": [
+          "which",
+          "that",
+          "where",
+          "whom"
+        ],
+        "correct_answer": "which",
+        "explanation_vi": "Dùng 'which' thay cho vật làm chủ ngữ trong mệnh đề không xác định.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The timetable, which hangs on my wall, helps me plan my routines.",
+          "why_correct_is_unique": "Which is required to substitute for thing subject in non-defining clause.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "that",
+              "reason": "That cannot follow commas in non-defining clauses."
+            },
+            {
+              "option": "where",
+              "reason": "Where cannot act as a subject."
+            },
+            {
+              "option": "whom",
+              "reason": "Only for humans."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "which",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 11,
+        "type": "gap fill",
+        "question": "Up to now, they ________ (not decide) which study habit to adopt.",
+        "options": [],
+        "correct_answer": "have not decided",
+        "explanation_vi": "'Up to now' yêu cầu Hiện tại hoàn thành phủ định.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Up to now, they have not decided which study habit to adopt.",
+          "why_correct_is_unique": "Up to now requires present perfect.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "have not decided",
+          "alternative_answers_allowed": [
+            "haven't decided"
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 12,
+        "type": "gap fill",
+        "question": "Last week, I ________ (buy) a new study planner to organize my calendar.",
+        "options": [],
+        "correct_answer": "bought",
+        "explanation_vi": "'Last week' yêu cầu Quá khứ đơn.",
+        "difficulty": "easy",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Last week, I bought a new study planner to organize my calendar.",
+          "why_correct_is_unique": "Last week requires past simple.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "bought",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 13,
+        "type": "gap fill",
+        "question": "She ________ (plan) her study timetable for five years, from 2015 to 2020.",
+        "options": [],
+        "correct_answer": "planned",
+        "explanation_vi": "Khoảng thời gian đã kết thúc trong quá khứ chia Quá khứ đơn.",
+        "difficulty": "hard",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "She planned her study timetable for five years, from 2015 to 2020.",
+          "why_correct_is_unique": "The past closed window requires planned.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "planned",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 14,
+        "type": "gap fill",
+        "question": "Lisa ________ (be) on track with her daily routine since she started secondary school.",
+        "options": [],
+        "correct_answer": "has been",
+        "explanation_vi": "'since' yêu cầu mệnh đề chính chia ở Hiện tại hoàn thành.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Lisa has been on track with her daily routine since she started secondary school.",
+          "why_correct_is_unique": "Since dictates has been.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "has been",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 15,
+        "type": "gap fill",
+        "question": "Yesterday, they ________ (commute) to the city library to study in a quiet room.",
+        "options": [],
+        "correct_answer": "commuted",
+        "explanation_vi": "'Yesterday' yêu cầu Quá khứ đơn.",
+        "difficulty": "easy",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Yesterday, they commuted to the city library to study in a quiet room.",
+          "why_correct_is_unique": "Yesterday requires past simple commuted.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "commuted",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 16,
+        "type": "gap fill",
+        "question": "So far this month, my teacher ________ (give) us three tips for time management.",
+        "options": [],
+        "correct_answer": "has given",
+        "explanation_vi": "'So far this month' yêu cầu Hiện tại hoàn thành.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "So far this month, my teacher has given us three tips for time management.",
+          "why_correct_is_unique": "So far this month requires present perfect has given.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "has given",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 17,
+        "type": "gap fill",
+        "question": "Three days ago, a change in my study routine ________ (happen) suddenly.",
+        "options": [],
+        "correct_answer": "happened",
+        "explanation_vi": "'Three days ago' yêu cầu Quá khứ đơn (happen là nội động từ).",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Three days ago, a change in my study routine happened suddenly.",
+          "why_correct_is_unique": "Three days ago requires past simple happened.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "happened",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 18,
+        "type": "gap fill",
+        "question": "I ________ (know) my study partner for five years, and we still review lessons together.",
+        "options": [],
+        "correct_answer": "have known",
+        "explanation_vi": "'for five years' đi kèm động từ chỉ trạng thái chia Hiện tại hoàn thành.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "I have known my study partner for five years, and we still review lessons together.",
+          "why_correct_is_unique": "Stative verb know requires present perfect.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "have known",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 19,
+        "type": "gap fill",
+        "question": "In 2022, the school ________ (renovate) the quiet study spaces.",
+        "options": [],
+        "correct_answer": "renovated",
+        "explanation_vi": "'In 2022' chỉ mốc thời gian quá khứ đóng.",
+        "difficulty": "easy",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "In 2022, the school renovated the quiet study spaces.",
+          "why_correct_is_unique": "In 2022 is a completed past moment requiring renovated.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "renovated",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 20,
+        "type": "gap fill",
+        "question": "Up to this point, Minh ________ (not finish) the daily planning.",
+        "options": [],
+        "correct_answer": "has not finished",
+        "explanation_vi": "'Up to this point' yêu cầu Hiện tại hoàn thành phủ định.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Up to this point, Minh has not finished the daily planning.",
+          "why_correct_is_unique": "Up to this point requires has not finished.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "has not finished",
+          "alternative_answers_allowed": [
+            "hasn't finished"
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 21,
+        "type": "error correction",
+        "question": "Correct the error: The study planner who was on my desk is blue.",
+        "options": [],
+        "correct_answer": "The study planner which was on my desk is blue.",
+        "explanation_vi": "'study planner' chỉ vật, sửa 'who' thành 'which'.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The study planner which was on my desk is blue.",
+          "why_correct_is_unique": "Which is correct relative pronoun for thing subject.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "The study planner which was on my desk is blue.",
+          "alternative_answers_allowed": [
+            "The study planner that was on my desk is blue."
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The study planner who was on my desk is blue.",
+          "corrected_sentence": "The study planner which was on my desk is blue.",
+          "target_error_text": "who",
+          "target_error_type": "relative pronoun choice",
+          "correction_text": "which",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 22,
+        "type": "error correction",
+        "question": "Correct the error: This is the teenager which managed his study time well.",
+        "options": [],
+        "correct_answer": "This is the teenager who managed his study time well.",
+        "explanation_vi": "'teenager' chỉ người, sửa 'which' thành 'who'.",
+        "difficulty": "easy",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "This is the teenager who managed his study time well.",
+          "why_correct_is_unique": "Who is required for human subjects.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "This is the teenager who managed his study time well.",
+          "alternative_answers_allowed": [
+            "This is the teenager that managed his study time well."
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "This is the teenager which managed his study time well.",
+          "corrected_sentence": "This is the teenager who managed his study time well.",
+          "target_error_text": "which",
+          "target_error_type": "relative pronoun choice",
+          "correction_text": "who",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 23,
+        "type": "error correction",
+        "question": "Correct the error: The room where we cleaned yesterday is quiet.",
+        "options": [],
+        "correct_answer": "The room which we cleaned yesterday is quiet.",
+        "explanation_vi": "'clean' là ngoại động từ cần tân ngữ trực tiếp, dùng 'which'.",
+        "difficulty": "hard",
+        "cognitive_level": "precision_editing",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The room which we cleaned yesterday is quiet.",
+          "why_correct_is_unique": "Which is needed as the direct object.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "The room which we cleaned yesterday is quiet.",
+          "alternative_answers_allowed": [
+            "The room that we cleaned yesterday is quiet."
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The room where we cleaned yesterday is quiet.",
+          "corrected_sentence": "The room which we cleaned yesterday is quiet.",
+          "target_error_text": "where",
+          "target_error_type": "relative adverb vs pronoun",
+          "correction_text": "which",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 24,
+        "type": "error correction",
+        "question": "Correct the error: This is the park who we visited after school.",
+        "options": [],
+        "correct_answer": "This is the park which we visited after school.",
+        "explanation_vi": "'the park' chỉ địa điểm/vật, sửa 'who' thành 'which'.",
+        "difficulty": "easy",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "This is the park which we visited after school.",
+          "why_correct_is_unique": "Which is required for non-human noun park.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "This is the park which we visited after school.",
+          "alternative_answers_allowed": [
+            "This is the park that we visited after school."
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "This is the park who we visited after school.",
+          "corrected_sentence": "This is the park which we visited after school.",
+          "target_error_text": "who",
+          "target_error_type": "relative pronoun choice",
+          "correction_text": "which",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 25,
+        "type": "error correction",
+        "question": "Correct the error: Minh, that is an active teenager, plans his day.",
+        "options": [],
+        "correct_answer": "Minh, who is an active teenager, plans his day.",
+        "explanation_vi": "Không dùng 'that' trong mệnh đề quan hệ không xác định.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Minh, who is an active teenager, plans his day.",
+          "why_correct_is_unique": "Who is required since that is banned after commas.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "Minh, who is an active teenager, plans his day.",
+          "alternative_answers_allowed": []
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "Minh, that is an active teenager, plans his day.",
+          "corrected_sentence": "Minh, who is an active teenager, plans his day.",
+          "target_error_text": "that",
+          "target_error_type": "that in non-defining clause",
+          "correction_text": "who",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 26,
+        "type": "Sentence Combining",
+        "question": "Combine these sentences using a relative clause with 'where': The library is quiet. Students study in it.",
+        "options": [],
+        "correct_answer": "The library where students study is quiet.",
+        "explanation_vi": "'where' thay thế cho 'in it' để liên kết mệnh đề địa điểm.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The library where students study is quiet.",
+          "why_correct_is_unique": "Where merges in it.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "The library where students study is quiet.",
+          "alternative_answers_allowed": [
+            "The library in which students study is quiet."
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 27,
+        "type": "Sentence Combining",
+        "question": "Combine these sentences using a relative clause with 'who': I met a teacher. She helps me manage my time.",
+        "options": [],
+        "correct_answer": "I met a teacher who helps me manage my time.",
+        "explanation_vi": "'who' thay thế cho chủ ngữ chỉ người 'She'.",
+        "difficulty": "easy",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "I met a teacher who helps me manage my time.",
+          "why_correct_is_unique": "Who replaces S pronoun She.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "I met a teacher who helps me manage my time.",
+          "alternative_answers_allowed": [
+            "I met a teacher that helps me manage my time."
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 28,
+        "type": "Sentence Combining",
+        "question": "Combine these sentences using a relative clause with 'which': The routine is helpful. It includes early morning exercise.",
+        "options": [],
+        "correct_answer": "The routine which includes early morning exercise is helpful.",
+        "explanation_vi": "'which' thay thế cho chủ ngữ chỉ vật 'It'.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "independent",
+        "target_structure": "relative clauses",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The routine which includes early morning exercise is helpful.",
+          "why_correct_is_unique": "Which replaces subject It.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "The routine which includes early morning exercise is helpful.",
+          "alternative_answers_allowed": [
+            "The routine that includes early morning exercise is helpful."
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 29,
+        "type": "Sentence Transformation",
+        "question": "Rewrite the sentence using the present perfect with 'for': They started using a study calendar two years ago.",
+        "options": [],
+        "correct_answer": "They have used a study calendar for two years.",
+        "explanation_vi": "Chuyển từ quá khứ đơn sang Hiện tại hoàn thành với 'for'.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "They have used a study calendar for two years.",
+          "why_correct_is_unique": "Started ... ago transforms to present perfect + for.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "They have used a study calendar for two years.",
+          "alternative_answers_allowed": [
+            "They've used a study calendar for two years."
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      },
+      {
+        "id": 30,
+        "type": "Sentence Transformation",
+        "question": "Rewrite the sentence using present perfect: I last revised my timetable in 2025.",
+        "options": [],
+        "correct_answer": "I have not revised my timetable since 2025.",
+        "explanation_vi": "Chuyển mốc thời gian cuối cùng sang Hiện tại hoàn thành phủ định với 'since'.",
+        "difficulty": "hard",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "I have not revised my timetable since 2025.",
+          "why_correct_is_unique": "Last revised in 2025 means no revision since 2025.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "I have not revised my timetable since 2025.",
+          "alternative_answers_allowed": [
+            "I haven't revised my timetable since 2025."
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "",
+          "corrected_sentence": "",
+          "target_error_text": "",
+          "target_error_type": "",
+          "correction_text": "",
+          "original_contains_error": false,
+          "corrected_differs_from_original": false,
+          "exactly_one_target_error": false,
+          "explanation_matches_error": false
+        }
+      }
+    ]
+  },
+  "writing": {
+    "tasks": [
+      {
+        "id": 1,
+        "task_type": "Word Ordering",
+        "prompt": "Arrange the words to make a correct sentence: routine / morning / A / student / helps / focus / a / .",
+        "target_length": "1 sentence",
+        "focus_skill": "Sentence structure",
+        "useful_language": [],
+        "success_criteria": [
+          "Correct word order",
+          "Proper capitalization and punctuation"
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 2,
+        "task_type": "Sentence Completion",
+        "prompt": "Complete the sentence in your own words (write about 15-20 words): Managing time with a planner is ________ than doing it without one because...",
+        "target_length": "1 sentence",
+        "focus_skill": "Using comparatives",
+        "useful_language": [
+          "easier",
+          "more effective",
+          "helps",
+          "because"
+        ],
+        "success_criteria": [
+          "Correct comparative grammar",
+          "Clear explanation of time management benefits"
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 3,
+        "task_type": "Guided Email",
+        "prompt": "Write a short email (40-60 words) to your cousin. Describe your daily study routine and what habits help you stay focused.",
+        "target_length": "short paragraph (40-60 words)",
+        "focus_skill": "Describing routines",
+        "useful_language": [
+          "Hi [Name],",
+          "My daily routine is",
+          "I prioritize",
+          "helps me stay on track"
+        ],
+        "success_criteria": [
+          "Identify at least 1 study habit",
+          "Mention morning or evening planning",
+          "Proper email formatting"
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 4,
+        "task_type": "Visual Data Description",
+        "prompt": "Write a short comparison (30-45 words) based on the table below showing the daily hours spent by Minh and Lisa.",
+        "target_length": "short paragraph (30-45 words)",
+        "focus_skill": "Comparing quantities",
+        "useful_language": [
+          "more hours",
+          "less sleep",
+          "while",
+          "in contrast"
+        ],
+        "success_criteria": [
+          "Correctly compare study and sleep hours",
+          "State at least one specific number from the table"
+        ],
+        "visual_data": {
+          "type": "markdown_table",
+          "content": "| Activity | Minh (Daily hours) | Lisa (Daily hours) |\n| --- | --- | --- |\n| Homework | 3 | 1 |\n| Sleep | 8 | 9 |\n| Exercise | 1 | 2 |"
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 5,
+        "task_type": "Short Paragraph Description",
+        "prompt": "Write a short paragraph (50-70 words) explaining the advantages of physical exercise in the morning for high school students.",
+        "target_length": "short paragraph (50-70 words)",
+        "focus_skill": "Explaining advantages",
+        "useful_language": [
+          "An advantage of",
+          "Moreover,",
+          "feel more alert",
+          "better productivity"
+        ],
+        "success_criteria": [
+          "State at least 2 benefits of exercise",
+          "Cohesive paragraph flow",
+          "Appropriate word count"
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      }
+    ]
+  },
+  "answers": {
+    "reading_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "True",
+        "question_type": "True/False/Not Given",
+        "evidence_quote": "When students start their day early and plan their activities, they feel more in control.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Đoạn 1 nêu việc lập kế hoạch hoạt động buổi sáng giúp học sinh cảm thấy kiểm soát tốt hơn, trùng khớp với câu hỏi.",
+        "why_others_wrong_vi": "Không áp dụng cho True/False/Not Given.",
+        "depth_check_vi": "Đối chiếu thông tin tương đồng.",
+        "tip_vi": "Tìm các từ khóa 'morning routine' và 'in control' ở đoạn 1.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "Not Given",
+        "question_type": "True/False/Not Given",
+        "evidence_quote": "Many students have to commute [R] to school by bus or bicycle.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Bài đọc liệt kê xe đạp và xe buýt, hoàn toàn không so sánh tốc độ của chúng.",
+        "why_others_wrong_vi": "Không áp dụng.",
+        "depth_check_vi": "Xác định thông tin so sánh thiếu.",
+        "tip_vi": "Mới so sánh không có trong bài đều là Not Given.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "False",
+        "question_type": "True/False/Not Given",
+        "evidence_quote": "In contrast, studying in noisy environments reduces focus.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Bài đọc ghi học ở nơi ồn ào làm giảm tập trung, trái ngược với nhận định học sinh học tốt hơn.",
+        "why_others_wrong_vi": "Không áp dụng.",
+        "depth_check_vi": "Đối chiếu thông tin tương phản.",
+        "tip_vi": "Nhận diện từ trái nghĩa: 'study better' vs 'reduces focus'.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "Not Given",
+        "question_type": "True/False/Not Given",
+        "evidence_quote": "Overall, a balanced daily routine helps students keep their study schedule on track.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Bài đọc chỉ nói thói quen giúp đi đúng hướng, không đề cập việc họ có bao giờ phạm sai lầm khi lập thời khóa biểu hay không.",
+        "why_others_wrong_vi": "Không áp dụng.",
+        "depth_check_vi": "Xác định thông tin thiếu.",
+        "tip_vi": "Nếu thông tin quá chi tiết hoặc võ đoán, hãy chọn Not Given.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "True",
+        "question_type": "True/False/Not Given",
+        "evidence_quote": "Successful students often spend their break times in quiet study areas or libraries.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Đoạn 3 viết học sinh tự học ở thư viện hoặc khu vực yên tĩnh, tương đương nhận định.",
+        "why_others_wrong_vi": "Không áp dụng.",
+        "depth_check_vi": "Đối chiếu tương đương.",
+        "tip_vi": "Thư viện trường học được xếp vào nhóm phòng tự học yên tĩnh.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "lifestyle",
+        "question_type": "Gap Fill",
+        "evidence_quote": "Having a structured morning routine is essential for a successful student lifestyle [R].",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Từ cần điền là danh từ 'lifestyle' ở cuối câu đầu tiên đoạn 1.",
+        "why_others_wrong_vi": "Không áp dụng cho Gap Fill.",
+        "depth_check_vi": "Nhận biết thông tin trực tiếp.",
+        "tip_vi": "Đọc kỹ câu đầu của đoạn 1.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "sleep",
+        "question_type": "Gap Fill",
+        "evidence_quote": "In addition to planning, daily physical activity and healthy sleep patterns are very important.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Từ cần điền là danh từ 'sleep' đứng trước 'patterns' ở đầu đoạn 2.",
+        "why_others_wrong_vi": "Không áp dụng.",
+        "depth_check_vi": "Nhận biết danh từ ghép bổ nghĩa.",
+        "tip_vi": "Tìm từ khóa 'patterns' ở đoạn 2.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "memory",
+        "question_type": "Gap Fill",
+        "evidence_quote": "Adequate sleep also improves their working memory [R] and cognitive [R] development",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Từ cần điền là 'memory' trong cụm 'working memory' được cải thiện nhờ ngủ đủ giấc.",
+        "why_others_wrong_vi": "Không áp dụng.",
+        "depth_check_vi": "Nhận biết cụm danh từ cố định.",
+        "tip_vi": "Tìm từ đi kèm sau từ 'working' ở đoạn 2.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "libraries",
+        "question_type": "Gap Fill",
+        "evidence_quote": "Successful students often spend their break times in quiet study areas or libraries.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Từ cần điền là danh từ số nhiều 'libraries' (thư viện), nơi học tập yên tĩnh của học sinh ở đoạn 3.",
+        "why_others_wrong_vi": "Không áp dụng.",
+        "depth_check_vi": "Nhận diện danh từ song song.",
+        "tip_vi": "Thư viện (libraries) được nối bằng từ 'or' sau 'study areas' ở đoạn 3.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "B",
+        "question_type": "Multiple Choice",
+        "evidence_quote": "A good habit is to review the daily schedule before school begins.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Đoạn 1 nêu thói quen tốt là xem lại lịch trình trước khi đi học.",
+        "why_others_wrong_vi": "A, C, D sai vì chúng là các hành động đi học bằng xe buýt hoặc học ở phòng ồn, không phải thói quen lập kế hoạch được khuyên.",
+        "depth_check_vi": "Mức độ nhận biết thông tin trực tiếp.",
+        "tip_vi": "Tìm các từ khóa 'good habit' và 'before school' ở đoạn 1.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "A",
+        "question_type": "Multiple Choice",
+        "evidence_quote": "Many students have to commute [R] to school by bus or bicycle.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Đoạn 2 nêu nhiều học sinh đi học bằng xe buýt hoặc xe đạp.",
+        "why_others_wrong_vi": "B sai vì đi bộ chỉ là thể dục sáng. C và D không được nhắc đến làm phương tiện đi học.",
+        "depth_check_vi": "Nhận biết thông tin trực tiếp.",
+        "tip_vi": "Tìm từ khóa 'commute' và các phương tiện di chuyển ở đoạn 2.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "B",
+        "question_type": "Multiple Choice",
+        "evidence_quote": "If they include a short walk or stretch in their morning routine, they feel more alert and ready to learn.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Tập thể dục nhẹ (walk or stretch) giúp học sinh tỉnh táo và sẵn sàng học tập.",
+        "why_others_wrong_vi": "A đi ngược thực tế. C và D sai lệch thông tin trong bài viết.",
+        "depth_check_vi": "Học sinh cần liên kết 'movement' với 'walk or stretch' và 'prepared' với 'ready'.",
+        "tip_vi": "Nhận diện từ đồng nghĩa trong câu hỏi và bài đọc.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "B",
+        "question_type": "Multiple Choice",
+        "evidence_quote": "Finally, using school facilities [R] effectively plays a major role in time management.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Mục đích của đoạn 3 là so sánh và giải thích không gian yên tĩnh của các tiện ích trường học giúp quản lý thời gian hiệu quả.\n\n**QUY TRÌNH TƯ DUY 3 BƯỚC (Thinking Process):**\n1. *Bước 1 (Phân tích câu hỏi)*: Hỏi về mục đích chính của đoạn 3.\n2. *Bước 2 (Xem xét thông tin đoạn 3)*: Tác giả nhấn mạnh việc sử dụng cơ sở vật chất (thư viện, phòng tự học) một cách hiệu quả để học bài không xao nhãng.\n3. *Bước 3 (Chọn đáp án)*: Phương án B biểu thị hoàn hảo mục đích so sánh này. Các phương án khác mang tính cực đoan hoặc lạc đề.",
+        "why_others_wrong_vi": "A sai do tính cực đoan 'only'. C đi ngược lại bài đọc. D lạc đề (nhắc ở đoạn khác).",
+        "depth_check_vi": "Đọc hiểu sâu (writer purpose) tổng hợp toàn đoạn.",
+        "tip_vi": "Đọc kỹ câu mở đầu và câu kết của đoạn văn để tìm ý chính.",
+        "stretch_note": ""
+      }
+    ],
+    "grammar_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "have improved",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Hiện tại hoàn thành (have/has + V3/ed). Diễn tả hành động bắt đầu trong quá khứ kéo dài đến hiện tại.",
+        "use_in_context_vi": "Trạng từ 'since' chỉ mốc thời gian bắt đầu hành động.",
+        "trap_logic_vi": "Học sinh dễ chọn quá khứ đơn nếu bỏ qua từ 'since'.",
+        "why_others_wrong_vi": "improved yêu cầu thời gian đóng. improve và are improving thuộc nhóm hiện tại không đi với since.",
+        "depth_check_vi": "Phân biệt cách dùng dựa trên trạng ngữ chỉ thời gian.",
+        "analysis_vi": "Trạng từ 'since' ở đầu câu là dấu hiệu bắt buộc phải chia động từ ở thì Hiện tại hoàn thành 'have improved'.",
+        "tip_vi": "Cứ thấy 'since' đi với mốc thời gian là chia Hiện tại hoàn thành.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "where",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Trạng từ quan hệ 'where' thay thế cho danh từ nơi chốn, tương đương 'in/at which'.",
+        "use_in_context_vi": "Mệnh đề sau 'where' đầy đủ chủ ngữ và tân ngữ.",
+        "trap_logic_vi": "Nhầm dùng 'which' cho mọi danh từ chỉ vật.",
+        "why_others_wrong_vi": "which chỉ làm chủ ngữ/tân ngữ trực tiếp, mà mệnh đề đã đầy đủ. who cho người và when cho thời gian đều sai nghĩa.",
+        "depth_check_vi": "Phân biệt trạng từ quan hệ vs đại từ quan hệ.",
+        "analysis_vi": "Danh từ trước là 'study room' chỉ địa điểm, mệnh đề sau đầy đủ thành phần câu nên chọn 'where'.",
+        "tip_vi": "Mệnh đề quan hệ hoàn chỉnh sau danh từ nơi chốn dùng 'where'.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "created",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Quá khứ đơn (V2/ed) biểu thị hành động đã kết thúc.",
+        "use_in_context_vi": "Yesterday là mốc thời gian quá khứ đã hoàn thành.",
+        "trap_logic_vi": "Tránh nhầm dùng Hiện tại hoàn thành.",
+        "why_others_wrong_vi": "has created không dùng với yesterday. creates và was creating sai thời điểm.",
+        "depth_check_vi": "Nhận biết thời gian xác định đã qua.",
+        "analysis_vi": "Trạng từ 'Yesterday' khóa thời gian ở quá khứ đơn, động từ 'create' có quy tắc chuyển thành 'created'.",
+        "tip_vi": "Yesterday là dấu hiệu điển hình của thì Quá khứ đơn.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "who",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Đại từ quan hệ 'who' thay cho người làm chủ ngữ.",
+        "use_in_context_vi": "Thay thế cho 'The learner' làm chủ ngữ cho 'had'.",
+        "trap_logic_vi": "Bẫy chọn 'which' hoặc 'whom'.",
+        "why_others_wrong_vi": "which cho vật. whom làm tân ngữ. where cho địa điểm.",
+        "depth_check_vi": "Xác định chủ ngữ chỉ người trong mệnh đề.",
+        "analysis_vi": "Đứng trước động từ 'had' làm chủ ngữ bổ nghĩa cho 'The learner' (người) nên dùng 'who'.",
+        "tip_vi": "Khoảng trống trước động từ và sau danh từ chỉ người dùng 'who'.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "has spent",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Hiện tại hoàn thành chỉ lượng thời gian tích lũy tính đến nay.",
+        "use_in_context_vi": "'So far today' chỉ khoảng thời gian hiện tại chưa kết thúc.",
+        "trap_logic_vi": "Chọn nhầm quá khứ đơn 'spent'.",
+        "why_others_wrong_vi": "spent yêu cầu thời gian đã qua hoàn toàn. spends và is spending không biểu thị lượng tích lũy.",
+        "depth_check_vi": "Nhận biết trạng từ tích lũy.",
+        "analysis_vi": "Cụm 'So far today' yêu cầu chia Hiện tại hoàn thành, chủ ngữ 'she' số ít đi với 'has spent'.",
+        "tip_vi": "'So far' luôn đi với Hiện tại hoàn thành.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "which",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Mệnh đề quan hệ không xác định bổ nghĩa cho vật.",
+        "use_in_context_vi": "'planner' là vật, mệnh đề nằm giữa hai dấu phẩy, chọn 'which'.",
+        "trap_logic_vi": "Dùng 'that' sau dấu phẩy.",
+        "why_others_wrong_vi": "that không dùng trong mệnh đề có dấu phẩy. who cho người và where không làm chủ ngữ.",
+        "depth_check_vi": "Nhận biết các giới hạn của mệnh đề không xác định.",
+        "analysis_vi": "Danh từ 'The study planner' chỉ vật, mệnh đề quan hệ có dấu phẩy làm chủ ngữ của 'is' nên dùng 'which'.",
+        "tip_vi": "Tuyệt đối không dùng 'that' sau dấu phẩy trong mệnh đề quan hệ.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "moved",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Quá khứ đơn của 'move'.",
+        "use_in_context_vi": "'two months ago' yêu cầu quá khứ đơn.",
+        "trap_logic_vi": "Nhầm dùng Hiện tại hoàn thành.",
+        "why_others_wrong_vi": "has moved không dùng với ago. move và was moving sai nghĩa.",
+        "depth_check_vi": "Nhận biết mốc thời gian quá khứ.",
+        "analysis_vi": "Cụm 'two months ago' chỉ mốc thời gian xác định đã hoàn thành, động từ chia quá khứ đơn 'moved'.",
+        "tip_vi": "'ago' luôn đi với thì Quá khứ đơn.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "where",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Trạng từ quan hệ 'where' thay cho nơi chốn.",
+        "use_in_context_vi": "'a quiet space' là địa điểm, mệnh đề sau đầy đủ thành phần.",
+        "trap_logic_vi": "Nhầm dùng 'which'.",
+        "why_others_wrong_vi": "which cần khoảng trống làm chủ ngữ/tân ngữ. who cho người và that không phù hợp.",
+        "depth_check_vi": "Phân biệt trạng từ quan hệ nơi chốn.",
+        "analysis_vi": "Mệnh đề sau ô trống hoàn chỉnh nên dùng 'where' để bổ nghĩa cho 'a quiet space'.",
+        "tip_vi": "Mệnh đề quan hệ hoàn chỉnh sau danh từ nơi chốn dùng 'where'.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "took",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Quá khứ đơn bất quy tắc của 'take' thành 'took'.",
+        "use_in_context_vi": "'when he was a primary school student' chỉ thời gian đã chấm dứt.",
+        "trap_logic_vi": "Nhầm chia Hiện tại hoàn thành.",
+        "why_others_wrong_vi": "has taken không dùng với mệnh đề quá khứ xác định. takes và is taking sai thời điểm.",
+        "depth_check_vi": "Nhận biết dòng thời gian quá khứ đóng.",
+        "analysis_vi": "Mệnh đề chỉ thời gian quá khứ đã qua đòi hỏi động từ chia quá khứ đơn 'took'.",
+        "tip_vi": "Cấu trúc 'when S + was + ...' là dấu hiệu chia Quá khứ đơn ở mệnh đề chính.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "which",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Mệnh đề quan hệ không xác định làm chủ ngữ chỉ vật.",
+        "use_in_context_vi": "'The timetable' chỉ vật, mệnh đề có dấu phẩy dùng 'which' làm chủ ngữ của 'hangs'.",
+        "trap_logic_vi": "Dùng 'that' sau dấu phẩy hoặc 'where'.",
+        "why_others_wrong_vi": "that không đi sau dấu phẩy. where không làm chủ ngữ. whom cho người.",
+        "depth_check_vi": "Nhận diện mệnh đề quan hệ không xác định có chủ ngữ chỉ vật.",
+        "analysis_vi": "Mệnh đề quan hệ bổ nghĩa cho 'The timetable' (vật) ngăn cách bởi dấu phẩy đòi hỏi dùng 'which' làm chủ ngữ.",
+        "tip_vi": "Dấu phẩy xuất hiện xung quanh mệnh đề quan hệ loại trừ phương án 'that'.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "have not decided",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Hiện tại hoàn thành phủ định (have/has not + V3/ed).",
+        "use_in_context_vi": "'Up to now' yêu cầu chia Hiện tại hoàn thành.",
+        "trap_logic_vi": "Nhầm chia quá khứ đơn.",
+        "why_others_wrong_vi": "Chỉ có Hiện tại hoàn thành mới đi với Up to now.",
+        "depth_check_vi": "Nhận biết trạng từ chỉ thời gian kéo dài đến nay.",
+        "analysis_vi": "Trạng từ 'Up to now' chỉ thời gian kéo dài đòi hỏi Hiện tại hoàn thành phủ định. Chủ ngữ 'they' số nhiều đi với 'have not decided'.",
+        "tip_vi": "'Up to now' đi với Hiện tại hoàn thành.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "bought",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Quá khứ đơn bất quy tắc của 'buy' thành 'bought'.",
+        "use_in_context_vi": "'Last week' yêu cầu chia quá khứ đơn.",
+        "trap_logic_vi": "Nhầm chia Hiện tại hoàn thành.",
+        "why_others_wrong_vi": "Last week khóa ngữ cảnh ở quá khứ, loại trừ Hiện tại hoàn thành.",
+        "depth_check_vi": "Nhận biết mốc thời gian quá khứ xác định.",
+        "analysis_vi": "'Last week' là thời điểm quá khứ đã kết thúc, chia quá khứ đơn 'bought'.",
+        "tip_vi": "'Last + thời gian' chia Quá khứ đơn.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "planned",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Quá khứ đơn biểu thị hành động khép kín.",
+        "use_in_context_vi": "'from 2015 to 2020' khóa khoảng thời gian trong quá khứ.",
+        "trap_logic_vi": "Bẫy từ 'for' làm nhầm chia Hiện tại hoàn thành.",
+        "why_others_wrong_vi": "Hiện tại hoàn thành không thể dùng khi thời gian đã kết thúc hoàn toàn.",
+        "depth_check_vi": "Xử lý xung đột giữa 'for' và giới hạn thời gian quá khứ đóng.",
+        "analysis_vi": "Mặc dù có 'for five years', hành động được định vị rõ trong khoảng thời gian đã qua hoàn toàn ('from 2015 to 2020'), chia quá khứ đơn 'planned'.",
+        "tip_vi": "Khi 'for + khoảng thời gian' đi kèm mốc thời gian quá khứ đã đóng, dùng Quá khứ đơn.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 14,
+        "correct_answer": "has been",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Hiện tại hoàn thành của 'be' thành 'has been'.",
+        "use_in_context_vi": "Mệnh đề sau 'since' chia quá khứ đơn, mệnh đề chính chia Hiện tại hoàn thành.",
+        "trap_logic_vi": "Nhầm chia quá khứ đơn 'was'.",
+        "why_others_wrong_vi": "Quá khứ đơn không tương thích với cấu trúc since kéo dài.",
+        "depth_check_vi": "Kiểm tra tính kết hợp của cấu trúc since.",
+        "analysis_vi": "Mệnh đề sau since chia quá khứ đơn, mệnh đề chính chia Hiện tại hoàn thành. Chủ ngữ 'Lisa' đi với 'has been'.",
+        "tip_vi": "S + Hiện tại hoàn thành + since + S + Quá khứ đơn.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 15,
+        "correct_answer": "commuted",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Quá khứ đơn động từ có quy tắc.",
+        "use_in_context_vi": "'Yesterday' yêu cầu chia quá khứ đơn.",
+        "trap_logic_vi": "Nhầm chia Hiện tại hoàn thành.",
+        "why_others_wrong_vi": "Chỉ có quá khứ đơn mới đi với yesterday.",
+        "depth_check_vi": "Nhận biết thời gian quá khứ đơn.",
+        "analysis_vi": "'Yesterday' là thời gian xác định đã kết thúc, chia quá khứ đơn 'commuted'.",
+        "tip_vi": "Yesterday chia Quá khứ đơn.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 16,
+        "correct_answer": "has given",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Hiện tại hoàn thành (have/has + V3/ed).",
+        "use_in_context_vi": "'So far this month' chỉ khoảng thời gian hiện tại chưa kết thúc.",
+        "trap_logic_vi": "Nhầm chia quá khứ đơn.",
+        "why_others_wrong_vi": "Quá khứ đơn không đi kèm với thời gian chưa kết thúc như so far this month.",
+        "depth_check_vi": "Nhận diện trạng từ chỉ khoảng thời gian chưa kết thúc.",
+        "analysis_vi": "'So far this month' yêu cầu chia Hiện tại hoàn thành. Chủ ngữ 'my teacher' đi với 'has given'.",
+        "tip_vi": "'So far' đi với Hiện tại hoàn thành.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 17,
+        "correct_answer": "happened",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Quá khứ đơn của nội động từ 'happen'.",
+        "use_in_context_vi": "'Three days ago' yêu cầu chia quá khứ đơn.",
+        "trap_logic_vi": "Bẫy bị động 'was happened'.",
+        "why_others_wrong_vi": "was happened sai vì happen là nội động từ không chia bị động.",
+        "depth_check_vi": "Kiểm tra tính chất nội động từ trong chia thì.",
+        "analysis_vi": "'Three days ago' chỉ thời gian quá khứ, động từ 'happen' chuyển thành 'happened' (chủ động).",
+        "tip_vi": "Nội động từ như happen, occur không bao giờ chia ở thể bị động.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 18,
+        "correct_answer": "have known",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Hiện tại hoàn thành của động từ trạng thái 'know'.",
+        "use_in_context_vi": "'for five years' chỉ duration, động từ chỉ trạng thái không chia tiếp diễn.",
+        "trap_logic_vi": "Bẫy chia Hiện tại hoàn thành tiếp diễn 'have been knowing'.",
+        "why_others_wrong_vi": "know không chia tiếp diễn. quá khứ đơn 'knew' không phù hợp với ngữ cảnh 'we still review'.",
+        "depth_check_vi": "Kiểm tra động từ chỉ trạng thái.",
+        "analysis_vi": "Hành động kéo dài 5 năm đi với động từ trạng thái 'know' chia Hiện tại hoàn thành là 'have known'.",
+        "tip_vi": "Stative verbs không dùng các thì tiếp diễn.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 19,
+        "correct_answer": "renovated",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Quá khứ đơn của 'renovate' thành 'renovated'.",
+        "use_in_context_vi": "'In 2022' chỉ mốc thời gian quá khứ xác định.",
+        "trap_logic_vi": "Nhầm chia Hiện tại hoàn thành.",
+        "why_others_wrong_vi": "In 2022 khóa thời gian quá khứ, loại Hiện tại hoàn thành.",
+        "depth_check_vi": "Nhận biết thời gian quá khứ đơn.",
+        "analysis_vi": "Mốc thời gian quá khứ xác định 'In 2022' yêu cầu chia quá khứ đơn 'renovated'.",
+        "tip_vi": "'In + năm quá khứ' chia Quá khứ đơn.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 20,
+        "correct_answer": "has not finished",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Thì Hiện tại hoàn thành phủ định (have/has not + V3/ed).",
+        "use_in_context_vi": "'Up to this point' yêu cầu chia Hiện tại hoàn thành.",
+        "trap_logic_vi": "Nhầm chia quá khứ đơn phủ định.",
+        "why_others_wrong_vi": "Quá khứ đơn phủ định did not finish không đi với Up to this point.",
+        "depth_check_vi": "Nhận biết trạng từ liên kết hiện tại.",
+        "analysis_vi": "Trạng từ 'Up to this point' chỉ thời gian kéo dài, động từ chia Hiện tại hoàn thành phủ định là 'has not finished'.",
+        "tip_vi": "'Up to this point' chia Hiện tại hoàn thành.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 21,
+        "correct_answer": "The study planner which was on my desk is blue.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Sử dụng đại từ quan hệ chỉ vật 'which' thay cho 'who'.",
+        "use_in_context_vi": "'study planner' là vật, làm chủ ngữ trong mệnh đề quan hệ.",
+        "trap_logic_vi": "Nhầm dùng đại từ chỉ người cho vật.",
+        "why_others_wrong_vi": "who chỉ dùng cho người.",
+        "depth_check_vi": "Phát hiện lỗi sai sử dụng đại từ quan hệ.",
+        "analysis_vi": "Lỗi sai là dùng đại từ chỉ người 'who' cho danh từ chỉ vật 'The study planner'. Phải thay thế bằng 'which'.",
+        "tip_vi": "Không dùng 'who' cho danh từ chỉ vật.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 22,
+        "correct_answer": "This is the teenager who managed his study time well.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Sử dụng đại từ quan hệ chỉ người 'who' thay cho 'which'.",
+        "use_in_context_vi": "'teenager' là người, làm chủ ngữ cho mệnh đề quan hệ.",
+        "trap_logic_vi": "Dùng đại từ chỉ vật 'which' cho người.",
+        "why_others_wrong_vi": "which chỉ dùng cho vật.",
+        "depth_check_vi": "Phát hiện lỗi sai đại từ chỉ vật cho người.",
+        "analysis_vi": "Lỗi sai là dùng đại từ chỉ vật 'which' cho danh từ chỉ người 'the teenager'. Phải thay thế bằng 'who'.",
+        "tip_vi": "Dùng 'who' làm chủ ngữ thay thế cho người.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 23,
+        "correct_answer": "The room which we cleaned yesterday is quiet.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Sử dụng đại từ quan hệ 'which' thay cho 'where'.",
+        "use_in_context_vi": "Động từ 'clean' cần tân ngữ trực tiếp, dùng 'which' làm tân ngữ.",
+        "trap_logic_vi": "Nhầm dùng 'where' cho danh từ chỉ địa điểm.",
+        "why_others_wrong_vi": "where là trạng từ chỉ nơi chốn, không thể làm tân ngữ trực tiếp cho động từ clean.",
+        "depth_check_vi": "Phân tích vai trò tân ngữ của đại từ quan hệ.",
+        "analysis_vi": "Động từ 'clean' ở mệnh đề quan hệ cần tân ngữ trực tiếp (we cleaned the room). Trạng từ 'where' không thể làm tân ngữ trực tiếp, ta sửa thành 'which'.",
+        "tip_vi": "Động từ transitive (như clean, visit) cần đại từ 'which', không dùng 'where'.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 24,
+        "correct_answer": "This is the park which we visited after school.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Sử dụng đại từ quan hệ chỉ vật 'which' thay cho 'who'.",
+        "use_in_context_vi": "'the park' chỉ vật/địa điểm, làm tân ngữ cho 'visited'.",
+        "trap_logic_vi": "Dùng 'who' cho danh từ chỉ địa điểm.",
+        "why_others_wrong_vi": "who chỉ dùng cho người.",
+        "depth_check_vi": "Phát hiện lỗi sai sử dụng đại từ chỉ vật.",
+        "analysis_vi": "Lỗi sai là dùng đại từ 'who' cho danh từ chỉ vật 'the park'. Sửa thành 'which'.",
+        "tip_vi": "Dùng 'which' cho danh từ chỉ vật/địa điểm.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 25,
+        "correct_answer": "Minh, who is an active teenager, plans his day.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Sử dụng 'who' trong mệnh đề quan hệ không xác định.",
+        "use_in_context_vi": "Mệnh đề có dấu phẩy bổ nghĩa cho người, không được dùng 'that'.",
+        "trap_logic_vi": "Lỗi dùng 'that' sau dấu phẩy trong mệnh đề không xác định.",
+        "why_others_wrong_vi": "that bị cấm dùng sau dấu phẩy.",
+        "depth_check_vi": "Kiểm tra giới hạn sử dụng của đại từ 'that'.",
+        "analysis_vi": "Mệnh đề quan hệ ngăn cách bởi dấu phẩy. Sử dụng 'that' sau dấu phẩy là sai ngữ pháp, phải sửa thành 'who'.",
+        "tip_vi": "Không dùng đại từ quan hệ 'that' trong mệnh đề có dấu phẩy.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 26,
+        "correct_answer": "The library where students study is quiet.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Sử dụng trạng từ quan hệ 'where' thay thế cho cụm giới từ nơi chốn.",
+        "use_in_context_vi": "'where' thay thế cho 'in it' ở câu thứ hai.",
+        "trap_logic_vi": "Giữ lại giới từ 'in' hoặc dùng 'which' thiếu giới từ.",
+        "why_others_wrong_vi": "Các cách ghép khác giữ lại in it hoặc dùng sai cấu trúc đều sai.",
+        "depth_check_vi": "Kỹ năng viết câu phức dùng trạng từ quan hệ.",
+        "analysis_vi": "Ghép hai câu dùng 'where' thay thế cho cụm trạng ngữ nơi chốn 'in it' ở câu thứ hai, đặt ngay sau 'The library'.",
+        "tip_vi": "Lược bỏ cả giới từ và danh từ nơi chốn (in it) khi dùng 'where'.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 27,
+        "correct_answer": "I met a teacher who helps me manage my time.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Sử dụng đại từ quan hệ 'who' làm chủ ngữ.",
+        "use_in_context_vi": "'who' thay cho chủ ngữ 'She' ở câu thứ hai.",
+        "trap_logic_vi": "Giữ lại đại từ 'She' trong câu ghép.",
+        "why_others_wrong_vi": "Giữ lại she hoặc dùng which/where là sai cấu trúc.",
+        "depth_check_vi": "Kỹ năng ghép câu cơ bản chỉ người.",
+        "analysis_vi": "Sử dụng 'who' thay cho chủ ngữ 'She' ở câu thứ hai để ghép thành câu phức.",
+        "tip_vi": "Lược bỏ đại từ chủ ngữ (She) khi đã dùng đại từ quan hệ 'who'.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 28,
+        "correct_answer": "The routine which includes early morning exercise is helpful.",
+        "grammar_target": "relative clauses",
+        "form_meaning_vi": "Sử dụng đại từ quan hệ 'which' thay thế cho chủ ngữ chỉ vật.",
+        "use_in_context_vi": "'which' thay cho 'It' và chèn vào giữa câu chính.",
+        "trap_logic_vi": "Giữ lại 'It' hoặc chèn sai vị trí.",
+        "why_others_wrong_vi": "Chèn sai vị trí hoặc giữ lại đại từ cũ đều sai.",
+        "depth_check_vi": "Kỹ năng chèn mệnh đề quan hệ vào giữa câu chính.",
+        "analysis_vi": "Sử dụng 'which' thay thế cho chủ ngữ 'It' ở câu thứ hai để bổ nghĩa cho 'The routine'.",
+        "tip_vi": "Đặt mệnh đề quan hệ ngay sau danh từ mà nó bổ nghĩa.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 29,
+        "correct_answer": "They have used a study calendar for two years.",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Chuyển đổi quá khứ đơn 'started' sang Hiện tại hoàn thành với 'for'.",
+        "use_in_context_vi": "Hành động bắt đầu 2 năm trước kéo dài đến nay dùng Hiện tại hoàn thành + for + khoảng thời gian.",
+        "trap_logic_vi": "Dùng Hiện tại hoàn thành đi với ago.",
+        "why_others_wrong_vi": "Giữ lại started hoặc ago đều sai quy tắc chuyển đổi thì.",
+        "depth_check_vi": "Kỹ năng chuyển đổi ngữ nghĩa giữa hai thì.",
+        "analysis_vi": "Chuyển câu từ quá khứ đơn chỉ thời điểm bắt đầu ('started using... two years ago') sang hiện tại hoàn thành chỉ khoảng thời gian kéo dài ('have used... for two years').",
+        "tip_vi": "S + started + V-ing + thời gian + ago -> S + have/has + V3/ed + for + khoảng thời gian.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 30,
+        "correct_answer": "I have not revised my timetable since 2025.",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Chuyển từ quá khứ đơn khẳng định có 'last' sang Hiện tại hoàn thành phủ định có 'since'.",
+        "use_in_context_vi": "Lần cuối làm gì vào năm 2025 tương đương với việc chưa làm lại từ năm 2025 đến nay.",
+        "trap_logic_vi": "Sử dụng since với câu khẳng định làm thay đổi nghĩa câu gốc.",
+        "why_others_wrong_vi": "Viết ở dạng khẳng định hoặc dùng for đều sai nghĩa.",
+        "depth_check_vi": "Kỹ năng chuyển đổi câu tương đương nâng cao.",
+        "analysis_vi": "Chuyển câu quá khứ đơn khẳng định có 'last' ('last revised... in 2025') sang hiện tại hoàn thành phủ định có 'since' ('have not revised... since 2025').",
+        "tip_vi": "S + last + V2/ed + in + mốc thời gian -> S + have/has + not + V3/ed + since + mốc thời gian.",
+        "stretch_note": ""
+      }
+    ],
+    "writing_guidance": [
+      {
+        "task_id": 1,
+        "model_answer": "A morning routine helps a student focus.",
+        "guidance_vi": "Bài tập sắp xếp từ tạo thành câu hoàn chỉnh. Chủ ngữ là cụm danh từ 'A morning routine', động từ chính 'helps', tân ngữ 'a student' và bổ ngữ 'focus'.",
+        "self_checklist": [
+          "Đã viết hoa chữ đầu câu và có dấu chấm cuối câu chưa?",
+          "Từ đã được sắp xếp đúng trật tự chưa?"
+        ]
+      },
+      {
+        "task_id": 2,
+        "model_answer": "Managing time with a planner is easier than doing it without one because it helps you prioritize your tasks.",
+        "guidance_vi": "Câu so sánh hơn sử dụng tính từ ngắn 'easy' thành 'easier than' và đi kèm giải thích lý do sau từ because.",
+        "self_checklist": [
+          "Đã dùng đúng so sánh hơn 'easier than' chưa?",
+          "Mệnh đề sau liên từ because đầy đủ chủ ngữ động từ chưa?"
+        ]
+      },
+      {
+        "task_id": 3,
+        "model_answer": "Hi John,\n\nI want to tell you about my daily study routine. I usually write my timetable in a student planner every morning. This time management habit helps me stay on track and avoid distraction. I prioritize my homework after class and feel very productive.\n\nBest,\nNam",
+        "guidance_vi": "Viết email ngắn mô tả thói quen học tập. Mở đầu bằng 'Hi John,', giới thiệu thói quen ghi thời khóa biểu và tác dụng của nó, kết bài bằng ký tên.",
+        "self_checklist": [
+          "Email có độ dài 40-60 từ chưa?",
+          "Đã nêu rõ thói quen lập kế hoạch học tập chưa?"
+        ]
+      },
+      {
+        "task_id": 4,
+        "model_answer": "The table compares the daily hours spent by Minh and Lisa. Lisa spends more hours on sleep than Minh, with nine hours compared to Minh's eight hours. In contrast, Minh spends three hours on homework, while Lisa only spends one hour.",
+        "guidance_vi": "Bài viết so sánh số liệu trong bảng. Sử dụng các cấu trúc so sánh hơn và từ nối tương phản như 'while', 'in contrast' để làm rõ sự khác biệt.",
+        "self_checklist": [
+          "Độ dài bài viết có từ 30 đến 45 từ chưa?",
+          "Trích xuất đúng ít nhất một số liệu cụ thể trong bảng chưa?"
+        ]
+      },
+      {
+        "task_id": 5,
+        "model_answer": "An advantage of physical exercise in the morning is that it makes students feel more alert for their classes. Doing a short walk or stretch boosts blood flow and improves focus. Moreover, it enhances their daily productivity, helping them finish school tasks effectively and support their physical wellbeing.",
+        "guidance_vi": "Đoạn văn ngắn trình bày lợi ích của tập thể dục buổi sáng. Nêu ít nhất 2 ưu điểm và dùng các từ nối như 'Moreover' để tăng tính mạch lạc.",
+        "self_checklist": [
+          "Đoạn văn có độ dài từ 50 đến 70 từ không?",
+          "Đã trình bày rõ các lợi ích của thể dục buổi sáng chưa?"
+        ]
+      }
+    ],
+    "writing_revisions": [],
+    "review_bridge": [
+      {
+        "id": 1,
+        "prompt": "How does spending time in a quiet countryside neighborhood compare to studying in a noisy city environment?",
+        "correct_answer": "A quiet countryside neighborhood has fewer distractions, which helps improve children's working memory and concentration compared to a noisy city environment.",
+        "rationale_vi": "Câu hỏi ôn tập liên kết chủ đề học tập yên tĩnh (bài hôm nay) với chủ đề môi trường nông thôn/thành thị (bài 20260720)."
+      },
+      {
+        "id": 2,
+        "prompt": "Why can practicing a musical instrument be a useful morning habit for developing children's focus?",
+        "correct_answer": "Practicing a musical instrument provides structured musical training, which improves focus and memory attention as a positive morning habit.",
+        "rationale_vi": "Câu hỏi liên kết chủ đề thói quen học tập buổi sáng (bài hôm nay) với chủ đề học nhạc cụ (bài 20260717)."
+      },
+      {
+        "id": 3,
+        "prompt": "How can students use their time management skills to balance school routines and community volunteering?",
+        "correct_answer": "Students can create a balanced timetable that allocates specific hours for school routines and volunteering in community projects.",
+        "rationale_vi": "Câu hỏi liên kết chủ đề quản lý thời gian (bài hôm nay) với chủ đề hoạt động tình nguyện cộng đồng (bài 20260715)."
+      }
+    ]
+  },
+  "warm_up": [
+    "What time do you usually wake up on school days? Do you have a morning routine?",
+    "How do you organize your tasks when you have many different homework assignments?",
+    "Do you think study planners or calendars are helpful for teenagers? Why or why not?"
+  ],
+  "level": "A2+",
+  "topic": "Daily routines, habits, time management",
+  "day": "20260722",
+  "lesson_id": "LSN-20260722-A2+-H2F9N5K8",
+  "practice_markdown": "Reading: A2+\nWriting: A1\n\n## Reading Source Verification\n| Source title | Publisher/Organization | Date/Access date | Final verified URL | URL status | Source type | Reliability check | How the passage uses the source |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Revision tips: how to manage your time and study effectively | BBC Bitesize |  / 2026-07-22 | https://www.bbc.co.uk/bitesize/articles/zmy6qp3 | 200 OK | Educational News Article | BBC Bitesize is a trusted national educational resource from the UK public broadcaster. | Directly explains the benefits of study scheduling, morning routines, and time management habits for students. |\n\n## Warm-up\nAnswer the following questions in English:\n1. What time do you usually wake up on school days? Do you have a morning routine?\n2. How do you organize your tasks when you have many different homework assignments?\n3. Do you think study planners or calendars are helpful for teenagers? Why or why not?\n\n## Reading Passage\n### Successful Student Morning Routines and Time Management\n\nHaving a structured morning routine is essential for a successful student lifestyle [R]. When students start their day early and plan their activities, they feel more in control. A good habit is to review the daily schedule before school begins. This planning reduces stress and helps them focus on their lessons throughout the day.\n\nIn addition to planning, daily physical activity and healthy sleep patterns are very important. Many students have to commute [R] to school by bus or bicycle. If they include a short walk or stretch in their morning routine, they feel more alert and ready to learn. Adequate sleep also improves their working memory [R] and cognitive [R] development, which are needed for solving complex math and science problems.\n\nFinally, using school facilities [R] effectively plays a major role in time management. Successful students often spend their break times in quiet study areas or libraries. These public facilities [R] allow them to complete homework without distraction. In contrast, studying in noisy environments reduces focus. Overall, a balanced daily routine helps students keep their study schedule on track.\n\n## Questions for Reading\n### Questions 1–5: True/False/Not Given\n\n1. A morning routine can make students feel more in control of their day.\n2. Commuting by bicycle is faster than by bus.\n3. Most students study better in noisy environments.\n4. Successful students never make mistakes on their timetables.\n5. School libraries are quiet study areas.\n\n### Questions 6–9: Gap Fill\n\n6. Having a structured morning routine is essential for a student (10) ________.\n7. Physical activity and healthy (11) ________ patterns are very important.\n8. Adequate sleep improves students' working (12) ________.\n9. Successful students often spend their breaks in quiet study spaces or (13) ________.\n\n### Questions 10–13: Multiple Choice\n\n10. What is a good habit for students to do before school starts?\n    A. To commute by bus\n    B. To review their daily schedule\n    C. To study in noisy environments\n    D. To sleep late\n11. How do many students travel to school?\n    A. By bus or bicycle\n    B. By walking only\n    C. By train\n    D. By car\n12. Why is daily morning movement helpful for teenagers?\n    A. It allows them to sleep during classes.\n    B. It helps them feel more alert and prepared for learning.\n    C. It reduces their working memory.\n    D. It makes their commute longer.\n13. What is the writer's main purpose in paragraph 3?\n    A. To argue that libraries are the only useful facilities.\n    B. To explain how quiet study spaces help students manage time.\n    C. To show that noisy environments improve memory.\n    D. To describe different bus schedules in the city.\n\n## Questions for Grammar\n### multiple choice\n\n1. We ________ our study habits since the beginning of this year.\n    A. have improved\n    B. improved\n    C. improve\n    D. are improving\n2. This is the study room ________ I write my daily timetable.\n    A. where\n    B. which\n    C. who\n    D. when\n3. Yesterday, Minh ________ his daily study plan to prepare for the test.\n    A. created\n    B. has created\n    C. creates\n    D. was creating\n4. The learner ________ had the best morning habits won the scholarship.\n    A. who\n    B. which\n    C. whom\n    D. where\n5. So far today, she ________ two hours organizing her study calendar.\n    A. has spent\n    B. spent\n    C. spends\n    D. is spending\n6. The study planner, ________ is my favorite study tool, helps me stay on track. (*)\n    A. which\n    B. who\n    C. where\n    D. that\n7. Lisa ________ to a new school two months ago.\n    A. moved\n    B. has moved\n    C. move\n    D. was moving\n8. The school library is a quiet space ________ students can study effectively.\n    A. where\n    B. which\n    C. who\n    D. that\n9. He ________ the bus to school when he was a primary school student.\n    A. took\n    B. has taken\n    C. takes\n    D. is taking\n10. The timetable, ________ hangs on my wall, helps me plan my routines.\n    A. which\n    B. that\n    C. where\n    D. whom\n\n### gap fill\n\n11. Up to now, they ________ (not decide) which study habit to adopt.\n12. Last week, I ________ (buy) a new study planner to organize my calendar.\n13. She ________ (plan) her study timetable for five years, from 2015 to 2020. (*)\n14. Lisa ________ (be) on track with her daily routine since she started secondary school.\n15. Yesterday, they ________ (commute) to the city library to study in a quiet room.\n16. So far this month, my teacher ________ (give) us three tips for time management.\n17. Three days ago, a change in my study routine ________ (happen) suddenly.\n18. I ________ (know) my study partner for five years, and we still review lessons together.\n19. In 2022, the school ________ (renovate) the quiet study spaces.\n20. Up to this point, Minh ________ (not finish) the daily planning.\n\n### error correction\n\n21. Correct the error: The study planner who was on my desk is blue.\n22. Correct the error: This is the teenager which managed his study time well.\n23. Correct the error: The room where we cleaned yesterday is quiet. (*)\n24. Correct the error: This is the park who we visited after school.\n25. Correct the error: Minh, that is an active teenager, plans his day.\n\n### Sentence Combining\n\n26. Combine these sentences using a relative clause with 'where': The library is quiet. Students study in it.\n27. Combine these sentences using a relative clause with 'who': I met a teacher. She helps me manage my time.\n28. Combine these sentences using a relative clause with 'which': The routine is helpful. It includes early morning exercise.\n\n### Sentence Transformation\n\n29. Rewrite the sentence using the present perfect with 'for': They started using a study calendar two years ago.\n30. Rewrite the sentence using present perfect: I last revised my timetable in 2025. (*)\n\n## Questions for Writing\n| # | Task | Target length | Focus skill | Useful language | Success criteria |\n| --- | --- | --- | --- | --- | --- |\n| 1 | Word Ordering: Arrange the words to make a correct sentence: routine / morning / A / student / helps / focus / a / . | 1 sentence | Sentence structure |  | Correct word order<br>Proper capitalization and punctuation |\n| 2 | Sentence Completion: Complete the sentence in your own words (write about 15-20 words): Managing time with a planner is ________ than doing it without one because... | 1 sentence | Using comparatives | easier<br>more effective<br>helps<br>because | Correct comparative grammar<br>Clear explanation of time management benefits |\n| 3 | Guided Email: Write a short email (40-60 words) to your cousin. Describe your daily study routine and what habits help you stay focused. | short paragraph (40-60 words) | Describing routines | Hi [Name],<br>My daily routine is<br>I prioritize<br>helps me stay on track | Identify at least 1 study habit<br>Mention morning or evening planning<br>Proper email formatting |\n| 4 | Visual Data Description: Write a short comparison (30-45 words) based on the table below showing the daily hours spent by Minh and Lisa.<br><br>\\| Activity \\| Minh (Daily hours) \\| Lisa (Daily hours) \\|<br>\\| --- \\| --- \\| --- \\|<br>\\| Homework \\| 3 \\| 1 \\|<br>\\| Sleep \\| 8 \\| 9 \\|<br>\\| Exercise \\| 1 \\| 2 \\| | short paragraph (30-45 words) | Comparing quantities | more hours<br>less sleep<br>while<br>in contrast | Correctly compare study and sleep hours<br>State at least one specific number from the table |\n| 5 | Short Paragraph Description: Write a short paragraph (50-70 words) explaining the advantages of physical exercise in the morning for high school students. | short paragraph (50-70 words) | Explaining advantages | An advantage of<br>Moreover,<br>feel more alert<br>better productivity | State at least 2 benefits of exercise<br>Cohesive paragraph flow<br>Appropriate word count |\n\n## Review Bridge\n#### V. Review Bridge / Ôn tập liên chủ đề\n1. How does spending time in a quiet countryside neighborhood compare to studying in a noisy city environment?\n\n2. Why can practicing a musical instrument be a useful morning habit for developing children's focus?\n\n3. How can students use their time management skills to balance school routines and community volunteering?\n",
+  "vocabulary_grammar_markdown": "## Vocabulary Table\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Ví dụ minh họa |\n| --- | --- | --- | --- | --- |\n| habit | /ˈhæb.ɪt/ | noun | thói quen (a thing that you do often and almost without thinking) | Reviewing your schedule daily is a very good habit. |\n| routine | /ruːˈtiːn/ | noun | thói quen hằng ngày, quy trình (the normal order and way in which you regularly do things) | A morning routine helps you start the day calmly. |\n| schedule | /ˈʃedʒ.uːl/ | noun | lịch trình, thời khóa biểu (a plan that lists all the work that you have to do) | I always write my exam dates in my study schedule. |\n| productivity | /ˌprɒd.ʌkˈtɪv.ə.ti/ | noun | năng suất, hiệu quả làm việc (the rate at which a person does useful work) | Planning tasks in advance can boost your daily productivity. |\n| focus | /ˈfəʊ.kəs/ | noun | sự tập trung (the concentration of attention on a particular activity) | Quiet libraries allow students to study with great focus. |\n| active | /ˈæk.tɪv/ | adjective | tích cực, năng động (doing things that require physical effort and energy) | Playing sports keeps high school students active and healthy. |\n| alert | /əˈlɜːt/ | adjective | tỉnh táo, nhanh nhạy (able to think quickly and notice things) | A short walk in the morning makes you feel more alert. |\n| lifestyle | /ˈlaɪf.staɪl/ | noun | lối sống, phong cách sống (the way in which a person lives) | They want to change their lifestyle and live in a calmer environment. |\n| commute | /kəˈmjuːt/ | verb | đi lại đều đặn hàng ngày (to travel regularly between home and work or school) | Many students commute to school by bicycle. |\n| healthy | /ˈhel.θi/ | adjective | khỏe mạnh, lành mạnh (helping to produce good health) | Eating a balanced breakfast is a healthy morning habit. |\n| timetable | /ˈtaɪm.teɪ.bl̩/ | noun | thời khóa biểu (a list showing the times at which events will happen) | We received our new class timetable last week. |\n| prioritize | /praɪˈɒr.ɪ.taɪz/ | verb | ưu tiên (to treat something as being more important than other things) | You should prioritize your homework before playing games. |\n| wellbeing | /ˌwelˈbiː.ɪŋ/ | noun | sự khỏe mạnh, hạnh phúc (the state of being comfortable, healthy, or happy) | Getting enough sleep is vital for a student's mental wellbeing. |\n| distraction | /dɪˈstræk.ʃən/ | noun | sự xao nhãng, làm mất tập trung (something that takes your attention away from study) | Put your phone away to avoid any distraction. |\n| facilities | /fəˈsɪl.ə.tiz/ | noun plural | cơ sở vật chất, tiện ích (buildings, services, or equipment provided for a purpose) | The school facilities include a library and science labs. |\n| working memory | /ˈwɜː.kɪŋ ˈmem.ər.i/ | noun phrase | trí nhớ làm việc (memory used to hold information temporarily) | Working memory is key to solving math equations. |\n| musical training | /ˈmjuː.zɪ.kəl ˈtreɪ.nɪŋ/ | noun phrase | sự luyện tập âm nhạc (learning to play music or an instrument) | Musical training helps develop children's focus. |\n| cognitive | /ˈkɒɡ.nə.tɪv/ | adjective | thuộc về nhận thức (connected with mental processes of learning) | Cognitive development speeds up during childhood. |\n| time management | /ˈtaɪm ˈmæn.ɪdʒ.mənt/ | noun phrase | sự quản lý thời gian (the ability to use one's time effectively) | Time management is an essential skill for successful studying. |\n| on track | /ɒn træk/ | phrase | đúng lịch trình, đi đúng hướng (progressing in the way that was planned) | Keep your goals clear to make sure you stay on track. |\n\n## Recycled Vocabulary (Từ vựng ôn tập)\n| Từ/Cụm từ | Phiên âm | Loại từ | Định nghĩa và Tiếng Việt | Bài học gốc (Day) |\n| --- | --- | --- | --- | --- |\n| facilities | /fəˈsɪl.ə.tiz/ | noun plural | cơ sở vật chất, tiện ích | Day 20260720 |\n| lifestyle | /ˈlaɪf.staɪl/ | noun | lối sống, phong cách sống | Day 20260720 |\n| commute | /kəˈmjuːt/ | verb | đi lại đều đặn hàng ngày | Day 20260720 |\n\n## Detailed Grammar Guide\n#### 1. Relative Clauses (Mệnh đề quan hệ)\nMệnh đề quan hệ được dùng để bổ sung thông tin cho một danh từ đi trước nó.\n- **Who**: Dùng làm chủ ngữ thay thế cho người.\n- **Which**: Dùng làm chủ ngữ hoặc tân ngữ thay thế cho vật.\n- **Where**: Dùng thay thế cho nơi chốn.\n- **That**: Có thể thay thế cho *who* hoặc *which* trong mệnh đề xác định (defining clause), nhưng KHÔNG được dùng trong mệnh đề không xác định (non-defining clause - có dấu phẩy).\n\n#### 2. Present Perfect vs Past Simple (Thì Hiện tại hoàn thành vs Thì Quá khứ đơn)\n- **Past Simple (Quá khứ đơn)**: Dùng cho hành động đã kết thúc hoàn toàn trong quá khứ, có mốc thời gian cụ thể (ví dụ: *yesterday, last week, in 2022*).\n- **Present Perfect (Hiện tại hoàn thành)**: Dùng cho hành động bắt đầu trong quá khứ và vẫn tiếp diễn ở hiện tại, hoặc vừa hoàn thành tính đến nay (ví dụ: *since, for, so far today*).\n\n## Common Mistakes / IELTS Traps for This Topic\n| Common mistake / Trap | Wrong example | Correct version | Why it matters for IELTS |\n| --- | --- | --- | --- |\n| Sử dụng 'that' trong mệnh đề quan hệ không xác định (có dấu phẩy). | My study desk, that is new, helps me study. | My study desk, which is new, helps me study. | Không dùng 'that' sau dấu phẩy trong mệnh đề quan hệ. |\n| Sử dụng 'where' thay vì 'which' làm tân ngữ cho động từ cần tân ngữ trực tiếp. | The school library where we visited yesterday was clean. | The school library which we visited yesterday was clean. | Động từ 'visit' cần một tân ngữ trực tiếp (visit something), do đó dùng 'which'. |\n| Nhầm lẫn giữa mốc thời gian hoàn thành (Quá khứ đơn) và thời gian kéo dài đến hiện tại (Hiện tại hoàn thành). | I have planned my timetable three days ago. | I planned my timetable three days ago. | Từ 'ago' bắt buộc dùng thì Quá khứ đơn. |\n",
+  "answers_markdown": "## Reading Answer Key and Detailed Explanations\n\n📖 **Tóm tắt bài đọc:** Bài đọc mô tả chi tiết thông tin từ nguồn đã xác thực.\n\n1. **True**\n- Bằng chứng: \"When students start their day early and plan their activities, they feel more in control.\" (§1)\n- Cách tìm đáp án: Đoạn 1 nêu việc lập kế hoạch hoạt động buổi sáng giúp học sinh cảm thấy kiểm soát tốt hơn, trùng khớp với câu hỏi. Không áp dụng cho True/False/Not Given.\n> **💡 Mẹo:** Tìm các từ khóa 'morning routine' và 'in control' ở đoạn 1.\n\n2. **Not Given**\n- Bằng chứng: \"Many students have to commute [R] to school by bus or bicycle.\" (§2)\n- Cách tìm đáp án: Bài đọc liệt kê xe đạp và xe buýt, hoàn toàn không so sánh tốc độ của chúng. Không áp dụng.\n> **💡 Mẹo:** Mới so sánh không có trong bài đều là Not Given.\n\n3. **False**\n- Bằng chứng: \"In contrast, studying in noisy environments reduces focus.\" (§3)\n- Cách tìm đáp án: Bài đọc ghi học ở nơi ồn ào làm giảm tập trung, trái ngược với nhận định học sinh học tốt hơn. Không áp dụng.\n> **💡 Mẹo:** Nhận diện từ trái nghĩa: 'study better' vs 'reduces focus'.\n\n4. **Not Given**\n- Bằng chứng: \"Overall, a balanced daily routine helps students keep their study schedule on track.\" (§3)\n- Cách tìm đáp án: Bài đọc chỉ nói thói quen giúp đi đúng hướng, không đề cập việc họ có bao giờ phạm sai lầm khi lập thời khóa biểu hay không. Không áp dụng.\n> **💡 Mẹo:** Nếu thông tin quá chi tiết hoặc võ đoán, hãy chọn Not Given.\n\n5. **True**\n- Bằng chứng: \"Successful students often spend their break times in quiet study areas or libraries.\" (§3)\n- Cách tìm đáp án: Đoạn 3 viết học sinh tự học ở thư viện hoặc khu vực yên tĩnh, tương đương nhận định. Không áp dụng.\n> **💡 Mẹo:** Thư viện trường học được xếp vào nhóm phòng tự học yên tĩnh.\n\n6. **lifestyle**\n- Bằng chứng: \"Having a structured morning routine is essential for a successful student lifestyle [R].\" (§1)\n- Cách tìm đáp án: Từ cần điền là danh từ 'lifestyle' ở cuối câu đầu tiên đoạn 1. Không áp dụng cho Gap Fill.\n> **💡 Mẹo:** Đọc kỹ câu đầu của đoạn 1.\n\n7. **sleep**\n- Bằng chứng: \"In addition to planning, daily physical activity and healthy sleep patterns are very important.\" (§2)\n- Cách tìm đáp án: Từ cần điền là danh từ 'sleep' đứng trước 'patterns' ở đầu đoạn 2. Không áp dụng.\n> **💡 Mẹo:** Tìm từ khóa 'patterns' ở đoạn 2.\n\n8. **memory**\n- Bằng chứng: \"Adequate sleep also improves their working memory [R] and cognitive [R] development\" (§2)\n- Cách tìm đáp án: Từ cần điền là 'memory' trong cụm 'working memory' được cải thiện nhờ ngủ đủ giấc. Không áp dụng.\n> **💡 Mẹo:** Tìm từ đi kèm sau từ 'working' ở đoạn 2.\n\n9. **libraries**\n- Bằng chứng: \"Successful students often spend their break times in quiet study areas or libraries.\" (§3)\n- Cách tìm đáp án: Từ cần điền là danh từ số nhiều 'libraries' (thư viện), nơi học tập yên tĩnh của học sinh ở đoạn 3. Không áp dụng.\n> **💡 Mẹo:** Thư viện (libraries) được nối bằng từ 'or' sau 'study areas' ở đoạn 3.\n\n10. **B**\n- Bằng chứng: \"A good habit is to review the daily schedule before school begins.\" (§1)\n- Cách tìm đáp án: Đoạn 1 nêu thói quen tốt là xem lại lịch trình trước khi đi học. A, C, D sai vì chúng là các hành động đi học bằng xe buýt hoặc học ở phòng ồn, không phải thói quen lập kế hoạch được khuyên.\n> **💡 Mẹo:** Tìm các từ khóa 'good habit' và 'before school' ở đoạn 1.\n\n11. **A**\n- Bằng chứng: \"Many students have to commute [R] to school by bus or bicycle.\" (§2)\n- Cách tìm đáp án: Đoạn 2 nêu nhiều học sinh đi học bằng xe buýt hoặc xe đạp. B sai vì đi bộ chỉ là thể dục sáng. C và D không được nhắc đến làm phương tiện đi học.\n> **💡 Mẹo:** Tìm từ khóa 'commute' và các phương tiện di chuyển ở đoạn 2.\n\n12. **B**\n- Bằng chứng: \"If they include a short walk or stretch in their morning routine, they feel more alert and ready to learn.\" (§2)\n- Cách tìm đáp án: Tập thể dục nhẹ (walk or stretch) giúp học sinh tỉnh táo và sẵn sàng học tập. A đi ngược thực tế. C và D sai lệch thông tin trong bài viết.\n> **💡 Mẹo:** Nhận diện từ đồng nghĩa trong câu hỏi và bài đọc.\n\n13. **B**\n- Bằng chứng: \"Finally, using school facilities [R] effectively plays a major role in time management.\" (§3)\n- Cách tìm đáp án: Mục đích của đoạn 3 là so sánh và giải thích không gian yên tĩnh của các tiện ích trường học giúp quản lý thời gian hiệu quả.\n\n**QUY TRÌNH TƯ DUY 3 BƯỚC (Thinking Process):**\n1. *Bước 1 (Phân tích câu hỏi)*: Hỏi về mục đích chính của đoạn 3.\n2. *Bước 2 (Xem xét thông tin đoạn 3)*: Tác giả nhấn mạnh việc sử dụng cơ sở vật chất (thư viện, phòng tự học) một cách hiệu quả để học bài không xao nhãng.\n3. *Bước 3 (Chọn đáp án)*: Phương án B biểu thị hoàn hảo mục đích so sánh này. Các phương án khác mang tính cực đoan hoặc lạc đề. A sai do tính cực đoan 'only'. C đi ngược lại bài đọc. D lạc đề (nhắc ở đoạn khác).\n> **💡 Mẹo:** Đọc kỹ câu mở đầu và câu kết của đoạn văn để tìm ý chính.\n\n## Grammar Answer Key and Detailed Explanations\n\n> **Bảng phân biệt nhanh / Công thức bỏ túi:**\n> - Ôn tập lý thuyết đã học trong bài.\n\n1. **have improved**\n- Dấu hiệu / Phân tích: Trạng từ 'since' ở đầu câu là dấu hiệu bắt buộc phải chia động từ ở thì Hiện tại hoàn thành 'have improved'.\n> **💡 Mẹo:** Cứ thấy 'since' đi với mốc thời gian là chia Hiện tại hoàn thành.\n\n2. **where**\n- Dấu hiệu / Phân tích: Danh từ trước là 'study room' chỉ địa điểm, mệnh đề sau đầy đủ thành phần câu nên chọn 'where'.\n> **💡 Mẹo:** Mệnh đề quan hệ hoàn chỉnh sau danh từ nơi chốn dùng 'where'.\n\n3. **created**\n- Dấu hiệu / Phân tích: Trạng từ 'Yesterday' khóa thời gian ở quá khứ đơn, động từ 'create' có quy tắc chuyển thành 'created'.\n> **💡 Mẹo:** Yesterday là dấu hiệu điển hình của thì Quá khứ đơn.\n\n4. **who**\n- Dấu hiệu / Phân tích: Đứng trước động từ 'had' làm chủ ngữ bổ nghĩa cho 'The learner' (người) nên dùng 'who'.\n> **💡 Mẹo:** Khoảng trống trước động từ và sau danh từ chỉ người dùng 'who'.\n\n5. **has spent**\n- Dấu hiệu / Phân tích: Cụm 'So far today' yêu cầu chia Hiện tại hoàn thành, chủ ngữ 'she' số ít đi với 'has spent'.\n> **💡 Mẹo:** 'So far' luôn đi với Hiện tại hoàn thành.\n\n6. **which**\n- Dấu hiệu / Phân tích: Danh từ 'The study planner' chỉ vật, mệnh đề quan hệ có dấu phẩy làm chủ ngữ của 'is' nên dùng 'which'.\n> **💡 Mẹo:** Tuyệt đối không dùng 'that' sau dấu phẩy trong mệnh đề quan hệ.\n\n7. **moved**\n- Dấu hiệu / Phân tích: Cụm 'two months ago' chỉ mốc thời gian xác định đã hoàn thành, động từ chia quá khứ đơn 'moved'.\n> **💡 Mẹo:** 'ago' luôn đi với thì Quá khứ đơn.\n\n8. **where**\n- Dấu hiệu / Phân tích: Mệnh đề sau ô trống hoàn chỉnh nên dùng 'where' để bổ nghĩa cho 'a quiet space'.\n> **💡 Mẹo:** Mệnh đề quan hệ hoàn chỉnh sau danh từ nơi chốn dùng 'where'.\n\n9. **took**\n- Dấu hiệu / Phân tích: Mệnh đề chỉ thời gian quá khứ đã qua đòi hỏi động từ chia quá khứ đơn 'took'.\n> **💡 Mẹo:** Cấu trúc 'when S + was + ...' là dấu hiệu chia Quá khứ đơn ở mệnh đề chính.\n\n10. **which**\n- Dấu hiệu / Phân tích: Mệnh đề quan hệ bổ nghĩa cho 'The timetable' (vật) ngăn cách bởi dấu phẩy đòi hỏi dùng 'which' làm chủ ngữ.\n> **💡 Mẹo:** Dấu phẩy xuất hiện xung quanh mệnh đề quan hệ loại trừ phương án 'that'.\n\n11. **have not decided**\n- Dấu hiệu / Phân tích: Trạng từ 'Up to now' chỉ thời gian kéo dài đòi hỏi Hiện tại hoàn thành phủ định. Chủ ngữ 'they' số nhiều đi với 'have not decided'.\n> **💡 Mẹo:** 'Up to now' đi với Hiện tại hoàn thành.\n\n12. **bought**\n- Dấu hiệu / Phân tích: 'Last week' là thời điểm quá khứ đã kết thúc, chia quá khứ đơn 'bought'.\n> **💡 Mẹo:** 'Last + thời gian' chia Quá khứ đơn.\n\n13. **planned**\n- Dấu hiệu / Phân tích: Mặc dù có 'for five years', hành động được định vị rõ trong khoảng thời gian đã qua hoàn toàn ('from 2015 to 2020'), chia quá khứ đơn 'planned'.\n> **💡 Mẹo:** Khi 'for + khoảng thời gian' đi kèm mốc thời gian quá khứ đã đóng, dùng Quá khứ đơn.\n\n14. **has been**\n- Dấu hiệu / Phân tích: Mệnh đề sau since chia quá khứ đơn, mệnh đề chính chia Hiện tại hoàn thành. Chủ ngữ 'Lisa' đi với 'has been'.\n> **💡 Mẹo:** S + Hiện tại hoàn thành + since + S + Quá khứ đơn.\n\n15. **commuted**\n- Dấu hiệu / Phân tích: 'Yesterday' là thời gian xác định đã kết thúc, chia quá khứ đơn 'commuted'.\n> **💡 Mẹo:** Yesterday chia Quá khứ đơn.\n\n16. **has given**\n- Dấu hiệu / Phân tích: 'So far this month' yêu cầu chia Hiện tại hoàn thành. Chủ ngữ 'my teacher' đi với 'has given'.\n> **💡 Mẹo:** 'So far' đi với Hiện tại hoàn thành.\n\n17. **happened**\n- Dấu hiệu / Phân tích: 'Three days ago' chỉ thời gian quá khứ, động từ 'happen' chuyển thành 'happened' (chủ động).\n> **💡 Mẹo:** Nội động từ như happen, occur không bao giờ chia ở thể bị động.\n\n18. **have known**\n- Dấu hiệu / Phân tích: Hành động kéo dài 5 năm đi với động từ trạng thái 'know' chia Hiện tại hoàn thành là 'have known'.\n> **💡 Mẹo:** Stative verbs không dùng các thì tiếp diễn.\n\n19. **renovated**\n- Dấu hiệu / Phân tích: Mốc thời gian quá khứ xác định 'In 2022' yêu cầu chia quá khứ đơn 'renovated'.\n> **💡 Mẹo:** 'In + năm quá khứ' chia Quá khứ đơn.\n\n20. **has not finished**\n- Dấu hiệu / Phân tích: Trạng từ 'Up to this point' chỉ thời gian kéo dài, động từ chia Hiện tại hoàn thành phủ định là 'has not finished'.\n> **💡 Mẹo:** 'Up to this point' chia Hiện tại hoàn thành.\n\n21. **The study planner which was on my desk is blue.**\n- Dấu hiệu / Phân tích: Lỗi sai là dùng đại từ chỉ người 'who' cho danh từ chỉ vật 'The study planner'. Phải thay thế bằng 'which'.\n> **💡 Mẹo:** Không dùng 'who' cho danh từ chỉ vật.\n\n22. **This is the teenager who managed his study time well.**\n- Dấu hiệu / Phân tích: Lỗi sai là dùng đại từ chỉ vật 'which' cho danh từ chỉ người 'the teenager'. Phải thay thế bằng 'who'.\n> **💡 Mẹo:** Dùng 'who' làm chủ ngữ thay thế cho người.\n\n23. **The room which we cleaned yesterday is quiet.**\n- Dấu hiệu / Phân tích: Động từ 'clean' ở mệnh đề quan hệ cần tân ngữ trực tiếp (we cleaned the room). Trạng từ 'where' không thể làm tân ngữ trực tiếp, ta sửa thành 'which'.\n> **💡 Mẹo:** Động từ transitive (như clean, visit) cần đại từ 'which', không dùng 'where'.\n\n24. **This is the park which we visited after school.**\n- Dấu hiệu / Phân tích: Lỗi sai là dùng đại từ 'who' cho danh từ chỉ vật 'the park'. Sửa thành 'which'.\n> **💡 Mẹo:** Dùng 'which' cho danh từ chỉ vật/địa điểm.\n\n25. **Minh, who is an active teenager, plans his day.**\n- Dấu hiệu / Phân tích: Mệnh đề quan hệ ngăn cách bởi dấu phẩy. Sử dụng 'that' sau dấu phẩy là sai ngữ pháp, phải sửa thành 'who'.\n> **💡 Mẹo:** Không dùng đại từ quan hệ 'that' trong mệnh đề có dấu phẩy.\n\n26. **The library where students study is quiet.**\n- Dấu hiệu / Phân tích: Ghép hai câu dùng 'where' thay thế cho cụm trạng ngữ nơi chốn 'in it' ở câu thứ hai, đặt ngay sau 'The library'.\n> **💡 Mẹo:** Lược bỏ cả giới từ và danh từ nơi chốn (in it) khi dùng 'where'.\n\n27. **I met a teacher who helps me manage my time.**\n- Dấu hiệu / Phân tích: Sử dụng 'who' thay cho chủ ngữ 'She' ở câu thứ hai để ghép thành câu phức.\n> **💡 Mẹo:** Lược bỏ đại từ chủ ngữ (She) khi đã dùng đại từ quan hệ 'who'.\n\n28. **The routine which includes early morning exercise is helpful.**\n- Dấu hiệu / Phân tích: Sử dụng 'which' thay thế cho chủ ngữ 'It' ở câu thứ hai để bổ nghĩa cho 'The routine'.\n> **💡 Mẹo:** Đặt mệnh đề quan hệ ngay sau danh từ mà nó bổ nghĩa.\n\n29. **They have used a study calendar for two years.**\n- Dấu hiệu / Phân tích: Chuyển câu từ quá khứ đơn chỉ thời điểm bắt đầu ('started using... two years ago') sang hiện tại hoàn thành chỉ khoảng thời gian kéo dài ('have used... for two years').\n> **💡 Mẹo:** S + started + V-ing + thời gian + ago -> S + have/has + V3/ed + for + khoảng thời gian.\n\n30. **I have not revised my timetable since 2025.**\n- Dấu hiệu / Phân tích: Chuyển câu quá khứ đơn khẳng định có 'last' ('last revised... in 2025') sang hiện tại hoàn thành phủ định có 'since' ('have not revised... since 2025').\n> **💡 Mẹo:** S + last + V2/ed + in + mốc thời gian -> S + have/has + not + V3/ed + since + mốc thời gian.\n\n## Writing Guidance / Suggested Answers\n\n#### Task 1\n> **Suggested Model Answer:**\n> \"A morning routine helps a student focus.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Bài tập sắp xếp từ tạo thành câu hoàn chỉnh. Chủ ngữ là cụm danh từ 'A morning routine', động từ chính 'helps', tân ngữ 'a student' và bổ ngữ 'focus'.\n- *Tự kiểm tra:* * Đã viết hoa chữ đầu câu và có dấu chấm cuối câu chưa? * Từ đã được sắp xếp đúng trật tự chưa?\n\n#### Task 2\n> **Suggested Model Answer:**\n> \"Managing time with a planner is easier than doing it without one because it helps you prioritize your tasks.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Câu so sánh hơn sử dụng tính từ ngắn 'easy' thành 'easier than' và đi kèm giải thích lý do sau từ because.\n- *Tự kiểm tra:* * Đã dùng đúng so sánh hơn 'easier than' chưa? * Mệnh đề sau liên từ because đầy đủ chủ ngữ động từ chưa?\n\n#### Task 3\n> **Suggested Model Answer:**\n> \"Hi John,\n\nI want to tell you about my daily study routine. I usually write my timetable in a student planner every morning. This time management habit helps me stay on track and avoid distraction. I prioritize my homework after class and feel very productive.\n\nBest,\nNam\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Viết email ngắn mô tả thói quen học tập. Mở đầu bằng 'Hi John,', giới thiệu thói quen ghi thời khóa biểu và tác dụng của nó, kết bài bằng ký tên.\n- *Tự kiểm tra:* * Email có độ dài 40-60 từ chưa? * Đã nêu rõ thói quen lập kế hoạch học tập chưa?\n\n#### Task 4\n> **Suggested Model Answer:**\n> \"The table compares the daily hours spent by Minh and Lisa. Lisa spends more hours on sleep than Minh, with nine hours compared to Minh's eight hours. In contrast, Minh spends three hours on homework, while Lisa only spends one hour.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Bài viết so sánh số liệu trong bảng. Sử dụng các cấu trúc so sánh hơn và từ nối tương phản như 'while', 'in contrast' để làm rõ sự khác biệt.\n- *Tự kiểm tra:* * Độ dài bài viết có từ 30 đến 45 từ chưa? * Trích xuất đúng ít nhất một số liệu cụ thể trong bảng chưa?\n\n#### Task 5\n> **Suggested Model Answer:**\n> \"An advantage of physical exercise in the morning is that it makes students feel more alert for their classes. Doing a short walk or stretch boosts blood flow and improves focus. Moreover, it enhances their daily productivity, helping them finish school tasks effectively and support their physical wellbeing.\"\n\n- **Hướng dẫn viết từng câu / từng bước:** Đoạn văn ngắn trình bày lợi ích của tập thể dục buổi sáng. Nêu ít nhất 2 ưu điểm và dùng các từ nối như 'Moreover' để tăng tính mạch lạc.\n- *Tự kiểm tra:* * Đoạn văn có độ dài từ 50 đến 70 từ không? * Đã trình bày rõ các lợi ích của thể dục buổi sáng chưa?\n\n## Review Bridge\n#### IV. Review Bridge / Ôn tập liên chủ đề\n1. How does spending time in a quiet countryside neighborhood compare to studying in a noisy city environment?\n- **Đáp án:** A quiet countryside neighborhood has fewer distractions, which helps improve children's working memory and concentration compared to a noisy city environment.\n- **Giải thích:** Câu hỏi ôn tập liên kết chủ đề học tập yên tĩnh (bài hôm nay) với chủ đề môi trường nông thôn/thành thị (bài 20260720).\n\n2. Why can practicing a musical instrument be a useful morning habit for developing children's focus?\n- **Đáp án:** Practicing a musical instrument provides structured musical training, which improves focus and memory attention as a positive morning habit.\n- **Giải thích:** Câu hỏi liên kết chủ đề thói quen học tập buổi sáng (bài hôm nay) với chủ đề học nhạc cụ (bài 20260717).\n\n3. How can students use their time management skills to balance school routines and community volunteering?\n- **Đáp án:** Students can create a balanced timetable that allocates specific hours for school routines and volunteering in community projects.\n- **Giải thích:** Câu hỏi liên kết chủ đề quản lý thời gian (bài hôm nay) với chủ đề hoạt động tình nguyện cộng đồng (bài 20260715).\n",
+  "quizlet_markdown": "## Section 1: Simple Vocabulary List (Học từ vựng đơn giản)\n| Từ vựng tiếng Anh | Nghĩa tiếng Việt |\n| --- | --- |\n\n## Section 2: Detailed Vocabulary List (Học từ vựng đầy đủ)\n| Từ vựng + IPA + Loại từ | Nghĩa tiếng Việt |\n| --- | --- |\n"
+}

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAILY PRACTICE: DAY 20260722 - DAILY ROUTINES, HABITS, TIME MANAGEMENT</title>
+    <style>
+        @page { 
+            size: A4; 
+            margin: 15mm 15mm 20mm 15mm; 
+        }
+        body { 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 11.5pt; 
+            line-height: 1.45; 
+            color: #1a1a1a; 
+            margin: 0; 
+            padding: 0;
+        }
+        .header { 
+            border-bottom: 2px double #2c3e50; 
+            padding-bottom: 8px; 
+            margin-bottom: 15px; 
+            text-align: center;
+        }
+        .header .center-name { 
+            font-size: 9.5pt; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            color: #7f8c8d; 
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .header h1 { 
+            font-size: 15pt; 
+            margin: 3px 0; 
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .header h2 { 
+            font-size: 11pt; 
+            margin: 3px 0; 
+            font-style: italic; 
+            color: #34495e;
+        }
+        .student-info { 
+            margin-top: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .section-title { 
+            font-size: 12pt; 
+            color: #2c3e50; 
+            border-left: 3px solid #27ae60; 
+            padding-left: 8px; 
+            margin-top: 18px; 
+            margin-bottom: 8px; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .passage-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .reading-text { 
+            text-align: justify; 
+            margin-bottom: 12px; 
+            text-indent: 25px;
+        }
+        .reading-text p {
+            margin: 0 0 6px 0;
+        }
+        .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }
+        .data-table th { 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }
+        .data-table td { 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }
+        .data-table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+        .svg-chart-container {
+            text-align: center;
+            margin: 10px 0;
+            page-break-inside: avoid;
+        }
+        .writing-line {
+            border-bottom: 1px dotted #bdc3c7;
+            height: 22px;
+            margin-top: 4px;
+            margin-bottom: 1px;
+            width: 98%;
+            page-break-inside: avoid;
+        }
+        .writing-prompt-text {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .writing-prompt-sub-item {
+            margin-top: 4px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .source-box { 
+            font-style: italic; 
+            font-size: 9pt; 
+            color: #7f8c8d; 
+            margin-bottom: 15px; 
+            padding: 6px 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #bdc3c7;
+        }
+        .source-box a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .question-instruction {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+        .question-group {
+            margin-bottom: 12px;
+        }
+        .question-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            text-indent: -20px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .question-options {
+            margin: 4px 0 4px 20px;
+            text-indent: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .question-options div {
+            margin-bottom: 2px;
+            box-sizing: border-box;
+            padding-right: 8px;
+        }
+        .options-4col div {
+            width: 25%;
+        }
+        .options-2col div {
+            width: 50%;
+        }
+        .options-1col div {
+            width: 100%;
+        }
+        .fill-blank {
+            display: inline-block;
+            width: 100px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        .grammar-item {
+            margin-bottom: 8px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .writing-box {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            background-color: #fafbfc;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            text-align: left;
+            page-break-inside: avoid;
+        }
+        .writing-item {
+            margin-bottom: 10px;
+        }
+        .warmup-box {
+            background-color: #fcfcfc;
+            border: 1px dashed #bdc3c7;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            font-size: 10pt;
+        }
+        .warmup-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="center-name">IELTS PREMIUM PREPARATION ACADEMY</div>
+        <h1>DAILY PRACTICE: DAY 20260722 - DAILY ROUTINES, HABITS, TIME MANAGEMENT</h1>
+        <h2>(Level: Reading A2+ | Grammar B1 | Writing A2 | Vocab A2+)</h2>
+        <div class="student-info">
+            <span>Student Name: ..............................................................</span>
+            <span>Time Allowed: 90 mins</span>
+        </div>
+    </div>
+
+    <!-- WARM-UP SECTION -->
+    <div class="section-title">Warm-up / Khởi động</div>
+    <div class="warmup-box">
+        <div class="warmup-title">Answer the following questions in English:</div>
+        1. What time do you usually wake up on school days? Do you have a morning routine?<br>
+        2. How do you organize your tasks when you have many different homework assignments?<br>
+        3. Do you think study planners or calendars are helpful for teenagers? Why or why not?
+    </div>
+
+    <!-- READING PASSAGE -->
+    <div class="section-title">I. Reading Passage</div>
+    <div class="passage-title">Successful Student Morning Routines and Time Management</div>
+    
+    <div class="reading-text">
+        <p>Having a structured morning <b>routine</b> is essential for a successful student <b>lifestyle</b> [R]. When students start their day early and plan their activities, they feel more in control. A good <b>habit</b> is to review the daily <b>schedule</b> before school begins. This planning reduces stress and helps them <b>focus</b> on their lessons throughout the day.</p>
+        <p>In addition to planning, daily physical activity and <b>healthy</b> sleep patterns are very important. Many students have to <b>commute</b> [R] to school by bus or bicycle. If they include a short walk or stretch in their morning <b>routine</b>, they feel more <b>alert</b> and ready to learn. Adequate sleep also improves their <b>working memory</b> [R] and <b>cognitive</b> [R] development, which are needed for solving complex math and science problems.</p>
+        <p>Finally, using school <b>facilities</b> [R] effectively plays a major role in <b>time management</b>. Successful students often spend their break times in quiet study areas or libraries. These public <b>facilities</b> [R] allow them to complete homework without <b>distraction</b>. In contrast, studying in noisy environments reduces <b>focus</b>. Overall, a balanced daily <b>routine</b> helps students keep their study <b>schedule</b> <b>on track</b>.</p>
+    </div>
+
+    <div class="source-box">
+        Source: Adapted from <i>BBC Bitesize</i> - "Revision tips: how to manage your time and study effectively" ()<br>
+        URL: <a href="https://www.bbc.co.uk/bitesize/articles/zmy6qp3" target="_blank">https://www.bbc.co.uk/bitesize/articles/zmy6qp3</a>
+    </div>
+
+    <!-- READING QUESTIONS -->
+    <div class="section-title">II. IELTS Reading Questions (13 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 1–5: </div>
+        <div style="margin-left: 20px; font-weight: bold; margin-bottom: 8px; font-size: 10pt;">
+            TRUE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement agrees with the information<br>
+            FALSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement contradicts the information<br>
+            NOT GIVEN &nbsp;&nbsp;&nbsp;&nbsp; if there is no information on this
+        </div>
+        <div class="question-item">
+            <span class="question-number">1.</span> A morning routine can make students feel more in control of their day.
+        </div>
+        <div class="question-item">
+            <span class="question-number">2.</span> Commuting by bicycle is faster than by bus.
+        </div>
+        <div class="question-item">
+            <span class="question-number">3.</span> Most students study better in noisy environments.
+        </div>
+        <div class="question-item">
+            <span class="question-number">4.</span> Successful students never make mistakes on their timetables.
+        </div>
+        <div class="question-item">
+            <span class="question-number">5.</span> School libraries are quiet study areas.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 6–9: </div>
+        <div class="question-item">
+            <span class="question-number">6.</span> Having a structured morning routine is essential for a student (10) <span class="fill-blank">&nbsp;</span>.
+        </div>
+        <div class="question-item">
+            <span class="question-number">7.</span> Physical activity and healthy (11) <span class="fill-blank">&nbsp;</span> patterns are very important.
+        </div>
+        <div class="question-item">
+            <span class="question-number">8.</span> Adequate sleep improves students' working (12) <span class="fill-blank">&nbsp;</span>.
+        </div>
+        <div class="question-item">
+            <span class="question-number">9.</span> Successful students often spend their breaks in quiet study spaces or (13) <span class="fill-blank">&nbsp;</span>.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 10–13: </div>
+        <div class="question-item">
+            <span class="question-number">10.</span> What is a good habit for students to do before school starts?
+            <div class="question-options options-2col">
+                <div>A. To commute by bus</div>
+                <div>B. To review their daily schedule</div>
+                <div>C. To study in noisy environments</div>
+                <div>D. To sleep late</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">11.</span> How do many students travel to school?
+            <div class="question-options options-2col">
+                <div>A. By bus or bicycle</div>
+                <div>B. By walking only</div>
+                <div>C. By train</div>
+                <div>D. By car</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">12.</span> Why is daily morning movement helpful for teenagers?
+            <div class="question-options options-1col">
+                <div>A. It allows them to sleep during classes.</div>
+                <div>B. It helps them feel more alert and prepared for learning.</div>
+                <div>C. It reduces their working memory.</div>
+                <div>D. It makes their commute longer.</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">13.</span> What is the writer's main purpose in paragraph 3?
+            <div class="question-options options-1col">
+                <div>A. To argue that libraries are the only useful facilities.</div>
+                <div>B. To explain how quiet study spaces help students manage time.</div>
+                <div>C. To show that noisy environments improve memory.</div>
+                <div>D. To describe different bus schedules in the city.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRAMMAR QUESTIONS -->
+    <div class="section-title">III. Questions for Grammar (30 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 14–23: Multiple Choice Questions</div>
+        <div class="question-item">
+            <span class="question-number">14.</span> We <span class="fill-blank">&nbsp;</span> our study habits since the beginning of this year.
+            <div class="question-options options-4col">
+                <div>A. have improved</div>
+                <div>B. improved</div>
+                <div>C. improve</div>
+                <div>D. are improving</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">15.</span> This is the study room <span class="fill-blank">&nbsp;</span> I write my daily timetable.
+            <div class="question-options options-4col">
+                <div>A. where</div>
+                <div>B. which</div>
+                <div>C. who</div>
+                <div>D. when</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">16.</span> Yesterday, Minh <span class="fill-blank">&nbsp;</span> his daily study plan to prepare for the test.
+            <div class="question-options options-4col">
+                <div>A. created</div>
+                <div>B. has created</div>
+                <div>C. creates</div>
+                <div>D. was creating</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">17.</span> The learner <span class="fill-blank">&nbsp;</span> had the best morning habits won the scholarship.
+            <div class="question-options options-4col">
+                <div>A. who</div>
+                <div>B. which</div>
+                <div>C. whom</div>
+                <div>D. where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">18.</span> So far today, she <span class="fill-blank">&nbsp;</span> two hours organizing her study calendar.
+            <div class="question-options options-4col">
+                <div>A. has spent</div>
+                <div>B. spent</div>
+                <div>C. spends</div>
+                <div>D. is spending</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">19.</span> The study planner, <span class="fill-blank">&nbsp;</span> is my favorite study tool, helps me stay on track. (*)
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. who</div>
+                <div>C. where</div>
+                <div>D. that</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">20.</span> Lisa <span class="fill-blank">&nbsp;</span> to a new school two months ago.
+            <div class="question-options options-4col">
+                <div>A. moved</div>
+                <div>B. has moved</div>
+                <div>C. move</div>
+                <div>D. was moving</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">21.</span> The school library is a quiet space <span class="fill-blank">&nbsp;</span> students can study effectively.
+            <div class="question-options options-4col">
+                <div>A. where</div>
+                <div>B. which</div>
+                <div>C. who</div>
+                <div>D. that</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">22.</span> He <span class="fill-blank">&nbsp;</span> the bus to school when he was a primary school student.
+            <div class="question-options options-4col">
+                <div>A. took</div>
+                <div>B. has taken</div>
+                <div>C. takes</div>
+                <div>D. is taking</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">23.</span> The timetable, <span class="fill-blank">&nbsp;</span> hangs on my wall, helps me plan my routines.
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. that</div>
+                <div>C. where</div>
+                <div>D. whom</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 24–33: gap fill</div>
+        <div class="question-item">
+            <span class="question-number">24.</span> Up to now, they <span class="fill-blank">&nbsp;</span> (not decide) which study habit to adopt.
+        </div>
+        <div class="question-item">
+            <span class="question-number">25.</span> Last week, I <span class="fill-blank">&nbsp;</span> (buy) a new study planner to organize my calendar.
+        </div>
+        <div class="question-item">
+            <span class="question-number">26.</span> She <span class="fill-blank">&nbsp;</span> (plan) her study timetable for five years, from 2015 to 2020. (*)
+        </div>
+        <div class="question-item">
+            <span class="question-number">27.</span> Lisa <span class="fill-blank">&nbsp;</span> (be) on track with her daily routine since she started secondary school.
+        </div>
+        <div class="question-item">
+            <span class="question-number">28.</span> Yesterday, they <span class="fill-blank">&nbsp;</span> (commute) to the city library to study in a quiet room.
+        </div>
+        <div class="question-item">
+            <span class="question-number">29.</span> So far this month, my teacher <span class="fill-blank">&nbsp;</span> (give) us three tips for time management.
+        </div>
+        <div class="question-item">
+            <span class="question-number">30.</span> Three days ago, a change in my study routine <span class="fill-blank">&nbsp;</span> (happen) suddenly.
+        </div>
+        <div class="question-item">
+            <span class="question-number">31.</span> I <span class="fill-blank">&nbsp;</span> (know) my study partner for five years, and we still review lessons together.
+        </div>
+        <div class="question-item">
+            <span class="question-number">32.</span> In 2022, the school <span class="fill-blank">&nbsp;</span> (renovate) the quiet study spaces.
+        </div>
+        <div class="question-item">
+            <span class="question-number">33.</span> Up to this point, Minh <span class="fill-blank">&nbsp;</span> (not finish) the daily planning.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 34–38: Error Correction - Correct the single grammatical error in each of the following sentences.</div>
+        <div class="question-item">
+            <span class="question-number">34.</span> Correct the error: The study planner who was on my desk is blue.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">35.</span> Correct the error: This is the teenager which managed his study time well.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">36.</span> Correct the error: The room where we cleaned yesterday is quiet. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">37.</span> Correct the error: This is the park who we visited after school.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">38.</span> Correct the error: Minh, that is an active teenager, plans his day.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 39–41: Sentence Combining</div>
+        <div class="question-item">
+            <span class="question-number">39.</span> Combine these sentences using a relative clause with 'where': The library is quiet. Students study in it.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">40.</span> Combine these sentences using a relative clause with 'who': I met a teacher. She helps me manage my time.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">41.</span> Combine these sentences using a relative clause with 'which': The routine is helpful. It includes early morning exercise.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 42–43: Sentence Transformation and Combining - Combine or rewrite the sentences as instructed.</div>
+        <div class="question-item">
+            <span class="question-number">42.</span> Rewrite the sentence using the present perfect with 'for': They started using a study calendar two years ago.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">43.</span> Rewrite the sentence using present perfect: I last revised my timetable in 2025. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <!-- WRITING QUESTIONS -->
+    <div class="section-title">IV. Questions for Writing (5 tasks)</div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 1:  Sentence structure</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">routine / morning / A / student / helps / focus / a /</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 2:  Using comparatives</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Complete the sentence in your own words (write about 15-20 words): Managing time with a planner is <span class="fill-blank">&nbsp;</span> than doing it without one because...</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 3:  Describing routines</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Write a short email (40-60 words) to your cousin. Describe your daily study routine and what habits help you stay focused.</div>
+<div style='margin-top: 4px; margin-bottom: 2px;'>To: ...................................................... Subject: ......................................................</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 4:  Comparing quantities</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Write a short comparison (30-45 words) based on the table below showing the daily hours spent by Minh and Lisa.</div>
+<table class="data-table"><thead><tr><th>Activity</th><th>Minh (Daily hours)</th><th>Lisa (Daily hours)</th></tr></thead><tbody><tr><td>Homework</td><td>3</td><td>1</td></tr><tr><td>Sleep</td><td>8</td><td>9</td></tr><tr><td>Exercise</td><td>1</td><td>2</td></tr></tbody></table>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 5:  Explaining advantages</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Write a short paragraph (50-70 words) explaining the advantages of physical exercise in the morning for high school students.</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <!-- REVIEW BRIDGE -->
+    <div class="review-bridge-container" style="page-break-before: always; page-break-inside: avoid;">
+        <div class="section-title">V. Review Bridge / Ôn tập liên chủ đề</div>
+        <div class="warmup-box" style="background-color: #fafbfc; border: 1px solid #bdc3c7; border-radius: 4px; padding: 10px;">
+            1. How does spending time in a quiet countryside neighborhood compare to studying in a noisy city environment?<br>
+<div class="writing-line"></div><br>
+2. Why can practicing a musical instrument be a useful morning habit for developing children's focus?<br>
+<div class="writing-line"></div><br>
+3. How can students use their time management skills to balance school routines and community volunteering?<br>
+<div class="writing-line"></div><br>
+        </div>
+    </div>
+
+</body>
+</html>

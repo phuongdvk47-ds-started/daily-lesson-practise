@@ -7,7 +7,7 @@
       "source": 0,
       "reading": 0,
       "vocabulary": 0,
-      "grammar": 0,
+      "grammar": 1,
       "writing": 0,
       "answers": 0,
       "pdf_layout": 0
@@ -41,6 +41,18 @@
         "location": "reading.questions[9] / reading.reading_blueprint[8]",
         "problem": "Mandatory B1 requirement is >=2 inference questions. Counting reasoning_skill values, only Q11 ('inference') qualifies; Q9's reasoning_skill is 'cause_effect' although its reading_blueprint.type is 'inference'. This leaves the set with a single reasoning_skill='inference' item, and the >=1 cause_effect/contrast/reason/result mandatory is satisfied ONLY by that same Q9, creating a fragile overlap. An automated check counting reasoning_skill would report <2 inference, failing the B1 mandatory mix.",
         "required_fix": "Reconcile the labels: set Q9 reasoning_skill to 'inference' (matching blueprint.type) to reach 2 inference items, AND preserve a distinct cause_effect/contrast/reason/result item (e.g., reclassify Q6 gap-fill, which tests 'noise/crowds increase stress' cause->result, to reasoning_skill='cause_effect', or designate another question). Do not merely relabel Q9 without keeping the >=1 cause_effect mandatory satisfied.",
+        "status": "resolved",
+        "revision_attempt": 1
+      },
+      {
+        "id": "QC-GRAMMAR-ORDERING",
+        "from_agent": "qc",
+        "to_agent": "grammar",
+        "challenge_type": "numbering_error",
+        "severity": "critical",
+        "location": "grammar.sections / practice_markdown",
+        "problem": "Grammar questions are grouped by type in the practice sheet but are numbered non-sequentially (e.g. MCQ contains Q1, Q2, Q4, while Q3 is under Gap Fill). This causes display ranges in PDF headings to stretch incorrectly (e.g. Questions 14-43 for MCQ) and question numbers to jump around in the practice sheet, violating the sequential ordering and display rules.",
+        "required_fix": "Sort and renumber grammar questions sequentially in the JSON array (Q1-14 MCQ, Q15-20 Gap Fill, Q21-26 Error Correction, Q27-28 Combining, Q29-30 Transformation) and update practice_markdown and answers_markdown to use the new sequential numbering (1 to 30) for both questions and answer keys.",
         "status": "resolved",
         "revision_attempt": 1
       }
@@ -1089,14 +1101,6 @@
       },
       {
         "question_no": 3,
-        "grammar_target": "present perfect vs past simple",
-        "question_type": "controlled choice",
-        "depth": "medium",
-        "tested_dimension": "meaning",
-        "trap": "'since 2015' demands present perfect"
-      },
-      {
-        "question_no": 4,
         "grammar_target": "first conditional",
         "question_type": "contextual choice",
         "depth": "medium",
@@ -1104,7 +1108,7 @@
         "trap": "will in if-clause"
       },
       {
-        "question_no": 5,
+        "question_no": 4,
         "grammar_target": "defining relative clauses",
         "question_type": "contextual choice",
         "depth": "medium",
@@ -1112,7 +1116,7 @@
         "trap": "defining vs non-defining comma confusion with multiple referents"
       },
       {
-        "question_no": 6,
+        "question_no": 5,
         "grammar_target": "non-defining relative clauses",
         "question_type": "contextual choice",
         "depth": "medium",
@@ -1120,15 +1124,7 @@
         "trap": "missing comma pair with single referent"
       },
       {
-        "question_no": 7,
-        "grammar_target": "passive voice",
-        "question_type": "controlled choice",
-        "depth": "medium",
-        "tested_dimension": "meaning",
-        "trap": "future passive tense after 'next year'"
-      },
-      {
-        "question_no": 8,
+        "question_no": 6,
         "grammar_target": "gerunds and infinitives",
         "question_type": "contextual choice",
         "depth": "medium",
@@ -1136,15 +1132,7 @@
         "trap": "pattern memorisation (prefer + V-ing)"
       },
       {
-        "question_no": 9,
-        "grammar_target": "gerunds after verbs",
-        "question_type": "controlled choice",
-        "depth": "low",
-        "tested_dimension": "form",
-        "trap": "enjoy + V-ing not to V"
-      },
-      {
-        "question_no": 10,
+        "question_no": 7,
         "grammar_target": "reported speech",
         "question_type": "contextual choice",
         "depth": "medium",
@@ -1152,7 +1140,7 @@
         "trap": "backshift of tense"
       },
       {
-        "question_no": 11,
+        "question_no": 8,
         "grammar_target": "linkers: reason",
         "question_type": "contextual choice",
         "depth": "medium",
@@ -1160,7 +1148,7 @@
         "trap": "wrong logical relation (cause vs contrast)"
       },
       {
-        "question_no": 12,
+        "question_no": 9,
         "grammar_target": "linkers: contrast",
         "question_type": "contextual choice",
         "depth": "medium",
@@ -1168,7 +1156,7 @@
         "trap": "additive vs contrast linker"
       },
       {
-        "question_no": 13,
+        "question_no": 10,
         "grammar_target": "linkers: contrast",
         "question_type": "contextual choice",
         "depth": "medium",
@@ -1176,7 +1164,7 @@
         "trap": "cause vs concession linker"
       },
       {
-        "question_no": 14,
+        "question_no": 11,
         "grammar_target": "articles with places",
         "question_type": "controlled choice",
         "depth": "high",
@@ -1185,7 +1173,7 @@
         "stretch": true
       },
       {
-        "question_no": 15,
+        "question_no": 12,
         "grammar_target": "subject-verb agreement with intervening phrases",
         "question_type": "controlled choice",
         "depth": "high",
@@ -1194,7 +1182,7 @@
         "stretch": true
       },
       {
-        "question_no": 16,
+        "question_no": 13,
         "grammar_target": "hedging",
         "question_type": "contextual choice",
         "depth": "high",
@@ -1203,7 +1191,39 @@
         "stretch": true
       },
       {
+        "question_no": 14,
+        "grammar_target": "second conditional",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "present in if-clause for unreal situation"
+      },
+      {
+        "question_no": 15,
+        "grammar_target": "present perfect vs past simple",
+        "question_type": "controlled choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "'since 2015' demands present perfect"
+      },
+      {
+        "question_no": 16,
+        "grammar_target": "passive voice",
+        "question_type": "controlled choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "future passive tense after 'next year'"
+      },
+      {
         "question_no": 17,
+        "grammar_target": "gerunds after verbs",
+        "question_type": "controlled choice",
+        "depth": "low",
+        "tested_dimension": "form",
+        "trap": "enjoy + V-ing not to V"
+      },
+      {
+        "question_no": 18,
         "grammar_target": "noun phrases",
         "question_type": "controlled choice",
         "depth": "high",
@@ -1211,7 +1231,7 @@
         "trap": "participial adjective in noun phrase"
       },
       {
-        "question_no": 18,
+        "question_no": 19,
         "grammar_target": "mixed conditionals (intro)",
         "question_type": "controlled choice",
         "depth": "high",
@@ -1219,7 +1239,7 @@
         "trap": "past condition with present result"
       },
       {
-        "question_no": 19,
+        "question_no": 20,
         "grammar_target": "reduced relative clauses",
         "question_type": "controlled choice",
         "depth": "high",
@@ -1228,7 +1248,7 @@
         "stretch": true
       },
       {
-        "question_no": 20,
+        "question_no": 21,
         "grammar_target": "past simple spelling",
         "question_type": "error correction",
         "depth": "easy",
@@ -1236,7 +1256,7 @@
         "trap": "irregular past form"
       },
       {
-        "question_no": 21,
+        "question_no": 22,
         "grammar_target": "first conditional",
         "question_type": "error correction",
         "depth": "easy",
@@ -1244,7 +1264,7 @@
         "trap": "will + base after modal"
       },
       {
-        "question_no": 22,
+        "question_no": 23,
         "grammar_target": "gerunds after spend",
         "question_type": "error correction",
         "depth": "medium",
@@ -1252,7 +1272,7 @@
         "trap": "spend + time + V-ing"
       },
       {
-        "question_no": 23,
+        "question_no": 24,
         "grammar_target": "passive voice",
         "question_type": "error correction",
         "depth": "medium",
@@ -1260,7 +1280,7 @@
         "trap": "wrong past participle in passive"
       },
       {
-        "question_no": 24,
+        "question_no": 25,
         "grammar_target": "subject-verb agreement with intervening phrases",
         "question_type": "error correction",
         "depth": "high",
@@ -1269,7 +1289,7 @@
         "stretch": true
       },
       {
-        "question_no": 25,
+        "question_no": 26,
         "grammar_target": "articles with places",
         "question_type": "error correction",
         "depth": "high",
@@ -1278,7 +1298,7 @@
         "stretch": true
       },
       {
-        "question_no": 26,
+        "question_no": 27,
         "grammar_target": "sentence combining (contrast)",
         "question_type": "sentence combining",
         "depth": "medium",
@@ -1286,7 +1306,7 @@
         "trap": "cause-effect reversed"
       },
       {
-        "question_no": 27,
+        "question_no": 28,
         "grammar_target": "sentence combining (reason)",
         "question_type": "sentence combining",
         "depth": "medium",
@@ -1294,7 +1314,7 @@
         "trap": "cause-effect reversed"
       },
       {
-        "question_no": 28,
+        "question_no": 29,
         "grammar_target": "transformation (purpose)",
         "question_type": "transformation",
         "depth": "medium",
@@ -1302,20 +1322,12 @@
         "trap": "meaning change"
       },
       {
-        "question_no": 29,
+        "question_no": 30,
         "grammar_target": "reduced relative clauses",
         "question_type": "transformation",
         "depth": "high",
         "tested_dimension": "writing transfer",
         "trap": "participle reduction"
-      },
-      {
-        "question_no": 30,
-        "grammar_target": "second conditional",
-        "question_type": "contextual choice",
-        "depth": "medium",
-        "tested_dimension": "meaning",
-        "trap": "present in if-clause for unreal situation"
       }
     ],
     "targets": [
@@ -1458,29 +1470,44 @@
     ],
     "sections": [
       {
-        "title": "Multiple Choice",
+        "section_title": "Multiple Choice Questions",
         "internal_question_start": 1,
-        "internal_question_end": 14
+        "internal_question_end": 14,
+        "display_question_start": 14,
+        "display_question_end": 27,
+        "compiler_computed_range": true
       },
       {
-        "title": "Gap Fill",
+        "section_title": "Gap Fill",
         "internal_question_start": 15,
-        "internal_question_end": 20
+        "internal_question_end": 20,
+        "display_question_start": 28,
+        "display_question_end": 33,
+        "compiler_computed_range": true
       },
       {
-        "title": "Error Correction",
+        "section_title": "Error Correction",
         "internal_question_start": 21,
-        "internal_question_end": 26
+        "internal_question_end": 26,
+        "display_question_start": 34,
+        "display_question_end": 39,
+        "compiler_computed_range": true
       },
       {
-        "title": "Sentence Combining",
+        "section_title": "Sentence Combining",
         "internal_question_start": 27,
-        "internal_question_end": 28
+        "internal_question_end": 28,
+        "display_question_start": 40,
+        "display_question_end": 41,
+        "compiler_computed_range": true
       },
       {
-        "title": "Transformation",
+        "section_title": "Transformation",
         "internal_question_start": 29,
-        "internal_question_end": 30
+        "internal_question_end": 30,
+        "display_question_start": 42,
+        "display_question_end": 43,
+        "compiler_computed_range": true
       }
     ],
     "questions": [
@@ -1638,51 +1665,6 @@
       },
       {
         "id": 3,
-        "type": "Gap Fill",
-        "question": "I ______ (know) my neighbours in the village since we moved here in 2015.",
-        "options": [],
-        "correct_answer": "have known",
-        "explanation_vi": "Có 'since we moved here in 2015' -> hiện tại hoàn thành 'have known' (tình trạng biết nhau kéo dài từ quá khứ đến nay).",
-        "difficulty": "medium",
-        "cognitive_level": "context_use",
-        "source_connection": "independent",
-        "target_structure": "present perfect vs past simple",
-        "level": "B1",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "I have known my neighbours in the village since we moved here in 2015.",
-          "why_correct_is_unique": "Explicit time marker 'since 2015' requires present perfect.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "knew",
-              "reason": "Past simple does not connect to 'since' up to now."
-            },
-            {
-              "option": "know",
-              "reason": "Present simple is ungrammatical with 'since 2015'."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        }
-      },
-      {
-        "id": 4,
         "type": "Multiple Choice",
         "question": "If the city ______ more parks, residents will have cleaner air to breathe.",
         "options": [
@@ -1758,7 +1740,7 @@
         ]
       },
       {
-        "id": 5,
+        "id": 4,
         "type": "Multiple Choice",
         "question": "There are many towns near the river. Which sentence clearly tells us which town was flooded last spring?",
         "options": [
@@ -1824,7 +1806,7 @@
         ]
       },
       {
-        "id": 6,
+        "id": 5,
         "type": "Multiple Choice",
         "question": "There is only one bridge between the city and the village. Add extra information about when it was built.",
         "options": [
@@ -1890,52 +1872,7 @@
         ]
       },
       {
-        "id": 7,
-        "type": "Gap Fill",
-        "question": "A new ring road ______ (build) around the city next year to reduce traffic jams.",
-        "options": [],
-        "correct_answer": "will be built",
-        "explanation_vi": "Con đường (ring road) bị xây dựng -> bị động. Thời gian 'next year' -> tương lai: 'will be built'.",
-        "difficulty": "medium",
-        "cognitive_level": "context_use",
-        "source_connection": "independent",
-        "target_structure": "passive voice",
-        "level": "B1",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "A new ring road will be built around the city next year to reduce traffic jams.",
-          "why_correct_is_unique": "The ring road receives the action, so future passive is needed.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "builds",
-              "reason": "Active present is wrong; the road does not build itself."
-            },
-            {
-              "option": "is built",
-              "reason": "Present passive ignores the future time 'next year'."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        }
-      },
-      {
-        "id": 8,
+        "id": 6,
         "type": "Multiple Choice",
         "question": "City people often prefer ______ to work rather than spend hours driving in traffic.",
         "options": [
@@ -2011,52 +1948,7 @@
         ]
       },
       {
-        "id": 9,
-        "type": "Gap Fill",
-        "question": "Many commuters enjoy ______ (live) within walking distance of their workplace in the city.",
-        "options": [],
-        "correct_answer": "living",
-        "explanation_vi": "Động từ 'enjoy' theo sau là V-ing. 'living' đúng; không dùng 'to live'.",
-        "difficulty": "easy",
-        "cognitive_level": "form_recognition",
-        "source_connection": "writing_transfer",
-        "target_structure": "gerunds after verbs",
-        "level": "B1",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "Many commuters enjoy living within walking distance of their workplace in the city.",
-          "why_correct_is_unique": "'enjoy' must be followed by the -ing form.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "to live",
-              "reason": "'enjoy' is not followed by the to-infinitive."
-            },
-            {
-              "option": "live",
-              "reason": "Bare form is ungrammatical after 'enjoy'."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        }
-      },
-      {
-        "id": 10,
+        "id": 7,
         "type": "Multiple Choice",
         "question": "Anna said, 'I miss the quiet countryside.' -> Anna said that she ______ the quiet countryside.",
         "options": [
@@ -2132,7 +2024,7 @@
         ]
       },
       {
-        "id": 11,
+        "id": 8,
         "type": "Multiple Choice",
         "question": "City transport is efficient, ______ millions of people use it to reach work every day.",
         "options": [
@@ -2208,7 +2100,7 @@
         ]
       },
       {
-        "id": 12,
+        "id": 9,
         "type": "Multiple Choice",
         "question": "Urban areas keep growing, ______ rural populations keep shrinking as young people move away.",
         "options": [
@@ -2284,7 +2176,7 @@
         ]
       },
       {
-        "id": 13,
+        "id": 10,
         "type": "Multiple Choice",
         "question": "______ the countryside is peaceful, many young people still choose to live in the city.",
         "options": [
@@ -2360,7 +2252,7 @@
         ]
       },
       {
-        "id": 14,
+        "id": 11,
         "type": "Multiple Choice",
         "question": "(*) ______ countryside offers a slower pace of life than the busy city centre.",
         "options": [
@@ -2436,7 +2328,7 @@
         ]
       },
       {
-        "id": 15,
+        "id": 12,
         "type": "Multiple Choice",
         "question": "(*) The number of cars on the city's roads ______ still rising despite new bus lines.",
         "options": [
@@ -2512,7 +2404,7 @@
         ]
       },
       {
-        "id": 16,
+        "id": 13,
         "type": "Multiple Choice",
         "question": "(*) Living in a big city ______ increase stress levels, according to some recent studies.",
         "options": [
@@ -2588,660 +2480,7 @@
         ]
       },
       {
-        "id": 17,
-        "type": "Gap Fill",
-        "question": "The ______ (crowd) streets of the old town make walking to the market difficult.",
-        "options": [],
-        "correct_answer": "crowded",
-        "explanation_vi": "Dùng tính từ phân từ 'crowded' bổ nghĩa cho 'streets' trong cụm danh từ. Nghĩa: những con phố đông đúc.",
-        "difficulty": "hard",
-        "cognitive_level": "context_use",
-        "source_connection": "independent",
-        "target_structure": "noun phrases",
-        "level": "B2",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "The crowded streets of the old town make walking to the market difficult.",
-          "why_correct_is_unique": "A participial adjective 'crowded' modifies 'streets' inside the noun phrase.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "crowding",
-              "reason": "Present participle suggests an active process, not a state description."
-            },
-            {
-              "option": "crowd",
-              "reason": "Bare noun is ungrammatical as an adjective modifier here."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        }
-      },
-      {
-        "id": 18,
-        "type": "Gap Fill",
-        "question": "If local leaders had protected the green spaces years ago, the town ______ (be) less crowded today.",
-        "options": [],
-        "correct_answer": "would be",
-        "explanation_vi": "Câu điều kiện hỗn hợp (mixed conditional): điều kiện quá khứ giả định ('had protected') kết hợp với kết quả hiện tại ('would be'). Một trong hai vế thay đổi thì so với điều kiện loại 2.",
-        "difficulty": "hard",
-        "cognitive_level": "context_use",
-        "source_connection": "independent",
-        "target_structure": "mixed conditionals (intro)",
-        "level": "B2",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "If local leaders had protected the green spaces years ago, the town would be less crowded today.",
-          "why_correct_is_unique": "Past unreal condition with a present result needs 'would be'.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "will be",
-              "reason": "Future does not match the hypothetical past condition."
-            },
-            {
-              "option": "would have been",
-              "reason": "That is a past result, but the time marker is 'today'."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        }
-      },
-      {
-        "id": 19,
-        "type": "Gap Fill",
-        "question": "(*) Houses ______ (build) a century ago still stand at the edge of the village.",
-        "options": [],
-        "correct_answer": "built",
-        "explanation_vi": "Rút gọn mệnh đề quan hệ bị động: 'Houses that were built a century ago' -> 'Houses built a century ago' (phân từ quá khứ làm tính từ). Dùng 'built'.",
-        "difficulty": "hard",
-        "cognitive_level": "context_use",
-        "source_connection": "independent",
-        "target_structure": "reduced relative clauses",
-        "level": "B2",
-        "stretch": true,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "Houses built a century ago still stand at the edge of the village.",
-          "why_correct_is_unique": "Reduced relative clause uses past participle 'built' for passive meaning.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "building",
-              "reason": "Present participle implies active, wrong here."
-            },
-            {
-              "option": "build",
-              "reason": "Base form is ungrammatical."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        }
-      },
-      {
-        "id": 20,
-        "type": "Error Correction",
-        "question": "Correct the error: The village growed rapidly after the new factory opened in 2018.",
-        "options": [],
-        "correct_answer": "The village grew rapidly after the new factory opened in 2018.",
-        "explanation_vi": "Lỗi: 'growed' là dạng quá khứ sai của 'grow'. Quá khứ bất quy tắc của 'grow' là 'grew'. Sửa thành 'grew'.",
-        "difficulty": "easy",
-        "cognitive_level": "editing_accuracy",
-        "source_connection": "independent",
-        "target_structure": "past simple spelling",
-        "level": "B1",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "The village grew rapidly after the new factory opened in 2018.",
-          "why_correct_is_unique": "Only one error: 'growed' should be 'grew'.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "The village growed rapidly after the new factory opened in 2018.",
-              "reason": "Original contains the spelling error 'growed'."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        },
-        "error_correction_validation": {
-          "original_sentence": "The village growed rapidly after the new factory opened in 2018.",
-          "corrected_sentence": "The village grew rapidly after the new factory opened in 2018.",
-          "target_error_text": "growed",
-          "target_error_type": "irregular past simple spelling",
-          "correction_text": "grew",
-          "original_contains_error": true,
-          "corrected_differs_from_original": true,
-          "exactly_one_target_error": true,
-          "explanation_matches_error": true
-        }
-      },
-      {
-        "id": 21,
-        "type": "Error Correction",
-        "question": "Correct the error: If more parks are built, the city will becomes greener and cooler.",
-        "options": [],
-        "correct_answer": "If more parks are built, the city will become greener and cooler.",
-        "explanation_vi": "Lỗi: sau 'will' phải dùng nguyên mẫu ('become'), không dùng 'becomes'. Sửa 'becomes' thành 'become'. Đây là điều kiện loại 1.",
-        "difficulty": "easy",
-        "cognitive_level": "editing_accuracy",
-        "source_connection": "independent",
-        "target_structure": "first conditional",
-        "level": "B1",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "If more parks are built, the city will become greener and cooler.",
-          "why_correct_is_unique": "Only one error: 'will' must be followed by the base form 'become'.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "If more parks are built, the city will becomes greener and cooler.",
-              "reason": "Original has 'becomes' after 'will'."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        },
-        "error_correction_validation": {
-          "original_sentence": "If more parks are built, the city will becomes greener and cooler.",
-          "corrected_sentence": "If more parks are built, the city will become greener and cooler.",
-          "target_error_text": "becomes",
-          "target_error_type": "first conditional (will + base form)",
-          "correction_text": "become",
-          "original_contains_error": true,
-          "corrected_differs_from_original": true,
-          "exactly_one_target_error": true,
-          "explanation_matches_error": true
-        }
-      },
-      {
-        "id": 22,
-        "type": "Error Correction",
-        "question": "Correct the error: The children spend hours play in the fields near the village.",
-        "options": [],
-        "correct_answer": "The children spend hours playing in the fields near the village.",
-        "explanation_vi": "Lỗi: cấu trúc 'spend time + V-ing' nên sau 'spend hours' phải là 'playing', không phải 'play'. Sửa 'play' thành 'playing'.",
-        "difficulty": "medium",
-        "cognitive_level": "editing_accuracy",
-        "source_connection": "independent",
-        "target_structure": "gerunds after spend",
-        "level": "B1",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "The children spend hours playing in the fields near the village.",
-          "why_correct_is_unique": "Only one error: 'spend time' must be followed by the -ing form 'playing'.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "The children spend hours play in the fields near the village.",
-              "reason": "Original has 'play' instead of the gerund."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        },
-        "error_correction_validation": {
-          "original_sentence": "The children spend hours play in the fields near the village.",
-          "corrected_sentence": "The children spend hours playing in the fields near the village.",
-          "target_error_text": "play",
-          "target_error_type": "gerund after 'spend time'",
-          "correction_text": "playing",
-          "original_contains_error": true,
-          "corrected_differs_from_original": true,
-          "exactly_one_target_error": true,
-          "explanation_matches_error": true
-        }
-      },
-      {
-        "id": 23,
-        "type": "Error Correction",
-        "question": "Correct the error: The new library in the city centre was build last year.",
-        "options": [],
-        "correct_answer": "The new library in the city centre was built last year.",
-        "explanation_vi": "Lỗi: trong bị động quá khứ phải dùng quá khứ phân từ đúng 'built', không phải nguyên mẫu 'build'. Sửa 'build' thành 'built'.",
-        "difficulty": "medium",
-        "cognitive_level": "editing_accuracy",
-        "source_connection": "independent",
-        "target_structure": "passive voice",
-        "level": "B1",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "The new library in the city centre was built last year.",
-          "why_correct_is_unique": "Only one error: passive requires the past participle 'built', not 'build'.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "The new library in the city centre was build last year.",
-              "reason": "Original uses the base form 'build' in the passive."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        },
-        "error_correction_validation": {
-          "original_sentence": "The new library in the city centre was build last year.",
-          "corrected_sentence": "The new library in the city centre was built last year.",
-          "target_error_text": "build",
-          "target_error_type": "passive voice (wrong past participle)",
-          "correction_text": "built",
-          "original_contains_error": true,
-          "corrected_differs_from_original": true,
-          "exactly_one_target_error": true,
-          "explanation_matches_error": true
-        }
-      },
-      {
-        "id": 24,
-        "type": "Error Correction",
-        "question": "Correct the error: The number of cars in the city are rising every year. (*)",
-        "options": [],
-        "correct_answer": "The number of cars in the city is rising every year.",
-        "explanation_vi": "Lỗi: 'The number of + số nhiều' dùng động từ số ít. Sửa 'are' thành 'is'. Chỉ một lỗi.",
-        "difficulty": "hard",
-        "cognitive_level": "editing_accuracy",
-        "source_connection": "independent",
-        "target_structure": "subject-verb agreement with intervening phrases",
-        "level": "B2",
-        "stretch": true,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "The number of cars in the city is rising every year.",
-          "why_correct_is_unique": "Only one error: 'are' should be 'is' because the subject is 'The number'.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "The number of cars in the city are rising every year.",
-              "reason": "Original has 'are' agreeing with 'cars'."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        },
-        "error_correction_validation": {
-          "original_sentence": "The number of cars in the city are rising every year.",
-          "corrected_sentence": "The number of cars in the city is rising every year.",
-          "target_error_text": "are",
-          "target_error_type": "subject-verb agreement ('The number of' + singular)",
-          "correction_text": "is",
-          "original_contains_error": true,
-          "corrected_differs_from_original": true,
-          "exactly_one_target_error": true,
-          "explanation_matches_error": true
-        }
-      },
-      {
-        "id": 25,
-        "type": "Error Correction",
-        "question": "Correct the error: We spent the weekend in countryside, away from the noise of the city. (*)",
-        "options": [],
-        "correct_answer": "We spent the weekend in the countryside, away from the noise of the city.",
-        "explanation_vi": "Lỗi: thiếu mạo từ 'the' trước 'countryside' khi nói vùng quê nói chung. Sửa 'in countryside' thành 'in the countryside'. Chỉ thêm một từ.",
-        "difficulty": "hard",
-        "cognitive_level": "editing_accuracy",
-        "source_connection": "independent",
-        "target_structure": "articles with places",
-        "level": "B2",
-        "stretch": true,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "We spent the weekend in the countryside, away from the noise of the city.",
-          "why_correct_is_unique": "Only one error: missing definite article 'the' before 'countryside'.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "We spent the weekend in countryside, away from the noise of the city.",
-              "reason": "Original lacks 'the' before the generic place 'countryside'."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        },
-        "error_correction_validation": {
-          "original_sentence": "We spent the weekend in countryside, away from the noise of the city.",
-          "corrected_sentence": "We spent the weekend in the countryside, away from the noise of the city.",
-          "target_error_text": "in countryside",
-          "target_error_type": "articles with places (missing 'the')",
-          "correction_text": "in the countryside",
-          "original_contains_error": true,
-          "corrected_differs_from_original": true,
-          "exactly_one_target_error": true,
-          "explanation_matches_error": true
-        }
-      },
-      {
-        "id": 26,
-        "type": "Sentence Combining",
-        "question": "Combine the two sentences using 'whereas'. Sentence 1: City life is fast and busy. Sentence 2: Countryside life is slow and calm.",
-        "options": [],
-        "correct_answer": "City life is fast and busy, whereas countryside life is slow and calm.",
-        "explanation_vi": "Dùng 'whereas' nối hai câu trái ngược: thành thị nhanh/bận rộn, nông thôn chậm/yên bình. Không đảo quan hệ.",
-        "difficulty": "medium",
-        "cognitive_level": "writing_transfer",
-        "source_connection": "writing_transfer",
-        "target_structure": "sentence combining (contrast)",
-        "level": "B1",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "City life is fast and busy, whereas countryside life is slow and calm.",
-          "why_correct_is_unique": "Both ideas are kept; 'whereas' shows contrast without changing meaning.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [
-            "City life is fast and busy, while countryside life is slow and calm."
-          ],
-          "why_other_options_are_wrong": [
-            {
-              "option": "City life is fast and busy because countryside life is slow and calm.",
-              "reason": "Reverses the logical relation."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        },
-        "meaning_preservation_validation": {
-          "original_meaning": "City life is fast and busy and countryside life is slow and calm (contrast).",
-          "transformed_meaning": "City life is fast and busy, whereas countryside life is slow and calm.",
-          "meaning_is_preserved": true,
-          "target_structure_used": true,
-          "no_extra_information_added": true,
-          "no_information_removed": true,
-          "answer_family_is_narrow": true
-        }
-      },
-      {
-        "id": 27,
-        "type": "Sentence Combining",
-        "question": "Combine the two sentences using 'because'. Sentence 1: Many people move to cities. Sentence 2: They want better job opportunities.",
-        "options": [],
-        "correct_answer": "Many people move to cities because they want better job opportunities.",
-        "explanation_vi": "Dùng 'because' nối: nhiều người chuyển đến thành thị, VÌ họ muốn cơ hội việc làm tốt hơn. Đúng hướng nhân-quả.",
-        "difficulty": "medium",
-        "cognitive_level": "writing_transfer",
-        "source_connection": "writing_transfer",
-        "target_structure": "sentence combining (reason)",
-        "level": "B1",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "Many people move to cities because they want better job opportunities.",
-          "why_correct_is_unique": "Cause-effect is preserved: moving to cities is explained by job opportunities.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [
-            "Many people move to cities, because they want better job opportunities."
-          ],
-          "why_other_options_are_wrong": [
-            {
-              "option": "Many people move to cities so that they want better job opportunities.",
-              "reason": "Slightly shifts purpose; 'because' is the asked linker and keeps the reason."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        },
-        "meaning_preservation_validation": {
-          "original_meaning": "Many people move to cities and this is because they want better job opportunities (reason).",
-          "transformed_meaning": "Many people move to cities because they want better job opportunities.",
-          "meaning_is_preserved": true,
-          "target_structure_used": true,
-          "no_extra_information_added": true,
-          "no_information_removed": true,
-          "answer_family_is_narrow": true
-        }
-      },
-      {
-        "id": 28,
-        "type": "Transformation",
-        "question": "Rewrite using 'so that'. Many families move to the suburbs to escape the noise of the city.",
-        "options": [],
-        "correct_answer": "Many families move to the suburbs so that they can escape the noise of the city.",
-        "explanation_vi": "Chuyển 'to escape' (mục đích) thành 'so that they can escape'. Nghĩa không đổi.",
-        "difficulty": "medium",
-        "cognitive_level": "writing_transfer",
-        "source_connection": "writing_transfer",
-        "target_structure": "transformation (purpose)",
-        "level": "B1",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "Many families move to the suburbs so that they can escape the noise of the city.",
-          "why_correct_is_unique": "Purpose is preserved using 'so that'.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [
-            "Many families move to the suburbs so that they escape the noise of the city."
-          ],
-          "why_other_options_are_wrong": [
-            {
-              "option": "Many families move to the suburbs because they can escape the noise of the city.",
-              "reason": "Changes purpose to reason."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        },
-        "meaning_preservation_validation": {
-          "original_meaning": "Families move to the suburbs for the purpose of escaping city noise.",
-          "transformed_meaning": "Many families move to the suburbs so that they can escape the noise of the city.",
-          "meaning_is_preserved": true,
-          "target_structure_used": true,
-          "no_extra_information_added": true,
-          "no_information_removed": true,
-          "answer_family_is_narrow": true
-        }
-      },
-      {
-        "id": 29,
-        "type": "Transformation",
-        "question": "Rewrite using a reduced relative clause. The houses that were built a century ago still stand at the edge of the village.",
-        "options": [],
-        "correct_answer": "The houses built a century ago still stand at the edge of the village.",
-        "explanation_vi": "Rút gọn mệnh đề quan hệ bị động: 'that were built' -> 'built'. Nghĩa giữ nguyên.",
-        "difficulty": "hard",
-        "cognitive_level": "writing_transfer",
-        "source_connection": "writing_transfer",
-        "target_structure": "reduced relative clauses",
-        "level": "B2",
-        "stretch": false,
-        "one_answer_check": {
-          "has_exactly_one_valid_answer": true,
-          "context_is_sufficient": true,
-          "final_sentence_after_insertion": "The houses built a century ago still stand at the edge of the village.",
-          "why_correct_is_unique": "Reduced relative clause keeps the passive meaning with 'built'.",
-          "punctuation_complete": true,
-          "meaning_preserved": true,
-          "target_structure_clear": true,
-          "answer_family_is_bounded": true,
-          "example_expected_answer": "",
-          "alternative_answers_allowed": [],
-          "why_other_options_are_wrong": [
-            {
-              "option": "The houses building a century ago still stand at the edge of the village.",
-              "reason": "Wrong participle; changes voice."
-            }
-          ]
-        },
-        "deep_grammar_validation": {
-          "has_single_clear_answer": true,
-          "requires_context_or_meaning": true,
-          "meaning_preserved_if_transformation": true,
-          "is_not_surface_clue_only": true,
-          "matches_target_structure": true,
-          "difficulty_is_appropriate": true,
-          "level_is_appropriate": true
-        },
-        "meaning_preservation_validation": {
-          "original_meaning": "The houses that were built a century ago still stand at the edge of the village.",
-          "transformed_meaning": "The houses built a century ago still stand at the edge of the village.",
-          "meaning_is_preserved": true,
-          "target_structure_used": true,
-          "no_extra_information_added": true,
-          "no_information_removed": true,
-          "answer_family_is_narrow": true
-        }
-      },
-      {
-        "id": 30,
+        "id": 14,
         "type": "Multiple Choice",
         "question": "If I ______ in the countryside, I would grow my own vegetables and enjoy the quiet.",
         "options": [
@@ -3315,6 +2554,794 @@
             "why_wrong": "Distractor: grammatically or contextually wrong here."
           }
         ]
+      },
+      {
+        "id": 15,
+        "type": "Gap Fill",
+        "question": "I ______ (know) my neighbours in the village since we moved here in 2015.",
+        "options": [],
+        "correct_answer": "have known",
+        "explanation_vi": "Có 'since we moved here in 2015' -> hiện tại hoàn thành 'have known' (tình trạng biết nhau kéo dài từ quá khứ đến nay).",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "present perfect vs past simple",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "I have known my neighbours in the village since we moved here in 2015.",
+          "why_correct_is_unique": "Explicit time marker 'since 2015' requires present perfect.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "knew",
+              "reason": "Past simple does not connect to 'since' up to now."
+            },
+            {
+              "option": "know",
+              "reason": "Present simple is ungrammatical with 'since 2015'."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 16,
+        "type": "Gap Fill",
+        "question": "A new ring road ______ (build) around the city next year to reduce traffic jams.",
+        "options": [],
+        "correct_answer": "will be built",
+        "explanation_vi": "Con đường (ring road) bị xây dựng -> bị động. Thời gian 'next year' -> tương lai: 'will be built'.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "passive voice",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "A new ring road will be built around the city next year to reduce traffic jams.",
+          "why_correct_is_unique": "The ring road receives the action, so future passive is needed.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "builds",
+              "reason": "Active present is wrong; the road does not build itself."
+            },
+            {
+              "option": "is built",
+              "reason": "Present passive ignores the future time 'next year'."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 17,
+        "type": "Gap Fill",
+        "question": "Many commuters enjoy ______ (live) within walking distance of their workplace in the city.",
+        "options": [],
+        "correct_answer": "living",
+        "explanation_vi": "Động từ 'enjoy' theo sau là V-ing. 'living' đúng; không dùng 'to live'.",
+        "difficulty": "easy",
+        "cognitive_level": "form_recognition",
+        "source_connection": "writing_transfer",
+        "target_structure": "gerunds after verbs",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Many commuters enjoy living within walking distance of their workplace in the city.",
+          "why_correct_is_unique": "'enjoy' must be followed by the -ing form.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "to live",
+              "reason": "'enjoy' is not followed by the to-infinitive."
+            },
+            {
+              "option": "live",
+              "reason": "Bare form is ungrammatical after 'enjoy'."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 18,
+        "type": "Gap Fill",
+        "question": "The ______ (crowd) streets of the old town make walking to the market difficult.",
+        "options": [],
+        "correct_answer": "crowded",
+        "explanation_vi": "Dùng tính từ phân từ 'crowded' bổ nghĩa cho 'streets' trong cụm danh từ. Nghĩa: những con phố đông đúc.",
+        "difficulty": "hard",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "noun phrases",
+        "level": "B2",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The crowded streets of the old town make walking to the market difficult.",
+          "why_correct_is_unique": "A participial adjective 'crowded' modifies 'streets' inside the noun phrase.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "crowding",
+              "reason": "Present participle suggests an active process, not a state description."
+            },
+            {
+              "option": "crowd",
+              "reason": "Bare noun is ungrammatical as an adjective modifier here."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 19,
+        "type": "Gap Fill",
+        "question": "If local leaders had protected the green spaces years ago, the town ______ (be) less crowded today.",
+        "options": [],
+        "correct_answer": "would be",
+        "explanation_vi": "Câu điều kiện hỗn hợp (mixed conditional): điều kiện quá khứ giả định ('had protected') kết hợp với kết quả hiện tại ('would be'). Một trong hai vế thay đổi thì so với điều kiện loại 2.",
+        "difficulty": "hard",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "mixed conditionals (intro)",
+        "level": "B2",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "If local leaders had protected the green spaces years ago, the town would be less crowded today.",
+          "why_correct_is_unique": "Past unreal condition with a present result needs 'would be'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "will be",
+              "reason": "Future does not match the hypothetical past condition."
+            },
+            {
+              "option": "would have been",
+              "reason": "That is a past result, but the time marker is 'today'."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 20,
+        "type": "Gap Fill",
+        "question": "(*) Houses ______ (build) a century ago still stand at the edge of the village.",
+        "options": [],
+        "correct_answer": "built",
+        "explanation_vi": "Rút gọn mệnh đề quan hệ bị động: 'Houses that were built a century ago' -> 'Houses built a century ago' (phân từ quá khứ làm tính từ). Dùng 'built'.",
+        "difficulty": "hard",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "reduced relative clauses",
+        "level": "B2",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Houses built a century ago still stand at the edge of the village.",
+          "why_correct_is_unique": "Reduced relative clause uses past participle 'built' for passive meaning.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "building",
+              "reason": "Present participle implies active, wrong here."
+            },
+            {
+              "option": "build",
+              "reason": "Base form is ungrammatical."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 21,
+        "type": "Error Correction",
+        "question": "Correct the error: The village growed rapidly after the new factory opened in 2018.",
+        "options": [],
+        "correct_answer": "The village grew rapidly after the new factory opened in 2018.",
+        "explanation_vi": "Lỗi: 'growed' là dạng quá khứ sai của 'grow'. Quá khứ bất quy tắc của 'grow' là 'grew'. Sửa thành 'grew'.",
+        "difficulty": "easy",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "independent",
+        "target_structure": "past simple spelling",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The village grew rapidly after the new factory opened in 2018.",
+          "why_correct_is_unique": "Only one error: 'growed' should be 'grew'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "The village growed rapidly after the new factory opened in 2018.",
+              "reason": "Original contains the spelling error 'growed'."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The village growed rapidly after the new factory opened in 2018.",
+          "corrected_sentence": "The village grew rapidly after the new factory opened in 2018.",
+          "target_error_text": "growed",
+          "target_error_type": "irregular past simple spelling",
+          "correction_text": "grew",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 22,
+        "type": "Error Correction",
+        "question": "Correct the error: If more parks are built, the city will becomes greener and cooler.",
+        "options": [],
+        "correct_answer": "If more parks are built, the city will become greener and cooler.",
+        "explanation_vi": "Lỗi: sau 'will' phải dùng nguyên mẫu ('become'), không dùng 'becomes'. Sửa 'becomes' thành 'become'. Đây là điều kiện loại 1.",
+        "difficulty": "easy",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "independent",
+        "target_structure": "first conditional",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "If more parks are built, the city will become greener and cooler.",
+          "why_correct_is_unique": "Only one error: 'will' must be followed by the base form 'become'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "If more parks are built, the city will becomes greener and cooler.",
+              "reason": "Original has 'becomes' after 'will'."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "If more parks are built, the city will becomes greener and cooler.",
+          "corrected_sentence": "If more parks are built, the city will become greener and cooler.",
+          "target_error_text": "becomes",
+          "target_error_type": "first conditional (will + base form)",
+          "correction_text": "become",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 23,
+        "type": "Error Correction",
+        "question": "Correct the error: The children spend hours play in the fields near the village.",
+        "options": [],
+        "correct_answer": "The children spend hours playing in the fields near the village.",
+        "explanation_vi": "Lỗi: cấu trúc 'spend time + V-ing' nên sau 'spend hours' phải là 'playing', không phải 'play'. Sửa 'play' thành 'playing'.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "independent",
+        "target_structure": "gerunds after spend",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The children spend hours playing in the fields near the village.",
+          "why_correct_is_unique": "Only one error: 'spend time' must be followed by the -ing form 'playing'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "The children spend hours play in the fields near the village.",
+              "reason": "Original has 'play' instead of the gerund."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The children spend hours play in the fields near the village.",
+          "corrected_sentence": "The children spend hours playing in the fields near the village.",
+          "target_error_text": "play",
+          "target_error_type": "gerund after 'spend time'",
+          "correction_text": "playing",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 24,
+        "type": "Error Correction",
+        "question": "Correct the error: The new library in the city centre was build last year.",
+        "options": [],
+        "correct_answer": "The new library in the city centre was built last year.",
+        "explanation_vi": "Lỗi: trong bị động quá khứ phải dùng quá khứ phân từ đúng 'built', không phải nguyên mẫu 'build'. Sửa 'build' thành 'built'.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "independent",
+        "target_structure": "passive voice",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The new library in the city centre was built last year.",
+          "why_correct_is_unique": "Only one error: passive requires the past participle 'built', not 'build'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "The new library in the city centre was build last year.",
+              "reason": "Original uses the base form 'build' in the passive."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The new library in the city centre was build last year.",
+          "corrected_sentence": "The new library in the city centre was built last year.",
+          "target_error_text": "build",
+          "target_error_type": "passive voice (wrong past participle)",
+          "correction_text": "built",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 25,
+        "type": "Error Correction",
+        "question": "Correct the error: The number of cars in the city are rising every year. (*)",
+        "options": [],
+        "correct_answer": "The number of cars in the city is rising every year.",
+        "explanation_vi": "Lỗi: 'The number of + số nhiều' dùng động từ số ít. Sửa 'are' thành 'is'. Chỉ một lỗi.",
+        "difficulty": "hard",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "independent",
+        "target_structure": "subject-verb agreement with intervening phrases",
+        "level": "B2",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The number of cars in the city is rising every year.",
+          "why_correct_is_unique": "Only one error: 'are' should be 'is' because the subject is 'The number'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "The number of cars in the city are rising every year.",
+              "reason": "Original has 'are' agreeing with 'cars'."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The number of cars in the city are rising every year.",
+          "corrected_sentence": "The number of cars in the city is rising every year.",
+          "target_error_text": "are",
+          "target_error_type": "subject-verb agreement ('The number of' + singular)",
+          "correction_text": "is",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 26,
+        "type": "Error Correction",
+        "question": "Correct the error: We spent the weekend in countryside, away from the noise of the city. (*)",
+        "options": [],
+        "correct_answer": "We spent the weekend in the countryside, away from the noise of the city.",
+        "explanation_vi": "Lỗi: thiếu mạo từ 'the' trước 'countryside' khi nói vùng quê nói chung. Sửa 'in countryside' thành 'in the countryside'. Chỉ thêm một từ.",
+        "difficulty": "hard",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "independent",
+        "target_structure": "articles with places",
+        "level": "B2",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "We spent the weekend in the countryside, away from the noise of the city.",
+          "why_correct_is_unique": "Only one error: missing definite article 'the' before 'countryside'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "We spent the weekend in countryside, away from the noise of the city.",
+              "reason": "Original lacks 'the' before the generic place 'countryside'."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "We spent the weekend in countryside, away from the noise of the city.",
+          "corrected_sentence": "We spent the weekend in the countryside, away from the noise of the city.",
+          "target_error_text": "in countryside",
+          "target_error_type": "articles with places (missing 'the')",
+          "correction_text": "in the countryside",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 27,
+        "type": "Sentence Combining",
+        "question": "Combine the two sentences using 'whereas'. Sentence 1: City life is fast and busy. Sentence 2: Countryside life is slow and calm.",
+        "options": [],
+        "correct_answer": "City life is fast and busy, whereas countryside life is slow and calm.",
+        "explanation_vi": "Dùng 'whereas' nối hai câu trái ngược: thành thị nhanh/bận rộn, nông thôn chậm/yên bình. Không đảo quan hệ.",
+        "difficulty": "medium",
+        "cognitive_level": "writing_transfer",
+        "source_connection": "writing_transfer",
+        "target_structure": "sentence combining (contrast)",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "City life is fast and busy, whereas countryside life is slow and calm.",
+          "why_correct_is_unique": "Both ideas are kept; 'whereas' shows contrast without changing meaning.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [
+            "City life is fast and busy, while countryside life is slow and calm."
+          ],
+          "why_other_options_are_wrong": [
+            {
+              "option": "City life is fast and busy because countryside life is slow and calm.",
+              "reason": "Reverses the logical relation."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_meaning": "City life is fast and busy and countryside life is slow and calm (contrast).",
+          "transformed_meaning": "City life is fast and busy, whereas countryside life is slow and calm.",
+          "meaning_is_preserved": true,
+          "target_structure_used": true,
+          "no_extra_information_added": true,
+          "no_information_removed": true,
+          "answer_family_is_narrow": true
+        }
+      },
+      {
+        "id": 28,
+        "type": "Sentence Combining",
+        "question": "Combine the two sentences using 'because'. Sentence 1: Many people move to cities. Sentence 2: They want better job opportunities.",
+        "options": [],
+        "correct_answer": "Many people move to cities because they want better job opportunities.",
+        "explanation_vi": "Dùng 'because' nối: nhiều người chuyển đến thành thị, VÌ họ muốn cơ hội việc làm tốt hơn. Đúng hướng nhân-quả.",
+        "difficulty": "medium",
+        "cognitive_level": "writing_transfer",
+        "source_connection": "writing_transfer",
+        "target_structure": "sentence combining (reason)",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Many people move to cities because they want better job opportunities.",
+          "why_correct_is_unique": "Cause-effect is preserved: moving to cities is explained by job opportunities.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [
+            "Many people move to cities, because they want better job opportunities."
+          ],
+          "why_other_options_are_wrong": [
+            {
+              "option": "Many people move to cities so that they want better job opportunities.",
+              "reason": "Slightly shifts purpose; 'because' is the asked linker and keeps the reason."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_meaning": "Many people move to cities and this is because they want better job opportunities (reason).",
+          "transformed_meaning": "Many people move to cities because they want better job opportunities.",
+          "meaning_is_preserved": true,
+          "target_structure_used": true,
+          "no_extra_information_added": true,
+          "no_information_removed": true,
+          "answer_family_is_narrow": true
+        }
+      },
+      {
+        "id": 29,
+        "type": "Transformation",
+        "question": "Rewrite using 'so that'. Many families move to the suburbs to escape the noise of the city.",
+        "options": [],
+        "correct_answer": "Many families move to the suburbs so that they can escape the noise of the city.",
+        "explanation_vi": "Chuyển 'to escape' (mục đích) thành 'so that they can escape'. Nghĩa không đổi.",
+        "difficulty": "medium",
+        "cognitive_level": "writing_transfer",
+        "source_connection": "writing_transfer",
+        "target_structure": "transformation (purpose)",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Many families move to the suburbs so that they can escape the noise of the city.",
+          "why_correct_is_unique": "Purpose is preserved using 'so that'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [
+            "Many families move to the suburbs so that they escape the noise of the city."
+          ],
+          "why_other_options_are_wrong": [
+            {
+              "option": "Many families move to the suburbs because they can escape the noise of the city.",
+              "reason": "Changes purpose to reason."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_meaning": "Families move to the suburbs for the purpose of escaping city noise.",
+          "transformed_meaning": "Many families move to the suburbs so that they can escape the noise of the city.",
+          "meaning_is_preserved": true,
+          "target_structure_used": true,
+          "no_extra_information_added": true,
+          "no_information_removed": true,
+          "answer_family_is_narrow": true
+        }
+      },
+      {
+        "id": 30,
+        "type": "Transformation",
+        "question": "Rewrite using a reduced relative clause. The houses that were built a century ago still stand at the edge of the village.",
+        "options": [],
+        "correct_answer": "The houses built a century ago still stand at the edge of the village.",
+        "explanation_vi": "Rút gọn mệnh đề quan hệ bị động: 'that were built' -> 'built'. Nghĩa giữ nguyên.",
+        "difficulty": "hard",
+        "cognitive_level": "writing_transfer",
+        "source_connection": "writing_transfer",
+        "target_structure": "reduced relative clauses",
+        "level": "B2",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The houses built a century ago still stand at the edge of the village.",
+          "why_correct_is_unique": "Reduced relative clause keeps the passive meaning with 'built'.",
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true,
+          "example_expected_answer": "",
+          "alternative_answers_allowed": [],
+          "why_other_options_are_wrong": [
+            {
+              "option": "The houses building a century ago still stand at the edge of the village.",
+              "reason": "Wrong participle; changes voice."
+            }
+          ]
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_meaning": "The houses that were built a century ago still stand at the edge of the village.",
+          "transformed_meaning": "The houses built a century ago still stand at the edge of the village.",
+          "meaning_is_preserved": true,
+          "target_structure_used": true,
+          "no_extra_information_added": true,
+          "no_information_removed": true,
+          "answer_family_is_narrow": true
+        }
       }
     ]
   },
@@ -3623,19 +3650,6 @@
       },
       {
         "question_id": 3,
-        "correct_answer": "have known",
-        "grammar_target": "present perfect vs past simple",
-        "form_meaning_vi": "Có 'since we moved here in 2015' -> hiện tại hoàn thành 'have known' (tình trạng biết nhau kéo dài từ quá khứ đến nay).",
-        "use_in_context_vi": "Cấu trúc này phù hợp với ngữ cảnh vì 'present perfect vs past simple' được yêu cầu bởi ý nghĩa câu: I ______ (know) my neighbours in the village since we moved here in 2015.",
-        "trap_logic_vi": "Bẫy: Explicit time marker 'since 2015' requires present perfect.",
-        "why_others_wrong_vi": "- knew: Past simple does not connect to 'since' up to now.\n- know: Present simple is ungrammatical with 'since 2015'.",
-        "depth_check_vi": "Câu hỏi không chỉ kiểm tra dạng thức mà còn kiểm tra nghĩa và ngữ cảnh (context_use), đáp ứng tiêu chuẩn ngữ pháp sâu B1/B2 thay vì chỉ thuộc lòng công thức.",
-        "analysis_vi": "Có 'since we moved here in 2015' -> hiện tại hoàn thành 'have known' (tình trạng biết nhau kéo dài từ quá khứ đến nay). Explicit time marker 'since 2015' requires present perfect.",
-        "tip_vi": "Đọc kỹ ngữ cảnh và quan hệ logic trước khi chọn; đừng chỉ dựa vào một từ khóa. Với lỗi sửa sai, tìm đúng MỘT lỗi rồi sửa, giữ nguyên nghĩa.",
-        "stretch_note": ""
-      },
-      {
-        "question_id": 4,
         "correct_answer": "builds",
         "grammar_target": "first conditional",
         "form_meaning_vi": "Câu điều kiện loại 1: mệnh đề if dùng hiện tại đơn ('builds'), mệnh đề chính dùng 'will + V'. Không dùng 'will' trong mệnh đề if.",
@@ -3648,7 +3662,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 5,
+        "question_id": 4,
         "correct_answer": "The town which was flooded last spring is being rebuilt.",
         "grammar_target": "defining vs non-defining relative clauses",
         "form_meaning_vi": "Vì có nhiều thị trấn, ta cần mệnh đề quan hệ xác định (defining) không dùng dấu phẩy, dùng 'which' để chỉ rõ thị trấn nào bị lụt. Câu có dấu phẩy là bổ nghĩa thêm, sai ngữ cảnh.",
@@ -3661,7 +3675,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 6,
+        "question_id": 5,
         "correct_answer": "The bridge, which was built in 1980, carries heavy traffic.",
         "grammar_target": "defining vs non-defining relative clauses",
         "form_meaning_vi": "Vì chỉ có MỘT cây cầu, ta thêm thông tin phụ (non-defining) nên cần cặp dấu phẩy và 'which'. Câu không dấu phẩy là xác định, sai vì không cần phân biệt.",
@@ -3674,20 +3688,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 7,
-        "correct_answer": "will be built",
-        "grammar_target": "passive voice",
-        "form_meaning_vi": "Con đường (ring road) bị xây dựng -> bị động. Thời gian 'next year' -> tương lai: 'will be built'.",
-        "use_in_context_vi": "Cấu trúc này phù hợp với ngữ cảnh vì 'passive voice' được yêu cầu bởi ý nghĩa câu: A new ring road ______ (build) around the city next year to reduce traffic jams.",
-        "trap_logic_vi": "Bẫy: The ring road receives the action, so future passive is needed.",
-        "why_others_wrong_vi": "- builds: Active present is wrong; the road does not build itself.\n- is built: Present passive ignores the future time 'next year'.",
-        "depth_check_vi": "Câu hỏi không chỉ kiểm tra dạng thức mà còn kiểm tra nghĩa và ngữ cảnh (context_use), đáp ứng tiêu chuẩn ngữ pháp sâu B1/B2 thay vì chỉ thuộc lòng công thức.",
-        "analysis_vi": "Con đường (ring road) bị xây dựng -> bị động. Thời gian 'next year' -> tương lai: 'will be built'. The ring road receives the action, so future passive is needed.",
-        "tip_vi": "Đọc kỹ ngữ cảnh và quan hệ logic trước khi chọn; đừng chỉ dựa vào một từ khóa. Với lỗi sửa sai, tìm đúng MỘT lỗi rồi sửa, giữ nguyên nghĩa.",
-        "stretch_note": ""
-      },
-      {
-        "question_id": 8,
+        "question_id": 6,
         "correct_answer": "cycling",
         "grammar_target": "gerunds and infinitives",
         "form_meaning_vi": "Động từ 'prefer' theo sau là V-ing khi so sánh sở thích. 'cycling' đúng; 'to cycle' là to V sai sau prefer ở dạng này.",
@@ -3700,20 +3701,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 9,
-        "correct_answer": "living",
-        "grammar_target": "gerunds after verbs",
-        "form_meaning_vi": "Động từ 'enjoy' theo sau là V-ing. 'living' đúng; không dùng 'to live'.",
-        "use_in_context_vi": "Cấu trúc này phù hợp với ngữ cảnh vì 'gerunds after verbs' được yêu cầu bởi ý nghĩa câu: Many commuters enjoy ______ (live) within walking distance of their workplace in the city.",
-        "trap_logic_vi": "Bẫy: 'enjoy' must be followed by the -ing form.",
-        "why_others_wrong_vi": "- to live: 'enjoy' is not followed by the to-infinitive.\n- live: Bare form is ungrammatical after 'enjoy'.",
-        "depth_check_vi": "Câu hỏi không chỉ kiểm tra dạng thức mà còn kiểm tra nghĩa và ngữ cảnh (context_use), đáp ứng tiêu chuẩn ngữ pháp sâu B1/B2 thay vì chỉ thuộc lòng công thức.",
-        "analysis_vi": "Động từ 'enjoy' theo sau là V-ing. 'living' đúng; không dùng 'to live'. 'enjoy' must be followed by the -ing form.",
-        "tip_vi": "Đọc kỹ ngữ cảnh và quan hệ logic trước khi chọn; đừng chỉ dựa vào một từ khóa. Với lỗi sửa sai, tìm đúng MỘT lỗi rồi sửa, giữ nguyên nghĩa.",
-        "stretch_note": ""
-      },
-      {
-        "question_id": 10,
+        "question_id": 7,
         "correct_answer": "missed",
         "grammar_target": "reported speech",
         "form_meaning_vi": "Câu trực tiếp dùng hiện tại 'miss'; khi đổi sang câu tường thuật (reported speech) thì lùi thì: hiện tại -> quá khứ 'missed'.",
@@ -3726,7 +3714,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 11,
+        "question_id": 8,
         "correct_answer": "because",
         "grammar_target": "linkers: reason",
         "form_meaning_vi": "Vế sau giải thích LÝ DO hệ thống giao thông hiệu quả -> dùng 'because' (nguyên nhân). 'although'/'whereas' là trái ngược, 'unless' là trừ khi.",
@@ -3739,7 +3727,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 12,
+        "question_id": 9,
         "correct_answer": "whereas",
         "grammar_target": "linkers: contrast",
         "form_meaning_vi": "Hai vế trái ngược nhau (thành thị tăng / nông thôn giảm) -> dùng 'whereas' (trong khi ngược lại). 'because' là nguyên nhân, 'so' là kết quả.",
@@ -3752,7 +3740,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 13,
+        "question_id": 10,
         "correct_answer": "Although",
         "grammar_target": "linkers: contrast",
         "form_meaning_vi": "Hai vế trái ngược (nông thôn yên tĩnh NHƯNG nhiều người vẫn chọn thành thị) -> dùng 'Although' (mặc dù). 'Because' là nguyên nhân, đảo ngược logic.",
@@ -3765,7 +3753,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 14,
+        "question_id": 11,
         "correct_answer": "The",
         "grammar_target": "articles with places",
         "form_meaning_vi": "Khi nói về vùng quê nói chung với tư cách một khái niệm địa lý, tiếng Anh dùng 'the countryside'. 'A/An' sai vì 'countryside' không đếm được ở nghĩa này; 'No article' cũng sai vì thành ngữ bắt buộc 'the countryside'.",
@@ -3778,7 +3766,7 @@
         "stretch_note": "(*)"
       },
       {
-        "question_id": 15,
+        "question_id": 12,
         "correct_answer": "is",
         "grammar_target": "subject-verb agreement with intervening phrases",
         "form_meaning_vi": "Cụm 'The number of + danh từ số nhiều' luôn dùng động từ số ít ('is'), vì chủ ngữ thực sự là 'The number', không phải 'cars'.",
@@ -3791,7 +3779,7 @@
         "stretch_note": "(*)"
       },
       {
-        "question_id": 16,
+        "question_id": 13,
         "correct_answer": "may",
         "grammar_target": "hedging",
         "form_meaning_vi": "Nghiên cứu chỉ ra khả năng, không chắc chắn -> dùng 'may' (có thể) để lùi sắc thái (hedging). 'must'/'has to' quá mạnh, 'will' khẳng định chắc chắn.",
@@ -3804,7 +3792,59 @@
         "stretch_note": "(*)"
       },
       {
+        "question_id": 14,
+        "correct_answer": "lived",
+        "grammar_target": "second conditional",
+        "form_meaning_vi": "Câu điều kiện loại 2 diễn tả tình huống giả định trái ngược hiện tại: mệnh đề if dùng quá khứ đơn ('lived'), mệnh đề chính dùng 'would + V'.",
+        "use_in_context_vi": "Cấu trúc này phù hợp với ngữ cảnh vì 'second conditional' được yêu cầu bởi ý nghĩa câu: If I ______ in the countryside, I would grow my own vegetables and enjoy the quiet.",
+        "trap_logic_vi": "Bẫy: Second conditional uses past simple in the if-clause for unreal present situations.",
+        "why_others_wrong_vi": "- live: Present simple is for first conditional, not unreal situations.\n- will live: 'will' is never used in the if-clause.\n- have lived: Present perfect is wrong in the if-clause here.",
+        "depth_check_vi": "Câu hỏi không chỉ kiểm tra dạng thức mà còn kiểm tra nghĩa và ngữ cảnh (context_use), đáp ứng tiêu chuẩn ngữ pháp sâu B1/B2 thay vì chỉ thuộc lòng công thức.",
+        "analysis_vi": "Câu điều kiện loại 2 diễn tả tình huống giả định trái ngược hiện tại: mệnh đề if dùng quá khứ đơn ('lived'), mệnh đề chính dùng 'would + V'. Second conditional uses past simple in the if-clause for unreal present situations.",
+        "tip_vi": "Đọc kỹ ngữ cảnh và quan hệ logic trước khi chọn; đừng chỉ dựa vào một từ khóa. Với lỗi sửa sai, tìm đúng MỘT lỗi rồi sửa, giữ nguyên nghĩa.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 15,
+        "correct_answer": "have known",
+        "grammar_target": "present perfect vs past simple",
+        "form_meaning_vi": "Có 'since we moved here in 2015' -> hiện tại hoàn thành 'have known' (tình trạng biết nhau kéo dài từ quá khứ đến nay).",
+        "use_in_context_vi": "Cấu trúc này phù hợp với ngữ cảnh vì 'present perfect vs past simple' được yêu cầu bởi ý nghĩa câu: I ______ (know) my neighbours in the village since we moved here in 2015.",
+        "trap_logic_vi": "Bẫy: Explicit time marker 'since 2015' requires present perfect.",
+        "why_others_wrong_vi": "- knew: Past simple does not connect to 'since' up to now.\n- know: Present simple is ungrammatical with 'since 2015'.",
+        "depth_check_vi": "Câu hỏi không chỉ kiểm tra dạng thức mà còn kiểm tra nghĩa và ngữ cảnh (context_use), đáp ứng tiêu chuẩn ngữ pháp sâu B1/B2 thay vì chỉ thuộc lòng công thức.",
+        "analysis_vi": "Có 'since we moved here in 2015' -> hiện tại hoàn thành 'have known' (tình trạng biết nhau kéo dài từ quá khứ đến nay). Explicit time marker 'since 2015' requires present perfect.",
+        "tip_vi": "Đọc kỹ ngữ cảnh và quan hệ logic trước khi chọn; đừng chỉ dựa vào một từ khóa. Với lỗi sửa sai, tìm đúng MỘT lỗi rồi sửa, giữ nguyên nghĩa.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 16,
+        "correct_answer": "will be built",
+        "grammar_target": "passive voice",
+        "form_meaning_vi": "Con đường (ring road) bị xây dựng -> bị động. Thời gian 'next year' -> tương lai: 'will be built'.",
+        "use_in_context_vi": "Cấu trúc này phù hợp với ngữ cảnh vì 'passive voice' được yêu cầu bởi ý nghĩa câu: A new ring road ______ (build) around the city next year to reduce traffic jams.",
+        "trap_logic_vi": "Bẫy: The ring road receives the action, so future passive is needed.",
+        "why_others_wrong_vi": "- builds: Active present is wrong; the road does not build itself.\n- is built: Present passive ignores the future time 'next year'.",
+        "depth_check_vi": "Câu hỏi không chỉ kiểm tra dạng thức mà còn kiểm tra nghĩa và ngữ cảnh (context_use), đáp ứng tiêu chuẩn ngữ pháp sâu B1/B2 thay vì chỉ thuộc lòng công thức.",
+        "analysis_vi": "Con đường (ring road) bị xây dựng -> bị động. Thời gian 'next year' -> tương lai: 'will be built'. The ring road receives the action, so future passive is needed.",
+        "tip_vi": "Đọc kỹ ngữ cảnh và quan hệ logic trước khi chọn; đừng chỉ dựa vào một từ khóa. Với lỗi sửa sai, tìm đúng MỘT lỗi rồi sửa, giữ nguyên nghĩa.",
+        "stretch_note": ""
+      },
+      {
         "question_id": 17,
+        "correct_answer": "living",
+        "grammar_target": "gerunds after verbs",
+        "form_meaning_vi": "Động từ 'enjoy' theo sau là V-ing. 'living' đúng; không dùng 'to live'.",
+        "use_in_context_vi": "Cấu trúc này phù hợp với ngữ cảnh vì 'gerunds after verbs' được yêu cầu bởi ý nghĩa câu: Many commuters enjoy ______ (live) within walking distance of their workplace in the city.",
+        "trap_logic_vi": "Bẫy: 'enjoy' must be followed by the -ing form.",
+        "why_others_wrong_vi": "- to live: 'enjoy' is not followed by the to-infinitive.\n- live: Bare form is ungrammatical after 'enjoy'.",
+        "depth_check_vi": "Câu hỏi không chỉ kiểm tra dạng thức mà còn kiểm tra nghĩa và ngữ cảnh (context_use), đáp ứng tiêu chuẩn ngữ pháp sâu B1/B2 thay vì chỉ thuộc lòng công thức.",
+        "analysis_vi": "Động từ 'enjoy' theo sau là V-ing. 'living' đúng; không dùng 'to live'. 'enjoy' must be followed by the -ing form.",
+        "tip_vi": "Đọc kỹ ngữ cảnh và quan hệ logic trước khi chọn; đừng chỉ dựa vào một từ khóa. Với lỗi sửa sai, tìm đúng MỘT lỗi rồi sửa, giữ nguyên nghĩa.",
+        "stretch_note": ""
+      },
+      {
+        "question_id": 18,
         "correct_answer": "crowded",
         "grammar_target": "noun phrases",
         "form_meaning_vi": "Dùng tính từ phân từ 'crowded' bổ nghĩa cho 'streets' trong cụm danh từ. Nghĩa: những con phố đông đúc.",
@@ -3817,7 +3857,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 18,
+        "question_id": 19,
         "correct_answer": "would be",
         "grammar_target": "mixed conditionals (intro)",
         "form_meaning_vi": "Câu điều kiện hỗn hợp (mixed conditional): điều kiện quá khứ giả định ('had protected') kết hợp với kết quả hiện tại ('would be'). Một trong hai vế thay đổi thì so với điều kiện loại 2.",
@@ -3830,7 +3870,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 19,
+        "question_id": 20,
         "correct_answer": "built",
         "grammar_target": "reduced relative clauses",
         "form_meaning_vi": "Rút gọn mệnh đề quan hệ bị động: 'Houses that were built a century ago' -> 'Houses built a century ago' (phân từ quá khứ làm tính từ). Dùng 'built'.",
@@ -3843,7 +3883,7 @@
         "stretch_note": "(*)"
       },
       {
-        "question_id": 20,
+        "question_id": 21,
         "correct_answer": "The village grew rapidly after the new factory opened in 2018.",
         "grammar_target": "past simple spelling",
         "form_meaning_vi": "Lỗi cần sửa: 'growed' → sửa thành 'grew'. Lỗi: 'growed' là dạng quá khứ sai của 'grow'. Quá khứ bất quy tắc của 'grow' là 'grew'. Sửa thành 'grew'.",
@@ -3856,7 +3896,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 21,
+        "question_id": 22,
         "correct_answer": "If more parks are built, the city will become greener and cooler.",
         "grammar_target": "first conditional",
         "form_meaning_vi": "Lỗi cần sửa: 'becomes' → sửa thành 'become'. Lỗi: sau 'will' phải dùng nguyên mẫu ('become'), không dùng 'becomes'. Sửa 'becomes' thành 'become'. Đây là điều kiện loại 1.",
@@ -3869,7 +3909,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 22,
+        "question_id": 23,
         "correct_answer": "The children spend hours playing in the fields near the village.",
         "grammar_target": "gerunds after spend",
         "form_meaning_vi": "Lỗi cần sửa: 'play' → sửa thành 'playing'. Lỗi: cấu trúc 'spend time + V-ing' nên sau 'spend hours' phải là 'playing', không phải 'play'. Sửa 'play' thành 'playing'.",
@@ -3882,7 +3922,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 23,
+        "question_id": 24,
         "correct_answer": "The new library in the city centre was built last year.",
         "grammar_target": "passive voice",
         "form_meaning_vi": "Lỗi cần sửa: 'build' → sửa thành 'built'. Lỗi: trong bị động quá khứ phải dùng quá khứ phân từ đúng 'built', không phải nguyên mẫu 'build'. Sửa 'build' thành 'built'.",
@@ -3895,7 +3935,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 24,
+        "question_id": 25,
         "correct_answer": "The number of cars in the city is rising every year.",
         "grammar_target": "subject-verb agreement with intervening phrases",
         "form_meaning_vi": "Lỗi cần sửa: 'are' → sửa thành 'is'. Lỗi: 'The number of + số nhiều' dùng động từ số ít. Sửa 'are' thành 'is'. Chỉ một lỗi.",
@@ -3908,7 +3948,7 @@
         "stretch_note": "(*)"
       },
       {
-        "question_id": 25,
+        "question_id": 26,
         "correct_answer": "We spent the weekend in the countryside, away from the noise of the city.",
         "grammar_target": "articles with places",
         "form_meaning_vi": "Lỗi cần sửa: 'in countryside' → sửa thành 'in the countryside'. Lỗi: thiếu mạo từ 'the' trước 'countryside' khi nói vùng quê nói chung. Sửa 'in countryside' thành 'in the countryside'. Chỉ thêm một từ.",
@@ -3921,7 +3961,7 @@
         "stretch_note": "(*)"
       },
       {
-        "question_id": 26,
+        "question_id": 27,
         "correct_answer": "City life is fast and busy, whereas countryside life is slow and calm.",
         "grammar_target": "sentence combining (contrast)",
         "form_meaning_vi": "Cấu trúc nối câu: Dùng 'whereas' nối hai câu trái ngược: thành thị nhanh/bận rộn, nông thôn chậm/yên bình. Không đảo quan hệ.",
@@ -3934,7 +3974,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 27,
+        "question_id": 28,
         "correct_answer": "Many people move to cities because they want better job opportunities.",
         "grammar_target": "sentence combining (reason)",
         "form_meaning_vi": "Cấu trúc nối câu: Dùng 'because' nối: nhiều người chuyển đến thành thị, VÌ họ muốn cơ hội việc làm tốt hơn. Đúng hướng nhân-quả.",
@@ -3947,7 +3987,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 28,
+        "question_id": 29,
         "correct_answer": "Many families move to the suburbs so that they can escape the noise of the city.",
         "grammar_target": "transformation (purpose)",
         "form_meaning_vi": "Cấu trúc chuyển đổi: Chuyển 'to escape' (mục đích) thành 'so that they can escape'. Nghĩa không đổi.",
@@ -3960,7 +4000,7 @@
         "stretch_note": ""
       },
       {
-        "question_id": 29,
+        "question_id": 30,
         "correct_answer": "The houses built a century ago still stand at the edge of the village.",
         "grammar_target": "reduced relative clauses",
         "form_meaning_vi": "Cấu trúc chuyển đổi: Rút gọn mệnh đề quan hệ bị động: 'that were built' -> 'built'. Nghĩa giữ nguyên.",
@@ -3969,19 +4009,6 @@
         "why_others_wrong_vi": "- The houses building a century ago still stand at the edge of the village.: Wrong participle; changes voice.",
         "depth_check_vi": "Câu hỏi không chỉ kiểm tra dạng thức mà còn kiểm tra nghĩa và ngữ cảnh (context_use), đáp ứng tiêu chuẩn ngữ pháp sâu B1/B2 thay vì chỉ thuộc lòng công thức.",
         "analysis_vi": "Rút gọn mệnh đề quan hệ bị động: 'that were built' -> 'built'. Nghĩa giữ nguyên. Nghĩa không đổi (meaning preserved): chỉ đổi cách diễn đạt, không thêm/bớt thông tin.",
-        "tip_vi": "Đọc kỹ ngữ cảnh và quan hệ logic trước khi chọn; đừng chỉ dựa vào một từ khóa. Với lỗi sửa sai, tìm đúng MỘT lỗi rồi sửa, giữ nguyên nghĩa.",
-        "stretch_note": ""
-      },
-      {
-        "question_id": 30,
-        "correct_answer": "lived",
-        "grammar_target": "second conditional",
-        "form_meaning_vi": "Câu điều kiện loại 2 diễn tả tình huống giả định trái ngược hiện tại: mệnh đề if dùng quá khứ đơn ('lived'), mệnh đề chính dùng 'would + V'.",
-        "use_in_context_vi": "Cấu trúc này phù hợp với ngữ cảnh vì 'second conditional' được yêu cầu bởi ý nghĩa câu: If I ______ in the countryside, I would grow my own vegetables and enjoy the quiet.",
-        "trap_logic_vi": "Bẫy: Second conditional uses past simple in the if-clause for unreal present situations.",
-        "why_others_wrong_vi": "- live: Present simple is for first conditional, not unreal situations.\n- will live: 'will' is never used in the if-clause.\n- have lived: Present perfect is wrong in the if-clause here.",
-        "depth_check_vi": "Câu hỏi không chỉ kiểm tra dạng thức mà còn kiểm tra nghĩa và ngữ cảnh (context_use), đáp ứng tiêu chuẩn ngữ pháp sâu B1/B2 thay vì chỉ thuộc lòng công thức.",
-        "analysis_vi": "Câu điều kiện loại 2 diễn tả tình huống giả định trái ngược hiện tại: mệnh đề if dùng quá khứ đơn ('lived'), mệnh đề chính dùng 'would + V'. Second conditional uses past simple in the if-clause for unreal present situations.",
         "tip_vi": "Đọc kỹ ngữ cảnh và quan hệ logic trước khi chọn; đừng chỉ dựa vào một từ khóa. Với lỗi sửa sai, tìm đúng MỘT lỗi rồi sửa, giữ nguyên nghĩa.",
         "stretch_note": ""
       }
