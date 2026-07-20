@@ -1,0 +1,3731 @@
+{
+  "execution": {
+    "mode": "auto",
+    "pipeline_status": "qc_passed",
+    "current_stage": "final_validation",
+    "revision_attempts": {
+      "source": 0,
+      "reading": 0,
+      "vocabulary": 0,
+      "grammar": 0,
+      "writing": 0,
+      "answers": 0,
+      "pdf_layout": 0
+    }
+  },
+  "human_review": {
+    "mode": "auto",
+    "checkpoints": [
+      {
+        "checkpoint": "auto_mode_started",
+        "status": "approved",
+        "user_instruction": "Auto mode run with sub-agent cross critique",
+        "decision_time": "2026-07-20T21:35:00Z",
+        "affected_sections": [
+          "all"
+        ]
+      }
+    ]
+  },
+  "agent_review": {
+    "reviews": [
+      {
+        "reviewer_agent": "source_research",
+        "reviewed_section": "source",
+        "review_status": "pass",
+        "strengths": [
+          "Verified URL 200 OK from History of Information database"
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "reading",
+        "reviewed_section": "reading",
+        "review_status": "pass",
+        "strengths": [
+          "Sequential evidence paragraph ordering",
+          "Strong paraphrase mapping for non-literal questions",
+          "30%+ plausible keyword traps"
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "vocabulary",
+        "reviewed_section": "vocabulary",
+        "review_status": "pass",
+        "strengths": [
+          "Balanced mix of single words, phrases, collocations, topic vocabulary",
+          "Includes 3 recycled items from 20260722-B1 marked with [R]"
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "grammar",
+        "reviewed_section": "grammar",
+        "review_status": "pass",
+        "strengths": [
+          "B1+ targets: Passive Voice, Past Simple vs Past Perfect, Relative Clauses",
+          "100% single unique answer validation and error correction validation"
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "writing",
+        "reviewed_section": "writing",
+        "review_status": "pass",
+        "strengths": [
+          "All 5 tasks themed around bicycle history & micro-mobility",
+          "Valid SVG visual chart and empty useful_language for Task 1"
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "answer",
+        "reviewed_section": "answers",
+        "review_status": "pass",
+        "strengths": [
+          "Comprehensive Vietnamese step-by-step explanations and distractor analyses",
+          "3 Review Bridge items"
+        ],
+        "challenges": []
+      },
+      {
+        "reviewer_agent": "qc",
+        "reviewed_section": "all",
+        "review_status": "pass",
+        "strengths": [
+          "Schema compliant",
+          "Zero logic errors",
+          "Time workload matches printed 90 mins"
+        ],
+        "challenges": []
+      }
+    ],
+    "challenges": []
+  },
+  "lesson_meta": {
+    "lesson_id": "LSN-20260724-B1-H8K3P9Q2",
+    "day": "20260724",
+    "level": "B1",
+    "reading_level": "B1",
+    "grammar_level": "B1+",
+    "writing_level": "A2",
+    "vocabulary_level": "B1",
+    "skill_level": {
+      "reading_level": "B1",
+      "grammar_level": "B1+",
+      "writing_level": "A2",
+      "vocabulary_level": "B1"
+    },
+    "theme": "History of Inventions",
+    "topic": "History of common inventions, tools, everyday objects",
+    "specific_topic": "The Evolution of the Bicycle and Two-Wheeled Mobility",
+    "created_at": "2026-07-20T21:35:00Z",
+    "reading_question_count": 13,
+    "vocabulary_count": 20,
+    "grammar_question_count": 30,
+    "writing_task_count": 5,
+    "printed_time_allowed_minutes": 90,
+    "estimated_completion_time_minutes": 85,
+    "time_workload_status": "ok"
+  },
+  "source": {
+    "status": "verified",
+    "source_title": "Karl Drais Invents the Draisienne or Laufmaschine, Precursor to the Bicycle",
+    "publisher": "History of Information",
+    "author": "Jeremy Norman",
+    "published_date": "2021-04-12",
+    "access_date": "2026-07-20",
+    "verified_url": "https://www.historyofinformation.com/detail.php?id=3051",
+    "url_status": "200 OK",
+    "credibility_note": "Jeremy Norman's HistoryofInformation is a peer-referenced historical database documenting technological milestones.",
+    "topic_relevance_note": "Documents Karl Drais's 1817 invention of the Laufmaschine, its mechanical design, and its role as the precursor to modern bicycles.",
+    "usable_excerpt": "In 1817 Karl Drais, a German inventor, designed and built the Laufmaschine ('running machine'), also known as the draisienne or dandy horse. It was the first commercially successful two-wheeled, steerable, human-propelled machine. It did not have pedals; the rider straddled the wooden frame and pushed off the ground with their feet.",
+    "copyright_note": "Educational fair use excerpt for language teaching materials."
+  },
+  "warm_up": [
+    "How do you usually travel around your town or city?",
+    "What are the main advantages of riding a bicycle compared to driving a car?",
+    "Why do you think early transportation inventions like two-wheeled machines were so important for modern travel?"
+  ],
+  "reading": {
+    "reading_blueprint": [
+      {
+        "question_no": 1,
+        "type": "literal",
+        "depth": "low",
+        "target_skill": "detail identification",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "keyword trap"
+      },
+      {
+        "question_no": 2,
+        "type": "cause_effect",
+        "depth": "medium",
+        "target_skill": "identifying cause of invention",
+        "evidence_strategy": "multiple sentences",
+        "distractor_strategy": "unsupported claim"
+      },
+      {
+        "question_no": 3,
+        "type": "inference",
+        "depth": "medium",
+        "target_skill": "inferring impact of pedals",
+        "evidence_strategy": "paragraph-level",
+        "distractor_strategy": "wrong time period"
+      },
+      {
+        "question_no": 4,
+        "type": "vocabulary_in_context",
+        "depth": "medium",
+        "target_skill": "determining word meaning",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "literal dictionary traps"
+      },
+      {
+        "question_no": 5,
+        "type": "writer_purpose",
+        "depth": "high",
+        "target_skill": "understanding author tone and purpose",
+        "evidence_strategy": "cross-paragraph",
+        "distractor_strategy": "overly narrow view"
+      },
+      {
+        "question_no": 6,
+        "type": "TFNG",
+        "depth": "low",
+        "target_skill": "literal fact checking",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "direct opposite"
+      },
+      {
+        "question_no": 7,
+        "type": "TFNG",
+        "depth": "medium",
+        "target_skill": "paraphrased fact checking",
+        "evidence_strategy": "multiple sentences",
+        "distractor_strategy": "false interpretation"
+      },
+      {
+        "question_no": 8,
+        "type": "TFNG",
+        "depth": "medium",
+        "target_skill": "unmentioned detail checking",
+        "evidence_strategy": "paragraph-level",
+        "distractor_strategy": "not given fact"
+      },
+      {
+        "question_no": 9,
+        "type": "TFNG",
+        "depth": "medium",
+        "target_skill": "evaluating overall safety impact",
+        "evidence_strategy": "multiple sentences",
+        "distractor_strategy": "partial truth"
+      },
+      {
+        "question_no": 10,
+        "type": "Gap Fill",
+        "depth": "low",
+        "target_skill": "identifying reason for invention",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "grammatical constraint"
+      },
+      {
+        "question_no": 11,
+        "type": "Gap Fill",
+        "depth": "medium",
+        "target_skill": "identifying material of tires",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "grammatical constraint"
+      },
+      {
+        "question_no": 12,
+        "type": "Gap Fill",
+        "depth": "medium",
+        "target_skill": "identifying nickname of penny-farthing",
+        "evidence_strategy": "single sentence",
+        "distractor_strategy": "grammatical constraint"
+      },
+      {
+        "question_no": 13,
+        "type": "Gap Fill",
+        "depth": "high",
+        "target_skill": "identifying key innovation of safety bike",
+        "evidence_strategy": "multiple sentences",
+        "distractor_strategy": "grammatical constraint"
+      }
+    ],
+    "passage": {
+      "title": "The Evolution of the Bicycle",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "The story of personal two-wheeled transport began in 1817 when Baron Karl von Drais, a German inventor, created the Laufmaschine ('running machine'). This device, often called the draisienne or 'dandy horse', was designed as a practical response to a severe shortage of horses caused by crop failures after the Mount Tambora volcanic eruption. Lacking pedals, gears, and chains, the vehicle required riders to sit on a wooden frame and push off the ground using their feet. Although it was primarily enjoyed by wealthy young men, an original model preserved as an artifact [R] in museum collections shows that it established the essential principle of balancing on two wheels."
+        },
+        {
+          "id": 2,
+          "text": "Major improvements were introduced in the 1860s in France, where bicycle makers added rotary cranks and pedals onto the front wheel axle. This new machine, known as the velocipede or 'boneshaker', allowed riders to move forward without touching the ground. Because the rigid iron tires and wooden wheels caused uncomfortable vibrations on cobblestone roads, the ride was notoriously rough. Nevertheless, mass production began, turning the velocipede into a popular exhibit [R] at public fairs across Europe and North America."
+        },
+        {
+          "id": 3,
+          "text": "By the 1870s, engineers recognized that enlarging the front wheel increased the distance covered per pedal stroke, which boosted overall speed. This gave birth to the iconic 'penny-farthing', featuring a massive front wheel up to 1.5 meters tall and a tiny rear wheel. While riding high above the street provided speed and status, stopping abruptly often threw the cyclist forward over the handlebars. Consequently, cycling during this era remained a daring sport for courageous individuals rather than a daily commuting option for the general public."
+        },
+        {
+          "id": 4,
+          "text": "The true revolution in everyday transport arrived in the late 1880s with John Kemp Starley's 'Safety Bicycle'. Featuring two equal-sized wheels, a rear-wheel chain drive, and inflatable pneumatic rubber tires invented by John Boyd Dunlop, the new bicycle was comfortable, stable, and easy to ride. It allowed women and working-class citizens unprecedented mobility, transforming urban transport into a diverse collection [R] of sustainable personal vehicles that reshaped modern society."
+        }
+      ]
+    },
+    "questions": [
+      {
+        "id": 1,
+        "type": "Multiple Choice",
+        "question": "What primary mechanism did riders use to move the 1817 Laufmaschine forward?",
+        "options": [
+          "Foot pressure against the ground",
+          "Rotary pedals connected to the front wheel",
+          "A chain drive system connected to the rear wheel",
+          "A small steering gear turned by hand"
+        ],
+        "correct_answer": "Foot pressure against the ground",
+        "evidence_paragraph": 1,
+        "evidence_quote": "Lacking pedals, gears, and chains, the vehicle required riders to sit on a wooden frame and push off the ground using their feet.",
+        "rationale_vi": "Đoạn 1 nêu rõ xe không có bàn đạp hay xích, người cưỡi phải dùng chân đẩy xuống đất.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "push off the ground using their feet -> Foot pressure against the ground",
+        "keyword_overlap_check": "Options B, C, D use terms like pedals and chain drive from later paragraphs.",
+        "distractor_analysis": [
+          {
+            "option": "Rotary pedals connected to the front wheel",
+            "is_keyword_trap": true,
+            "analysis": "Refers to the 1860s velocipede in paragraph 2."
+          },
+          {
+            "option": "A chain drive system connected to the rear wheel",
+            "is_keyword_trap": true,
+            "analysis": "Refers to the 1880s safety bicycle in paragraph 4."
+          },
+          {
+            "option": "A small steering gear turned by hand",
+            "is_keyword_trap": false,
+            "analysis": "Not supported by the passage; paragraph 1 states it lacked gears."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": "Multiple Choice",
+        "question": "Why did Baron Karl von Drais develop his two-wheeled running machine in 1817?",
+        "options": [
+          "To provide an alternative vehicle when horses became scarce",
+          "To compete in public fairs across North America",
+          "To create a high-speed racing machine for wealthy athletes",
+          "To reduce uncomfortable vibrations on cobblestone roads"
+        ],
+        "correct_answer": "To provide an alternative vehicle when horses became scarce",
+        "evidence_paragraph": 1,
+        "evidence_quote": "This device, often called the draisienne or 'dandy horse', was designed as a practical response to a severe shortage of horses caused by crop failures after the Mount Tambora volcanic eruption.",
+        "rationale_vi": "Bài đọc chỉ ra xe được thiết kế nhằm ứng phó với sự thiếu hụt ngựa nghiêm trọng sau thảm họa núi lửa.",
+        "reasoning_skill": "cause_effect",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "practical response to a severe shortage of horses -> alternative vehicle when horses became scarce",
+        "keyword_overlap_check": "Options B and D borrow passage keywords from paragraphs 2 and 3.",
+        "distractor_analysis": [
+          {
+            "option": "To compete in public fairs across North America",
+            "is_keyword_trap": true,
+            "analysis": "Keyword trap from paragraph 2 regarding velocipede exhibits."
+          },
+          {
+            "option": "To create a high-speed racing machine for wealthy athletes",
+            "is_keyword_trap": false,
+            "analysis": "Incorrect interpretation of early wealthy users."
+          },
+          {
+            "option": "To reduce uncomfortable vibrations on cobblestone roads",
+            "is_keyword_trap": true,
+            "analysis": "Refers to paragraph 2's description of velocipede drawbacks."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": "Multiple Choice",
+        "question": "What can be inferred about the 1860s velocipede from paragraph 2?",
+        "options": [
+          "It allowed riders to travel without pushing their feet on the ground, despite being uncomfortable",
+          "It was immediately adopted by working-class commuters due to its smooth ride",
+          "It was safer to ride than the safety bicycles invented twenty years later",
+          "It was propelled using inflatable rubber tires on smooth modern highways"
+        ],
+        "correct_answer": "It allowed riders to travel without pushing their feet on the ground, despite being uncomfortable",
+        "evidence_paragraph": 2,
+        "evidence_quote": "This new machine, known as the velocipede or 'boneshaker', allowed riders to move forward without touching the ground. Because the rigid iron tires and wooden wheels caused uncomfortable vibrations on cobblestone roads, the ride was notoriously rough.",
+        "rationale_vi": "Kết hợp hai ý ở đoạn 2: xe có bàn đạp giúp di chuyển không chạm đất, nhưng bánh sắt làm chuyến đi rất nảy xóc.",
+        "reasoning_skill": "inference",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "move forward without touching the ground + notoriously rough -> allowed riders to travel without pushing feet, despite being uncomfortable",
+        "keyword_overlap_check": "Options B, C, D contradict facts in paragraphs 2 and 4.",
+        "distractor_analysis": [
+          {
+            "option": "It was immediately adopted by working-class commuters due to its smooth ride",
+            "is_keyword_trap": true,
+            "analysis": "Contradicts paragraph 2 which states the ride was notoriously rough."
+          },
+          {
+            "option": "It was safer to ride than the safety bicycles invented twenty years later",
+            "is_keyword_trap": false,
+            "analysis": "Illogical comparison; safety bicycles were safer."
+          },
+          {
+            "option": "It was propelled using inflatable rubber tires on smooth modern highways",
+            "is_keyword_trap": true,
+            "analysis": "Confuses 1860s velocipede with Dunlop's 1880s pneumatic tires."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": "Multiple Choice",
+        "question": "In paragraph 2, what does the term 'notoriously rough' imply about the velocipede?",
+        "options": [
+          "It was widely known for producing harsh and uneven movements",
+          "It was expensive to produce in manufacturing factories",
+          "It was designed exclusively for dangerous mountain tracks",
+          "It was difficult to steer due to a weak front axle"
+        ],
+        "correct_answer": "It was widely known for producing harsh and uneven movements",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Because the rigid iron tires and wooden wheels caused uncomfortable vibrations on cobblestone roads, the ride was notoriously rough.",
+        "rationale_vi": "'Notoriously rough' được giải thích là những rung lắc khó chịu do lốp sắt cứng gây ra trên đường đá cội.",
+        "reasoning_skill": "vocabulary_in_context",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "notoriously rough + uncomfortable vibrations -> widely known for producing harsh and uneven movements",
+        "keyword_overlap_check": "Distractors offer plausible-sounding statements unrelated to vibration.",
+        "distractor_analysis": [
+          {
+            "option": "It was expensive to produce in manufacturing factories",
+            "is_keyword_trap": false,
+            "analysis": "Not supported by the context of ride quality."
+          },
+          {
+            "option": "It was designed exclusively for dangerous mountain tracks",
+            "is_keyword_trap": false,
+            "analysis": "Unsupported claim."
+          },
+          {
+            "option": "It was difficult to steer due to a weak front axle",
+            "is_keyword_trap": true,
+            "analysis": "Keyword trap referencing axle mention in paragraph 2."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "type": "Multiple Choice",
+        "question": "What is the author's main purpose in paragraph 3?",
+        "options": [
+          "To explain how the desire for greater speed led to a faster but hazardous bicycle design",
+          "To prove that penny-farthings were the most successful commuter vehicles of the nineteenth century",
+          "To argue that smaller front wheels were more effective for long-distance journeys",
+          "To criticize nineteenth-century engineers for refusing to use iron materials"
+        ],
+        "correct_answer": "To explain how the desire for greater speed led to a faster but hazardous bicycle design",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Consequently, cycling during this era remained a daring sport for courageous individuals rather than a daily commuting option for the general public.",
+        "rationale_vi": "Đoạn 3 tập trung trình bày việc tăng kích thước bánh trước giúp tăng tốc độ nhưng tạo ra nguy cơ ngã nguy hiểm.",
+        "reasoning_skill": "writer_purpose",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "boosted overall speed + daring sport -> desire for greater speed led to a faster but hazardous design",
+        "keyword_overlap_check": "Distractors use passage keywords (commuter, front wheel, iron) inaccurately.",
+        "distractor_analysis": [
+          {
+            "option": "To prove that penny-farthings were the most successful commuter vehicles of the nineteenth century",
+            "is_keyword_trap": true,
+            "analysis": "Directly contradicts the paragraph's conclusion about daily commuting."
+          },
+          {
+            "option": "To argue that smaller front wheels were more effective for long-distance journeys",
+            "is_keyword_trap": false,
+            "analysis": "Contradicts the text which explains larger wheels covered more distance per stroke."
+          },
+          {
+            "option": "To criticize nineteenth-century engineers for refusing to use iron materials",
+            "is_keyword_trap": true,
+            "analysis": "Distorts mention of iron from paragraph 2."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "type": "True/False/Not Given",
+        "question": "The 1817 Laufmaschine included a chain system to help steer the vehicle.",
+        "options": [],
+        "correct_answer": "FALSE",
+        "evidence_paragraph": 1,
+        "evidence_quote": "Lacking pedals, gears, and chains, the vehicle required riders to sit on a wooden frame and push off the ground using their feet.",
+        "rationale_vi": "Đoạn 1 khẳng định rõ ràng rằng xe hoàn toàn không có xích (lacking chains).",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "Lacking chains -> included a chain system is FALSE",
+        "keyword_overlap_check": "Uses keyword 'chain system' directly contradicted by 'Lacking... chains'.",
+        "distractor_analysis": []
+      },
+      {
+        "id": 7,
+        "type": "True/False/Not Given",
+        "question": "Pedals were added to two-wheeled vehicles in France during the 1860s.",
+        "options": [],
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Major improvements were introduced in the 1860s in France, where bicycle makers added rotary cranks and pedals onto the front wheel axle.",
+        "rationale_vi": "Thông tin hoàn toàn chính xác theo đoạn 2.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "added rotary cranks and pedals... 1860s in France -> TRUE",
+        "keyword_overlap_check": "Matches historical facts in paragraph 2.",
+        "distractor_analysis": []
+      },
+      {
+        "id": 8,
+        "type": "True/False/Not Given",
+        "question": "Riding a penny-farthing was considered a safe daily commuting option for the general public.",
+        "options": [],
+        "correct_answer": "FALSE",
+        "evidence_paragraph": 3,
+        "evidence_quote": "Consequently, cycling during this era remained a daring sport for courageous individuals rather than a daily commuting option for the general public.",
+        "rationale_vi": "Đoạn 3 khẳng định việc đi xe penny-farthing không phải là lựa chọn đi lại hàng ngày cho công chúng mà là môn thể thao mạo hiểm.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "rather than a daily commuting option -> safe daily commuting option is FALSE",
+        "keyword_overlap_check": "Directly contradicts paragraph 3 evidence.",
+        "distractor_analysis": []
+      },
+      {
+        "id": 9,
+        "type": "True/False/Not Given",
+        "question": "The Safety Bicycle introduced in the 1880s expanded mobility options for female cyclists.",
+        "options": [],
+        "correct_answer": "TRUE",
+        "evidence_paragraph": 4,
+        "evidence_quote": "It allowed women and working-class citizens unprecedented mobility, transforming urban transport into a diverse collection [R] of sustainable personal vehicles that reshaped modern society.",
+        "rationale_vi": "Đoạn 4 nêu rõ chiếc xe đạp an toàn đã mang lại khả năng di chuyển chưa từng có cho phụ nữ.",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "allowed women... unprecedented mobility -> expanded mobility options for female cyclists",
+        "keyword_overlap_check": "Paraphrases paragraph 4 evidence.",
+        "distractor_analysis": []
+      },
+      {
+        "id": 10,
+        "type": "Gap Fill",
+        "question": "Karl Drais developed his two-wheeled running machine in 1817 as a response to a severe shortage of (5) _______.",
+        "options": [],
+        "correct_answer": "horses",
+        "evidence_paragraph": 1,
+        "evidence_quote": "This device, often called the draisienne or 'dandy horse', was designed as a practical response to a severe shortage of horses caused by crop failures after the Mount Tambora volcanic eruption.",
+        "rationale_vi": "Theo đoạn 1, nguyên nhân chế tạo xe là nhằm giải quyết nạn khan hiếm ngựa (shortage of horses).",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "shortage of horses -> shortage of horses",
+        "keyword_overlap_check": "Direct text reference.",
+        "distractor_analysis": []
+      },
+      {
+        "id": 11,
+        "type": "Gap Fill",
+        "question": "Riders experienced rough journeys on velocipedes because of their rigid (6) _______ tires.",
+        "options": [],
+        "correct_answer": "iron",
+        "evidence_paragraph": 2,
+        "evidence_quote": "Because the rigid iron tires and wooden wheels caused uncomfortable vibrations on cobblestone roads, the ride was notoriously rough.",
+        "rationale_vi": "Đoạn 2 nêu từ 'iron' bổ nghĩa cho 'tires'.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "rigid iron tires -> rigid iron tires",
+        "keyword_overlap_check": "Direct noun fill from passage.",
+        "distractor_analysis": []
+      },
+      {
+        "id": 12,
+        "type": "Gap Fill",
+        "question": "The 1870s bicycle with an oversized front wheel was nicknamed the (7) _______.",
+        "options": [],
+        "correct_answer": "penny-farthing",
+        "evidence_paragraph": 3,
+        "evidence_quote": "This gave birth to the iconic 'penny-farthing', featuring a massive front wheel up to 1.5 meters tall and a tiny rear wheel.",
+        "rationale_vi": "Đoạn 3 đặt biệt danh cho loại xe bánh trước khổng lồ này là 'penny-farthing'.",
+        "reasoning_skill": "literal",
+        "source_scope": "printed_passage_only",
+        "stretch": false,
+        "paraphrase_mapping": "iconic 'penny-farthing' -> nicknamed the penny-farthing",
+        "keyword_overlap_check": "Direct term fill.",
+        "distractor_analysis": []
+      },
+      {
+        "id": 13,
+        "type": "Gap Fill",
+        "question": "(*) John Boyd Dunlop contributed to the Safety Bicycle by inventing inflatable (8) _______ tires.",
+        "options": [],
+        "correct_answer": "pneumatic",
+        "evidence_paragraph": 4,
+        "evidence_quote": "and inflatable pneumatic rubber tires invented by John Boyd Dunlop, the new bicycle was comfortable, stable, and easy to ride.",
+        "rationale_vi": "Đoạn 4 nêu tính từ 'pneumatic' miêu tả loại lốp cao su bơm hơi do Dunlop phát minh. Đây là câu hỏi nâng cao (*).",
+        "reasoning_skill": "paraphrase",
+        "source_scope": "printed_passage_only",
+        "stretch": true,
+        "paraphrase_mapping": "inflatable pneumatic rubber tires -> inflatable pneumatic tires",
+        "keyword_overlap_check": "Requires identifying precise adjective modifying tires.",
+        "distractor_analysis": []
+      }
+    ]
+  },
+  "vocabulary": {
+    "items": [
+      {
+        "id": 1,
+        "term": "steerable",
+        "ipa": "/ˈstɪərəbl/",
+        "part_of_speech": "adj",
+        "definition_en": "able to be guided or turned in a specific direction",
+        "meaning_vi": "có thể bẻ lái, điều hướng được",
+        "example": "The draisine was the first steerable two-wheeled machine.",
+        "vocab_type": "single_word",
+        "source": "reading"
+      },
+      {
+        "id": 2,
+        "term": "precursor",
+        "ipa": "/prɪˈkɜːsə(r)/",
+        "part_of_speech": "noun",
+        "definition_en": "a person or thing that comes before another of the same kind; a forerunner",
+        "meaning_vi": "tiền thân, vật báo hiệu",
+        "example": "The dandy horse was an early precursor to modern bicycles.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 3,
+        "term": "wooden frame",
+        "ipa": "/ˈwʊdn freɪm/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a structural border or chassis made of wood",
+        "meaning_vi": "khung gỗ",
+        "example": "Early bicycles were constructed around a heavy wooden frame.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 4,
+        "term": "propel",
+        "ipa": "/prəˈpel/",
+        "part_of_speech": "verb",
+        "definition_en": "drive or push something forward",
+        "meaning_vi": "đẩy đi, truyền động lực tiến lên",
+        "example": "Riders used their feet on the ground to propel the vehicle.",
+        "vocab_type": "academic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 5,
+        "term": "shortage of horses",
+        "ipa": "/ˈʃɔːtɪdʒ əv hɔːsɪz/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a situation where there are not enough horses available",
+        "meaning_vi": "nạn khan hiếm ngựa",
+        "example": "The volcanic winter caused a severe shortage of horses.",
+        "vocab_type": "phrase",
+        "source": "reading"
+      },
+      {
+        "id": 6,
+        "term": "commercial success",
+        "ipa": "/kəˈmɜːʃl səkˈses/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the achievement of selling a product profitably to many consumers",
+        "meaning_vi": "thành công về mặt thương mại",
+        "example": "The safety bicycle achieved global commercial success.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 7,
+        "term": "velocipede",
+        "ipa": "/vəˈlɒsəpiːd/",
+        "part_of_speech": "noun",
+        "definition_en": "an early form of bicycle with pedals attached to the front axle",
+        "meaning_vi": "xe đạp thô sơ đời đầu (xe lắc chân)",
+        "example": "The 1860s velocipede became known as the boneshaker.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 8,
+        "term": "pedal mechanism",
+        "ipa": "/ˈpedl ˈmekənɪzəm/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the system of cranks and foot levers used to power a vehicle",
+        "meaning_vi": "cơ cấu bàn đạp",
+        "example": "Adding a pedal mechanism increased riding speed.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 9,
+        "term": "mass production",
+        "ipa": "/mæs prəˈdʌkʃn/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "manufacturing goods in large quantities using standardized designs",
+        "meaning_vi": "sản xuất hàng loạt",
+        "example": "Mass production lowered the cost of personal transportation.",
+        "vocab_type": "academic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 10,
+        "term": "recreational status symbol",
+        "ipa": "/ˌrekriˈeɪʃənl ˈsteɪtəs ˈsɪmbl/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "an object owned to demonstrate high social standing during leisure time",
+        "meaning_vi": "biểu tượng địa vị giải trí",
+        "example": "The dandy horse served primarily as a recreational status symbol.",
+        "vocab_type": "phrase",
+        "source": "reading"
+      },
+      {
+        "id": 11,
+        "term": "penny-farthing",
+        "ipa": "/ˈpeni ˈfɑːðɪŋ/",
+        "part_of_speech": "noun",
+        "definition_en": "an early bicycle with a very large front wheel and small rear wheel",
+        "meaning_vi": "xe đạp bánh cao thấp (bánh trước to)",
+        "example": "Riding a penny-farthing required balance and bravery.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 12,
+        "term": "front wheel",
+        "ipa": "/frʌnt wiːl/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the forward wheel of a vehicle",
+        "meaning_vi": "bánh xe trước",
+        "example": "The pedals were directly attached to the front wheel axle.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 13,
+        "term": "safety risk",
+        "ipa": "/ˈseɪfti rɪsk/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the possibility of injury or danger during an activity",
+        "meaning_vi": "nguy cơ mất an toàn",
+        "example": "Riding high penny-farthings posed a severe safety risk.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 14,
+        "term": "chain drive",
+        "ipa": "/tʃeɪn draɪv/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a system of transmitting power via a continuous chain",
+        "meaning_vi": "bộ truyền động bằng xích",
+        "example": "The safety bicycle utilized a rear-wheel chain drive.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 15,
+        "term": "pneumatic tire",
+        "ipa": "/njuːˈmætɪk ˈtaɪə(r)/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a rubber tire filled with compressed air",
+        "meaning_vi": "lốp cao su bơm hơi",
+        "example": "Pneumatic tires absorbed shock and smoothed the ride.",
+        "vocab_type": "topic_vocabulary",
+        "source": "reading"
+      },
+      {
+        "id": 16,
+        "term": "personal transport",
+        "ipa": "/ˈpɜːsənl ˈtrænspɔːt/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "individual vehicles used for private travel",
+        "meaning_vi": "phương tiện di chuyển cá nhân",
+        "example": "Bicycles revolutionized daily personal transport.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 17,
+        "term": "substitute for",
+        "ipa": "/ˈsʌbstɪtjuːt fə(r)/",
+        "part_of_speech": "verb phrase",
+        "definition_en": "use a person or thing in place of another",
+        "meaning_vi": "thay thế cho",
+        "example": "The running machine was designed to substitute for horses.",
+        "vocab_type": "phrase",
+        "source": "reading"
+      },
+      {
+        "id": 18,
+        "term": "revolutionary invention",
+        "ipa": "/ˌrevəˈluːʃənri ɪnˈvenʃn/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a creation that completely changes how things are done",
+        "meaning_vi": "phát minh mang tính cách mạng",
+        "example": "The pneumatic tire was a revolutionary invention in transport.",
+        "vocab_type": "phrase",
+        "source": "reading"
+      },
+      {
+        "id": 19,
+        "term": "practical solution",
+        "ipa": "/ˈpræktɪkl səˈluːʃn/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "an effective answer to a problem that can be implemented easily",
+        "meaning_vi": "giải pháp thực tế",
+        "example": "The safety bike provided a practical solution for urban commuters.",
+        "vocab_type": "collocation",
+        "source": "reading"
+      },
+      {
+        "id": 20,
+        "term": "urban mobility",
+        "ipa": "/ˈɜːbən məʊˈbɪləti/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the ability of people to move around cities efficiently",
+        "meaning_vi": "sự di chuyển linh hoạt trong đô thị",
+        "example": "Bicycles continue to play a crucial role in modern urban mobility.",
+        "vocab_type": "academic_vocabulary",
+        "source": "reading"
+      }
+    ],
+    "recycled_items": [
+      {
+        "term": "artifact",
+        "ipa": "/ˈɑːtɪfækt/",
+        "part_of_speech": "noun",
+        "meaning_vi": "cổ vật, di vật lịch sử",
+        "source_day": "20260722"
+      },
+      {
+        "term": "collection",
+        "ipa": "/kəˈlekʃn/",
+        "part_of_speech": "noun",
+        "meaning_vi": "bộ sưu tập",
+        "source_day": "20260722"
+      },
+      {
+        "term": "exhibit",
+        "ipa": "/ɪɡˈzɪbɪt/",
+        "part_of_speech": "noun",
+        "meaning_vi": "vật trưng bày, triển lãm",
+        "source_day": "20260722"
+      }
+    ],
+    "quizlet": {
+      "section_1_simple": [
+        "steerable : có thể bẻ lái, điều hướng được",
+        "precursor : tiền thân, vật báo hiệu",
+        "wooden frame : khung gỗ",
+        "propel : đẩy đi, truyền động lực tiến lên",
+        "shortage of horses : nạn khan hiếm ngựa",
+        "commercial success : thành công về mặt thương mại",
+        "velocipede : xe đạp thô sơ đời đầu",
+        "pedal mechanism : cơ cấu bàn đạp",
+        "mass production : sản xuất hàng loạt",
+        "recreational status symbol : biểu tượng địa vị giải trí",
+        "penny-farthing : xe đạp bánh cao thấp",
+        "front wheel : bánh xe trước",
+        "safety risk : nguy cơ mất an toàn",
+        "chain drive : bộ truyền động bằng xích",
+        "pneumatic tire : lốp cao su bơm hơi",
+        "personal transport : phương tiện di chuyển cá nhân",
+        "substitute for : thay thế cho",
+        "revolutionary invention : phát minh mang tính cách mạng",
+        "practical solution : giải pháp thực tế",
+        "urban mobility : sự di chuyển linh hoạt trong đô thị"
+      ],
+      "section_2_detailed": [
+        "steerable (/ˈstɪərəbl/) [adj] : có thể bẻ lái, điều hướng được *e.g., The draisine was the first steerable two-wheeled machine.*",
+        "precursor (/prɪˈkɜːsə(r)/) [noun] : tiền thân, vật báo hiệu *e.g., The dandy horse was an early precursor to modern bicycles.*",
+        "wooden frame (/ˈwʊdn freɪm/) [noun phrase] : khung gỗ *e.g., Early bicycles were constructed around a heavy wooden frame.*",
+        "propel (/prəˈpel/) [verb] : đẩy đi, truyền động lực tiến lên *e.g., Riders used their feet on the ground to propel the vehicle.*",
+        "shortage of horses (/ˈʃɔːtɪdʒ əv hɔːsɪz/) [noun phrase] : nạn khan hiếm ngựa *e.g., The volcanic winter caused a severe shortage of horses.*",
+        "commercial success (/kəˈmɜːʃl səkˈses/) [noun phrase] : thành công về mặt thương mại *e.g., The safety bicycle achieved global commercial success.*",
+        "velocipede (/vəˈlɒsəpiːd/) [noun] : xe đạp thô sơ đời đầu *e.g., The 1860s velocipede became known as the boneshaker.*",
+        "pedal mechanism (/ˈpedl ˈmekənɪzəm/) [noun phrase] : cơ cấu bàn đạp *e.g., Adding a pedal mechanism increased riding speed.*",
+        "mass production (/mæs prəˈdʌkʃn/) [noun phrase] : sản xuất hàng loạt *e.g., Mass production lowered the cost of personal transportation.*",
+        "recreational status symbol (/ˌrekriˈeɪʃənl ˈsteɪtəs ˈsɪmbl/) [noun phrase] : biểu tượng địa vị giải trí *e.g., The dandy horse served primarily as a recreational status symbol.*",
+        "penny-farthing (/ˈpeni ˈfɑːðɪŋ/) [noun] : xe đạp bánh cao thấp *e.g., Riding a penny-farthing required balance and bravery.*",
+        "front wheel (/frʌnt wiːl/) [noun phrase] : bánh xe trước *e.g., The pedals were directly attached to the front wheel axle.*",
+        "safety risk (/ˈseɪfti rɪsk/) [noun phrase] : nguy cơ mất an toàn *e.g., Riding high penny-farthings posed a severe safety risk.*",
+        "chain drive (/tʃeɪn draɪv/) [noun phrase] : bộ truyền động bằng xích *e.g., The safety bicycle utilized a rear-wheel chain drive.*",
+        "pneumatic tire (/njuːˈmætɪk ˈtaɪə(r)/) [noun phrase] : lốp cao su bơm hơi *e.g., Pneumatic tires absorbed shock and smoothed the ride.*",
+        "personal transport (/ˈpɜːsənl ˈtrænspɔːt/) [noun phrase] : phương tiện di chuyển cá nhân *e.g., Bicycles revolutionized daily personal transport.*",
+        "substitute for (/ˈsʌbstɪtjuːt fə(r)/) [verb phrase] : thay thế cho *e.g., The running machine was designed to substitute for horses.*",
+        "revolutionary invention (/ˌrevəˈluːʃənri ɪnˈvenʃn/) [noun phrase] : phát minh mang tính cách mạng *e.g., The pneumatic tire was a revolutionary invention in transport.*",
+        "practical solution (/ˈpræktɪkl səˈluːʃn/) [noun phrase] : giải pháp thực tế *e.g., The safety bike provided a practical solution for urban commuters.*",
+        "urban mobility (/ˈɜːbən məʊˈbɪləti/) [noun phrase] : sự di chuyển linh hoạt trong đô thị *e.g., Bicycles continue to play a crucial role in modern urban mobility.*"
+      ]
+    },
+    "vocab_checker_items": [
+      {
+        "term": "urban mobility",
+        "ipa": "/ˈɜːbən məʊˈbɪləti/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the ability of people to move around cities efficiently",
+        "meaning_vi": "sự di chuyển linh hoạt trong đô thị"
+      },
+      {
+        "term": "steerable",
+        "ipa": "/ˈstɪərəbl/",
+        "part_of_speech": "adj",
+        "definition_en": "able to be guided or turned in a specific direction",
+        "meaning_vi": "có thể bẻ lái, điều hướng được"
+      },
+      {
+        "term": "precursor",
+        "ipa": "/prɪˈkɜːsə(r)/",
+        "part_of_speech": "noun",
+        "definition_en": "a person or thing that comes before another of the same kind",
+        "meaning_vi": "tiền thân, vật báo hiệu"
+      },
+      {
+        "term": "propel",
+        "ipa": "/prəˈpel/",
+        "part_of_speech": "verb",
+        "definition_en": "drive or push something forward",
+        "meaning_vi": "đẩy đi, truyền động lực tiến lên"
+      },
+      {
+        "term": "wooden frame",
+        "ipa": "/ˈwʊdn freɪm/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a structural border or chassis made of wood",
+        "meaning_vi": "khung gỗ"
+      },
+      {
+        "term": "mass production",
+        "ipa": "/mæs prəˈdʌkʃn/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "manufacturing goods in large quantities using standardized designs",
+        "meaning_vi": "sản xuất hàng loạt"
+      },
+      {
+        "term": "velocipede",
+        "ipa": "/vəˈlɒsəpiːd/",
+        "part_of_speech": "noun",
+        "definition_en": "an early form of bicycle with pedals attached to the front axle",
+        "meaning_vi": "xe đạp thô sơ đời đầu"
+      },
+      {
+        "term": "pedal mechanism",
+        "ipa": "/ˈpedl ˈmekənɪzəm/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the system of cranks and foot levers used to power a vehicle",
+        "meaning_vi": "cơ cấu bàn đạp"
+      },
+      {
+        "term": "penny-farthing",
+        "ipa": "/ˈpeni ˈfɑːðɪŋ/",
+        "part_of_speech": "noun",
+        "definition_en": "an early bicycle with a very large front wheel and small rear wheel",
+        "meaning_vi": "xe đạp bánh cao thấp"
+      },
+      {
+        "term": "recreational status symbol",
+        "ipa": "/ˌrekriˈeɪʃənl ˈsteɪtəs ˈsɪmbl/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "an object owned to demonstrate high social standing during leisure time",
+        "meaning_vi": "biểu tượng địa vị giải trí"
+      },
+      {
+        "term": "safety risk",
+        "ipa": "/ˈseɪfti rɪsk/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the possibility of injury or danger during an activity",
+        "meaning_vi": "nguy cơ mất an toàn"
+      },
+      {
+        "term": "front wheel",
+        "ipa": "/frʌnt wiːl/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the forward wheel of a vehicle",
+        "meaning_vi": "bánh xe trước"
+      },
+      {
+        "term": "chain drive",
+        "ipa": "/tʃeɪn draɪv/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a system of transmitting power via a continuous chain",
+        "meaning_vi": "bộ truyền động bằng xích"
+      },
+      {
+        "term": "shortage of horses",
+        "ipa": "/ˈʃɔːtɪdʒ əv hɔːsɪz/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a situation where there are not enough horses available",
+        "meaning_vi": "nạn khan hiếm ngựa"
+      },
+      {
+        "term": "pneumatic tire",
+        "ipa": "/njuːˈmætɪk ˈtaɪə(r)/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a rubber tire filled with compressed air",
+        "meaning_vi": "lốp cao su bơm hơi"
+      },
+      {
+        "term": "personal transport",
+        "ipa": "/ˈpɜːsənl ˈtrænspɔːt/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "individual vehicles used for private travel",
+        "meaning_vi": "phương tiện di chuyển cá nhân"
+      },
+      {
+        "term": "substitute for",
+        "ipa": "/ˈsʌbstɪtjuːt fə(r)/",
+        "part_of_speech": "verb phrase",
+        "definition_en": "use a person or thing in place of another",
+        "meaning_vi": "thay thế cho"
+      },
+      {
+        "term": "commercial success",
+        "ipa": "/kəˈmɜːʃl səkˈses/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "the achievement of selling a product profitably to many consumers",
+        "meaning_vi": "thành công về mặt thương mại"
+      },
+      {
+        "term": "revolutionary invention",
+        "ipa": "/ˌrevəˈluːʃənri ɪnˈvenʃn/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "a creation that completely changes how things are done",
+        "meaning_vi": "phát minh mang tính cách mạng"
+      },
+      {
+        "term": "practical solution",
+        "ipa": "/ˈpræktɪkl səˈluːʃn/",
+        "part_of_speech": "noun phrase",
+        "definition_en": "an effective answer to a problem that can be implemented easily",
+        "meaning_vi": "giải pháp thực tế"
+      }
+    ]
+  },
+  "grammar": {
+    "grammar_blueprint": [
+      {
+        "question_no": 1,
+        "grammar_target": "Passive Voice",
+        "question_type": "controlled choice",
+        "depth": "medium",
+        "tested_dimension": "form",
+        "trap": "active vs passive confusion"
+      },
+      {
+        "question_no": 2,
+        "grammar_target": "Passive Voice",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "agent omission"
+      },
+      {
+        "question_no": 3,
+        "grammar_target": "Passive Voice",
+        "question_type": "controlled choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "intransitive passive error"
+      },
+      {
+        "question_no": 4,
+        "grammar_target": "Passive Voice",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "tense mismatch"
+      },
+      {
+        "question_no": 5,
+        "grammar_target": "Passive Voice",
+        "question_type": "controlled choice",
+        "depth": "medium",
+        "tested_dimension": "form",
+        "trap": "preposition mismatch"
+      },
+      {
+        "question_no": 6,
+        "grammar_target": "Passive Voice",
+        "question_type": "transformation",
+        "depth": "high",
+        "tested_dimension": "meaning",
+        "trap": "unnecessary agent addition"
+      },
+      {
+        "question_no": 7,
+        "grammar_target": "Passive Voice",
+        "question_type": "transformation",
+        "depth": "high",
+        "tested_dimension": "meaning",
+        "trap": "tense shift error"
+      },
+      {
+        "question_no": 8,
+        "grammar_target": "Passive Voice",
+        "question_type": "error correction",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "intransitive passive attempt"
+      },
+      {
+        "question_no": 9,
+        "grammar_target": "Passive Voice",
+        "question_type": "error correction",
+        "depth": "medium",
+        "tested_dimension": "form",
+        "trap": "missing auxiliary be"
+      },
+      {
+        "question_no": 10,
+        "grammar_target": "Passive Voice",
+        "question_type": "writing transfer",
+        "depth": "high",
+        "tested_dimension": "register",
+        "trap": "informal active tone"
+      },
+      {
+        "question_no": 11,
+        "grammar_target": "Past Simple vs Past Perfect",
+        "question_type": "controlled choice",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "tense order reversal"
+      },
+      {
+        "question_no": 12,
+        "grammar_target": "Past Simple vs Past Perfect",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "double past perfect"
+      },
+      {
+        "question_no": 13,
+        "grammar_target": "Past Simple vs Past Perfect",
+        "question_type": "controlled choice",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "present perfect confusion"
+      },
+      {
+        "question_no": 14,
+        "grammar_target": "Past Simple vs Past Perfect",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "meaning",
+        "trap": "past simple for earlier action"
+      },
+      {
+        "question_no": 15,
+        "grammar_target": "Past Simple vs Past Perfect",
+        "question_type": "controlled choice",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "continuous form confusion"
+      },
+      {
+        "question_no": 16,
+        "grammar_target": "Past Simple vs Past Perfect",
+        "question_type": "transformation",
+        "depth": "high",
+        "tested_dimension": "meaning",
+        "trap": "omitting time sequence marker"
+      },
+      {
+        "question_no": 17,
+        "grammar_target": "Past Simple vs Past Perfect",
+        "question_type": "transformation",
+        "depth": "high",
+        "tested_dimension": "meaning",
+        "trap": "inverting cause and effect"
+      },
+      {
+        "question_no": 18,
+        "grammar_target": "Past Simple vs Past Perfect",
+        "question_type": "error correction",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "past simple with by + past year"
+      },
+      {
+        "question_no": 19,
+        "grammar_target": "Past Simple vs Past Perfect",
+        "question_type": "error correction",
+        "depth": "medium",
+        "tested_dimension": "form",
+        "trap": "present perfect with finished past time"
+      },
+      {
+        "question_no": 20,
+        "grammar_target": "Past Simple vs Past Perfect",
+        "question_type": "writing transfer",
+        "depth": "high",
+        "tested_dimension": "writing transfer",
+        "trap": "flat past tense narrative"
+      },
+      {
+        "question_no": 21,
+        "grammar_target": "Relative Clauses",
+        "question_type": "controlled choice",
+        "depth": "medium",
+        "tested_dimension": "form",
+        "trap": "which vs who"
+      },
+      {
+        "question_no": 22,
+        "grammar_target": "Relative Clauses",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "missing closing comma"
+      },
+      {
+        "question_no": 23,
+        "grammar_target": "Relative Clauses",
+        "question_type": "controlled choice",
+        "depth": "medium",
+        "tested_dimension": "form",
+        "trap": "who's vs whose"
+      },
+      {
+        "question_no": 24,
+        "grammar_target": "Relative Clauses",
+        "question_type": "contextual choice",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "dangling preposition"
+      },
+      {
+        "question_no": 25,
+        "grammar_target": "Relative Clauses",
+        "question_type": "controlled choice",
+        "depth": "medium",
+        "tested_dimension": "form",
+        "trap": "using where with direct object"
+      },
+      {
+        "question_no": 26,
+        "grammar_target": "Relative Clauses",
+        "question_type": "transformation",
+        "depth": "high",
+        "tested_dimension": "meaning",
+        "trap": "duplicate pronoun"
+      },
+      {
+        "question_no": 27,
+        "grammar_target": "Relative Clauses",
+        "question_type": "transformation",
+        "depth": "high",
+        "tested_dimension": "meaning",
+        "trap": "comma placement error"
+      },
+      {
+        "question_no": 28,
+        "grammar_target": "Relative Clauses",
+        "question_type": "error correction",
+        "depth": "medium",
+        "tested_dimension": "use",
+        "trap": "that after non-defining comma"
+      },
+      {
+        "question_no": 29,
+        "grammar_target": "Relative Clauses",
+        "question_type": "error correction",
+        "depth": "medium",
+        "tested_dimension": "form",
+        "trap": "repetitive pronoun it"
+      },
+      {
+        "question_no": 30,
+        "grammar_target": "Relative Clauses",
+        "question_type": "writing transfer",
+        "depth": "high",
+        "tested_dimension": "writing transfer",
+        "trap": "overly fragmented sentences"
+      }
+    ],
+    "targets": [
+      {
+        "name": "Passive Voice (Past/Present Simple)",
+        "level": "B1",
+        "reason": "Essential for reporting historical technological developments and scientific descriptions."
+      },
+      {
+        "name": "Past Simple vs Past Perfect",
+        "level": "B1+",
+        "reason": "Crucial bridge target for structuring chronological events and prior achievements in narrative/historical contexts."
+      },
+      {
+        "name": "Defining and Non-Defining Relative Clauses",
+        "level": "B1+",
+        "reason": "Key target for expanding noun phrases and adding descriptive background information without breaking flow."
+      }
+    ],
+    "guide": [
+      {
+        "heading": "#### Chủ điểm 1: Thể bị động (Passive Voice) trong văn phong báo cáo & lịch sử",
+        "content": "Thể bị động được sử dụng khi hành động hoặc đối tượng chịu tác động quan trọng hơn người thực hiện. Công thức chung: **S + be (chia theo thì) + V3/ed (+ by O)**.\n\n1. **Bị động quá khứ đơn (Past Simple Passive)**: Diễn tả sự kiện phát minh hoặc sản xuất trong quá khứ.\n   - *Công thức:* S + was / were + V3/ed.\n   - *Ví dụ:* The running machine **was invented** in 1817 by Karl Drais.\n2. **Bị động hiện tại đơn (Present Simple Passive)**: Diễn tả thực tế, quy luật hoặc trạng thái ở hiện tại.\n   - *Công thức:* S + am / is / are + V3/ed.\n   - *Ví dụ:* Bicycles **are used** by millions of commuters every day.\n\n> **⚠️ Lưu ý IELTS:** Chỉ dùng thể bị động với ngoại động từ (transitive verbs - động từ có tân ngữ trực tiếp như *invent, build, design, modify*). Không dùng bị động cho nội động từ (intransitive verbs như *happen, occur, arrive, exist*)."
+      },
+      {
+        "heading": "#### Chủ điểm 2: Quá khứ đơn (Past Simple) vs. Quá khứ hoàn thành (Past Perfect)",
+        "content": "Khi mô tả hai hành động đã xảy ra trong quá khứ, ta dùng **Quá khứ hoàn thành (had + V3/ed)** cho hành động xảy ra trước, và **Quá khứ đơn (V2/ed)** cho hành động xảy ra sau.\n\n1. **Cấu trúc nối hành động:**\n   - **By + thời điểm quá khứ / By the time + mốc thời gian:**\n     - *Ví dụ:* **By 1820**, the dandy horse craze **had faded** away.\n   - **Before + Quá khứ đơn, Quá khứ hoàn thành:**\n     - *Ví dụ:* Before pedals **were introduced**, riders **had pushed** off the ground with their feet.\n   - **After + Quá khứ hoàn thành, Quá khứ đơn:**\n     - *Ví dụ:* After Dunlop **had invented** the pneumatic tire, riding **became** much smoother.\n\n> **💡 Công thức bỏ túi:** 'Thực hiện trước = Had + V3' | 'Thực hiện sau = V2/ed'."
+      },
+      {
+        "heading": "#### Chủ điểm 3: Mệnh đề quan hệ xác định và không xác định (Relative Clauses)",
+        "content": "Mệnh đề quan hệ bổ nghĩa cho danh từ đứng trước nó.\n\n1. **Mệnh đề quan hệ xác định (Defining Relative Clause):**\n   - Cần thiết để xác định danh từ (không có dấu phẩy).\n   - *Ví dụ:* The bicycle **that Starley designed** was called the Safety Bicycle.\n2. **Mệnh đề quan hệ không xác định (Non-Defining Relative Clause):**\n   - Cung cấp thêm thông tin phụ (bắt buộc ngăn cách bằng cặp dấu phẩy **, ... ,**).\n   - KHÔNG dùng *that* trong mệnh đề không xác định.\n   - *Ví dụ:* Karl Drais, **who was a German inventor**, created the running machine.\n\n> **⚠️ Lưu ý đặt dấu phẩy:** Nếu mệnh đề không xác định nằm giữa câu, bắt buộc phải có đủ 2 dấu phẩy mở và đóng."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "trap": "Chia bị động cho nội động từ (intransitive verbs)",
+        "wrong_example": "The accident was happened yesterday.",
+        "correct_version": "The accident happened yesterday.",
+        "why_it_matters": "Nội động từ như 'happen', 'occur', 'exist' không bao giờ chia ở thể bị động trong bài thi IELTS."
+      },
+      {
+        "trap": "Dùng thì quá khứ đơn thay vì quá khứ hoàn thành khi có mốc 'By + năm quá khứ'",
+        "wrong_example": "By 1870, engineers introduced the penny-farthing.",
+        "correct_version": "By 1870, engineers had introduced the penny-farthing.",
+        "why_it_matters": "Cụm 'By + thời điểm quá khứ' đòi hỏi thì Quá khứ hoàn thành để nhấn mạnh kết quả đã hoàn thành trước mốc đó."
+      },
+      {
+        "trap": "Dùng đại từ 'that' trong mệnh đề quan hệ có dấu phẩy",
+        "wrong_example": "Karl Drais, that was a German inventor, designed the draisine.",
+        "correct_version": "Karl Drais, who was a German inventor, designed the draisine.",
+        "why_it_matters": "Trong mệnh đề quan hệ không xác định (có dấu phẩy), không được dùng 'that' thay cho 'who' hoặc 'which'."
+      },
+      {
+        "trap": "Quên dấu phẩy thứ hai đóng mệnh đề quan hệ không xác định ở giữa câu",
+        "wrong_example": "John Dunlop, who invented pneumatic tires improved bicycle comfort.",
+        "correct_version": "John Dunlop, who invented pneumatic tires, improved bicycle comfort.",
+        "why_it_matters": "Thiếu dấu phẩy đóng gây ra lỗi ngắt câu nghiêm trọng trong kỹ năng Writing."
+      }
+    ],
+    "sections": [
+      {
+        "section_title": "Part A. Passive Voice Practice",
+        "internal_question_start": 1,
+        "internal_question_end": 10,
+        "display_question_start": null,
+        "display_question_end": null,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Part B. Past Simple vs. Past Perfect Drills",
+        "internal_question_start": 11,
+        "internal_question_end": 20,
+        "display_question_start": null,
+        "display_question_end": null,
+        "compiler_computed_range": true
+      },
+      {
+        "section_title": "Part C. Relative Clauses & Sentence Transformations",
+        "internal_question_start": 21,
+        "internal_question_end": 30,
+        "display_question_start": null,
+        "display_question_end": null,
+        "compiler_computed_range": true
+      }
+    ],
+    "questions": [
+      {
+        "id": 1,
+        "type": "Multiple Choice",
+        "question": "The Laufmaschine _______ by Karl Drais in 1817 to substitute for horses.",
+        "options": [
+          "was designed",
+          "designed",
+          "was designing",
+          "is designed"
+        ],
+        "correct_answer": "was designed",
+        "explanation_vi": "Chủ ngữ 'The Laufmaschine' (vật) chịu tác động của hành động thiết kế trong quá khứ (1817), do đó dùng bị động quá khứ đơn 'was designed'.",
+        "difficulty": "easy",
+        "cognitive_level": "context_use",
+        "source_connection": "reading_based",
+        "target_structure": "Passive Voice",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The Laufmaschine was designed by Karl Drais in 1817 to substitute for horses.",
+          "why_correct_is_unique": "Was designed is the only grammatically correct past passive form.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "designed",
+              "reason": "Active form; implies the machine designed itself."
+            },
+            {
+              "option": "was designing",
+              "reason": "Past continuous active; wrong voice and aspect."
+            },
+            {
+              "option": "is designed",
+              "reason": "Present tense; contradicts the past year 1817."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "was designed",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "designed",
+            "is_correct": false,
+            "why_wrong": "Active voice error"
+          },
+          {
+            "option": "was designing",
+            "is_correct": false,
+            "why_wrong": "Continuous active error"
+          },
+          {
+            "option": "is designed",
+            "is_correct": false,
+            "why_wrong": "Present tense error"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": "Multiple Choice",
+        "question": "Rotary pedals _______ to the front wheel axle during the 1860s in France.",
+        "options": [
+          "were added",
+          "added",
+          "had added",
+          "are adding"
+        ],
+        "correct_answer": "were added",
+        "explanation_vi": "Chủ ngữ số nhiều 'Rotary pedals' nhận hành động lắp thêm vào bánh trước trong thập niên 1860, dùng 'were added'.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "reading_based",
+        "target_structure": "Passive Voice",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Rotary pedals were added to the front wheel axle during the 1860s in France.",
+          "why_correct_is_unique": "Were added is the correct plural past passive form.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "added",
+              "reason": "Active form; pedals cannot add themselves."
+            },
+            {
+              "option": "had added",
+              "reason": "Active past perfect form."
+            },
+            {
+              "option": "are adding",
+              "reason": "Present continuous active form."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "were added",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "added",
+            "is_correct": false,
+            "why_wrong": "Active voice error"
+          },
+          {
+            "option": "had added",
+            "is_correct": false,
+            "why_wrong": "Past perfect active error"
+          },
+          {
+            "option": "are adding",
+            "is_correct": false,
+            "why_wrong": "Present continuous error"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": "Multiple Choice",
+        "question": "A sudden stop on a penny-farthing often _______ the rider forward over the handlebars.",
+        "options": [
+          "threw",
+          "was thrown",
+          "had been thrown",
+          "is throwing"
+        ],
+        "correct_answer": "threw",
+        "explanation_vi": "Chủ ngữ 'A sudden stop' là chủ thể gây ra hành động quăng người lái về phía trước, nên cần động từ chủ động 'threw'. Không dùng bị động.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "reading_based",
+        "target_structure": "Passive Voice",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "A sudden stop on a penny-farthing often threw the rider forward over the handlebars.",
+          "why_correct_is_unique": "Active voice is required because 'A sudden stop' causes the action upon 'the rider'.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "was thrown",
+              "reason": "Passive voice error; the stop itself was not thrown."
+            },
+            {
+              "option": "had been thrown",
+              "reason": "Past perfect passive error."
+            },
+            {
+              "option": "is throwing",
+              "reason": "Present continuous active error."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "threw",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "was thrown",
+            "is_correct": false,
+            "why_wrong": "Incorrect passive subject"
+          },
+          {
+            "option": "had been thrown",
+            "is_correct": false,
+            "why_wrong": "Incorrect passive form"
+          },
+          {
+            "option": "is throwing",
+            "is_correct": false,
+            "why_wrong": "Wrong tense and aspect"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": "Multiple Choice",
+        "question": "Today, antique balance bikes _______ in major transport museums around the world.",
+        "options": [
+          "are displayed",
+          "were displayed",
+          "display",
+          "have displayed"
+        ],
+        "correct_answer": "are displayed",
+        "explanation_vi": "Từ chỉ thời gian 'Today' yêu cầu thì hiện tại đơn. Các chiếc xe cổ (vật) được trưng bày nên dùng bị động hiện tại 'are displayed'.",
+        "difficulty": "easy",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "Passive Voice",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Today, antique balance bikes are displayed in major transport museums around the world.",
+          "why_correct_is_unique": "Are displayed is the only present passive form fitting 'Today'.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "were displayed",
+              "reason": "Past passive; conflicts with 'Today'."
+            },
+            {
+              "option": "display",
+              "reason": "Active form; bikes do not display themselves."
+            },
+            {
+              "option": "have displayed",
+              "reason": "Active present perfect."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "are displayed",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "were displayed",
+            "is_correct": false,
+            "why_wrong": "Past tense mismatch"
+          },
+          {
+            "option": "display",
+            "is_correct": false,
+            "why_wrong": "Active voice error"
+          },
+          {
+            "option": "have displayed",
+            "is_correct": false,
+            "why_wrong": "Active perfect error"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "type": "Multiple Choice",
+        "question": "The Safety Bicycle _______ to be one of the most transformative inventions of the nineteenth century.",
+        "options": [
+          "is considered",
+          "considers",
+          "was considering",
+          "is considering"
+        ],
+        "correct_answer": "is considered",
+        "explanation_vi": "Cấu trúc bị động của động từ tường thuật: 'S + is considered + to V' (Xe đạp An toàn được coi là một trong những phát minh...).",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "reading_based",
+        "target_structure": "Passive Voice",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The Safety Bicycle is considered to be one of the most transformative inventions of the nineteenth century.",
+          "why_correct_is_unique": "Is considered is the standard present reporting passive.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "considers",
+              "reason": "Active form; the bicycle cannot consider."
+            },
+            {
+              "option": "was considering",
+              "reason": "Past continuous active."
+            },
+            {
+              "option": "is considering",
+              "reason": "Present continuous active."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "is considered",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "considers",
+            "is_correct": false,
+            "why_wrong": "Active voice error"
+          },
+          {
+            "option": "was considering",
+            "is_correct": false,
+            "why_wrong": "Continuous active error"
+          },
+          {
+            "option": "is considering",
+            "is_correct": false,
+            "why_wrong": "Continuous active error"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "type": "Gap Fill",
+        "question": "Complete the sentence in the passive voice using the verb in parentheses:<br>In 1888, pneumatic rubber tires _______ (invent) by John Boyd Dunlop.",
+        "options": [],
+        "correct_answer": "were invented",
+        "explanation_vi": "Chủ ngữ 'pneumatic rubber tires' ở dạng số nhiều và năm 1888 thuộc quá khứ, nên động từ chia bị động quá khứ đơn dạng số nhiều là 'were invented'.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "reading_based",
+        "target_structure": "Passive Voice",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "In 1888, pneumatic rubber tires were invented by John Boyd Dunlop.",
+          "why_correct_is_unique": "Were invented is the unique plural past passive form.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 7,
+        "type": "Gap Fill",
+        "question": "Rewrite the sentence in the passive voice:<br>Prompt: Pierre Michaux added pedals to the front wheel in the 1860s.<br>Passive: Pedals _______ to the front wheel in the 1860s by Pierre Michaux.",
+        "options": [],
+        "correct_answer": "were added",
+        "explanation_vi": "Tân ngữ 'pedals' (số nhiều) chuyển thành chủ ngữ mới, động từ 'added' chia ở bị động quá khứ đơn 'were added'.",
+        "difficulty": "hard",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "reading_based",
+        "target_structure": "Passive Voice",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Pedals were added to the front wheel in the 1860s by Pierre Michaux.",
+          "why_correct_is_unique": "Were added accurately converts active 'added' into plural past passive.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_meaning": "Pierre Michaux added pedals to the front wheel in the 1860s.",
+          "transformed_meaning": "Pedals were added to the front wheel in the 1860s by Pierre Michaux.",
+          "meaning_is_preserved": true,
+          "target_structure_used": true,
+          "no_extra_information_added": true,
+          "no_information_removed": true,
+          "answer_family_is_narrow": true
+        }
+      },
+      {
+        "id": 8,
+        "type": "Error Correction",
+        "question": "Correct the error: The volcanic eruption was occurred in 1815 and caused a severe horse shortage.",
+        "options": [],
+        "correct_answer": "The volcanic eruption occurred in 1815 and caused a severe horse shortage.",
+        "explanation_vi": "'Occur' là nội động từ (intransitive verb) nên không được dùng ở dạng bị động 'was occurred'. Sửa lại thành chủ động 'occurred'.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "reading_based",
+        "target_structure": "Passive Voice",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The volcanic eruption occurred in 1815 and caused a severe horse shortage.",
+          "why_correct_is_unique": "Removing 'was' leaves the grammatically correct active past verb 'occurred'.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The volcanic eruption was occurred in 1815 and caused a severe horse shortage.",
+          "corrected_sentence": "The volcanic eruption occurred in 1815 and caused a severe horse shortage.",
+          "target_error_text": "was occurred",
+          "target_error_type": "intransitive passive error",
+          "correction_text": "occurred",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 9,
+        "type": "Error Correction",
+        "question": "Correct the error: In the 1870s, high-wheel bicycles produced in large numbers across Britain.",
+        "options": [],
+        "correct_answer": "In the 1870s, high-wheel bicycles were produced in large numbers across Britain.",
+        "explanation_vi": "Chủ ngữ 'high-wheel bicycles' bị tác động sản xuất nên phải ở dạng bị động 'were produced', câu gốc thiếu trợ động từ 'were'.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "independent",
+        "target_structure": "Passive Voice",
+        "level": "B1",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "In the 1870s, high-wheel bicycles were produced in large numbers across Britain.",
+          "why_correct_is_unique": "Adding 'were' creates the correct passive past verb phrase.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "In the 1870s, high-wheel bicycles produced in large numbers across Britain.",
+          "corrected_sentence": "In the 1870s, high-wheel bicycles were produced in large numbers across Britain.",
+          "target_error_text": "produced",
+          "target_error_type": "missing auxiliary be in passive",
+          "correction_text": "were produced",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 10,
+        "type": "Gap Fill",
+        "question": "(*) Complete the academic report sentence using passive voice:<br>Bicycles _______ (regard) today as an essential component of green city infrastructure.",
+        "options": [],
+        "correct_answer": "are regarded",
+        "explanation_vi": "Thì hiện tại đơn bị động số nhiều 'are regarded' được sử dụng trong văn phong báo cáo học thuật. Đây là câu hỏi nâng cao (*).",
+        "difficulty": "hard",
+        "cognitive_level": "writing_transfer",
+        "source_connection": "writing_transfer",
+        "target_structure": "Passive Voice",
+        "level": "B1",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Bicycles are regarded today as an essential component of green city infrastructure.",
+          "why_correct_is_unique": "Are regarded fits present academic reporting passive.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 11,
+        "type": "Multiple Choice",
+        "question": "By 1820, the initial craze for the dandy horse _______ significantly across European cities.",
+        "options": [
+          "had declined",
+          "declined",
+          "has declined",
+          "declines"
+        ],
+        "correct_answer": "had declined",
+        "explanation_vi": "Cụm 'By 1820' (mốc thời gian hoàn thành trong quá khứ) yêu cầu thì Quá khứ hoàn thành 'had declined'.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "reading_based",
+        "target_structure": "Past Simple vs Past Perfect",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "By 1820, the initial craze for the dandy horse had declined significantly across European cities.",
+          "why_correct_is_unique": "Had declined is required by 'By + past year'.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "declined",
+              "reason": "Past simple fails to mark completion prior to 1820."
+            },
+            {
+              "option": "has declined",
+              "reason": "Present perfect cannot be used with a finished past year."
+            },
+            {
+              "option": "declines",
+              "reason": "Present simple tense error."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "had declined",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "declined",
+            "is_correct": false,
+            "why_wrong": "Past simple error with By + past time"
+          },
+          {
+            "option": "has declined",
+            "is_correct": false,
+            "why_wrong": "Present perfect error with finished year"
+          },
+          {
+            "option": "declines",
+            "is_correct": false,
+            "why_wrong": "Present tense error"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "type": "Multiple Choice",
+        "question": "Before pedals _______ to the front axle, riders had used their feet to push the machine along.",
+        "options": [
+          "were added",
+          "had added",
+          "are adding",
+          "add"
+        ],
+        "correct_answer": "were added",
+        "explanation_vi": "Trong mệnh đề 'Before + S + V', hành động xảy ra sau dùng Quá khứ đơn bị động ('were added'), còn mệnh đề chính xảy ra trước đã dùng Quá khứ hoàn thành 'had used'.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning",
+        "source_connection": "reading_based",
+        "target_structure": "Past Simple vs Past Perfect",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Before pedals were added to the front axle, riders had used their feet to push the machine along.",
+          "why_correct_is_unique": "Were added is the correct past simple passive following 'Before'.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "had added",
+              "reason": "Active past perfect form; pedals did not add themselves."
+            },
+            {
+              "option": "are adding",
+              "reason": "Present continuous active form."
+            },
+            {
+              "option": "add",
+              "reason": "Active present form."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "were added",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "had added",
+            "is_correct": false,
+            "why_wrong": "Active past perfect error"
+          },
+          {
+            "option": "are adding",
+            "is_correct": false,
+            "why_wrong": "Present continuous error"
+          },
+          {
+            "option": "add",
+            "is_correct": false,
+            "why_wrong": "Active present error"
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "type": "Multiple Choice",
+        "question": "Cyclists _______ high-wheel bicycles for a decade before Starley introduced the safety design in 1885.",
+        "options": [
+          "had ridden",
+          "rode",
+          "have ridden",
+          "ride"
+        ],
+        "correct_answer": "had ridden",
+        "explanation_vi": "Hành động cưỡi xe bánh cao diễn ra suốt 1 thập kỷ trước mốc 1885 (khoảnh khắc Starley ra mắt thiết kế an toàn), nên dùng Quá khứ hoàn thành 'had ridden'.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "reading_based",
+        "target_structure": "Past Simple vs Past Perfect",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Cyclists had ridden high-wheel bicycles for a decade before Starley introduced the safety design in 1885.",
+          "why_correct_is_unique": "Had ridden correctly indicates duration prior to the 1885 event.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "rode",
+              "reason": "Past simple does not emphasize completion before 1885."
+            },
+            {
+              "option": "have ridden",
+              "reason": "Present perfect cannot be linked to 1885."
+            },
+            {
+              "option": "ride",
+              "reason": "Present tense error."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "had ridden",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "rode",
+            "is_correct": false,
+            "why_wrong": "Past simple fails prior duration emphasis"
+          },
+          {
+            "option": "have ridden",
+            "is_correct": false,
+            "why_wrong": "Present perfect error"
+          },
+          {
+            "option": "ride",
+            "is_correct": false,
+            "why_wrong": "Present tense error"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "type": "Multiple Choice",
+        "question": "Until Dunlop _______ pneumatic tires, riding on cobblestones had caused intense discomfort.",
+        "options": [
+          "invented",
+          "had invented",
+          "has invented",
+          "invents"
+        ],
+        "correct_answer": "invented",
+        "explanation_vi": "Trong cấu trúc 'Until + S + V(quá khứ đơn), S + had + V3', phát minh của Dunlop kết thúc khoảng thời gian không dễ chịu trước đó, dùng 'invented'.",
+        "difficulty": "medium",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "reading_based",
+        "target_structure": "Past Simple vs Past Perfect",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Until Dunlop invented pneumatic tires, riding on cobblestones had caused intense discomfort.",
+          "why_correct_is_unique": "Invented is the past simple event marking the boundary of the past perfect state.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "had invented",
+              "reason": "Past perfect after until creates tense confusion with the main clause."
+            },
+            {
+              "option": "has invented",
+              "reason": "Present perfect error."
+            },
+            {
+              "option": "invents",
+              "reason": "Present tense error."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "invented",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "had invented",
+            "is_correct": false,
+            "why_wrong": "Past perfect boundary error"
+          },
+          {
+            "option": "has invented",
+            "is_correct": false,
+            "why_wrong": "Present perfect error"
+          },
+          {
+            "option": "invents",
+            "is_correct": false,
+            "why_wrong": "Present tense error"
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "type": "Gap Fill",
+        "question": "Complete the sentence with the past simple or past perfect form of the verb:<br>By the end of the nineteenth century, factory workers _______ (adopt) the safety bicycle as their main form of transit.",
+        "options": [],
+        "correct_answer": "had adopted",
+        "explanation_vi": "Cụm 'By the end of the nineteenth century' yêu cầu thì Quá khứ hoàn thành 'had adopted'.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "reading_based",
+        "target_structure": "Past Simple vs Past Perfect",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "By the end of the nineteenth century, factory workers had adopted the safety bicycle as their main form of transit.",
+          "why_correct_is_unique": "Had adopted is required by By + end of past century.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 16,
+        "type": "Gap Fill",
+        "question": "Combine the sentences using 'after' and past perfect:<br>Sentence 1: Engineers enlarged the front wheel.<br>Sentence 2: Bicycles achieved higher speeds per pedal stroke.<br>Combined: After engineers _______ the front wheel, bicycles achieved higher speeds per pedal stroke.",
+        "options": [],
+        "correct_answer": "had enlarged",
+        "explanation_vi": "Hành động mở rộng bánh trước xảy ra trước nên dùng Quá khứ hoàn thành 'had enlarged'.",
+        "difficulty": "hard",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "reading_based",
+        "target_structure": "Past Simple vs Past Perfect",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "After engineers had enlarged the front wheel, bicycles achieved higher speeds per pedal stroke.",
+          "why_correct_is_unique": "Had enlarged specifies the completed prior action in the after-clause.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_meaning": "Engineers enlarged the front wheel. Bicycles achieved higher speeds per pedal stroke.",
+          "transformed_meaning": "After engineers had enlarged the front wheel, bicycles achieved higher speeds per pedal stroke.",
+          "meaning_is_preserved": true,
+          "target_structure_used": true,
+          "no_extra_information_added": true,
+          "no_information_removed": true,
+          "answer_family_is_narrow": true
+        }
+      },
+      {
+        "id": 17,
+        "type": "Error Correction",
+        "question": "Correct the error: By 1865, European urbanites bought thousands of wooden velocipedes.",
+        "options": [],
+        "correct_answer": "By 1865, European urbanites had bought thousands of wooden velocipedes.",
+        "explanation_vi": "'By 1865' cần thì Quá khứ hoàn thành 'had bought' để chỉ kết quả tích lũy trước mốc thời gian đó.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "independent",
+        "target_structure": "Past Simple vs Past Perfect",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "By 1865, European urbanites had bought thousands of wooden velocipedes.",
+          "why_correct_is_unique": "Had bought corrects the past simple error following By + past year.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "By 1865, European urbanites bought thousands of wooden velocipedes.",
+          "corrected_sentence": "By 1865, European urbanites had bought thousands of wooden velocipedes.",
+          "target_error_text": "bought",
+          "target_error_type": "past simple with by + past year",
+          "correction_text": "had bought",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 18,
+        "type": "Error Correction",
+        "question": "Correct the error: Before Dunlop introduced pneumatic tires, riders have suffered from bumpy road vibrations.",
+        "options": [],
+        "correct_answer": "Before Dunlop introduced pneumatic tires, riders had suffered from bumpy road vibrations.",
+        "explanation_vi": "Không dùng hiện tại hoàn thành 'have suffered' cho chuỗi sự kiện đã kết thúc hoàn toàn trong lịch sử. Sửa thành quá khứ hoàn thành 'had suffered'.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "reading_based",
+        "target_structure": "Past Simple vs Past Perfect",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Before Dunlop introduced pneumatic tires, riders had suffered from bumpy road vibrations.",
+          "why_correct_is_unique": "Had suffered correctly expresses past state prior to past event.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "Before Dunlop introduced pneumatic tires, riders have suffered from bumpy road vibrations.",
+          "corrected_sentence": "Before Dunlop introduced pneumatic tires, riders had suffered from bumpy road vibrations.",
+          "target_error_text": "have suffered",
+          "target_error_type": "present perfect with finished past time",
+          "correction_text": "had suffered",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 19,
+        "type": "Gap Fill",
+        "question": "(*) Complete the historical summary:<br>By the time chain drives were implemented, cyclists _______ (rely) on direct pedal attachment to the front axle for many years.",
+        "options": [],
+        "correct_answer": "had relied",
+        "explanation_vi": "Cụm 'By the time ... for many years' thể hiện rõ hành động kéo dài liên tục trước mốc thời gian trong quá khứ, bắt buộc dùng Quá khứ hoàn thành 'had relied'. Đây là câu hỏi nâng cao (*).",
+        "difficulty": "hard",
+        "cognitive_level": "writing_transfer",
+        "source_connection": "writing_transfer",
+        "target_structure": "Past Simple vs Past Perfect",
+        "level": "B1+",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "By the time chain drives were implemented, cyclists had relied on direct pedal attachment to the front axle for many years.",
+          "why_correct_is_unique": "Had relied is the unique past perfect form required by 'By the time ... for many years'.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 20,
+        "type": "Gap Fill",
+        "question": "(*) Complete the sentence:<br>By 1890, most cities _______ (not develop) dedicated cycle paths for daily commuters.",
+        "options": [],
+        "correct_answer": "had not developed",
+        "explanation_vi": "Cụm 'By 1890' chỉ sự phủ định tích lũy trước mốc thời gian quá khứ, bắt buộc dùng Quá khứ hoàn thành 'had not developed'. Dạng nâng cao (*).",
+        "difficulty": "hard",
+        "cognitive_level": "writing_transfer",
+        "source_connection": "independent",
+        "target_structure": "Past Simple vs Past Perfect",
+        "level": "B1+",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "By 1890, most cities had not developed dedicated cycle paths for daily commuters.",
+          "why_correct_is_unique": "Had not developed correctly handles past negative completion prior to 1890.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      },
+      {
+        "id": 21,
+        "type": "Multiple Choice",
+        "question": "Baron Karl von Drais, _______ designed the running machine in 1817, was a German inventor.",
+        "options": [
+          "who",
+          "which",
+          "whose",
+          "that"
+        ],
+        "correct_answer": "who",
+        "explanation_vi": "Bổ nghĩa cho người ('Baron Karl von Drais') trong mệnh đề quan hệ không xác định (có dấu phẩy), dùng 'who'. Không dùng 'that'.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "reading_based",
+        "target_structure": "Relative Clauses",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Baron Karl von Drais, who designed the running machine in 1817, was a German inventor.",
+          "why_correct_is_unique": "Who is the only relative pronoun suitable for a person in a non-defining clause.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "which",
+              "reason": "Refers to things, not people."
+            },
+            {
+              "option": "whose",
+              "reason": "Possessive relative pronoun; requires a noun following it."
+            },
+            {
+              "option": "that",
+              "reason": "Cannot be used in non-defining relative clauses with commas."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "who",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "which",
+            "is_correct": false,
+            "why_wrong": "Used for non-human antecedents"
+          },
+          {
+            "option": "whose",
+            "is_correct": false,
+            "why_wrong": "Possessive error"
+          },
+          {
+            "option": "that",
+            "is_correct": false,
+            "why_wrong": "Cannot be used after non-defining comma"
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "type": "Multiple Choice",
+        "question": "The velocipede, _______ had rigid iron tires, produced very uncomfortable vibrations.",
+        "options": [
+          "which",
+          "that",
+          "where",
+          "who"
+        ],
+        "correct_answer": "which",
+        "explanation_vi": "Bổ nghĩa cho vật 'The velocipede' trong mệnh đề quan hệ không xác định giữa hai dấu phẩy, dùng 'which'.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "reading_based",
+        "target_structure": "Relative Clauses",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The velocipede, which had rigid iron tires, produced very uncomfortable vibrations.",
+          "why_correct_is_unique": "Which is required for non-human non-defining relative clauses.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "that",
+              "reason": "Invalid after commas in non-defining clauses."
+            },
+            {
+              "option": "where",
+              "reason": "Refers to places, not physical objects."
+            },
+            {
+              "option": "who",
+              "reason": "Refers to people only."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "which",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "that",
+            "is_correct": false,
+            "why_wrong": "Prohibited after comma"
+          },
+          {
+            "option": "where",
+            "is_correct": false,
+            "why_wrong": "Locative pronoun error"
+          },
+          {
+            "option": "who",
+            "is_correct": false,
+            "why_wrong": "Human pronoun error"
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "type": "Multiple Choice",
+        "question": "John Boyd Dunlop was a Scottish veterinary surgeon _______ invention made cycling far more comfortable.",
+        "options": [
+          "whose",
+          "who",
+          "who's",
+          "which"
+        ],
+        "correct_answer": "whose",
+        "explanation_vi": "Đại từ sở hữu 'whose' đứng trước danh từ 'invention' để chỉ phát minh của Dunlop.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "reading_based",
+        "target_structure": "Relative Clauses",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "John Boyd Dunlop was a Scottish veterinary surgeon whose invention made cycling far more comfortable.",
+          "why_correct_is_unique": "Whose expresses possession of the noun 'invention'.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "who",
+              "reason": "Subject pronoun; cannot precede possessed noun directly."
+            },
+            {
+              "option": "who's",
+              "reason": "Contraction of 'who is' or 'who has'; ungrammatical here."
+            },
+            {
+              "option": "which",
+              "reason": "Refers to objects, not people."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "whose",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "who",
+            "is_correct": false,
+            "why_wrong": "Subject pronoun used as possessive"
+          },
+          {
+            "option": "who's",
+            "is_correct": false,
+            "why_wrong": "Contraction error"
+          },
+          {
+            "option": "which",
+            "is_correct": false,
+            "why_wrong": "Non-human pronoun error"
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "type": "Multiple Choice",
+        "question": "Coventry was the British city _______ John Kemp Starley manufactured the famous Safety Bicycle.",
+        "options": [
+          "where",
+          "which",
+          "that",
+          "whose"
+        ],
+        "correct_answer": "where",
+        "explanation_vi": "'Coventry' là địa điểm diễn ra hành động sản xuất, dùng trạng từ quan hệ 'where'.",
+        "difficulty": "medium",
+        "cognitive_level": "context_use",
+        "source_connection": "independent",
+        "target_structure": "Relative Clauses",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Coventry was the British city where John Kemp Starley manufactured the famous Safety Bicycle.",
+          "why_correct_is_unique": "Where specifies the place of manufacturing.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "which",
+              "reason": "Requires a preposition like 'in which' to indicate location."
+            },
+            {
+              "option": "that",
+              "reason": "Incomplete without a preposition for locative meaning."
+            },
+            {
+              "option": "whose",
+              "reason": "Possessive error."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "where",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "which",
+            "is_correct": false,
+            "why_wrong": "Missing preposition in which"
+          },
+          {
+            "option": "that",
+            "is_correct": false,
+            "why_wrong": "Missing preposition"
+          },
+          {
+            "option": "whose",
+            "is_correct": false,
+            "why_wrong": "Possessive error"
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "type": "Multiple Choice",
+        "question": "The museum displays early transport models _______ establish the evolution of two-wheeled vehicles.",
+        "options": [
+          "that",
+          "where",
+          "who",
+          "whose"
+        ],
+        "correct_answer": "that",
+        "explanation_vi": "Mệnh đề quan hệ xác định bổ nghĩa cho vật số nhiều 'early transport models', chọn 'that' (hoặc 'which').",
+        "difficulty": "easy",
+        "cognitive_level": "context_use",
+        "source_connection": "reading_based",
+        "target_structure": "Relative Clauses",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The museum displays early transport models that establish the evolution of two-wheeled vehicles.",
+          "why_correct_is_unique": "That is the correct defining relative pronoun for things.",
+          "why_other_options_are_wrong": [
+            {
+              "option": "where",
+              "reason": "Location adverb; models are objects, not places."
+            },
+            {
+              "option": "who",
+              "reason": "Human pronoun error."
+            },
+            {
+              "option": "whose",
+              "reason": "Possessive error."
+            }
+          ],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "option_validations": [
+          {
+            "option": "that",
+            "is_correct": true,
+            "why_wrong": ""
+          },
+          {
+            "option": "where",
+            "is_correct": false,
+            "why_wrong": "Locative error"
+          },
+          {
+            "option": "who",
+            "is_correct": false,
+            "why_wrong": "Human pronoun error"
+          },
+          {
+            "option": "whose",
+            "is_correct": false,
+            "why_wrong": "Possessive error"
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "type": "Gap Fill",
+        "question": "Combine the two sentences using a non-defining relative clause with 'who':<br>Sentence 1: Karl Drais created the running machine.<br>Sentence 2: He was a German inventor.<br>Combined: Karl Drais, _______, created the running machine.",
+        "options": [],
+        "correct_answer": "who was a German inventor",
+        "explanation_vi": "Thêm mệnh đề quan hệ không xác định 'who was a German inventor' vào giữa hai dấu phẩy bổ nghĩa cho Karl Drais.",
+        "difficulty": "hard",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "reading_based",
+        "target_structure": "Relative Clauses",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Karl Drais, who was a German inventor, created the running machine.",
+          "why_correct_is_unique": "Who was a German inventor is the exact non-defining relative clause.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_meaning": "Karl Drais created the running machine. He was a German inventor.",
+          "transformed_meaning": "Karl Drais, who was a German inventor, created the running machine.",
+          "meaning_is_preserved": true,
+          "target_structure_used": true,
+          "no_extra_information_added": true,
+          "no_information_removed": true,
+          "answer_family_is_narrow": true
+        }
+      },
+      {
+        "id": 27,
+        "type": "Gap Fill",
+        "question": "Combine the two sentences using a non-defining relative clause with 'which':<br>Sentence 1: The penny-farthing had a 1.5-meter front wheel.<br>Sentence 2: It reached impressive riding speeds.<br>Combined: The penny-farthing, _______, reached impressive riding speeds.",
+        "options": [],
+        "correct_answer": "which had a 1.5-meter front wheel",
+        "explanation_vi": "Thêm mệnh đề quan hệ không xác định 'which had a 1.5-meter front wheel' nằm giữa hai dấu phẩy bổ nghĩa cho 'The penny-farthing'.",
+        "difficulty": "hard",
+        "cognitive_level": "meaning_preservation",
+        "source_connection": "reading_based",
+        "target_structure": "Relative Clauses",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The penny-farthing, which had a 1.5-meter front wheel, reached impressive riding speeds.",
+          "why_correct_is_unique": "Which had a 1.5-meter front wheel is the precise non-defining clause.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "meaning_preservation_validation": {
+          "original_meaning": "The penny-farthing had a 1.5-meter front wheel. It reached impressive riding speeds.",
+          "transformed_meaning": "The penny-farthing, which had a 1.5-meter front wheel, reached impressive riding speeds.",
+          "meaning_is_preserved": true,
+          "target_structure_used": true,
+          "no_extra_information_added": true,
+          "no_information_removed": true,
+          "answer_family_is_narrow": true
+        }
+      },
+      {
+        "id": 28,
+        "type": "Error Correction",
+        "question": "Correct the error: John Kemp Starley, that designed the Safety Bicycle, changed modern transport forever.",
+        "options": [],
+        "correct_answer": "John Kemp Starley, who designed the Safety Bicycle, changed modern transport forever.",
+        "explanation_vi": "Trong mệnh đề quan hệ không xác định bổ nghĩa cho người giữa hai dấu phẩy, không được dùng 'that'. Phải sửa thành 'who'.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "reading_based",
+        "target_structure": "Relative Clauses",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "John Kemp Starley, who designed the Safety Bicycle, changed modern transport forever.",
+          "why_correct_is_unique": "Who correctly replaces that after a non-defining comma.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "John Kemp Starley, that designed the Safety Bicycle, changed modern transport forever.",
+          "corrected_sentence": "John Kemp Starley, who designed the Safety Bicycle, changed modern transport forever.",
+          "target_error_text": "that",
+          "target_error_type": "that after non-defining comma",
+          "correction_text": "who",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 29,
+        "type": "Error Correction",
+        "question": "Correct the error: The boneshaker was an early velocipede which it had rigid iron tires.",
+        "options": [],
+        "correct_answer": "The boneshaker was an early velocipede which had rigid iron tires.",
+        "explanation_vi": "Đại từ quan hệ 'which' đã đóng vai trò làm chủ ngữ cho mệnh đề quan hệ, do đó đại từ lặp lại 'it' là thừa. Sửa lại bỏ 'it'.",
+        "difficulty": "medium",
+        "cognitive_level": "editing_accuracy",
+        "source_connection": "reading_based",
+        "target_structure": "Relative Clauses",
+        "level": "B1+",
+        "stretch": false,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "The boneshaker was an early velocipede which had rigid iron tires.",
+          "why_correct_is_unique": "Removing 'it' eliminates the redundant pronoun in the relative clause.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        },
+        "error_correction_validation": {
+          "original_sentence": "The boneshaker was an early velocipede which it had rigid iron tires.",
+          "corrected_sentence": "The boneshaker was an early velocipede which had rigid iron tires.",
+          "target_error_text": "which it had",
+          "target_error_type": "repetitive pronoun it",
+          "correction_text": "which had",
+          "original_contains_error": true,
+          "corrected_differs_from_original": true,
+          "exactly_one_target_error": true,
+          "explanation_matches_error": true
+        }
+      },
+      {
+        "id": 30,
+        "type": "Gap Fill",
+        "question": "(*) Complete the essay sentence using a relative clause (use 'that'):<br>Cities _______ invest in protected bicycle lanes experience lower traffic congestion.",
+        "options": [],
+        "correct_answer": "that",
+        "explanation_vi": "Mệnh đề quan hệ xác định bổ nghĩa cho danh từ số nhiều 'Cities' chỉ nơi chốn/đơn vị hành chính thực hiện hành động đầu tư. Dùng đại từ 'that' theo yêu cầu đề bài (hoặc 'which' cũng chấp nhận được trong tiếng Anh tổng quát). Dạng nâng cao (*).",
+        "difficulty": "hard",
+        "cognitive_level": "writing_transfer",
+        "source_connection": "writing_transfer",
+        "target_structure": "Relative Clauses",
+        "level": "B1+",
+        "stretch": true,
+        "one_answer_check": {
+          "has_exactly_one_valid_answer": true,
+          "context_is_sufficient": true,
+          "final_sentence_after_insertion": "Cities that invest in protected bicycle lanes experience lower traffic congestion.",
+          "why_correct_is_unique": "That is the defining relative pronoun acting as subject for invest.",
+          "why_other_options_are_wrong": [],
+          "punctuation_complete": true,
+          "meaning_preserved": true,
+          "target_structure_clear": true,
+          "answer_family_is_bounded": true
+        },
+        "deep_grammar_validation": {
+          "has_single_clear_answer": true,
+          "requires_context_or_meaning": true,
+          "meaning_preserved_if_transformation": true,
+          "is_not_surface_clue_only": true,
+          "matches_target_structure": true,
+          "difficulty_is_appropriate": true,
+          "level_is_appropriate": true
+        }
+      }
+    ]
+  },
+  "writing": {
+    "tasks": [
+      {
+        "id": 1,
+        "task_type": "Sentence Building",
+        "prompt": "Sắp xếp các từ sau thành câu hoàn chỉnh:<br>was invented / Karl Drais / in 1817 / The running machine / by",
+        "target_length": "1 sentence",
+        "focus_skill": "Word order in passive voice sentences.",
+        "useful_language": [],
+        "success_criteria": [
+          "Arrange all words in the correct passive voice sentence order.",
+          "Include correct capitalization and full stop."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 2,
+        "task_type": "Sentence Combining",
+        "prompt": "Nối hai câu sau thành một câu hoàn chỉnh bằng từ 'because':<br>Sentence 1: Early running machines lacked pedals.<br>Sentence 2: Riders had to push off the ground with their feet.",
+        "target_length": "1 sentence",
+        "focus_skill": "Using because to show cause and effect.",
+        "useful_language": [
+          "Riders had to...",
+          "because early running machines..."
+        ],
+        "success_criteria": [
+          "Combine the sentences logically preserving cause and effect.",
+          "Use proper punctuation."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 3,
+        "task_type": "Email Writing",
+        "prompt": "Write a short email to your classmate proposing to ride bicycles to school tomorrow instead of taking the bus to avoid traffic. (write 3 sentences)",
+        "target_length": "3 sentences (approx. 35-45 words)",
+        "focus_skill": "Simple travel invitation and giving reasons.",
+        "useful_language": [
+          "Why don't we...",
+          "It is a practical solution...",
+          "avoid heavy traffic"
+        ],
+        "success_criteria": [
+          "Include a clear invitation to ride bicycles.",
+          "Give a reason related to traffic or health.",
+          "Write exactly 3 sentences."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 4,
+        "task_type": "Data Description",
+        "prompt": "Describe the SVG chart below comparing commuting speeds between horses and early bicycles in 1820. Write 3 sentences.",
+        "target_length": "3 sentences (approx. 40-50 words)",
+        "focus_skill": "Comparing numerical data from visual chart.",
+        "useful_language": [
+          "In 1820, horses traveled at...",
+          "In comparison, velocipedes achieved...",
+          "slight difference"
+        ],
+        "success_criteria": [
+          "Compare both transport modes using chart numbers.",
+          "Use at least one comparison word (faster, slower, in contrast)."
+        ],
+        "visual_data": {
+          "type": "svg",
+          "content": "<div class=\"svg-chart-container\"><svg viewBox=\"0 0 400 200\" width=\"100%\" height=\"200\" style=\"background-color:#f9f9f9;border:1px solid #ddd;\"><line x1=\"50\" y1=\"160\" x2=\"360\" y2=\"160\" stroke=\"#888\" stroke-width=\"2\"/><line x1=\"50\" y1=\"30\" x2=\"50\" y2=\"160\" stroke=\"#888\" stroke-width=\"2\"/><rect x=\"90\" y=\"60\" width=\"60\" height=\"100\" fill=\"#3498db\"/><rect x=\"230\" y=\"90\" width=\"60\" height=\"70\" fill=\"#e74c3c\"/><text x=\"105\" y=\"50\" font-size=\"14\" font-weight=\"bold\" fill=\"#2c3e50\">15 km/h</text><text x=\"245\" y=\"80\" font-size=\"14\" font-weight=\"bold\" fill=\"#2c3e50\">10 km/h</text><text x=\"95\" y=\"180\" font-size=\"13\" fill=\"#333\">Horse Travel</text><text x=\"230\" y=\"180\" font-size=\"13\" fill=\"#333\">Early Bicycle</text><text x=\"110\" y=\"20\" font-size=\"15\" font-weight=\"bold\" fill=\"#2c3e50\">1820 Average Travel Speed</text></svg></div>"
+        },
+        "topic_alignment": true
+      },
+      {
+        "id": 5,
+        "task_type": "Opinion Paragraph",
+        "prompt": "Write a short paragraph giving your opinion on whether towns should build more bicycle paths to improve urban mobility. Write 5-6 sentences using the structure below:<br>1. State your opinion.<br>2. Give reason 1.<br>3. Give reason 2.<br>4. Explain one result.<br>5. Write a short conclusion.<br><br>Useful sentence starters: In my opinion, ... | First, ... | Another reason is that ... | As a result, ... | Therefore, ...",
+        "target_length": "5-6 sentences (approx. 60-80 words)",
+        "focus_skill": "Expressing opinion and supporting reasons with structured scaffolding.",
+        "useful_language": [
+          "In my opinion...",
+          "First of all...",
+          "Another reason is that...",
+          "As a result...",
+          "Therefore..."
+        ],
+        "success_criteria": [
+          "State your clear position in the opening sentence.",
+          "Provide two distinct supporting reasons.",
+          "Explain one result and write a short conclusion.",
+          "Write between 5 and 6 sentences."
+        ],
+        "visual_data": {
+          "type": "none",
+          "content": ""
+        },
+        "topic_alignment": true
+      }
+    ]
+  },
+  "answers": {
+    "reading_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "Foot pressure against the ground",
+        "question_type": "literal",
+        "evidence_quote": "Lacking pedals, gears, and chains, the vehicle required riders to sit on a wooden frame and push off the ground using their feet.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Đoạn 1 nêu rõ xe không có bàn đạp hay xích, người cưỡi phải dùng chân đẩy xuống đất.",
+        "why_others_wrong_vi": "Bàn đạp (B) và xích (C) là các chi tiết của xe đời sau (đoạn 2 & 4). Đáp án D không được nhắc tới.",
+        "depth_check_vi": "Câu hỏi kiểm tra khả năng định vị chi tiết thực tế trong đoạn 1.",
+        "tip_vi": "Chú ý các từ miêu tả sự thiếu hụt như 'Lacking pedals...'"
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "To provide an alternative vehicle when horses became scarce",
+        "question_type": "cause_effect",
+        "evidence_quote": "This device, often called the draisienne or 'dandy horse', was designed as a practical response to a severe shortage of horses caused by crop failures after the Mount Tambora volcanic eruption.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Lý do phát minh ra chiếc xe là để ứng phó với tình trạng thiếu hụt ngựa nghiêm trọng do mất mùa.",
+        "why_others_wrong_vi": "Đáp án B và D lấy thông tin từ đoạn 2; C là diễn giải sai về đối tượng sử dụng.",
+        "depth_check_vi": "Kiểm tra mối quan hệ nguyên nhân - kết quả giữa thảm họa thiên nhiên và phát minh.",
+        "tip_vi": "Cụm 'designed as a practical response to...' biểu thị mục đích và nguyên nhân."
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "It allowed riders to travel without pushing their feet on the ground, despite being uncomfortable",
+        "question_type": "inference",
+        "evidence_quote": "This new machine, known as the velocipede or 'boneshaker', allowed riders to move forward without touching the ground. Because the rigid iron tires and wooden wheels caused uncomfortable vibrations on cobblestone roads, the ride was notoriously rough.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Kết hợp hai ý ở đoạn 2: việc thêm bàn đạp giúp chân không cần chạm đất, nhưng bánh sắt làm cho chuyến đi rất nảy xóc (rough).",
+        "why_others_wrong_vi": "B sai vì chuyến đi rất xóc; C sai vì xe đạp an toàn xuất hiện sau; D sai vì lốp bơm hơi chưa ra đời.",
+        "depth_check_vi": "Yêu cầu kết nối hai thông tin trong cùng một đoạn văn.",
+        "tip_vi": "Đối chiếu từ trái nghĩa giữa 'smooth' và 'notoriously rough'."
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "It was widely known for producing harsh and uneven movements",
+        "question_type": "vocabulary_in_context",
+        "evidence_quote": "Because the rigid iron tires and wooden wheels caused uncomfortable vibrations on cobblestone roads, the ride was notoriously rough.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "'Notoriously rough' được giải thích là những Rung lắc gây khó chịu (uncomfortable vibrations) trên đường đá cội.",
+        "why_others_wrong_vi": "B, C, D không phản ánh ý nghĩa về độ xóc và độ nảy của chuyến đi.",
+        "depth_check_vi": "Hiểu từ vựng dựa vào ngữ cảnh miêu tả chuyển động phía trước.",
+        "tip_vi": "Dựa vào từ giải thích 'uncomfortable vibrations' để đoán nghĩa cụm từ."
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "To explain how the desire for greater speed led to a faster but hazardous bicycle design",
+        "question_type": "writer_purpose",
+        "evidence_quote": "Consequently, cycling during this era remained a daring sport for courageous individuals rather than a daily commuting option for the general public.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Ý chính đoạn 3 giải thích việc tăng kích thước bánh trước giúp tăng tốc độ nhưng tạo ra nguy cơ ngã nguy hiểm.",
+        "why_others_wrong_vi": "B sai vì xe này không phù hợp đi lại hàng ngày; C sai vì bánh to mới tăng tốc; D không có thông tin chỉ trích kỹ sư.",
+        "depth_check_vi": "Phân tích mục đích tác giả trong việc trình bày ưu và nhược điểm của phát minh.",
+        "tip_vi": "Đọc câu kết luận của đoạn để nắm được quan điểm tổng thể."
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "FALSE",
+        "question_type": "literal",
+        "evidence_quote": "Lacking pedals, gears, and chains, the vehicle required riders to sit on a wooden frame and push off the ground using their feet.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Bài đọc khẳng định xe năm 1817 hoàn toàn không có xích (Lacking chains). Mệnh đề cho rằng có xích là sai.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Đơn giản đối chiếu thông tin phủ định trực tiếp.",
+        "tip_vi": "'Lacking' tương đương với 'did not have'."
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "TRUE",
+        "question_type": "paraphrase",
+        "evidence_quote": "Major improvements were introduced in the 1860s in France, where bicycle makers added rotary cranks and pedals onto the front wheel axle.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Thông tin hoàn toàn chính xác theo đoạn 2.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Xác nhận tính đúng đắn của sự thật lịch sử.",
+        "tip_vi": "Kiểm tra mốc thời gian (1860s) và địa điểm (France)."
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "FALSE",
+        "question_type": "paraphrase",
+        "evidence_quote": "Consequently, cycling during this era remained a daring sport for courageous individuals rather than a daily commuting option for the general public.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Đoạn 3 khẳng định việc đi xe penny-farthing không phải là lựa chọn đi lại hàng ngày cho công chúng mà là môn thể thao mạo hiểm.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Nhận biết ý nghĩa đối lập.",
+        "tip_vi": "Chú ý cụm 'rather than a daily commuting option'."
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "TRUE",
+        "question_type": "paraphrase",
+        "evidence_quote": "It allowed women and working-class citizens unprecedented mobility, transforming urban transport into a diverse collection [R] of sustainable personal vehicles that reshaped modern society.",
+        "evidence_paragraph": 4,
+        "explanation_vi": "Đoạn 4 nêu rõ chiếc xe đạp an toàn đã mang lại khả năng di chuyển chưa từng có cho phụ nữ.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Nhận biết từ đồng nghĩa 'expanded mobility options' = 'allowed unprecedented mobility'.",
+        "tip_vi": "Chú ý các danh từ chỉ nhóm xã hội như 'women'."
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "horses",
+        "question_type": "literal",
+        "evidence_quote": "This device, often called the draisienne or 'dandy horse', was designed as a practical response to a severe shortage of horses caused by crop failures after the Mount Tambora volcanic eruption.",
+        "evidence_paragraph": 1,
+        "explanation_vi": "Theo đoạn 1, nguyên nhân chế tạo xe là nhằm giải quyết nạn khan hiếm ngựa (shortage of horses).",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Điền danh từ chính xác từ bài đọc.",
+        "tip_vi": "Tìm cụm 'shortage of...' trong đoạn 1."
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "iron",
+        "question_type": "literal",
+        "evidence_quote": "Because the rigid iron tires and wooden wheels caused uncomfortable vibrations on cobblestone roads, the ride was notoriously rough.",
+        "evidence_paragraph": 2,
+        "explanation_vi": "Tính từ 'iron' miêu tả chất liệu lốp xe gây nảy xóc.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Điền đúng từ bổ nghĩa trước 'tires'.",
+        "tip_vi": "Tìm cụm 'rigid ... tires' trong đoạn 2."
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "penny-farthing",
+        "question_type": "literal",
+        "evidence_quote": "This gave birth to the iconic 'penny-farthing', featuring a massive front wheel up to 1.5 meters tall and a tiny rear wheel.",
+        "evidence_paragraph": 3,
+        "explanation_vi": "Tên biệt danh của loại xe bánh to bánh nhỏ là 'penny-farthing'.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Điền từ ghép chính xác.",
+        "tip_vi": "Chú ý dấu gạch nối giữa penny và farthing."
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "pneumatic",
+        "question_type": "paraphrase",
+        "evidence_quote": "and inflatable pneumatic rubber tires invented by John Boyd Dunlop, the new bicycle was comfortable, stable, and easy to ride.",
+        "evidence_paragraph": 4,
+        "explanation_vi": "Lốp xe do Dunlop phát minh là lốp bơm hơi 'pneumatic'.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Điền tính từ kỹ thuật chính xác. (*) Điểm nâng cao.",
+        "tip_vi": "Đứng trước 'tires' trong câu 4 có tính từ 'pneumatic'."
+      }
+    ],
+    "grammar_answers": [
+      {
+        "question_id": 1,
+        "correct_answer": "was designed",
+        "grammar_target": "Passive Voice",
+        "form_meaning_vi": "Cấu trúc bị động quá khứ đơn (was + V3) thể hiện chiếc xe Laufmaschine được thiết kế vào năm 1817.",
+        "use_in_context_vi": "Chủ ngữ là vật thể (Laufmaschine) và mốc thời gian 1817 trong quá khứ.",
+        "trap_logic_vi": "Bẫy ở đây là dạng chủ động 'designed' dễ khiến học sinh chọn nhầm nếu không chú ý đối tượng bị tác động.",
+        "why_others_wrong_vi": "A đúng. B sai vì chủ động. C sai vì thì tiếp diễn. D sai vì thì hiện tại.",
+        "depth_check_vi": "Kiểm tra bản chất bị động của hành động sáng chế trong lịch sử.",
+        "analysis_vi": "Chiếc xe là vật được tạo ra bởi Karl Drais nên phải dùng dạng bị động quá khứ đơn 'was designed'.",
+        "tip_vi": "Thấy mốc năm trong quá khứ và chủ ngữ chỉ vật, ưu tiên chọn bị động quá khứ đơn."
+      },
+      {
+        "question_id": 2,
+        "correct_answer": "were added",
+        "grammar_target": "Passive Voice",
+        "form_meaning_vi": "Cấu trúc bị động số nhiều quá khứ (were + V3) dành cho danh từ 'pedals'.",
+        "use_in_context_vi": "Các bàn đạp được người làm xe lắp thêm vào trục bánh trước.",
+        "trap_logic_vi": "Dạng chủ động 'added' dễ làm nhầm lẫn.",
+        "why_others_wrong_vi": "A đúng. B sai chủ động. C sai thì quá khứ hoàn thành chủ động. D sai hiện tại tiếp diễn.",
+        "depth_check_vi": "Phân biệt số ít/số nhiều trong thể bị động quá khứ.",
+        "analysis_vi": "Bàn đạp 'pedals' ở dạng số nhiều nên dùng 'were added'.",
+        "tip_vi": "Chú ý đuôi -s của danh từ đứng trước chỗ trống."
+      },
+      {
+        "question_id": 3,
+        "correct_answer": "threw",
+        "grammar_target": "Passive Voice",
+        "form_meaning_vi": "Cấu trúc chủ động quá khứ đơn (V2) vì 'A sudden stop' gây ra hành động quăng người lái.",
+        "use_in_context_vi": "Ngữ cảnh miêu tả nguyên nhân sự việc tác động lên người lái.",
+        "trap_logic_vi": "Bẫy học sinh chọn bị động một cách máy móc khi thấy chủ ngữ chỉ sự vật.",
+        "why_others_wrong_vi": "A đúng. B sai bị động. C sai bị động quá khứ hoàn thành. D sai hiện tại tiếp diễn.",
+        "depth_check_vi": "Đòi hỏi hiểu nghĩa câu để chọn thể chủ động hay bị động thích hợp.",
+        "analysis_vi": "Việc dừng xe đột ngột tự nó hất người lái đi, nên phải dùng động từ chủ động 'threw'.",
+        "tip_vi": "Xác định xem chủ ngữ có gây ra hành động cho tân ngữ đứng sau hay không."
+      },
+      {
+        "question_id": 4,
+        "correct_answer": "are displayed",
+        "grammar_target": "Passive Voice",
+        "form_meaning_vi": "Thể bị động hiện tại đơn (are + V3) miêu tả trạng thái hiện nay của các xe đạp cổ.",
+        "use_in_context_vi": "Từ 'Today' chỉ thực tế ở hiện tại.",
+        "trap_logic_vi": "Nhầm sang quá khứ 'were displayed' do nghĩ bài nói về lịch sử.",
+        "why_others_wrong_vi": "A đúng. B sai thì quá khứ. C sai chủ động. D sai hiện tại hoàn thành chủ động.",
+        "depth_check_vi": "Kết hợp dấu hiệu thời gian hiện tại với thể bị động.",
+        "analysis_vi": "'Today' đi với bị động hiện tại số nhiều 'are displayed'.",
+        "tip_vi": "Chú ý từ chỉ thời gian đứng đầu câu."
+      },
+      {
+        "question_id": 5,
+        "correct_answer": "is considered",
+        "grammar_target": "Passive Voice",
+        "form_meaning_vi": "Cấu trúc bị động tường thuật (is considered to be).",
+        "use_in_context_vi": "Đánh giá của xã hội hiện đại về chiếc xe đạp an toàn.",
+        "trap_logic_vi": "Các dạng chủ động 'considers' hay 'is considering' không thể đi với chủ ngữ chiếc xe.",
+        "why_others_wrong_vi": "A đúng. B, C, D đều sai thể chủ động.",
+        "depth_check_vi": "Ứng dụng bị động tường thuật trong văn viết mô tả phát minh.",
+        "analysis_vi": "Chiếc xe được coi là... dùng 'is considered'.",
+        "tip_vi": "Cụm 'is considered to be' rất phổ biến trong bài thi IELTS."
+      },
+      {
+        "question_id": 6,
+        "correct_answer": "were invented",
+        "grammar_target": "Passive Voice",
+        "form_meaning_vi": "Bị động quá khứ đơn số nhiều 'were invented'.",
+        "use_in_context_vi": "Lốp cao su bơm hơi được Dunlop phát minh năm 1888.",
+        "trap_logic_vi": "Quên không chia số nhiều cho 'tires'.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Viết đúng dạng bị động quá khứ số nhiều.",
+        "analysis_vi": "'tires' số nhiều đi với 'were invented'.",
+        "tip_vi": "Nhìn kỹ danh từ số nhiều đứng trước ô trống."
+      },
+      {
+        "question_id": 7,
+        "correct_answer": "were added",
+        "grammar_target": "Passive Voice",
+        "form_meaning_vi": "Chuyển từ câu chủ động 'added' sang bị động 'were added'.",
+        "use_in_context_vi": "Giữ nguyên ý nghĩa lịch sử của hành động lắp bàn đạp.",
+        "trap_logic_vi": "Thêm từ không cần thiết hoặc chia sai thì.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Bảo toàn ý nghĩa khi chuyển đổi câu.",
+        "analysis_vi": "'Pedals' làm chủ ngữ mới nên chia 'were added'.",
+        "tip_vi": "Xác định tân ngữ câu cũ để làm chủ ngữ câu mới."
+      },
+      {
+        "question_id": 8,
+        "correct_answer": "The volcanic eruption occurred in 1815 and caused a severe horse shortage.",
+        "grammar_target": "Passive Voice",
+        "form_meaning_vi": "Sửa nội động từ 'occur' từ dạng bị động sai sang chủ động 'occurred'.",
+        "use_in_context_vi": "Thảm họa núi lửa tự xảy ra.",
+        "trap_logic_vi": "Nhầm tưởng sự việc thiên nhiên có thể chia bị động.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Nhận diện lỗi dùng bị động cho nội động từ.",
+        "analysis_vi": "Bỏ 'was', giữ 'occurred'.",
+        "tip_vi": "'Occur', 'happen' tuyệt đối không chia bị động."
+      },
+      {
+        "question_id": 9,
+        "correct_answer": "In the 1870s, high-wheel bicycles were produced in large numbers across Britain.",
+        "grammar_target": "Passive Voice",
+        "form_meaning_vi": "Thêm trợ động từ 'were' để hoàn thiện dạng bị động quá khứ.",
+        "use_in_context_vi": "Xe đạp được sản xuất hàng loạt.",
+        "trap_logic_vi": "Bỏ sót trợ động từ Be trong câu bị động.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Sửa lỗi thiếu thành phần câu bị động.",
+        "analysis_vi": "Thêm 'were' trước 'produced'.",
+        "tip_vi": "Câu bị động luôn bắt buộc phải có Be + V3."
+      },
+      {
+        "question_id": 10,
+        "correct_answer": "are regarded",
+        "grammar_target": "Passive Voice",
+        "form_meaning_vi": "Bị động hiện tại đơn 'are regarded' trong câu báo cáo học thuật.",
+        "use_in_context_vi": "Đánh giá chung ngày nay về xe đạp.",
+        "trap_logic_vi": "Chia thì quá khứ do bài học có chủ đề lịch sử.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Vận dụng thể bị động báo cáo học thuật. (*)",
+        "analysis_vi": "'Bicycles' số nhiều đi với 'are regarded'.",
+        "tip_vi": "Từ 'today' nhắc bạn dùng thì hiện tại."
+      },
+      {
+        "question_id": 11,
+        "correct_answer": "had declined",
+        "grammar_target": "Past Simple vs Past Perfect",
+        "form_meaning_vi": "Thì Quá khứ hoàn thành (had + V3) đi kèm dấu hiệu 'By + mốc năm quá khứ'.",
+        "use_in_context_vi": "Cơn sốt dandy horse đã suy giảm xong trước năm 1820.",
+        "trap_logic_vi": "Chọn Quá khứ đơn 'declined' do thấy mốc năm.",
+        "why_others_wrong_vi": "A đúng. B sai thì. C sai hiện tại hoàn thành. D sai hiện tại đơn.",
+        "depth_check_vi": "Nhận biết quy tắc thì với giới từ 'By'.",
+        "analysis_vi": "'By 1820' bắt buộc đi với quá khứ hoàn thành 'had declined'.",
+        "tip_vi": "'By + năm quá khứ' = chọn Had + V3."
+      },
+      {
+        "question_id": 12,
+        "correct_answer": "were added",
+        "grammar_target": "Past Simple vs Past Perfect",
+        "form_meaning_vi": "Thì quá khứ đơn bị động trong mệnh đề sau 'Before'.",
+        "use_in_context_vi": "Sự việc lắp bàn đạp xảy ra sau hành động dùng chân đẩy (đã dùng had used).",
+        "trap_logic_vi": "Dùng dạng chủ động 'had added' là sai bị động.",
+        "why_others_wrong_vi": "A đúng. B sai chủ động quá khứ hoàn thành. C sai hiện tại. D sai chủ động hiện tại.",
+        "depth_check_vi": "Phân định thứ tự thời gian giữa hai mệnh đề.",
+        "analysis_vi": "Mệnh đề 'Before' chứa sự việc xảy ra sau nên dùng Quá khứ đơn bị động 'were added'.",
+        "tip_vi": "Trong câu có hai mệnh đề, mệnh đề 'had V3' xảy ra trước, mệnh đề còn lại xảy ra sau."
+      },
+      {
+        "question_id": 13,
+        "correct_answer": "had ridden",
+        "grammar_target": "Past Simple vs Past Perfect",
+        "form_meaning_vi": "Quá khứ hoàn thành chỉ khoảng thời gian kéo dài trước một mốc quá khứ khác.",
+        "use_in_context_vi": "Người đi xe đã cưỡi xe bánh cao trong 10 năm trước khi thiết kế an toàn ra đời năm 1885.",
+        "trap_logic_vi": "Dùng quá khứ đơn 'rode' bỏ qua tính tiếp diễn hoàn thành trước mốc 1885.",
+        "why_others_wrong_vi": "A đúng. B sai thiếu tính hoàn thành. C sai hiện tại hoàn thành. D sai hiện tại đơn.",
+        "depth_check_vi": "Hiểu cấu trúc khoảng thời gian (for a decade) trước mốc quá khứ.",
+        "analysis_vi": "Chỉ hành động xảy ra liên tục trước mốc 1885 dùng 'had ridden'.",
+        "tip_vi": "'for + khoảng thời gian + before + quá khứ đơn' = chọn Had + V3."
+      },
+      {
+        "question_id": 14,
+        "correct_answer": "invented",
+        "grammar_target": "Past Simple vs Past Perfect",
+        "form_meaning_vi": "Thì quá khứ đơn trong mệnh đề sau 'Until'.",
+        "use_in_context_vi": "Phát minh của Dunlop chấm dứt tình trạng đi xe nảy xóc trước đó.",
+        "trap_logic_vi": "Dùng quá khứ hoàn thành ngay sau 'Until'.",
+        "why_others_wrong_vi": "A đúng. B, C, D sai thì.",
+        "depth_check_vi": "Xác định mốc kết thúc của một trạng thái quá khứ.",
+        "analysis_vi": "Mệnh đề chính dùng 'had caused', mệnh đề 'Until' là mốc xảy ra sau nên dùng quá khứ đơn 'invented'.",
+        "tip_vi": "'Until + Quá khứ đơn, S + Had V3'."
+      },
+      {
+        "question_id": 15,
+        "correct_answer": "had adopted",
+        "grammar_target": "Past Simple vs Past Perfect",
+        "form_meaning_vi": "Chia quá khứ hoàn thành cho 'By the end of the nineteenth century'.",
+        "use_in_context_vi": "Việc tiếp nhận xe đạp hoàn thành trước cuối thế kỷ 19.",
+        "trap_logic_vi": "Chia quá khứ đơn máy móc.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Chia đúng thì với trạng ngữ chỉ mốc kết thúc.",
+        "analysis_vi": "Điền 'had adopted'.",
+        "tip_vi": "'By the end of...' đòi hỏi quá khứ hoàn thành."
+      },
+      {
+        "question_id": 16,
+        "correct_answer": "had enlarged",
+        "grammar_target": "Past Simple vs Past Perfect",
+        "form_meaning_vi": "Nối hai câu với 'After + S + had V3'.",
+        "use_in_context_vi": "Hành động phóng to bánh xe xảy ra trước việc đạt tốc độ cao.",
+        "trap_logic_vi": "Bỏ qua thì quá khứ hoàn thành ở mệnh đề After.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Nối câu bảo toàn trật tự thời gian.",
+        "analysis_vi": "Mệnh đề sau After chia 'had enlarged'.",
+        "tip_vi": "'After + Had V3, Quá khứ đơn'."
+      },
+      {
+        "question_id": 17,
+        "correct_answer": "By 1865, European urbanites had bought thousands of wooden velocipedes.",
+        "grammar_target": "Past Simple vs Past Perfect",
+        "form_meaning_vi": "Sửa lỗi thì quá khứ đơn thành quá khứ hoàn thành khi có 'By 1865'.",
+        "use_in_context_vi": "Hành động mua sắm hoàn thành trước 1865.",
+        "trap_logic_vi": "Dùng quá khứ đơn với 'By + năm'.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Sửa lỗi sai thì phổ biến trong IELTS.",
+        "analysis_vi": "Sửa 'bought' thành 'had bought'.",
+        "tip_vi": "Thay 'bought' bằng 'had bought'."
+      },
+      {
+        "question_id": 18,
+        "correct_answer": "Before Dunlop introduced pneumatic tires, riders had suffered from bumpy road vibrations.",
+        "grammar_target": "Past Simple vs Past Perfect",
+        "form_meaning_vi": "Sửa lỗi dùng hiện tại hoàn thành 'have suffered' trong bối cảnh quá khứ.",
+        "use_in_context_vi": "Sự việc đã kết thúc trong lịch sử.",
+        "trap_logic_vi": "Lẫn lộn giữa hiện tại hoàn thành và quá khứ hoàn thành.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Sửa lỗi chọn nhầm thì hoàn thành.",
+        "analysis_vi": "Sửa 'have suffered' thành 'had suffered'.",
+        "tip_vi": "Ngữ cảnh quá khứ tuyệt đối không dùng Present Perfect."
+      },
+      {
+        "question_id": 19,
+        "correct_answer": "had relied",
+        "grammar_target": "Past Simple vs Past Perfect",
+        "form_meaning_vi": "Dạng quá khứ hoàn thành chỉ trạng thái kéo dài trước khi bị thay thế.",
+        "use_in_context_vi": "Cụm 'By the time ... for many years' bắt buộc thì Quá khứ hoàn thành 'had relied'.",
+        "trap_logic_vi": "Chia quá khứ đơn do không thấy từ nối rõ ràng.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Ứng dụng thì hoàn thành cho sự việc kéo dài trước mốc quá khứ. (*)",
+        "analysis_vi": "Điền 'had relied'.",
+        "tip_vi": "'By the time ... for many years' đòi hỏi quá khứ hoàn thành."
+      },
+      {
+        "question_id": 20,
+        "correct_answer": "had not developed",
+        "grammar_target": "Past Simple vs Past Perfect",
+        "form_meaning_vi": "Dạng phủ định quá khứ hoàn thành 'had not developed'.",
+        "use_in_context_vi": "Cụm 'By 1890' chỉ sự phủ định trước mốc 1890.",
+        "trap_logic_vi": "Quên thêm 'not' hoặc chia nhầm thì quá khứ đơn.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Chia phủ định hoàn thành trong báo cáo lịch sử. (*)",
+        "analysis_vi": "Điền 'had not developed'.",
+        "tip_vi": "'By + năm' đi với quá khứ hoàn thành."
+      },
+      {
+        "question_id": 21,
+        "correct_answer": "who",
+        "grammar_target": "Relative Clauses",
+        "form_meaning_vi": "Đại từ quan hệ 'who' thay cho danh từ chỉ người Karl Drais trong mệnh đề không xác định.",
+        "use_in_context_vi": "Ngăn cách giữa hai dấu phẩy bổ nghĩa cho tên riêng.",
+        "trap_logic_vi": "Dùng 'that' sau dấu phẩy.",
+        "why_others_wrong_vi": "A đúng. B sai vật. C sai sở hữu. D sai vì đứng sau dấu phẩy.",
+        "depth_check_vi": "Hiểu quy tắc cấm dùng 'that' trong mệnh đề có dấu phẩy.",
+        "analysis_vi": "Tên riêng người có dấu phẩy đi với 'who'.",
+        "tip_vi": "Sau dấu phẩy chỉ người = chọn WHO."
+      },
+      {
+        "question_id": 22,
+        "correct_answer": "which",
+        "grammar_target": "Relative Clauses",
+        "form_meaning_vi": "Đại từ quan hệ 'which' chỉ vật trong mệnh đề không xác định.",
+        "use_in_context_vi": "Bổ nghĩa cho 'The velocipede'.",
+        "trap_logic_vi": "Chọn 'that' do tưởng mệnh đề nào cũng dùng được.",
+        "why_others_wrong_vi": "A đúng. B sai vì sau dấu phẩy. C sai địa điểm. D sai người.",
+        "depth_check_vi": "Áp dụng đúng đại từ chỉ vật giữa cặp dấu phẩy.",
+        "analysis_vi": "Vật đứng giữa dấu phẩy dùng 'which'.",
+        "tip_vi": "Sau dấu phẩy chỉ vật = chọn WHICH."
+      },
+      {
+        "question_id": 23,
+        "correct_answer": "whose",
+        "grammar_target": "Relative Clauses",
+        "form_meaning_vi": "Đại từ sở hữu 'whose' chỉ mối quan hệ phát minh của Dunlop.",
+        "use_in_context_vi": "Đứng trước danh từ 'invention'.",
+        "trap_logic_vi": "Nhầm lẫn giữa 'who's' (who is) và 'whose'.",
+        "why_others_wrong_vi": "A đúng. B sai chủ ngữ. C sai từ viết tắt. D sai chỉ vật.",
+        "depth_check_vi": "Phân biệt sở hữu tính từ quan hệ với đại từ chủ ngữ.",
+        "analysis_vi": "Đứng trước danh từ 'invention' dùng 'whose'.",
+        "tip_vi": "Thấy khoảng trống nằm giữa tên người và một danh từ = chọn WHOSE."
+      },
+      {
+        "question_id": 24,
+        "correct_answer": "where",
+        "grammar_target": "Relative Clauses",
+        "form_meaning_vi": "Trạng từ quan hệ 'where' chỉ nơi chốn.",
+        "use_in_context_vi": "Coventry là thành phố nơi việc sản xuất diễn ra.",
+        "trap_logic_vi": "Chọn 'which' mà không có giới từ đi kèm.",
+        "why_others_wrong_vi": "A đúng. B sai thiếu in. C sai thiếu in. D sai sở hữu.",
+        "depth_check_vi": "Xác định trạng từ quan hệ địa điểm.",
+        "analysis_vi": "Thay thế cho 'in the city' dùng 'where'.",
+        "tip_vi": "Danh từ chỉ nơi chốn + vế câu có chủ ngữ động từ hoàn chỉnh = chọn WHERE."
+      },
+      {
+        "question_id": 25,
+        "correct_answer": "that",
+        "grammar_target": "Relative Clauses",
+        "form_meaning_vi": "Đại từ quan hệ 'that' thay cho vật trong mệnh đề xác định.",
+        "use_in_context_vi": "Bổ nghĩa cho 'early transport models' (không có dấu phẩy).",
+        "trap_logic_vi": "Chọn 'where' do nghĩ museum là địa điểm.",
+        "why_others_wrong_vi": "A đúng. B sai địa điểm. C sai chỉ người. D sai sở hữu.",
+        "depth_check_vi": "Phân biệt đại từ chỉ vật trong mệnh đề xác định.",
+        "analysis_vi": "Mệnh đề không dấu phẩy chỉ vật dùng 'that'.",
+        "tip_vi": "Không có dấu phẩy + danh từ chỉ vật = dùng THAT hoặc WHICH."
+      },
+      {
+        "question_id": 26,
+        "correct_answer": "who was a German inventor",
+        "grammar_target": "Relative Clauses",
+        "form_meaning_vi": "Viết mệnh đề quan hệ không xác định chèn vào giữa câu.",
+        "use_in_context_vi": "Bổ sung thông tin về Karl Drais.",
+        "trap_logic_vi": "Viết thừa đại từ 'he' thành 'who he was'.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Nối câu không làm lặp đại từ.",
+        "analysis_vi": "Điền 'who was a German inventor'.",
+        "tip_vi": "Bỏ 'He' thay bằng 'who'."
+      },
+      {
+        "question_id": 27,
+        "correct_answer": "which had a 1.5-meter front wheel",
+        "grammar_target": "Relative Clauses",
+        "form_meaning_vi": "Viết mệnh đề quan hệ chỉ vật 'which had...'.",
+        "use_in_context_vi": "Bổ nghĩa cho xe penny-farthing.",
+        "trap_logic_vi": "Viết lặp từ 'it'.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Nối câu chính xác.",
+        "analysis_vi": "Điền 'which had a 1.5-meter front wheel'.",
+        "tip_vi": "Bỏ 'It' thay bằng 'which'."
+      },
+      {
+        "question_id": 28,
+        "correct_answer": "John Kemp Starley, who designed the Safety Bicycle, changed modern transport forever.",
+        "grammar_target": "Relative Clauses",
+        "form_meaning_vi": "Sửa 'that' thành 'who' sau dấu phẩy chỉ người.",
+        "use_in_context_vi": "Ngôn ngữ trang trọng không dùng 'that' sau phẩy.",
+        "trap_logic_vi": "Lỗi dùng 'that' trong mệnh đề không xác định.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Sửa lỗi vi phạm quy tắc dùng 'that'.",
+        "analysis_vi": "Thay 'that' bằng 'who'.",
+        "tip_vi": "Sau dấu phẩy chỉ người bắt buộc dùng WHO."
+      },
+      {
+        "question_id": 29,
+        "correct_answer": "The boneshaker was an early velocipede which had rigid iron tires.",
+        "grammar_target": "Relative Clauses",
+        "form_meaning_vi": "Bỏ đại từ thừa 'it' trong mệnh đề quan hệ.",
+        "use_in_context_vi": "'Which' đã làm chủ ngữ nên không cần 'it'.",
+        "trap_logic_vi": "Lặp đại từ chủ ngữ.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Sửa lỗi lặp đại từ cực kỳ phổ biến.",
+        "analysis_vi": "Bỏ 'it'.",
+        "tip_vi": "Trong mệnh đề quan hệ, 'which' đã thay cho danh từ rồi nên xóa 'it'."
+      },
+      {
+        "question_id": 30,
+        "correct_answer": "that",
+        "grammar_target": "Relative Clauses",
+        "form_meaning_vi": "Đại từ quan hệ 'that' nối mệnh đề xác định trong câu nghị luận (hoặc 'which' cũng chấp nhận được).",
+        "use_in_context_vi": "Nối bổ nghĩa cho 'Cities'.",
+        "trap_logic_vi": "Dùng 'where' nhầm lẫn địa điểm.",
+        "why_others_wrong_vi": "N/A",
+        "depth_check_vi": "Vận dụng mệnh đề quan hệ trong bài viết IELTS Task 2. (*)",
+        "analysis_vi": "Điền 'that' theo yêu cầu đề bài.",
+        "tip_vi": "'Cities' làm chủ thể thực hiện hành động 'invest' nên dùng THAT/WHICH."
+      }
+    ],
+    "writing_guidance": [
+      {
+        "task_id": 1,
+        "model_answer": "The running machine was invented by Karl Drais in 1817.",
+        "guidance_vi": "Bắt đầu với chủ ngữ 'The running machine', tiếp theo là cụm động từ bị động 'was invented', sau đó là tác giả 'by Karl Drais' và mốc thời gian 'in 1817'.",
+        "self_checklist": [
+          "Đã đặt 'The running machine' làm chủ ngữ?",
+          "Đã dùng đúng dạng bị động 'was invented'?",
+          "Đã kết thúc câu bằng dấu chấm?"
+        ]
+      },
+      {
+        "task_id": 2,
+        "model_answer": "Riders had to push off the ground with their feet because early running machines lacked pedals.",
+        "guidance_vi": "Đặt mệnh đề kết quả (Riders had to...) lên trước, dùng từ nối 'because' và nối với mệnh đề nguyên nhân (early running machines lacked pedals).",
+        "self_checklist": [
+          "Đã giữ đúng quan hệ nguyên nhân - kết quả?",
+          "Đã bỏ bớt dấu chấm giữa hai câu ban đầu?"
+        ]
+      },
+      {
+        "task_id": 3,
+        "model_answer": "Hi Alex, why don't we ride our bicycles to school tomorrow instead of taking the bus to avoid traffic? It is a practical solution to avoid heavy morning traffic near the campus. Plus, cycling gives us extra daily exercise!",
+        "guidance_vi": "Viết tin nhắn/email ngắn gồm 3 câu: (1) Đưa ra lời mời đi xe đạp, (2) Giải thích lý do tránh tắc đường, (3) Nêu thêm lợi ích sức khỏe.",
+        "self_checklist": [
+          "Đã viết đủ đúng 3 câu?",
+          "Đã đưa ra lý do tránh tắc đường (avoid heavy traffic)?",
+          "Giọng văn thân mật phù hợp gửi bạn học?"
+        ]
+      },
+      {
+        "task_id": 4,
+        "model_answer": "In 1820, horses represented the faster mode of travel with an average speed of 15 km/h. In contrast, early bicycles achieved a lower speed of approximately 10 km/h. Overall, there was a slight difference of 5 km/h between animal power and early mechanical transport.",
+        "guidance_vi": "Mô tả biểu đồ SVG gồm 3 câu: (1) Nêu số liệu tốc độ của ngựa (15 km/h), (2) So sánh tương phản với xe đạp đời đầu (10 km/h), (3) Tóm tắt mức chênh lệch 5 km/h.",
+        "self_checklist": [
+          "Đã đưa đúng số liệu 15 km/h và 10 km/h vào bài?",
+          "Đã dùng từ nối so sánh tương phản (In contrast)?",
+          "Viết đúng 3 câu?"
+        ]
+      },
+      {
+        "task_id": 5,
+        "model_answer": "In my opinion, local governments should build dedicated bicycle paths to enhance urban mobility. First of all, protected lanes make cycling significantly safer for daily commuters. Furthermore, encouraging more citizens to ride bicycles reduces traffic congestion and air pollution in city centers. As a result, public health and environmental quality will improve noticeably. Therefore, investing in cycling infrastructure is a practical solution for modern urban planning.",
+        "guidance_vi": "Viết đoạn văn 5 câu theo cấu trúc hướng dẫn: (1) Câu chủ đề nêu quan điểm ủng hộ xây đường xe đạp, (2) Lý do 1 về an toàn, (3) Lý do 2 về giảm ùn tắc và ô nhiễm, (4) Kết quả về sức khỏe cộng đồng, (5) Câu kết khẳng định giải pháp thực tế.",
+        "self_checklist": [
+          "Đã có câu chủ đề nêu quan điểm rõ ràng?",
+          "Đã cung cấp 2 lý do hỗ trợ?",
+          "Đã dùng từ nối lập luận (First of all, Furthermore, As a result, Therefore)?",
+          "Viết đúng 5-6 câu?"
+        ]
+      }
+    ],
+    "review_bridge": [
+      {
+        "id": 1,
+        "prompt": "Dịch câu sau sang tiếng Anh: Các bảo tàng lịch sử bảo tồn nhiều cổ vật [R] có giá trị.",
+        "correct_answer": "Historical museums preserve many valuable artifacts.",
+        "rationale_vi": "Sử dụng từ vựng ôn tập 'artifact' ở dạng số nhiều 'artifacts' đóng vai trò tân ngữ."
+      },
+      {
+        "id": 2,
+        "prompt": "Dịch câu sau sang tiếng Anh: Bộ sưu tập [R] xe đạp cổ này thật ấn tượng.",
+        "correct_answer": "This collection of antique bicycles is impressive.",
+        "rationale_vi": "Sử dụng từ vựng ôn tập 'collection' làm chủ ngữ số ít đi với động từ 'is'."
+      },
+      {
+        "id": 3,
+        "prompt": "Dịch câu sau sang tiếng Anh: Vật trưng bày [R] mới thu hút nhiều khách tham quan.",
+        "correct_answer": "The new exhibit attracts many visitors.",
+        "rationale_vi": "Sử dụng từ vựng ôn tập 'exhibit' ở dạng số ít chia động từ 'attracts'."
+      }
+    ]
+  }
+}

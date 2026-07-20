@@ -1,0 +1,20 @@
+appointment (/əˈpɔɪnt.mənt/) [noun]	A formal arrangement to meet or visit someone at a particular time - cuộc hẹn (bác sĩ, phòng khám). Ví dụ: I have an appointment with Dr. Smith at 10:00 AM.
+receptionist (/rɪˈsep.ʃən.ɪst/) [noun]	A person whose job is to deal with people arriving at a clinic or office - nhân viên lễ tân. Ví dụ: The receptionist helped me complete the registration form.
+symptom (/ˈsɪmp.təm/) [noun]	A physical or mental feature indicating an illness or disease - triệu chứng bệnh. Ví dụ: Fever and cough are common symptoms of a cold.
+consultation (/ˌkɒn.səlˈteɪ.ʃən/) [noun]	A meeting with a doctor to seek advice or treatment - buổi khám / tư vấn y tế. Ví dụ: The doctor spent fifteen minutes during the consultation.
+prescription (/prɪˈskrɪp.ʃən/) [noun]	An official paper from a doctor authorizing medicine - đơn thuốc. Ví dụ: You can pick up your prescription at the pharmacy.
+clinic (/ˈklɪn.ɪk/) [noun]	A building where people receive medical advice or treatment - phòng khám. Ví dụ: The community clinic is open five days a week.
+healthcare professional (/ˈhelθ.keər prəˈfeʃ.ən.əl/) [noun]	A qualified person who provides health services like doctors or nurses - chuyên gia / y bác sĩ. Ví dụ: Always follow the advice of a trained healthcare professional.
+medical history (/ˈmed.ɪ.kəl ˈhɪs.tər.i/) [noun]	A record of a patient's past health conditions and treatments - tiền sử bệnh lý. Ví dụ: The nurse asked for my complete medical history.
+health checkup (/ˈhelθ tʃek.ʌp/) [noun]	A thorough general medical examination - buổi kiểm tra sức khỏe định kỳ. Ví dụ: I schedule an annual health checkup every January.
+treatment plan (/ˈtriːt.mənt plæn/) [noun]	A detailed outline of medical care decided by a doctor - phác đồ / kế hoạch điều trị. Ví dụ: The doctor carefully explained my new treatment plan.
+urgent care (/ˈɜː.dʒənt keər/) [noun]	Immediate medical care for non-life-threatening illnesses - chăm sóc y tế khẩn cấp. Ví dụ: Go to urgent care if you need a doctor on the weekend.
+follow-up visit (/ˈfɒl.əʊ.ʌp ˈvɪz.ɪt/) [noun]	A return visit to check progress after medical treatment - tái khám. Ví dụ: I need to return for a follow-up visit next month.
+patient (/ˈpeɪ.ʃənt/) [noun]	A person receiving medical care or treatment - bệnh nhân. Ví dụ: The doctor listened patiently to the young patient.
+surgery (/ˈsɜː.dʒər.i/) [noun]	A place where a GP doctor sees patients in the UK - phòng khám bác sĩ gia đình (UK). Ví dụ: You can register at your local GP surgery.
+registration form (/ˌredʒ.ɪˈstreɪ.ʃən fɔːm/) [noun]	An official document filled in to join a clinic - mẫu đơn đăng ký. Ví dụ: Please sign the registration form at the front desk.
+blood test (/ˈblʌd test/) [noun]	A scientific examination of a sample of blood - xét nghiệm máu. Ví dụ: The doctor ordered a routine blood test.
+examine (/ɪɡˈzæm.ɪn/) [verb]	To inspect a patient carefully to check health - thăm khám, kiểm tra. Ví dụ: Dr. Miller will examine your throat now.
+advise (/ədˈvaɪz/) [verb]	To offer medical suggestions or recommendations - khuyên, hướng dẫn. Ví dụ: The doctor advised me to drink plenty of water.
+pharmacist (/ˈfɑː.mə.sɪst/) [noun]	A professional qualified to prepare and sell drugs - dược sĩ. Ví dụ: Ask the pharmacist about dosage instructions.
+make an appointment (/meɪk ən əˈpɔɪnt.mənt/) [verb]	To schedule a visit with a doctor - đặt lịch hẹn khám. Ví dụ: Call the clinic to make an appointment.

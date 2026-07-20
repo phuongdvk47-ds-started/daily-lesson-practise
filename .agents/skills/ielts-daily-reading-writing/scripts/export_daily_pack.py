@@ -33,15 +33,17 @@ def build_names(level: str, topic: str, day: str) -> dict[str, str]:
     }
 
 def format_markdown_inline(text: str) -> str:
-    # First, protect underscores by converting them to blanks
-    text = re.sub(r'_{3,}', '<span class="fill-blank">&nbsp;</span>', text)
+    # Protect fill-blanks first by substituting a temporary token
+    text = re.sub(r'_{3,}', '___FILL_BLANK_TOKEN___', text)
     # Bold: **text** -> <b>text</b>
     text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
     # Italic: *text* or _text_ -> <i>text</i>
     text = re.sub(r'\*(.*?)\*', r'<i>\1</i>', text)
-    text = re.sub(r'_([^_]+?)_', r'<i>\1</i>', text)
+    text = re.sub(r'(?<!\w)_([^_]+?)_(?!\w)', r'<i>\1</i>', text)
     # Inline code: `code` -> <code>code</code>
     text = re.sub(r'`(.*?)`', r'<code>\1</code>', text)
+    # Replace token with fill-blank span containing alternating non-breaking spaces and regular spaces
+    text = text.replace('___FILL_BLANK_TOKEN___', '<span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>')
     return text
 
 def parse_markdown_table_to_html(md_table_text: str) -> str:
@@ -467,7 +469,6 @@ def generate_reading_questions_html(sections: dict[str, str]) -> str:
         for q in qs:
             num = q["num"]
             q_text = format_markdown_inline(q["text"])
-            q_text = re.sub(r'_{3,}', '<span class="fill-blank">&nbsp;</span>', q_text)
             
             stretch_marker = " (*)" if q.get("is_stretch") else ""
             
@@ -564,7 +565,6 @@ def generate_grammar_questions_html(sections: dict[str, str], offset: int = 13) 
         for q in qs:
             num = int(q["num"]) + offset
             q_text = format_markdown_inline(q["text"])
-            q_text = re.sub(r'_{3,}', '<span class="fill-blank">&nbsp;</span>', q_text)
             
             stretch_marker = " (*)" if q.get("is_stretch") else ""
             
@@ -701,11 +701,13 @@ def generate_writing_task_block(task_text: str, target_length: str) -> str:
                     sl_str = sl.strip()
                     if not sl_str:
                         continue
-                    if re.match(r'^\s*([a-z]\)|\d+\.|\-|\*)', sl_str):
+                    if re.match(r'^\s*([a-z]\)|\d+\.)', sl_str):
                         formatted_lines.append(f'<div class="writing-prompt-sub-item">{format_prompt_line(sl_str)}</div>')
                         sub_lines_count = get_required_lines_count(sl_str)
                         for _ in range(sub_lines_count):
                             formatted_lines.append('<div class="writing-line"></div>')
+                    elif re.match(r'^\s*(\-|\*)', sl_str):
+                        formatted_lines.append(f'<div class="writing-prompt-sub-item" style="margin-left: 15px;">{format_prompt_line(sl_str)}</div>')
                     else:
                         formatted_lines.append(f'<div class="writing-prompt-text">{format_prompt_line(sl_str)}</div>')
             else:
@@ -1041,6 +1043,7 @@ def build_practice_html(practice_md: str, level: str, topic: str, day: str, voca
             width: 100px;
             border-bottom: 1px solid #000;
             text-align: center;
+            white-space: pre;
         }}
         .grammar-item {{
             margin-bottom: 8px;
@@ -1310,7 +1313,21 @@ def clean_grammar_subheading(line: str) -> str:
         return bold_match.group(2).strip()
     return line_str
 
-def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic: str) -> str:
+def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic: str, skill_level: dict = None) -> str:
+    level_header_html = ""
+    if skill_level:
+        reading_level    = skill_level.get("reading_level",    "")
+        grammar_level    = skill_level.get("grammar_level",    "")
+        writing_level    = skill_level.get("writing_level",    "")
+        vocabulary_level = skill_level.get("vocabulary_level", "")
+        parts = []
+        if reading_level:    parts.append(f"Reading {reading_level}")
+        if grammar_level:    parts.append(f"Grammar {grammar_level}")
+        if writing_level:    parts.append(f"Writing {writing_level}")
+        if vocabulary_level: parts.append(f"Vocab {vocabulary_level}")
+        if parts:
+            level_header_html = f'\n        <h2>(Level: {" | ".join(parts)})</h2>'
+
     # Parse from the full 5-column table in vocab_grammar_md; quizlet_md is 2-column only
     vocab_items = parse_vocab_from_markdown(vocab_grammar_md)
     if not vocab_items:
@@ -1370,11 +1387,11 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
     <table>
         <thead>
             <tr>
-                <th style="width: 18%;">Từ / Cụm từ</th>
-                <th style="width: 14%;">Phiên âm</th>
+                <th style="width: 17%;">Từ / Cụm từ</th>
+                <th style="width: 17%;">Phiên âm</th>
                 <th style="width: 10%;">Loại từ</th>
                 <th style="width: 28%;">Định nghĩa & Nghĩa tiếng Việt</th>
-                <th style="width: 30%;">Ví dụ minh họa</th>
+                <th style="width: 28%;">Ví dụ minh họa</th>
             </tr>
         </thead>
         <tbody>
@@ -1629,11 +1646,11 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
         tr:nth-child(even) {{
             background-color: #fafdff;
         }}
-        .col-word {{ width: 18%; font-weight: bold; color: #27ae60; }}
-        .col-phon {{ width: 14%; font-style: italic; color: #7f8c8d; }}
+        .col-word {{ width: 17%; font-weight: bold; color: #27ae60; }}
+        .col-phon {{ width: 17%; font-style: italic; color: #7f8c8d; font-size: 8.5pt; white-space: nowrap; }}
         .col-pos {{ width: 10%; font-weight: 500; }}
         .col-def {{ width: 28%; }}
-        .col-ex {{ width: 30%; font-style: italic; }}
+        .col-ex {{ width: 28%; font-style: italic; }}
         
         .grammar-box {{
             background-color: #f8f9fa;
@@ -1676,7 +1693,7 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
 <body>
 
     <div class="header">
-        <h1>VOCABULARY & GRAMMAR KNOWLEDGE - DAY {day_only}: {topic_upper}</h1>
+        <h1>VOCABULARY & GRAMMAR KNOWLEDGE - DAY {day_only}: {topic_upper}</h1>{level_header_html}
     </div>
 
     <!-- VOCABULARY SECTION -->
@@ -1749,7 +1766,7 @@ def parse_explanation_items(md_text: str, is_grammar: bool = False, offset: int 
                 is_bullet_stretch = "(*)" in sub_line or "stretch" in sub_line.lower()
                 
                 # Clean prefix like *Giải thích (*) (Stretch)*: or *Dữ kiện trong bài*:
-                prefix_match = re.match(r'^\*?(Giải thích|Dữ kiện trong bài).*?\*?:\s*(.*)', sub_line, re.I)
+                prefix_match = re.match(r'^\*?(Giải thích|Dữ kiện trong bài|Also acceptable|Cũng chấp nhận|Bước\s+\d+(?:\s*\([^)]*\))?).*?\*?:\s*(.*)', sub_line, re.I)
                 if prefix_match:
                     label = prefix_match.group(1).strip()
                     rest_content = prefix_match.group(2).strip()
@@ -2485,24 +2502,43 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
             
     grammar = data.get("grammar", {})
     gqs = grammar.get("questions", [])
+    g_sections = grammar.get("sections", [])
     if gqs:
         pm.append("## Questions for Grammar")
-        by_type = {}
-        for q in gqs:
-            q_type = q.get("type", "Grammar Exercise")
-            by_type.setdefault(q_type, []).append(q)
-            
-        for q_type, q_list in by_type.items():
-            pm.append(f"### {q_type}")
-            pm.append("")
-            for q in q_list:
-                stretch_mark = " (*)" if q.get("stretch") else ""
-                options_str = ""
-                if q.get("options"):
-                    letters = ["A", "B", "C", "D", "E", "F"]
-                    options_str = "\n" + "\n".join([f"    {letters[opt_idx]}. {opt}" for opt_idx, opt in enumerate(q["options"])])
-                pm.append(f"{q['id']}. {q['question']}{stretch_mark}{options_str}")
-            pm.append("")
+        if g_sections:
+            for sec in g_sections:
+                sec_title = sec.get("section_title", "Grammar Section")
+                q_start = sec.get("internal_question_start", 1)
+                q_end = sec.get("internal_question_end", len(gqs))
+                sec_qs = [q for q in gqs if q_start <= q.get("id", 0) <= q_end]
+                if sec_qs:
+                    pm.append(f"### {sec_title}")
+                    pm.append("")
+                    for q in sec_qs:
+                        stretch_mark = " (*)" if q.get("stretch") else ""
+                        options_str = ""
+                        if q.get("options"):
+                            letters = ["A", "B", "C", "D", "E", "F"]
+                            options_str = "\n" + "\n".join([f"    {letters[opt_idx]}. {opt}" for opt_idx, opt in enumerate(q["options"])])
+                        pm.append(f"{q['id']}. {q['question']}{stretch_mark}{options_str}")
+                    pm.append("")
+        else:
+            by_type = {}
+            for q in gqs:
+                q_type = q.get("type", "Grammar Exercise")
+                by_type.setdefault(q_type, []).append(q)
+                
+            for q_type, q_list in by_type.items():
+                pm.append(f"### {q_type}")
+                pm.append("")
+                for q in q_list:
+                    stretch_mark = " (*)" if q.get("stretch") else ""
+                    options_str = ""
+                    if q.get("options"):
+                        letters = ["A", "B", "C", "D", "E", "F"]
+                        options_str = "\n" + "\n".join([f"    {letters[opt_idx]}. {opt}" for opt_idx, opt in enumerate(q["options"])])
+                    pm.append(f"{q['id']}. {q['question']}{stretch_mark}{options_str}")
+                pm.append("")
             
     writing = data.get("writing", {})
     tasks = writing.get("tasks", [])
@@ -2598,7 +2634,18 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
             stretch_mark = " *[Stretch Point]*" if ra.get("stretch_note") else ""
             am.append(f"{q_id}. **{ra.get('correct_answer', '')}**{stretch_mark}")
             am.append(f"- Bằng chứng: \"{ra.get('evidence_quote', '')}\" (§{ra.get('evidence_paragraph', 1)})")
-            am.append(f"- Cách tìm đáp án: {ra.get('explanation_vi', '')} {ra.get('why_others_wrong_vi', '')}")
+            exp_text = ra.get('explanation_vi', '')
+            why_text = ra.get('why_others_wrong_vi', '')
+            if why_text:
+                exp_text = f"{exp_text} {why_text}".strip()
+            exp_lines = [l.strip() for l in exp_text.splitlines() if l.strip()]
+            if exp_lines:
+                am.append(f"- Cách tìm đáp án: {exp_lines[0]}")
+                for eline in exp_lines[1:]:
+                    if not eline.startswith("-") and not eline.startswith("*"):
+                        am.append(f"- {eline}")
+                    else:
+                        am.append(eline)
             if ra.get("tip_vi"):
                 am.append(f"> **💡 Mẹo:** {ra['tip_vi']}")
             am.append("")
@@ -2610,9 +2657,15 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
         am.append("> **Bảng phân biệt nhanh / Công thức bỏ túi:**")
         am.append("> - Ôn tập lý thuyết đã học trong bài.")
         am.append("")
+        g_questions = data.get("grammar", {}).get("questions", [])
         for idx, ga in enumerate(g_ans):
             q_id = ga.get("question_id", idx + 1)
             am.append(f"{q_id}. **{ga.get('correct_answer', '')}**")
+            g_q = g_questions[idx] if idx < len(g_questions) else {}
+            alts = ga.get("alternative_answers_allowed") or g_q.get("alternative_answers_allowed") or g_q.get("one_answer_check", {}).get("alternative_answers_allowed") or []
+            if alts:
+                alts_str = " / ".join([f'"{alt}"' for alt in alts])
+                am.append(f"- Also acceptable: {alts_str}")
             am.append(f"- Dấu hiệu / Phân tích: {ga.get('analysis_vi', '')}")
             if ga.get("tip_vi"):
                 am.append(f"> **💡 Mẹo:** {ga['tip_vi']}")

@@ -34,6 +34,8 @@ Regenerate Grammar if:
 - A Correct-the-error item has no real error, has more than one target error when the prompt says singular, or has a correction identical to the original.
 - A transformation changes the meaning of the source sentence.
 - Multiple reasonable answers exist but the answer key accepts only one.
+- A sentence combining question allows reversing clause order without prompt constraints or answer key acceptance of both.
+- A defining relative clause question fails to accept `that` as a valid alternative to `which` or `who` when unconstrained by the prompt.
 
 ## Answer Key Regeneration Gates
 

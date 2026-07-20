@@ -39,6 +39,11 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
    - Verify that grammar questions are numbered starting from 1 continuously in the raw JSON payload.
    - **CRITICAL**: Fail if any grammar headings in the JSON contain hardcoded display ranges (like `Questions 27-36`).
    - Check grammar transformation/combine questions: Raise a high challenge (`meaning_changed`) if the expected answer changes the meaning, if a passive voice transformation is forced onto an intransitive verb (like "stop" without a transitive subject/object), or if multiple valid answers exist without constraints.
+   - **Sentence Combining Uniqueness**: Raise a critical challenge (`multiple_valid_answers`) if a sentence combining task allows converting either clause into a relative clause without prompt constraints or without accepting both forms in the answer key.
+   - **Defining Relative Pronoun Equivalence**: Raise a critical challenge (`multiple_valid_answers`) if a defining relative clause question only accepts `which` or `who` in the answer key without accepting `that`, unless the prompt explicitly restricted the pronoun.
+   - **Past Perfect Gap-Fill Anchoring (RQA-19)**: Raise a critical challenge (`multiple_valid_answers`) if a gap-fill item testing Past Perfect vs Past Simple lacks explicit duration/completion anchors, allowing Past Simple as an equally valid natural answer without documenting both forms in `accepted_answers`.
+   - **Open-Ended Relative Clause Pronoun (RQA-20)**: Raise a critical challenge (`multiple_valid_answers`) if an open-ended gap-fill testing defining relative clauses for non-human antecedents omits pronoun prompt restrictions while accepting only a single pronoun (`that` or `which`).
+   - **Reading & Grammar Text Collision (RQA-21)**: Raise a high challenge (`text_collision`) if a Grammar question stem reuses exact multi-word phrasing from the Reading passage, causing automated PDF validation collisions.
    - Check that the bẫy lỗi (IELTS traps) table does not contain vocabulary definitions or IPA.
 5.1. **Deep Grammar & Anti-Repetition QC**:
    - **CRITICAL REQUIREMENT**: You MUST evaluate the Grammar section against the detailed rubric in `references/deep-grammar-rules.md`, the generation table in `references/deep-grammar-generation-rules.md`, the blueprint contract in `references/deep-question-blueprint.md`, and the fail gates in `references/regeneration-quality-gates.md`.
@@ -56,6 +61,7 @@ Conduct cross-validation and quality checks on the assembled daily lesson data p
     - Check that visual data content (SVG or markdown table) is present for data description tasks.
     - **CRITICAL**: Verify that Writing Task 1 (e.g. Word Ordering / Sentence Building) has its `useful_language` field set to an empty array (`[]`) to ensure appropriate level difficulty.
     - **CRITICAL**: Verify that if a writing task contains a visual table, it is correctly classified: gap-fill tables must contain placeholder cells (like `.......`), and read-only data tables must have no placeholders so that the compiler can render student response lines below them.
+    - **A1-B1 Writing Task Scaffolding (RQA-22)**: Verify that for A1, A2, A2+, and B1 level opinion or descriptive paragraph tasks (e.g. Task 5), the prompt includes a 5-step numbered structure (1-5) and explicit useful sentence starters. Raise a high challenge (`missing_scaffolding`) if omitted.
 7. **Workload and Time QC**:
    - Estimate the completion time of the workload using this formula:
      * Reading Passage Reading time: 8 minutes.
@@ -211,9 +217,9 @@ Use:
 }
 ```
 
-## Regression Cases
-> Full patterns with examples: `references/grammar-agent.md §Correct-the-Error Logic Rules`
-
 QC must fail:
 - **Pattern 5**: Original sentence has no error but answer key claims an error exists
 - **Pattern 6**: Correct answer is identical to the original sentence
+- **Pattern 7 (RQA-16)**: Modal choice prompt lacks context anchors forcing a single modal nuance and options contain multiple plausible modals
+- **Pattern 8 (RQA-17)**: Defining relative clause item answer key rejects `that` alongside `which`/`who` without prompt restriction
+- **Pattern 9 (RQA-18)**: Bulleted writing prompt hints (`-`, `*`) are rendered with answer lines between hint items

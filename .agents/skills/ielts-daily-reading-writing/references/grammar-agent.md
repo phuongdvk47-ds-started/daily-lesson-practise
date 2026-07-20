@@ -56,6 +56,23 @@ Generate grammar guides, IELTS common traps, and targeted grammar practice exerc
    - Do not rely on repeated formula drills such as `since` -> Present Perfect, `yesterday` -> Past Simple, `look forward to` -> V-ing, `manage` -> to V, or `avoid` -> V-ing unless the item also requires context, meaning, register, or writing purpose.
    - Reject more than 5 consecutive questions with the same grammar target and same clue type.
 12. **Stretch Items**: Mark 10-20% of questions as stretch questions targeting the next level with a `(*)` label, and set `"stretch": true` in JSON.
+13. **Sentence Combining Clause Direction Rule**:
+   - When combining two sentences into a relative clause sentence where both sentences could logically become the relative clause, the prompt MUST explicitly constrain which sentence is converted into the relative clause (e.g. `"Make Sentence 1 the relative clause:"` or `"Convert Sentence 2 into the relative clause:"`).
+   - If unconstrained, both combinations are valid, violating the single unique answer rule unless the answer key explicitly accepts both.
+14. **Defining Relative Pronoun Equivalence Rule (`which` / `that`, `who` / `that`)**:
+   - In defining relative clauses, both `which` and `that` (for things) and `who` and `that` (for people) are grammatically valid.
+   - If the prompt does not restrict the relative pronoun (e.g. `"Use which"`), the answer key (`explanation_vi` and `one_answer_check`) MUST explicitly note that both `which` and `that` (or `who` and `that`) are acceptable correct answers.
+15. **Modal Choice Context Anchoring Rule (RQA-16)**:
+   - When testing modal verbs (`can`, `should`, `must`, `could`, `may`, `might`), the prompt sentence MUST contain an explicit context anchor (e.g. `"have the option to"`, `"according to mandatory rules"`, `"is an available option"`) to rule out alternative modal interpretations, OR the distractors MUST be ungrammatical/impossible in that context.
+   - If a sentence can naturally accept multiple modals, all valid alternatives MUST be explicitly included in `accepted_answers` and `alternative_answers_allowed`.
+16. **Past Perfect Gap-Fill Tense Anchoring Rule (RQA-19)**:
+   - Every gap-fill item testing Past Perfect vs. Past Simple MUST include explicit time constraints, completion anchors, or duration markers (e.g. `By the time ... for many years`, `By + past year`, `for a decade before ...`) to rule out Past Simple.
+   - If a prompt sentence allows both Past Simple and Past Perfect naturally without context, the prompt MUST be constrained or both answers MUST be listed in `accepted_answers` and `alternative_answers_allowed`.
+17. **Defining Relative Clause Open-Ended Pronoun Constraint Rule (RQA-20)**:
+   - In open-ended gap fills testing defining relative clauses for non-human antecedents, the prompt MUST explicitly state the required pronoun (e.g. `(use 'that')`), OR both `that` and `which` MUST be populated in `accepted_answers` / `alternative_answers_allowed`.
+18. **Reading Passage & Grammar Stem Text Collision Avoidance (RQA-21)**:
+   - Grammar question stems must paraphrase or vary verb/preposition phrasing relative to the Reading passage (e.g. use `added pedals onto` in reading or `attached pedals to` in grammar) so that the stem target n-gram is unique in the combined Practice PDF text and does not collide during automated PDF validation.
+
 
 ## Output JSON
 Return JSON only. For the full field definitions, see `output-schema.md`. Abbreviated structure:

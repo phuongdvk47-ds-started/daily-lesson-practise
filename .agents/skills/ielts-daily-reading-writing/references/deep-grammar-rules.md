@@ -402,6 +402,8 @@ Before returning JSON, verify:
 
 ## 8. Relative Clauses
 - Defining/non-defining include enough context. Commas used correctly.
+- **Sentence Combining Direction**: If combining two main clauses into a relative clause sentence where either clause could logically become the relative clause, the prompt MUST specify which sentence to convert (e.g. `"Make Sentence 1 the relative clause:"`).
+- **Defining Pronoun Equivalence**: In defining relative clauses, if the prompt does not restrict the relative pronoun to `which` or `who`, the answer key MUST accept `that` as equally valid and document it in explanations.
 
 ## 9. Factual Accuracy
 - "According to the report" claims must be supported by the reading passage. Otherwise, make hypothetical.

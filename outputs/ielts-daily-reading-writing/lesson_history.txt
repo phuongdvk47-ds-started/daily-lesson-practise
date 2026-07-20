@@ -34,3 +34,5 @@ B1 | 20260720 | City life versus countryside life | Comparing Urban, Suburban, a
 A2+ | 20260720 | Neighborhoods, housing types, living environments | Comparing Urban Neighborhoods and Rural Communities: Facilities, Space, and Lifestyle
 A2+ | 20260722 | Daily routines, habits, time management | Morning Routines and Time Management Habits of Successful Students: Planning, Sleep, and Physical Activity
 B1 | 20260722 | Museum layouts and monument tours | Features, Languages and Visitor Advantages of Museum Audio Guides
+B1 | 20260724 | History of common inventions, tools, everyday objects | The Evolution of the Bicycle and Two-wheeled Mobility
+A2+ | 20260724 | Health appointments | Registering and Making Appointments at a Health Clinic

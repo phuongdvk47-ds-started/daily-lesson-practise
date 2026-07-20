@@ -73,9 +73,9 @@ def validate_rendered_pdf(json_path: Path, pdf_path: Path) -> list[str]:
             q_id = q.get("id")
             q_stem = q.get("question", "")
             
-            # Stem must be in PDF (with blanks replaced)
-            # Blanks use runs of 3+ underscores in source data; strip any such run.
-            stem_clean = re.sub(r"_{3,}", "", q_stem).replace("(*)", "")
+            # Stem must be in PDF (with blanks replaced and HTML tags stripped)
+            stem_clean = re.sub(r'<[^>]+>', ' ', q_stem)
+            stem_clean = re.sub(r"_{3,}", "", stem_clean).replace("(*)", "")
             stem_clean = " ".join(stem_clean.split()).strip()
             if stem_clean[:30] not in pdf_norm:
                 errors.append(f"Grammar question {q_id} stem missing in rendered PDF. Expected part: '{stem_clean[:30]}...'")

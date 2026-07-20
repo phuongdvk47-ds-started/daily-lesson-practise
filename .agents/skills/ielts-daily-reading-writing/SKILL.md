@@ -519,6 +519,15 @@ In addition, confirm manually or via automated checks:
 | RQA-11 | Writing combination task model answers preserve logical cause-effect relationships |
 | RQA-12 | Reading gap-fill blank numbers `(N)` match the question number `N` |
 | RQA-13 | Level '+' suffix (e.g., A2+, B1+) is correctly preserved in folder and file names |
+| RQA-14 | Sentence combining prompts specify clause conversion direction or accept both valid combinations |
+| RQA-15 | Defining relative clause answers accept `that` alongside `which`/`who` unless restricted by prompt |
+| RQA-16 | Modal choice prompts contain explicit context anchors or ungrammatical distractors to rule out alternative modal interpretations |
+| RQA-17 | Defining relative clause error correction and combining items include `that` in `accepted_answers` and `alternative_answers_allowed` |
+| RQA-18 | Writing prompt bullet hints (`-`, `*`) do not render answer lines between hint items |
+| RQA-19 | Past Perfect gap-fills include explicit duration/time anchors to eliminate Past Simple ambiguity |
+| RQA-20 | Open-ended defining relative clause gap-fills restrict pronoun in prompt or accept both `that` and `which` |
+| RQA-21 | Grammar stems vary phrasing from Reading passage to avoid PDF text-matching collisions |
+| RQA-22 | Writing Opinion tasks for A1-B1 include 5-step numbered structure and explicit sentence starters |
 
 ---
 
@@ -535,3 +544,124 @@ In addition, confirm manually or via automated checks:
 **Verification Step**:
 Verify that the output directory contains the resolved level with its exact suffix (e.g., `outputs/ielts-daily-reading-writing/20260715-A2+`).
 
+---
+
+### RQA-14 · Unconstrained Sentence Combining Ambiguity
+
+**Symptom**: A sentence combining prompt allows converting either main clause into a relative clause, producing two valid answers with slightly different emphasis.
+
+**Root Cause**: The Grammar Agent did not specify which sentence should be converted into the relative clause.
+
+**Prevention Rule**:
+- Sentence combining prompts MUST specify clause direction (e.g., `"Make Sentence 1 the relative clause:"`), OR the answer key (`explanation_vi` & `one_answer_check`) MUST document both valid combinations.
+
+---
+
+### RQA-15 · Defining Relative Pronoun Equivalence Omission
+
+**Symptom**: Answer key accepts only `which` (or `who`) in a defining relative clause and rejects `that`.
+
+**Root Cause**: The Grammar Agent did not constrain the pronoun in the prompt, nor did it document `that` as acceptable in defining relative clauses.
+
+**Prevention Rule**:
+- If the prompt does not restrict the relative pronoun (e.g., `"Use which"`), the answer key MUST explicitly document `that` as an acceptable alternative in defining relative clauses.
+
+---
+
+### RQA-16 · Ambiguous Modal Verb Distractors in Controlled Choice
+
+**Symptom**: A modal choice question like `"If the receptionist is busy, you ____ book an appointment..."` has multiple plausible modals (`can`, `should`, `might`) because the prompt lacks specific context clues.
+
+**Root Cause**: The Grammar Agent created a modal question without contextual anchors (such as `"have the option to"`, `"according to mandatory rules"`, `"is available"`) or without restricting distractors to ungrammatical/impossible forms.
+
+**Prevention Rule**:
+- Every modal choice question MUST include an explicit context clue establishing the exact modal nuance targeted (ability/option vs obligation vs advice), OR use distractors that are clearly ungrammatical or semantically impossible in that context.
+- If a sentence can be naturally completed by more than one modal, all valid alternatives MUST be explicitly included in `accepted_answers` and `alternative_answers_allowed`.
+
+**Verification Step**:
+Verify that every modal choice question in `grammar.questions` contains explicit context anchors or ungrammatical distractors, and `one_answer_check.has_exactly_one_valid_answer` is `true`.
+
+---
+
+### RQA-17 · Defining Relative Clause Alternative Answer Equivalence (`that` vs `which` / `who`)
+
+**Symptom**: Answer key accepts only `which` (or `who`) in a defining relative clause or error correction item (e.g., `The prescription which...`) and marks `that` as incorrect, or fails to populate `accepted_answers` / `alternative_answers_allowed`.
+
+**Root Cause**: The Grammar / Answer Agent omitted `that` from `accepted_answers` and `alternative_answers_allowed`.
+
+**Prevention Rule**:
+- For every defining relative clause item (including Error Correction and Sentence Combining), both `which` (or `who`) AND `that` MUST be included in `accepted_answers` and `alternative_answers_allowed` unless the prompt explicitly specifies a single pronoun.
+
+**Verification Step**:
+Check that defining relative clause items in `grammar.questions` and `answers.grammar_answers` have `accepted_answers` and `alternative_answers_allowed` containing both `which`/`who` and `that` variants.
+
+---
+
+### RQA-18 · Writing Hint / Sentence Starter Line Render Leak
+
+**Symptom**: Bulleted hint sections or useful sentence starters (e.g., `- In my opinion, ...`) in writing prompts get blank answer lines rendered between them, making hints look like answer spaces.
+
+**Root Cause**: The exporter script treated bullet prefixes (`-`, `*`) identically to numbered sub-questions (`1.`, `a)`), appending `writing-line` elements after bullet points.
+
+**Prevention Rule**:
+- Sub-items starting with `-` or `*` are hints/bullet points and MUST NOT have answer lines appended. Only numbered items (`1.`, `2.`, `a)`, `b)`) receive writing lines.
+
+**Verification Step**:
+Check rendered HTML/PDF for Writing tasks to ensure bulleted sentence starters have no blank writing lines between them.
+
+---
+
+### RQA-19 · Open-Ended Past Perfect Gap-Fill Tense Ambiguity
+
+**Symptom**: Gap-fill prompts like `Until chain drives were implemented, cyclists ______ (rely)...` or `Prior to 1890, cities ______ (not develop)...` accept both Past Simple (`relied`, `did not develop`) and Past Perfect (`had relied`, `had not developed`).
+
+**Root Cause**: Prompt lacks explicit duration markers or completion time anchors to mandate Past Perfect over Past Simple.
+
+**Prevention Rule**:
+- Every gap-fill item testing Past Perfect vs. Past Simple MUST include explicit time constraints, completion anchors, or duration markers (e.g. `By the time ... for many years`, `By + past year`, `for a decade before ...`).
+- If a prompt allows both Past Simple and Past Perfect naturally, the prompt MUST be constrained or both answers MUST be listed in `accepted_answers` and `alternative_answers_allowed`.
+
+**Verification Step**:
+Check all Past Perfect gap-fills in `grammar.questions` to ensure explicit time anchors or duration markers exist, or both forms are documented.
+
+---
+
+### RQA-20 · Open-Ended Defining Relative Clause Relative Pronoun Ambiguity
+
+**Symptom**: Open-ended relative clause gap-fills like `Cities ______ invest in protected bicycle lanes...` accept both `that` and `which`.
+
+**Root Cause**: Open-ended format does not specify which pronoun to use for non-human antecedents in defining relative clauses.
+
+**Prevention Rule**:
+- In open-ended gap fills testing defining relative clauses for non-human antecedents, the prompt MUST explicitly state the required pronoun (e.g., `Complete the essay sentence using a relative clause (use 'that'):`), OR both `that` and `which` MUST be populated in `accepted_answers` / `alternative_answers_allowed`.
+
+**Verification Step**:
+Check open-ended relative clause gap-fills to ensure prompt restriction exists or both `that` and `which` are listed as acceptable.
+
+---
+
+### RQA-21 · Reading Passage & Grammar Stem Text Collisions
+
+**Symptom**: An exact n-gram in a Grammar question stem (e.g., `"pedals to"`) matches text in the Reading passage (e.g., `"added pedals to"`), causing automated PDF layout validators (`validate_rendered_pdf.py`) to match the passage text instead of the grammar blank line, triggering false positive QC failures.
+
+**Root Cause**: Grammar question stems reuse exact multi-word phrases from the Reading passage.
+
+**Prevention Rule**:
+- Grammar question stems must paraphrase or vary verb/preposition phrasing relative to the Reading passage (e.g., use `added pedals onto` in reading or `attached pedals to` in grammar) so that the stem target n-gram is unique in the combined Practice PDF text.
+
+**Verification Step**:
+Run `validate_rendered_pdf.py` on exported PDFs to confirm no text-matching collisions occur between Reading and Grammar sections.
+
+---
+
+### RQA-22 · Writing Opinion Task Scaffolding Missing for A1-B1 Levels
+
+**Symptom**: Opinion paragraph tasks for lower levels (A1, A2, B1) lack structural guidance, resulting in unorganized student responses.
+
+**Root Cause**: Prompt asks for a 5-6 sentence opinion paragraph without providing a step-by-step 5-sentence outline or sentence starters.
+
+**Prevention Rule**:
+- Writing Opinion tasks for A1, A2, and B1 levels MUST include an explicit 5-step numbered structure (1. State opinion, 2. Reason 1, 3. Reason 2, 4. Result/Example, 5. Conclusion) and a list of useful sentence starters (`In my opinion, ... | First, ... | As a result, ... | Therefore, ...`).
+
+**Verification Step**:
+Check Writing Task 5 for A1-B1 levels to confirm 5-point numbered outline and sentence starters are present in the prompt.

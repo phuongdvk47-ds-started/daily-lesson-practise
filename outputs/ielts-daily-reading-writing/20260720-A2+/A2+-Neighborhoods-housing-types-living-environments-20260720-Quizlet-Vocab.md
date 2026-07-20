@@ -15,9 +15,9 @@
 | crowded | Having a lot of people or too many people |
 | distraction | Something that takes your attention away from what you are doing |
 | commute | To travel regularly between your home and your place of work |
-| working memory | A type of memory used to hold and use information for a short time |
-| musical training | Learning to play music or a musical instrument over a period of time |
-| cognitive | Connected with thinking, learning, and understanding |
+| working memory | Memory used for a short time |
+| musical training | Learning to play music |
+| cognitive | Connected with thinking and learning |
 | have access to | To have the opportunity to use or see something |
 | in contrast | Used to show a clear difference between two things |
 | depend on | To need or rely on somebody/something |
@@ -39,9 +39,9 @@
 | crowded /ˈkraʊ.dɪd, adjective/ | Having a lot of people or too many people |
 | distraction /dɪˈstræk.ʃən, noun/ | Something that takes your attention away from what you are doing |
 | commute /kəˈmjuːt, verb/ | To travel regularly between your home and your place of work |
-| working memory /ˈwɜː.kɪŋ ˈmem.ər.i, noun phrase/ | A type of memory used to hold and use information for a short time |
-| musical training /ˈmjuː.zɪ.kəl ˈtreɪ.nɪŋ, noun phrase/ | Learning to play music or a musical instrument over a period of time |
-| cognitive /ˈkɒɡ.nə.tɪv, adjective/ | Connected with thinking, learning, and understanding |
+| working memory /ˈwɜː.kɪŋ ˈmem.ər.i, noun phrase/ | Memory used for a short time |
+| musical training /ˈmjuː.zɪ.kəl ˈtreɪ.nɪŋ, noun phrase/ | Learning to play music |
+| cognitive /ˈkɒɡ.nə.tɪv, adjective/ | Connected with thinking and learning |
 | have access to /hæv ˈæk.ses tuː, phrase/ | To have the opportunity to use or see something |
 | in contrast /ɪn kənˈtrɑːst, phrase/ | Used to show a clear difference between two things |
 | depend on /dɪˈpend ɒn, phrase/ | To need or rely on somebody/something |

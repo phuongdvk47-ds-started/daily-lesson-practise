@@ -1310,7 +1310,21 @@ def clean_grammar_subheading(line: str) -> str:
         return bold_match.group(2).strip()
     return line_str
 
-def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic: str) -> str:
+def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic: str, skill_level: dict = None) -> str:
+    level_header_html = ""
+    if skill_level:
+        reading_level    = skill_level.get("reading_level",    "")
+        grammar_level    = skill_level.get("grammar_level",    "")
+        writing_level    = skill_level.get("writing_level",    "")
+        vocabulary_level = skill_level.get("vocabulary_level", "")
+        parts = []
+        if reading_level:    parts.append(f"Reading {reading_level}")
+        if grammar_level:    parts.append(f"Grammar {grammar_level}")
+        if writing_level:    parts.append(f"Writing {writing_level}")
+        if vocabulary_level: parts.append(f"Vocab {vocabulary_level}")
+        if parts:
+            level_header_html = f'\n        <h2>(Level: {" | ".join(parts)})</h2>'
+
     # Parse from the full 5-column table in vocab_grammar_md; quizlet_md is 2-column only
     vocab_items = parse_vocab_from_markdown(vocab_grammar_md)
     if not vocab_items:
@@ -1676,7 +1690,7 @@ def build_materials_html(vocab_grammar_md: str, quizlet_md: str, day: str, topic
 <body>
 
     <div class="header">
-        <h1>VOCABULARY & GRAMMAR KNOWLEDGE - DAY {day_only}: {topic_upper}</h1>
+        <h1>VOCABULARY & GRAMMAR KNOWLEDGE - DAY {day_only}: {topic_upper}</h1>{level_header_html}
     </div>
 
     <!-- VOCABULARY SECTION -->
@@ -1749,7 +1763,7 @@ def parse_explanation_items(md_text: str, is_grammar: bool = False, offset: int 
                 is_bullet_stretch = "(*)" in sub_line or "stretch" in sub_line.lower()
                 
                 # Clean prefix like *Giải thích (*) (Stretch)*: or *Dữ kiện trong bài*:
-                prefix_match = re.match(r'^\*?(Giải thích|Dữ kiện trong bài).*?\*?:\s*(.*)', sub_line, re.I)
+                prefix_match = re.match(r'^\*?(Giải thích|Dữ kiện trong bài|Also acceptable|Cũng chấp nhận|Bước\s+\d+(?:\s*\([^)]*\))?).*?\*?:\s*(.*)', sub_line, re.I)
                 if prefix_match:
                     label = prefix_match.group(1).strip()
                     rest_content = prefix_match.group(2).strip()
@@ -2619,13 +2633,25 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
             stretch_mark = " *[Stretch Point]*" if ra.get("stretch_note") else ""
             am.append(f"{q_id}. **{ra.get('correct_answer', '')}**{stretch_mark}")
             am.append(f"- Bằng chứng: \"{ra.get('evidence_quote', '')}\" (§{ra.get('evidence_paragraph', 1)})")
-            am.append(f"- Cách tìm đáp án: {ra.get('explanation_vi', '')} {ra.get('why_others_wrong_vi', '')}")
+            exp_text = ra.get('explanation_vi', '')
+            why_text = ra.get('why_others_wrong_vi', '')
+            if why_text:
+                exp_text = f"{exp_text} {why_text}".strip()
+            exp_lines = [l.strip() for l in exp_text.splitlines() if l.strip()]
+            if exp_lines:
+                am.append(f"- Cách tìm đáp án: {exp_lines[0]}")
+                for eline in exp_lines[1:]:
+                    if not eline.startswith("-") and not eline.startswith("*"):
+                        am.append(f"- {eline}")
+                    else:
+                        am.append(eline)
             if ra.get("tip_vi"):
                 am.append(f"> **💡 Mẹo:** {ra['tip_vi']}")
             am.append("")
             
     g_ans = answers.get("grammar_answers", [])
     if g_ans:
+        g_questions = data.get("grammar", {}).get("questions", [])
         am.append("## Grammar Answer Key and Detailed Explanations")
         am.append("")
         am.append("> **Bảng phân biệt nhanh / Công thức bỏ túi:**")
@@ -2640,6 +2666,11 @@ def convert_json_to_markdown_fields(data: dict) -> dict:
             old_qid = ga.get("question_id", idx + 1)
             q_id = grammar_old_to_new.get(old_qid, old_qid)
             am.append(f"{q_id}. **{ga.get('correct_answer', '')}**")
+            g_q = next((q for q in g_questions if q.get("id") == old_qid), {})
+            alts = ga.get("alternative_answers_allowed") or g_q.get("alternative_answers_allowed") or g_q.get("one_answer_check", {}).get("alternative_answers_allowed") or []
+            if alts:
+                alts_str = " / ".join([f'"{alt}"' for alt in alts])
+                am.append(f"- Also acceptable: {alts_str}")
             am.append(f"- Dấu hiệu / Phân tích: {ga.get('analysis_vi', '')}")
             if ga.get("tip_vi"):
                 am.append(f"> **💡 Mẹo:** {ga['tip_vi']}")

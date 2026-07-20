@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAILY PRACTICE: DAY 20260724 - HEALTH APPOINTMENTS</title>
+    <style>
+        @page { 
+            size: A4; 
+            margin: 15mm 15mm 20mm 15mm; 
+        }
+        body { 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 11.5pt; 
+            line-height: 1.45; 
+            color: #1a1a1a; 
+            margin: 0; 
+            padding: 0;
+        }
+        .header { 
+            border-bottom: 2px double #2c3e50; 
+            padding-bottom: 8px; 
+            margin-bottom: 15px; 
+            text-align: center;
+        }
+        .header .center-name { 
+            font-size: 9.5pt; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            color: #7f8c8d; 
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .header h1 { 
+            font-size: 15pt; 
+            margin: 3px 0; 
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .header h2 { 
+            font-size: 11pt; 
+            margin: 3px 0; 
+            font-style: italic; 
+            color: #34495e;
+        }
+        .student-info { 
+            margin-top: 10px; 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .section-title { 
+            font-size: 12pt; 
+            color: #2c3e50; 
+            border-left: 3px solid #27ae60; 
+            padding-left: 8px; 
+            margin-top: 18px; 
+            margin-bottom: 8px; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .passage-title {
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .reading-text { 
+            text-align: justify; 
+            margin-bottom: 12px; 
+            text-indent: 25px;
+        }
+        .reading-text p {
+            margin: 0 0 6px 0;
+        }
+        .data-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 10px 0; 
+            font-size: 10pt; 
+            page-break-inside: avoid;
+        }
+        .data-table th { 
+            background-color: #f2f4f8; 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            text-align: left; 
+            font-weight: bold; 
+            color: #2c3e50; 
+        }
+        .data-table td { 
+            border: 1px solid #dcdde1; 
+            padding: 6px 10px; 
+            color: #333; 
+        }
+        .data-table tr:nth-child(even) { 
+            background-color: #fafbfc; 
+        }
+        .svg-chart-container {
+            text-align: center;
+            margin: 10px 0;
+            page-break-inside: avoid;
+        }
+        .writing-line {
+            border-bottom: 1px dotted #bdc3c7;
+            height: 22px;
+            margin-top: 4px;
+            margin-bottom: 1px;
+            width: 98%;
+            page-break-inside: avoid;
+        }
+        .writing-prompt-text {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .writing-prompt-sub-item {
+            margin-top: 4px;
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+        .source-box { 
+            font-style: italic; 
+            font-size: 9pt; 
+            color: #7f8c8d; 
+            margin-bottom: 15px; 
+            padding: 6px 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #bdc3c7;
+        }
+        .source-box a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .question-instruction {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+        .question-group {
+            margin-bottom: 12px;
+        }
+        .question-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            text-indent: -20px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .question-options {
+            margin: 4px 0 4px 20px;
+            text-indent: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .question-options div {
+            margin-bottom: 2px;
+            box-sizing: border-box;
+            padding-right: 8px;
+        }
+        .options-4col div {
+            width: 25%;
+        }
+        .options-2col div {
+            width: 50%;
+        }
+        .options-1col div {
+            width: 100%;
+        }
+        .fill-blank {
+            display: inline-block;
+            width: 100px;
+            border-bottom: 1px solid #000;
+            text-align: center;
+            white-space: pre;
+        }
+        .grammar-item {
+            margin-bottom: 8px;
+            text-align: justify;
+            page-break-inside: avoid;
+        }
+        .writing-box {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            background-color: #fafbfc;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            text-align: left;
+            page-break-inside: avoid;
+        }
+        .writing-item {
+            margin-bottom: 10px;
+        }
+        .warmup-box {
+            background-color: #fcfcfc;
+            border: 1px dashed #bdc3c7;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            font-size: 10pt;
+        }
+        .warmup-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="center-name">IELTS PREMIUM PREPARATION ACADEMY</div>
+        <h1>DAILY PRACTICE: DAY 20260724 - HEALTH APPOINTMENTS</h1>
+        <h2>(Level: Reading A2+ | Grammar B1 | Writing A2 | Vocab A2+)</h2>
+        <div class="student-info">
+            <span>Student Name: ..............................................................</span>
+            <span>Time Allowed: 75 mins</span>
+        </div>
+    </div>
+
+    <!-- WARM-UP SECTION -->
+    <div class="section-title">Warm-up / Khởi động</div>
+    <div class="warmup-box">
+        <div class="warmup-title">Answer the following questions in English:</div>
+        1. Have you ever made an appointment to see a doctor or visit a health clinic?<br>
+        2. What information or documents do you think a clinic receptionist might ask for?<br>
+        3. Why is it helpful to write down your health symptoms before talking to a doctor?
+    </div>
+
+    <!-- READING PASSAGE -->
+    <div class="section-title">I. Reading Passage</div>
+    <div class="passage-title">Registering and Making Appointments at a Health Clinic</div>
+    
+    <div class="reading-text">
+        <p>Registering with a local medical <b>clinic</b> is an essential step for managing your personal health. In many public healthcare systems, <b>clinic</b> registration is completely free for local residents. You can apply online through an official portal or complete a paper application form at the reception desk. <b>Clinic</b> staff will request basic contact details, including your full legal name, date of birth, and home address. Establishing a predictable health routine early ensures that you can access professional medical care without unnecessary delays whenever you feel unwell.</p>
+        <p>After your registration is approved, you can schedule a doctor <b>appointment</b> by telephone, through the <b>clinic</b> mobile application, or in person. When you contact the <b>clinic</b>, the <b>receptionist</b> will ask a few brief questions about your medical <b>symptoms</b>. This initial screening helps the staff assign you to the most suitable doctor or <b>healthcare professional</b>. If you have an urgent medical condition, the <b>receptionist</b> can usually offer a same-day emergency <b>appointment</b>. For routine health checkups, <b>patients</b> can choose a convenient future time slot several days in advance.</p>
+        <p>Before attending your <b>consultation</b>, taking time to prepare can help you maintain your focus during the meeting with your physician. Writing down your key health <b>symptoms</b> in advance—noting when they first appeared and how severe they feel—prevents you from forgetting critical details. Furthermore, if you are currently taking any <b>prescription</b> medicines or dietary supplements, bring a comprehensive list or the actual medicine bottles to show the medical team. This preparation helps doctors make accurate medical evaluations quickly.</p>
+        <p>During your <b>consultation</b>, clearly explain your primary health concern so the physician can prioritize your most urgent medical needs. Never hesitate to ask questions if you do not understand a medical term, a test result, or a prescribed <b>treatment plan</b>. <b>Patients</b> have the right to receive clear explanations about their health choices. Finally, before leaving the <b>clinic</b> building, stop by the reception desk to collect any prescribed medicine slips or to arrange necessary follow-up visits.</p>
+    </div>
+
+    <div class="source-box">
+        Source: Adapted from <i>NHS (National Health Service)</i> - "Register with a GP surgery" (2024-01-15)<br>
+        URL: <a href="https://www.nhs.uk/nhs-services/gps/how-to-register-with-a-gp-surgery/" target="_blank">https://www.nhs.uk/nhs-services/gps/how-to-register-with-a-gp-surgery/</a>
+    </div>
+
+    <!-- READING QUESTIONS -->
+    <div class="section-title">II. IELTS Reading Questions (13 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 1–3: </div>
+        <div style="margin-left: 20px; font-weight: bold; margin-bottom: 8px; font-size: 10pt;">
+            TRUE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement agrees with the information<br>
+            FALSE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if the statement contradicts the information<br>
+            NOT GIVEN &nbsp;&nbsp;&nbsp;&nbsp; if there is no information on this
+        </div>
+        <div class="question-item">
+            <span class="question-number">1.</span> Clinic registration is free for local residents in many public healthcare systems.
+        </div>
+        <div class="question-item">
+            <span class="question-number">2.</span> Patients with urgent medical conditions must wait at least three days for an appointment.
+        </div>
+        <div class="question-item">
+            <span class="question-number">3.</span> Doctors usually charge extra money if a patient asks more than three questions.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 4–7: </div>
+        <div class="question-item">
+            <span class="question-number">4.</span> You can complete a paper application form at the reception desk to apply for (6) <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>.
+        </div>
+        <div class="question-item">
+            <span class="question-number">5.</span> When calling the clinic, the receptionist will ask about your (7) <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> to assign the right healthcare professional.
+        </div>
+        <div class="question-item">
+            <span class="question-number">6.</span> Writing down your health concerns in advance helps you maintain your (8) <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> during the meeting.
+        </div>
+        <div class="question-item">
+            <span class="question-number">7.</span> Explaining your primary health concern clearly allows the physician to (9) <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> your urgent needs.
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 8–13: </div>
+        <div class="question-item">
+            <span class="question-number">8.</span> What is required when applying for clinic registration according to Paragraph 1?
+            <div class="question-options options-1col">
+                <div>A. Filling in basic personal information</div>
+                <div>B. Paying a registration fee in advance</div>
+                <div>C. Providing a letter from a private employer</div>
+                <div>D. Showing a university graduation certificate</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">9.</span> Why does the receptionist ask about your medical symptoms when you call?
+            <div class="question-options options-1col">
+                <div>A. To select the most appropriate healthcare professional for you</div>
+                <div>B. To check if you have paid your monthly health insurance</div>
+                <div>C. To decide whether you should move to a different city</div>
+                <div>D. To recommend a local pharmacy near your home address</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">10.</span> What should a patient bring to the consultation if they take regular medicine?
+            <div class="question-options options-1col">
+                <div>A. A complete list or the actual medicine containers</div>
+                <div>B. A receipt showing the price of past medical visits</div>
+                <div>C. A signed letter from a family member</div>
+                <div>D. An extra notebook to record the doctor's voice</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">11.</span> What right do patients have during their consultation according to Paragraph 4?
+            <div class="question-options options-1col">
+                <div>A. To receive clear explanations about their health choices</div>
+                <div>B. To choose the exact brand of medical equipment used</div>
+                <div>C. To change the clinic opening hours on weekends</div>
+                <div>D. To demand free medicine for all family members</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">12.</span> What is recommended before leaving the clinic building?
+            <div class="question-options options-1col">
+                <div>A. Stopping by the reception desk to collect prescription slips</div>
+                <div>B. Paying a mandatory parking fee at the main exit door</div>
+                <div>C. Writing a long review on the clinic social media page</div>
+                <div>D. Booking a private taxi to take you straight home</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">13.</span> What is the main purpose of Paragraph 4? (*)
+            <div class="question-options options-1col">
+                <div>A. To advise patients on how to communicate effectively during and after the appointment</div>
+                <div>B. To explain how local pharmacies order prescription drugs from abroad</div>
+                <div>C. To argue that doctors should spend more time writing medical reports</div>
+                <div>D. To compare the cost of public clinics with private hospitals</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRAMMAR QUESTIONS -->
+    <div class="section-title">III. Questions for Grammar (30 questions)</div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 14–23: Part A. First Conditionals and Modal Verbs</div>
+        <div class="question-item">
+            <span class="question-number">14.</span> If you <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> a high fever tomorrow, you should visit the clinic immediately.
+            <div class="question-options options-2col">
+                <div>A. experience</div>
+                <div>B. experienced</div>
+                <div>C. will experience</div>
+                <div>D. are experiencing</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">15.</span> You <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> see a doctor if your cough does not improve after three days.
+            <div class="question-options options-4col">
+                <div>A. should</div>
+                <div>B. could</div>
+                <div>C. may</div>
+                <div>D. would</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">16.</span> When the receptionist is busy, patients <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> book an appointment using the clinic mobile app.
+            <div class="question-options options-4col">
+                <div>A. can</div>
+                <div>B. would</div>
+                <div>C. shall</div>
+                <div>D. must to</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">17.</span> According to mandatory clinic regulations, patients <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> bring their registration cards upon arrival.
+            <div class="question-options options-4col">
+                <div>A. must</div>
+                <div>B. could</div>
+                <div>C. may</div>
+                <div>D. would</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">18.</span> If you <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> any medicine allergies, you ought to tell the nurse first.
+            <div class="question-options options-4col">
+                <div>A. have</div>
+                <div>B. had</div>
+                <div>C. will have</div>
+                <div>D. are having</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">19.</span> You <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> take your prescription medicine twice a day as advised by the doctor.
+            <div class="question-options options-4col">
+                <div>A. should</div>
+                <div>B. could</div>
+                <div>C. may</div>
+                <div>D. would</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">20.</span> If a patient <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> an emergency appointment, the staff will help immediately.
+            <div class="question-options options-4col">
+                <div>A. needs</div>
+                <div>B. needed</div>
+                <div>C. will need</div>
+                <div>D. need</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">21.</span> You <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> not stop taking your antibiotics early, even if you feel better.
+            <div class="question-options options-4col">
+                <div>A. should</div>
+                <div>B. could</div>
+                <div>C. may</div>
+                <div>D. might</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">22.</span> If you <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> your appointment in advance, you can avoid long waiting times.
+            <div class="question-options options-4col">
+                <div>A. schedule</div>
+                <div>B. scheduled</div>
+                <div>C. will schedule</div>
+                <div>D. are scheduling</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">23.</span> When the clinic is closed, patients <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> reach an on-call doctor via the emergency hotline.
+            <div class="question-options options-4col">
+                <div>A. can</div>
+                <div>B. would</div>
+                <div>C. shall</div>
+                <div>D. must to</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 24–33: Part B. Defining and Non-Defining Relative Clauses</div>
+        <div class="question-item">
+            <span class="question-number">24.</span> There are many doctors at the clinic. The doctor <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> treated my fever was very kind.
+            <div class="question-options options-4col">
+                <div>A. who</div>
+                <div>B. which</div>
+                <div>C. whose</div>
+                <div>D. where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">25.</span> Dr. Smith, <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> is a famous heart specialist, works at City Hospital.
+            <div class="question-options options-4col">
+                <div>A. who</div>
+                <div>B. which</div>
+                <div>C. that</div>
+                <div>D. where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">26.</span> There are several medical forms on the table. Please sign the form <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> has your name on it.
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. who</div>
+                <div>C. whose</div>
+                <div>D. where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">27.</span> City Central Clinic, <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> was renovated last year, offers excellent care.
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. who</div>
+                <div>C. that</div>
+                <div>D. where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">28.</span> There are two receptionists on duty. The receptionist <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> speaks Spanish helped me register.
+            <div class="question-options options-4col">
+                <div>A. who</div>
+                <div>B. which</div>
+                <div>C. whose</div>
+                <div>D. where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">29.</span> St. Jude Hospital, <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> is located downtown, has a 24-hour emergency room.
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. who</div>
+                <div>C. that</div>
+                <div>D. where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">30.</span> There are many medicines in the cabinet. Take the medicine <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> the doctor prescribed.
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. who</div>
+                <div>C. whose</div>
+                <div>D. where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">31.</span> Nurse Amanda, <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> checked my blood pressure, was very helpful.
+            <div class="question-options options-4col">
+                <div>A. who</div>
+                <div>B. which</div>
+                <div>C. that</div>
+                <div>D. where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">32.</span> There are three consultation rooms. Enter the room <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> has a green light above the door.
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. who</div>
+                <div>C. whose</div>
+                <div>D. where</div>
+            </div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">33.</span> Main Street Pharmacy, <span class="fill-blank">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span> is open every day, sells affordable supplies.
+            <div class="question-options options-4col">
+                <div>A. which</div>
+                <div>B. who</div>
+                <div>C. that</div>
+                <div>D. where</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="question-group">
+        <div class="question-instruction">Questions 34–43: Error Correction - Correct the single grammatical error in each of the following sentences.</div>
+        <div class="question-item">
+            <span class="question-number">34.</span> Correct the error: If you will feel sick tomorrow, you should call the clinic immediately.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">35.</span> Correct the error: Dr. Miller, that works at the central clinic, is very friendly.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">36.</span> Correct the error: You must to complete the registration form before seeing the doctor.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">37.</span> Correct the error: The prescription who the doctor wrote was sent to the pharmacy.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">38.</span> Correct the error: If a patient need an urgent appointment, the receptionist helps immediately.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">39.</span> Combine the two sentences using a target structure (First Conditional):<br>Sentence 1: You need an urgent checkup.<br>Sentence 2: You should call the clinic early in the morning.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">40.</span> Combine the two sentences using a non-defining relative clause (Non-Defining Relative Clause):<br>Make Sentence 1 the relative clause:<br>Sentence 1: Dr. Evans is a skilled doctor.<br>Sentence 2: He works at the community clinic.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">41.</span> Combine the two sentences using a target structure (Defining Relative Clause):<br>Sentence 1: The receptionist gave me a registration form.<br>Sentence 2: The form was very easy to complete.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">42.</span> Combine the two sentences using a target structure (First Conditional with Must):<br>Sentence 1: You have severe symptoms.<br>Sentence 2: You must visit the emergency room.
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+        <div class="question-item">
+            <span class="question-number">43.</span> Combine the two sentences using a non-defining relative clause (Non-Defining Relative Clause):<br>Make Sentence 1 the relative clause:<br>Sentence 1: City Clinic provides free checkups.<br>Sentence 2: It is located near the central station. (*)
+            <div class="writing-line" style="margin-top: 8px; margin-bottom: 4px;"></div>
+        </div>
+    </div>
+
+    <!-- WRITING QUESTIONS -->
+    <div class="section-title">IV. Questions for Writing (5 tasks)</div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 1:  Arranging words in a conditional sentence with modal verbs.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Sắp xếp các từ sau thành câu hoàn chỉnh:</div>
+<div class="writing-prompt-text">should / appointment / you / an / online / book / urgent / if / need / care /</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 2:  Sentence Completion (Hoàn thành câu)</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Nối hai câu sau thành một câu phức sử dụng từ nối <i>because</i>:</div>
+<div class="writing-prompt-text">Sentence 1: Patient A arrived at the clinic early.</div>
+<div class="writing-prompt-text">Sentence 2: She needed to complete her health registration form.</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 3:  Writing a polite formal request for a medical appointment.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Write a short email to a clinic receptionist requesting a doctor appointment. State your symptoms and your preferred date. (write 3-4 sentences)</div>
+<div style='margin-top: 4px; margin-bottom: 2px;'>To: ...................................................... Subject: ......................................................</div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 4:  Comparing numerical data between two healthcare clinics.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Describe the table below comparing average patient wait times at Clinic A and Clinic B. Write 3 sentences.</div>
+<table class="data-table"><thead><tr><th>Clinic Name</th><th>Average Registration Time</th><th>Average Wait for Doctor</th></tr></thead><tbody><tr><td>Clinic A</td><td>10 minutes</td><td>15 minutes</td></tr><tr><td>Clinic B</td><td>25 minutes</td><td>40 minutes</td></tr></tbody></table>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+<div class="writing-line"></div>
+        </div>
+    </div>
+
+    <div class="writing-box">
+        <div class="question-instruction">Task 5:  Developing a supported opinion paragraph with reasons and examples.</div>
+        <div class="writing-item">
+            <div class="writing-prompt-text">Write a short paragraph explaining why writing down health symptoms before visiting a doctor is helpful for patients. Write 5-6 sentences using the structure below:</div>
+<div class="writing-prompt-sub-item">1. State your opinion.</div>
+<div class="writing-line"></div>
+<div class="writing-prompt-sub-item">2. Give reason 1.</div>
+<div class="writing-line"></div>
+<div class="writing-prompt-sub-item">3. Give reason 2.</div>
+<div class="writing-line"></div>
+<div class="writing-prompt-sub-item">4. Give one example.</div>
+<div class="writing-line"></div>
+<div class="writing-prompt-sub-item">5. Write a short conclusion.</div>
+<div class="writing-line"></div>
+<div class="writing-prompt-text">Useful sentence starters:</div>
+<div class="writing-prompt-sub-item" style="margin-left: 15px;">- In my opinion, ...</div>
+<div class="writing-prompt-sub-item" style="margin-left: 15px;">- First, ...</div>
+<div class="writing-prompt-sub-item" style="margin-left: 15px;">- Another reason is that ...</div>
+<div class="writing-prompt-sub-item" style="margin-left: 15px;">- For example, ...</div>
+<div class="writing-prompt-sub-item" style="margin-left: 15px;">- As a result, ...</div>
+        </div>
+    </div>
+
+    <!-- REVIEW BRIDGE -->
+    <div class="review-bridge-container" style="page-break-before: always; page-break-inside: avoid;">
+        <div class="section-title">V. Review Bridge / Ôn tập liên chủ đề</div>
+        <div class="warmup-box" style="background-color: #fafbfc; border: 1px solid #bdc3c7; border-radius: 4px; padding: 10px;">
+            1. Dịch câu sau sang tiếng Anh dùng từ tái lập 'routine': Tạo lập một thói quen y tế hàng ngày giúp bạn luôn khỏe mạnh.<br>
+<div class="writing-line"></div><br>
+2. Dịch câu sau sang tiếng Anh dùng từ tái lập 'prioritize': Bác sĩ cần ưu tiên các nhu cầu y tế khẩn cấp trước.<br>
+<div class="writing-line"></div><br>
+3. Dịch câu sau sang tiếng Anh dùng từ tái lập 'focus': Viết trước các triệu chứng giúp bạn giữ tập trung trong buổi khám.<br>
+<div class="writing-line"></div><br>
+        </div>
+    </div>
+
+</body>
+</html>
